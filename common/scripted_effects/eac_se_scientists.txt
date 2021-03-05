@@ -1,0 +1,457 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+print_leader_scope = {
+	log = "- From: [From.GetName]"
+	log = "- From: [From.GetLeaderName]"
+
+}
+
+eac_create_scientist_spark_of_genius = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_spark_of_genius
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+# eac_create_scientist_careful = {
+# 	create_leader = {
+# 		class = scientist
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = leader_trait_careful
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }
+
+eac_create_scientist_meticulous = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_meticulous
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_carefree = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_carefree
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_roamer = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_roamer
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_archaeologist = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_archaeologist
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_cataloger = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_cataloger
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_maniacal = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_maniacal
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_custom_AI_assistant = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_custom_AI_assistant
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_sapient_AI_assistant = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_sapient_AI_assistant
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_materials = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_materials
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_propulsion = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_propulsion
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_voidcraft = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_voidcraft
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_industry = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_industry
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_field_manipulation = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_field_manipulation
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_particles = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_particles
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_computing = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_computing
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_psionics = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_psionics
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_new_worlds = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_new_worlds
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_statecraft = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_statecraft
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_biology = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_biology
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_expertise_military_theory = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_military_theory
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_advanced_physics = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_field_manipulation
+			trait = leader_trait_expertise_particles
+			trait = leader_trait_expertise_computing
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_advanced_society = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_new_worlds
+			trait = leader_trait_expertise_statecraft
+			trait = leader_trait_expertise_biology
+			trait = leader_trait_expertise_military_theory
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		if = {
+			limit = {
+				owner = { has_technology = tech_psionic_theory }
+			}
+			add_trait = leader_trait_expertise_psionics
+		}
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_scientist_advanced_engineering = {
+	create_leader = {
+		class = scientist
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_expertise_materials
+			trait = leader_trait_expertise_propulsion
+			trait = leader_trait_expertise_voidcraft
+			trait = leader_trait_expertise_industry
+			trait = leader_trait_university_educated_scientist
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}

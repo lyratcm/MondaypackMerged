@@ -1,0 +1,111 @@
+namespace = ad_event
+
+country_event = {
+	id = ad_event.1
+	title = adevent
+	desc = adevent_desc
+	picture = GFX_evt_galactic_senate
+	show_sound = event_celebration
+	location = root
+	
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 6
+			min = 3
+		}
+		country_event = { id = ad_event.2 days = 1080 }
+	}
+
+	option = {
+		name = eata
+		custom_tooltip = eata.tooltip 
+	}
+}
+
+country_event = {
+	id = ad_event.2
+	title = adevent
+	desc = adevent_desc
+	picture = GFX_evt_galactic_senate
+	show_sound = event_celebration
+	location = root
+	
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 6
+			min = 3
+		}
+	}
+
+	option = {
+		name = eata
+		custom_tooltip = eata.tooltip 
+		hidden_effect = {
+			country_event = { id = ad_event.2 days = 1080 }
+		}
+	}
+	option = {
+		name = eata2
+		custom_tooltip = eata2.tooltip 
+		hidden_effect = {
+			country_event = { id = ad_event.3 days = 1080 }
+		}
+	}
+}
+
+
+country_event = {
+	id = ad_event.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+
+	immediate = {
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = society_research
+			value = 6
+			min = 3
+		}
+		add_monthly_resource_mult = {
+			resource = engineering_research
+			value = 6
+			min = 3
+		}
+		country_event = { id = ad_event.3 days = 1080 }
+	}
+}
+

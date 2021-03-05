@@ -1,0 +1,658 @@
+## Origin random
+spawn_random_apsr_resource_with_origin = {
+	if = {
+		limit = {
+			OR = {
+				NOT = { has_global_flag = apsr1_spawned }
+				NOT = { has_global_flag = apsr2_spawned }
+				NOT = { has_global_flag = apsr3_spawned }
+				NOT = { has_global_flag = apsr4_spawned }
+				NOT = { has_global_flag = apsr5_spawned }
+				NOT = { has_global_flag = apsr6_spawned }
+				NOT = { has_global_flag = apsr8_spawned }
+				NOT = { has_global_flag = apsr11_spawned }
+				NOT = { has_global_flag = apsr12_spawned }
+				NOT = { has_global_flag = apsr13_spawned }
+				NOT = { has_global_flag = apsr14_spawned }
+				NOT = { has_global_flag = apsr15_spawned }
+			}		
+		}
+		random_list = {
+			
+			# 1 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr1_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr1_planet_modifier days = -1 }
+				add_deposit = apsr1_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr1_spawned
+				save_global_event_target_as = apsr1_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr1_beacon_found }
+						}
+						set_country_flag = apsr1_beacon_found
+						set_country_flag = apsr1_founded
+					}
+				}
+			}
+			
+			# 2 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr2_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr2_planet_modifier days = -1 }
+				add_deposit = apsr2_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr2_spawned
+				save_global_event_target_as = apsr2_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr2_beacon_found }
+						}
+						set_country_flag = apsr2_beacon_found
+						set_country_flag = apsr2_founded
+					}
+				}
+			}
+			
+			# 3 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr3_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr3_planet_modifier days = -1 }
+				add_deposit = apsr3_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr3_spawned
+				save_global_event_target_as = apsr3_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr3_beacon_found }
+						}
+						set_country_flag = apsr3_beacon_found
+						set_country_flag = apsr3_founded
+					}
+				}
+			}
+			
+			# 4 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr4_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr4_planet_modifier days = -1 }
+				add_deposit = apsr4_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr4_spawned
+				save_global_event_target_as = apsr4_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr4_beacon_found }
+						}
+						set_country_flag = apsr4_beacon_found
+						set_country_flag = apsr4_founded
+					}
+				}
+			}
+			
+			# 5 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr5_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr5_planet_modifier days = -1 }
+				add_deposit = apsr5_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr5_spawned
+				save_global_event_target_as = apsr5_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr5_beacon_found }
+						}
+						set_country_flag = apsr5_beacon_found
+						set_country_flag = apsr5_founded
+					}
+				}
+			}
+			
+			# 6 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr6_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr6_planet_modifier days = -1 }
+				add_deposit = apsr6_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr6_spawned
+				save_global_event_target_as = apsr6_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr6_beacon_found }
+						}
+						set_country_flag = apsr6_beacon_found
+						set_country_flag = apsr6_founded
+					}
+				}
+			}
+			
+			# 7 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr7_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr7_planet_modifier days = -1 }
+				add_deposit = apsr7_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr7_spawned
+				save_global_event_target_as = apsr7_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr7_beacon_found }
+						}
+						set_country_flag = apsr7_beacon_found
+						set_country_flag = apsr7_founded
+					}
+				}
+			}
+			
+			# 8 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr8_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr8_planet_modifier days = -1 }
+				add_deposit = apsr8_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr8_spawned
+				save_global_event_target_as = apsr8_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr8_beacon_found }
+						}
+						set_country_flag = apsr8_beacon_found
+						set_country_flag = apsr8_founded
+					}
+				}
+			}
+			
+			# 11 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr11_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr11_planet_modifier days = -1 }
+				add_deposit = apsr11_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr11_spawned
+				save_global_event_target_as = apsr11_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr11_beacon_found }
+						}
+						set_country_flag = apsr11_beacon_found
+						set_country_flag = apsr11_founded
+					}
+				}
+			}
+			
+			# 12 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr12_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr12_planet_modifier days = -1 }
+				add_deposit = apsr12_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr12_spawned
+				save_global_event_target_as = apsr12_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr12_beacon_found }
+						}
+						set_country_flag = apsr12_beacon_found
+						set_country_flag = apsr12_founded
+					}
+				}
+			}
+			
+			# 13 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr13_spawned
+				}
+				apsr_change_capital_ancient_not_complex_type = yes
+				add_modifier = { modifier = apsr13_planet_modifier days = -1 }
+				add_deposit = apsr13_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr13_spawned
+				save_global_event_target_as = apsr13_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr13_beacon_found }
+						}
+						set_country_flag = apsr13_beacon_found
+						set_country_flag = apsr13_founded
+					}
+				}
+			}
+			
+			# 14 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr14_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr14_planet_modifier days = -1 }
+				add_deposit = apsr14_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr14_spawned
+				save_global_event_target_as = apsr14_planet_target
+				spawn_apsr_districts_with_origin = yes
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr14_beacon_found }
+						}
+						set_country_flag = apsr14_beacon_found
+						set_country_flag = apsr14_founded
+					}
+				}
+			}
+			
+			# 15 #
+			
+			10 = {
+				modifier = {
+					factor = 0
+					has_global_flag = apsr15_spawned
+				}
+				apsr_change_capital_unique_type = yes
+				add_modifier = { modifier = apsr15_planet_modifier days = -1 }
+				add_deposit = apsr15_deposit 
+				apsr_set_planet_picture_by_resource = yes
+				set_planet_flag = "apsr_planet"	
+				set_global_flag = apsr15_spawned
+				save_global_event_target_as = apsr15_planet_target
+				spawn_apsr_districts_with_origin = yes
+				solar_system = {
+					if = {
+						limit = {
+							any_system_planet = {
+								is_planet_class = pc_gas_giant
+							}
+						}
+						random_system_planet = {
+							limit = {
+								is_planet_class = pc_gas_giant
+							}
+							set_planet_size = 50
+							save_global_event_target_as = apsr15_S_401_3008
+							set_planet_flag = "apsr_planet"	
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								any_system_planet = {
+									is_planet_class = pc_gas_giant
+								}
+							}
+						}
+						spawn_planet = {
+							class = pc_gas_giant
+							location = this
+							orbit_location = no
+							orbit_angle_offset = 153
+							orbit_distance_offset = 119
+							size = 50
+							has_ring = no
+							init_effect = {
+								save_global_event_target_as = apsr15_S_401_3008
+								set_planet_flag = "apsr_planet"	
+								set_name = NAME_Red_One
+							}
+						}
+					}
+					if = {
+						limit = {
+							any_system_planet = {
+								OR = {
+									is_planet_class = pc_barren
+									is_planet_class = pc_barren_cold
+								}
+							}
+						}
+						random_system_planet = {
+							limit = {
+								OR = {
+									is_planet_class = pc_barren
+									is_planet_class = pc_barren_cold
+								}
+							}
+							set_planet_size = 20
+							save_global_event_target_as = apsr15_C_401_3007
+							set_planet_flag = "apsr_planet"	
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								any_system_planet = {
+									OR = {
+										is_planet_class = pc_barren
+										is_planet_class = pc_barren_cold
+									}
+								}
+							}
+						}
+						spawn_planet = {
+							class = pc_barren
+							location = this
+							orbit_location = no
+							orbit_angle_offset = 273
+							orbit_distance_offset = 99
+							size = 20
+							has_ring = no
+							init_effect = {
+								save_global_event_target_as = apsr15_C_401_3007
+								set_planet_flag = "apsr_planet"	
+								set_name = NAME_Red_Two
+							}
+						}
+					}
+					spawn_planet = {
+						class = pc_barren_cold
+						location = this
+						orbit_location = no
+						orbit_angle_offset = 127
+						orbit_distance_offset = 59
+						size = 9
+						has_ring = no
+						init_effect = {
+							save_global_event_target_as = apsr15_B_401_3002
+							set_planet_flag = "apsr_planet"	
+							set_name = NAME_Epsilon
+						}
+					}
+					spawn_planet = {
+						class = pc_barren_cold
+						location = this
+						orbit_location = no
+						orbit_distance_offset = 132
+						orbit_angle_offset = 191
+						size = 9
+						has_ring = no
+						init_effect = {
+							save_global_event_target_as = apsr15_B_401_3005
+							set_planet_flag = "apsr_planet"	
+							set_name = NAME_Cortus
+						}
+					}
+				}
+				owner = {
+					if = {
+						limit = {
+							NOT = { has_country_flag = apsr15_beacon_found }
+						}
+						set_country_flag = apsr15_beacon_found
+						set_country_flag = apsr15_founded
+					}
+				}
+			}		
+		}
+	}
+}
+
+
+
+### генерация районов
+
+spawn_apsr_districts_with_origin = {
+	# обычная империя
+	if = {
+		limit = { 
+			owner = { 
+				NOT = {
+					OR = {
+						is_hive_empire = yes
+						is_machine_empire = yes
+					}
+				}
+			} 
+		}
+		remove_district = district_city
+		if = {
+			limit = {
+				owner = {
+					is_lithoid_empire = yes
+				}
+			}
+			while = {
+				count = 3
+				add_district = {
+					ignore_cap = yes
+					district_type = district_mining
+				}
+			}
+		}
+		else = {
+			while = {
+				count = 3
+				add_district = {
+					ignore_cap = yes
+					district_type = district_farming
+				}
+			}
+		}
+		while = {
+			count = 3
+			add_district = {
+				ignore_cap = yes
+				district_type = district_generator
+			}
+		}
+		while = {
+			count = 3
+			add_district = {
+				ignore_cap = yes
+				district_type = district_mining
+			}
+		}
+		if = {
+			limit = { owner = { is_megacorp = yes } }
+			remove_district = district_city
+			remove_district = district_mining
+			if = {
+				limit = {
+					owner = {
+						is_lithoid_empire = yes
+					}
+				}
+				remove_district = district_generator
+			}
+		}
+	}
+
+	# коллективный
+	if = {
+		limit = { owner = { is_hive_empire = yes } }
+		add_district = {
+			ignore_cap = yes
+			district_type = district_hive
+		}
+		while = {
+			count = 2
+			add_district = {
+				ignore_cap = yes
+				district_type = district_generator
+			}
+		}
+		while = {
+			count = 1
+			add_district = {
+				ignore_cap = yes
+				district_type = district_mining
+			}
+		}
+		if = {
+			limit = { owner = { is_lithoid_empire = no } }
+			while = {
+				count = 2
+				add_district = {
+					ignore_cap = yes
+					district_type = district_farming
+				}
+			}
+		}
+		else = {
+			while = {
+				count = 2
+				add_district = {
+					ignore_cap = yes
+					district_type = district_mining
+				}
+			}
+		}
+	}
+
+	# машинный
+	if = {
+		limit = { owner = { is_machine_empire = yes } }
+		while = {
+			count = 6
+			add_district = {
+				ignore_cap = yes
+				district_type = district_generator
+			}
+		}
+		while = {
+			count = 2
+			add_district = {
+				ignore_cap = yes
+				district_type = district_mining
+			}
+		}
+
+		#Assimilators
+		if = {
+			limit = { owner = { has_civic = civic_machine_assimilator } }
+			remove_district = district_generator
+			if = {
+				limit = { owner = { has_country_flag = lithoid_subspecies } }
+				while = {
+					count = 2
+					add_district = {
+						ignore_cap = yes
+						district_type = district_mining
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 2
+					add_district = {
+						ignore_cap = yes
+						district_type = district_farming
+					}
+				}
+			}
+		}
+
+		#Servitors
+		if = {
+			limit = { owner = { has_civic = civic_machine_servitor } }
+			remove_district = district_generator
+			if = {
+				limit = { owner = { has_country_flag = lithoid_subspecies } }
+				while = {
+					count = 1
+					add_district = {
+						ignore_cap = yes
+						district_type = district_mining
+					}
+				}
+			}
+			else = {
+				while = {
+					count = 1
+					add_district = {
+						ignore_cap = yes
+						district_type = district_farming
+					}
+				}
+			}
+		}
+	}
+}

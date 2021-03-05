@@ -1,0 +1,684 @@
+####################
+## PRISMATIC STAR ##
+####################
+
+## NOT PRESENTLY USED!!
+sc_elven_prismatic = {
+	class = elven_prismatic_star
+	icon = elven_prismatic_star
+	planet = { key = pc_elven_prismatic_star }
+	spawn_odds = 0
+	num_planets 	= { min = 4 max = 10 }
+
+	is_environmental_hazard = yes
+	modifier = {
+		## NO IDEA PRESENTLY
+	}
+}
+
+## EILISTRAEE HOME SYSTEM
+sc_elven_binary_prismatic_black_hole = {
+	class = elven_prismatic_star
+	icon = elven_prismatic_binary_star
+	planet = { 
+				key = pc_elven_prismatic_star
+				class = elven_prismatic_star
+	}
+	planet = { 
+				key = pc_black_hole
+				class = black_hole
+	}
+	spawn_odds = 0
+	num_planets 	= { min = 4 max = 10 }
+
+	is_environmental_hazard = yes
+	modifier = {
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+	}
+}
+
+##########################
+## PRISMATIC BLACK HOLE ##
+##########################
+
+## NOT PRESENTLY USED!!
+sc_elven_prismatic_black_hole = {
+	class = elven_prismatic_star
+	icon = elven_prismatic_black_hole_star
+	
+	## NOTE: Prismatic Black Holes only exist as an entity presently!! This system gives you the crazy Sidh skybox but a normal black hole. One must change the entity of the black hole directly in the initializers to get the horrifying rainbow! ;-)
+	planet = { 
+				key = pc_black_hole
+				class = black_hole
+	}
+	spawn_odds = 0
+	num_planets 	= { min = 4 max = 10 }
+
+	is_environmental_hazard = yes
+	modifier = {
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+	}
+}
+
+###############
+## TULSHAR M ##
+###############
+sc_drow_tulshar = {
+    class             = m_star
+    icon              = drow_tulshar_star
+	planet = {
+                        key = pc_m_star
+                        class = m_star
+    }
+    
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+
+    is_environmental_hazard = yes
+	modifier = {
+		ship_shield_reduction = 1.0
+        ship_speed_reduction = 0.5
+        ship_evasion_mult = 0.3
+	}
+}
+
+################
+## POLYDORA A ##
+################
+sc_elven_polydora = {
+    class             = a_star
+    icon              = elven_polydora_star
+	planet = {
+                        key = pc_a_star
+                        class = a_star
+    }
+    
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#####################
+## BINARY: A-BLACK ##
+#####################
+
+## NOT PRESENTLY USED!!
+sc_elven_binary_1 = {
+	class             = a_star
+    icon              = elven_a_binary_star
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+		ship_disengage_chance_reduction = 0.25
+        ship_emergency_ftl_min_days_mult = 0.25
+	}
+}
+
+#########################
+## BINARY: BLACK-BLACK ##
+#########################
+
+## USED FOR:
+## - lunari_system_initializer
+sc_elven_binary_2 = {
+	class             = black_hole
+    icon              = elven_b_binary_star
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+	
+	is_environmental_hazard = yes
+	modifier = {
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+	}
+}
+
+#################
+## BINARY: F-T ##
+#################
+
+## USED FOR:
+## - elven_system_imperial_neighbor2_initializer
+sc_elven_binary_3 = {
+    class             = f_star
+    icon              = elven_c_binary_star
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#################
+## BINARY: K-M ##
+#################
+
+## USED FOR:
+## - elven_system_imperial_neighbor3_initializer
+sc_elven_binary_4 = {
+    class             = k_star
+    icon              = elven_d_binary_star
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#######################
+## BINARY: NEUTRON-T ##
+#######################
+
+## USED FOR:
+## - elven_system_gaul_neighbor1_initializer
+sc_elven_binary_5 = {
+    class             = neutron_star
+    icon              = elven_e_binary_star
+    planet            = {
+                        key = pc_neutron_star
+                        class = neutron_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+######################
+## BINARY: A-PULSAR ##
+######################
+
+## USED FOR:
+## - elven_system_imperial_initializer
+sc_elven_imperial = {
+    class             = a_star
+    icon              = elven_imperial_star
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_pulsar
+                        class = pulsar
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+    
+    is_environmental_hazard = yes
+    modifier = {
+        ship_shield_reduction = 1.0
+    }
+}
+
+#################
+## BINARY: F-T ##
+#################
+
+## USED FOR:
+## - elven_system_gaul_initializer
+sc_elven_gaul = {
+    class             = f_star
+    icon              = elven_gaul_star
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#####################
+## BINARY: A-BLACK ##
+#####################
+
+## USED FOR:
+## - eilistraee_neighbor3_initializer
+sc_drow_binary_1 = {
+    class             = a_star
+    icon              = drow_a_binary_star
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+
+    is_environmental_hazard = yes
+	modifier = {
+		ship_disengage_chance_reduction = 0.5
+		ship_emergency_ftl_min_days_mult = 0.5
+	}
+}
+
+
+#################
+## BINARY: K-M ##
+#################
+
+## USED FOR:
+## - eilistraee_neighbor2_initializer
+sc_drow_binary_2 = {
+    class             = f_star
+    icon              = drow_b_binary_star
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+####################
+## TRINARY: B-B-B ##
+####################
+
+## USED FOR: 
+## - elven_system_imperial_neighbor1_initializer
+sc_elven_trinary_1 = {
+    class             = b_star
+    icon              = elven_a_trinary_star
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+####################
+## TRINARY: B-B-T ##
+####################
+
+## USED FOR: 
+## - elven_system_gaul_neighbor2_initializer
+sc_elven_trinary_2 = {
+    class             = b_star
+    icon              = elven_b_trinary_star
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+
+####################
+## TRINARY: M-K-F ##
+####################
+
+## USED FOR:
+## - drow_fallen_1
+sc_drow_binary_3 = {
+    class             = m_star
+    icon              = drow_c_binary_star
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+####################
+## TRINARY: F-F-B ##
+####################
+
+## USED FOR: 
+## - eilistraee_neighbor1_initializer
+sc_drow_trinary_1 = {
+    class             = f_star
+    icon              = drow_a_trinary_star
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+	planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+########################
+## TRINARY: BLACK-T-M ##
+########################
+
+## USED FOR:
+## - drow_system_tulshar_neighbor1_initializer
+sc_drow_trinary_2 = {
+    class             = black_hole
+    icon              = drow_b_trinary_star
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+	planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#########################
+## QUATERNARY: B-K-G-T ##
+#########################
+
+## USED FOR:
+## - drow_system_tulshar_neighbor2_initializer
+sc_drow_quaternary_1 = {
+    class             = b_star
+    icon              = drow_a_quaternary_star
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+	planet            = {
+                        key = pc_g_star
+                        class = g_star
+                    }
+	planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+##################################
+## QUATERNARY: Black-T-MGiant-T ##
+##################################
+
+## USED FOR:
+## - drow_fallen_1_3
+sc_drow_quaternary_2 = {
+    class             = black_hole
+    icon              = drow_b_quaternary_star
+    planet            = {
+                        key = pc_black_hole
+                        class = black_hole
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+	planet            = {
+                        key = pc_m_giant_star
+                        class = m_star
+                    }
+	planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+###########################
+## SEXENARY: F-A-G-K-B-M ##
+###########################
+sc_elven_sexenary_1 = {
+    class             = f_star
+    icon              = elven_a_sexenary_star
+    planet = {
+                        key = pc_f_star
+                        class = f_star
+    }
+	planet = {
+                        key = pc_a_star
+                        class = a_star
+    }
+	planet = {
+                        key = pc_g_star
+                        class = g_star
+    }
+	planet = {
+                        key = pc_k_star
+                        class = k_star
+    }
+	planet = {
+                        key = pc_b_star
+                        class = b_star
+    }
+	planet = {
+                        key = pc_m_star
+                        class = m_star
+    }
+    
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+
+    is_environmental_hazard = yes
+	modifier = {
+        ship_speed_reduction = 0.25
+        ship_evasion_mult = 0.15
+	}
+}
+
+#######################################
+## SEPTENARY: NEUTRON-B-A-PULSAR-F-A ##
+#######################################
+sc_elven_septenary_1 = {
+    class             = f_star
+    icon              = elven_a_septenary_star
+    planet = {
+                        key = pc_neutron_star
+                        class = neutron_star
+    }
+	planet = {
+                        key = pc_b_star
+                        class = b_star
+    }
+	planet = {
+                        key = pc_a_star
+                        class = a_star
+    }
+	planet = {
+                        key = pc_f_star
+                        class = f_star
+    }
+	planet = {
+                        key = pc_pulsar
+                        class = pulsar
+    }
+	planet = {
+                        key = pc_f_star
+                        class = f_star
+    }
+	planet = {
+                        key = pc_a_star
+                        class = a_star
+    }
+    
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+#######################################
+## SEPTENARY: G-F-A-B-M-K-B ##
+#######################################
+sc_elven_septenary_2 = {
+    class             = f_star
+    icon              = elven_b_septenary_star
+    planet = {
+                        key = pc_g_star
+                        class = g_star
+    }
+	planet = {
+                        key = pc_f_star
+                        class = f_star
+    }
+	planet = {
+                        key = pc_a_star
+                        class = a_star
+    }
+	planet = {
+                        key = pc_b_star
+                        class = b_star
+    }
+	planet = {
+                        key = pc_m_star
+                        class = m_star
+    }
+	planet = {
+                        key = pc_k_star
+                        class = k_star
+    }
+	planet = {
+                        key = pc_b_star
+                        class = b_star
+    }
+    
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+################
+## HOLY SHIT ##
+###############
+
+## USED FOR: 
+## - elven_super_system_initializer
+sc_elven_super_1 = {
+    class             = b_star
+    icon              = elven_a_super_star
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_g_star
+                        class = g_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    planet            = {
+                        key = pc_m_giant_star
+                        class = m_star
+                    }
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_g_star
+                        class = g_star
+                    }
+    planet            = {
+                        key = pc_t_star
+                        class = t_star
+                    }
+    planet            = {
+                        key = pc_m_giant_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}

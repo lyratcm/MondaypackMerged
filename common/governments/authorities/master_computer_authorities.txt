@@ -1,0 +1,40 @@
+auth_master_computer = {
+    has_heir = no
+    election_type = none
+    can_reform = no
+    valid_for_released_vassal = no
+
+    potential = {
+        country_type = { value = default } # Wouldn't want some random people picking it
+    }
+
+    possible = {
+        ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
+		}
+    }
+
+    random_weight = { # I guess this should help
+		modifier = {
+			factor = 0
+			has_global_flag = game_started
+		}
+    }
+
+    country_modifier = {
+        empire_size_penalty_mult = 0.75
+        planet_stability_add = 10
+        country_base_influence_produces_add = 0.5
+        pop_factions_produces_mult = -0.33
+        station_researchers_produces_mult = 0.10
+    }
+    
+    tags = {
+        MASTER_COMPUTER_RULER
+        MASTER_COMPUTER_FACTIONS
+    }
+}

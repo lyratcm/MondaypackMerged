@@ -1,0 +1,85 @@
+
+####### MOON AMBIENT ############
+sound =
+{
+	name = "lunari_shielded_01"
+	file = "lunari_shielded_pc_amb_01.wav"
+	volume = 0.5
+}	
+sound =
+{
+	name = "lunari_shielded_02"
+	file = "lunari_shielded_pc_amb_02.wav"
+	volume = 0.5
+}
+sound =
+{
+	name = "lunari_shielded_03"
+	file = "lunari_shielded_pc_amb_03.wav"
+	volume = 0.5
+}
+
+####### PLANET AMBIENT ############
+sound =
+{
+	name = "pc_lunari_arctic_01"
+	file = "pc_lunari_arctic_01.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_02"
+	file = "pc_lunari_arctic_02.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_03"
+	file = "pc_lunari_arctic_03.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_04"
+	file = "pc_lunari_arctic_04.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_05"
+	file = "pc_lunari_arctic_05.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_06"
+	file = "pc_lunari_arctic_06.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_07"
+	file = "pc_lunari_arctic_07.wav"
+	always_load = no
+	volume = 0.4
+}
+
+sound =
+{
+	name = "pc_lunari_arctic_08"
+	file = "pc_lunari_arctic_08.wav"
+	always_load = no
+	volume = 0.4
+}

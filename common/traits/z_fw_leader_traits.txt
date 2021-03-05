@@ -1,0 +1,118 @@
+###_z fw leader	#################################################################################
+
+#_[misc]
+#_[relic]
+
+
+
+
+###_[misc]	################################
+z_fw_trait_leader_test_ancrel = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/z_fw_trait_r_hok_kayrl_positive.dds"
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 10
+	}
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+
+###_[relic]	################################
+#_z_r_hok
+z_fw_trait_leader_r_hok = {
+	cost = 0
+	modification = no
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/z_fw_trait_r_hok_kayrl_positive.dds"
+
+	#leader_potential_add = {
+	#}
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.75
+	}
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+#_z_r_hok	异色瞳
+z_fw_trait_leader_r_hok_pupil = {
+	cost = 0
+	modification = no
+	icon = "gfx/interface/icons/traits/z_fw_trait_kogasa_pupil.dds"
+
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = 0.75
+		ship_anomaly_generation_chance_mult = 0.5
+		ship_anomaly_research_speed_mult = 0.35
+		all_technology_research_speed = 0.15
+		science_ship_survey_speed = 0.25
+	}
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+		physics
+		society
+		engineering
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+#_z_r_hok	伞
+z_fw_trait_leader_r_hok_kogasa = {
+	cost = 0
+	modification = no
+	immortal_leaders = yes
+	icon = "gfx/interface/icons/traits/z_fw_trait_kogasa_1.dds"
+
+	modifier = {
+		ship_speed_mult = 0.50
+	}
+	
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+
+	ai_categories = {
+		survey
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

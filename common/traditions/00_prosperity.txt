@@ -1,0 +1,15 @@
+tr_prosperity_adopt = {
+	modifier = {
+		#
+	}
+}
+tr_prosperity_finish = {
+	modifier = {
+		#
+	}
+}
+tr_prosperity_interstellar_franchising = {
+	modifier = {
+		#
+	}
+}

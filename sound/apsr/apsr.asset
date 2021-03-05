@@ -1,0 +1,146 @@
+category = {
+ name = "Effects"
+ soundeffects = {
+	apsr_arcrel_207
+	apsr_arcrel_602
+	apsr_ovation
+	apsr_terminal_code_6666
+	apsr_glass_break
+	event_air_raid_siren_03
+	event_planetary_riot_03
+	evn_lootbox_bad_01
+	evn_lootbox_galatron_01
+ }
+}
+
+########## SOUND EFFECTS
+
+soundeffect = {
+	name = apsr_arcrel_207
+	sounds = {
+		sound = apsr_arcrel_207
+	}
+	volume = 0.7
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = apsr_arcrel_602
+	sounds = {
+		sound = apsr_arcrel_602
+	}
+	volume = 0.5
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = apsr_ovation
+	sounds = {
+		sound = apsr_ovation
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = apsr_glass_break
+	sounds = {
+		sound = apsr_glass_break
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = apsr_terminal_code_6666
+	sounds = {
+		sound = apsr_terminal_code_6666
+	}
+	volume = 1.2
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = event_air_raid_siren_03
+	sounds = {
+		sound = event_air_raid_siren_03
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = event_planetary_riot_03
+	sounds = {
+		sound = event_planetary_riot_03
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = evn_lootbox_bad_01
+	sounds = {
+		sound = evn_lootbox_bad_01
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+soundeffect = {
+	name = evn_lootbox_galatron_01
+	sounds = {
+		sound = evn_lootbox_galatron_01
+	}
+	volume = 0.8
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+########## SOUND ASSETS
+
+sound = {
+	name = "apsr_arcrel_207"
+	file = "apsr_arcrel_207.wav"
+	volume = 0.7
+}
+sound = {
+	name = "apsr_arcrel_602"
+	file = "apsr_arcrel_602.wav"
+	volume = 0.7
+}
+sound = {
+	name = "apsr_ovation"
+	file = "apsr_ovation.wav"
+	volume = 0.8
+}
+sound = {
+	name = "apsr_glass_break"
+	file = "apsr_glass_break.wav"
+	volume = 0.8
+}
+sound = {
+	name = "apsr_terminal_code_6666"
+	file = "apsr_terminal_code_6666.wav"
+	volume = 1.2
+}
+#sound = {
+#	name = "event_air_raid_siren_03"
+#	file = "event_air_raid_siren_03.wav"
+#	volume = 0.8
+#}
+#sound = {
+#	name = "event_planetary_riot_03"
+#	file = "event_planetary_riot_03.wav"
+#	volume = 0.8
+#}
+#sound = {
+#	name = "evn_lootbox_bad_01"
+#	file = "evn_lootbox_bad_01.wav"
+#	volume = 0.8
+#}
+#sound = {
+#	name = "evn_lootbox_galatron_01"
+#	file = "evn_lootbox_galatron_01.wav"
+#	volume = 0.8
+#}

@@ -1,0 +1,140 @@
+namespace = coop_sizes
+
+country_event = {
+	id = coop_sizes.0
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		num_owned_planets > 0
+		is_country_type = default	
+	}
+	immediate = {
+        set_variable = { which = "coop_total_number_of_systems" value = 1	}
+		set_variable = { which = "coop_total_number_of_planets" value = 1	}			
+		
+		while = {			
+			limit = {
+				check_variable = { which = "coop_target_number_of_systems" value > "coop_total_number_of_systems"	 }
+			}
+			country_event = { id = coop_sizes.2 }
+		}
+
+        log = "An empire got [this.coop_total_number_of_systems] systems and [this.coop_total_number_of_planets] planets with [this.coop_target_number_of_systems] targeted systems "
+		
+		country_event = { id = game_start.6 }
+		country_event = { id = game_start.9 }
+		capital_scope = {
+			planet_event = { id = coop_sizes.1 }
+		}
+	}
+}
+
+planet_event = {
+	id = coop_sizes.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	immediate = {
+		planet_event = { id = game_start.20 }
+		planet_event = { id = game_start.21 }
+		planet_event = { id = game_start.22 }
+		planet_event = { id = game_start.23 }
+	}
+}
+
+
+country_event = {
+	id = coop_sizes.2
+	hide_window = yes
+
+	is_triggered_only = yes
+	immediate = {
+		every_system_within_border = {
+			every_neighbor_system = {
+
+				limit = {
+					has_owner = no
+					nor = { 
+						exists = starbase 
+						has_star_flag = hostile_system
+						has_star_flag = tiyanki_home_system
+						has_star_flag = sealed_system
+						any_ship_in_system = {
+							exists = fleet
+							owner = {
+								NOT = {
+									is_country_type = default
+								}
+							}
+						}
+					}                
+				}
+				if = {
+					limit = { 
+						NOT = { has_star_flag = asymmetric_system } 
+						root = { check_variable = { which =  "coop_target_number_of_systems" value > "coop_total_number_of_systems"	 } }
+					}
+				
+					set_star_flag = asymmetric_system
+					root = { change_variable = { which = "coop_total_number_of_systems" value = 1 } }
+					create_starbase = { size = starbase_outpost owner = root }
+					every_system_planet = {
+						limit = {										
+							habitability = { who = root.owner_species value > 0.5 }
+							is_colony = no
+							is_colonizable = yes
+						}
+						
+						create_colony = { owner = root species = owner_main_species ethos = owner }
+						root = { change_variable = { which = "coop_total_number_of_planets" value = 1 } }
+						planet_event = { id = coop_sizes.1 }										
+					}
+				}
+			}
+		}
+	}
+}
+
+
+planet_event = {
+	id = coop_sizes.20
+	hide_window = yes
+	trigger = {
+		
+	}
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_capital = no				
+			}
+			add_district_and_planet_size_if_needed_effect = { district = district_mining }
+			add_district_and_planet_size_if_needed_effect = { district = district_generator }			
+
+			if = {
+				limit = { owner = { has_authority = auth_machine_intelligence } }
+				add_district_and_planet_size_if_needed_effect = { district = district_nexus }				
+			}
+			else_if = {
+				limit = { owner = { has_authority = auth_hive_mind } }				
+				add_district_and_planet_size_if_needed_effect = { district = district_hive }
+			}
+			else = {				
+				add_district_and_planet_size_if_needed_effect = { district = district_city }
+			}
+
+			if = {
+				limit = {
+					owner = { NOT = { has_authority = auth_machine_intelligence } }
+				}				
+				add_district_and_planet_size_if_needed_effect = { district = district_farming }
+			}
+			if = {
+				limit = {
+					owner = { has_authority = auth_machine_intelligence }
+				}				
+				add_district_and_planet_size_if_needed_effect = { district = district_generator }
+			}			
+		}		
+	}
+}

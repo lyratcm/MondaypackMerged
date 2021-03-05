@@ -1,0 +1,267 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+eac_create_governor_bureaucrat = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_bureaucrat
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+
+eac_create_governor_agrarian_upbringing = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_agrarian_upbringing
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_architectural_interest = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_architectural_interest
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_army_veteran = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_army_veteran
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_environmental_engineer = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_environmental_engineer
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_intellectual = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_intellectual
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_iron_fist = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_iron_fist
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_retired_fleet_officer = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_retired_fleet_officer
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_righteous = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_righteous
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_warbot_tinkerer = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_warbot_tinkerer
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_ai_aided_design = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_ai_aided_design
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_bulldozer = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_bulldozer
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_analytical = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_analytical
+			trait = leader_trait_university_educated_governor
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+# eac_create_governor_electrician = {
+# 	create_leader = {
+# 		class = governor
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = eac_leader_trait_electrician
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }
+
+# eac_create_governor_miningboss = {
+# 	create_leader = {
+# 		class = governor
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = eac_leader_trait_miningboss
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }

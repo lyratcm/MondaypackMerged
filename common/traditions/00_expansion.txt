@@ -1,0 +1,10 @@
+tr_expansion_adopt = {
+	modifier = {
+		#
+	}
+}
+tr_expansion_finish = {
+	modifier = {
+		#
+	}
+}

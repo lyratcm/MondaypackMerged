@@ -1,0 +1,7 @@
+tradition_harmony = {
+	adoption_bonus = "tr_harmony_adopt"
+	finish_bonus = "tr_harmony_finish"
+	traditions = {
+		##
+	}
+}

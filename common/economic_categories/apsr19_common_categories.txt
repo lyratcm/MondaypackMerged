@@ -1,0 +1,31 @@
+###################
+# APSR Jobs
+###################
+
+
+# BIO AGRONOMISTS
+apsr19_planet_agronomist_normal = {
+	icon = "job_researcher"
+	parent = planet_jobs
+}
+apsr19_planet_agronomist_hive = {
+	icon = "job_researcher"
+	parent = planet_jobs
+}
+
+
+# MACHINE POWER ENGINEER
+apsr19_planet_power_engineer_machine = {
+	icon = "job_researcher"
+	parent = planet_jobs
+}
+
+#LITHOID POWER ENGINEER
+apsr19_planet_power_engineer_lithoid_normal = {
+	icon = "job_researcher"
+	parent = planet_jobs
+}
+apsr19_planet_power_engineer_lithoid_hive = {
+	icon = "job_researcher"
+	parent = planet_jobs
+}

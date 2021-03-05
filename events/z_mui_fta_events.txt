@@ -1,0 +1,1137 @@
+namespace = fire_them_all
+
+country_event = {
+	id = fire_them_all.1
+	is_triggered_only = yes
+	title = fta.1.name
+	desc = fta.1.desc
+	picture = GFX_evt_metropolis
+
+	option = {
+		name = CANCEL
+	}
+
+	option = {
+		name = fta.2.name
+		hidden_effect = {
+			owner = { country_event = { id = fire_them_all.2 } }
+		}
+	}
+	option = {
+		name = fta.3.name
+		hidden_effect = {
+			owner = { country_event = { id = fire_them_all.3 } }
+		}
+	}
+	option = {
+		name = fta.4.name
+		hidden_effect = {
+			owner = { country_event = { id = fire_them_all.4 } }
+		}
+	}
+	option = {
+		name = fta.5.name
+		hidden_effect = {
+			owner = { country_event = { id = fire_them_all.5 } }
+		}
+	}
+}
+
+country_event = {
+	id = fire_them_all.2
+	is_triggered_only = yes
+	title = fta.2.name
+	desc = fta.2.desc
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = ecost value = 0 }
+		every_pool_leader = { limit = { leader_class = governor }
+			set_leader_flag = count_me
+		}
+		while = {#_数量统计
+			limit = { any_pool_leader = { has_leader_flag = count_me } }
+			random_pool_leader = {
+				limit = { has_leader_flag = count_me }
+				remove_leader_flag = count_me
+			}
+			change_variable = { which = ecost value = 1}
+		}
+	}
+
+	option = {
+		name = CANCEL
+	}
+
+	## Cash Payoff Options
+
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100 } } }
+		owner = { add_resource = { energy = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 200 } } }
+		owner = { add_resource = { energy = -200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 300 } } }
+		owner = { add_resource = { energy = -300 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 400 } } }
+		owner = { add_resource = { energy = -400 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 500 } } }
+		owner = { add_resource = { energy = -500 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 600 } } }
+		owner = { add_resource = { energy = -600 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 700 } } }
+		owner = { add_resource = { energy = -700 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 800 } } }
+		owner = { add_resource = { energy = -800 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 900 } } }
+		owner = { add_resource = { energy = -900 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		owner = { add_resource = { energy = -1000 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	
+	### Influence Payoff Options
+	
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 10 } } }
+		owner = { add_resource = { influence = -10 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 20 } } }
+		owner = { add_resource = { influence = -20 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 30 } } }
+		owner = { add_resource = { influence = -30 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 40 } } }
+		owner = { add_resource = { influence = -40 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 50 } } }
+		owner = { add_resource = { influence = -50 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 60 } } }
+		owner = { add_resource = { influence = -60 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 70 } } }
+		owner = { add_resource = { influence = -70 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 80 } } }
+		owner = { add_resource = { influence = -80 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 90 } } }
+		owner = { add_resource = { influence = -90 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 100 } } }
+		owner = { add_resource = { influence = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fire_them_all.3
+	is_triggered_only = yes
+	title = fta.3.name
+	desc = fta.2.desc
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = ecost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = scientist }
+			set_leader_flag = count_me
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = count_me } }
+			random_pool_leader = {
+				limit = { has_leader_flag = count_me }
+				remove_leader_flag = count_me
+			}
+			change_variable = { which = ecost value = 1}
+		}
+	}
+
+	option = {
+		name = CANCEL
+	}
+
+	## Cash Payoff Options
+
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100 } } }
+		owner = { add_resource = { energy = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 200 } } }
+		owner = { add_resource = { energy = -200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 300 } } }
+		owner = { add_resource = { energy = -300 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 400 } } }
+		owner = { add_resource = { energy = -400 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 500 } } }
+		owner = { add_resource = { energy = -500 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 600 } } }
+		owner = { add_resource = { energy = -600 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 700 } } }
+		owner = { add_resource = { energy = -700 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 800 } } }
+		owner = { add_resource = { energy = -800 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 900 } } }
+		owner = { add_resource = { energy = -900 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		owner = { add_resource = { energy = -1000 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	
+	### Influence Payoff Options
+	
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 10 } } }
+		owner = { add_resource = { influence = -10 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 20 } } }
+		owner = { add_resource = { influence = -20 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 30 } } }
+		owner = { add_resource = { influence = -30 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 40 } } }
+		owner = { add_resource = { influence = -40 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 50 } } }
+		owner = { add_resource = { influence = -50 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 60 } } }
+		owner = { add_resource = { influence = -60 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 70 } } }
+		owner = { add_resource = { influence = -70 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 80 } } }
+		owner = { add_resource = { influence = -80 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 90 } } }
+		owner = { add_resource = { influence = -90 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 100 } } }
+		owner = { add_resource = { influence = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fire_them_all.4
+	is_triggered_only = yes
+	title = fta.4.name
+	desc = fta.2.desc
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = ecost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = admiral }
+			set_leader_flag = count_me
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = count_me } }
+			random_pool_leader = {
+				limit = { has_leader_flag = count_me }
+				remove_leader_flag = count_me
+			}
+			change_variable = { which = ecost value = 1}
+		}
+	}
+
+	option = {
+		name = CANCEL
+	}
+
+	## Cash Payoff Options
+
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100 } } }
+		owner = { add_resource = { energy = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 200 } } }
+		owner = { add_resource = { energy = -200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 300 } } }
+		owner = { add_resource = { energy = -300 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 400 } } }
+		owner = { add_resource = { energy = -400 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 500 } } }
+		owner = { add_resource = { energy = -500 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 600 } } }
+		owner = { add_resource = { energy = -600 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 700 } } }
+		owner = { add_resource = { energy = -700 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 800 } } }
+		owner = { add_resource = { energy = -800 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 900 } } }
+		owner = { add_resource = { energy = -900 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		owner = { add_resource = { energy = -1000 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	
+	### Influence Payoff Options
+	
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 10 } } }
+		owner = { add_resource = { influence = -10 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 20 } } }
+		owner = { add_resource = { influence = -20 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 30 } } }
+		owner = { add_resource = { influence = -30 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 40 } } }
+		owner = { add_resource = { influence = -40 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 50 } } }
+		owner = { add_resource = { influence = -50 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 60 } } }
+		owner = { add_resource = { influence = -60 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 70 } } }
+		owner = { add_resource = { influence = -70 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 80 } } }
+		owner = { add_resource = { influence = -80 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 90 } } }
+		owner = { add_resource = { influence = -90 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 100 } } }
+		owner = { add_resource = { influence = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = fire_them_all.5
+	is_triggered_only = yes
+	title = fta.5.name
+	desc = fta.2.desc
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = ecost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = general }
+			set_leader_flag = count_me
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = count_me } }
+			random_pool_leader = {
+				limit = { has_leader_flag = count_me }
+				remove_leader_flag = count_me
+			}
+			change_variable = { which = ecost value = 1}
+		}
+	}
+
+	option = {
+		name = CANCEL
+	}
+
+	## Cash Payoff Options
+
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 100 } } }
+		owner = { add_resource = { energy = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 200 } } }
+		owner = { add_resource = { energy = -200 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 300 } } }
+		owner = { add_resource = { energy = -300 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 400 } } }
+		owner = { add_resource = { energy = -400 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 500 } } }
+		owner = { add_resource = { energy = -500 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 600 } } }
+		owner = { add_resource = { energy = -600 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 700 } } }
+		owner = { add_resource = { energy = -700 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 800 } } }
+		owner = { add_resource = { energy = -800 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 900 } } }
+		owner = { add_resource = { energy = -900 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = CASHOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = energy value >= 1000 } } }
+		owner = { add_resource = { energy = -1000 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	
+	### Influence Payoff Options
+	
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 1 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 10 } } }
+		owner = { add_resource = { influence = -10 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 2 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 20 } } }
+		owner = { add_resource = { influence = -20 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 3 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 30 } } }
+		owner = { add_resource = { influence = -30 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 4 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 40 } } }
+		owner = { add_resource = { influence = -40 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 5 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 50 } } }
+		owner = { add_resource = { influence = -50 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 6 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 60 } } }
+		owner = { add_resource = { influence = -60 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 7 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 70 } } }
+		owner = { add_resource = { influence = -70 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 8 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 80 } } }
+		owner = { add_resource = { influence = -80 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value = 9 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 90 } } }
+		owner = { add_resource = { influence = -90 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+	option = {
+		name = INFOUT
+		trigger = { owner= { check_variable = { which = ecost value >= 10 } } }
+		allow = { owner = { resource_stockpile_compare = { resource = influence value >= 100 } } }
+		owner = { add_resource = { influence = -100 } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_fta_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }
+				kill_leader = { show_notification = no }
+			}
+		}
+	}
+}

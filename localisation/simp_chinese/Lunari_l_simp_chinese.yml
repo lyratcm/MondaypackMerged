@@ -1,0 +1,240 @@
+﻿l_simp_chinese:
+name_list_Lunari:0 "Elves: Moon Elf"
+
+####################################
+# Civics and traits
+####################################
+
+civic_elven_shields:0 "Shield Power Relays"
+civic_elven_shields_desc:0 "Shield technology is prioritized over other forms of defense. New shield relays and resistance amplifiers are quick to be implemented. This requires extra care to ensure new ships are properly outfitted to handle ever improving shield technology."
+
+trait_pc_lunari_arctic_preference:0 "Permafrost Preference"
+trait_pc_lunari_arctic_preference_desc:1 "§LClimate preference is determined at the genetic level, by eons of evolution or skillful manipulation.§!"
+
+####################################
+# TECHS
+####################################
+tech_lunari_shield_power_relays:0 "Lunar Shield Power Relays"
+tech_lunari_shield_power_relays_desc:0 "The Goddess has given us the inspiration for a new shielding technique. Though expensive, it will significantly boost our shielding capabilities."
+
+####################################
+# Planets
+####################################
+
+pc_lunari_shielded:0 "Shielded Moon"
+pc_lunari_shielded_desc:0 "This moon is encased in some kind of impenetrable energy barrier. It provides the only significant source of light in the system as well as radiating an enormous amount of psionic energy. All scans of the surface, if one exists, are reflected back by means unknown."
+
+pc_lunari_arctic:0 "Permafrost World"
+pc_lunari_arctic_desc:0 "Glacial rocky world with a moderate nitrogen-oxygen atmosphere. Extreme weather conditions prevent all but the most robust forms of life."
+
+pc_lunari_arctic_tile:0 "Permafrost Terrain"
+pc_lunari_arctic_tile_desc:0 "Snow and ice covered terrain with no vegetation."
+
+pc_lunari_arctic_habitability:0 "Permafrost Habitability"
+mod_pc_lunari_arctic_habitability:0 "Permafrost Habitability"
+
+####################################
+# Modifiers and tile blockers
+####################################
+
+lunari_dark_planet:0 "Veiled World"
+lunari_dark_planet_desc:0 "§LApart from being almost frozen, this world is very dark. The only light is provided by the Moon, but regular eclipses often obscure even this light source. Few lifeforms are capable of adapting to such conditions.§!"
+
+lunari_thunderstorms:0 "Nimbus Climate"
+lunari_thunderstorms_desc:0 "§LThis world is afflicted with nearly unending thunderstorms. Frequent lightning and blizzards make it difficult to live let alone construct and maintain buildings. There may some benefit to studying what causes the storms as well as harnessing energy from lightning strikes.§!"
+
+lunari_ultra_rich:0 "Crystalline Formations"
+lunari_ultra_rich_desc:0 "§LCurious crystalline formations dot the crust of this world. Closer inspection reveals they are comprised of precious minerals. This will profoundly improve any mining efforts.§!"
+
+lunari_auroras:0 "Lunar Auroras"
+lunari_auroras_desc:0 "§LWhenever the Moon is visible from the surface, vast cascades of prismatic light dance around the sky. The phenomena is thought to be caused by a thin layer of crystals in the mesosphere reacting to moonlight. Regardless of cause the display is breathtaking.§!"
+
+lunari_stable_weather:0 "Benign Weather"
+lunari_stable_weather_desc:0 "§LHigh pressure zones present in the atmosphere lend to more pleasant weather cycles.§!"
+
+lunari_ecological_retaliation:0 "Ecological Catastrophe"
+lunari_ecological_retaliation_desc:0 ""
+
+####################################
+# Diplomacy
+####################################
+
+personality_lunari_personality:0 "Lunar Warriors"
+personality_lunari_personality_desc:0 "Maeniesh Lýn, "People of the Moon" in Naerelýn, are highly spiritual, proud and ruthless people. They're remarkably skilled in warfare and won't hesitate to torture or execute their enemies should the need arise. Still, Moon Elves are willing to cooperate with others if shown respect. They may become a truly valuable ally."
+
+LUN_HOSTILE_GREETING_01:0 "You are not welcome here, [From.GetSpeciesName]. If you stop bothering us now, we may still spare your insignificant lives."
+LUN_HOSTILE_GREETING_02:0 "You try our patience, [From.GetSpeciesName]. Is it death you seek?"
+LUN_HOSTILE_GREETING_03:0 "[Root.GetRulerTitle] [Root.GetRulerName] is displeased with you. We have nothing to talk about."
+LUN_DOMINEERING_GREETING_01:0 "The time has come to speak truth, [From.GetRulerTitle]. You are weak. You cannot protect your people, you cannot protect your worlds and you cannot protect your title. Becoming our subject is your only chance at continued existence."
+LUN_NEUTRAL_GREETING_01:0 "Duties we each bear, but one's duty is a solitary affair. I doubt we've much to gain from fraternisation. Blessing of the Moon upon your journey."
+LUN_NEUTRAL_GREETING_02:0 "We do not much care about you or your affairs. Still, [Root.GetRulerTitle] [Root.GetRulerName] is interested in what you can offer."
+LUN_NEUTRAL_GREETING_03:0 "Is communication truly required? Very well, you may speak."
+LUN_NEUTRAL_GREETING_04:0 "If this is a trade offer we will consider it. Otherwise there is little to discuss."
+LUN_NEUTRAL_GREETING_05:0 "Oh, it's one of you [From.GetSpeciesName] people. Don't bother, we do not expect you to honor or even understand our way of life and religion."
+LUN_THREATENED_GREETING_01:0 "It is difficult not to see what you have in mind. You are nothing if not predictable. But be wary... because we are ready for you."
+LUN_FRIENDLY_GREETING_01:0 "We have heard a great deal about you. Mostly good things."
+LUN_FRIENDLY_GREETING_02:0 "Blessing of the Moon upon you. [Root.GetRulerTitle] [Root.GetRulerName] is curious about you and [From.GetSpeciesNamePlural] culture in particular. Please, make yourself at home and feel free to share some interesting stories with us."
+LUN_FRIENDLY_GREETING_03:0 "If we can be of help, by all means, do call upon us. Blessing of the Moon upon you."
+LUN_FRIENDLY_GREETING_04:0 "Now that is someone we are glad to see. Welcome, [Root.GetRulerTitle] [Root.GetRulerName] is quite eager to speak with you."
+LUN_WAR_GREETING_01:0 "If this is not in regards to your immediate surrender, begone."
+LUN_WAR_GREETING_02:0 "Are you so bold to contact us now? The time for talking has long since passed."
+LUN_WAR_GREETING_03:0 "*chuckle*\n[Root.GetRulerTitle] [Root.GetRulerName] is quite amused with this war. May the Moon have mercy on you."
+LUN_WAR_GREETING_04:0 "It seems that we have been outplayed. Savor your victory... for now."
+LUN_VASSAL_GREETING_01:0 "You have turned out more interesting than we could have imagined. [Root.GetRulerTitle] [Root.GetRulerName] is willing to work with you."
+LUN_VASSAL_GREETING_DISLOYAL_01:0 "Of all disgraces to befall the [Root.GetName], serving under [From.GetSpeciesAdj] fools is by far the worst."
+LUN_DOW_PROPOSE_01:0 "Let us see if [From.GetSpeciesNamePlural] are as tough as they believe they are. Prepare yourself, for this is war. May the Goddess have mercy on you, for we shall have none."
+
+####################################
+# Event stuff
+####################################
+
+elven_colony_events.41.name:0 "Foreboding Predictions"
+elven_colony_events.41.desc:0 "A thorough examination of the Last Baol has resulted in some troubling findings in regards to Permafrost worlds. It is theorized that unleashing the Baol on a Permafrost world will wreak absolute havoc on the ecosystem. It is surmised that the climate changes will also only be temporary, which could result in a massive cost in both life and economy. The consensus by our scientists is to never release the Baol on any of our permafrost planets."
+elven_colony_events.41.a:0 "Noted."
+
+elven_colony_events.42.name:0 "Ecological Cataclysm"
+elven_colony_events.42.desc:0 "It appears our scientists' concerns regarding the impermanence of the climate changes due to the Baol have come true. [Root.GetName] has shockingly returned to its original permafrost state. Along with massive ecological damage and surging storms the likes of which we have never seen before."
+elven_colony_events.42.a:0 "This is a disaster."
+
+####################################
+# Prescripted stuff
+####################################
+
+EMPIRE_DESIGN_lunariciv:0 "Silvermoon Hierocracy"
+EMPIRE_DESIGN_lunariciv_desc:0 "Nothing confounds a xenobiologist more than bringing up the subject of Naerelýn, the Children of the Moon. They originate from a nearly dead frozen world. Said world orbits a pair of black holes. The only light in their system is provided by a strange glowing moon that somehow repels any attempt at scanning. By all accounts they shouldn't exist at all.\n\nThe Moon Elves themselves find such questions extremely foolish. The answer is obvious: they were created by their Goddess and any fool that wishes to dispute the fact should simply have a look at their Moon.\n\nRelative newcomers to the galactic scene, the Naerelýn seem generally friendly and approachable, though they rarely move away from home. There are whispers that they eradicate, in ways most agonizing, anyone that disrespects or double crosses them. Such talk however is likely the result of idle minds as there have never been any formal accusations. Or at least, no one survived long enough to lodge any.\n"
+
+elven_lunari_system_initializer_NAME:0 "Sunless Realms"
+elven_lunari_system_initializer_DESC:0 "A cold binary black hole system. The only light source being a strange nearby moon.\n\n$system_initializer_DESC$"
+
+####################################
+# Origin
+####################################
+
+origin_elven_sunless_realms:0 "Sunless Realms"
+origin_elven_sunless_realms_desc:0 "Miraculously blossoming in a system with binary black holes, your civilization's only light has been that of the divine Moon."
+origin_tooltip_elven_sunless_realms_effects:3 "§YStarting location§!:\n Start in a §Ycustom star cluster§!\n\n§YHomeworld§!:\n Is a £planet£ §Y$pc_lunari_arctic$§!\n Has §GLunar Auroras§! modifier\n Has §Y1§! §EUnique§! feature\n\n§YCapital system§!:\n Has §REnvironmental Hazards§!\n Two smaller £planet£ §Y$pc_lunari_arctic$s§! will\n spawn as satellites of your homeworld\n £planet£ §Y$pc_lunari_arctic$s§! have very little\n natural £food£ §YFood§! deposits\n\n§YSpecies§!:\n Habitability is set to §Y$trait_pc_lunari_arctic_preference$§!\n §RHotter planets are undesirable!§!\n\n§YEmpire§!:\nStart with §GHydroponics Farming§! technology"
+
+################
+### DEPOSITS ###
+################
+
+d_lunari_planetary_trees:0 "Malevolent Groves"
+d_lunari_planetary_trees_desc:0 "Certain forests have strange tree formations that are in fact alive and highly dangerous. Attempts at communication have proven ultimately unsuccessful as the sentient trees appear to only have thoughts of murder. Reports of freezing breath and other odd abilities have thus far been unsubstantiated."
+
+d_lunari_planetary_trees_blocker:0 "£blocker£ Malevolent Groves"
+d_lunari_planetary_trees_blocker_desc:0 "Certain forests have strange tree formations that are in fact alive and highly dangerous. Attempts at communication have proven ultimately unsuccessful as the sentient trees appear to only have thoughts of murder. Reports of freezing breath and other odd abilities have thus far been unsubstantiated."
+
+d_lunari_planetary_ice_blossoms:0 "Ice Blossoms"
+d_lunari_planetary_ice_blossoms_desc:0 "In valleys secluded from the winds and blizzards, a remarkable ice flower exists. The petals and filaments appear as if they are made of small ice crystals. This creates a magnificent prismatic effect when even a small amount of light is present. The flowers are considered sacred by the local populace and even accidentally trampling on one is a death sentence."
+
+d_lunari_planetary_cp_ice_blossoms:0 "Ice Blossoms"
+d_lunari_planetary_cp_ice_blossoms_desc:0 "Their natural habitats having long since been built over, ice blossoms are now carefully cultivated in giant domed gardens. The flowers are still considered sacred and the gardens themselves have become shrines. Attempted theft or even accidental harm of the prismatic ice flowers is still an automatic death sentence."
+
+d_lunari_planetary_ice_blossoms_blocker:0 "£blocker£ Ice Blossoms"
+d_lunari_planetary_ice_blossoms_blocker_desc:0 "$d_lunari_planetary_ice_blossoms$"
+
+d_lunari_planetary_cp_ice_blossoms_blocker:0 "£blocker£ Ice Blossoms"
+d_lunari_planetary_cp_ice_blossoms_blocker_desc:0 "$d_lunari_planetary_cp_ice_blossoms$"
+
+d_lunari_planetary_ice_spires:0 "Ice Spires"
+d_lunari_planetary_ice_spires_desc:0 "Giant ice spires that seem to defy known laws of physics are scattered about this world. They appear to have been created by water flowing straight up in almost perfect columns and then freezing instantly. Water seems to be still flowing upwards inside the spires on close inspection, further confounding attempts at understanding their formation."
+
+d_lunari_massive_glacier:0 "$d_massive_glacier$"
+d_lunari_massive_glacier_desc:0 "$d_massive_glacier_desc$"
+
+d_lunari_dangerous_wildlife_blocker:0 "$d_dangerous_wildlife_blocker$"
+d_lunari_dangerous_wildlife_blocker_desc:0 "$d_dangerous_wildlife_blocker_desc$"
+
+d_lunari_planetary_energy_1:0 "Charged Atmosphere"
+d_lunari_planetary_energy_1b:0 "Charged Atmosphere"
+d_lunari_planetary_energy_1_desc:0 "Lunar radiation colliding with the atmosphere produces a unique plasma that is both harmless to life and easily harnessed for energy."
+d_lunari_planetary_energy_1b_desc:0 "Lunar radiation colliding with the atmosphere produces a unique plasma that is both harmless to life and easily harnessed for energy."
+
+d_lunari_planetary_energy_2:0 "Natural Conductive Grounds"
+d_lunari_planetary_energy_2b:0 "Natural Conductive Grounds"
+d_lunari_planetary_energy_2_desc:0 "Naturally occurring metals have produced areas where lightning strikes can be predicted with exactness allowing them to be effortlessly harnessed."
+d_lunari_planetary_energy_2b_desc:0 "Naturally occurring metals have produced areas where lightning strikes can be predicted with exactness allowing them to be effortlessly harnessed."
+
+d_lunari_planetary_energy_3:0 "Megastorms"
+d_lunari_planetary_energy_3_desc:0 "Certain regions harbor the conditions perfect for creating nearly constant storms. Often these storms will last years or more with only brief periods of calm."
+
+d_lunari_planetary_minerals_1:0 "Crystal Rain"
+d_lunari_planetary_minerals_1_desc:0 "The chemical gases covering the entire region's surface provoke an elemental shock reaction whenever precipitation hits the ground. This has turned the surface into a razor sharp, foggy but mineral rich landscape."
+
+d_lunari_planetary_minerals_2:0 "Rich Mountain"
+d_lunari_planetary_minerals_2b:0 "Rich Mountain"
+d_lunari_planetary_minerals_2_desc:0 "These mountainsides glint with rich ore resources and precious stones."
+d_lunari_planetary_minerals_2b_desc:0 "These mountainsides glint with rich ore resources and precious stones."
+
+d_lunari_planetary_minerals_3:0 "Ore-Rich Caverns"
+d_lunari_planetary_minerals_3b:0 "Ore-Rich Caverns"
+d_lunari_planetary_minerals_3_desc:0 "These deep caverns are rife with metallic and mineral ore deposits."
+d_lunari_planetary_minerals_3b_desc:0 "These deep caverns are rife with metallic and mineral ore deposits."
+
+d_lunari_planetary_food_1:0 "Frozen Wasteland"
+d_lunari_planetary_food_1b:0 "Frozen Wasteland"
+d_lunari_planetary_food_1_desc:0 "This region suffers from extreme weather conditions that result in harsh conditions for most forms of life."
+d_lunari_planetary_food_1b_desc:0 "This region suffers from extreme weather conditions that result in harsh conditions for most forms of life."
+
+d_lunari_planetary_food_2:0 "Moon Algae Paradise"
+d_lunari_planetary_food_2_desc:0 "The lakes in this region contain a large amount of edible algae that grow under a thin layer of ice. It is thought the algae grows exclusively from the light of the Moon."
+
+d_lunari_planetary_food_2b:0 "Dominant Flora"
+d_lunari_planetary_food_2b_desc:0 "Plants and trees in this region have adapted more efficiently to harsh weather conditions, causing them to grow a widespread variety of solanums."
+
+d_lunari_planetary_food_3:0 "Permafrost Groves"
+d_lunari_planetary_food_3_desc:0 "Unique plantforms that resemble trees made of ice cover this region in expansive forests. These plantforms produce a fruit that is at the same time filling and long lasting."
+
+############
+### JOBS ###
+############
+
+job_elven_ice_spire_researcher:0 "Ice Spire Researcher"
+job_elven_ice_spire_researcher_plural:0 "Ice Spire Researchers"
+job_elven_ice_spire_researcher_desc:0 "These researchers are hard at work attempting to unravel the mysteries of the Ice Spires."
+job_elven_ice_spire_researcher_effect_desc:0 "£job_elven_ice_spire_researcher£ $job_elven_ice_spire_researcher_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £physics£ §YResearch Points§! for new technologies"
+mod_job_elven_ice_spire_researcher_add:0 "$job_elven_ice_spire_researcher$ Jobs"
+mod_job_elven_ice_spire_researcher_per_pop:0 "§G+1§! $job_elven_ice_spire_researcher$ Job per $VALUE$ Pops"
+mod_job_elven_ice_spire_researcher_per_pop_short:0 "\n§G+1§! £mod_job_elven_ice_spire_researcher_add£ per $VALUE$ £pop£"
+
+job_elven_ice_spire_researcher_machine:0 "Ice Spire Researcher Unit"
+job_elven_ice_spire_researcher_machine_plural:0 "Ice Spire Researcher Units"
+job_elven_ice_spire_researcher_machine_desc:0 "These units are hard at work attempting to unravel the mysteries of the Ice Spires."
+job_elven_ice_spire_researcher_machine_effect_desc:0 "£job_elven_ice_spire_researcher_machine£ $job_elven_ice_spire_researcher_machine_plural$ turn £energy£ §Y$energy$§! into £physics£ §YResearch Points§! for new technologies"
+mod_job_elven_ice_spire_researcher_machine_add:0 "$job_elven_ice_spire_researcher_machine$ Jobs"
+mod_job_elven_ice_spire_researcher_machine_per_pop:0 "§G+1§! $job_elven_ice_spire_researcher_machine$ Job per $VALUE$ Pops"
+mod_job_elven_ice_spire_researcher_machine_per_pop_short:0 "\n§G+1§! £mod_job_elven_ice_spire_researcher_machine_add£ per $VALUE$ £pop£"
+
+job_elven_ice_spire_researcher_hive:0 "Ice Spire Researcher Drone"
+job_elven_ice_spire_researcher_hive_plural:0 "Ice Spire Researcher Drones"
+job_elven_ice_spire_researcher_hive_desc:0 "These researchers are hard at work attempting to unravel the mysteries of the Ice Spires."
+job_elven_ice_spire_researcher_hive_effect_desc:0 "£job_elven_ice_spire_researcher_hive£ $job_elven_ice_spire_researcher_hive_plural$ turn £minerals£ §Y$minerals$§! into £physics£ §YResearch Points§! for new technologies"
+mod_job_elven_ice_spire_researcher_hive_add:0 "$job_elven_ice_spire_researcher_hive$ Jobs"
+mod_job_elven_ice_spire_researcher_hive_per_pop:0 "§G+1§! $job_elven_ice_spire_researcher_hive$ Job per $VALUE$ Pops"
+mod_job_elven_ice_spire_researcher_hive_per_pop_short:0 "\n§G+1§! £mod_job_elven_ice_spire_researcher_hive_add£ per $VALUE$ £pop£"
+
+job_elven_malevolent_grove_researcher:0 "Malevolent Grove Researcher"
+job_elven_malevolent_grove_researcher_plural:0 "Malevolent Grove Researchers"
+job_elven_malevolent_grove_researcher_desc:0 "These brave researchers are attempting to discover whatever they can about the seemingly sentient tree-like lifeforms that inhabit some of the forests. Presumably from a safe distance."
+job_elven_malevolent_grove_researcher_effect_desc:0 "£job_elven_malevolent_grove_researcher£ $job_elven_malevolent_grove_researcher_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £society£ §YResearch Points§! for new technologies"
+mod_job_elven_malevolent_grove_researcher_add:0 "$job_elven_malevolent_grove_researcher$ Jobs"
+mod_job_elven_malevolent_grove_researcher_per_pop:0 "§G+1§! $job_elven_malevolent_grove_researcher$ Job per $VALUE$ Pops"
+mod_job_elven_malevolent_grove_researcher_per_pop_short:0 "\n§G+1§! £mod_job_elven_malevolent_grove_researcher_add£ per $VALUE$ £pop£"
+
+job_elven_malevolent_grove_researcher_machine:0 "Malevolent Grove Researcher Unit"
+job_elven_malevolent_grove_researcher_machine_plural:0 "Malevolent Grove Researcher Units"
+job_elven_malevolent_grove_researcher_machine_desc:0 "These units are attempting to discover whatever they can about the seemingly sentient tree-like lifeforms that inhabit some of the forests. Presumably from a safe distance."
+job_elven_malevolent_grove_researcher_machine_effect_desc:0 "£job_elven_malevolent_grove_researcher_machine£ $job_elven_malevolent_grove_researcher_machine_plural$ turn £energy£ §Y$energy$§! into £society£ §YResearch Points§! for new technologies"
+mod_job_elven_malevolent_grove_researcher_machine_add:0 "$job_elven_malevolent_grove_researcher_machine$ Jobs"
+mod_job_elven_malevolent_grove_researcher_machine_per_pop:0 "§G+1§! $job_elven_malevolent_grove_researcher_machine$ Job per $VALUE$ Pops"
+mod_job_elven_malevolent_grove_researcher_machine_per_pop_short:0 "\n§G+1§! £mod_job_elven_malevolent_grove_researcher_machine_add£ per $VALUE$ £pop£"
+
+job_elven_malevolent_grove_researcher_hive:0 "Malevolent Grove Researcher Drone"
+job_elven_malevolent_grove_researcher_hive_plural:0 "Malevolent Grove Researcher Drones"
+job_elven_malevolent_grove_researcher_hive_desc:0 "These drones are attempting to discover whatever they can about the seemingly sentient tree-like lifeforms that inhabit some of the forests. Presumably from a safe distance."
+job_elven_malevolent_grove_researcher_hive_effect_desc:0 "£job_elven_malevolent_grove_researcher_hive£ $job_elven_malevolent_grove_researcher_hive_plural$ turn £minerals£ §Y$minerals$§! into £society£ §YResearch Points§! for new technologies"
+mod_job_elven_malevolent_grove_researcher_hive_add:0 "$job_elven_malevolent_grove_researcher_hive$ Jobs"
+mod_job_elven_malevolent_grove_researcher_hive_per_pop:0 "§G+1§! $job_elven_malevolent_grove_researcher_hive$ Job per $VALUE$ Pops"
+mod_job_elven_malevolent_grove_researcher_hive_per_pop_short:0 "\n§G+1§! £mod_job_elven_malevolent_grove_researcher_hive_add£ per $VALUE$ £pop£"
+
+

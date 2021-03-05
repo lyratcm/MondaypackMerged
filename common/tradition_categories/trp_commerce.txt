@@ -1,0 +1,24 @@
+tradition_commerce_plus = { ##Commerce
+	adoption_bonus = "trp_commerce_adopt"
+	finish_bonus = "trp_commerce_finish"
+	traditions = {
+		"trp_commerce_exchange_a"
+		"trp_commerce_exchange_b"
+		"trp_commerce_exchange_c"
+		"trp_commerce_trade_a"
+		"trp_commerce_trade_b"
+		"trp_commerce_trade_c"
+		"trp_commerce_security_a"
+		"trp_commerce_security_b"
+		"trp_commerce_security_c"
+		"trp_commerce_accumulation_a"
+		"trp_commerce_accumulation_b"
+		"trp_commerce_accumulation_c"
+		"trp_commerce_capability_a"
+		"trp_commerce_capability_b"
+		"trp_commerce_capability_c"
+		"trp_commerce_enterprises_a"
+		"trp_commerce_enterprises_b"
+		"trp_commerce_enterprises_c"
+	}
+}

@@ -1,0 +1,28 @@
+# Checks if a pop can be assembled
+# This = Species
+# Root = Planet
+can_species_be_assembled = {
+	is_sapient = yes
+	OR = {
+		if = {
+			limit = {
+				root = {
+					has_planet_flag = ss_cloning_flag
+				}
+			}
+			OR = {
+				is_archetype = BIOLOGICAL
+				is_archetype = BIOMORPH
+			}
+		}
+		else_if = {
+			limit = {
+				root = {
+					has_planet_flag = ss_assembly_flag
+				}
+			}
+			is_archetype = ROBOT
+		}
+		is_archetype = MACHINE
+	}
+}

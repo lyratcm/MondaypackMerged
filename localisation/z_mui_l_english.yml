@@ -1,0 +1,24 @@
+﻿l_english:
+#_[UI Overhaul Dynamic - Extended Topbar & Modbuttons]
+
+
+
+
+#_UI Overhaul Dynamic - Extended Topbar & Modbuttons
+ mb_modmenu_tooltip:0 "§HMod Menu§! mod not found!"
+ mb_galactic_nations_assembly_tooltip:0 "§HGalactic Nations Assembly§! mod not found!"
+ mb_quibble_propaganda_tooltip:0 "§HPropaganda and Espionage§! mod not found!"
+ mb_ruler_hobby_button_tooltip:0 "§HRuler Level System§! mod not found!"
+
+
+#_FTA
+ FIRE:0 "Fire them all!"
+ CASHOUT:0 "Hiring and firing is tedious. Just pay them off."
+ INFOUT:0 "Pull some strings, suggest they look elsewhere. Just get rid of them."
+ fta.1.name:0 "Fire them ALL!"
+ fta.1.desc:0 "Disappointed with your current leader options? Fire them ALL! A new pool will be available the next day."
+ fta.2.name:0 "Fire Governor Candidates"
+ fta.2.desc:0 "How should we get rid of all these employment hopefuls?"
+ fta.3.name:0 "Fire Scientist Candidates"
+ fta.4.name:0 "Fire Admiral Candidates"
+ fta.5.name:0 "Fire General Candidates"

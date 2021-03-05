@@ -1,0 +1,9 @@
+# namespace = coop_helper
+
+# country_event = {
+#     id = coop_helper.0
+#     hide_window = yes
+#     fire_only_once = yes
+#     is_triggered_only = yes
+#     immediate = { country_event = { id = coop_civ.0 } }
+# }

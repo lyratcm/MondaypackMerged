@@ -1,0 +1,24 @@
+tradition_expansion_plus = { #expansion
+	adoption_bonus = "trp_expansion_adopt"
+	finish_bonus = "trp_expansion_finish"
+	traditions = {
+		"trp_expansion_colonization_a"
+		"trp_expansion_colonization_b"
+		"trp_expansion_colonization_c"
+		"trp_expansion_space_race_a"
+		"trp_expansion_space_race_b"
+		"trp_expansion_space_race_c"
+		"trp_expansion_population_a"
+		"trp_expansion_population_b"
+		"trp_expansion_population_c"
+		"trp_expansion_infrastructure_a"
+		"trp_expansion_infrastructure_b"
+		"trp_expansion_infrastructure_c"
+		"trp_expansion_foundation_a"
+		"trp_expansion_foundation_b"
+		"trp_expansion_foundation_c"
+		"trp_expansion_bureaucracy_a"
+		"trp_expansion_bureaucracy_b"
+		"trp_expansion_bureaucracy_c"
+	}
+}

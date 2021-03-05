@@ -1,0 +1,5 @@
+﻿l_polish:
+ TRAIT_LITHOID_EFFECT:0 "Zjada £minerals£ §Yminerały§! zamiast £food£ §Yżywności§!.\n\n$MOD_POP_GROWTH_SPEED$: §R-15%§!\n$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+50%§!\n$MOD_ARMY_HEALTH$: §G+50%§!\n$MOD_LEADER_AGE$: §G+50§!\n$mod_planet_miners_minerals_produces_add$: §G+1,25§!"
+ TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT:0 "Każda populacja o standardzie życia na poziomie niewolnictwa lub wyższym wytwarza £exotic_gases£ §Y$exotic_gases$§! (0,04 jednostki na miesiąc)."
+ TRAIT_LITHOID_SCINTILLATING_EFFECT:0 "Każda populacja o standardzie życia na poziomie niewolnictwa lub wyższym wytwarza £rare_crystals£ §Y$rare_crystals$§! (0,04 jednostki na miesiąc)."
+ TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT:0 "Każda populacja o standardzie życia na poziomie niewolnictwa lub wyższym wytwarza £volatile_motes£ §Y$volatile_motes$§! (0,04 jednostki na miesiąc)."

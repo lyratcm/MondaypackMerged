@@ -1,0 +1,40 @@
+spriteTypes = {
+
+	##########################
+	## DRAGON FLAMING PEARL ##
+	##########################
+	SpriteType = {
+		name = "GFX_relic_elven_flaming_pearl"
+
+		texturefile = "gfx/interface/icons/relics/r_elven_flaming_pearl.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_elven_flaming_pearl_burning.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/r_elven_flaming_pearl_mask_fire.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 18				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "rotating"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_elven_flaming_pearl_flaming.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/r_elven_flaming_pearl_mask_fire.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 20				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "overlay"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+}

@@ -1,0 +1,110 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 1 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_military_station = yes / no	# default: no
+#	can_build_ruler_ship = yes / no				# default: no
+#}
+
+civic_drow_eilistraee = {
+	icon = "gfx/interface/icons/drow/civic_drow_eilistraee.dds"
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}	
+	
+	possible = {
+		ethics = {
+			NOR = {
+				text = civic_tooltip_not_xenophobe
+				value = ethic_xenophobe
+				value = ethic_fanatic_xenophobe
+			}
+			OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+		}
+	}
+	
+	pickable_at_start = yes
+	
+	random_weight = {
+		base = 0
+	}
+	
+	modifier = {
+		envoys_add = 1
+		diplo_weight_naval_mult = 0.15
+		ship_fire_rate_mult = 0.05
+		army_damage_mult = 0.05
+	}
+	
+	#description = "civic_drow_eilistraee_tooltip_effects"
+}
+
+civic_drow_warriors = {
+	description = "civic_tooltip_drow_warriors_effects"
+	icon = "gfx/interface/icons/drow/civic_drow_warriors.dds"
+
+	potential = { 
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}	
+	
+	possible = {
+		authority = {
+			value = auth_oligarchic
+		}
+		
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		
+		origin = {
+			NOR = {
+				value = origin_syncretic_evolution
+				value = origin_common_ground
+				value = origin_hegemon
+			}
+		}
+
+	}
+	
+	modification = no
+	pickable_at_start = yes
+	
+	random_weight = {
+		base = 0
+	}
+	
+	modifier = {
+	    country_base_influence_produces_add = 0.5
+		country_leader_pool_size = 1
+		leaders_cost_mult = -0.50
+		species_leader_exp_gain = 0.25
+		country_election_influence_cost_mult = -0.5
+		category_psionics_research_speed_mult = 0.25
+		country_insult_efficiency = 0.5
+		country_trust_cap_add = -50
+		country_trust_growth = -0.75
+		diplomacy_upkeep_mult = 0.5
+	}
+}
+	

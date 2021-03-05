@@ -1,0 +1,24 @@
+tradition_diplomacy_plus = { ##Statecraft
+	adoption_bonus = "trp_diplomacy_adopt"
+	finish_bonus = "trp_diplomacy_finish"
+	traditions = {
+		"trp_diplomacy_federation_a"
+		"trp_diplomacy_federation_b"
+		"tr_diplomacy_the_federation" #trp_diplomacy_federation_c
+		"trp_diplomacy_ideology_a"
+		"trp_diplomacy_ideology_b"
+		"trp_diplomacy_ideology_c"
+		"trp_diplomacy_association_a"
+		"trp_diplomacy_association_b"
+		"trp_diplomacy_association_c"
+		"trp_diplomacy_government_a"
+		"trp_diplomacy_government_b"
+		"trp_diplomacy_government_c"
+		"trp_diplomacy_integration_a"
+		"trp_diplomacy_integration_b"
+		"trp_diplomacy_integration_c"
+		"trp_diplomacy_administration_a"
+		"trp_diplomacy_administration_b"
+		"trp_diplomacy_administration_c"
+	}
+}

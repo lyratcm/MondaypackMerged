@@ -1,0 +1,405 @@
+#################################
+#
+# Anomaly Events
+# by Maximilian Olbers
+#
+#################################
+
+namespace = anomaly
+
+### Familiar Shrine, AST_SHRINE_1_CAT
+ship_event = {
+	id = anomaly.140
+	title = "anomaly.140.name"
+	desc = "anomaly.140.desc"
+	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_mystic_reveal
+	location = FROM
+
+	is_triggered_only = yes
+
+	immediate = {
+		closest_system = {
+			limit = {
+				NOR = {
+					has_star_flag = hostile_system
+					is_same_value = root.solar_system
+					is_pirate_system = yes
+					any_system_planet = { is_colony = yes }
+				}
+				has_access_fleet = root.owner
+			}
+			min_steps = 1
+			max_steps = 8
+			set_star_flag = old_gods_system_1@root.owner
+		}
+		closest_system = {
+			limit = {
+				NOR = {
+					has_star_flag = old_gods_system_1@root.owner
+					has_star_flag = hostile_system
+					is_same_value = root.solar_system
+					is_pirate_system = yes
+					any_system_planet = { is_colony = yes }
+				}
+				has_access_fleet = root.owner
+			}
+			min_steps = 2
+			max_steps = 9
+			set_star_flag = old_gods_system_2@root.owner
+		}
+		closest_system = {
+			limit = {
+				NOR = {
+					has_star_flag = old_gods_system_1@root.owner
+					has_star_flag = old_gods_system_2@root.owner
+					is_same_value = root.solar_system
+					has_star_flag = hostile_system
+					is_pirate_system = yes
+					any_system_planet = { is_colony = yes }
+				}
+				has_access_fleet = root.owner
+			}
+			min_steps = 3
+			max_steps = 10
+			set_star_flag = old_gods_system_3@root.owner
+		}
+	}
+
+	option = {
+		name = "anomaly.140.a"
+		custom_tooltip = "anomaly.140.a.tooltip"
+		trigger = {	owner = { NOT = { has_ethic = ethic_fanatic_spiritualist } } }
+		if = {
+			limit = { has_ancrel = yes }
+			small_artifact_reward = yes
+		}
+	}
+
+	option = {
+		name = "anomaly.140.c"
+		custom_tooltip = "anomaly.140.c.tooltip"
+		trigger = {	owner = { has_ethic = ethic_fanatic_spiritualist } }
+	}
+
+	option = {
+		trigger = {
+			any_system = { has_star_flag = old_gods_system_1@root.owner }
+			any_system = { has_star_flag = old_gods_system_2@root.owner }
+			any_system = { has_star_flag = old_gods_system_3@root.owner }
+		}
+		name = "anomaly.140.b"
+		owner = {
+			begin_event_chain = {
+				event_chain = "old_gods_chain"
+				target = root.owner
+			}
+			if = {
+				limit = { has_ancrel = yes }
+				small_artifact_reward = yes
+			}
+		}
+		hidden_effect = {
+			FROM = {
+				add_modifier = { modifier = old_god_shrine days = -1 }
+			}
+			random_system = {
+				limit = { has_star_flag = old_gods_system_1@root.owner }
+				save_event_target_as = old_gods_system_1
+			}
+			random_system = {
+				limit = { has_star_flag = old_gods_system_2@root.owner }
+				save_event_target_as = old_gods_system_2
+			}
+			random_system = {
+				limit = { has_star_flag = old_gods_system_3@root.owner }
+				save_event_target_as = old_gods_system_3
+			}
+			create_point_of_interest = {
+				id = old_gods_shrine_poi.1
+				name = "old_gods_shrine_poi_1"
+				desc = "old_gods_shrine_poi_1_desc"
+				event_chain = "old_gods_chain"
+				location = event_target:old_gods_system_1
+			}
+			create_point_of_interest = {
+				id = old_gods_shrine_poi.2
+				name = "old_gods_shrine_poi_2"
+				desc = "old_gods_shrine_poi_2_desc"
+				event_chain = "old_gods_chain"
+				location = event_target:old_gods_system_2
+			}
+			create_point_of_interest = {
+				id = old_gods_shrine_poi.3
+				name = "old_gods_shrine_poi_3"
+				desc = "old_gods_shrine_poi_3_desc"
+				event_chain = "old_gods_chain"
+				location = event_target:old_gods_system_3
+			}
+		}
+	}
+}
+
+# OLD GODS - THE BENEFACTRESS DISCOVERED, NEEDS SOCIETY
+fleet_event = {
+	id = anomaly.142
+	title = "anomaly.142.name"
+	desc = "anomaly.142.desc"
+	picture = GFX_evt_ship_travel
+	show_sound = event_mystic_reveal
+	location = event_target:shrine
+	trackable = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_event_chain = "old_gods_chain" }
+		FROM = {
+			has_star_flag = old_gods_system_1@root.owner
+		}
+	}
+
+	immediate = {
+		FROM = { remove_star_flag = old_gods_system_1@root.owner }
+		owner = { remove_point_of_interest = old_gods_shrine_poi.1 }
+		create_ambient_object = {
+			type = "shrine_object"
+			location = solar_system
+		}
+		last_created_ambient_object = {
+			save_event_target_as = shrine
+			enable_special_project = {
+				name = "OLD_GODS_BENEFACTRESS_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		owner = { set_country_flag = old_gods_benefactress }
+	}
+
+	option = {
+		name = "anomaly.142.a"
+		hidden_effect = {
+			event_target:shrine = {
+				add_modifier = { modifier = old_god_shrine days = -1 }
+			}
+		}
+	}
+}
+
+# OLD GODS - THE UNDAUNTED DISCOVERED, NEEDS ENGINEERING
+fleet_event = {
+	id = anomaly.143
+	title = "anomaly.143.name"
+	desc = "anomaly.143.desc"
+	picture = GFX_evt_ship_travel
+	show_sound = event_mystic_reveal
+	location = event_target:shrine
+	trackable = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = { has_event_chain = "old_gods_chain" }
+		FROM = {
+			has_star_flag = old_gods_system_2@root.owner
+		}
+	}
+
+	immediate = {
+		FROM = { remove_star_flag = old_gods_system_2@root.owner }
+		owner = { remove_point_of_interest = old_gods_shrine_poi.2 }
+		create_ambient_object = {
+			type = "shrine_object"
+			location = solar_system
+		}
+		last_created_ambient_object = {
+			save_event_target_as = shrine
+			enable_special_project = {
+				name = "OLD_GODS_UNDAUNTED_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		owner = { set_country_flag = old_gods_undaunted }
+	}
+
+	option = {
+		name = "anomaly.143.a"
+		hidden_effect = {
+			event_target:shrine = {
+				add_modifier = { modifier = old_god_shrine days = -1 }
+			}
+		}
+	}
+}
+
+# OLD GODS - THE PERCIPIENT DISCOVERED, NEEDS PHYSICS
+fleet_event = {
+	id = anomaly.144
+	title = "anomaly.144.name"
+	desc = "anomaly.144.desc"
+	picture = GFX_evt_ship_travel
+	show_sound = event_mystic_reveal
+	location = event_target:shrine
+	trackable = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		owner = { has_event_chain = "old_gods_chain" }
+		FROM = {
+			has_star_flag = old_gods_system_3@root.owner
+		}
+	}
+
+	immediate = {
+		FROM = { remove_star_flag = old_gods_system_3@root.owner }
+		owner = { remove_point_of_interest = old_gods_shrine_poi.3 }
+		create_ambient_object = {
+			type = "shrine_object"
+			location = solar_system
+		}
+		last_created_ambient_object = {
+			save_event_target_as = shrine
+			enable_special_project = {
+				name = "OLD_GODS_PERCIPIENT_PROJECT"
+				location = this
+				owner = root
+			}
+		}
+		owner = { set_country_flag = old_gods_percipient }
+	}
+
+	option = {
+		name = "anomaly.144.a"
+		hidden_effect = {
+			event_target:shrine = {
+				add_modifier = { modifier = old_god_shrine days = -1 }
+			}
+		}
+	}
+}
+
+# OLD GODS - THE BENEFACTRESS RESEARCHED
+ship_event = {
+	id = anomaly.165
+	title = "anomaly.165.name"
+	desc = "anomaly.165.desc"
+	picture = GFX_evt_mining_station
+	show_sound = event_mystic_reveal
+	location = fromfrom
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = "old_gods_chain"
+				counter = "shrines_searched"
+				amount = 1
+			}
+		}
+	}
+
+	option = {
+		name = FASCINATING
+		small_artifact_reward = yes
+		hidden_effect = {
+			fromfrom = { destroy_ambient_object = this }
+			owner = {
+				if = {
+					limit = {
+						has_completed_event_chain_counter = {
+							event_chain = old_gods_chain
+							counter = shrines_searched
+						}
+					}
+					country_event = { id = anomaly.168 }
+				}
+			}
+		}
+	}
+}
+
+# OLD GODS - THE UNDAUNTED RESEARCHED
+ship_event = {
+	id = anomaly.166
+	title = "anomaly.166.name"
+	desc = "anomaly.166.desc"
+	picture = GFX_evt_mining_station
+	show_sound = event_mystic_reveal
+	location = fromfrom
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = "old_gods_chain"
+				counter = "shrines_searched"
+				amount = 1
+			}
+		}
+	}
+
+	option = {
+		name = FASCINATING
+		small_artifact_reward = yes
+		hidden_effect = {
+			fromfrom = { destroy_ambient_object = this }
+			owner = {
+				if = {
+					limit = {
+						has_completed_event_chain_counter = {
+							event_chain = old_gods_chain
+							counter = shrines_searched
+						}
+					}
+					country_event = { id = anomaly.168 }
+				}
+			}
+		}
+	}
+}
+
+# OLD GODS - THE PERCIPIENT RESEARCHED
+ship_event = {
+	id = anomaly.167
+	title = "anomaly.167.name"
+	desc = "anomaly.167.desc"
+	picture = GFX_evt_mining_station
+	show_sound = event_mystic_reveal
+	location = fromfrom
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = {
+			add_event_chain_counter = {
+				event_chain = "old_gods_chain"
+				counter = "shrines_searched"
+				amount = 1
+			}
+		}
+	}
+
+	option = {
+		name = FASCINATING
+		small_artifact_reward = yes
+		hidden_effect = {
+			fromfrom = { destroy_ambient_object = this }
+			owner = {
+				if = {
+					limit = {
+						has_completed_event_chain_counter = {
+							event_chain = "old_gods_chain"
+							counter = "shrines_searched"
+						}
+					}
+					country_event = { id = anomaly.168 }
+				}
+			}
+		}
+	}
+}

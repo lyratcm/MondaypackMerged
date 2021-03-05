@@ -1,0 +1,1442 @@
+#####Traditions+ Discovery
+trp_discovery_adopt = {
+	modifier = {
+		#
+	}
+}
+trp_discovery_finish = {
+	modifier = {
+		all_technology_research_speed = 0.25
+	}
+}
+###Exploration Path
+trp_discovery_exploration_a = { ###Exploration Path
+	modifier = {
+		ship_science_cost_mult = -0.2
+	}
+	possible = {
+		NOT = { has_tradition = trp_discovery_curiosity_a }
+	}
+}
+trp_discovery_exploration_b = {
+	modifier = {
+		shipclass_science_ship_disengage_mult = 1
+		##unlocks edict
+	}
+	possible = {
+		has_tradition = trp_discovery_exploration_a
+	}
+}
+trp_discovery_exploration_c = {
+	modifier = {
+		ship_anomaly_generation_chance_mult = 0.25
+	}
+	possible = {
+		has_tradition = trp_discovery_exploration_b
+	}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+		country_event = {
+			id = trp_setup_event.15
+		}
+	}
+}
+###Curiosity Path
+trp_discovery_curiosity_a = { ###Curiosity Path
+	modifier = {
+		scientist_skill_levels = 2
+	}
+	possible = {
+		NOT = { has_tradition = trp_discovery_exploration_a }
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 5
+			years_passed < 10
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = trp_supremacy_quality_a
+					NOT = { has_tradition = trp_supremacy_quality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_deterrence_a
+					NOT = { has_tradition = trp_supremacy_deterrence_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_admirality_a
+					NOT = { has_tradition = trp_supremacy_admirality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_warfare_a
+					NOT = { has_tradition = trp_supremacy_warfare_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_devastation_a
+					NOT = { has_tradition = trp_supremacy_devastation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_colonization_a
+					NOT = { has_tradition = trp_expansion_colonization_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_population_a
+					NOT = { has_tradition = trp_expansion_population_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_infrastructure_a
+					NOT = { has_tradition = trp_expansion_infrastructure_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_foundation_a
+					NOT = { has_tradition = trp_expansion_foundation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_bureaucracy_a
+					NOT = { has_tradition = trp_expansion_bureaucracy_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_federation_a
+					NOT = { has_tradition = tr_diplomacy_the_federation}
+				}
+				AND = {
+					has_tradition = trp_diplomacy_ideology_a
+					NOT = { has_tradition = trp_diplomacy_ideology_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_association_a
+					NOT = { has_tradition = trp_diplomacy_association_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_government_a
+					NOT = { has_tradition = trp_diplomacy_government_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_integration_a
+					NOT = { has_tradition = trp_diplomacy_integration_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_administration_a
+					NOT = { has_tradition = trp_diplomacy_administration_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_curiosity_a
+					NOT = { has_tradition = trp_discovery_curiosity_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_academy_a
+					NOT = { has_tradition = trp_discovery_academy_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_physics_a
+					NOT = { has_tradition = trp_discovery_physics_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_society_a
+					NOT = { has_tradition = trp_discovery_society_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_engineering_a
+					NOT = { has_tradition = trp_discovery_engineering_c }
+				}
+				AND = {
+					has_tradition = trp_production_excavation_a
+					NOT = { has_tradition = trp_production_excavation_c }
+				}
+				AND = {
+					has_tradition = trp_production_fabrication_a
+					NOT = { has_tradition = trp_production_fabrication_c }
+				}
+				AND = {
+					has_tradition = trp_production_assembly_a
+					NOT = { has_tradition = trp_production_assembly_c }
+				}
+				AND = {
+					has_tradition = trp_production_refinement_a
+					NOT = { has_tradition = trp_production_refinement_c }
+				}
+				AND = {
+					has_tradition = trp_production_agriculture_a
+					NOT = { has_tradition = trp_production_agriculture_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_exchange_a
+					NOT = { has_tradition = trp_commerce_exchange_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_trade_a
+					NOT = { has_tradition = trp_commerce_trade_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_security_a
+					NOT = { has_tradition = trp_commerce_security_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_capability_a
+					NOT = { has_tradition = trp_commerce_capability_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_enterprises_a
+					NOT = { has_tradition = trp_commerce_enterprises_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_aesthetics_a
+					NOT = { has_tradition = trp_prosperity_aesthetics_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_control_a
+					NOT = { has_tradition = trp_prosperity_control_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_renaissance_a
+					NOT = { has_tradition = trp_prosperity_renaissance_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_alteration_a
+					NOT = { has_tradition = trp_prosperity_alteration_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_recreation_a
+					NOT = { has_tradition = trp_prosperity_recreation_c }
+				}
+			}
+		}
+	}
+}
+trp_discovery_curiosity_b = {
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+	possible = {
+		has_tradition = trp_discovery_curiosity_a
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+trp_discovery_curiosity_c = {
+	modifier = {
+		planet_researchers_upkeep_mult = -0.30
+	}
+	possible = {
+		has_tradition = trp_discovery_curiosity_b
+	}
+	tradition_swap = {
+		name = trp_discovery_curiosity_c_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes 
+	}
+		modifier = {
+			##calc
+		}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+		country_event = {
+			id = trp_setup_event.15
+		}
+	}
+}
+	tradition_swap = {
+		name = trp_discovery_curiosity_c_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+	}
+		modifier = {
+			##brain drone
+		}
+		on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+	}
+}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+		country_event = {
+			id = trp_setup_event.15
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+###Academy Path
+trp_discovery_academy_a = { ###Academy Path
+	modifier = {
+		leader_skill_levels = 1
+		##building cost implemented
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = trp_supremacy_quality_a
+					NOT = { has_tradition = trp_supremacy_quality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_deterrence_a
+					NOT = { has_tradition = trp_supremacy_deterrence_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_admirality_a
+					NOT = { has_tradition = trp_supremacy_admirality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_warfare_a
+					NOT = { has_tradition = trp_supremacy_warfare_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_devastation_a
+					NOT = { has_tradition = trp_supremacy_devastation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_colonization_a
+					NOT = { has_tradition = trp_expansion_colonization_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_population_a
+					NOT = { has_tradition = trp_expansion_population_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_infrastructure_a
+					NOT = { has_tradition = trp_expansion_infrastructure_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_foundation_a
+					NOT = { has_tradition = trp_expansion_foundation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_bureaucracy_a
+					NOT = { has_tradition = trp_expansion_bureaucracy_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_federation_a
+					NOT = { has_tradition = tr_diplomacy_the_federation}
+				}
+				AND = {
+					has_tradition = trp_diplomacy_ideology_a
+					NOT = { has_tradition = trp_diplomacy_ideology_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_association_a
+					NOT = { has_tradition = trp_diplomacy_association_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_government_a
+					NOT = { has_tradition = trp_diplomacy_government_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_integration_a
+					NOT = { has_tradition = trp_diplomacy_integration_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_administration_a
+					NOT = { has_tradition = trp_diplomacy_administration_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_curiosity_a
+					NOT = { has_tradition = trp_discovery_curiosity_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_academy_a
+					NOT = { has_tradition = trp_discovery_academy_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_physics_a
+					NOT = { has_tradition = trp_discovery_physics_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_society_a
+					NOT = { has_tradition = trp_discovery_society_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_engineering_a
+					NOT = { has_tradition = trp_discovery_engineering_c }
+				}
+				AND = {
+					has_tradition = trp_production_excavation_a
+					NOT = { has_tradition = trp_production_excavation_c }
+				}
+				AND = {
+					has_tradition = trp_production_fabrication_a
+					NOT = { has_tradition = trp_production_fabrication_c }
+				}
+				AND = {
+					has_tradition = trp_production_assembly_a
+					NOT = { has_tradition = trp_production_assembly_c }
+				}
+				AND = {
+					has_tradition = trp_production_refinement_a
+					NOT = { has_tradition = trp_production_refinement_c }
+				}
+				AND = {
+					has_tradition = trp_production_agriculture_a
+					NOT = { has_tradition = trp_production_agriculture_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_exchange_a
+					NOT = { has_tradition = trp_commerce_exchange_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_trade_a
+					NOT = { has_tradition = trp_commerce_trade_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_security_a
+					NOT = { has_tradition = trp_commerce_security_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_capability_a
+					NOT = { has_tradition = trp_commerce_capability_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_enterprises_a
+					NOT = { has_tradition = trp_commerce_enterprises_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_aesthetics_a
+					NOT = { has_tradition = trp_prosperity_aesthetics_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_control_a
+					NOT = { has_tradition = trp_prosperity_control_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_renaissance_a
+					NOT = { has_tradition = trp_prosperity_renaissance_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_alteration_a
+					NOT = { has_tradition = trp_prosperity_alteration_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_recreation_a
+					NOT = { has_tradition = trp_prosperity_recreation_c }
+				}
+			}
+		}
+	}
+}
+trp_discovery_academy_b = {
+	modifier = {
+		station_researchers_produces_mult = 0.20
+	}
+	possible = {
+		has_tradition = trp_discovery_academy_a
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+trp_discovery_academy_c = {
+	modifier = {
+		species_leader_exp_gain = 0.25
+		ship_archaeological_site_excavation_speed_mult = 0.5
+	}
+	possible = {
+		has_tradition = trp_discovery_academy_b
+	}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+###Engineering Path
+trp_discovery_engineering_a = { ###Engineering Path
+	modifier = {
+		##building cost implemented
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ai_personality_behaviour = robot_exploiter
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = trp_supremacy_quality_a
+					NOT = { has_tradition = trp_supremacy_quality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_deterrence_a
+					NOT = { has_tradition = trp_supremacy_deterrence_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_admirality_a
+					NOT = { has_tradition = trp_supremacy_admirality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_warfare_a
+					NOT = { has_tradition = trp_supremacy_warfare_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_devastation_a
+					NOT = { has_tradition = trp_supremacy_devastation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_colonization_a
+					NOT = { has_tradition = trp_expansion_colonization_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_population_a
+					NOT = { has_tradition = trp_expansion_population_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_infrastructure_a
+					NOT = { has_tradition = trp_expansion_infrastructure_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_foundation_a
+					NOT = { has_tradition = trp_expansion_foundation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_bureaucracy_a
+					NOT = { has_tradition = trp_expansion_bureaucracy_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_federation_a
+					NOT = { has_tradition = tr_diplomacy_the_federation}
+				}
+				AND = {
+					has_tradition = trp_diplomacy_ideology_a
+					NOT = { has_tradition = trp_diplomacy_ideology_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_association_a
+					NOT = { has_tradition = trp_diplomacy_association_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_government_a
+					NOT = { has_tradition = trp_diplomacy_government_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_integration_a
+					NOT = { has_tradition = trp_diplomacy_integration_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_administration_a
+					NOT = { has_tradition = trp_diplomacy_administration_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_curiosity_a
+					NOT = { has_tradition = trp_discovery_curiosity_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_academy_a
+					NOT = { has_tradition = trp_discovery_academy_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_physics_a
+					NOT = { has_tradition = trp_discovery_physics_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_society_a
+					NOT = { has_tradition = trp_discovery_society_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_engineering_a
+					NOT = { has_tradition = trp_discovery_engineering_c }
+				}
+				AND = {
+					has_tradition = trp_production_excavation_a
+					NOT = { has_tradition = trp_production_excavation_c }
+				}
+				AND = {
+					has_tradition = trp_production_fabrication_a
+					NOT = { has_tradition = trp_production_fabrication_c }
+				}
+				AND = {
+					has_tradition = trp_production_assembly_a
+					NOT = { has_tradition = trp_production_assembly_c }
+				}
+				AND = {
+					has_tradition = trp_production_refinement_a
+					NOT = { has_tradition = trp_production_refinement_c }
+				}
+				AND = {
+					has_tradition = trp_production_agriculture_a
+					NOT = { has_tradition = trp_production_agriculture_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_exchange_a
+					NOT = { has_tradition = trp_commerce_exchange_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_trade_a
+					NOT = { has_tradition = trp_commerce_trade_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_security_a
+					NOT = { has_tradition = trp_commerce_security_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_capability_a
+					NOT = { has_tradition = trp_commerce_capability_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_enterprises_a
+					NOT = { has_tradition = trp_commerce_enterprises_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_aesthetics_a
+					NOT = { has_tradition = trp_prosperity_aesthetics_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_control_a
+					NOT = { has_tradition = trp_prosperity_control_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_renaissance_a
+					NOT = { has_tradition = trp_prosperity_renaissance_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_alteration_a
+					NOT = { has_tradition = trp_prosperity_alteration_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_recreation_a
+					NOT = { has_tradition = trp_prosperity_recreation_c }
+				}
+			}
+		}
+	}
+}
+trp_discovery_engineering_b = {
+	modifier = {
+		pop_environment_tolerance = 0.05
+		###roboticist unlock implemented
+	}
+	possible = {
+		has_tradition = trp_discovery_engineering_a
+	}
+	tradition_swap = {
+		name = trp_discovery_engineering_b_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_pop_assembly_mult = 0.05
+			###replicator unlock implemented
+		}
+}
+	tradition_swap = {
+		name = trp_discovery_engineering_b_lithoid
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			AND = {
+				is_lithoid_empire = yes
+				is_hive_empire = no
+		}
+	}
+		modifier = {
+			planet_pop_assembly_mult = 0.10
+			###roboticist unlock implemented
+		}
+}	
+	tradition_swap = {
+		name = trp_discovery_engineering_b_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			AND = {
+				is_lithoid_empire = no
+				is_hive_empire = yes
+		}
+	}
+		modifier = {
+			pop_environment_tolerance = 0.05
+			building_time_mult = -0.10
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_engineering_b_litho_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			AND = {
+				is_lithoid_empire = yes
+				is_hive_empire = yes
+		}
+	}
+		modifier = {
+			lith_pop_growth_speed = 0.05
+			building_time_mult = -0.10
+		}
+	}
+}
+trp_discovery_engineering_c = {
+	modifier = {
+		##engineering choice
+	}
+	possible = {
+		has_tradition = trp_discovery_engineering_b
+	}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.3
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+	}
+	tradition_swap = { ##Materials Choice
+		name = trp_discovery_engineering_c_materials
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_engineering_c_materials
+		}
+		modifier = {
+			category_materials_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+	}
+}
+	tradition_swap = { ##Voidcraft Choice
+		name = trp_discovery_engineering_c_voidcraft
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_engineering_c_voidcraft
+		}
+		modifier = {
+			category_voidcraft_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+	}
+}
+	tradition_swap = { ##Propulsion Choice
+		name = trp_discovery_engineering_c_propulsion
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_engineering_c_propulsion
+		}
+		modifier = {
+			category_propulsion_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+	}
+}
+	ai_weight = {
+		factor = 1000
+	}
+}
+###Society Path
+trp_discovery_society_a = { ###Society Path
+	modifier = {
+		planet_researchers_society_research_produces_mult = 0.10
+	}
+	tradition_swap = {
+		name = trp_discovery_society_a_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			 ##planet_complex_drones_society_research_produces_mult = 0.10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_society_a_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			##planet_complex_drones_society_research_produces_mult = 0.10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = trp_supremacy_quality_a
+					NOT = { has_tradition = trp_supremacy_quality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_deterrence_a
+					NOT = { has_tradition = trp_supremacy_deterrence_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_admirality_a
+					NOT = { has_tradition = trp_supremacy_admirality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_warfare_a
+					NOT = { has_tradition = trp_supremacy_warfare_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_devastation_a
+					NOT = { has_tradition = trp_supremacy_devastation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_colonization_a
+					NOT = { has_tradition = trp_expansion_colonization_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_population_a
+					NOT = { has_tradition = trp_expansion_population_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_infrastructure_a
+					NOT = { has_tradition = trp_expansion_infrastructure_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_foundation_a
+					NOT = { has_tradition = trp_expansion_foundation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_bureaucracy_a
+					NOT = { has_tradition = trp_expansion_bureaucracy_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_federation_a
+					NOT = { has_tradition = tr_diplomacy_the_federation}
+				}
+				AND = {
+					has_tradition = trp_diplomacy_ideology_a
+					NOT = { has_tradition = trp_diplomacy_ideology_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_association_a
+					NOT = { has_tradition = trp_diplomacy_association_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_government_a
+					NOT = { has_tradition = trp_diplomacy_government_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_integration_a
+					NOT = { has_tradition = trp_diplomacy_integration_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_administration_a
+					NOT = { has_tradition = trp_diplomacy_administration_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_curiosity_a
+					NOT = { has_tradition = trp_discovery_curiosity_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_academy_a
+					NOT = { has_tradition = trp_discovery_academy_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_physics_a
+					NOT = { has_tradition = trp_discovery_physics_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_society_a
+					NOT = { has_tradition = trp_discovery_society_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_engineering_a
+					NOT = { has_tradition = trp_discovery_engineering_c }
+				}
+				AND = {
+					has_tradition = trp_production_excavation_a
+					NOT = { has_tradition = trp_production_excavation_c }
+				}
+				AND = {
+					has_tradition = trp_production_fabrication_a
+					NOT = { has_tradition = trp_production_fabrication_c }
+				}
+				AND = {
+					has_tradition = trp_production_assembly_a
+					NOT = { has_tradition = trp_production_assembly_c }
+				}
+				AND = {
+					has_tradition = trp_production_refinement_a
+					NOT = { has_tradition = trp_production_refinement_c }
+				}
+				AND = {
+					has_tradition = trp_production_agriculture_a
+					NOT = { has_tradition = trp_production_agriculture_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_exchange_a
+					NOT = { has_tradition = trp_commerce_exchange_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_trade_a
+					NOT = { has_tradition = trp_commerce_trade_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_security_a
+					NOT = { has_tradition = trp_commerce_security_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_capability_a
+					NOT = { has_tradition = trp_commerce_capability_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_enterprises_a
+					NOT = { has_tradition = trp_commerce_enterprises_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_aesthetics_a
+					NOT = { has_tradition = trp_prosperity_aesthetics_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_control_a
+					NOT = { has_tradition = trp_prosperity_control_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_renaissance_a
+					NOT = { has_tradition = trp_prosperity_renaissance_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_alteration_a
+					NOT = { has_tradition = trp_prosperity_alteration_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_recreation_a
+					NOT = { has_tradition = trp_prosperity_recreation_c }
+				}
+			}
+		}
+	}
+}
+trp_discovery_society_b = {
+	modifier = {
+		##researcher unity
+	}
+	possible = {
+		has_tradition = trp_discovery_society_a
+	}
+	tradition_swap = {
+		name = trp_discovery_society_b_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			##brain drone unity
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_society_b_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			##calculator unity
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+trp_discovery_society_c = {
+	modifier = {
+		##society choice
+	}
+	possible = {
+		has_tradition = trp_discovery_society_b
+	}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.5
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+	}
+	tradition_swap = { ##Biology Choice
+		name = trp_discovery_society_c_biology
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_society_c_biology
+		}
+		modifier = {
+			category_biology_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = { ##Military Theory Choice
+		name = trp_discovery_society_c_miltheory
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_society_c_miltheory
+		}
+		modifier = {
+			category_military_theory_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = { ##New Worlds Choice
+		name = trp_discovery_society_c_newworlds
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_society_c_newworlds
+		}
+		modifier = {
+			category_new_worlds_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+###Physics Path
+trp_discovery_physics_a = { ###Physics Path
+	modifier = {
+		planet_researchers_physics_research_produces_mult = 0.10
+	}
+	tradition_swap = {
+		name = trp_discovery_physics_a_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			##planet_complex_drones_physics_research_produces_mult = 0.10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_physics_a_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			##planet_complex_drones_physics_research_produces_mult = 0.10
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_ethic = ethic_materialist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_materialist
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					has_tradition = trp_supremacy_quality_a
+					NOT = { has_tradition = trp_supremacy_quality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_deterrence_a
+					NOT = { has_tradition = trp_supremacy_deterrence_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_admirality_a
+					NOT = { has_tradition = trp_supremacy_admirality_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_warfare_a
+					NOT = { has_tradition = trp_supremacy_warfare_c }
+				}
+				AND = {
+					has_tradition = trp_supremacy_devastation_a
+					NOT = { has_tradition = trp_supremacy_devastation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_colonization_a
+					NOT = { has_tradition = trp_expansion_colonization_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_population_a
+					NOT = { has_tradition = trp_expansion_population_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_infrastructure_a
+					NOT = { has_tradition = trp_expansion_infrastructure_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_foundation_a
+					NOT = { has_tradition = trp_expansion_foundation_c }
+				}
+				AND = {
+					has_tradition = trp_expansion_bureaucracy_a
+					NOT = { has_tradition = trp_expansion_bureaucracy_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_federation_a
+					NOT = { has_tradition = tr_diplomacy_the_federation}
+				}
+				AND = {
+					has_tradition = trp_diplomacy_ideology_a
+					NOT = { has_tradition = trp_diplomacy_ideology_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_association_a
+					NOT = { has_tradition = trp_diplomacy_association_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_government_a
+					NOT = { has_tradition = trp_diplomacy_government_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_integration_a
+					NOT = { has_tradition = trp_diplomacy_integration_c }
+				}
+				AND = {
+					has_tradition = trp_diplomacy_administration_a
+					NOT = { has_tradition = trp_diplomacy_administration_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_curiosity_a
+					NOT = { has_tradition = trp_discovery_curiosity_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_academy_a
+					NOT = { has_tradition = trp_discovery_academy_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_physics_a
+					NOT = { has_tradition = trp_discovery_physics_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_society_a
+					NOT = { has_tradition = trp_discovery_society_c }
+				}
+				AND = {
+					has_tradition = trp_discovery_engineering_a
+					NOT = { has_tradition = trp_discovery_engineering_c }
+				}
+				AND = {
+					has_tradition = trp_production_excavation_a
+					NOT = { has_tradition = trp_production_excavation_c }
+				}
+				AND = {
+					has_tradition = trp_production_fabrication_a
+					NOT = { has_tradition = trp_production_fabrication_c }
+				}
+				AND = {
+					has_tradition = trp_production_assembly_a
+					NOT = { has_tradition = trp_production_assembly_c }
+				}
+				AND = {
+					has_tradition = trp_production_refinement_a
+					NOT = { has_tradition = trp_production_refinement_c }
+				}
+				AND = {
+					has_tradition = trp_production_agriculture_a
+					NOT = { has_tradition = trp_production_agriculture_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_exchange_a
+					NOT = { has_tradition = trp_commerce_exchange_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_trade_a
+					NOT = { has_tradition = trp_commerce_trade_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_security_a
+					NOT = { has_tradition = trp_commerce_security_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_capability_a
+					NOT = { has_tradition = trp_commerce_capability_c }
+				}
+				AND = {
+					has_tradition = trp_commerce_enterprises_a
+					NOT = { has_tradition = trp_commerce_enterprises_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_aesthetics_a
+					NOT = { has_tradition = trp_prosperity_aesthetics_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_control_a
+					NOT = { has_tradition = trp_prosperity_control_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_renaissance_a
+					NOT = { has_tradition = trp_prosperity_renaissance_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_alteration_a
+					NOT = { has_tradition = trp_prosperity_alteration_c }
+				}
+				AND = {
+					has_tradition = trp_prosperity_recreation_a
+					NOT = { has_tradition = trp_prosperity_recreation_c }
+				}
+			}
+		}
+	}
+}
+trp_discovery_physics_b = {
+	modifier = {
+		job_researcher_add = 1
+		##portal unlock
+	}
+	possible = {
+		has_tradition = trp_discovery_physics_a
+	}
+	tradition_swap = {
+		name = trp_discovery_physics_b_machine
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			job_calculator_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_physics_b_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			job_brain_drone_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+trp_discovery_physics_c = {
+	modifier = {
+		##physics choice
+	}
+	possible = {
+		has_tradition = trp_discovery_physics_b
+	}
+	on_enabled = {
+		country_event = {
+			id = trp_setup_event.2
+		}
+		country_event = {
+			id = trp_setup_event.4
+		}
+		country_event = {
+			id = trp_setup_event.11
+		}
+	}
+	tradition_swap = {
+		name = trp_discovery_physics_c_machine
+		inherit_effects = yes
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			##physics choice
+		}
+		weight = {
+			factor = 1
+		}
+	}
+	tradition_swap = { ##Computing Choice
+		name = trp_discovery_physics_c_computing
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_physics_c_computing
+		}
+		modifier = {
+			category_computing_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = { ##Field Manipulation Choice
+		name = trp_discovery_physics_c_fieldm
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_physics_c_fieldm
+		}
+		modifier = {
+			category_field_manipulation_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	tradition_swap = { ##Particles Choice
+		name = trp_discovery_physics_c_particles
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_country_flag = trp_physics_c_particles
+		}
+		modifier = {
+			category_particles_research_speed_mult = 1.0
+		}
+		weight = {
+			factor = 2
+		}
+	}
+	ai_weight = {
+		factor = 1000
+	}
+}
+##End

@@ -1,0 +1,39 @@
+coop_colony_policy = {
+
+	potential = {
+		always = yes
+	}
+	
+	option = {
+		name = "coop_colony_policy_yes"
+		
+		policy_flags = {
+			coop_colony_policy_yes
+		}
+		
+		valid = {
+			always = yes				
+        }
+        
+        AI_weight = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "coop_colony_policy_no"
+		
+		policy_flags = {
+			coop_colony_policy_no
+		}
+		modifier = {}
+		
+		valid = {
+			always = yes
+		}
+		
+		AI_weight = {
+			factor = 0
+		}
+	}
+}

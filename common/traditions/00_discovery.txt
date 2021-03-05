@@ -1,0 +1,10 @@
+tr_discovery_adopt = {
+	modifier = {
+		#
+	}
+}
+tr_discovery_finish = {
+	modifier = {
+		#
+	}
+}

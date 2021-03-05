@@ -1,0 +1,663 @@
+planet_allow_resettle = {
+	NOT = { has_planet_flag = pop_resettlement_flag }
+	NOT = { has_modifier = land_appropriation }
+	is_under_colonization = no
+	is_occupied_flag = no
+	has_orbital_bombardment = no
+	planet_devastation = 0
+}
+
+planet_allow_resettle_planet_state_from = {
+	NOT = { has_modifier = planet_resettle_from }
+	planet_allow_resettle = yes
+	num_pops > 10
+}
+
+planet_allow_resettle_planet_state_to = {
+	NOT = { has_modifier = planet_resettle_to }
+	planet_allow_resettle = yes
+	planet_stability >= 50
+}
+
+planet_allow_resettle_planet_state_to_AI_emergency = {
+	NOT = { has_planet_flag = pop_resettlement_flag }
+	is_under_colonization = no
+	is_occupied_flag = no
+	has_orbital_bombardment = no
+	planet_devastation = 0
+	planet_stability < 50
+}
+
+planet_allow_resettle_building_destruct = {
+	OR = {
+		NOR = {
+			num_pops = 5 # test against colonies never growing
+			num_pops = 10 # test against colonies never growing
+			num_pops = 15
+			num_pops = 20
+			num_pops = 25
+			num_pops = 30
+			num_pops = 35
+			num_pops = 40
+			num_pops = 45
+			num_pops = 50
+			num_pops = 55
+			num_pops = 60
+			num_pops = 65
+			num_pops = 70
+			num_pops = 75
+		}
+		free_building_slots > 1
+	}
+}
+
+has_building_construction_extended = {
+	OR = {
+		has_building_construction = no
+		AND = {
+			count_pops = {
+				limit = {
+					is_unemployed = yes
+					OR = {
+						pop_check_citizenship_full = yes
+						pop_check_robot_servant_slave = yes
+					}
+				}
+				count > 3
+			}
+		}
+	}
+}
+
+planet_allow_specialist_building_resettle = {
+	OR = {
+		has_building_construction = building_foundry_1
+		has_building_construction = building_foundry_2
+		has_building_construction = building_foundry_3
+		has_building_construction = building_factory_1
+		has_building_construction = building_factory_2
+		has_building_construction = building_factory_3
+		has_building_construction = building_refinery
+		has_building_construction = building_chemical_plant
+		has_building_construction = building_crystal_plant
+		has_building_construction = building_research_lab_1
+		has_building_construction = building_research_lab_2 
+		has_building_construction = building_research_lab_3
+		has_building_construction = building_hive_warren
+		has_building_construction = building_expanded_warren
+		has_building_construction = building_holo_theatres
+		has_building_construction = building_hyper_entertainment_forum
+		has_building_construction = building_clinic
+		has_building_construction = building_hospital
+		has_building_construction = building_maintenance_depot
+		has_building_construction = building_spawning_pool
+		has_building_construction = building_robot_assembly_plant
+		has_building_construction = building_machine_assembly_plant
+		has_building_construction = building_machine_assembly_complex
+		has_building_construction = building_precinct_house
+		has_building_construction = building_hall_judgment
+		has_building_construction = building_sentinel_posts
+		has_building_construction = building_autochthon_monument
+		has_building_construction = building_temple
+		has_building_construction = building_hive_node
+		has_building_construction = building_simulation_1
+		has_building_construction = building_corporate_monument
+		has_building_construction = building_heritage_site
+		has_building_construction = building_holotemple
+		has_building_construction = building_simulation_2
+		has_building_construction = building_hive_cluster
+		has_building_construction = building_corporate_site
+		has_building_construction = building_hypercomms_forum
+		has_building_construction = building_sacred_nexus
+		has_building_construction = building_sacrificial_temple_1
+		has_building_construction = building_sacrificial_temple_2
+		has_building_construction = building_sacrificial_temple_3
+		has_building_construction = building_galactic_memorial_1
+		has_building_construction = building_galactic_memorial_2
+		has_building_construction = building_galactic_memorial_3
+		has_building_construction = building_hive_confluence
+		has_building_construction = building_simulation_3
+		has_building_construction = building_corporate_forum
+		has_building_construction = building_autocurating_vault
+		has_building_construction = building_citadel_of_faith
+		has_building_construction = building_alpha_hub
+		has_building_construction = building_corporate_vault
+		has_building_construction = building_machine_capital
+		has_building_construction = building_machine_major_capital
+		has_building_construction = building_machine_system_capital
+		has_building_construction = building_hive_capital
+		has_building_construction = building_hive_major_capital
+		has_building_construction = building_hab_major_capital
+		has_building_construction = building_bureaucratic_1
+		has_building_construction = building_bureaucratic_2
+		has_building_construction = building_bureaucratic_3
+		has_building_construction = building_uplink_node
+		has_building_construction = building_network_junction
+		has_building_construction = building_system_conflux
+		has_building_construction = building_necrophage_elevation_chamber
+		has_building_construction = building_necrophage_house_of_apotheosis
+		has_building_construction = building_dread_encampment
+	}
+}
+
+planet_allow_ruler_building_resettle = {
+	OR = {
+		has_building_construction = building_capital
+		has_building_construction = building_major_capital
+		has_building_construction = building_system_capital
+		has_building_construction = building_resort_major_capital
+		has_building_construction = building_slave_major_capital
+		has_building_construction = building_hab_major_capital
+	}
+}
+
+pop_check_citizenship_full = {
+	OR = {
+		has_migration_control = no
+		is_robot_pop = yes
+	}
+	OR = {
+		has_citizenship_type = { type = citizenship_full }
+		has_citizenship_type = { type = citizenship_limited }
+		has_citizenship_type = { type = citizenship_full_machine }
+	}
+	has_culture_shock = no
+	NOT = { is_pop_category = robot_servant }
+}
+
+pop_check_slave = {
+	OR = {
+		AND = {
+			is_pop_category = slave
+			has_migration_control = no
+			has_citizenship_type = { type = citizenship_slavery }
+		}
+		AND = {
+			is_pop_category = slave
+			has_migration_control = no
+			owner = { has_civic = civic_slaver_guilds }
+		}
+	}
+	NOR = {
+		has_slavery_type = { type = slavery_livestock }
+		has_slavery_type = { type = slavery_matrix }
+	}
+	has_culture_shock = no
+	NOT = { is_pop_category = robot_servant }
+}
+
+pop_check_robot_servant_slave = {
+	OR = {
+		pop_check_slave = yes
+		is_pop_category = robot_servant
+	}
+	has_culture_shock = no
+}
+
+pop_count_unemployed_citizen_full_specialist = {
+	count_pops = {
+		limit = {
+			is_unemployed = yes
+			OR = {
+				is_pop_category = specialist
+				is_pop_category = complex_drone
+			}
+			pop_check_citizenship_full = yes
+		}
+		count < 2
+	}
+}
+
+pop_count_unemployed_citizen_full_ruler = {
+	count_pops = {
+		limit = {
+			is_unemployed = yes
+			is_pop_category = ruler
+			pop_check_citizenship_full = yes
+		}
+		count < 2
+	}
+}
+
+pop_count_citizen_full_pops = {
+	count_pops = {
+		limit = {
+			pop_check_citizenship_full = yes
+		}
+		count < 2
+	}
+}
+
+pop_job_check_citizen_full_worker = {
+	OR = {
+		AND = {
+			owner = { is_gestalt = no }
+			OR = {
+				AND = {
+					OR = {
+						planet_stability < 55
+						free_amenities < 5
+					}
+					has_available_jobs = clerk
+				}
+				has_available_jobs = technician
+				has_available_jobs = miner
+				has_available_jobs = crystal_miner
+				has_available_jobs = gas_extractor
+				has_available_jobs = mote_harvester
+				has_available_jobs = farmer
+				has_available_jobs = soldier
+				has_available_jobs = preacher
+			}
+		}
+		AND = {
+			owner = { is_gestalt = yes }
+			OR = {
+				AND = {
+					OR = {
+						planet_stability < 55
+						free_amenities < 5
+					}
+					has_available_jobs = maintenance_drone
+				}
+				has_available_jobs = mining_drone
+				has_available_jobs = agri_drone
+				has_available_jobs = technician_drone
+				has_available_jobs = warrior_drone
+			}
+		}
+	}
+}
+
+pop_job_check_citizen_clerk = {
+	OR = {
+		AND = {
+			owner = { is_gestalt = no }
+			has_available_jobs = clerk
+		}
+		AND = {
+			owner = { is_gestalt = yes }
+			has_available_jobs = maintenance_drone
+		}
+	}
+}
+
+pop_job_check_citizen_full_specialist = {
+	OR = {
+		AND = {
+			owner = { is_gestalt = no }
+			OR = {
+				has_available_jobs = colonist
+				has_available_jobs = researcher
+				has_available_jobs = priest
+				has_available_jobs = death_priest
+				has_available_jobs = foundry
+				has_available_jobs = enforcer
+				has_available_jobs = telepath
+				has_available_jobs = artisan
+				has_available_jobs = entertainer
+				has_available_jobs = duelist
+				has_available_jobs = culture_worker
+				has_available_jobs = bureaucrat
+				has_available_jobs = chemist
+				has_available_jobs = translucer
+				has_available_jobs = gas_refiner
+				has_available_jobs = roboticist
+				has_available_jobs = healthcare
+				has_available_jobs = manager
+				has_available_jobs = bluelotus_technician
+				has_available_jobs = death_chronicler
+			}
+		}
+		AND = {
+			owner = { is_gestalt = yes }
+			OR = {
+				has_available_jobs = spawning_drone
+				has_available_jobs = replicator
+				has_available_jobs = coordinator
+				has_available_jobs = evaluator
+				has_available_jobs = synapse_drone
+				has_available_jobs = brain_drone
+				has_available_jobs = calculator
+				has_available_jobs = artisan_drone
+				has_available_jobs = fabricator
+				has_available_jobs = alloy_drone
+				has_available_jobs = chemist_drone
+				has_available_jobs = translucer_drone
+				has_available_jobs = gas_refiner_drone
+				has_available_jobs = patrol_drone
+				has_available_jobs = crystal_mining_drone
+				has_available_jobs = mote_harvesting_drone
+				has_available_jobs = gas_extraction_drone
+				has_available_jobs = bluelotus_drone
+				has_available_jobs = chronicle_drone
+			}
+		}
+	}
+}
+
+pop_job_check_citizen_full_ruler = {
+	owner = { is_gestalt = no }
+	OR = {
+		has_available_jobs = head_researcher
+		has_available_jobs = high_priest
+		has_available_jobs = administrator
+		has_available_jobs = noble
+		has_available_jobs = merchant
+		has_available_jobs = executive
+	}
+}
+
+pop_job_check_slave_chattel_slavery = {
+	owner = { is_gestalt = no }
+	OR = {
+		AND = {
+			OR = {
+				planet_stability < 55
+				free_amenities < 5
+			}
+			has_available_jobs = clerk
+		}
+		has_available_jobs = technician
+		has_available_jobs = miner
+		has_available_jobs = crystal_miner
+		has_available_jobs = gas_extractor
+		has_available_jobs = mote_harvester
+		has_available_jobs = farmer
+		has_available_jobs = soldier
+		has_available_jobs = preacher
+	}
+}
+
+pop_job_check_slave_battle_thralls = {
+	owner = { is_gestalt = no }
+	OR = {
+		AND = {
+			OR = {
+				planet_stability < 55
+				free_amenities < 5
+			}
+			has_available_jobs = clerk
+		}
+		has_available_jobs = technician
+		has_available_jobs = miner
+		has_available_jobs = crystal_miner
+		has_available_jobs = gas_extractor
+		has_available_jobs = mote_harvester
+		has_available_jobs = farmer
+		has_available_jobs = soldier
+		has_available_jobs = preacher
+
+		has_available_jobs = enforcer
+		has_available_jobs = duelist
+		has_available_jobs = necromancer
+	}
+}
+
+pop_job_check_slave_domestiv_servitude = {
+	owner = { is_gestalt = no }
+	OR = {
+		AND = {
+			OR = {
+				planet_stability < 55
+				free_amenities < 5
+			}
+			has_available_jobs = clerk
+		}
+		has_available_jobs = technician
+		has_available_jobs = miner
+		has_available_jobs = crystal_miner
+		has_available_jobs = gas_extractor
+		has_available_jobs = mote_harvester
+		has_available_jobs = farmer
+		has_available_jobs = soldier
+		has_available_jobs = preacher
+
+		has_available_jobs = entertainer
+		has_available_jobs = servant
+	}
+}
+
+pop_job_check_slave_indentured_servitude = {
+	owner = { is_gestalt = no }
+	OR = {
+		AND = {
+			OR = {
+				planet_stability < 55
+				free_amenities < 5
+			}
+			has_available_jobs = clerk
+		}
+		has_available_jobs = technician
+		has_available_jobs = miner
+		has_available_jobs = crystal_miner
+		has_available_jobs = gas_extractor
+		has_available_jobs = mote_harvester
+		has_available_jobs = farmer
+		has_available_jobs = soldier
+		has_available_jobs = preacher
+
+		has_available_jobs = colonist
+		has_available_jobs = researcher
+		has_available_jobs = priest
+		has_available_jobs = death_priest
+		has_available_jobs = foundry
+		has_available_jobs = telepath
+		has_available_jobs = artisan
+		has_available_jobs = culture_worker
+		has_available_jobs = bureaucrat
+		has_available_jobs = chemist
+		has_available_jobs = translucer
+		has_available_jobs = gas_refiner
+		has_available_jobs = roboticist
+		has_available_jobs = healthcare
+		has_available_jobs = manager
+		has_available_jobs = bluelotus_technician
+		has_available_jobs = death_chronicler
+	}
+}
+
+pop_job_check_robot = {
+	OR = {
+		AND = {
+			owner = { 
+				NOT = { has_technology = tech_droid_workers }
+				NOT = { has_technology = tech_synthetic_workers }
+			}
+			OR = {
+				has_available_jobs = miner
+				has_available_jobs = crystal_miner
+				has_available_jobs = gas_extractor
+				has_available_jobs = mote_harvester
+				has_available_jobs = farmer
+				has_available_jobs = soldier
+			}
+		}
+		AND = {
+			owner = {
+				has_technology = tech_droid_workers
+				NOT = { has_technology = tech_synthetic_workers }
+			}
+			OR = {
+				AND = {
+					owner = { has_policy_flag = ai_full_rights }
+					OR = {
+						AND = {
+							OR = {
+								planet_stability < 55
+								free_amenities < 5
+							}
+							has_available_jobs = clerk
+						}
+						has_available_jobs = technician
+						has_available_jobs = miner
+						has_available_jobs = crystal_miner
+						has_available_jobs = gas_extractor
+						has_available_jobs = mote_harvester
+						has_available_jobs = farmer
+						has_available_jobs = soldier
+						has_available_jobs = preacher
+						
+						has_available_jobs = colonist
+						has_available_jobs = researcher
+						has_available_jobs = priest
+						has_available_jobs = death_priest
+						has_available_jobs = foundry
+						has_available_jobs = enforcer
+						has_available_jobs = telepath
+						has_available_jobs = artisan
+						has_available_jobs = entertainer
+						has_available_jobs = duelist
+						has_available_jobs = culture_worker
+						has_available_jobs = bureaucrat
+						has_available_jobs = chemist
+						has_available_jobs = translucer
+						has_available_jobs = gas_refiner
+						has_available_jobs = roboticist
+						has_available_jobs = healthcare
+						has_available_jobs = manager
+						has_available_jobs = bluelotus_technician
+						has_available_jobs = death_chronicler
+					}
+				}
+				AND = {
+					owner = { has_policy_flag = ai_servitude }
+					OR = {
+						AND = {
+							OR = {
+								planet_stability < 55
+								free_amenities < 5
+							}
+							has_available_jobs = clerk
+						}
+						has_available_jobs = technician
+						has_available_jobs = miner
+						has_available_jobs = crystal_miner
+						has_available_jobs = gas_extractor
+						has_available_jobs = mote_harvester
+						has_available_jobs = farmer
+						has_available_jobs = soldier
+						has_available_jobs = preacher
+						
+						has_available_jobs = colonist
+						has_available_jobs = foundry
+						has_available_jobs = enforcer
+						has_available_jobs = telepath
+						has_available_jobs = artisan
+						has_available_jobs = entertainer
+						has_available_jobs = duelist
+						has_available_jobs = chemist
+						has_available_jobs = translucer
+						has_available_jobs = gas_refiner
+						has_available_jobs = roboticist
+						has_available_jobs = healthcare
+						has_available_jobs = manager
+						has_available_jobs = bluelotus_technician
+					}
+				}
+			}
+		}
+		AND = {
+			owner = { has_technology = tech_synthetic_workers }
+			AND = {
+				owner = { has_policy_flag = ai_servitude }
+				OR = {
+					AND = {
+						OR = {
+							planet_stability < 55
+							free_amenities < 5
+						}
+						has_available_jobs = clerk
+					}
+					has_available_jobs = technician
+					has_available_jobs = miner
+					has_available_jobs = crystal_miner
+					has_available_jobs = gas_extractor
+					has_available_jobs = mote_harvester
+					has_available_jobs = farmer
+					has_available_jobs = soldier
+					has_available_jobs = preacher
+
+					has_available_jobs = colonist
+					has_available_jobs = researcher
+					has_available_jobs = priest
+					has_available_jobs = death_priest
+					has_available_jobs = foundry
+					has_available_jobs = enforcer
+					has_available_jobs = telepath
+					has_available_jobs = artisan
+					has_available_jobs = entertainer
+					has_available_jobs = duelist
+					has_available_jobs = culture_worker
+					has_available_jobs = bureaucrat
+					has_available_jobs = chemist
+					has_available_jobs = translucer
+					has_available_jobs = gas_refiner
+					has_available_jobs = roboticist
+					has_available_jobs = healthcare
+					has_available_jobs = manager
+					has_available_jobs = bluelotus_technician
+					has_available_jobs = death_chronicler
+				}
+			}
+		}
+		AND = {
+			owner = { 
+				has_policy_flag = ai_outlawed 
+				has_technology = tech_droid_workers
+			}
+			OR = {
+				AND = {
+					OR = {
+						planet_stability < 55
+						free_amenities < 5
+					}
+					has_available_jobs = clerk
+				}
+				has_available_jobs = technician
+				has_available_jobs = miner
+				has_available_jobs = crystal_miner
+				has_available_jobs = gas_extractor
+				has_available_jobs = mote_harvester
+				has_available_jobs = farmer
+				has_available_jobs = soldier
+				has_available_jobs = preacher
+			}
+		}
+	}
+}
+
+pop_job_check_fallen_empire = {
+	OR = {
+		AND = {
+			owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+			has_available_jobs = fe_protector
+		}
+		AND = {
+			owner = { NOT = { has_ethic = ethic_fanatic_spiritualist } }
+			has_available_jobs = fe_overseer
+		}
+		AND = {
+			owner = { has_ethic = ethic_fanatic_spiritualist }
+			OR = {
+				has_available_jobs = fe_sky_cardinal
+				has_available_jobs = fe_acolyte_farm
+				has_available_jobs = fe_acolyte_generator
+				has_available_jobs = fe_acolyte_mine
+				has_available_jobs = fe_augur
+			}
+		}
+		AND = {
+			owner = { has_ethic = ethic_fanatic_materialist }
+			has_available_jobs = fe_archivist
+		}
+		AND = {
+			owner = { has_ethic = ethic_fanatic_xenophile }
+			has_available_jobs = fe_xeno_keeper
+		}
+		AND = {
+			owner = { has_ethic = ethic_gestalt_consciousness }
+			has_available_jobs = fe_guardian_bot
+		}
+	}
+}

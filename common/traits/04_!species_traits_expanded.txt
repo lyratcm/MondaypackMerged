@@ -1,0 +1,819 @@
+### NEW PERK TRAITS ###
+trait_adaptable_evolution = {
+	potential_crossbreeding_chance = 0.75
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_robust" "trait_ageless" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_ascension_perk = ap_engineered_evolution
+		}
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+trait_adaptable_evolution_robot = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_adaptable.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_robot_efficient_processors" }
+	allowed_archetypes = { ROBOT MACHINE }
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_ascension_perk = ap_the_flesh_is_weak
+				has_ascension_perk = ap_synthetic_age
+			}
+		}
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.10
+	}
+	slave_cost = {
+		energy = 150
+	}
+}
+
+### NEW ADVANCED TRAITS ###
+trait_titanic_strength = {
+	potential_crossbreeding_chance = 0.75
+	cost = 4
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_unyielding.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" }
+	allowed_archetypes = { BIOLOGICAL }
+	advanced_trait = yes
+	modifier = {
+		army_damage_mult = 0.60
+		planet_jobs_worker_produces_mult = 0.075
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+trait_pheremones = {
+	potential_crossbreeding_chance = 0.5
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_charismatic.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_charismatic" "trait_repugnant" }
+	allowed_archetypes = { BIOLOGICAL }
+	advanced_trait = yes
+	custom_tooltip = TRAIT_PHEREMONES_EFFECT
+	slave_cost = {
+		energy = 25
+	}
+}
+
+trait_obedient = {
+	potential_crossbreeding_chance = 0.5
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_eager.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_conformists" "trait_deviants" "trait_hive_mind" "trait_nerve_stapled" "trait_docile" "trait_unruly" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	advanced_trait = yes
+	modifier = {
+		pop_government_ethic_attraction = 0.5
+		species_empire_size_mult = -0.15
+		pop_amenities_usage_mult = -0.10
+	}
+}
+
+trait_lithoid_shiny = {
+	potential_crossbreeding_chance = 0.5
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_charismatic.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_charismatic" "trait_repugnant" }
+	allowed_archetypes = { LITHOID }
+	advanced_trait = yes
+	custom_tooltip = TRAIT_PHEREMONES_EFFECT
+	slave_cost = {
+		energy = 25
+	}
+}
+
+trait_dense = {
+	cost = 2
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { LITHOID }
+	modifier = {
+		planet_livestock_minerals_produces_add = 2
+	}
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_lithoid_compact = {
+	cost = 3
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { LITHOID }
+	modifier = {
+		pop_housing_usage_mult = -0.25
+		pop_resettlement_cost_mult = -0.33
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+
+trait_lithoid_titanic_strength = {
+	potential_crossbreeding_chance = 0.75
+	cost = 3
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_unyielding.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" }
+	allowed_archetypes = { LITHOID }
+	advanced_trait = yes
+	modifier = {
+		army_damage_mult = 0.60
+		planet_jobs_worker_produces_mult = 0.075
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+
+### GENETIC MASTERY TRAITS ###
+trait_ageless = {
+	potential_crossbreeding_chance = 0.5
+	cost = 5
+	initial = no
+	randomized = no
+	immortal_leaders = yes
+	opposites = { "trait_nonadaptive" "trait_adaptive" "trait_extremely_adaptive" "trait_robust" "trait_nerve_stapled" "trait_venerable" "trait_enduring" "trait_fleeting" "trait_ancient" "trait_seasonal" "trait_robust" "trait_endemic" "trait_venerable_lithoid" "trait_enduring_lithoid" "trait_fleeting_lithoid" "trait_lithoid_eternal"  }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = "tech_genetic_mastery"
+		}
+	}
+	modifier = {
+		pop_environment_tolerance = 0.30
+		planet_jobs_produces_mult = 0.10
+		pop_happiness = 0.05
+	}
+	slave_cost = {
+		energy = 300
+	}
+}
+
+trait_genetic_memory = {
+	potential_crossbreeding_chance = 0.5
+	cost = 4
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_deep_connections.dds"
+	initial = no
+	randomized = no
+	opposites = { "trait_nerve_stapled" "trait_inept" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = "tech_genetic_mastery"
+		}
+	}
+	modifier = {
+		species_leader_exp_gain = 1.0
+		leader_skill_levels = 2
+		planet_jobs_unity_produces_mult = 0.20
+	}
+}
+
+trait_sleepless = {
+	potential_crossbreeding_chance = 0.5
+	cost = 4
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_eye_for_talent.dds"
+	initial = no
+	randomized = no
+	randomized = no
+	opposites = { "trait_low_metabolism" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = "tech_genetic_mastery"
+		}
+	}
+	modifier = {
+		planet_jobs_produces_mult = 0.25
+		planet_pops_organics_food_upkeep_mult = 0.25
+		planet_pops_organics_minerals_upkeep_mult = 0.25
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
+
+trait_complex_genetic_code = {
+	potential_crossbreeding_chance = 0.75
+	cost = -5
+	initial = no
+	randomized = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = "tech_genetic_mastery"
+		}
+	}
+	modifier = {
+		pop_environment_tolerance = -0.1
+		planet_pops_organics_food_upkeep_mult = 0.1
+		planet_pops_organics_minerals_upkeep_mult = 0.1
+	}
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+### NEW GENERAL TRAITS ###
+trait_poisonous = {
+	potential_crossbreeding_chance = 1.0
+	cost = 2
+	icon = "gfx/interface/icons/governments/civics/civic_fanatic_purifiers.dds"
+	allowed_archetypes = { BIOLOGICAL }
+	modifier = {
+		army_damage_mult = 0.25
+		planet_chemists_produces_mult = 0.15
+		planet_livestock_food_produces_add = -4
+	}
+}
+
+trait_clever = {
+	potential_crossbreeding_chance = 1.0
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_maniacal.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		species_leader_exp_gain = 0.10
+		planet_jobs_specialist_produces_mult = 0.025
+	}
+	opposites = { "trait_syncretic_proles" }
+	slave_cost = {
+		energy = 25
+	}
+}
+
+trait_low_metabolism = {
+	potential_crossbreeding_chance = 1.0
+	cost = 1
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_fertility_preacher.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.1
+		planet_pops_organics_minerals_upkeep_mult = -0.1
+	}
+	opposites = { "trait_high_metabolism" "trait_sleepless" }
+	ai_weight = {
+		weight = 0.33
+	}
+}
+
+trait_high_metabolism = {
+	potential_crossbreeding_chance = 1.0
+	cost = -1
+	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = 0.1
+		planet_pops_organics_minerals_upkeep_mult = 0.1
+	}
+	opposites = { "trait_low_metabolism" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_carefree = {
+	potential_crossbreeding_chance = 0.5
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_carefree.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_happiness = 0.05
+		army_morale = 0.20
+	}
+	opposites = { "trait_skittish" "trait_hive_mind" }
+	ai_weight = {
+		weight = 0.5
+	}
+}
+
+trait_skittish = {
+	potential_crossbreeding_chance = 0.5
+	cost = -1
+	icon = "gfx/interface/icons/traits/trait_skittish.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_happiness = -0.05
+		army_morale = -0.20
+	}
+	opposites = { "trait_carefree" "trait_hive_mind" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_regeneration = {
+	potential_crossbreeding_chance = 0.33
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_limited_regeneration.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_damage_mult = 0.15
+		leader_age = 15
+	}
+	slave_cost = {
+		energy = 30
+	}
+}
+
+trait_inept = {
+	cost = -1
+	potential_crossbreeding_chance = 0.1
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_arrested_development.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_talented" "trait_erudite" "trait_genetic_memory" }
+	modifier = {
+		leader_skill_levels = -1
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_uninventive = {
+	cost = -1
+	icon = "gfx/interface/icons/traits/trait_uninventive.dds"
+	potential_crossbreeding_chance = 0.25
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_intelligent" "trait_erudite" "trait_enigmatic_intelligence_poor" "trait_natural_physicists" "trait_natural_sociologists" "trait_natural_engineers" }
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.05
+		planet_jobs_physics_research_produces_mult = -0.05
+		planet_jobs_society_research_produces_mult = -0.05
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_slothful = {
+	cost = -2
+	potential_crossbreeding_chance = 0.5
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_armchair_commander.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	opposites = { "trait_agrarian" "trait_ingenious" "trait_industrious" }
+	modifier = {
+		planet_jobs_food_produces_mult = -0.05
+		planet_jobs_energy_produces_mult = -0.05
+		planet_jobs_minerals_produces_mult = -0.05
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_endemic = {
+	cost = -4
+	potential_crossbreeding_chance = 0.5
+	icon = "gfx/interface/icons/traits/trait_nonadaptive.dds"
+	allowed_archetypes = { BIOLOGICAL }
+	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_nonadaptive" "trait_robust" "trait_ageless" }
+	modifier = {
+		pop_environment_tolerance = -0.2
+	}
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+### NEW ROBOT TRAITS ###
+trait_garrison_bot = {
+	cost = 1
+	icon = "gfx/interface/icons/governments/civics/civic_machine_warbots.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_defense_damage_mult = 0.5
+		army_damage_mult = 0.05
+	}
+	# Synth and Droid only
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_technology = tech_droid_workers
+				is_machine_empire = yes
+			}
+		}
+	}
+	opposites = { "trait_delicate" }
+}
+
+trait_delicate = {
+	cost = -1
+	icon = "gfx/interface/icons/traits/trait_weak.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_damage_mult = -0.20
+		planet_pops_robotics_upkeep_mult = 0.05
+	}
+	# Synth and Droid only
+	species_potential_add = {
+		exists = from
+		from = {
+			OR = {
+				has_technology = tech_droid_workers
+				is_machine_empire = yes
+			}
+		}
+	}
+	opposites = { "trait_garrison_bot" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_repeater = {
+	cost = 1
+	icon = "gfx/interface/icons/governments/civics/civic_machine_unitary_cohesion.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	species_potential_add = {
+		exists = from
+		from = {
+			is_machine_empire = yes
+		}
+	}
+	opposites = { "trait_robot_quarrelsome" }
+}
+
+trait_robot_quarrelsome = {
+	cost = -1
+	icon = "gfx/interface/icons/traits/trait_quarrelsome.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		planet_jobs_unity_produces_mult = -0.1
+	}
+	species_potential_add = {
+		exists = from
+		from = {
+			is_machine_empire = yes
+		}
+	}
+	opposites = { "trait_repeater" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_thrifty_synth = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_thrifty.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	
+	# Synth only
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_synthetic_workers
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+	
+	custom_tooltip = TRAIT_THRIFTY_EFFECT	
+}
+
+### NEW PORTRAIT-SPECIFIC TRAITS ###
+trait_fungal_colony = {
+	potential_crossbreeding_chance = 0
+	cost = 2
+	modification = no
+	allowed_archetypes = { FUNGOID half_species }
+	custom_tooltip = TRAIT_FUNGAL_COLONY_EFFECT
+	modifier = {
+		leader_age = 500
+		pop_growth_speed = -0.25
+	}
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" "trait_slow_breeders" "trait_rapid_breeders" "trait_fertile" "trait_clones" "trait_hive_mind" }
+}
+
+trait_clonal_colony = {
+	potential_crossbreeding_chance = 0.25
+	cost = 3
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_rapid_breeders.dds"
+	allowed_archetypes = { FUNGOID PLANTOID half_species }
+	modifier = {
+		pop_growth_speed = 0.4
+		pop_environment_tolerance = -0.05
+	}
+	opposites = { "trait_rapid_breeders" "trait_slow_breeders" "trait_fertile" "trait_clones" }
+}
+
+trait_ancient = {
+	potential_crossbreeding_chance = 0.25
+	cost = 4
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_fertility_preacher.dds"
+	allowed_archetypes = { PLANTOID half_species }
+	modifier = {
+		leader_age = 300
+	}
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" "trait_seasonal" "trait_ageless" }
+}
+
+trait_seasonal = {
+	potential_crossbreeding_chance = 0.25
+	cost = -2
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
+	allowed_archetypes = { PLANTOID half_species }
+	modifier = {
+		leader_age = -25
+	}
+	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" "trait_ancient" "trait_ageless" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_deeply_rooted = {
+	potential_crossbreeding_chance = 0.25
+	cost = -2
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_sedentary.dds"
+	allowed_archetypes = { PLANTOID half_species }
+	modifier = {
+		pop_growth_from_immigration = -0.30
+		pop_resettlement_cost_mult = 0.50
+	}
+	opposites = { "trait_nomadic" "trait_sedentary" }
+	ai_weight = {
+		weight = 0.1
+	}
+}
+
+trait_succulent = {
+	potential_crossbreeding_chance = 1
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_desert_reptile.dds"
+	allowed_archetypes = { PLANTOID half_species }
+	custom_tooltip = TRAIT_SUCCULENT_EFFECT
+	opposites = { "trait_coniferous" }
+	modifier = {
+		# Dry Habitability
+		pc_desert_habitability = 0.3
+		pc_arid_habitability = 0.3
+		pc_outback_habitability = 0.3
+		pc_savannah_habitability = 0.3
+		pc_steppe_habitability = 0.3
+		pc_sandsea_habitability = 0.3
+		pc_oasis_habitability = 0.3
+		pc_mesa_habitability = 0.3
+		pc_hadesert_habitability = 0.3
+		pc_prairie_habitability = 0.3
+		pc_med_habitability = 0.3
+		# Cold Habitability
+		pc_antarctic_habitability = -0.1
+		pc_arctic_habitability = -0.1
+		pc_alpine_habitability = -0.1
+		pc_highland_habitability = -0.1
+		pc_tundra_habitability = -0.1
+		pc_swamp_habitability = -0.1
+		pc_frozen_desert_habitability = -0.1
+		pc_glacial_habitability = -0.1
+		pc_boreal_habitability = -0.1
+		pc_mushroom_habitability = -0.1	
+		pc_snow_habitability = -0.1
+	}
+}
+
+trait_coniferous = {
+	potential_crossbreeding_chance = 1
+	cost = 1
+	modification = no
+	allowed_archetypes = { PLANTOID half_species }
+	custom_tooltip = TRAIT_CONIFEROUS_EFFECT
+	opposites = { "trait_succulent" }
+	modifier = {
+		# Dry Habitability
+		pc_desert_habitability = -0.1
+		pc_arid_habitability = -0.1
+		pc_outback_habitability = -0.1
+		pc_savannah_habitability = -0.1
+		pc_steppe_habitability = -0.1
+		pc_sandsea_habitability = -0.1
+		pc_oasis_habitability = -0.1
+		pc_mesa_habitability = -0.1
+		pc_hadesert_habitability = -0.1
+		pc_prairie_habitability = -0.1
+		pc_med_habitability = -0.1
+		# Cold Habitability
+		pc_antarctic_habitability = 0.2
+		pc_arctic_habitability = 0.2
+		pc_alpine_habitability = 0.2
+		pc_highland_habitability = 0.2
+		pc_tundra_habitability = 0.2
+		pc_swamp_habitability = 0.2
+		pc_frozen_desert_habitability = 0.2
+		pc_glacial_habitability = 0.2
+		pc_boreal_habitability = 0.2
+		pc_mushroom_habitability = 0.2	
+		pc_snow_habitability = 0.2
+	}
+}
+
+trait_amphibious = {
+	potential_crossbreeding_chance = 0.25
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_amphibious.dds"
+	allowed_archetypes = { REPTILIAN half_species }
+	modifier = {
+		# Wet Habitability
+		pc_ocean_habitability = 0.2
+		pc_continental_habitability = 0.2
+		pc_tropical_habitability = 0.2
+		pc_cascadian_habitability = 0.2
+		pc_desertislands_habitability = 0.2
+		pc_subarctic_habitability = 0.2
+		pc_mangrove_habitability = 0.2
+		pc_wetswamp_habitability = 0.2
+		pc_hajungle_habitability = 0.2
+		pc_retinal_habitability = 0.2
+		pc_forest_habitability = 0.2
+		# Dry Habitability
+		pc_desert_habitability = -0.1
+		pc_arid_habitability = -0.1
+		pc_outback_habitability = -0.1
+		pc_savannah_habitability = -0.1
+		pc_steppe_habitability = -0.1
+		pc_sandsea_habitability = -0.1
+		pc_oasis_habitability = -0.1
+		pc_mesa_habitability = -0.1
+		pc_hadesert_habitability = -0.1
+		pc_prairie_habitability = -0.1
+		pc_med_habitability = -0.1
+	}
+	custom_tooltip = TRAIT_AMPHIBIOUS_EFFECTS
+	opposites = { "trait_extremely_adaptive" "trait_desert_reptile" }
+}
+
+trait_desert_reptile = {
+	potential_crossbreeding_chance = 0.25
+	cost = 1
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_desert_reptile.dds"
+	allowed_archetypes = { REPTILIAN half_species }
+	modifier = {
+		# Dry Habitability
+		pc_desert_habitability = 0.2
+		pc_arid_habitability = 0.2
+		pc_outback_habitability = 0.2
+		pc_savannah_habitability = 0.2
+		pc_steppe_habitability = 0.2
+		pc_sandsea_habitability = 0.2
+		pc_oasis_habitability = 0.2
+		pc_mesa_habitability = 0.2
+		pc_hadesert_habitability = 0.2
+		pc_prairie_habitability = 0.2
+		pc_med_habitability = 0.2
+		# Cold Habitability
+		pc_antarctic_habitability = -0.1
+		pc_arctic_habitability = -0.1
+		pc_alpine_habitability = -0.1
+		pc_highland_habitability = -0.1
+		pc_tundra_habitability = -0.1
+		pc_swamp_habitability = -0.1
+		pc_frozen_desert_habitability = -0.1
+		pc_glacial_habitability = -0.1
+		pc_boreal_habitability = -0.1
+		pc_mushroom_habitability = -0.1	
+		pc_snow_habitability = -0.1
+	}
+	custom_tooltip = TRAIT_DESERT_REPTILE_EFFECTS
+	opposites = { "trait_extremely_adaptive" "trait_amphibious" }
+}
+
+trait_lithoid_armored = {
+	cost = 2
+	potential_crossbreeding_chance = 1.0
+
+	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions"}
+	allowed_archetypes = { LITHOID }
+	custom_tooltip = TRAIT_LITHOID_ARMORED_EFFECT
+
+	slave_cost = {
+		energy = 100
+	}
+}
+
+trait_lithoid_crystal = {
+	cost = 1
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_rapid_breeders_lithoid" "trait_clones" }
+	allowed_archetypes = { LITHOID }
+	modifier = {
+		pop_growth_speed = 0.05
+	}
+	slave_cost = {
+		energy = 50
+	}
+}
+
+trait_lithoid_eternal = {
+	cost = 5
+	icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_world_shaper.dds"
+	potential_crossbreeding_chance = 1.0
+	modifier = { leader_age = 300 }
+	opposites = { "trait_venerable_lithoid" "trait_enduring_lithoid" "trait_fleeting_lithoid" "trait_ageless" }
+	allowed_archetypes = { LITHOID }
+}
+
+trait_venerable_lithoid = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_venerable.dds"
+	potential_crossbreeding_chance = 1.0
+	modifier = { leader_age = 120 }
+	opposites = { "trait_lithoid_eternal" "trait_enduring_lithoid" "trait_fleeting_lithoid" "trait_ageless" }
+	allowed_archetypes = { LITHOID }
+}
+
+trait_enduring_lithoid = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_enduring.dds"
+	potential_crossbreeding_chance = 1.0
+	modifier = { leader_age = 40 }
+	opposites = { "trait_lithoid_eternal" "trait_venerable_lithoid" "trait_fleeting_lithoid" "trait_ageless" }
+	allowed_archetypes = { LITHOID }
+}
+
+### NEW EVENT TRAITS ###
+
+trait_messanger_intelligent = {
+	potential_crossbreeding_chance = 0
+	cost = 0
+	
+	initial = no
+	modification = no
+	randomized = no
+	
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_enigmatic_intelligence.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_researchers_produces_mult = 0.15
+		leader_skill_levels = 1
+	}
+	opposites = { "trait_nerve_stapled" "trait_intelligent" }
+}
+
+trait_messanger_strong = {
+	potential_crossbreeding_chance = 0
+	cost = 0
+	
+	initial = no
+	modification = no
+	randomized = no
+	
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_enigmatic_intelligence.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_defense_damage_mult = 0.5
+		army_damage_mult = 0.25
+		planet_jobs_worker_produces_mult = 0.025
+	}
+	opposites = { "trait_weak" "trait_strong" }
+}

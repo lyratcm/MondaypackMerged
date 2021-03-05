@@ -1,0 +1,663 @@
+######################
+## ELVEN PRIMITIVES ##
+######################
+
+generate_elven_primitives_on_planet = {
+	create_elven_primitive_species = yes
+	create_elven_primitive_empire = yes
+	setup_primitive_planet = yes
+	#create_primitive_armies = yes ### Done via Pop job now
+}
+
+create_elven_primitive_species = {
+	random_list = {
+		# Savages!
+		50 = {
+			create_species = {
+				name = random
+				class = ELVEN
+				portrait = elven
+				homeworld = THIS
+				allow_negative_traits = no
+				traits = {
+					trait = "trait_elven_savage"
+					trait = random_traits
+				}
+			}
+		}
+		50 = {
+			create_species = {
+				name = random
+				class = ELVEN
+				portrait = elven
+				homeworld = THIS
+				allow_negative_traits = no
+				traits = {
+					trait = random_traits
+				}
+			}
+		}
+	}
+}
+
+create_elven_primitive_empire = {
+	random_list = {
+		# Industrial Civilization
+		30 = {
+			create_late_elven_primitive_empire = yes
+		}
+		# Medieval Civilization
+		70 = {
+			create_early_elven_primitive_empire = yes
+		}
+	}
+}
+
+create_early_elven_primitive_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_landed_nobility
+			civic = civic_flat_world_theory
+		}
+		species = last_created
+		ethos = random
+		flag = {
+			icon = {
+				category = "special"
+				file = "primitive.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_enlightened" # Should only be visible if they become spacefaring
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = elven_01
+		random_list = {
+			20 = {
+				set_country_flag = stone_age 
+				set_primitive_age = stone_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+			}
+			20 = {
+				set_country_flag = bronze_age 
+				set_primitive_age = bronze_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"green"
+						"dark_green"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = iron_age 
+				set_primitive_age = iron_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"purple"
+						"dark_purple"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = late_medieval_age 
+				set_primitive_age = late_medieval_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"light_blue"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = renaissance_age 
+				set_primitive_age = renaissance_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"pink"
+						"burgundy"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = steam_age 
+				set_primitive_age = steam_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"orange"
+						"red"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}	
+}
+
+create_late_elven_primitive_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_increasing_urbanization
+			civic = civic_atmospheric_pollution
+		}
+		species = last_created
+		ethos = random
+		flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_22.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_enlightened" # Should only be visible if they become spacefaring
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = elven_01
+		random_list = {
+			25 = {
+				set_country_flag = industrial_age 
+				set_primitive_age = industrial_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = machine_age
+				set_primitive_age = machine_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"yellow"
+						"orange"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = atomic_age 
+				set_primitive_age = atomic_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"brown"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = early_space_age 
+				set_primitive_age = early_space_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"grey"
+						"dark_grey"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}	
+}
+
+#####################
+## DROW PRIMITIVES ##
+#####################
+
+generate_drow_primitives_on_planet = {
+	create_drow_primitive_species = yes
+	create_drow_primitive_empire = yes
+	setup_primitive_planet = yes
+	#create_primitive_armies = yes ### Done via Pop job now
+}
+
+create_drow_primitive_species = {
+	random_list = {
+		# Savages!
+		50 = {
+			create_species = {
+				name = random
+				class = DROW
+				portrait = drow_true
+				homeworld = THIS
+				allow_negative_traits = no
+				traits = {
+					trait = "trait_drow_savage"
+					trait = "trait_drow_xenocidal"
+					trait = random_traits
+				}
+			}
+		}
+		30 = {
+			create_species = {
+				name = random
+				class = DROW
+				portrait = drow_true
+				homeworld = THIS
+				allow_negative_traits = no
+				traits = {
+					trait = "trait_drow_xenocidal"
+					trait = random_traits
+				}
+			}
+		}
+		20 = {
+			create_species = {
+				name = random
+				class = DROW
+				portrait = drow
+				homeworld = THIS
+				allow_negative_traits = no
+				traits = {
+					trait = random_traits
+				}
+			}
+		}
+	}
+}
+
+create_drow_primitive_empire = {
+	random_list = {
+		# Industrial Civilization
+		30 = {
+			create_late_drow_primitive_empire = yes
+		}
+		# Medieval Civilization
+		70 = {
+			create_early_drow_primitive_empire = yes
+		}
+	}
+}
+
+create_early_drow_primitive_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_landed_nobility
+			civic = civic_flat_world_theory
+		}
+		species = last_created
+		ethos = random
+		flag = {
+			icon = {
+				category = "special"
+				file = "primitive.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_enlightened" # Should only be visible if they become spacefaring
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = drow_01
+		random_list = {
+			20 = {
+				set_country_flag = stone_age 
+				set_primitive_age = stone_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+			}
+			20 = {
+				set_country_flag = bronze_age 
+				set_primitive_age = bronze_age
+				change_government = {
+					authority = random
+					civics = {
+						civic = civic_secret_of_fire
+						civic = civic_the_wheel
+					}
+				}
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"green"
+						"dark_green"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = iron_age 
+				set_primitive_age = iron_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"purple"
+						"dark_purple"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = late_medieval_age 
+				set_primitive_age = late_medieval_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"light_blue"
+						"blue"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = renaissance_age 
+				set_primitive_age = renaissance_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"pink"
+						"burgundy"
+						"null"
+						"null"
+					}
+				}
+			}
+			20 = {
+				set_country_flag = steam_age 
+				set_primitive_age = steam_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"orange"
+						"red"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}	
+}
+
+create_late_drow_primitive_empire = {
+	create_country = {
+		name = random
+		authority = random
+		civics = {
+			civic = civic_increasing_urbanization
+			civic = civic_atmospheric_pollution
+		}
+		species = last_created
+		ethos = random
+		flag = {
+			icon = {
+				category = "spherical"
+				file = "flag_spherical_22.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "new_dawn.dds"
+			}
+			colors={
+				"turquoise"
+				"green"
+				"null"
+				"null"
+			}
+		}
+		origin = "origin_enlightened" # Should only be visible if they become spacefaring
+		type = primitive
+	}
+	last_created_country = {
+		set_graphical_culture = drow_01
+		random_list = {
+			25 = {
+				set_country_flag = industrial_age 
+				set_primitive_age = industrial_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"yellow"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = machine_age
+				set_primitive_age = machine_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"yellow"
+						"orange"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = atomic_age 
+				set_primitive_age = atomic_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"beige"
+						"brown"
+						"null"
+						"null"
+					}
+				}
+			}
+			25 = { 
+				set_country_flag = early_space_age 
+				set_primitive_age = early_space_age
+				change_country_flag = {
+					icon = {
+						category = "special"
+						file = "primitive.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "new_dawn.dds"
+					}
+					colors={
+						"grey"
+						"dark_grey"
+						"null"
+						"null"
+					}
+				}
+			}
+		}
+	}	
+}

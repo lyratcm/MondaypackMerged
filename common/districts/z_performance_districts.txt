@@ -1,0 +1,23 @@
+###_z performance	###################################################################################
+
+z_performance_checker = {
+	base_buildtime = 7
+	#is_capped_by_modifier = no
+	min_for_deposits_on_planet = 0
+	max_for_deposits_on_planet = 1
+
+	show_on_uncolonized = {
+		always = no
+	}
+
+	potential = {
+		always = no
+	}
+
+	allow = {
+		always = no
+	}
+
+
+	ai_weight = { weight = 0 }
+}

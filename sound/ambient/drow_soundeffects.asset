@@ -1,0 +1,32 @@
+
+########## PLANET VIEW AMBIENT #########
+soundeffect = {
+	name = pc_drow_valshaquellar
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = drow_planet_01
+		sound = drow_planet_02
+		sound = drow_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_drow_valshaquellar_dead
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = drow_planet_01
+		sound = drow_planet_02
+		sound = drow_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+
+

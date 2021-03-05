@@ -1,0 +1,50 @@
+namespace = eap_imperial_prerogative
+
+country_event = {
+	id = eap_imperial_prerogative.1
+	hide_window = yes
+
+	trigger = {
+		has_ascension_perk = eap_imperial_prerogative
+		num_sectors > 1		
+		not = {
+			has_country_flag = eip
+		}
+	}
+
+	immediate = {
+		country_event  = { id = eap_imperial_prerogative.2 }
+	} 
+}
+
+country_event = {
+	id = eap_imperial_prerogative.2 
+	title = eip
+	desc = eip_desc
+	picture = GFX_evt_landing_ship
+	show_sound = event_activating_unknown_technology
+	location = root
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = eap_imperial_prerogative
+		
+		not = {
+			has_country_flag = eap_imperial_prerogative1
+		}
+	}	
+
+	immediate = {
+		set_country_flag = eip
+		set_country_flag = eap_imperial_prerogative1
+		add_modifier = {
+			modifier = eap_imperial_prerogative1
+			days = -1
+		}
+	}
+	option = {	
+		name = eip_event.a
+		custom_tooltip = eip_tooltip
+	}
+}
+	

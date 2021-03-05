@@ -1,0 +1,32 @@
+
+
+on_policy_changed = {
+	events = {
+		ssgene.6 # Set all assembly to Organic on policy switch
+		ssgene.7 # Set all assembly to Robotic on policy switch
+	}
+}
+
+on_game_start = {
+	events = {
+		ssgene.8 # Set default assembly flag to Robotic
+	}
+}
+
+on_monthly_pulse_country = {
+	events = {
+		ssgene.6 # Set all assembly to Organic for acquired planets
+		ssgene.7 # Set all assembly to Robotic for acquired planets
+	}
+}
+
+on_tech_increased = {
+	events = {
+		ssgene.9 # Set assembly to Organic if cloning is learned before robots
+		ssgene.50 # Inform player of Genetic Experiment: Design Bio-Thrall
+		ssgene.51 # Inform player of Genetic Experiment: Superior Species Project
+		ssgene.52 # Give biomorphs 1 bonus trait point on Gene Tailoring
+		ssgene.53 # Give biomorphs 1 bonus trait point on Targeted Gene Expressions
+		ssgene.54 # Give biomorphs 2 bonus trait points on Technological Ascendancy
+	}
+}

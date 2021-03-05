@@ -1,0 +1,157 @@
+#_[z_mm]
+#_[GIGA]
+
+
+
+
+spriteTypes = {
+
+	#_[z_mm]	####################################
+	corneredTileSpriteType = {
+		name = "GFX_z_modmenu_button_left"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_z_modmenu_button_big"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	
+	
+	
+	#_[GIGA]	####################################
+	corneredTileSpriteType = {
+		name = "GFX_ehof_alert"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+
+
+	corneredTileSpriteType = {
+		name = "GFX_ehof_bg_main"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_sa_bg_main"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ehof_bg_large_left"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ehof_bg_large_right"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_large_traders"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_large_redo"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_large_toggle_temp"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_large_toggle_perm"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_main_purple"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_main_red"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_main_orange"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_main_blue"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_main_green"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	
+	corneredTileSpriteType = {
+		name = "GFX_btn_sa_comm"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_sa_defend"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_sa_sphere"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_sa_follow"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_sa_attack"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	
+	corneredTileSpriteType = {
+		name = "GFX_ehof_bg_small_left"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_ehof_bg_small_right"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_small_traders"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_small_redo"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_small_toggle_temp"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	corneredTileSpriteType = {
+		name = "GFX_btn_small_toggle_perm"
+		textureFile = "gfx/interface/tiles/invisible.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+}

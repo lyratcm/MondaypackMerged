@@ -1,0 +1,155 @@
+
+########## PLANET VIEW AMBIENT #########
+soundeffect = {
+	name = pc_elven_sanctuary
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_continental
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_arid
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_arctic
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_desert
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_tundra
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_tropical
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_ocean
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_gaia
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_nuked
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = elven_planet_01
+		sound = elven_planet_02
+		sound = elven_planet_03
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_elven_planetary_ring_shielded
+	volume = 0.3
+	loop = no
+	sounds = {
+		sound = shielded_planet_01
+		sound = shielded_planet_02
+	} 
+	playbackrate_random_offset = { -10.0 10.0 }
+	#fade_out = 0.3
+	max_audible = 1
+	max_audible_behaviour = fail	
+}

@@ -1,0 +1,380 @@
+### COST
+@apsr15cost1 = 5000
+@apsr15cost2 = 20000
+@apsr15cost3 = 50000
+@apsr15cost4 = 100000
+
+### WEIGHT
+@apsr15weight1 = 50
+
+
+## 1
+
+tech_apsr15_building_part1 = {
+	cost = @apsr15cost1		 
+	area = engineering		 
+	tier = 2
+	category = { industry }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = @apsr15weight1
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = engineering
+				has_trait = "leader_trait_maniacal"
+			}	
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_curator"
+				}
+				research_leader = {
+					area = engineering
+					has_trait = "leader_trait_spark_of_genius"
+				}
+			}		
+		}
+		modifier = {
+			factor = 5
+			has_origin = apsr_origin_unique_capital
+		}
+	}
+	
+	ai_weight = {
+		factor = 150
+	}	
+}
+
+
+## 2.1
+
+tech_apsr15_building_part21 = {
+	cost = @apsr15cost2		 
+	area = engineering		 
+	tier = 2
+	category = { industry }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 2.2
+
+tech_apsr15_building_part22 = {
+	cost = @apsr15cost2	 
+	area = physics		 
+	tier = 2
+	category = { particles }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 3.1
+
+tech_apsr15_building_part31 = {
+	cost = @apsr15cost3		 
+	area = engineering		 
+	tier = 2
+	category = { industry }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 3.2
+
+tech_apsr15_building_part32 = {
+	cost = @apsr15cost3		 
+	area = engineering		 
+	tier = 2
+	category = { materials }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 3.3
+
+tech_apsr15_building_part33 = {
+	cost = @apsr15cost3		 
+	area = society		 
+	tier = 2
+	category = { biology }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 3.4
+
+tech_apsr15_building_part34 = {
+	cost = @apsr15cost3		 
+	area = physics		 
+	tier = 2
+	category = { computing }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 4.1
+
+tech_apsr15_building_part41 = {
+	cost = @apsr15cost4	 
+	area = physics		 
+	tier = 2
+	category = { industry }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 4.2
+
+tech_apsr15_building_part42 = {
+	cost = @apsr15cost4		 
+	area = engineering		 
+	tier = 2
+	category = { materials }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150
+	}	
+}
+
+
+## 4.3
+
+tech_apsr15_building_part43 = {
+	cost = @apsr15cost4	 
+	area = society		 
+	tier = 2
+	category = { biology }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 4.4
+
+tech_apsr15_building_part44 = {
+	cost = @apsr15cost4	 
+	area = society		 
+	tier = 2
+	category = { statecraft }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+## 4.5
+
+tech_apsr15_building_part45 = {
+	cost = @apsr15cost4	 
+	area = physics		 
+	tier = 2
+	category = { field_manipulation }		 
+	prerequisites = { "tech_fission_power" }		 
+	weight = 0
+	is_rare = yes
+	is_dangerous = yes
+	
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet = {
+					has_deposit = apsr15_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 150 
+	}	
+}
+
+
+
+
+
+
+

@@ -1,0 +1,58 @@
+
+apsr_defendship_army = {
+	defensive = yes
+	is_pop_spawned = no
+	health = 15
+	morale = 10
+	collateral_damage = 0.0
+	war_exhaustion = 0.0
+	time = 720
+#	maintenance = 15.0
+	has_species = no
+	icon_frame = 5
+	
+#	cost = {
+#		minerals = 1500
+#		energy = 500
+#	}
+	
+	prerequisites = { "tech_apsr7_tank" }
+	
+	potential = {
+		always = no
+#		planet = {
+#			has_building = apsr7_building_cordon
+#		}
+	}
+	
+#	allow = {
+#
+#			owner = {
+#				NOT = { 
+#					 check_variable = {
+#						which = "apsr_defendship_count" 
+#						value = 1
+#					}
+#				}
+#			}
+#	}
+#	
+#	on_queued = {
+#		owner = {
+#			change_variable = {
+#				which = "apsr_defendship_count" 
+#				value = 1
+#			}
+#			
+#		}
+#	}
+#	
+#	on_unqueued = {
+#		owner = {
+#			change_variable = {
+#				which = "apsr_defendship_count" 
+#				value = -1
+#			}
+#		}
+#	}
+}

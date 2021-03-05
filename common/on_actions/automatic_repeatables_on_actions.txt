@@ -1,0 +1,24 @@
+# A country has increased the level of a tech, use last_increased_tech trigger to check tech and level.
+# This = Country
+on_tech_increased = {
+	events = {
+        automatic_repeatables.10 # remove flags, increase lvl counter, set last_researched flag
+        # automatic_repeatables.11 # remind of the mod first once, fired from .12
+        automatic_repeatables.12 # remove AR_gived_tech flag, fire .11 if necessary
+	}
+}
+
+on_game_start_country = {
+	events = {
+		automatic_repeatables.1 # fires computation 7 days later
+		automatic_repeatables.100 # set advanced picking flag, fires introduction 15 days later
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		automatic_repeatables.1
+		automatic_repeatables_update.1
+	}
+}

@@ -1,0 +1,15 @@
+tr_supremacy_adopt = {
+	modifier = {
+		#
+	}
+}
+tr_supremacy_finish = {
+	modifier = {
+		#
+	}
+}
+tr_supremacy_great_game = {
+	modifier = {
+		#
+	}
+}

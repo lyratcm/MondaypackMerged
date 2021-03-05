@@ -1,0 +1,603 @@
+
+##### CONSOLE RANDOM EFFECTS #####
+### resources random_list
+
+apsr_spawn_random_resources = {
+	random_list = {
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr1_spawned
+			}
+			apsr_spawn_1 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr2_spawned
+			}
+			apsr_spawn_2 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr3_spawned
+			}
+			apsr_spawn_3 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr4_spawned
+			}
+			apsr_spawn_4 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr5_spawned
+			}
+			apsr_spawn_5 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr6_spawned
+			}
+			apsr_spawn_6 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr7_spawned
+			}
+			apsr_spawn_7 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr8_spawned
+			}
+			apsr_spawn_8 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr9_spawned
+			}
+			apsr_spawn_9 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr10_spawned
+			}
+			apsr_spawn_10 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr11_spawned
+			}
+			apsr_spawn_11 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr12_spawned
+			}
+			apsr_spawn_12 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr13_spawned
+			}
+			apsr_spawn_13 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr14_spawned
+			}
+			apsr_spawn_14 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr15_spawned
+			}
+			apsr_spawn_15 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr16_spawned
+			}
+			apsr_spawn_16 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr17_spawned
+			}
+			apsr_spawn_17 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr18_spawned
+			}
+			apsr_spawn_18 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr19_spawned
+			}
+			apsr_spawn_19 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr20_spawned
+			}
+			apsr_spawn_20 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr21_spawned
+			}
+			apsr_spawn_21 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr22_spawned
+			}
+			apsr_spawn_22 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr23_spawned
+			}
+			apsr_spawn_23 = yes 
+		}
+		5 = { 
+			modifier = {
+				factor = 0
+				has_global_flag = apsr24_spawned
+			}
+			apsr_spawn_24 = yes 
+		}
+	}
+}
+
+
+
+### CHOOSED SPAWN FROM CONSOLE
+
+# 0 resources
+apsr_spawn_0_res = {
+	## nothing
+}
+
+# 1 resource
+apsr_spawn_1_res = {
+	while = {
+		count = 1
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 2 resources
+apsr_spawn_2_res = {
+	while = {
+		count = 2
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 3 resources
+apsr_spawn_3_res = {
+	while = {
+		count = 3
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 4 resources
+apsr_spawn_4_res = {
+	while = {
+		count = 4
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 5 resources
+apsr_spawn_5_res = {
+	while = {
+		count = 5
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 6 resources
+apsr_spawn_6_res = {
+	while = {
+		count = 6
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 7 resources
+apsr_spawn_7_res = {
+	while = {
+		count = 7
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 8 resources
+apsr_spawn_8_res = {
+	while = {
+		count = 8
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 9 resources
+apsr_spawn_9_res = {
+	while = {
+		count = 9
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 10 resources
+apsr_spawn_10_res = {
+	while = {
+		count = 10
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 11 resources
+apsr_spawn_11_res = {
+	while = {
+		count = 11
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 12 resources
+apsr_spawn_12_res = {
+	while = {
+		count = 12
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 13 resources
+apsr_spawn_13_res = {
+	while = {
+		count = 13
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 14 resources
+apsr_spawn_14_res = {
+	while = {
+		count = 14
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 15 resources
+apsr_spawn_15_res = {
+	while = {
+		count = 15
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 16 resources
+apsr_spawn_16_res = {
+	while = {
+		count = 16
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 17 resources
+apsr_spawn_17_res = {
+	while = {
+		count = 17
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 18 resources
+apsr_spawn_18_res = {
+	while = {
+		count = 18
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 19 resources
+apsr_spawn_19_res = {
+	while = {
+		count = 19
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 20 resources
+apsr_spawn_20_res = {
+	while = {
+		count = 20
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 21 resources
+apsr_spawn_21_res = {
+	while = {
+		count = 21
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 22 resources
+apsr_spawn_22_res = {
+	while = {
+		count = 22
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 23 resources
+apsr_spawn_23_res = {
+	while = {
+		count = 23
+		apsr_spawn_random_resources = yes
+	}
+}
+
+# 24 resources
+apsr_spawn_24_res = {
+	while = {
+		count = 24
+		apsr_spawn_random_resources = yes
+	}
+}
+
+
+
+
+
+
+##### PICTURES SET EFFECT #####
+
+apsr_set_planet_picture_by_resource = {
+	if = {
+		limit = {
+			has_modifier = apsr1_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr1_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr2_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr2_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr3_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr3_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr4_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr4_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr5_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr5_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr6_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr6_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr7_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr7_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr8_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr8_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr9_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr9_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr10_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr10_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr11_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr11_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr12_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr12_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr13_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr13_planet_picture
+			entity = "apsr_aura_planet_ancient_not_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr14_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr14_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}			
+	}
+	if = {
+		limit = {
+			has_modifier = apsr15_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr15_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}			
+	}
+	if = {
+		limit = {
+			has_modifier = apsr16_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr16_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr17_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr17_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr18_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr18_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr19_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr19_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}	
+	}
+	if = {
+		limit = {
+			has_modifier = apsr20_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr20_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr21_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr21_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr22_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr22_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr23_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr23_planet_picture
+			entity = "apsr_aura_planet_ancient_complex" 
+		}		
+	}
+	if = {
+		limit = {
+			has_modifier = apsr24_planet_modifier
+		}
+		set_planet_entity = { 
+			picture = pc_apsr24_planet_picture
+			entity = "apsr_aura_planet_unique" 
+		}		
+	}
+}

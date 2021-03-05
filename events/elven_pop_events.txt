@@ -1,0 +1,179 @@
+namespace = elven_pop_events
+
+event = {
+	id = elven_pop_events.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		every_planet = {
+			limit = {
+				any_pop = { drow_events_is_xenocidal = yes }
+				any_pop = { drow_events_is_xenocidable = yes }
+			}
+			
+			random_owned_pop = {
+				limit = { drow_events_is_xenocidable = yes }
+				random_list = {
+
+					### Drow kills pop, all other pops become more xenophobic
+					10 = {
+						modifier = {
+							factor = 2
+							drow_events_has_xenocidable_ethic = yes
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 4
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 10
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 16
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 22
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 28
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 34
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 40
+								}
+							}
+						}
+						modifier = {
+							factor = 1.5
+							planet = { 
+								count_pops = {
+									limit = { drow_events_is_xenocidal = yes }
+									count > 46
+								}
+							}
+						}
+						kill_pop = yes
+						prev = {
+							add_modifier = {
+								modifier = drow_trait_xenocidal_terror
+								days = 1800 # 5 years
+							}
+						}
+					}
+
+					### Nothing
+					100 = {}
+				}
+			}
+		}
+	}
+}
+
+# Elves are becoming PRETTY when the Worm touches them.
+# Discontinued due to performance issues.
+#country_event = {
+#	id = elven_pop_events.2
+#	hide_window = yes
+#
+#	fire_only_once = yes
+#
+#	trigger = {
+#		has_country_flag = messenger_pod_found
+#		any_owned_pop = {
+#			has_pop_flag = changed_pop
+#		}
+#	}
+#
+#	immediate = {
+#		every_owned_pop = {
+#			limit = {
+#				is_same_species = ROOT
+#				ROOT = {
+#					OR = {
+#						is_species_class = ELVEN
+#						is_species_class = DROW
+#					}
+#				}
+#			}
+#
+#			modify_species = { portrait = mol11 } # A perfect form of a GOBBLER! YAY!
+#			# Who needs elves anyway?
+#
+#			# A failsafe.
+#			set_timed_pop_flag = { flag = changed_pop days = 2 }
+#		}
+#		random_owned_pop = {
+#			limit = { has_pop_flag = changed_pop }
+#			root = { change_dominant_species = { species = prev } }
+#		}
+#	}
+#}
+
+# Country scope (on monthly pulse)
+country_event = {
+	id = elven_pop_events.3
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_pop = {
+			species = { has_species_flag = elven_arcadian_symbiosis_treants }
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			limit = {
+				any_pop = {
+					species = { has_species_flag = elven_arcadian_symbiosis_treants }
+				}
+			}
+
+			recalculate_treant_habitability_bonus = yes
+		}
+	}
+}

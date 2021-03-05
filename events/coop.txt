@@ -1,0 +1,2423 @@
+namespace = coop
+
+event = {
+    id = coop.1
+    hide_window = yes
+
+    is_triggered_only = yes
+    immediate = {
+        set_global_flag = coop_base_mod
+        set_global_flag = you_cannot_leave_federations
+    }
+}
+
+country_event = {
+    id = coop.10
+    title =  coop.10.title
+    desc = coop.10.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+
+    custom_gui = "coop_event_view"
+    diplomatic = yes 
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        if = { limit = {  has_country_flag = team1_slot1_selected exists = event_target:team1_slot1 } event_target:team1_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot clear_global_event_target = team1_slot1 }
+        if = { limit = {  has_country_flag = team1_slot2_selected exists = event_target:team1_slot2 } event_target:team1_slot2 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot clear_global_event_target = team1_slot2  }
+        if = { limit = {  has_country_flag = team1_slot3_selected exists = event_target:team1_slot3 } event_target:team1_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot3 }
+        if = { limit = {  has_country_flag = team1_slot4_selected exists = event_target:team1_slot4 } event_target:team1_slot4 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot4 }
+        if = { limit = {  has_country_flag = team1_slot5_selected exists = event_target:team1_slot5 } event_target:team1_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot5 }
+        if = { limit = {  has_country_flag = team1_slot6_selected exists = event_target:team1_slot6 } event_target:team1_slot6 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot6 }
+        if = { limit = {  has_country_flag = team1_slot7_selected exists = event_target:team1_slot7 } event_target:team1_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot7 }
+        if = { limit = {  has_country_flag = team1_slot8_selected exists = event_target:team1_slot8 } event_target:team1_slot8 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot8 }
+        if = { limit = {  has_country_flag = team1_slot9_selected exists = event_target:team1_slot9 } event_target:team1_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot9 }
+        if = { limit = {  has_country_flag = team1_slot10_selected exists = event_target:team1_slot10 } event_target:team1_slot10 = { remove_country_flag = is_already_in_team remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team1_slot10 }
+
+        if = { limit = {  has_country_flag = team2_slot1_selected exists = event_target:team2_slot1 } event_target:team2_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot1 }
+        if = { limit = {  has_country_flag = team2_slot2_selected exists = event_target:team2_slot2 } event_target:team2_slot2 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot2 }
+        if = { limit = {  has_country_flag = team2_slot3_selected exists = event_target:team2_slot3 } event_target:team2_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot3 }
+        if = { limit = {  has_country_flag = team2_slot4_selected exists = event_target:team2_slot4 } event_target:team2_slot4 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot4 }
+        if = { limit = {  has_country_flag = team2_slot5_selected exists = event_target:team2_slot5 } event_target:team2_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot5 }
+        if = { limit = {  has_country_flag = team2_slot6_selected exists = event_target:team2_slot6 } event_target:team2_slot6 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot6 }
+        if = { limit = {  has_country_flag = team2_slot7_selected exists = event_target:team2_slot7 } event_target:team2_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot7 }
+        if = { limit = {  has_country_flag = team2_slot8_selected exists = event_target:team2_slot8 } event_target:team2_slot8 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot8 }
+        if = { limit = {  has_country_flag = team2_slot9_selected exists = event_target:team2_slot9 } event_target:team2_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot9 }
+        if = { limit = {  has_country_flag = team2_slot10_selected exists = event_target:team2_slot10 } event_target:team2_slot10 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team2_slot10 }
+
+        if = { limit = {  has_country_flag = team3_slot1_selected exists = event_target:team3_slot1 } event_target:team3_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot1 }
+        if = { limit = {  has_country_flag = team3_slot2_selected exists = event_target:team3_slot2 } event_target:team3_slot2 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot2 }
+        if = { limit = {  has_country_flag = team3_slot3_selected exists = event_target:team3_slot3 } event_target:team3_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot3 }
+        if = { limit = {  has_country_flag = team3_slot4_selected exists = event_target:team3_slot4 } event_target:team3_slot4 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot4 }
+        if = { limit = {  has_country_flag = team3_slot5_selected exists = event_target:team3_slot5 } event_target:team3_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot5 }
+        if = { limit = {  has_country_flag = team3_slot6_selected exists = event_target:team3_slot6 } event_target:team3_slot6 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot6 }
+        if = { limit = {  has_country_flag = team3_slot7_selected exists = event_target:team3_slot7 } event_target:team3_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot7 }
+        if = { limit = {  has_country_flag = team3_slot8_selected exists = event_target:team3_slot8 } event_target:team3_slot8 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot8 }
+        if = { limit = {  has_country_flag = team3_slot9_selected exists = event_target:team3_slot9 } event_target:team3_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot9 }
+        if = { limit = {  has_country_flag = team3_slot10_selected exists = event_target:team3_slot10 } event_target:team3_slot10 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team3_slot10 }
+
+        if = { limit = {  has_country_flag = team4_slot1_selected exists = event_target:team4_slot1 } event_target:team4_slot1 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot1 }
+        if = { limit = {  has_country_flag = team4_slot2_selected exists = event_target:team4_slot2 } event_target:team4_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot2 }
+        if = { limit = {  has_country_flag = team4_slot3_selected exists = event_target:team4_slot3 } event_target:team4_slot3 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot3 }
+        if = { limit = {  has_country_flag = team4_slot4_selected exists = event_target:team4_slot4 } event_target:team4_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot4 }
+        if = { limit = {  has_country_flag = team4_slot5_selected exists = event_target:team4_slot5 } event_target:team4_slot5 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot5 }
+        if = { limit = {  has_country_flag = team4_slot6_selected exists = event_target:team4_slot6 } event_target:team4_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot6 }
+        if = { limit = {  has_country_flag = team4_slot7_selected exists = event_target:team4_slot7 } event_target:team4_slot7 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot7 }
+        if = { limit = {  has_country_flag = team4_slot8_selected exists = event_target:team4_slot8 } event_target:team4_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot8 }
+        if = { limit = {  has_country_flag = team4_slot9_selected exists = event_target:team4_slot9 } event_target:team4_slot9 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot9 }
+        if = { limit = {  has_country_flag = team4_slot10_selected exists = event_target:team4_slot10 } event_target:team4_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team4_slot10 }
+
+        if = { limit = {  has_country_flag = team5_slot1_selected exists = event_target:team5_slot1 } event_target:team5_slot1 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot1 }
+        if = { limit = {  has_country_flag = team5_slot2_selected exists = event_target:team5_slot2 } event_target:team5_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot2 }
+        if = { limit = {  has_country_flag = team5_slot3_selected exists = event_target:team5_slot3 } event_target:team5_slot3 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot3 }
+        if = { limit = {  has_country_flag = team5_slot4_selected exists = event_target:team5_slot4 } event_target:team5_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot4 }
+        if = { limit = {  has_country_flag = team5_slot5_selected exists = event_target:team5_slot5 } event_target:team5_slot5 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot5 }
+        if = { limit = {  has_country_flag = team5_slot6_selected exists = event_target:team5_slot6 } event_target:team5_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot6 }
+        if = { limit = {  has_country_flag = team5_slot7_selected exists = event_target:team5_slot7 } event_target:team5_slot7 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot7 }
+        if = { limit = {  has_country_flag = team5_slot8_selected exists = event_target:team5_slot8 } event_target:team5_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot8 }
+        if = { limit = {  has_country_flag = team5_slot9_selected exists = event_target:team5_slot9 } event_target:team5_slot9 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot9 }
+        if = { limit = {  has_country_flag = team5_slot10_selected exists = event_target:team5_slot10 } event_target:team5_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team5_slot10 }
+
+        if = { limit = {  has_country_flag = team6_slot1_selected exists = event_target:team6_slot1 } event_target:team6_slot1 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot1 }
+        if = { limit = {  has_country_flag = team6_slot2_selected exists = event_target:team6_slot2 } event_target:team6_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot2 }
+        if = { limit = {  has_country_flag = team6_slot3_selected exists = event_target:team6_slot3 } event_target:team6_slot3 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot3 }
+        if = { limit = {  has_country_flag = team6_slot4_selected exists = event_target:team6_slot4 } event_target:team6_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot4 }
+        if = { limit = {  has_country_flag = team6_slot5_selected exists = event_target:team6_slot5 } event_target:team6_slot5 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot5 }
+        if = { limit = {  has_country_flag = team6_slot6_selected exists = event_target:team6_slot6 } event_target:team6_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot6 }
+        if = { limit = {  has_country_flag = team6_slot7_selected exists = event_target:team6_slot7 } event_target:team6_slot7 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot7 }
+        if = { limit = {  has_country_flag = team6_slot8_selected exists = event_target:team6_slot8 } event_target:team6_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot8 }
+        if = { limit = {  has_country_flag = team6_slot9_selected exists = event_target:team6_slot9 } event_target:team6_slot9 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot9 }
+        if = { limit = {  has_country_flag = team6_slot10_selected exists = event_target:team6_slot10 } event_target:team6_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team6_slot10 }
+        
+        if = { limit = {  has_country_flag = team7_slot1_selected exists = event_target:team7_slot1 } event_target:team7_slot1 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot1 }
+        if = { limit = {  has_country_flag = team7_slot2_selected exists = event_target:team7_slot2 } event_target:team7_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot2 }
+        if = { limit = {  has_country_flag = team7_slot3_selected exists = event_target:team7_slot3 } event_target:team7_slot3 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot3 }
+        if = { limit = {  has_country_flag = team7_slot4_selected exists = event_target:team7_slot4 } event_target:team7_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot4 }
+        if = { limit = {  has_country_flag = team7_slot5_selected exists = event_target:team7_slot5 } event_target:team7_slot5 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot5 }
+        if = { limit = {  has_country_flag = team7_slot6_selected exists = event_target:team7_slot6 } event_target:team7_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot6 }
+        if = { limit = {  has_country_flag = team7_slot7_selected exists = event_target:team7_slot7 } event_target:team7_slot7 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot7 }
+        if = { limit = {  has_country_flag = team7_slot8_selected exists = event_target:team7_slot8 } event_target:team7_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot8 }
+        if = { limit = {  has_country_flag = team7_slot9_selected exists = event_target:team7_slot9 } event_target:team7_slot9 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot9 }
+        if = { limit = {  has_country_flag = team7_slot10_selected exists = event_target:team7_slot10 } event_target:team7_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team7_slot10 }
+
+        if = { limit = {  has_country_flag = team8_slot1_selected exists = event_target:team8_slot1 } event_target:team8_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot1 }
+        if = { limit = {  has_country_flag = team8_slot2_selected exists = event_target:team8_slot2 } event_target:team8_slot2 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot2 }
+        if = { limit = {  has_country_flag = team8_slot3_selected exists = event_target:team8_slot3 } event_target:team8_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot3 }
+        if = { limit = {  has_country_flag = team8_slot4_selected exists = event_target:team8_slot4 } event_target:team8_slot4 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot4 }
+        if = { limit = {  has_country_flag = team8_slot5_selected exists = event_target:team8_slot5 } event_target:team8_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot5 }
+        if = { limit = {  has_country_flag = team8_slot6_selected exists = event_target:team8_slot6 } event_target:team8_slot6 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot6 }
+        if = { limit = {  has_country_flag = team8_slot7_selected exists = event_target:team8_slot7 } event_target:team8_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot7 }
+        if = { limit = {  has_country_flag = team8_slot8_selected exists = event_target:team8_slot8 } event_target:team8_slot8 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot8 }
+        if = { limit = {  has_country_flag = team8_slot9_selected exists = event_target:team8_slot9 } event_target:team8_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot9 }
+        if = { limit = {  has_country_flag = team8_slot10_selected exists = event_target:team8_slot10 } event_target:team8_slot10 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team8_slot10 }
+
+        if = { limit = {  has_country_flag = team9_slot1_selected exists = event_target:team9_slot1 } event_target:team9_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot1 }
+        if = { limit = {  has_country_flag = team9_slot2_selected exists = event_target:team9_slot2 } event_target:team9_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot2 }
+        if = { limit = {  has_country_flag = team9_slot3_selected exists = event_target:team9_slot3 } event_target:team9_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot3 }
+        if = { limit = {  has_country_flag = team9_slot4_selected exists = event_target:team9_slot4 } event_target:team9_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot4 }
+        if = { limit = {  has_country_flag = team9_slot5_selected exists = event_target:team9_slot5 } event_target:team9_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot5 }
+        if = { limit = {  has_country_flag = team9_slot6_selected exists = event_target:team9_slot6 } event_target:team9_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot6 }
+        if = { limit = {  has_country_flag = team9_slot7_selected exists = event_target:team9_slot7 } event_target:team9_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot7 }
+        if = { limit = {  has_country_flag = team9_slot8_selected exists = event_target:team9_slot8 } event_target:team9_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot8 }
+        if = { limit = {  has_country_flag = team9_slot9_selected exists = event_target:team9_slot9 } event_target:team9_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot9 }
+        if = { limit = {  has_country_flag = team9_slot10_selected exists = event_target:team9_slot10 } event_target:team9_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team9_slot10 }
+
+        if = { limit = {  has_country_flag = team10_slot1_selected exists = event_target:team10_slot1 } event_target:team10_slot1 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot1 }
+        if = { limit = {  has_country_flag = team10_slot2_selected exists = event_target:team10_slot2 } event_target:team10_slot2 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot2 }
+        if = { limit = {  has_country_flag = team10_slot3_selected exists = event_target:team10_slot3 } event_target:team10_slot3 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot3 }
+        if = { limit = {  has_country_flag = team10_slot4_selected exists = event_target:team10_slot4 } event_target:team10_slot4 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot4 }
+        if = { limit = {  has_country_flag = team10_slot5_selected exists = event_target:team10_slot5 } event_target:team10_slot5 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot5 }
+        if = { limit = {  has_country_flag = team10_slot6_selected exists = event_target:team10_slot6 } event_target:team10_slot6 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot6 }
+        if = { limit = {  has_country_flag = team10_slot7_selected exists = event_target:team10_slot7 } event_target:team10_slot7 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot7 }
+        if = { limit = {  has_country_flag = team10_slot8_selected exists = event_target:team10_slot8 } event_target:team10_slot8 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot8 }
+        if = { limit = {  has_country_flag = team10_slot9_selected exists = event_target:team10_slot9 } event_target:team10_slot9 = { remove_country_flag = is_already_in_team remove_teams = yes  } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot9 }
+        if = { limit = {  has_country_flag = team10_slot10_selected exists = event_target:team10_slot10 } event_target:team10_slot10 = { remove_country_flag = is_already_in_team  remove_teams = yes } set_country_flag = show_clear_slot  clear_global_event_target = team10_slot10 }
+
+        # if = { limit = {  has_country_flag = team11_slot1_selected exists = event_target:team11_slot1 } event_target:team11_slot1 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team11_slot2_selected exists = event_target:team11_slot2 } event_target:team11_slot2 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team12_slot1_selected exists = event_target:team12_slot1 } event_target:team12_slot1 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team12_slot2_selected exists = event_target:team12_slot2 } event_target:team12_slot2 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team13_slot1_selected exists = event_target:team13_slot1 } event_target:team13_slot1 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team13_slot2_selected exists = event_target:team13_slot2 } event_target:team13_slot2 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team14_slot1_selected exists = event_target:team14_slot1 } event_target:team14_slot1 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team14_slot2_selected exists = event_target:team14_slot2 } event_target:team14_slot2 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team15_slot1_selected exists = event_target:team15_slot1 } event_target:team15_slot1 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+        # if = { limit = {  has_country_flag = team15_slot2_selected exists = event_target:team15_slot2 } event_target:team15_slot2 = { remove_country_flag = is_already_in_team } set_country_flag = show_clear_slot }
+    }
+    
+    option = {
+        trigger = {
+            not = { any_playable_country = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        }
+        name = coop.10.back
+		country_event = { id = coop.1000 } 
+    }
+    option = {
+        trigger = { has_country_flag = show_clear_slot }
+        name = coop.10.remove
+        #coop_menu_remove_country = yes
+		country_event = { id = coop.1000 } 
+    }
+
+    option = { 
+        trigger = {  any_playable_country = { has_federation = no not = { has_country_flag = is_already_in_team }  } }
+        name = coop.10.random
+        hidden_effect = { 
+            random_playable_country = { limit = { has_federation = no not = { has_country_flag = is_already_in_team } } save_event_target_as = chosen_country } 
+            event_target:global_event_country = { 
+                random_owned_leader = {  limit = {  has_leader_flag = is_name_of@event_target:chosen_country } save_event_target_as = chosen_country_name }
+            }
+            coop_menu_select_country = yes
+            country_event = { id = coop.1000 } 
+        }
+    }
+    
+    option = { trigger = { exists = event_target:country0 event_target:country0 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country0_name.GetName]"
+        hidden_effect = { event_target:country0 = { save_event_target_as = chosen_country } event_target:country0_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country1 event_target:country1 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country1_name.GetName]"
+        hidden_effect = { event_target:country1 = { save_event_target_as = chosen_country } event_target:country1_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country2 event_target:country2 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country2_name.GetName]"
+        hidden_effect = { event_target:country2 = { save_event_target_as = chosen_country } event_target:country2_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country3 event_target:country3 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country3_name.GetName]"
+        hidden_effect = { event_target:country3 = { save_event_target_as = chosen_country } event_target:country3_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country4 event_target:country4 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country4_name.GetName]"
+        hidden_effect = { event_target:country4 = { save_event_target_as = chosen_country } event_target:country4_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country5 event_target:country5 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country5_name.GetName]"
+        hidden_effect = { event_target:country5 = { save_event_target_as = chosen_country } event_target:country5_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country6 event_target:country6 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country6_name.GetName]"
+        hidden_effect = { event_target:country6 = { save_event_target_as = chosen_country } event_target:country6_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country7 event_target:country7 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country7_name.GetName]"
+        hidden_effect = { event_target:country7 = { save_event_target_as = chosen_country }  event_target:country7_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country8 event_target:country8 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country8_name.GetName]"
+        hidden_effect = { event_target:country8 = { save_event_target_as = chosen_country }  event_target:country8_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country9 event_target:country9 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country9_name.GetName]"
+        hidden_effect = { event_target:country9 = { save_event_target_as = chosen_country }  event_target:country9_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country10 event_target:country10 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country10_name.GetName]"
+        hidden_effect = { event_target:country10 = { save_event_target_as = chosen_country }  event_target:country10_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country11 event_target:country11 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country11_name.GetName]"
+        hidden_effect = { event_target:country11 = { save_event_target_as = chosen_country }  event_target:country11_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country12 event_target:country12 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country12_name.GetName]"
+        hidden_effect = { event_target:country12 = { save_event_target_as = chosen_country }  event_target:country12_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country13 event_target:country13 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country13_name.GetName]"
+        hidden_effect = { event_target:country13 = { save_event_target_as = chosen_country }  event_target:country13_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country14 event_target:country14 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country14_name.GetName]"
+        hidden_effect = { event_target:country14 = { save_event_target_as = chosen_country }  event_target:country14_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country15 event_target:country15 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country15_name.GetName]"
+        hidden_effect = { event_target:country15 = { save_event_target_as = chosen_country }  event_target:country15_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country16 event_target:country16 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country16_name.GetName]"
+        hidden_effect = { event_target:country16 = { save_event_target_as = chosen_country }  event_target:country16_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country17 event_target:country17 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country17_name.GetName]"
+        hidden_effect = { event_target:country17 = { save_event_target_as = chosen_country }  event_target:country17_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country18 event_target:country18 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country18_name.GetName]"
+        hidden_effect = { event_target:country18 = { save_event_target_as = chosen_country }  event_target:country18_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country19 event_target:country19 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country19_name.GetName]"
+        hidden_effect = { event_target:country19 = { save_event_target_as = chosen_country }  event_target:country19_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country20 event_target:country20 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country20_name.GetName]"
+        hidden_effect = { event_target:country20 = { save_event_target_as = chosen_country }  event_target:country20_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country21 event_target:country21 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country21_name.GetName]"
+        hidden_effect = { event_target:country21 = { save_event_target_as = chosen_country }  event_target:country21_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country22 event_target:country22 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country22_name.GetName]"
+        hidden_effect = { event_target:country22 = { save_event_target_as = chosen_country }  event_target:country22_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country23 event_target:country23 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country23_name.GetName]"
+        hidden_effect = { event_target:country23 = { save_event_target_as = chosen_country }  event_target:country23_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country24 event_target:country24 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country24_name.GetName]"
+        hidden_effect = { event_target:country24 = { save_event_target_as = chosen_country }  event_target:country24_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country25 event_target:country25 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country25_name.GetName]"
+        hidden_effect = { event_target:country25 = { save_event_target_as = chosen_country }  event_target:country25_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country26 event_target:country26 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country26_name.GetName]"
+        hidden_effect = { event_target:country26 = { save_event_target_as = chosen_country }  event_target:country26_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country27 event_target:country27 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country27_name.GetName]"
+        hidden_effect = { event_target:country27 = { save_event_target_as = chosen_country }  event_target:country27_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country28 event_target:country28 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country28_name.GetName]"
+        hidden_effect = { event_target:country28 = { save_event_target_as = chosen_country }  event_target:country28_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country29 event_target:country29 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country29_name.GetName]"
+        hidden_effect = { event_target:country29 = { save_event_target_as = chosen_country }  event_target:country29_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+    option = { trigger = { exists = event_target:country30 event_target:country30 = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        name = "[event_target:country30_name.GetName]"
+        hidden_effect = { event_target:country30 = { save_event_target_as = chosen_country }  event_target:country30_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes country_event = { id = coop.1000 } }
+    }
+
+    
+
+    after = {
+        remove_country_flag = show_clear_slot
+    }
+}
+
+
+# country_event = {
+#     id = coop.20
+#     hide_window = yes
+#     trigger = {
+#         NOT = {
+#             is_same_empire = event_target:team_leader
+#         }
+#     }
+#     is_triggered_only = yes
+#     immediate = {
+
+#         set_country_flag = ai_no_leave_fed
+#         set_country_flag = has_chosen_federation
+#         set_country_flag = is_in_coop_with@event_target:chosen_country
+#         set_closed_borders = { who = event_target:team_leader status = no }
+#         event_target:team_leader = {
+#             set_country_flag = ai_no_leave_fed
+#             set_country_flag = has_chosen_federation
+#             set_country_flag = is_in_coop_with@root
+#             join_alliance = { who = root override_requirements = yes }            
+#             set_closed_borders = { who = root status = no }
+#         }
+
+#         #country_event = { id = coop.40 }
+#     }
+# }
+
+country_event = {
+    id = coop.30
+    hide_window = yes
+
+    trigger = {
+        is_ai = no
+    }
+    is_triggered_only = yes
+    fire_only_once = yes
+
+    immediate = {
+        set_variable = { which = team_number value = 10 }
+                                                                                        save_event_target_as = country0 country_event = { id = coop.40 }   event_target:temp_leader = { save_event_target_as = country0_name }  #save_event_target_as = temp set_country_flag = selected event_target:global_event_country = { create_leader = {  class = general effect = { set_name = "[event_target:temp.GetDem][event_target:temp.GetOli] [event_target:temp.GetName] [event_target:temp.GetPhobe][event_target:temp.GetFanPhobe][event_target:temp.GetPhile][event_target:temp.GetFanPhile][event_target:temp.GetMil][event_target:temp.GetFanMil][event_target:temp.GetPac][event_target:temp.GetFanPac][event_target:temp.GetSpi][event_target:temp.GetFanSpi][event_target:temp.GetMat][event_target:temp.GetFanMat][event_target:temp.GetAut][event_target:temp.GetFanAut][event_target:temp.GetEga][event_target:temp.GetFanEga][event_target:temp.GetGes]" save_event_target_as = "country0_name" set_leader_flag = is_name_of@event_target:temp } } } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country1 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country1_name }         
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country2 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country2_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country3 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country3_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country4 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country4_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country5 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country5_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country6 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country6_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country7 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country7_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country8 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country8_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country9 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country9_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country10 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country10_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country11 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country11_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country12 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country12_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country13 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country13_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country14 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country14_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country15 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country15_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country16 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country16_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country17 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country17_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country18 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country18_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country19 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country19_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country20 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country20_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country21 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country21_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country22 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country22_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country23 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country23_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country24 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country24_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country25 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country25_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country26 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country26_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country27 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country27_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country28 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country28_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country29 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country29_name } 
+        random_playable_country = { limit = {   nor = { has_country_flag = selected } } save_event_target_as = country30 country_event = { id = coop.40 } } event_target:temp_leader = { save_event_target_as = country30_name } 
+        
+        every_playable_country = {
+            limit = { has_country_flag = selected }
+            remove_country_flag = selected
+        }
+
+        set_global_flag = team1UseGalacticUnion set_global_flag = team2UseGalacticUnion set_global_flag = team3UseGalacticUnion  set_global_flag = team4UseGalacticUnion  set_global_flag = team5UseGalacticUnion  set_global_flag = team6UseGalacticUnion  set_global_flag = team7UseGalacticUnion  set_global_flag = team8UseGalacticUnion set_global_flag = team9UseGalacticUnion set_global_flag = team10UseGalacticUnion
+        country_event = { id = coop.1000 }  
+    }
+}
+
+country_event = {
+    id = coop.40
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        save_event_target_as = temp 
+        set_country_flag = selected
+        event_target:global_event_country = { 
+            create_leader = {  
+                class = general 
+                effect = {  save_global_event_target_as = temp_leader  } 
+            } 
+        }
+        event_target:temp_leader = {
+            set_name = "[root.GetHumanPlayer][root.GetAdvancedAI] [root.GetDem][root.GetOli][root.GetDic][root.GetImp][root.GetMac][root.GetHiv][root.GetCor] [root.GetName] [root.GetPhobe][root.GetFanPhobe][root.GetPhile][root.GetFanPhile][root.GetMil][root.GetFanMil][root.GetPac][root.GetFanPac][root.GetSpi][root.GetFanSpi][root.GetMat][root.GetFanMat][root.GetAut][root.GetFanAut][root.GetEga][root.GetFanEga][root.GetGes] [root.GetDistanceBelowTen][root.GetDistanceBelowTwenty][root.GetDistanceBelowThirty][root.GetDistanceBelowFourty][root.GetDistanceBelowFifty][root.GetDistanceOverFifty]" 
+            set_leader_flag = is_name_of@root 
+        } 
+    }
+}
+
+# start menu
+country_event = {
+    id = coop.1000
+    title =  coop.1000.title
+    desc = coop.1000.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+
+    custom_gui = "coop_event_view"
+    diplomatic = yes 
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    immediate = {
+        removeAllSlotSelectedFlags = yes        
+    }
+    option = {
+        trigger = { NOR = { has_country_flag = autofilled any_playable_country = { has_country_flag = is_already_in_team } }  } 
+        name = coop.1000.autofill 
+        hidden_effect = { 
+            auto_fill = yes            
+            set_country_flag = autofilled
+            country_event = { id = coop.1000 }
+         }
+    } 
+
+    #Team 1    
+    #option = { name = coop.1000.team1 allow = { always = no } }    
+    option = { 
+        name = coop.1000.team1 
+        hidden_effect = { set_country_flag = team1_settings_selected country_event = { id = coop.4000 } }
+    }    
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot1 } }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team1_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot1 }
+        name = "[event_target:team1_slot1_name.GetName]"         
+        hidden_effect = { set_country_flag = team1_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot2 } exists = event_target:team1_slot1 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot2 }
+        name = "[event_target:team1_slot2_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot3 } exists = event_target:team1_slot2 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot3 }
+        name = "[event_target:team1_slot3_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot4 } exists = event_target:team1_slot3 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot4 }
+        name = "[event_target:team1_slot4_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot5 } exists = event_target:team1_slot4 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot5 }
+        name = "[event_target:team1_slot5_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot6 } exists = event_target:team1_slot5 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot6 }
+        name = "[event_target:team1_slot6_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot7 } exists = event_target:team1_slot6 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot7 }
+        name = "[event_target:team1_slot7_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot8 } exists = event_target:team1_slot7 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot8 }
+        name = "[event_target:team1_slot8_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot9 } exists = event_target:team1_slot8 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot9 }
+        name = "[event_target:team1_slot9_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } NOT = { exists = event_target:team1_slot10 } exists = event_target:team1_slot9 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team1_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 1 } exists = event_target:team1_slot10 }
+        name = "[event_target:team1_slot10_name.GetName]" 
+        hidden_effect = { set_country_flag = team1_slot10_selected country_event = { id = coop.10 } }
+    }
+
+
+
+
+#Team 2
+    #option = { name = coop.1000.team2 allow = { always = no } trigger = { check_variable = { which = team_number value >= 2 }  exists = event_target:team1_slot1  } }
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 2 }  exists = event_target:team1_slot1  } 
+        name = coop.1000.team2 
+        hidden_effect = { set_country_flag = team2_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot1 }  exists = event_target:team1_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team2_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot1 exists = event_target:team1_slot1 }
+        name = "[event_target:team2_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team2_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot2 } exists = event_target:team2_slot1}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot2 exists = event_target:team2_slot1 }
+        name = "[event_target:team2_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot3 } exists = event_target:team2_slot2}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot3 exists = event_target:team2_slot2 }
+        name = "[event_target:team2_slot3_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot4 } exists = event_target:team2_slot3}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot4 exists = event_target:team2_slot3 }
+        name = "[event_target:team2_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot5 } exists = event_target:team2_slot4}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot5 exists = event_target:team2_slot4 }
+        name = "[event_target:team2_slot5_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot6 } exists = event_target:team2_slot5}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot6 exists = event_target:team2_slot5 }
+        name = "[event_target:team2_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot7 } exists = event_target:team2_slot6}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot7 exists = event_target:team2_slot6 }
+        name = "[event_target:team2_slot7_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot8 } exists = event_target:team2_slot7}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot8 exists = event_target:team2_slot7 }
+        name = "[event_target:team2_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot9 } exists = event_target:team2_slot8}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot9 exists = event_target:team2_slot8 }
+        name = "[event_target:team2_slot9_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } NOT = { exists = event_target:team2_slot10 } exists = event_target:team2_slot9}
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team2_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 2 } exists = event_target:team2_slot10 exists = event_target:team2_slot9 }
+        name = "[event_target:team2_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team2_slot10_selected country_event = { id = coop.10 } }
+    }
+
+
+#Team 3
+    #option = { name = coop.1000.team3 allow = { always = no } trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team2_slot1 } }
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team2_slot1 } 
+        name = coop.1000.team3 
+        hidden_effect = { set_country_flag = team3_settings_selected country_event = { id = coop.4000 } }
+    }
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot1 } exists = event_target:team2_slot1  }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team3_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot1 exists = event_target:team2_slot1  }
+        name = "[event_target:team3_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team3_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot2 } exists = event_target:team3_slot1  }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team3_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot2 exists = event_target:team3_slot1 }
+        name = "[event_target:team3_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team3_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot3 } exists = event_target:team3_slot2  }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team3_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot3 exists = event_target:team3_slot2  }
+        name = "[event_target:team3_slot3_name.GetName]"          
+        hidden_effect = { set_country_flag = team3_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot4 } exists = event_target:team3_slot3  }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team3_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot4 exists = event_target:team3_slot3 }
+        name = "[event_target:team3_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team3_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot5 } exists = event_target:team3_slot4 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team3_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot5 exists = event_target:team3_slot4  }
+        name = "[event_target:team3_slot5_name.GetName]"          
+        hidden_effect = { set_country_flag = team3_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot6 } exists = event_target:team3_slot5  }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team3_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot6 exists = event_target:team3_slot5 }
+        name = "[event_target:team3_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team3_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot7 } exists = event_target:team3_slot6  }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team3_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot7 exists = event_target:team3_slot6  }
+        name = "[event_target:team3_slot7_name.GetName]"          
+        hidden_effect = { set_country_flag = team3_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot8 } exists = event_target:team3_slot7  }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team3_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot8 exists = event_target:team3_slot7 }
+        name = "[event_target:team3_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team3_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot9 } exists = event_target:team3_slot8  }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team3_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot9 exists = event_target:team3_slot8  }
+        name = "[event_target:team3_slot9_name.GetName]"          
+        hidden_effect = { set_country_flag = team3_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } NOT = { exists = event_target:team3_slot10 } exists = event_target:team3_slot9  }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team3_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 3 } exists = event_target:team3_slot10 exists = event_target:team3_slot9 }
+        name = "[event_target:team3_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team3_slot10_selected country_event = { id = coop.10 } }
+    }
+
+    #Team 4
+    #option = { name = coop.1000.team4 allow = { always = no } trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team3_slot1 } } 
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team3_slot1 }
+        name = coop.1000.team4 
+        hidden_effect = { set_country_flag = team4_settings_selected country_event = { id = coop.4000 } }
+    }   
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot1 } exists = event_target:team3_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team4_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot1 exists = event_target:team3_slot1 }
+        name = "[event_target:team4_slot1_name.GetName]"         
+        hidden_effect = { set_country_flag = team4_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot2 } exists = event_target:team4_slot1 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot2 exists = event_target:team4_slot1 }
+        name = "[event_target:team4_slot2_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot3 } exists = event_target:team4_slot2 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot3 exists = event_target:team4_slot2 }
+        name = "[event_target:team4_slot3_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot4 } exists = event_target:team4_slot3 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot4 exists = event_target:team4_slot3 }
+        name = "[event_target:team4_slot4_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot5 } exists = event_target:team4_slot4 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot5 exists = event_target:team4_slot4 }
+        name = "[event_target:team4_slot5_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot6 } exists = event_target:team4_slot5 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot6 exists = event_target:team4_slot5 }
+        name = "[event_target:team4_slot6_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot7 } exists = event_target:team4_slot6 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot7 exists = event_target:team4_slot6 }
+        name = "[event_target:team4_slot7_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot8 } exists = event_target:team4_slot7 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot8 exists = event_target:team4_slot7 }
+        name = "[event_target:team4_slot8_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot9 } exists = event_target:team4_slot8 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot9 exists = event_target:team4_slot8 }
+        name = "[event_target:team4_slot9_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } NOT = { exists = event_target:team4_slot10 } exists = event_target:team4_slot9 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team4_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 4 } exists = event_target:team4_slot10 exists = event_target:team4_slot9 }
+        name = "[event_target:team4_slot10_name.GetName]" 
+        hidden_effect = { set_country_flag = team4_slot10_selected country_event = { id = coop.10 } }
+    }
+
+#Team 5
+    #option = { name = coop.1000.team5 allow = { always = no } trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team4_slot1 } }
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team4_slot1 }
+        name = coop.1000.team5 
+        hidden_effect = { set_country_flag = team5_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot1 } exists = event_target:team4_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team5_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot1 exists = event_target:team4_slot1 }
+        name = "[event_target:team5_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team5_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot2 } exists = event_target:team5_slot1 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot2 exists = event_target:team5_slot1 }
+        name = "[event_target:team5_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot3 } exists = event_target:team5_slot2 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot3 exists = event_target:team5_slot2 }
+        name = "[event_target:team5_slot3_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot4 } exists = event_target:team5_slot3 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot4 exists = event_target:team5_slot3 }
+        name = "[event_target:team5_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot5 } exists = event_target:team5_slot4 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot5 exists = event_target:team5_slot4 }
+        name = "[event_target:team5_slot5_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot6 } exists = event_target:team5_slot5 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot6 exists = event_target:team5_slot5 }
+        name = "[event_target:team5_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot7 } exists = event_target:team5_slot6 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot7 exists = event_target:team5_slot6 }
+        name = "[event_target:team5_slot7_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot8 } exists = event_target:team5_slot7 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot8 exists = event_target:team5_slot7 }
+        name = "[event_target:team5_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot9 } exists = event_target:team5_slot8 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot9 exists = event_target:team5_slot8 }
+        name = "[event_target:team5_slot9_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } NOT = { exists = event_target:team5_slot10 } exists = event_target:team5_slot9 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team5_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 5 } exists = event_target:team5_slot10 exists = event_target:team5_slot9 }
+        name = "[event_target:team5_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team5_slot10_selected country_event = { id = coop.10 } }
+    }
+
+#Team 6
+    #option = { name = coop.1000.team6 allow = { always = no } trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team5_slot1 } }
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team5_slot1 }
+        name = coop.1000.team6 
+        hidden_effect = { set_country_flag = team6_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot1 } exists = event_target:team5_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team6_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot1 exists = event_target:team5_slot1 }
+        name = "[event_target:team6_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team6_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot2 }  exists = event_target:team6_slot1 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot2 exists = event_target:team6_slot1 }
+        name = "[event_target:team6_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot3 }  exists = event_target:team6_slot2 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot3 exists = event_target:team6_slot2 }
+        name = "[event_target:team6_slot3_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot4 }  exists = event_target:team6_slot3 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot4 exists = event_target:team6_slot3 }
+        name = "[event_target:team6_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot5 }  exists = event_target:team6_slot4 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot5 exists = event_target:team6_slot4 }
+        name = "[event_target:team6_slot5_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot6 }  exists = event_target:team6_slot5 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot6 exists = event_target:team6_slot5 }
+        name = "[event_target:team6_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot7 }  exists = event_target:team6_slot6 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot7 exists = event_target:team6_slot6 }
+        name = "[event_target:team6_slot7_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot8 }  exists = event_target:team6_slot7 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot8 exists = event_target:team6_slot7 }
+        name = "[event_target:team6_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot9 }  exists = event_target:team6_slot8 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot9 exists = event_target:team6_slot8 }
+        name = "[event_target:team6_slot9_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } NOT = { exists = event_target:team6_slot10 }  exists = event_target:team6_slot9 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team6_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 6 } exists = event_target:team6_slot10 exists = event_target:team6_slot9 }
+        name = "[event_target:team6_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team6_slot10_selected country_event = { id = coop.10 } }
+    }
+
+    #Team 7
+    #option = { name = coop.1000.team7 allow = { always = no } trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team6_slot1 } }   
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team6_slot1 }
+        name = coop.1000.team7 
+        hidden_effect = { set_country_flag = team7_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot1 } exists = event_target:team6_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team7_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot1 exists = event_target:team6_slot1 }
+        name = "[event_target:team7_slot1_name.GetName]"         
+        hidden_effect = { set_country_flag = team7_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot2 } exists = event_target:team7_slot1 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot2 exists = event_target:team7_slot1 }
+        name = "[event_target:team7_slot2_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot3 } exists = event_target:team7_slot2 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot3 exists = event_target:team7_slot2 }
+        name = "[event_target:team7_slot3_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot4 } exists = event_target:team7_slot3 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot4 exists = event_target:team7_slot3 }
+        name = "[event_target:team7_slot4_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot5 } exists = event_target:team7_slot4 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot5 exists = event_target:team7_slot4 }
+        name = "[event_target:team7_slot5_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot6 } exists = event_target:team7_slot5 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot6 exists = event_target:team7_slot5 }
+        name = "[event_target:team7_slot6_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot7 } exists = event_target:team7_slot6 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot7 exists = event_target:team7_slot6 }
+        name = "[event_target:team7_slot7_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot8 } exists = event_target:team7_slot7 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot8 exists = event_target:team7_slot7 }
+        name = "[event_target:team7_slot8_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot9 } exists = event_target:team7_slot8 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot9 exists = event_target:team7_slot8 }
+        name = "[event_target:team7_slot9_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } NOT = { exists = event_target:team7_slot10 } exists = event_target:team7_slot9 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team7_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 7 } exists = event_target:team7_slot10 exists = event_target:team7_slot9 }
+        name = "[event_target:team7_slot10_name.GetName]" 
+        hidden_effect = { set_country_flag = team7_slot10_selected country_event = { id = coop.10 } }
+    }
+
+
+    #Team 8
+    #option = { name = coop.1000.team8 allow = { always = no } trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team7_slot1 } } 
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team7_slot1 }
+        name = coop.1000.team8 
+        hidden_effect = { set_country_flag = team8_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot1 } exists = event_target:team7_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team8_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot1 exists = event_target:team7_slot1 }
+        name = "[event_target:team8_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team8_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot2 } exists = event_target:team8_slot1 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot2 exists = event_target:team8_slot1 }
+        name = "[event_target:team8_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot3 } exists = event_target:team8_slot2 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot3 exists = event_target:team8_slot2 }
+        name = "[event_target:team8_slot3_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot4 } exists = event_target:team8_slot3 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot4 exists = event_target:team8_slot3 }
+        name = "[event_target:team8_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot5 } exists = event_target:team8_slot4 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot5 exists = event_target:team8_slot4 }
+        name = "[event_target:team8_slot5_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot6 } exists = event_target:team8_slot5 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot6 exists = event_target:team8_slot5 }
+        name = "[event_target:team8_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot7 } exists = event_target:team8_slot6 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot7 exists = event_target:team8_slot6 }
+        name = "[event_target:team8_slot7_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot8 } exists = event_target:team8_slot7 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot8 exists = event_target:team8_slot7 }
+        name = "[event_target:team8_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot9 } exists = event_target:team8_slot8 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot9 exists = event_target:team8_slot8 }
+        name = "[event_target:team8_slot9_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } NOT = { exists = event_target:team8_slot10 } exists = event_target:team8_slot9 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team8_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 8 } exists = event_target:team8_slot10 exists = event_target:team8_slot9 }
+        name = "[event_target:team8_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team8_slot10_selected country_event = { id = coop.10 } }
+    }
+
+
+    #Team 9
+    #option = { name = coop.1000.team9 allow = { always = no } trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team8_slot1 } }
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team8_slot1 }
+        name = coop.1000.team9 
+        hidden_effect = { set_country_flag = team9_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot1 } exists = event_target:team8_slot1 }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team9_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot1 exists = event_target:team8_slot1 }
+        name = "[event_target:team9_slot1_name.GetName]"          
+        hidden_effect = { set_country_flag = team9_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot2 } exists = event_target:team9_slot1 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot2 exists = event_target:team9_slot1  }
+        name = "[event_target:team9_slot2_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot3 } exists = event_target:team9_slot2 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot3 exists = event_target:team9_slot2  }
+        name = "[event_target:team9_slot3_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot4 } exists = event_target:team9_slot3 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot4 exists = event_target:team9_slot3  }
+        name = "[event_target:team9_slot4_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot5 } exists = event_target:team9_slot4 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot5 exists = event_target:team9_slot4  }
+        name = "[event_target:team9_slot5_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot6 } exists = event_target:team9_slot5 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot6 exists = event_target:team9_slot5  }
+        name = "[event_target:team9_slot6_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot7 } exists = event_target:team9_slot6 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot7 exists = event_target:team9_slot6  }
+        name = "[event_target:team9_slot7_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot8 } exists = event_target:team9_slot7 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot8 exists = event_target:team9_slot7  }
+        name = "[event_target:team9_slot8_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot9 } exists = event_target:team9_slot8 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot9 exists = event_target:team9_slot8  }
+        name = "[event_target:team9_slot9_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } NOT = { exists = event_target:team9_slot10 } exists = event_target:team9_slot9 }
+        name = empty_slot  
+        hidden_effect = { set_country_flag = team9_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 9 } exists = event_target:team9_slot10 exists = event_target:team9_slot9  }
+        name = "[event_target:team9_slot10_name.GetName]"  
+        hidden_effect = { set_country_flag = team9_slot10_selected country_event = { id = coop.10 } }
+    }
+
+
+    #Team 10
+    #option = { name = coop.1000.team10 allow = { always = no } trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team9_slot1  } } 
+    option = { 
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team9_slot1 }
+        name = coop.1000.team10 
+        hidden_effect = { set_country_flag = team10_settings_selected country_event = { id = coop.4000 } }
+    } 
+    #Slot 1   
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot1 } exists = event_target:team9_slot1  }
+        name = empty_slot          
+        hidden_effect = { set_country_flag = team10_slot1_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot1 exists = event_target:team9_slot1  }
+        name = "[event_target:team10_slot1_name.GetName]"         
+        hidden_effect = { set_country_flag = team10_slot1_selected country_event = { id = coop.10 } }
+    }
+    #Slot 2
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot2 } exists = event_target:team10_slot1 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot2_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot2 exists = event_target:team10_slot1 }
+        name = "[event_target:team10_slot2_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot2_selected country_event = { id = coop.10 } }
+    }
+    #Slot 3
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot3 } exists = event_target:team10_slot2 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot3_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot3 exists = event_target:team10_slot2 }
+        name = "[event_target:team10_slot3_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot3_selected country_event = { id = coop.10 } }
+    }
+    #Slot 4
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot4 } exists = event_target:team10_slot3 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot4_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot4 exists = event_target:team10_slot3 }
+        name = "[event_target:team10_slot4_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot4_selected country_event = { id = coop.10 } }
+    }
+    #Slot 5
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot5 } exists = event_target:team10_slot4 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot5_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot5 exists = event_target:team10_slot4 }
+        name = "[event_target:team10_slot5_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot5_selected country_event = { id = coop.10 } }
+    }
+    #Slot 6
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot6 } exists = event_target:team10_slot5 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot6_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot6 exists = event_target:team10_slot5 }
+        name = "[event_target:team10_slot6_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot6_selected country_event = { id = coop.10 } }
+    }
+    #Slot 7
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot7 } exists = event_target:team10_slot6 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot7_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot7 exists = event_target:team10_slot6 }
+        name = "[event_target:team10_slot7_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot7_selected country_event = { id = coop.10 } }
+    }
+    #Slot 8
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot8 } exists = event_target:team10_slot7 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot8_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot8 exists = event_target:team10_slot7 }
+        name = "[event_target:team10_slot8_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot8_selected country_event = { id = coop.10 } }
+    }
+    #Slot 9
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot9 } exists = event_target:team10_slot8 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot9_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot9 exists = event_target:team10_slot8 }
+        name = "[event_target:team10_slot9_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot9_selected country_event = { id = coop.10 } }
+    }
+    #Slot 10
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } NOT = { exists = event_target:team10_slot10 } exists = event_target:team10_slot9 }
+        name = empty_slot 
+        hidden_effect = { set_country_flag = team10_slot10_selected country_event = { id = coop.10 } }
+    }
+    option = {
+        trigger = { check_variable = { which = team_number value >= 10 } exists = event_target:team10_slot10 exists = event_target:team10_slot9 }
+        name = "[event_target:team10_slot10_name.GetName]" 
+        hidden_effect = { set_country_flag = team10_slot10_selected country_event = { id = coop.10 } }
+    }
+
+    # option = { name = coop.1000.team11 allow = { always = no } trigger = { check_variable = { which = team_number value >= 11 } } }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 11 } NOT = { exists = event_target:team11_slot1 } }
+    #     name = empty_slot          
+    #     hidden_effect = { set_country_flag = team11_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 11 } exists = event_target:team11_slot1 }
+    #     name = "[event_target:team11_slot1_name.GetName]"          
+    #     hidden_effect = { set_country_flag = team11_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 11 } NOT = { exists = event_target:team11_slot2 } }
+    #     name = empty_slot  
+    #     hidden_effect = { set_country_flag = team11_slot2_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 11 } exists = event_target:team11_slot2 }
+    #     name = "[event_target:team11_slot2_name.GetName]"  
+    #     hidden_effect = { set_country_flag = team11_slot2_selected country_event = { id = coop.10 } }
+    # }
+
+    # option = { name = coop.1000.team12 allow = { always = no } trigger = { check_variable = { which = team_number value >= 12 } } }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 12 } NOT = { exists = event_target:team12_slot1 } }
+    #     name = empty_slot          
+    #     hidden_effect = { set_country_flag = team12_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 12 } exists = event_target:team12_slot1 }
+    #     name = "[event_target:team12_slot1_name.GetName]"          
+    #     hidden_effect = { set_country_flag = team12_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 12 } NOT = { exists = event_target:team12_slot2 } }
+    #     name = empty_slot  
+    #     hidden_effect = { set_country_flag = team12_slot2_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 12 } exists = event_target:team12_slot2 }
+    #     name = "[event_target:team12_slot2_name.GetName]"  
+    #     hidden_effect = { set_country_flag = team12_slot2_selected country_event = { id = coop.10 } }
+    # }
+
+    # option = { name = coop.1000.team13 allow = { always = no } trigger = { check_variable = { which = team_number value >= 13 } } }    
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 13 } NOT = { exists = event_target:team13_slot1 } }
+    #     name = empty_slot          
+    #     hidden_effect = { set_country_flag = team13_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 13 } exists = event_target:team13_slot1 }
+    #     name = "[event_target:team13_slot1_name.GetName]"         
+    #     hidden_effect = { set_country_flag = team13_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 13 } NOT = { exists = event_target:team13_slot2 } }
+    #     name = empty_slot 
+    #     hidden_effect = { set_country_flag = team13_slot2_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 13 } exists = event_target:team13_slot2 }
+    #     name = "[event_target:team13_slot2_name.GetName]" 
+    #     hidden_effect = { set_country_flag = team13_slot2_selected country_event = { id = coop.10 } }
+    # }
+
+    # option = { name = coop.1000.team14 allow = { always = no } trigger = { check_variable = { which = team_number value >= 14 } } }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 14 } NOT = { exists = event_target:team14_slot1 } }
+    #     name = empty_slot          
+    #     hidden_effect = { set_country_flag = team14_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 14 } exists = event_target:team14_slot1 }
+    #     name = "[event_target:team14_slot1_name.GetName]"          
+    #     hidden_effect = { set_country_flag = team14_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 14 } NOT = { exists = event_target:team14_slot2 } }
+    #     name = empty_slot  
+    #     hidden_effect = { set_country_flag = team14_slot2_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 14 } exists = event_target:team14_slot2 }
+    #     name = "[event_target:team14_slot2_name.GetName]"  
+    #     hidden_effect = { set_country_flag = team14_slot2_selected country_event = { id = coop.10 } }
+    # }
+
+    # option = { name = coop.1000.team15 allow = { always = no } trigger = { check_variable = { which = team_number value >= 15 } } }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 15 } NOT = { exists = event_target:team15_slot1 } }
+    #     name = empty_slot          
+    #     hidden_effect = { set_country_flag = team15_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 15 } exists = event_target:team15_slot1 }
+    #     name = "[event_target:team15_slot1_name.GetName]"          
+    #     hidden_effect = { set_country_flag = team15_slot1_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 15 } NOT = { exists = event_target:team15_slot2 } }
+    #     name = empty_slot  
+    #     hidden_effect = { set_country_flag = team15_slot2_selected country_event = { id = coop.10 } }
+    # }
+    # option = {
+    #     trigger = { check_variable = { which = team_number value >= 15 } exists = event_target:team15_slot2 }
+    #     name = "[event_target:team15_slot2_name.GetName]"  
+    #     hidden_effect = { set_country_flag = team15_slot2_selected country_event = { id = coop.10 } }
+    # }
+
+
+    # option = {
+    #     trigger = { check_variable = { which = team_number value < 15 }  }
+    #     name = coop.1000.add_team  
+    #     hidden_effect = { change_variable = { which = team_number value = 1 }  country_event = { id = coop.1000 } }
+    # }
+    option = {
+        name = coop.1000.settings  
+        hidden_effect = {  country_event = { id = coop.1100 } }
+    }
+    option = {
+        name = coop.1000.ready  
+        hidden_effect = {  country_event = { id = coop.1010 } }
+    }
+
+    option = {
+        name = coop.1000.close
+		default_hide_option = yes
+    }
+
+    after = {}
+}
+
+country_event = {
+    id = coop.1010
+    hide_window = yes
+    trigger = {
+        
+    }
+    is_triggered_only = yes
+    immediate = {
+        
+        set_coop_difficulty = yes
+
+        every_playable_country = {
+            limit = { has_federation = yes } 
+            remove_teams = yes
+        }
+
+        every_playable_country = {
+            limit = { has_country_flag = team1 }             
+            every_playable_country = {
+                limit = { has_country_flag = team1  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }            
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team2 }             
+            every_playable_country = {
+                limit = { has_country_flag = team2  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team3 }             
+            every_playable_country = {
+                limit = { has_country_flag = team3  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team4 }             
+            every_playable_country = {
+                limit = { has_country_flag = team4  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team5 }             
+            every_playable_country = {
+                limit = { has_country_flag = team5  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team6 }             
+            every_playable_country = {
+                limit = { has_country_flag = team6  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team7 }             
+            every_playable_country = {
+                limit = { has_country_flag = team7  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team8 }             
+            every_playable_country = {
+                limit = { has_country_flag = team8  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team9 }             
+            every_playable_country = {
+                limit = { has_country_flag = team9  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }
+        every_playable_country = {
+            limit = { has_country_flag = team10 }             
+            every_playable_country = {
+                limit = { has_country_flag = team10  NOT = { is_same_empire = prev } }
+                prepare_coop = yes
+            }
+        }        
+    }
+}
+
+country_event = {
+    id = coop.1100
+    title =  coop.1100.title
+    desc = coop.1100.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+
+    custom_gui = "coop_event_view"
+    diplomatic = yes 
+    is_triggered_only = yes
+
+    immediate = { }
+
+    option = {
+        name = coop.1100.back
+        default_hide_option = yes
+        hidden_effect = {
+            country_event = { id = coop.1000 }
+        }
+    }
+    option = {
+        trigger = {
+            has_global_flag = you_cannot_leave_federations
+        }        
+        name = coop.1100.setting1
+        hidden_effect = {
+            set_global_flag = you_can_leave_federations
+            remove_global_flag = you_cannot_leave_federations
+            country_event = { id = coop.1100 }
+        }
+    }
+    option = {
+        trigger = {
+            has_global_flag = you_can_leave_federations
+        }        
+        name = coop.1100.setting2
+        hidden_effect = {
+            set_global_flag = you_cannot_leave_federations
+            remove_global_flag = you_can_leave_federations
+            country_event = { id = coop.1100 }
+        }
+    }
+    option = {
+        name = { trigger = { not = { has_global_flag = player_is_not_strong } } text = coop.1100.player_is_strong }
+        name = { trigger = { has_global_flag = player_is_not_strong } text = coop.1100.player_is_not_strong }
+        if = {
+            limit = { has_global_flag = player_is_not_strong }
+            remove_global_flag = player_is_not_strong
+        }
+        else = {
+            set_global_flag = player_is_not_strong
+        }
+        country_event = { id = coop.1100 }
+    }
+
+    after = {}
+}
+
+country_event = {
+    id = coop.1110
+    hide_window = yes
+    trigger = { has_global_flag = you_cannot_leave_federations }
+    is_triggered_only = yes
+    immediate = { 
+    #    country_event = { id = coop.1010 } 
+    }
+}
+
+country_event = {
+    id = coop.1200
+    title =  coop.1200.title
+    desc = coop.1200.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+
+    custom_gui = "coop_event_view"
+    diplomatic = yes 
+    is_triggered_only = yes
+
+    immediate = {
+        every_playable_country = {
+            limit = {
+                has_country_flag = is_in_coop_with@root
+            }
+            if = {
+                limit = { NOT = { exists = event_target:team_partner_1 } }
+                save_event_target_as = team_partner_1
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_2 } }
+                save_event_target_as = team_partner_2
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_3 } }
+                save_event_target_as = team_partner_3
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_4 } }
+                save_event_target_as = team_partner_4
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_5 } }
+                save_event_target_as = team_partner_5
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_6 } }
+                save_event_target_as = team_partner_6
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_7 } }
+                save_event_target_as = team_partner_7
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_8 } }
+                save_event_target_as = team_partner_8
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_9 } }
+                save_event_target_as = team_partner_9
+            }
+        }
+     }
+
+    option = {
+        name = coop.1200.back
+        default_hide_option = yes
+    }
+
+    option = {
+        trigger = { exists = event_target:team_partner_1 }        
+        name = "give to [event_target:team_partner_1.GetName]"
+        hidden_effect = {   event_target:team_partner_1 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_2 }        
+        name = "give to [event_target:team_partner_2.GetName]"
+        hidden_effect = {   event_target:team_partner_2 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_3 }        
+        name = "give to [event_target:team_partner_3.GetName]"
+        hidden_effect = {   event_target:team_partner_3 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_4 }        
+        name = "give to [event_target:team_partner_4.GetName]"
+        hidden_effect = {   event_target:team_partner_4 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_5 }        
+        name = "give to [event_target:team_partner_5.GetName]"
+        hidden_effect = {   event_target:team_partner_5 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_6 }        
+        name = "give to [event_target:team_partner_6.GetName]"
+        hidden_effect = {   event_target:team_partner_6 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_7 }        
+        name = "give to [event_target:team_partner_7.GetName]"
+        hidden_effect = {   event_target:team_partner_7 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_8 }        
+        name = "give to [event_target:team_partner_8.GetName]"
+        hidden_effect = {   event_target:team_partner_8 = { country_event = { id = coop.1210 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_9 }        
+        name = "give to [event_target:team_partner_9.GetName]"
+        hidden_effect = {   event_target:team_partner_9 = { country_event = { id = coop.1210 }  } }
+    }
+
+    after = { remove_country_flag = gift_menu }
+}
+
+country_event = {
+    id = coop.1210
+    hide_window = yes
+    trigger = { exists = event_target:gift }
+    is_triggered_only = yes
+    immediate = {
+        event_target:gift = {
+            if = {
+                limit = { is_star = yes solar_system = { exists = starbase owner = { has_country_flag = is_in_coop_with@root } } }
+                solar_system = { starbase = { set_owner = root } }
+            }
+            else_if = {
+                limit = { has_owner = yes is_star = no owner = { has_country_flag = is_in_coop_with@root } }
+                set_owner = root
+            }
+        }        
+    }
+}
+
+
+country_event = {
+    id = coop.1300
+    title =  coop.1300.title
+    desc = coop.1300.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+    trigger = {
+        exists = event_target:fleet_gift_system
+    }
+	custom_gui = "coop_event_view"
+	location = event_target:fleet_gift_system
+    diplomatic = yes 
+    is_triggered_only = yes
+
+    immediate = {
+		event_target:fleet_gift_system = {
+			every_fleet_in_system = {
+				limit = {
+					exists = owner
+					owner = { is_same_empire = root	 }
+					is_ship_class = shipclass_military
+				}
+				if = {
+					limit = { NOT = { exists = event_target:gift_fleet_1 } }
+					save_event_target_as = gift_fleet_1
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_2 } }
+					save_event_target_as = gift_fleet_2
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_3 } }
+					save_event_target_as = gift_fleet_3
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_4 } }
+					save_event_target_as = gift_fleet_4
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_5 } }
+					save_event_target_as = gift_fleet_5
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_6 } }
+					save_event_target_as = gift_fleet_6
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_7 } }
+					save_event_target_as = gift_fleet_7
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_8 } }
+					save_event_target_as = gift_fleet_8
+				}
+				else_if = {
+					limit = { NOT = { exists = event_target:gift_fleet_9 } }
+					save_event_target_as = gift_fleet_9
+				}
+			}
+        }
+     }
+
+    option = {
+        name = coop.1300.back
+		default_hide_option = yes
+		hidden_effect = { remove_country_flag = gift_fleet_menu }
+    }
+
+    option = {
+        trigger = { exists = event_target:gift_fleet_1 }        
+        name = "[event_target:gift_fleet_1.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_1 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_2 }        
+        name = "[event_target:gift_fleet_2.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_2 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_3 }        
+        name = "[event_target:gift_fleet_3.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_3 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_4 }        
+        name = "[event_target:gift_fleet_4.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_4 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_5 }        
+        name = "[event_target:gift_fleet_5.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_5 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_6 }        
+        name = "[event_target:gift_fleet_6.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_6 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_7 }        
+        name = "[event_target:gift_fleet_7.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_7 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_8 }        
+        name = "[event_target:gift_fleet_8.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_8 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}
+	option = {
+        trigger = { exists = event_target:gift_fleet_9 }        
+        name = "[event_target:gift_fleet_9.GetName]"
+		hidden_effect = {   
+			event_target:gift_fleet_9 = { save_event_target_as = chosen_gift_fleet  } 
+			country_event = { id =coop.1310 }
+		}
+	}	
+}
+
+country_event = {
+    id = coop.1310
+    title =  coop.1310.title
+    desc = coop.1310.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+	custom_gui = "coop_event_view"
+	location = event_target:fleet_gift_system
+    diplomatic = yes 
+    is_triggered_only = yes
+    trigger = {
+        exists = event_target:fleet_gift_system
+    }
+    immediate = {
+        every_playable_country = {
+            limit = {
+                has_country_flag = is_in_coop_with@root
+            }
+            if = {
+                limit = { NOT = { exists = event_target:team_partner_1 } }
+                save_event_target_as = team_partner_1
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_2 } }
+                save_event_target_as = team_partner_2
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_3 } }
+                save_event_target_as = team_partner_3
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_4 } }
+                save_event_target_as = team_partner_4
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_5 } }
+                save_event_target_as = team_partner_5
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_6 } }
+                save_event_target_as = team_partner_6
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_7 } }
+                save_event_target_as = team_partner_7
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_8 } }
+                save_event_target_as = team_partner_8
+            }
+            else_if = {
+                limit = { NOT = { exists = event_target:team_partner_9 } }
+                save_event_target_as = team_partner_9
+            }
+        }
+     }
+
+    option = {
+        name = coop.1310.back
+        default_hide_option = yes
+    }
+
+    option = {
+        trigger = { exists = event_target:team_partner_1 }        
+        name = "give to [event_target:team_partner_1.GetName]"
+        hidden_effect = {   event_target:team_partner_1 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_2 }        
+        name = "give to [event_target:team_partner_2.GetName]"
+        hidden_effect = {   event_target:team_partner_2 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_3 }        
+        name = "give to [event_target:team_partner_3.GetName]"
+        hidden_effect = {   event_target:team_partner_3 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_4 }        
+        name = "give to [event_target:team_partner_4.GetName]"
+        hidden_effect = {   event_target:team_partner_4 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_5 }        
+        name = "give to [event_target:team_partner_5.GetName]"
+        hidden_effect = {   event_target:team_partner_5 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_6 }        
+        name = "give to [event_target:team_partner_6.GetName]"
+        hidden_effect = {   event_target:team_partner_6 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_7 }        
+        name = "give to [event_target:team_partner_7.GetName]"
+        hidden_effect = {   event_target:team_partner_7 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_8 }        
+        name = "give to [event_target:team_partner_8.GetName]"
+        hidden_effect = {   event_target:team_partner_8 = { country_event = { id =coop.1320 }  } }
+    }
+    option = {
+        trigger = { exists = event_target:team_partner_9 }        
+        name = "give to [event_target:team_partner_9.GetName]"
+        hidden_effect = {   event_target:team_partner_9 = { country_event = { id =coop.1320 }  } }
+    }
+
+    after = { remove_country_flag = gift_fleet_menu }
+}
+
+country_event = {
+	id = coop.1320
+	hide_window = yes
+	trigger = {
+		exists = event_target:chosen_gift_fleet
+	}
+	is_triggered_only = yes
+	immediate = {		
+		event_target:chosen_gift_fleet = {			
+			if = {
+				limit = { exists = leader }
+				leader = {
+					unassign_leader = this
+				}
+			}	
+			set_owner = root					
+		}		
+	}
+}
+
+country_event = {
+    id = coop.4000
+    title =  coop.4000.title
+    desc = coop.4000.desc
+    picture_event_data = {
+		portrait = root
+		room = root
+	}
+	custom_gui = "coop_event_view"	
+    diplomatic = yes 
+    is_triggered_only = yes
+    trigger = {
+        
+    }
+    immediate = {
+        
+     }
+
+    option = {
+        name = coop.4000.back
+        default_hide_option = yes        
+    }
+
+    option = {              
+        name = useGalacticUnion
+        hidden_effect = {  setGalacticUnions = yes }
+    }
+    option = {              
+        name = useHegemony
+        hidden_effect = {  setHegemonys = yes }
+    }
+    option = {              
+        name = useTradeLeague
+        hidden_effect = {  setTradeLeagues = yes }
+    }
+    option = {              
+        name = useResearchCoop
+        hidden_effect = {  setResearchCoops = yes }
+    }
+    option = {              
+        name = useMartialAlliance
+        hidden_effect = {  setMartialAlliances = yes }
+    }
+    option = { name = coop_difficulty allow = {  always = no }    }    
+    option = {  
+        #trigger = { has_no_stronger_effect = yes }            
+        name = makeStrong
+        hidden_effect = { makeStrong = { STRONG = Strong }  }
+    }
+    option = {     
+        #trigger = { has_no_stronger_effect = yes }           
+        name = makeStronger
+        hidden_effect = { makeStrong = { STRONG = Stronger }  }
+    }
+    option = {   
+        #trigger = { has_no_stronger_effect = yes }             
+        name = makeMuchStronger
+        hidden_effect = { makeStrong = { STRONG = MuchStronger }  }
+    }
+    option = {   
+        #trigger = { has_no_stronger_effect = yes }             
+        name = makeImpossible
+        hidden_effect = { makeStrong = { STRONG = Impossible }  }
+    }
+    option = { name = coop_size allow = {  always = no }    }
+    option = {   
+        #trigger = { has_no_stronger_effect = yes }             
+        name = makeAdvanced
+        hidden_effect = { makeAdvanced = { STRONG = Advanced }  }
+    }
+    option = {   
+        #trigger = { has_no_stronger_effect = yes }             
+        name = makeSuperior
+        hidden_effect = { makeAdvanced = { STRONG = Superior }  }
+    }
+    option = {   
+        #trigger = { has_no_stronger_effect = yes }             
+        name = makeOverwhelming
+        hidden_effect = { makeAdvanced = { STRONG = Overwhelming }  }
+    }
+
+    after = { 
+        remove_country_flag = team1_settings_selected 
+        remove_country_flag = team2_settings_selected 
+        remove_country_flag = team3_settings_selected 
+        remove_country_flag = team4_settings_selected 
+        remove_country_flag = team5_settings_selected 
+        remove_country_flag = team6_settings_selected 
+        remove_country_flag = team7_settings_selected 
+        remove_country_flag = team8_settings_selected 
+        remove_country_flag = team9_settings_selected 
+        remove_country_flag = team10_settings_selected 
+        
+        country_event = { id = coop.1000 }        
+    }
+}

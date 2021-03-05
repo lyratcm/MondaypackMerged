@@ -1,0 +1,161 @@
+###_z fw species	#################################################################################
+
+#_[z_r_hok基础]
+#_[hok_sp舰鼬]
+#_[hok_sp荧光鼬]
+
+
+
+
+
+
+
+
+#_[z_r_hok基础]
+z_fw_trait_r_hok_kayrl_positive = {
+	cost = 0
+	potential_crossbreeding_chance = 0.25
+
+	initial = no
+	modification = no
+	randomized = no
+	immortal_leaders = yes
+	
+	allowed_archetypes = { BIOLOGICAL MACHINE }
+	modifier = {
+		pop_environment_tolerance = 1.0
+		pop_growth_speed = 0.15
+		planet_jobs_produces_mult = 0.10
+		species_leader_exp_gain = 0.25
+	#	leader_age = 7777
+	}
+	slave_cost = {
+		energy = 50
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+z_fw_trait_r_hok_kayrl_negative = {
+	cost = 0
+	potential_crossbreeding_chance = 0.25
+
+	initial = no
+	modification = no
+	randomized = no
+	immortal_leaders = yes
+	
+	allowed_archetypes = { BIOLOGICAL MACHINE }
+	modifier = {
+		pop_environment_tolerance = 1.0
+		pop_growth_speed = 0.15
+		planet_jobs_produces_mult = -0.10
+		species_leader_exp_gain = -0.25
+	#	leader_age = 7777
+	}
+	slave_cost = {
+		energy = 50
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+#_[hok_sp舰鼬]	sr_alpha=2	sr_neo = 4
+z_fw_trait_r_hok_sp_wsg = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	initial = no
+	modification = no
+	randomized = no
+	
+	allowed_archetypes = { WARSHIPGIRL }
+	opposites = { "z_fw_trait_r_hok_sp_wsg_sh" }
+#	prerequisites = { xxx }
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		army_health = 0.25
+	}
+	slave_cost = {
+		energy = 100
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+z_fw_trait_r_hok_sp_wsg_sh = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	initial = no
+	modification = no
+	randomized = no
+	
+	allowed_archetypes = { SHENHAI }
+	opposites = { "z_fw_trait_r_hok_sp_wsg" }
+	modifier = {
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+		army_damage_mult = 0.25
+	}
+	slave_cost = {
+		energy = 100
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+z_fw_trait_r_hok_sp_wss_swg = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	initial = no
+	modification = no
+	randomized = no
+	
+	allowed_archetypes = { STARSHIPGIRLS }
+	modifier = {
+		planet_jobs_produces_mult = 0.05
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 0.5
+	}
+	slave_cost = {
+		energy = 100
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+#_[hok_sp荧光鼬]
+z_fw_trait_r_hok_sp_sofe_pgnt = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	initial = no
+	modification = no
+	randomized = no
+	
+	allowed_archetypes = { DEITY }
+	modifier = {
+		species_leader_exp_gain = 0.5
+		army_health = 0.25
+		army_damage_mult = 0.25
+	}
+	slave_cost = {
+		energy = 100
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

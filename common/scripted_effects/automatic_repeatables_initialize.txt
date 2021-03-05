@@ -1,0 +1,77 @@
+AR_initalize_selected = {
+    set_variable = { which = AR_selected_physics_tech value = -1 }
+    set_variable = { which = AR_selected_society_tech value = -1 }
+    set_variable = { which = AR_selected_engineering_tech value = -1 }
+}
+
+AR_initalize_weights = {
+    set_country_flag = AR_initialized
+    set_variable = {
+        which = AR_index
+        value = 0
+    }
+    while = {
+        limit = {
+            check_variable = {
+                which = AR_index
+                value < @AR_count_repeatables_physics
+            }
+        }
+        SLEX_set_list_variable_var_index = {
+            LIST = AR_priority_physics
+            INDEX = AR_index
+            VALUE = AR_index
+        }
+        change_variable = {
+            which = AR_index
+            value = 1
+        }
+    }
+    set_variable = {
+        which = AR_index
+        value = 0
+    }
+    while = {
+        limit = {
+            check_variable = {
+                which = AR_index
+                value < @AR_count_repeatables_society
+            }
+        }
+        SLEX_set_list_variable_var_index = {
+            LIST = AR_priority_society
+            INDEX = AR_index
+            VALUE = AR_index
+        }
+        change_variable = {
+            which = AR_index
+            value = 1
+        }
+    }
+    set_variable = {
+        which = AR_index
+        value = 0
+    }
+    while = {
+        limit = {
+            check_variable = {
+                which = AR_index
+                value < @AR_count_repeatables_engineering
+            }
+        }
+        SLEX_set_list_variable_var_index = {
+            LIST = AR_priority_engineering
+            INDEX = AR_index
+            VALUE = AR_index
+        }
+        change_variable = {
+            which = AR_index
+            value = 1
+        }
+    }
+    # Cleanup
+    set_variable = {
+        which = AR_index
+        value = 0
+    }
+}

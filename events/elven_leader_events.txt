@@ -1,0 +1,297 @@
+namespace = elven_leader_events
+
+# Replace Resilient trait for elven and drow leaders.
+country_event = {
+	id = elven_leader_events.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			species = {
+				OR = {
+					has_trait = trait_elven_true
+					has_trait = trait_drow
+				}
+			}
+			has_trait = leader_trait_resilient
+		}
+	}
+
+	immediate = {
+		from = {
+			remove_trait = leader_trait_resilient
+
+			if = {
+				limit = {
+					leader_class = governor
+				}
+
+				random_list = {
+					20 = { add_trait = leader_trait_adaptable }
+					20 = { add_trait = leader_trait_eager }
+					10 = { add_trait = leader_trait_architectural_interest }
+					10 = { add_trait = leader_trait_agrarian_upbringing }
+					10 = { add_trait = leader_trait_intellectual }
+					10 = { add_trait = leader_trait_environmental_engineer }
+					10 = { add_trait = leader_trait_bureaucrat }
+				}
+			}
+
+			else_if = {
+				limit = {
+					leader_class = scientist
+				}
+
+				random_list = {
+					20 = { add_trait = leader_trait_adaptable }
+					20 = { add_trait = leader_trait_eager }
+					10 = { add_trait = leader_trait_meticulous }
+					10 = { add_trait = leader_trait_maniacal }
+					10 = { add_trait = leader_trait_spark_of_genius }
+					10 = { add_trait = leader_trait_carefree }
+					10 = { add_trait = leader_trait_roamer }
+					10 = { add_trait = leader_trait_archaeologist }
+				}
+			}
+
+			else_if = {
+				limit = {
+					leader_class = admiral
+				}
+
+				random_list = {
+					20 = { add_trait = leader_trait_adaptable }
+					20 = { add_trait = leader_trait_eager }
+					10 = { add_trait = leader_trait_trickster }
+					10 = { add_trait = leader_trait_fleet_logistician }
+					10 = { add_trait = leader_trait_aggressive }
+					10 = { add_trait = leader_trait_unyielding }
+					10 = { add_trait = leader_trait_gale_speed }
+				}
+			}
+
+
+			else_if = {
+				limit = {
+					leader_class = general
+				}
+
+				random_list = {
+					20 = { add_trait = leader_trait_adaptable }
+					20 = { add_trait = leader_trait_eager }
+					10 = { add_trait = leader_trait_restrained }
+					10 = { add_trait = leader_trait_charismatic }
+					10 = { add_trait = leader_trait_butcher }
+					10 = { add_trait = leader_trait_glory_seeker }
+					10 = { add_trait = leader_trait_army_logistician }
+				}
+			}
+
+			else = {
+				random_list = {
+					50 = { add_trait = leader_trait_adaptable }
+					50 = { add_trait = leader_trait_eager }
+				}
+			}
+		}
+	}
+}
+
+# Matriarchy (governors only). Used by lunari and drow.
+country_event = {
+	id = elven_leader_events.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = elven_gender_matriarchy_governor
+		from = {
+			OR = {
+				leader_class = governor
+				leader_class = ruler
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+# Matriarchy (full).
+country_event = {
+	id = elven_leader_events.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = elven_gender_matriarchy_full
+		from = {
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+			set_name = random
+		}
+	}
+}
+
+# Military is for males only!
+country_event = {
+	id = elven_leader_events.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = elven_gender_patriarchy_military
+		from = {
+			OR = {
+				leader_class = admiral
+				leader_class = general
+			}
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = no
+			set_name = random
+		}
+	}
+}
+
+# Patriarchy (full).
+country_event = {
+	id = elven_leader_events.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_policy_flag = elven_gender_patriarchy_full
+		from = {
+			gender = female
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = no
+			set_name = random
+		}
+	}
+}
+
+# Chance of dying if has Substance Abuser
+event = {
+	id = elven_leader_events.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
+			}
+			country_event = { id = elven_leader_events.32 random = 200 }
+		}
+	}
+}
+
+country_event = {
+	id = elven_leader_events.32
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			90 = { # 88% chance nothing happens
+			}
+			10 = {
+				#modifier = { # 50% chance if self preservation in effect
+				#	has_swapped_tradition = tr_synchronicity_self_preservation
+				#	factor = 0.5
+				#}
+				if = { # surveying scientist
+					limit = {
+						any_owned_leader = {
+							species = {
+								OR = {
+									has_trait = trait_elven_true
+									has_trait = trait_drow
+								}
+							}
+							has_trait = leader_trait_substance_abuser
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							species = {
+								OR = {
+									has_trait = trait_elven_true
+									has_trait = trait_drow
+								}
+							}
+							has_trait = leader_trait_substance_abuser
+						}
+						save_event_target_as = deceased_leader
+						root = {
+							country_event = { id = elven_leader_events.33 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = elven_leader_events.33
+	title = elven_leader_events.33.name
+	desc = elven_leader_events.33.desc
+	picture = GFX_evt_space_funeral
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:deceased_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Set drow FE ruler to always be female
+event = {
+	id = elven_leader_events.4
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_country_flag = drow_fe_flag
+			}
+
+			leader = {
+				set_is_female = yes
+				set_name = random
+			}
+		}
+	}
+}

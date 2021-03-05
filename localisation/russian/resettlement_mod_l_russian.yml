@@ -1,0 +1,21 @@
+﻿l_russian:
+
+ decision_planet_begin_resettle_to:0 "Начать авто-переселение поселений на эту планету."
+ decision_planet_begin_resettle_to_desc:0 "Это решение включает авто-переселение поселений на эту планету."
+ decision_planet_begin_resettle_to_effects_short:0 "Это решение включает авто-переселение поселений на эту планету."
+ decision_planet_end_resettle_to:0 "Остановить авто-переселение поселений на эту планету."
+ decision_planet_end_resettle_to_desc:0 "Это решение отключает авто-переселение поселений на эту планету."
+ decision_planet_end_resettle_to_effects_short:0 "Это решение отключает авто-переселение поселений на эту планету."
+ 
+ decision_planet_begin_resettle_from:0 "Начать авто-переселение поселений с этой планеты."
+ decision_planet_begin_resettle_from_desc:0 "Это решение включает авто-переселение поселений с этой планеты."
+ decision_planet_begin_resettle_from_effects_short:0 "Это решение включает авто-переселение поселений с этой планеты."
+ decision_planet_end_resettle_from:0 "Остановить авто-переселение поселений с этой планеты."
+ decision_planet_end_resettle_from_desc:0 "Это решение выключает авто-переселение поселений с этой планеты."
+ decision_planet_end_resettle_from_effects_short:0 "Это решение выключает авто-переселение поселений с этой планеты."
+ 
+
+ planet_resettle_to:0 "Авто-переселение поселений на эту планету остановлено."
+ planet_resettle_to_desc:0 "Авто-переселение поселений на эту планету остановлено."
+ planet_resettle_from:0 "Авто-переселение поселений с этой планеты остановлено."
+ planet_resettle_from_desc:0 "Авто-переселение поселений с этой планеты остановлено."

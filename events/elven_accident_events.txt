@@ -1,0 +1,417 @@
+namespace = elven_accident_events
+
+# Drow (Tekartas) accidents
+event = {
+	id = elven_accident_events.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				OR = {
+					has_civic = civic_drow_warriors
+				}
+			}
+			country_event = { id = elven_accident_events.11 random = 200 }
+		}
+	}
+}
+
+country_event = {
+	id = elven_accident_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+	    if = {
+	        limit = {
+	            years_passed > 5 # no early deaths
+	        }
+
+            random_list = {
+                655 = { # 98% chance nothing happens
+                }
+                2 = {
+                     # ruler
+					random_owned_leader = {
+						limit = {
+							leader_class = ruler
+						}
+
+						random_list = {
+							75 = { # rulers should not die that often
+							}
+							25 = {
+								save_event_target_as = assassinated_leader
+								root = {
+									country_event = { id = elven_accident_events.211 }
+								}
+							}
+						}
+					}
+                }
+                1 = {
+                    # governor
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = assassinated_leader
+						root = {
+							random_list = {
+								1 = {
+									country_event = { id = elven_accident_events.221 }
+								}
+							}
+						}
+					}
+                }
+                1 = {
+                    # governor 2
+					random_owned_leader = {
+						limit = {
+							NOR = {
+								leader_class = governor
+								leader_class = ruler
+							}
+						}
+						save_event_target_as = assassin_leader
+					}
+					random_owned_leader = {
+						limit = {
+							leader_class = governor
+						}
+						save_event_target_as = assassinated_leader
+					}
+					root = {
+						random_list = {
+							1 = {
+								country_event = { id = elven_accident_events.222 }
+							}
+							1 = {
+								country_event = { id = elven_accident_events.223 }
+							}
+						}
+					}
+                }
+                2 = {
+                    # scientist
+					random_owned_leader = {
+						limit = {
+							leader_class = scientist
+						}
+						save_event_target_as = assassinated_leader
+						root = {
+							country_event = { id = elven_accident_events.231 }
+						}
+					}
+                }
+                2 = {
+                    # generic
+					random_owned_leader = {
+						limit = {
+							OR = {
+								leader_class = scientist
+								leader_class = admiral
+								leader_class = general
+							}
+						}
+						save_event_target_as = assassinated_leader
+						root = {
+							random_list = {
+								1 = {
+									country_event = { id = elven_accident_events.241 }
+								}
+								1 = {
+									country_event = { id = elven_accident_events.242 }
+								}
+								1 = {
+									country_event = { id = elven_accident_events.243 }
+								}
+								1 = {
+									country_event = { id = elven_accident_events.244 }
+								}
+								1 = {
+									country_event = { id = elven_accident_events.245 }
+								}
+								1 = {
+									country_event = { id = elven_accident_events.246 }
+								}
+							}
+						}
+					}
+                }
+				# NOTE: Disabled due to some odd behaviore with anomaly generated Admirals. The AI thingy specifically.
+				# 2 = {
+                #     # admiral
+				# 	random_owned_leader = {
+				# 		limit = {
+				# 			leader_class = admiral
+				# 			exists = fleet
+				# 		}
+				# 		save_event_target_as = assassinated_leader
+				# 		root = {
+				# 			country_event = { id = elven_accident_events.251 }
+				# 		}
+				# 	}  
+                # }
+		    }
+		}
+	}
+}
+
+country_event = {
+	id = elven_accident_events.211
+	title = elven_accident_events.211.name
+	desc = elven_accident_events.211.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.221
+	title = elven_accident_events.221.name
+	desc = elven_accident_events.221.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.222
+	title = elven_accident_events.222.name
+	desc = elven_accident_events.222.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassin_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+country_event = {
+	id = elven_accident_events.223
+	title = elven_accident_events.223.name
+	desc = elven_accident_events.223.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+	    event_target:assassin_leader = {
+            kill_leader = { show_notification = no }
+        }
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.231
+	title = elven_accident_events.231.name
+	desc = elven_accident_events.231.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.241
+	title = elven_accident_events.241.name
+	desc = elven_accident_events.241.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.242
+	title = elven_accident_events.242.name
+	desc = elven_accident_events.242.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.243
+	title = elven_accident_events.243.name
+	desc = elven_accident_events.243.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.244
+	title = elven_accident_events.244.name
+	desc = elven_accident_events.244.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.245
+	title = elven_accident_events.245.name
+	desc = elven_accident_events.245.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+country_event = {
+	id = elven_accident_events.246
+	title = elven_accident_events.246.name
+	desc = elven_accident_events.246.desc
+	picture = GFX_evt_news_room
+	show_sound = event_ship_bridge
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}
+
+country_event = {
+	id = elven_accident_events.251
+	title = elven_accident_events.251.name
+	desc = elven_accident_events.251.desc
+	picture = GFX_evt_unknown_ships
+	show_sound = event_ship_bridge
+	location = event_target:assassinated_leader.Fleet
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:assassinated_leader = {
+			kill_leader = { type = admiral show_notification = no }
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+	}
+}

@@ -1,0 +1,44 @@
+﻿l_spanish:
+  # Ruler
+  elven_accident_events.211.name:0 "§RAccident§!"
+  elven_accident_events.211.desc:0 "§R[assassinated_leader.GetName]§! has been murdered at the hands of [assassinated_leader.GetHerHis] eldest daughter. Will [assassinated_leader.GetSheHe] succeed in taking her place? The Goddess and the council will decide."
+
+  # Governor
+  elven_accident_events.221.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.221.desc:0 "§R[assassinated_leader.GetName]§!'s mangled body has been found lying in a pool of blood in [assassinated_leader.GetHerHis] mansion. Potential motives for murder are uncertain. It is known [assassinated_leader.GetName] was in a disagreement with [assassinated_leader.GetHerHis] children. Or maybe it was because of that useless decree [assassinated_leader.GetSheHe] signed last month - the council members were seething with rage."
+
+  elven_accident_events.222.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.222.desc:0 "Urgent news! §R[assassin_leader.GetName]§! has been caught red-handed in the assassination attempt of [assassinated_leader.GetName]. After a short trial [assassin_leader.GetName] was sacrificed for [assassinated_leader.GetHerHis] crime."
+
+  elven_accident_events.223.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.223.desc:0 "Urgent news! §R[assassin_leader.GetName]§! has been caught red-handed in the assassination attempt of §R[assassinated_leader.GetName]§!. After a short trial [assassin_leader.GetName] was sacrificed for [assassinated_leader.GetHerHis] crime. Unfortunately [assassinated_leader.GetName] succumbed to [assassinated_leader.GetHerHis] wounds a few hours after the incident."
+
+  # Scientist
+
+  elven_accident_events.231.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.231.desc:0 "§R[assassinated_leader.GetName]§! was too much of a fool to remain in power. Only an imbecile would share discoveries! Let this serve as a lesson to [assassinated_leader.GetHerHim]."
+
+  # Generic
+
+  elven_accident_events.241.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.241.desc:0 "Unfortunately for [assassinated_leader.GetHerHim], §R[assassinated_leader.GetName]§! has accidentally stumbled upon a furious priestess. But [assassinated_leader.GetSheHe] did not die in vain - [assassinated_leader.GetHerHis] death has fortunately assuaged the anger of the priestess and no further deaths have been reported."
+
+  elven_accident_events.242.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.242.desc:0 "§R[assassinated_leader.GetName]§! was casually walking down the narrow street when [assassinated_leader.GetSheHe] suddenly realized there was a dagger sticking out of [assassinated_leader.GetHerHis] chest! A teachable moment for us all. Never let your guard down!"
+
+  elven_accident_events.243.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.243.desc:0 "§R[assassinated_leader.GetName]§! has been eaten alive by spiders at the whim of a priestess! On the positive side, the Goddess' favorite arthropods will now be well fed for some time."
+
+  elven_accident_events.244.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.244.desc:0 "§R[assassinated_leader.GetName]§! has suddenly disappeared! No sign of  [assassinated_leader.GetHerHis] body or any message of vengeance has been found. This indicates [assassinated_leader.GetSheHe] is dead or has vanished like a coward. In either case [assassinated_leader.GetSheHe] is no longer relevant and further investigation is not required."
+
+  elven_accident_events.245.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.245.desc:0 "§R[assassinated_leader.GetName]§! has suddenly disappeared! No sign of  [assassinated_leader.GetHerHis] body has been found. There appears to be rumors that [assassinated_leader.GetName] fell into an acid lake. Curiously there are no known acid lakes in the nearby vicinity."
+
+  elven_accident_events.246.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.246.desc:0 "The Goddess has demanded a worthy sacrifice and our [Root.GetRulerTitle] is willing to do anything for her favor. Who could be more worthy than §R[assassinated_leader.GetName]§!? Besides, it's about time [assassinated_leader.GetSheHe] is replaced with a more... loyal and useful individual. Praise the Goddess!"
+
+  # Admiral
+
+  elven_accident_events.251.name:0 "elven_accident_events.211.name$"
+  elven_accident_events.251.desc:0 "Your highness, I hasten to inform that your admiral §R[assassinated_leader.GetName]§! has tragically died during a planned drill. [assassinated_leader.GetHerHisCap] neck broke after a bad fall during a collision. More importantly the ship is perfectly fine and undamaged."

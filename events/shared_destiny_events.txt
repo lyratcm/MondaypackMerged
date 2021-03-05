@@ -1,0 +1,89 @@
+namespace = shared_destiny
+
+country_event = { 
+	id = shared_destiny.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = overlord
+		overlord = { 
+			has_ascension_perk = eap_shared_destiny 
+		}
+		or = {
+			is_subject_type = tributary
+			is_subject_type = vassal
+			is_subject_type = protectorate 
+			
+		}			
+	}
+	immediate = {
+		set_subject_of = {  who = overlord  subject_type = tributary2 }
+		add_modifier = {
+			modifier = tributary_2 
+			days = -1
+		}
+	}
+}
+
+
+country_event = { 
+	id = shared_destiny.2
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		not = {
+			is_subject_type = tributary2
+		}
+		has_modifier = tributary_2 
+	}
+
+	immediate = {
+		remove_modifier = tributary_2 
+	}
+}
+
+
+country_event = { 
+	id = shared_destiny.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = {
+		exists = overlord
+		overlord = { 
+			has_ascension_perk = eap_universal_transactions 
+		}
+		is_subject_type = subsidiary 
+	}
+	immediate = {
+		set_subject_of = {  who = overlord  subject_type = subsidiary2 }
+		add_modifier = {
+			modifier = tributary_3 
+			days = -1
+		}
+	}
+}
+
+
+country_event = { 
+	id = shared_destiny.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+
+	trigger = { 
+		not = {
+			is_subject_type = subsidiary2
+		}
+		has_modifier = tributary_3 
+	}
+
+	immediate = {
+		remove_modifier = tributary_3 
+	}
+}

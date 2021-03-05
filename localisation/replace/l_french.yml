@@ -1,0 +1,5 @@
+﻿l_french:
+ TRAIT_LITHOID_EFFECT:0 "Consomme des £minerals£§Yminéraux§! au lieu de £food£§Ynourriture§!.\n\n$MOD_POP_GROWTH_SPEED$: §R-15%§!\n$MOD_POP_ENVIRONMENT_TOLERANCE$: §G+50%§!\n$MOD_ARMY_HEALTH$: §G+50%§!\n$MOD_LEADER_AGE$: §G+50§!\n$mod_planet_miners_minerals_produces_add$: §G+1.25§!"
+ TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT:0 "Chaque £pop£pop ayant au moins pour condition de vie l'esclavage produit 0.04 £exotic_gases£§Ygaz exotiques§! par mois."
+ TRAIT_LITHOID_SCINTILLATING_EFFECT:0 "Chaque £pop£pop ayant au moins pour condition de vie l'esclavage produit 0.04 £rare_crystals£§Ycristaux rares§! par mois."
+ TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT:0 "Chaque £pop£pop ayant au moins pour condition de vie l'esclavage produit 0.04 £volatile_motes£§Yparticules volatiles§! par mois."

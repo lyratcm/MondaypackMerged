@@ -1,0 +1,43 @@
+difficulty_impossible = {
+	stations_produces_mult = 1
+	planet_jobs_produces_mult = 1
+	country_naval_cap_mult = 0.6
+	ships_upkeep_mult = -0.4
+	starbase_shipyard_build_cost_mult = -0.4
+	planet_stability_add = 20
+
+	pop_growth_speed_reduction = -0.3
+	planet_pop_assembly_mult = 0.3
+	pop_environment_tolerance = 0.3
+	edicts_cost_mult = -0.5
+	colony_start_num_pops_add = 3
+	all_technology_research_speed = 0.3	
+	country_base_influence_produces_add = 1.5
+}
+
+difficulty_much_stronger = {
+	stations_produces_mult = 0.75
+	planet_jobs_produces_mult = 0.75
+	country_naval_cap_mult = 0.45
+	ships_upkeep_mult = -0.3
+	starbase_shipyard_build_cost_mult = -0.3
+	planet_stability_add = 15
+}
+
+difficulty_stronger = {
+	stations_produces_mult = 0.5
+	planet_jobs_produces_mult = 0.5
+	country_naval_cap_mult = 0.3
+	ships_upkeep_mult = -0.2
+	starbase_shipyard_build_cost_mult = -0.2
+	planet_stability_add = 10
+}
+
+difficulty_strong = {
+	stations_produces_mult = 0.25
+	planet_jobs_produces_mult = 0.25
+	country_naval_cap_mult = 0.15
+	ships_upkeep_mult = -0.1
+	starbase_shipyard_build_cost_mult = -0.1
+	planet_stability_add = 5
+}

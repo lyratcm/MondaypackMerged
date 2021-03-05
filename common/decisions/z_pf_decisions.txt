@@ -1,0 +1,441 @@
+###_z performance ---decisions	##########################################################################
+#_cntr_flg	[z_pf_flg_cntr_hide_dec]隐藏设置dec
+
+#_设置-恢复默认
+#_global_tgt	[z_pf_tgt_plnt_dec]
+z_pf_dec = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = { is_ai = no }
+	}
+	allow = {
+		custom_tooltip = {
+			fail_text = z_pf_tips_dec_on
+			hidden_trigger = {
+				owner = { is_ai = no }
+				NOT = { exists = event_target:z_pf_tgt_plnt_dec }
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec
+		hidden_effect = {
+			save_global_event_target_as = z_pf_tgt_plnt_dec
+			planet_event = { id = z_pf_modmenu.1 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+#_快速执行迁出
+z_pf_dec_express = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = { is_ai = no }
+	}
+	allow = {
+		custom_tooltip = {
+			hidden_trigger = {
+				exists = owner
+				owner = { is_ai = no }
+				OR = {
+					owner = { has_country_flag = z_pr_flg_cntr_1 }	#_[产业革命]
+					owner = {
+						NOT = { has_country_flag = z_pr_flg_cntr_1 }	#_[原版模式]
+						NOR = {#_自动迁移执行中
+							has_country_flag = z_pf_flg_cntr_heup_on
+							has_country_flag = z_pf_flg_cntr_heup_express_on
+						}
+					}
+				}
+			}
+            fail_text = z_pf_tips_heup_on
+        }
+		custom_tooltip = {
+			hidden_trigger = {
+				exists = owner
+				owner = { is_ai = no }
+				OR = {
+					owner = { NOT = { has_country_flag = z_pr_flg_cntr_1 } }	#_[原版模式]
+					AND = {
+						owner = {
+							has_country_flag = z_pr_flg_cntr_1	#_[产业革命]
+							has_resource = { type = energy amount > 50 }
+							NOT = { has_country_flag = z_pr_flg_cntr_debug_cd }	#_[人力debug_未在执行]
+						}
+						z_pf_trgr_plnt_manpower_migration = yes
+					}
+				}
+			}
+            fail_text = z_pf_tips_pr_migration
+        }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_express
+		hidden_effect = {
+			if = {#_[产业革命]
+				limit = { exists = owner	owner = { has_country_flag = z_pr_flg_cntr_1 } }	#_
+				z_pr_eft_plnt_migration_express = yes
+			}
+			else = {#_[产业革命]non
+				owner = { set_timed_country_flag = { flag = z_pf_flg_cntr_heup_express_on days = 1 } }
+				##_设定自身为输出plnt
+				clear_global_event_target = z_pf_tgt_plnt_migration
+				save_global_event_target_as = z_pf_tgt_plnt_migration
+				planet_event = { id = z_pf_heup.2 }
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_快速执行-迁入5
+z_pf_dec_express_in_5 = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = { is_ai = no }
+	}
+	allow = {
+		custom_tooltip = {
+			hidden_trigger = {
+				exists = owner
+				owner = { is_ai = no }
+				OR = {
+					owner = { has_country_flag = z_pr_flg_cntr_1 }	#_[产业革命]
+					owner = {
+						NOT = { has_country_flag = z_pr_flg_cntr_1 }	#_[原版模式]
+						NOT = { has_country_flag = z_pf_flg_cntr_heup_on }	#_自动迁移执行中
+					}
+				}
+			}
+            fail_text = z_pf_tips_heup_on
+        }
+		custom_tooltip = {
+			hidden_trigger = {
+				exists = owner
+				owner = { is_ai = no }
+				OR = {
+					owner = { NOT = { has_country_flag = z_pr_flg_cntr_1 } }	#_[原版模式]
+					AND = {
+						owner = {
+							has_country_flag = z_pr_flg_cntr_1	#_[产业革命]
+							has_resource = { type = energy amount > 50 }
+							NOT = { has_country_flag = z_pr_flg_cntr_debug_cd }	#_[人力debug_未在执行]
+						}
+						z_pf_trgr_plnt_manpower_immigration = yes
+					}
+				}
+			}
+            fail_text = z_pf_tips_pr_immigration
+        }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_express_in_5
+		hidden_effect = {
+			if = {#_[产业革命]
+				limit = { exists = owner	owner = { has_country_flag = z_pr_flg_cntr_1 } }	#_
+				z_pr_eft_plnt_immigration_express = yes
+			}
+			else = {#_[产业革命]non
+				##_设定自身为输入plnt
+				clear_global_event_target = z_pf_tgt_plnt_immigration
+				save_global_event_target_as = z_pf_tgt_plnt_immigration
+				owner = {
+					set_variable = { which = z_pf_var_cntr_heup_remain value = 5 }	#_设定迁入数量
+					country_event = { id = z_pf_heup.3 }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+#_迁出-默认
+#_cntr_flg	[z_pf_flg_cntr_hide_dec]
+z_pf_dec_migration = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		NOR = {
+			has_planet_flag = z_pf_flg_plnt_migration_forced
+			has_planet_flag = z_pf_flg_plnt_migration_ignore
+		}
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_migration_default
+		hidden_effect = {
+			set_planet_flag = z_pf_flg_plnt_migration_forced
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_迁出-强制	无视任何条件
+z_pf_dec_migration_forced = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_migration_forced
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_migration_forced
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_migration_forced
+			set_planet_flag = z_pf_flg_plnt_migration_ignore
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_迁出-忽略	迁出会跳过这颗星球
+z_pf_dec_migration_ignore = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_migration_ignore
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_migration_ignore
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_migration_ignore
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+#_迁入-默认
+#_cntr_flg	[z_pf_flg_cntr_hide_dec]
+z_pf_dec_immigration = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		NOR = {
+			has_planet_flag = z_pf_flg_plnt_immigration_forced
+			has_planet_flag = z_pf_flg_plnt_immigration_ignore
+		}
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_immigration_default
+		hidden_effect = {
+			set_planet_flag = z_pf_flg_plnt_immigration_forced
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_迁入-强制	无视任何条件
+z_pf_dec_immigration_forced = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_immigration_forced
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_immigration_forced
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_immigration_forced
+			set_planet_flag = z_pf_flg_plnt_immigration_ignore
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_迁入-忽略	迁出会跳过这颗星球
+z_pf_dec_immigration_ignore = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_immigration_ignore
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_immigration_ignore
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_immigration_ignore
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+#_优先-无
+#_cntr_flg	[z_pf_flg_cntr_hide_dec]
+z_pf_dec_mig_default = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		NOR = {
+			has_planet_flag = z_pf_flg_plnt_migration_prio
+			has_planet_flag = z_pf_flg_plnt_immigration_prio
+		}
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_mig_default
+		hidden_effect = {
+			set_planet_flag = z_pf_flg_plnt_migration_prio
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_优先-出
+z_pf_dec_mig_out_prio = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_migration_prio
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_mig_out_prio
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_migration_prio
+			set_planet_flag = z_pf_flg_plnt_immigration_prio
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+#_优先-入
+z_pf_dec_mig_in_prio = {
+	sound = event_administrative_work
+	
+	potential = {
+		is_colony = yes
+		owner = {
+			is_ai = no
+			NOT = { has_country_flag = z_pf_flg_cntr_hide_dec }
+		}
+		has_planet_flag = z_pf_flg_plnt_immigration_prio
+	}
+	allow = {
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = z_pf_tips_dec_mig_in_prio
+		hidden_effect = {
+			remove_planet_flag = z_pf_flg_plnt_immigration_prio
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

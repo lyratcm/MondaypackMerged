@@ -1,0 +1,1633 @@
+########################
+# This script resettles unemployed pops from planet to planet. It looks for an unemployed pop and resettles it to a suitable planet with a job.
+# The script can handle all pop categories shown in the main event.
+# The base of the script was originally taken from the Glavius AI. But since then a lot has changed.
+# DerMoe
+########################
+namespace = pop_resettlement
+
+event = {
+	id = pop_resettlement.1
+	hide_window = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			IF = {
+				limit = {
+					#is_ai = no #for testing
+					OR = {
+						is_country_type = default
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				IF = {
+					limit = { 
+						mid_game_years_passed >= 0
+						end_game_years_passed < 0
+						num_owned_planets > 7
+					}
+					country_event = { id = pop_resettlement.2 days = 10 }
+					country_event = { id = pop_resettlement.2 days = 20 }
+				}
+				ELSE_IF = {
+					limit = { 
+						end_game_years_passed >= 0
+						num_owned_planets > 7
+						num_owned_planets <= 14
+					}
+					country_event = { id = pop_resettlement.2 days = 10 }
+					country_event = { id = pop_resettlement.2 days = 20 }
+				}
+				ELSE_IF = {
+					limit = { 
+						end_game_years_passed >= 0
+						num_owned_planets > 14
+					}
+					country_event = { id = pop_resettlement.2 days = 10 }
+					country_event = { id = pop_resettlement.2 days = 15 }
+					country_event = { id = pop_resettlement.2 days = 20 }
+				}
+				ELSE = {
+					country_event = { id = pop_resettlement.2 days = 15 }
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = pop_resettlement.11
+	hide_window = yes
+    is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			IF = {
+				limit = {
+					is_ai = no #for testing
+					OR = {
+						is_country_type = default
+						is_country_type = awakened_fallen_empire
+					}
+				}
+				country_event = { id = pop_resettlement.2 }
+			}
+		}
+	}
+}
+
+country_event = {
+	id = pop_resettlement.2
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		# AI emergency resettle
+		IF = {
+			limit = {
+				root = { is_ai = yes }
+				any_owned_planet = {
+					is_controlled_by = root
+					planet_allow_resettle_planet_state_to_AI_emergency = yes
+					free_jobs > 0
+				}
+			}
+			country_event = { id = pop_resettlement.3 }
+		}
+
+		# standard resettle
+		# resettle: slaves, slaves from civic_slaver_guilds, robot_servants
+		# resettle: worker, specialists, ruler, simple drone, complex drone
+		IF = {
+			limit = {
+				any_owned_planet = {
+					is_controlled_by = root
+					free_jobs > 0
+				}
+			}
+			country_event = { id = pop_resettlement.4 }
+		}
+		
+		# machine servitor resettlement of bio-trophys
+		IF = {
+			limit = {
+				has_civic = civic_machine_servitor
+				is_at_war = no
+			}
+			random_owned_pop = {
+				limit = {
+					is_unemployed = yes
+					is_pop_category = bio_trophy				# resettle: bio_trophy
+					#log = resettle_bio_trophy_start
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle = yes
+						num_pops > 10
+					}
+				}
+				planet = {
+					#log = resettle_bio_trophy_event
+					planet_event = { id = pop_resettlement.700 }
+				}
+			}
+		}
+		
+		# awoken FE resettlement for ruler pops
+		IF = {
+			limit = {
+				is_country_type = awakened_fallen_empire
+				any_owned_planet = {
+					is_controlled_by = root
+					planet_allow_resettle = yes
+					pop_job_check_fallen_empire = yes
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					is_pop_category = precursor
+					OR = {
+						AND = {
+							NOT = { has_ethic = ethic_fanatic_spiritualist }
+							has_job = fe_hedonist				# resettle: hedonist	
+						}
+						AND = {
+							has_ethic = ethic_fanatic_spiritualist
+							has_job = fe_acolyte_artisan		#resettle: acolyte_artisan
+						}
+						AND = {
+							has_ethic = ethic_gestalt_consciousness
+							has_job = fe_maintenance_bot		#resettle: caretaker
+						}
+					}
+					#log = resettle_fe_ruler_start
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle_planet_state_from = yes
+						planet_allow_resettle_building_destruct = yes
+					}
+				}
+				planet = {
+					#log = resettle_fe_ruler_event
+					planet_event = { id = pop_resettlement.1100 }
+				}
+			}
+		}
+	}
+}
+
+## only for AI ##
+
+country_event = {
+	id = pop_resettlement.3
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#log = resettle_start_AI
+		
+		# AI only: resettle worker pops to planets with low planet stability due to unused jobs, 
+		# which cannot be attended due to the lack of pops on this planet (habitability is not accounted for, because it is an emergency)
+		# This is programmed for AI only, since players can do the emergency resettle manually.
+		
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+				#log = resettle_emergency2_start
+				planet = {
+					is_controlled_by = root
+					planet_allow_resettle = yes
+					planet_allow_resettle_building_destruct = yes
+				}
+				owner = {
+					any_owned_planet = {
+						is_controlled_by = root
+						planet_allow_resettle_planet_state_to_AI_emergency = yes
+						free_jobs > 0
+					}
+				}
+			}
+			planet = {
+				#log = resettle_emergency2_event
+				planet_event = { id = pop_resettlement.900 }
+			}
+		}
+		
+		# AI only: resettle worker pops to planets with low planet stability due to unused jobs, 
+		# which cannot be attended by slaves (habitability is not accounted for, because it is an emergency).
+		# unemployed slaves are resettled by script pop_resettlement.500 later on.
+		# This is programmed for AI only, since players can do the emergency resettle manually.
+		
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				pop_check_robot_servant_slave = yes
+				#log = resettle_emergency_start
+				planet = {
+					is_controlled_by = root 
+					planet_allow_resettle_planet_state_to_AI_emergency = yes
+					free_jobs > 0
+				}
+			}
+			planet = {
+				#log = resettle_emergency_event
+				planet_event = { id = pop_resettlement.800 }
+			}
+		}
+
+		# AI only: resettle one pop to occupied planets without any own pop, while others are getting purged (homicidal empire)
+		
+		IF = {
+			limit = {
+				is_homicidal = yes
+			}
+
+			random_owned_pop = {
+				limit = {
+					OR = {
+						is_pop_category = worker
+						is_pop_category = simple_drone
+					}
+					pop_check_citizenship_full = yes
+					#log = resettle_emergency3_start
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle = yes
+						planet_allow_resettle_building_destruct = yes
+					}
+					owner = {
+						any_owned_planet = {
+							is_controlled_by = root
+							habitability = { who = prevprev value > 0.49 }
+							planet_allow_resettle_planet_state_to_AI_emergency = yes
+							has_modifier = land_appropriation
+							pop_count_citizen_full_pops = yes
+							free_jobs > 0
+						}
+					}
+				}
+				planet = {
+					#log = resettle_emergency3_event
+					planet_event = { id = pop_resettlement.1000 }
+				}
+			}
+		}
+	}
+}
+
+## for all players and AI ##
+
+country_event = {
+	id = pop_resettlement.4
+	
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#log = resettle_start_normal
+
+		# Resettle unemployed workers/simple drones to planets with free jobs and suitable habitability.
+		
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+				#log = resettle_worker_start
+				planet = {
+					is_controlled_by = root
+					planet_allow_resettle_planet_state_from = yes
+					planet_allow_resettle_building_destruct = yes
+					has_building_construction_extended = yes
+				}
+			}
+			planet = {
+				#log = resettle_worker_event
+				planet_event = { id = pop_resettlement.100 }
+			}
+		}
+		
+		# Resettle unemployed specialists/complex drones to other planets with free jobs, suitable habitability and correct building construction.
+		
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					is_pop_category = specialist
+					is_pop_category = complex_drone
+				}
+				pop_check_citizenship_full = yes
+				#log = resettle_specialist_start
+				planet = {
+					is_controlled_by = root
+					planet_allow_resettle_planet_state_from = yes
+					planet_allow_resettle_building_destruct = yes
+					NOT = { planet_allow_specialist_building_resettle = yes }
+				}
+			}
+			planet = {
+				#log = resettle_specialist_event
+				planet_event = { id = pop_resettlement.200 }
+			}
+		}
+		
+		# Resettle unemployed ruler to other planets with free jobs, suitable habitability and correct building construction.
+		
+		IF = {
+			limit = { is_gestalt = no }
+			random_owned_pop = {
+				limit = {
+					is_unemployed = yes
+					is_pop_category = ruler
+					pop_check_citizenship_full = yes
+					#log = resettle_ruler_start
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle_planet_state_from = yes
+						planet_allow_resettle_building_destruct = yes
+						NOT = { planet_allow_ruler_building_resettle = yes }
+					}
+				}
+				planet = {
+					#log = resettle_ruler_event
+					planet_event = { id = pop_resettlement.300 }
+				}
+			}
+		}
+		
+		# for slaves and robots:
+		
+		IF = {
+			limit = {
+				is_hive_empire = no
+				OR= {
+					any_owned_species = {
+						OR = {
+							has_citizenship_type = { country = root type = citizenship_slavery }
+							has_citizenship_type = { country = root type = citizenship_robot_servitude }
+							AND = {
+								has_trait = trait_mechanical
+								has_citizenship_type = { country = root type = citizenship_full }
+								prev = { NOT = { has_technology = tech_synthetic_workers } }
+							}
+						}
+					}
+					has_civic = civic_slaver_guilds
+					has_civic = civic_indentured_assets
+				}
+			}
+			
+			# Resettle unemployed slave pops to other planets with free jobs and suitable habitability.
+			# Then resettle a worker/simple drone to another planet with free jobs and suitable habitability.
+			# First a trade of pops is checked, then looked for a new planet or nothing happens.
+			# Otherwise small planets with a majority in slave growth do not grow as fast.
+		
+			random_owned_pop = {
+				limit = {
+					is_unemployed = yes
+					pop_check_robot_servant_slave = yes
+					#log = resettle_robot_slave_1_start
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle = yes
+						planet_allow_resettle_building_destruct = yes
+						has_building_construction_extended = yes
+					}
+				}
+				planet = {
+					#log = resettle_robot_slave_1_event
+					planet_event = { id = pop_resettlement.400 }
+				}
+			}
+			
+			# Resettle a worker/simple drone with an unemployed slave pop on the planet.
+			# The scipt finds a planet with a free job and suitable habitability.
+		
+			random_owned_pop = {
+				limit = {
+					is_unemployed = yes
+					pop_check_robot_servant_slave = yes
+					planet = {
+						is_controlled_by = root
+						#log = resettle_robot_slave_2_start
+						is_controlled_by = root
+						planet_allow_resettle_planet_state_from = yes
+						planet_allow_resettle_building_destruct = yes
+						has_building_construction_extended = yes
+						any_owned_pop = {
+							is_unemployed = no
+							is_pop_category = worker
+							pop_check_citizenship_full = yes
+						}
+					}
+				}
+				planet = {
+					#log = resettle_robot_slave_2_event
+					planet_event = { id = pop_resettlement.500 }
+				}
+			}
+		}
+		
+		# Fill up special planets with high habitability with unemployed pops (worker, simple drones, slaves) from other planets.
+		# This script runs as last, since all other cases should be checked first.
+		
+		IF = {
+			limit = {
+				any_owned_planet = {
+					is_controlled_by = root
+					OR = {
+						is_planet_class = pc_ringworld_habitable
+						is_planet_class = pc_habitat
+						is_planet_class = pc_city
+						is_planet_class = pc_relic
+						is_planet_class = pc_gaia
+					}
+					planet_allow_resettle_planet_state_to = yes
+					free_jobs > 0
+				}
+			}
+			random_owned_pop = {
+				limit = {
+					is_unemployed = yes
+					OR = {
+						AND = {
+							OR = {
+								is_pop_category = worker
+								is_pop_category = simple_drone
+							}
+							pop_check_citizenship_full = yes
+						}
+						pop_check_robot_servant_slave = yes
+					}
+					NOR = {
+						owner = { has_monthly_income = { resource = food value < 15 }}
+						owner = { has_monthly_income = { resource = minerals value < 15 }}
+						owner = { has_monthly_income = { resource = energy value < 15 }}
+					}
+					#log = resettle_hab
+					planet = {
+						is_controlled_by = root
+						planet_allow_resettle_planet_state_from = yes
+						planet_allow_resettle_building_destruct = yes
+						has_building_construction_extended = yes
+					}
+				}
+				planet = {
+					#log = resettle_hab_event
+					planet_event = { id = pop_resettlement.600 }
+				}
+			}
+		}
+	}
+}
+
+# Resettle unemployed workers/simple drones pops to planets with free jobs and suitable habitability.
+
+planet_event = {
+	id = pop_resettlement.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# # set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.79 }
+						planet_allow_resettle_planet_state_to = yes
+						pop_job_check_citizen_full_worker = yes
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# # set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from79to days = 5 }
+					save_event_target_as = send_pop_100
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:send_pop_100 } }
+				owner = {
+					random_owned_planet = {
+						limit = {
+							is_controlled_by = prev
+							habitability = { who = prevprev value > 0.69 }
+							planet_allow_resettle_planet_state_to = yes
+							pop_job_check_citizen_full_worker = yes
+						}
+						set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+						# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from69to days = 5 }
+						save_event_target_as = send_pop_100
+					}
+				}
+				if = {
+					limit = { NOT = { exists = event_target:send_pop_100 } }
+					owner = {
+						random_owned_planet = {
+							limit = {
+								is_controlled_by = prev
+								habitability = { who = prevprev value > 0.59 }
+								planet_allow_resettle_planet_state_to = yes
+								pop_job_check_citizen_full_worker = yes
+							}
+							set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+							# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from59to days = 5 }
+							save_event_target_as = send_pop_100
+						}
+					}
+					if = {
+						limit = { NOT = { exists = event_target:send_pop_100 } }
+						owner = {
+							random_owned_planet = {
+								limit = {
+									is_controlled_by = prev
+									habitability = { who = prevprev value > 0.49 }
+									planet_allow_resettle_planet_state_to = yes
+									pop_job_check_citizen_full_worker = yes
+								}
+								set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+								# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from49to days = 5 }
+								save_event_target_as = send_pop_100
+							}
+						}
+						if = {
+							limit = { NOT = { exists = event_target:send_pop_100 } }
+							owner = {
+								random_owned_planet = {
+									limit = {
+										is_controlled_by = prev
+										habitability = { who = prevprev value > 0.79 }
+										planet_allow_resettle_planet_state_to = yes
+										free_jobs > 0
+									}
+									set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+									# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from79to2 days = 5 }
+									save_event_target_as = send_pop_100
+								}
+							}
+							if = {
+								limit = { NOT = { exists = event_target:send_pop_100 } }
+								owner = {
+									random_owned_planet = {
+										limit = {
+											is_controlled_by = prev
+											habitability = { who = prevprev value > 0.69 }
+											planet_allow_resettle_planet_state_to = yes
+											free_jobs > 0
+										}
+										set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+										# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from69to2 days = 5 }
+										save_event_target_as = send_pop_100
+									}
+								}
+								if = {
+									limit = { NOT = { exists = event_target:send_pop_100 } }
+									owner = {
+										random_owned_planet = {
+											limit = {
+												is_controlled_by = prev
+												habitability = { who = prevprev value > 0.59 }
+												planet_allow_resettle_planet_state_to = yes
+												free_jobs > 0
+											}
+											set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+											# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from59to2 days = 5 }
+											save_event_target_as = send_pop_100
+										}
+									}
+									if = {
+										limit = { NOT = { exists = event_target:send_pop_100 } }
+										owner = {
+											random_owned_planet = {
+												limit = {
+													is_controlled_by = prev
+													habitability = { who = prevprev value > 0.49 }
+													planet_allow_resettle_planet_state_to = yes
+													free_jobs > 0
+												}
+												set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+												# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_100from49to2 days = 5 }
+												save_event_target_as = send_pop_100
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_100 
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_worker_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_100
+				}
+			}
+		}
+	}
+}
+
+# Resettle unemployed specialists/complex drones to other planets with free jobs, suitable habitability and correct building construction.
+
+planet_event = {
+	id = pop_resettlement.200
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_200from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+						is_pop_category = specialist
+						is_pop_category = complex_drone
+				}
+				pop_check_citizenship_full = yes
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.79 }
+						planet_allow_resettle_planet_state_to = yes
+						OR = {
+							pop_job_check_citizen_full_specialist = yes
+							AND = {
+								planet_allow_specialist_building_resettle = yes
+								pop_count_unemployed_citizen_full_specialist = yes
+							}
+							pop_job_check_citizen_full_ruler = yes
+						}
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_200from79to days = 5 }
+					save_event_target_as = send_pop_200
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:send_pop_200 } }
+				owner = {
+					random_owned_planet = {
+						limit = {
+							is_controlled_by = prev
+							habitability = { who = prevprev value > 0.69 }
+							planet_allow_resettle_planet_state_to = yes
+							OR = {
+								pop_job_check_citizen_full_specialist = yes
+								AND = {
+									planet_allow_specialist_building_resettle = yes
+									pop_count_unemployed_citizen_full_specialist = yes
+								}
+								pop_job_check_citizen_full_ruler = yes
+							}
+						}
+						set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+						# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_200from69to days = 5 }
+						save_event_target_as = send_pop_200
+					}
+				}
+				if = {
+					limit = { NOT = { exists = event_target:send_pop_200 } }
+					owner = {
+						random_owned_planet = {
+							limit = {
+								is_controlled_by = prev
+								habitability = { who = prevprev value > 0.59 }
+								planet_allow_resettle_planet_state_to = yes
+								OR = {
+									pop_job_check_citizen_full_specialist = yes
+									AND = {
+										planet_allow_specialist_building_resettle = yes
+										pop_count_unemployed_citizen_full_specialist = yes
+									}
+									pop_job_check_citizen_full_ruler = yes
+								}
+							}
+							set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+							# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_200from59to days = 5 }
+							save_event_target_as = send_pop_200
+						}
+					}
+					if = {
+						limit = { NOT = { exists = event_target:send_pop_200 } }
+						owner = {
+							random_owned_planet = {
+								limit = {
+									is_controlled_by = prev
+									habitability = { who = prevprev value > 0.49 }
+									planet_allow_resettle_planet_state_to = yes
+									OR = {
+										pop_job_check_citizen_full_specialist = yes
+										AND = {
+											planet_allow_specialist_building_resettle = yes
+											pop_count_unemployed_citizen_full_specialist = yes
+										}
+										pop_job_check_citizen_full_ruler = yes
+									}
+								}
+								set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+								# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_200from49to days = 5 }
+								save_event_target_as = send_pop_200
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_200 
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_specialist_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_200
+				}
+			}
+		}
+	}
+}
+
+# Resettle unemployed ruler to other planets with free jobs, suitable habitability and correct building construction.
+
+planet_event = {
+	id = pop_resettlement.300
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_300from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				is_pop_category = ruler
+				pop_check_citizenship_full = yes
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.79 }
+						planet_allow_resettle_planet_state_to = yes
+						OR = {
+							pop_job_check_citizen_full_ruler = yes
+							AND	= {
+								planet_allow_ruler_building_resettle = yes
+								pop_count_unemployed_citizen_full_ruler = yes
+							}
+						}
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_300from79to days = 5 }
+					save_event_target_as = send_pop_300
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:send_pop_300 } }
+				owner = {
+					random_owned_planet = {
+						limit = {
+							is_controlled_by = prev
+							habitability = { who = prevprev value > 0.69 }
+							planet_allow_resettle_planet_state_to = yes
+							OR = {
+								pop_job_check_citizen_full_ruler = yes
+								AND	= {
+									planet_allow_ruler_building_resettle = yes
+									pop_count_unemployed_citizen_full_ruler = yes
+								}
+							}
+						}
+						set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+						# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_300from69to days = 5 }
+						save_event_target_as = send_pop_300
+					}
+				}
+				if = {
+					limit = { NOT = { exists = event_target:send_pop_300 } }
+					owner = {
+						random_owned_planet = {
+							limit = {
+								is_controlled_by = prev
+								habitability = { who = prevprev value > 0.59 }
+								planet_allow_resettle_planet_state_to = yes
+								OR = {
+									pop_job_check_citizen_full_ruler = yes
+									AND	= {
+										planet_allow_ruler_building_resettle = yes
+										pop_count_unemployed_citizen_full_ruler = yes
+									}
+								}
+							}
+							set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+							# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_300from59to days = 5 }
+							save_event_target_as = send_pop_300
+						}
+					}
+					if = {
+						limit = { NOT = { exists = event_target:send_pop_300 } }
+						owner = {
+							random_owned_planet = {
+								limit = {
+									is_controlled_by = prev
+									habitability = { who = prevprev value > 0.49 }
+									planet_allow_resettle_planet_state_to = yes
+									OR = {
+										pop_job_check_citizen_full_ruler = yes
+										AND	= {
+											planet_allow_ruler_building_resettle = yes
+											pop_count_unemployed_citizen_full_ruler = yes
+										}
+									}
+								}
+								set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+								# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_300from49to days = 5 }
+								save_event_target_as = send_pop_300
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_300
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_ruler_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_300
+				}
+			}
+		}
+	}
+}
+
+# Resettle unemployed slave pops to other planets with free jobs and suitable habitability.
+# Then resettle a worker/simple drone to another planet with free jobs and suitable habitability.
+# First a trade of pops is checked, then looked for a new planet or nothing happens.
+# Otherwise small planets with a majority in slave growth do not grow as fast
+
+planet_event = {
+	id = pop_resettlement.400
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				pop_check_robot_servant_slave = yes
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.39 }
+						planet_allow_resettle_planet_state_to = yes
+						IF = {
+							limit = { 
+								prevprev = { pop_check_slave = yes }
+							}
+							IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_military } }
+								}
+								pop_job_check_slave_battle_thralls = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_domestic } }
+								}
+								pop_job_check_slave_domestiv_servitude = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_indentured } }
+								}
+								pop_job_check_slave_indentured_servitude = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_normal } }
+								}
+								pop_job_check_slave_chattel_slavery = yes
+							}
+						}
+						ELSE_IF = {
+							limit = { 
+								prevprev = { is_pop_category = robot_servant }
+							}
+							pop_job_check_robot = yes
+						}
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400to_only1 days = 5 }
+					save_event_target_as = send_pop_400
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:send_pop_400 } }
+				owner = {
+					random_owned_planet = {
+						limit = {
+							is_controlled_by = prev
+							habitability = { who = prevprev value > 0.39 }
+							planet_allow_resettle_planet_state_to = yes
+							is_capital = no
+							OR = {
+								AND = {
+									prevprev = { pop_check_slave = yes }
+									pop_job_check_citizen_clerk = yes
+								}
+								AND = {
+									prevprev = { is_pop_category = robot_servant }
+									owner = { has_technology = tech_droid_workers }
+									pop_job_check_citizen_clerk = yes
+								}
+								any_owned_pop = {
+									is_unemployed = no
+									is_pop_category = worker
+									pop_check_citizenship_full = yes
+									IF = {
+										limit = {
+											prevprevprev = { is_pop_category = robot_servant }
+											owner = {
+												NOT = { has_technology = tech_droid_workers }
+											}
+										}
+										NOR = {
+											has_job = clerk
+											has_job = technician
+										}
+									}
+								}
+							}
+						}
+						save_event_target_as = send_pop_400
+						IF = {
+							limit = { 
+								planet_allow_resettle_planet_state_from = yes
+								planet_allow_resettle_building_destruct = yes
+							}
+							set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+							random_owned_pop = {
+								limit = {
+									is_unemployed = no
+									is_pop_category = worker
+									pop_check_citizenship_full = yes
+									IF = {
+										limit = {
+											prevprevprev = { is_pop_category = robot_servant }
+											owner = {
+												NOT = { has_technology = tech_droid_workers }
+											}
+										}
+										NOR = {
+											has_job = clerk
+											has_job = technician
+										}
+									}
+								}
+								save_event_target_as = send_pop_400_pop
+								IF = {
+									limit = {
+										root = {
+											NAND = {
+												habitability = { who = prev value > 0.79 }
+												planet_allow_resettle_planet_state_to = yes
+												pop_job_check_citizen_full_worker = yes
+											}
+										}
+									}
+									owner = {
+										random_owned_planet = {
+											limit = {
+												is_controlled_by = prev
+												habitability = { who = prevprev value > 0.79 }
+												planet_allow_resettle_planet_state_to = yes
+												pop_job_check_citizen_full_worker = yes
+											}
+											set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+											# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400from79tofull days = 5 }
+											save_event_target_as = send_pop_400_planet
+										}
+									}
+									if = {
+										limit = { NOT = { exists = event_target:send_pop_400_planet} }
+										owner = {
+											random_owned_planet = {
+												limit = {
+													is_controlled_by = prev
+													habitability = { who = prevprev value > 0.69 }
+													planet_allow_resettle_planet_state_to = yes
+													pop_job_check_citizen_full_worker = yes
+												}
+												set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+												# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400from69tofull days = 5 }
+												save_event_target_as = send_pop_400_planet
+											}
+										}
+										if = {
+											limit = { NOT = { exists = event_target:send_pop_400_planet } }
+											owner = {
+												random_owned_planet = {
+													limit = {
+														is_controlled_by = prev
+														habitability = { who = prevprev value > 0.59 }
+														planet_allow_resettle_planet_state_to = yes
+														pop_job_check_citizen_full_worker = yes
+													}
+													set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+													# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400from59tofull days = 5 }
+													save_event_target_as = send_pop_400_planet
+												}
+											}
+											if = {
+												limit = { NOT = { exists = event_target:send_pop_400_planet } }
+												owner = {
+													random_owned_planet = {
+														limit = {
+															is_controlled_by = prev
+															habitability = { who = prevprev value > 0.49 }
+															planet_allow_resettle_planet_state_to = yes
+															pop_job_check_citizen_full_worker = yes
+														}
+														set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+														# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400from49tofull days = 5 }
+														save_event_target_as = send_pop_400_planet
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+						# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_400to_two days = 5 }
+					}
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_400
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_robot_slave_1_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_400
+				}
+				if = {
+					limit = {
+						exists = event_target:send_pop_400_pop
+						exists = event_target:send_pop_400_planet
+					}
+					#log = resettle_robot_slave_1_to_finish
+					resettle_pop = {
+						pop = event_target:send_pop_400_pop
+						planet = event_target:send_pop_400_planet
+					}
+				}
+				else_if = {
+					limit = {
+						exists = event_target:send_pop_400_pop
+						NOT = { exists = event_target:send_pop_400_planet }
+					}
+					#log = resettle_robot_slave_1_root_finish
+					resettle_pop = {
+						pop = event_target:send_pop_400_pop
+						planet = root
+					}
+				}
+			}
+		}
+	}
+}
+
+# Resettle a worker/simple drone with an unemployed slave pop on the planet.
+# The scipt finds a planet with a free job and suitable habitability.
+
+planet_event = {
+	id = pop_resettlement.500
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_500from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = no
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+				IF = {
+					limit = {
+						root = {
+							any_owned_pop = {
+								is_unemployed = yes
+								is_pop_category = robot_servant
+								owner = {
+									NOT = { has_technology = tech_droid_workers }
+								}
+							}
+						}
+					}
+					NOR = {
+						has_job = clerk
+						has_job = technician
+					}
+				}
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.79 }
+						planet_allow_resettle_planet_state_to = yes
+						pop_job_check_citizen_full_worker = yes
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_500from79to days = 5 }
+					save_event_target_as = send_pop_500
+				}
+			}
+			if = {
+				limit = { NOT = { exists = event_target:send_pop_500 } }
+				owner = {
+					random_owned_planet = {
+						limit = {
+							is_controlled_by = prev
+							habitability = { who = prevprev value > 0.69 }
+							planet_allow_resettle_planet_state_to = yes
+							pop_job_check_citizen_full_worker = yes
+						}
+						set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+						# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_500from69to days = 5 }
+						save_event_target_as = send_pop_500
+					}
+				}
+				if = {
+					limit = { NOT = { exists = event_target:send_pop_500 } }
+					owner = {
+						random_owned_planet = {
+							limit = {
+								is_controlled_by = prev
+								habitability = { who = prevprev value > 0.59 }
+								planet_allow_resettle_planet_state_to = yes
+								pop_job_check_citizen_full_worker = yes
+							}
+							set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+							# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_500from59to days = 5 }
+							save_event_target_as = send_pop_500
+						}
+					}
+					if = {
+						limit = { NOT = { exists = event_target:send_pop_500 } }
+						owner = {
+							random_owned_planet = {
+								limit = {
+									is_controlled_by = prev
+									habitability = { who = prevprev value > 0.49 }
+									planet_allow_resettle_planet_state_to = yes
+									pop_job_check_citizen_full_worker = yes
+								}
+								set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+								# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_500from49to days = 5 }
+								save_event_target_as = send_pop_500
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_500
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_robot_slave_2_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_500
+				}
+			}
+		}
+	}
+}
+
+# Fill up special planets with high habitability with unemployed pops (worker, simple drones, slaves) from other planets.
+# This script runs as last, since all other cases should be checked first.
+
+planet_event = {
+	id = pop_resettlement.600
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_600from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					AND = {
+						OR = {
+							is_pop_category = worker
+							is_pop_category = simple_drone
+						}
+						pop_check_citizenship_full = yes
+					} 
+					pop_check_robot_servant_slave = yes
+				}
+				NOR = {
+					owner = { has_monthly_income = { resource = food value < 15 }}
+					owner = { has_monthly_income = { resource = minerals value < 15 }}
+					owner = { has_monthly_income = { resource = energy value < 15 }}
+				}
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						OR = {
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_habitat
+							is_planet_class = pc_city
+							is_planet_class = pc_relic
+							is_planet_class = pc_gaia
+						}
+						planet_allow_resettle_planet_state_to = yes
+						IF = {
+							limit = { 
+								prevprev = { pop_check_slave = yes }
+							}
+							IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_military } }
+								}
+								pop_job_check_slave_battle_thralls = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_domestic } }
+								}
+								pop_job_check_slave_domestiv_servitude = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_indentured } }
+								}
+								pop_job_check_slave_indentured_servitude = yes
+							}
+							ELSE_IF = {
+								limit = {
+									prevprev = { has_slavery_type = { type = slavery_normal } }
+								}
+								pop_job_check_slave_chattel_slavery = yes
+							}
+							ELSE = {
+								pop_job_check_citizen_clerk = yes
+							}
+						}
+						ELSE_IF = {
+							limit = { 
+								prevprev = { is_pop_category = robot_servant }
+							}
+							pop_job_check_robot = yes
+						}
+						ELSE_IF = {
+							limit = {
+								prevprev = { pop_check_citizenship_full = yes }
+							}
+							pop_job_check_citizen_full_worker = yes
+						}
+						ELSE = {
+							pop_job_check_citizen_clerk = yes
+						}
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					save_event_target_as = send_pop_600
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_600to days = 5 }
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_600
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_hab_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_600
+				}
+			}
+		}
+	}
+}
+
+# Resettle bio-trophys to planets with bio-trophy jobs.
+
+planet_event = {
+	id = pop_resettlement.700
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_700from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				is_pop_category = bio_trophy
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						planet_allow_resettle_planet_state_to = yes
+						has_available_jobs = bio_trophy
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					save_event_target_as = send_pop_700
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_700to days = 5 }
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_700
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_bio_trophy_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_700
+				}
+			}
+		}
+	}
+}
+
+## only for AI ##
+
+# AI only: resettle worker pops to planets with low planet stability due to unused jobs, 
+# which cannot be attended by slaves (habitability is not accounted for, because it is an emergency).
+# Unemployed slaves are resettled by script pop_resettlement.500 later on.
+# This is programmed for AI only, since players can do the emergency resettle manually.
+
+planet_event = {
+	id = pop_resettlement.800
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_800to days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				pop_check_robot_servant_slave = yes
+				NOR = {
+					owner = { has_monthly_income = { resource = food value < 15 }}
+					owner = { has_monthly_income = { resource = minerals value < 15 }}
+					owner = { has_monthly_income = { resource = energy value < 15 }}
+				}
+			}
+			#log = resettle_emergency_1
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						planet_allow_resettle_planet_state_from = yes
+						planet_allow_resettle_building_destruct = yes
+						any_owned_pop = {
+							OR = {
+								is_pop_category = worker
+								is_pop_category = simple_drone
+							}
+							pop_check_citizenship_full = yes
+							#root = { habitability = { who = prev value > 0.59 } }
+						}
+					}
+					#log = resettle_emergency_2
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_800from days = 5 }
+					random_owned_pop = {
+						limit = {
+							OR = {
+								is_pop_category = worker
+								is_pop_category = simple_drone
+							}
+							pop_check_citizenship_full = yes
+							#root = { habitability = { who = prev value > 0.59 } }
+						}
+						save_event_target_as = send_pop_800
+					}
+					#log = resettle_emergency_3
+				}
+			}
+			if = {
+				limit = { exists = event_target:send_pop_800 }
+				#log = resettle_emergency_finish
+				resettle_pop = {
+					pop = event_target:send_pop_800
+					planet = root
+				}
+			}
+		}
+	}
+}
+
+# AI only: resettle worker pops to planets with low planet stability due to unused jobs, 
+# which cannot be attended due to the lack of pops on this planet (habitability is not accounted for, because it is an emergency)
+# This is programmed for AI only, since players can do the emergency resettle manually.
+
+planet_event = {
+	id = pop_resettlement.900
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_900from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+			}
+			#log = resettle_emergency2_event_1
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						planet_allow_resettle_planet_state_to_AI_emergency = yes
+						OR = {
+							pop_job_check_citizen_full_worker = yes
+							pop_job_check_citizen_full_specialist = yes
+							pop_job_check_citizen_full_ruler = yes
+						}
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					save_event_target_as = send_pop_900
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_900to days = 5 }
+				}
+				#log = resettle_emergency2_event_2
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_900 
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_emergency2_event_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_900
+				}
+			}
+		}
+	}
+}
+
+# AI only: resettle one pop to occupied planets without any own pop, while others are getting purged (homicidal empire)
+
+planet_event = {
+	id = pop_resettlement.1000
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_1000from days = 5 }
+		random_owned_pop = {
+			limit = {
+				OR = {
+					is_pop_category = worker
+					is_pop_category = simple_drone
+				}
+				pop_check_citizenship_full = yes
+			}
+			#log = resettle_emergency3_event_1
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						habitability = { who = prevprev value > 0.49 }
+						planet_allow_resettle_planet_state_to_AI_emergency = yes
+						has_modifier = land_appropriation
+						pop_count_citizen_full_pops = yes
+						free_jobs > 0
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					save_event_target_as = send_pop_1000
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_1000to days = 5 }
+				}
+				#log = resettle_emergency3_event_2
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_1000
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_emergency3_event_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_1000
+				}
+			}
+		}
+	}
+}
+
+# This part resettles fallen empire ruler pops, who can take only ruler jobs
+# there are three categories of unemployment for FE types and corresponding jobs to them
+# all of them are taken into account
+
+planet_event = {
+	id = pop_resettlement.1100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+		# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_1100from days = 5 }
+		random_owned_pop = {
+			limit = {
+				is_pop_category = precursor
+				OR = {
+					AND = {
+						NOT = { has_ethic = ethic_fanatic_spiritualist }
+						has_job = fe_hedonist			# resettle: hedonist	
+					}
+					AND = {
+						has_ethic = ethic_fanatic_spiritualist
+						has_job = fe_acolyte_artisan	#resettle: acolyte_artisan
+					}
+					AND = {
+						has_ethic = ethic_gestalt_consciousness
+						has_job = fe_maintenance_bot	#resettle: caretaker
+					}
+				}
+				#log = resettle_fe_ruler_event_1
+			}
+			owner = {
+				random_owned_planet = {
+					limit = {
+						is_controlled_by = prev
+						planet_allow_resettle = yes
+						pop_job_check_fallen_empire = yes
+					}
+					set_timed_planet_flag = { flag = pop_resettlement_flag days = 5 }
+					save_event_target_as = send_pop_1100
+					# set_timed_planet_flag = { flag = pop_resettlement_debug_flag_1100to days = 5 }
+					#log = resettle_fe_ruler_event_2
+				}
+			}
+			if = {
+				limit = { 
+					exists = event_target:send_pop_1100
+					prev = { planet_allow_resettle_building_destruct = yes }
+				}
+				#log = resettle_fe_ruler_event_finish
+				resettle_pop = {
+					pop = this
+					planet = event_target:send_pop_1100
+				}
+			}
+		}
+	}
+}

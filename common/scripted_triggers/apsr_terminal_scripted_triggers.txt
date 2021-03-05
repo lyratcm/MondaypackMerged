@@ -1,0 +1,371 @@
+
+
+# для проверки повторов при генерации кодов (старт игры)
+apsr_terminal_check_generated_variables = {
+	OR = {
+		
+		# сгенерированные числа
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_01
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_02
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_03
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_04
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_05
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_06
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_07
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_08
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_09
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_10
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_11
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_12
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_13
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_14
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_15
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_16
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_17
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_18
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_19
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_20
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_21
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_22
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_23
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_24
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_25
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_26
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_27
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_28
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_29
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_30
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_31
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_32
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_33
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_34
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_35
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_36
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_37
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_38
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_39
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_40
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_41
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_42
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_43
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_44
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_45
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_46
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_47
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_48
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_49
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_50
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_51
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_52
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_53
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_54
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_55
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_56
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_57
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_58
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_59
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_60
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_61
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_62
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_63
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_64
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = apsr_terminal_code_65
+		}
+	
+		# фиксированные числа
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = 451
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = 2012
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = 6666
+		}
+		check_variable = { 
+			which = apsr_terminal_code_generated
+			value = 9029
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+# условие что игрок владеет любым неактивированным кодом
+apsr_terminal_has_any_code_info = {
+	OR = {
+		has_country_flag = apsr_terminal_code_01_found
+		has_country_flag = apsr_terminal_code_02_found
+		has_country_flag = apsr_terminal_code_03_found
+		has_country_flag = apsr_terminal_code_04_found
+		has_country_flag = apsr_terminal_code_05_found
+		has_country_flag = apsr_terminal_code_06_found
+		has_country_flag = apsr_terminal_code_07_found
+		has_country_flag = apsr_terminal_code_08_found
+		has_country_flag = apsr_terminal_code_09_found
+		has_country_flag = apsr_terminal_code_10_found
+		has_country_flag = apsr_terminal_code_11_found
+		has_country_flag = apsr_terminal_code_12_found
+		has_country_flag = apsr_terminal_code_13_found
+		has_country_flag = apsr_terminal_code_14_found
+		has_country_flag = apsr_terminal_code_15_found
+		has_country_flag = apsr_terminal_code_16_found
+		has_country_flag = apsr_terminal_code_17_found
+		has_country_flag = apsr_terminal_code_18_found
+		has_country_flag = apsr_terminal_code_19_found
+		has_country_flag = apsr_terminal_code_20_found
+		has_country_flag = apsr_terminal_code_21_found
+		has_country_flag = apsr_terminal_code_22_found
+		has_country_flag = apsr_terminal_code_23_found
+		has_country_flag = apsr_terminal_code_24_found
+		has_country_flag = apsr_terminal_code_25_found
+		has_country_flag = apsr_terminal_code_26_found
+		has_country_flag = apsr_terminal_code_27_found
+		has_country_flag = apsr_terminal_code_28_found
+		has_country_flag = apsr_terminal_code_29_found
+		has_country_flag = apsr_terminal_code_30_found
+		has_country_flag = apsr_terminal_code_31_found
+		has_country_flag = apsr_terminal_code_32_found
+		has_country_flag = apsr_terminal_code_33_found
+		has_country_flag = apsr_terminal_code_34_found
+		has_country_flag = apsr_terminal_code_35_found
+		has_country_flag = apsr_terminal_code_36_found
+		has_country_flag = apsr_terminal_code_37_found
+		has_country_flag = apsr_terminal_code_38_found
+		has_country_flag = apsr_terminal_code_39_found
+		has_country_flag = apsr_terminal_code_40_found
+		has_country_flag = apsr_terminal_code_41_found
+		has_country_flag = apsr_terminal_code_42_found
+		has_country_flag = apsr_terminal_code_43_found
+		has_country_flag = apsr_terminal_code_44_found
+		has_country_flag = apsr_terminal_code_45_found
+		has_country_flag = apsr_terminal_code_46_found
+		has_country_flag = apsr_terminal_code_47_found
+		has_country_flag = apsr_terminal_code_48_found
+		has_country_flag = apsr_terminal_code_49_found
+		has_country_flag = apsr_terminal_code_50_found
+		has_country_flag = apsr_terminal_code_51_found
+		has_country_flag = apsr_terminal_code_52_found
+		has_country_flag = apsr_terminal_code_53_found
+		has_country_flag = apsr_terminal_code_54_found
+		has_country_flag = apsr_terminal_code_55_found
+		has_country_flag = apsr_terminal_code_56_found
+		has_country_flag = apsr_terminal_code_57_found
+		has_country_flag = apsr_terminal_code_58_found
+		has_country_flag = apsr_terminal_code_59_found
+		has_country_flag = apsr_terminal_code_60_found
+		has_country_flag = apsr_terminal_code_61_found
+		has_country_flag = apsr_terminal_code_62_found
+		has_country_flag = apsr_terminal_code_63_found
+		has_country_flag = apsr_terminal_code_64_found
+		has_country_flag = apsr_terminal_code_65_found
+		has_country_flag = apsr_terminal_code_0451_found
+		has_country_flag = apsr_terminal_code_2012_found
+		has_country_flag = apsr_terminal_code_6666_found
+		has_country_flag = apsr_terminal_code_9029_found
+	}
+}

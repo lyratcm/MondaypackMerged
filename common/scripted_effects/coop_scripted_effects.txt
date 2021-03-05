@@ -1,0 +1,663 @@
+coop_menu_select_country = {
+    if = { limit = { has_country_flag = team1_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot1 set_country_flag = is_already_in_team set_country_flag = team1 } event_target:chosen_country_name = { save_global_event_target_as = team1_slot1_name } }
+    else_if = { limit = { has_country_flag = team1_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot2 set_country_flag = is_already_in_team set_country_flag = team1  } event_target:chosen_country_name = { save_global_event_target_as = team1_slot2_name } }
+    else_if = { limit = { has_country_flag = team1_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot3 set_country_flag = is_already_in_team set_country_flag = team1 } event_target:chosen_country_name = { save_global_event_target_as = team1_slot3_name } }
+    else_if = { limit = { has_country_flag = team1_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot4 set_country_flag = is_already_in_team set_country_flag = team1  } event_target:chosen_country_name = { save_global_event_target_as = team1_slot4_name } }
+    else_if = { limit = { has_country_flag = team1_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot5 set_country_flag = is_already_in_team set_country_flag = team1 } event_target:chosen_country_name = { save_global_event_target_as = team1_slot5_name } }
+    else_if = { limit = { has_country_flag = team1_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot6 set_country_flag = is_already_in_team set_country_flag = team1  } event_target:chosen_country_name = { save_global_event_target_as = team1_slot6_name } }
+    else_if = { limit = { has_country_flag = team1_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot7 set_country_flag = is_already_in_team set_country_flag = team1 } event_target:chosen_country_name = { save_global_event_target_as = team1_slot7_name } }
+    else_if = { limit = { has_country_flag = team1_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot8 set_country_flag = is_already_in_team set_country_flag = team1  } event_target:chosen_country_name = { save_global_event_target_as = team1_slot8_name } }
+    else_if = { limit = { has_country_flag = team1_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot9 set_country_flag = is_already_in_team set_country_flag = team1 } event_target:chosen_country_name = { save_global_event_target_as = team1_slot9_name } }
+    else_if = { limit = { has_country_flag = team1_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team1_slot10 set_country_flag = is_already_in_team set_country_flag = team1  } event_target:chosen_country_name = { save_global_event_target_as = team1_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team2_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot1 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot1_name } }
+    else_if = { limit = { has_country_flag = team2_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot2 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot2_name } }
+    else_if = { limit = { has_country_flag = team2_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot3 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot3_name } }
+    else_if = { limit = { has_country_flag = team2_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot4 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot4_name } }
+    else_if = { limit = { has_country_flag = team2_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot5 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot5_name } }
+    else_if = { limit = { has_country_flag = team2_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot6 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot6_name } }
+    else_if = { limit = { has_country_flag = team2_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot7 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot7_name } }
+    else_if = { limit = { has_country_flag = team2_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot8 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot8_name } }
+    else_if = { limit = { has_country_flag = team2_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot9 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot9_name } }
+    else_if = { limit = { has_country_flag = team2_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team2_slot10 set_country_flag = is_already_in_team set_country_flag = team2 } event_target:chosen_country_name = { save_global_event_target_as = team2_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team3_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot1 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot1_name } }
+    else_if = { limit = { has_country_flag = team3_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot2 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot2_name } }
+    else_if = { limit = { has_country_flag = team3_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot3 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot3_name } }
+    else_if = { limit = { has_country_flag = team3_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot4 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot4_name } }
+    else_if = { limit = { has_country_flag = team3_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot5 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot5_name } }
+    else_if = { limit = { has_country_flag = team3_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot6 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot6_name } }
+    else_if = { limit = { has_country_flag = team3_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot7 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot7_name } }
+    else_if = { limit = { has_country_flag = team3_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot8 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot8_name } }
+    else_if = { limit = { has_country_flag = team3_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot9 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot9_name } }
+    else_if = { limit = { has_country_flag = team3_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team3_slot10 set_country_flag = is_already_in_team set_country_flag = team3  } event_target:chosen_country_name = { save_global_event_target_as = team3_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team4_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot1 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot1_name } }
+    else_if = { limit = { has_country_flag = team4_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot2 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot2_name } }
+    else_if = { limit = { has_country_flag = team4_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot3 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot3_name } }
+    else_if = { limit = { has_country_flag = team4_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot4 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot4_name } }
+    else_if = { limit = { has_country_flag = team4_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot5 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot5_name } }
+    else_if = { limit = { has_country_flag = team4_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot6 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot6_name } }
+    else_if = { limit = { has_country_flag = team4_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot7 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot7_name } }
+    else_if = { limit = { has_country_flag = team4_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot8 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot8_name } }
+    else_if = { limit = { has_country_flag = team4_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot9 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot9_name } }
+    else_if = { limit = { has_country_flag = team4_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team4_slot10 set_country_flag = is_already_in_team set_country_flag = team4  } event_target:chosen_country_name = { save_global_event_target_as = team4_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team5_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot1 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot1_name } }
+    else_if = { limit = { has_country_flag = team5_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot2 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot2_name } }
+    else_if = { limit = { has_country_flag = team5_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot3 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot3_name } }
+    else_if = { limit = { has_country_flag = team5_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot4 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot4_name } }
+    else_if = { limit = { has_country_flag = team5_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot5 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot5_name } }
+    else_if = { limit = { has_country_flag = team5_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot6 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot6_name } }
+    else_if = { limit = { has_country_flag = team5_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot7 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot7_name } }
+    else_if = { limit = { has_country_flag = team5_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot8 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot8_name } }
+    else_if = { limit = { has_country_flag = team5_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot9 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot9_name } }
+    else_if = { limit = { has_country_flag = team5_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team5_slot10 set_country_flag = is_already_in_team set_country_flag = team5  } event_target:chosen_country_name = { save_global_event_target_as = team5_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team6_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot1 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot1_name } }
+    else_if = { limit = { has_country_flag = team6_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot2 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot2_name } }
+    else_if = { limit = { has_country_flag = team6_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot3 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot3_name } }
+    else_if = { limit = { has_country_flag = team6_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot4 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot4_name } }
+    else_if = { limit = { has_country_flag = team6_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot5 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot5_name } }
+    else_if = { limit = { has_country_flag = team6_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot6 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot6_name } }
+    else_if = { limit = { has_country_flag = team6_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot7 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot7_name } }
+    else_if = { limit = { has_country_flag = team6_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot8 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot8_name } }
+    else_if = { limit = { has_country_flag = team6_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot9 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot9_name } }
+    else_if = { limit = { has_country_flag = team6_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team6_slot10 set_country_flag = is_already_in_team set_country_flag = team6  } event_target:chosen_country_name = { save_global_event_target_as = team6_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team7_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot1 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot1_name } }
+    else_if = { limit = { has_country_flag = team7_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot2 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot2_name } }
+    else_if = { limit = { has_country_flag = team7_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot3 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot3_name } }
+    else_if = { limit = { has_country_flag = team7_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot4 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot4_name } }
+    else_if = { limit = { has_country_flag = team7_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot5 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot5_name } }
+    else_if = { limit = { has_country_flag = team7_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot6 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot6_name } }
+    else_if = { limit = { has_country_flag = team7_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot7 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot7_name } }
+    else_if = { limit = { has_country_flag = team7_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot8 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot8_name } }
+    else_if = { limit = { has_country_flag = team7_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot9 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot9_name } }
+    else_if = { limit = { has_country_flag = team7_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team7_slot10 set_country_flag = is_already_in_team set_country_flag = team7  } event_target:chosen_country_name = { save_global_event_target_as = team7_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team8_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot1 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot1_name } }
+    else_if = { limit = { has_country_flag = team8_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot2 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot2_name } }
+    else_if = { limit = { has_country_flag = team8_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot3 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot3_name } }
+    else_if = { limit = { has_country_flag = team8_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot4 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot4_name } }
+    else_if = { limit = { has_country_flag = team8_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot5 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot5_name } }
+    else_if = { limit = { has_country_flag = team8_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot6 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot6_name } }
+    else_if = { limit = { has_country_flag = team8_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot7 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot7_name } }
+    else_if = { limit = { has_country_flag = team8_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot8 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot8_name } }
+    else_if = { limit = { has_country_flag = team8_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot9 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot9_name } }
+    else_if = { limit = { has_country_flag = team8_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team8_slot10 set_country_flag = is_already_in_team set_country_flag = team8  } event_target:chosen_country_name = { save_global_event_target_as = team8_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team9_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot1 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot1_name } }
+    else_if = { limit = { has_country_flag = team9_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot2 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot2_name } }
+    else_if = { limit = { has_country_flag = team9_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot3 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot3_name } }
+    else_if = { limit = { has_country_flag = team9_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot4 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot4_name } }
+    else_if = { limit = { has_country_flag = team9_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot5 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot5_name } }
+    else_if = { limit = { has_country_flag = team9_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot6 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot6_name } }
+    else_if = { limit = { has_country_flag = team9_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot7 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot7_name } }
+    else_if = { limit = { has_country_flag = team9_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot8 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot8_name } }
+    else_if = { limit = { has_country_flag = team9_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot9 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot9_name } }
+    else_if = { limit = { has_country_flag = team9_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team9_slot10 set_country_flag = is_already_in_team set_country_flag = team9  } event_target:chosen_country_name = { save_global_event_target_as = team9_slot10_name } }
+
+    else_if = { limit = { has_country_flag = team10_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot1 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot1_name } }
+    else_if = { limit = { has_country_flag = team10_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot2 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot2_name } }
+    else_if = { limit = { has_country_flag = team10_slot3_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot3 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot3_name } }
+    else_if = { limit = { has_country_flag = team10_slot4_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot4 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot4_name } }
+    else_if = { limit = { has_country_flag = team10_slot5_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot5 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot5_name } }
+    else_if = { limit = { has_country_flag = team10_slot6_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot6 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot6_name } }
+    else_if = { limit = { has_country_flag = team10_slot7_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot7 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot7_name } }
+    else_if = { limit = { has_country_flag = team10_slot8_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot8 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot8_name } }
+    else_if = { limit = { has_country_flag = team10_slot9_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot9 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot9_name } }
+    else_if = { limit = { has_country_flag = team10_slot10_selected} event_target:chosen_country = { save_global_event_target_as = team10_slot10 set_country_flag = is_already_in_team set_country_flag = team10  } event_target:chosen_country_name = { save_global_event_target_as = team10_slot10_name } }
+
+    # else_if = { limit = { has_country_flag = team11_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team11_slot1 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team11_slot1_name } }
+    # else_if = { limit = { has_country_flag = team11_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team11_slot2 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team11_slot2_name } }
+    # else_if = { limit = { has_country_flag = team12_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team12_slot1 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team12_slot1_name } }
+    # else_if = { limit = { has_country_flag = team12_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team12_slot2 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team12_slot2_name } }
+    # else_if = { limit = { has_country_flag = team13_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team13_slot1 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team13_slot1_name } }
+    # else_if = { limit = { has_country_flag = team13_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team13_slot2 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team13_slot2_name } }
+    # else_if = { limit = { has_country_flag = team14_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team14_slot1 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team14_slot1_name } }
+    # else_if = { limit = { has_country_flag = team14_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team14_slot2 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team14_slot2_name } }
+    # else_if = { limit = { has_country_flag = team15_slot1_selected} event_target:chosen_country = { save_global_event_target_as = team15_slot1 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team15_slot1_name } }
+    # else_if = { limit = { has_country_flag = team15_slot2_selected} event_target:chosen_country = { save_global_event_target_as = team15_slot2 set_country_flag = is_already_in_team } event_target:chosen_country_name = { save_global_event_target_as = team15_slot2_name } }
+}
+
+remove_teams = {
+    remove_country_flag = team1
+    remove_country_flag = team2
+    remove_country_flag = team3
+    remove_country_flag = team4
+    remove_country_flag = team5
+    remove_country_flag = team6
+    remove_country_flag = team7
+    remove_country_flag = team8
+    remove_country_flag = team9
+    remove_country_flag = team10
+
+}
+
+set_coop_difficulty = {
+    set_coop_difficulty_by_team = { NUM = 1 }
+    set_coop_difficulty_by_team = { NUM = 2 }
+    set_coop_difficulty_by_team = { NUM = 3 }
+    set_coop_difficulty_by_team = { NUM = 4 }
+    set_coop_difficulty_by_team = { NUM = 5 }
+    set_coop_difficulty_by_team = { NUM = 6 }
+    set_coop_difficulty_by_team = { NUM = 7 }
+    set_coop_difficulty_by_team = { NUM = 8 }
+    set_coop_difficulty_by_team = { NUM = 9 }
+    set_coop_difficulty_by_team = { NUM = 10 }
+}
+
+prepare_coop = {
+    set_country_flag = ai_no_leave_fed 
+    set_country_flag = has_chosen_federation 
+    set_country_flag = is_in_coop_with@prev
+    if = {
+        limit = { has_federation = no }
+        join_alliance = { who = prev override_requirements = yes }  
+        federation = {
+            if = {
+                limit = { not = { has_federation_flag = "named" } }            
+                set_correct_federation_type = yes
+                set_name = random
+                set_federation_flag = "named"                
+            }
+		}
+    }           
+    set_closed_borders = { who = prev status = no }
+    capital_scope = {
+        solar_system = { 
+            save_event_target_as = current_wormhole_system 
+            if = {
+                limit = { owner = { not = { owns_any_bypass = coop_wormhole } } }
+                spawn_natural_wormhole = { bypass_type = coop_wormhole random_pos = yes orbit_angle = 360 }
+            }
+        }
+    }        
+        
+    prev = { 
+        set_country_flag = ai_no_leave_fed 
+        set_country_flag = has_chosen_federation 
+        set_country_flag = is_in_coop_with@prev
+        set_closed_borders = { who = prev status = no }
+        capital_scope = {
+            solar_system = { 
+                if = {
+                    limit = { owner = { not = { owns_any_bypass = coop_wormhole } } }
+                    spawn_natural_wormhole = { bypass_type = coop_wormhole random_pos = yes orbit_angle = 360 }
+                }
+                link_wormholes = event_target:current_wormhole_system
+                set_star_flag = connectsTo@event_target:current_wormhole_system   
+                event_target:current_wormhole_system = { 
+                    link_wormholes = prev
+                    set_star_flag = connectsTo@prev 
+                }
+            }
+        }         
+    }
+}
+
+set_correct_federation_type = {
+    set_federation_type_by_team = { NUM = 1 }
+    set_federation_type_by_team = { NUM = 2 }
+    set_federation_type_by_team = { NUM = 3 }
+    set_federation_type_by_team = { NUM = 4 }
+    set_federation_type_by_team = { NUM = 5 }
+    set_federation_type_by_team = { NUM = 6 }
+    set_federation_type_by_team = { NUM = 7 }
+    set_federation_type_by_team = { NUM = 8 }
+    set_federation_type_by_team = { NUM = 9 }
+    set_federation_type_by_team = { NUM = 10 }
+}
+
+set_federation_type_by_team = {
+    if = {
+        limit = { prev = { has_country_flag = team$NUM$ } }
+        set_federation_flag = federationOfTeam$NUM$     
+        if = { limit = { has_global_flag = team$NUM$UseGalacticUnion } set_federation_type = default_federation }
+        else_if = { limit = { has_global_flag = team$NUM$UseHegemony } set_federation_type = hegemony_federation }
+        else_if = { limit = { has_global_flag = team$NUM$UseTradeLeague } set_federation_type = trade_federation }
+        else_if = { limit = { has_global_flag = team$NUM$UseResearchCoop } set_federation_type = research_federation }
+        else_if = { limit = { has_global_flag = team$NUM$UseMartialAlliance } set_federation_type = military_federation }        
+    }
+}
+
+set_coop_difficulty_by_team = {
+    if = { limit = { has_global_flag = team$NUM$isStrong } every_country = { limit = { has_country_flag = team$NUM$ OR = { is_ai = yes NOT = { has_global_flag = player_is_not_strong } } }  add_modifier = { modifier = difficulty_strong } } }
+    else_if = { limit = { has_global_flag = team$NUM$isStronger } every_country = { limit = { has_country_flag = team$NUM$ OR = { is_ai = yes  NOT = { has_global_flag = player_is_not_strong } } }  add_modifier = { modifier = difficulty_stronger } } }
+    else_if = { limit = { has_global_flag = team$NUM$isMuchStronger } every_country = { limit = { has_country_flag = team$NUM$ OR = { is_ai = yes  NOT = { has_global_flag = player_is_not_strong } } }  add_modifier = { modifier = difficulty_much_stronger } } }
+    else_if = { limit = { has_global_flag = team$NUM$isImpossible } every_country = { limit = { has_country_flag = team$NUM$ OR = { is_ai = yes  NOT = { has_global_flag = player_is_not_strong } } }   add_modifier = { modifier = difficulty_impossible } } }
+
+    if = {
+        limit = { 
+            has_global_flag = team$NUM$isAdvanced
+        }
+        every_country = { 
+            limit = { has_country_flag = team$NUM$  OR = { is_ai = yes NOT = { has_global_flag = player_is_not_strong } } }
+            random_list = {
+                1 = { set_variable = { which = "coop_target_number_of_systems" value = 4 } }			
+                2 = { set_variable = { which = "coop_target_number_of_systems" value = 5 } }			
+                2 = { set_variable = { which = "coop_target_number_of_systems" value = 6 } }			
+                2 = { set_variable = { which = "coop_target_number_of_systems" value = 7 } }
+                1 = { set_variable = { which = "coop_target_number_of_systems" value = 8 } }
+            }
+            country_event = { id = coop_sizes.0 }	
+        }
+    }
+    else_if = {
+        limit = { 
+            has_global_flag = team$NUM$isSuperior
+        }
+        every_country = { 
+            limit = { has_country_flag = team$NUM$  OR = { is_ai = yes NOT = { has_global_flag = player_is_not_strong } } }
+            random_list = {
+				1 = { set_variable = { which = "coop_target_number_of_systems" value = 8 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 10 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 12 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 14 } }
+				1 = { set_variable = { which = "coop_target_number_of_systems" value = 16 } }
+			}
+			country_event = { id = coop_sizes.0 }
+			every_owned_planet = {
+				limit = { is_capital = no }
+				planet_event = { id = coop_sizes.20 }
+				add_building = building_research_lab_1
+				if = {
+					limit = { owner = { is_gestalt = no } }
+					add_building = building_factory_1					
+				}
+				else_if = {
+					limit = { owner = { is_machine_empire = yes } }
+					add_building = building_machine_assembly_plant
+				}			
+				else = {				
+					add_building = building_spawning_pool
+				}
+			}	
+        }
+    }
+    else_if = {
+        limit = { 
+            has_global_flag = team$NUM$isOverwhelming
+        }
+        every_country = { 
+            limit = { has_country_flag = team$NUM$  OR = { is_ai = yes NOT = { has_global_flag = player_is_not_strong } } }
+
+            random_list = {
+				1 = { set_variable = { which = "coop_target_number_of_systems" value = 16 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 20 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 24 } }			
+				2 = { set_variable = { which = "coop_target_number_of_systems" value = 28 } }
+				1 = { set_variable = { which = "coop_target_number_of_systems" value = 32 } }
+			}
+			country_event = { id = coop_sizes.0 }
+			every_owned_planet = {
+				limit = { is_capital = no }
+				planet_event = { id = game_start.23 }				
+				planet_event = { id = coop_sizes.20 }
+				planet_event = { id = coop_sizes.20 }
+
+				add_building = building_research_lab_1
+				if = {
+					limit = { owner = { is_gestalt = no } }
+					add_building = building_factory_1					
+				}
+				else_if = {
+					limit = { owner = { is_machine_empire = yes } }
+					add_building = building_machine_assembly_plant
+				}			
+				else = {				
+					add_building = building_spawning_pool
+				}
+			}	
+        }
+    }
+}
+
+setGalacticUnion = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }                    
+        set_global_flag = team$NUM$UseGalacticUnion
+        remove_global_flag = team$NUM$UseHegemony
+        remove_global_flag = team$NUM$UseTradeLeague
+        remove_global_flag = team$NUM$UseResearchCoop
+        remove_global_flag = team$NUM$UseMartialAlliance
+    }
+}
+setHegemony = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }            
+        remove_global_flag = team$NUM$UseGalacticUnion
+        set_global_flag = team$NUM$UseHegemony
+        remove_global_flag = team$NUM$UseTradeLeague
+        remove_global_flag = team$NUM$UseResearchCoop
+        remove_global_flag = team$NUM$UseMartialAlliance
+    }
+}
+setTradeLeague = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }            
+        remove_global_flag = team$NUM$UseGalacticUnion
+        remove_global_flag = team$NUM$UseHegemony
+        set_global_flag = team$NUM$UseTradeLeague
+        remove_global_flag = team$NUM$UseResearchCoop
+        remove_global_flag = team$NUM$UseMartialAlliance
+    }
+}
+setResearchCoop = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }            
+        remove_global_flag = team$NUM$UseGalacticUnion
+        remove_global_flag = team$NUM$UseHegemony
+        remove_global_flag = team$NUM$UseTradeLeague
+        set_global_flag = team$NUM$UseResearchCoop
+        remove_global_flag = team$NUM$UseMartialAlliance
+    }
+}
+setMartialAlliance = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }            
+        remove_global_flag = team$NUM$UseGalacticUnion
+        remove_global_flag = team$NUM$UseHegemony
+        remove_global_flag = team$NUM$UseTradeLeague
+        remove_global_flag = team$NUM$UseResearchCoop
+        set_global_flag = team$NUM$UseMartialAlliance
+    }
+}
+
+removeAllSlotSelectedFlags = {
+    remove_country_flag = team1_slot1_selected
+        remove_country_flag = team1_slot2_selected
+        remove_country_flag = team1_slot3_selected
+        remove_country_flag = team1_slot4_selected
+        remove_country_flag = team1_slot5_selected
+        remove_country_flag = team1_slot6_selected
+        remove_country_flag = team1_slot7_selected
+        remove_country_flag = team1_slot8_selected
+        remove_country_flag = team1_slot9_selected
+        remove_country_flag = team1_slot10_selected
+
+        remove_country_flag = team2_slot1_selected
+        remove_country_flag = team2_slot2_selected
+        remove_country_flag = team2_slot3_selected
+        remove_country_flag = team2_slot4_selected
+        remove_country_flag = team2_slot5_selected
+        remove_country_flag = team2_slot6_selected
+        remove_country_flag = team2_slot7_selected
+        remove_country_flag = team2_slot8_selected
+        remove_country_flag = team2_slot9_selected
+        remove_country_flag = team2_slot10_selected
+
+        remove_country_flag = team3_slot1_selected
+        remove_country_flag = team3_slot2_selected
+        remove_country_flag = team3_slot3_selected
+        remove_country_flag = team3_slot4_selected
+        remove_country_flag = team3_slot5_selected
+        remove_country_flag = team3_slot6_selected
+        remove_country_flag = team3_slot7_selected
+        remove_country_flag = team3_slot8_selected
+        remove_country_flag = team3_slot9_selected
+        remove_country_flag = team3_slot10_selected
+
+        remove_country_flag = team4_slot1_selected
+        remove_country_flag = team4_slot2_selected
+        remove_country_flag = team4_slot3_selected
+        remove_country_flag = team4_slot4_selected
+        remove_country_flag = team4_slot5_selected
+        remove_country_flag = team4_slot6_selected
+        remove_country_flag = team4_slot7_selected
+        remove_country_flag = team4_slot8_selected
+        remove_country_flag = team4_slot9_selected
+        remove_country_flag = team4_slot10_selected
+
+        remove_country_flag = team5_slot1_selected
+        remove_country_flag = team5_slot2_selected
+        remove_country_flag = team5_slot3_selected
+        remove_country_flag = team5_slot4_selected
+        remove_country_flag = team5_slot5_selected
+        remove_country_flag = team5_slot6_selected
+        remove_country_flag = team5_slot7_selected
+        remove_country_flag = team5_slot8_selected
+        remove_country_flag = team5_slot9_selected
+        remove_country_flag = team5_slot10_selected
+
+        remove_country_flag = team6_slot1_selected
+        remove_country_flag = team6_slot2_selected
+        remove_country_flag = team6_slot3_selected
+        remove_country_flag = team6_slot4_selected
+        remove_country_flag = team6_slot5_selected
+        remove_country_flag = team6_slot6_selected
+        remove_country_flag = team6_slot7_selected
+        remove_country_flag = team6_slot8_selected
+        remove_country_flag = team6_slot9_selected
+        remove_country_flag = team6_slot10_selected
+
+        remove_country_flag = team7_slot1_selected
+        remove_country_flag = team7_slot2_selected
+        remove_country_flag = team7_slot3_selected
+        remove_country_flag = team7_slot4_selected
+        remove_country_flag = team7_slot5_selected
+        remove_country_flag = team7_slot6_selected
+        remove_country_flag = team7_slot7_selected
+        remove_country_flag = team7_slot8_selected
+        remove_country_flag = team7_slot9_selected
+        remove_country_flag = team7_slot10_selected
+
+        remove_country_flag = team8_slot1_selected
+        remove_country_flag = team8_slot2_selected
+        remove_country_flag = team8_slot3_selected
+        remove_country_flag = team8_slot4_selected
+        remove_country_flag = team8_slot5_selected
+        remove_country_flag = team8_slot6_selected
+        remove_country_flag = team8_slot7_selected
+        remove_country_flag = team8_slot8_selected
+        remove_country_flag = team8_slot9_selected
+        remove_country_flag = team8_slot10_selected
+
+        remove_country_flag = team9_slot1_selected
+        remove_country_flag = team9_slot2_selected
+        remove_country_flag = team9_slot3_selected
+        remove_country_flag = team9_slot4_selected
+        remove_country_flag = team9_slot5_selected
+        remove_country_flag = team9_slot6_selected
+        remove_country_flag = team9_slot7_selected
+        remove_country_flag = team9_slot8_selected
+        remove_country_flag = team9_slot9_selected
+        remove_country_flag = team9_slot10_selected
+
+        remove_country_flag = team10_slot1_selected
+        remove_country_flag = team10_slot2_selected
+        remove_country_flag = team10_slot3_selected
+        remove_country_flag = team10_slot4_selected
+        remove_country_flag = team10_slot5_selected
+        remove_country_flag = team10_slot6_selected
+        remove_country_flag = team10_slot7_selected
+        remove_country_flag = team10_slot8_selected
+        remove_country_flag = team10_slot9_selected
+        remove_country_flag = team10_slot10_selected
+}
+
+setMartialAlliances = {
+    setMartialAlliance = { NUM = 1 }
+    setMartialAlliance = { NUM = 2 }
+    setMartialAlliance = { NUM = 3 }
+    setMartialAlliance = { NUM = 4 }
+    setMartialAlliance = { NUM = 5 }
+    setMartialAlliance = { NUM = 6 }
+    setMartialAlliance = { NUM = 7 }
+    setMartialAlliance = { NUM = 8 }
+    setMartialAlliance = { NUM = 9 }
+    setMartialAlliance = { NUM = 10 }
+}
+
+setResearchCoops = {
+    setResearchCoop = { NUM = 1 }
+    setResearchCoop = { NUM = 2 }
+    setResearchCoop = { NUM = 3 }
+    setResearchCoop = { NUM = 4 }
+    setResearchCoop = { NUM = 5 }
+    setResearchCoop = { NUM = 6 }
+    setResearchCoop = { NUM = 7 }
+    setResearchCoop = { NUM = 8 }
+    setResearchCoop = { NUM = 9 }
+    setResearchCoop = { NUM = 10 }
+}
+
+setTradeLeagues = {
+    setTradeLeague = { NUM = 1 }
+    setTradeLeague = { NUM = 2 }
+    setTradeLeague = { NUM = 3 }
+    setTradeLeague = { NUM = 4 }
+    setTradeLeague = { NUM = 5 }
+    setTradeLeague = { NUM = 6 }
+    setTradeLeague = { NUM = 7 }
+    setTradeLeague = { NUM = 8 }
+    setTradeLeague = { NUM = 9 }
+    setTradeLeague = { NUM = 10 }
+}
+
+setHegemonys = {
+    setHegemony = { NUM = 1 }
+    setHegemony = { NUM = 2 }
+    setHegemony = { NUM = 3 }
+    setHegemony = { NUM = 4 }
+    setHegemony = { NUM = 5 }
+    setHegemony = { NUM = 6 }
+    setHegemony = { NUM = 7 }
+    setHegemony = { NUM = 8 }
+    setHegemony = { NUM = 9 }
+    setHegemony = { NUM = 10 }
+}
+
+setGalacticUnions = {
+    setGalacticUnion = { NUM = 1 }
+    setGalacticUnion = { NUM = 2 }
+    setGalacticUnion = { NUM = 3 }
+    setGalacticUnion = { NUM = 4 }
+    setGalacticUnion = { NUM = 5 }
+    setGalacticUnion = { NUM = 6 }
+    setGalacticUnion = { NUM = 7 }
+    setGalacticUnion = { NUM = 8 }
+    setGalacticUnion = { NUM = 9 }
+    setGalacticUnion = { NUM = 10 }
+}
+
+makeStrong = {
+    makeStrongByTeam = { NUM = 1 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 2 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 3 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 4 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 5 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 6 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 7 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 8 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 9 STRONG = $STRONG$ }
+    makeStrongByTeam = { NUM = 10 STRONG = $STRONG$ }
+}
+
+makeStrongByTeam = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }
+        remove_global_flag = team$NUM$isStrong
+        remove_global_flag = team$NUM$isStronger
+        remove_global_flag = team$NUM$isMuchStronger
+        remove_global_flag = team$NUM$isImpossible
+        set_global_flag = team$NUM$is$STRONG$
+    }
+}
+
+makeAdvanced = {
+    makeAdvancedByTeam = { NUM = 1 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 2 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 3 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 4 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 5 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 6 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 7 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 8 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 9 STRONG = $STRONG$ }
+    makeAdvancedByTeam = { NUM = 10 STRONG = $STRONG$ }
+}
+
+makeAdvancedByTeam = {
+    if = {
+        limit = { has_country_flag = team$NUM$_settings_selected }
+        remove_global_flag = team$NUM$isAdvanced
+        remove_global_flag = team$NUM$isSuperior
+        remove_global_flag = team$NUM$isOverwhelming
+        set_global_flag = team$NUM$is$STRONG$
+    }
+}
+
+auto_fill = {
+    set_country_flag = team1_slot1_selected
+    auto_fill_country = { COUNTRY = 0 }
+    set_country_flag = team2_slot1_selected
+    auto_fill_country = { COUNTRY = 1 }
+    set_country_flag = team3_slot1_selected
+    auto_fill_country = { COUNTRY = 2 }
+    set_country_flag = team4_slot1_selected
+    auto_fill_country = { COUNTRY = 3 }
+    set_country_flag = team5_slot1_selected
+    auto_fill_country = { COUNTRY = 4 }
+    set_country_flag = team6_slot1_selected
+    auto_fill_country = { COUNTRY = 5 }
+    set_country_flag = team7_slot1_selected
+    auto_fill_country = { COUNTRY = 6 }
+    set_country_flag = team8_slot1_selected
+    auto_fill_country = { COUNTRY = 7 }
+    set_country_flag = team9_slot1_selected
+    auto_fill_country = { COUNTRY = 8 }
+    set_country_flag = team10_slot1_selected
+    auto_fill_country = { COUNTRY = 9 }
+    set_country_flag = team1_slot2_selected
+    auto_fill_country = { COUNTRY = 10 }
+    set_country_flag = team2_slot2_selected
+    auto_fill_country = { COUNTRY = 11 }
+    set_country_flag = team3_slot2_selected
+    auto_fill_country = { COUNTRY = 12 }
+    set_country_flag = team4_slot2_selected
+    auto_fill_country = { COUNTRY = 13 }
+    set_country_flag = team5_slot2_selected
+    auto_fill_country = { COUNTRY = 14 }
+    set_country_flag = team6_slot2_selected
+    auto_fill_country = { COUNTRY = 15 }
+    set_country_flag = team7_slot2_selected
+    auto_fill_country = { COUNTRY = 16 }
+    set_country_flag = team8_slot2_selected
+    auto_fill_country = { COUNTRY = 17 }
+    set_country_flag = team9_slot2_selected
+    auto_fill_country = { COUNTRY = 18 }
+    set_country_flag = team10_slot2_selected
+    auto_fill_country = { COUNTRY = 19 }
+    set_country_flag = team1_slot3_selected
+    auto_fill_country = { COUNTRY = 20 }
+    set_country_flag = team2_slot3_selected
+    auto_fill_country = { COUNTRY = 21 }
+    set_country_flag = team3_slot3_selected
+    auto_fill_country = { COUNTRY = 22 }
+    set_country_flag = team4_slot3_selected
+    auto_fill_country = { COUNTRY = 23 }
+    set_country_flag = team5_slot3_selected
+    auto_fill_country = { COUNTRY = 24 }
+    set_country_flag = team6_slot3_selected
+    auto_fill_country = { COUNTRY = 25 }
+    set_country_flag = team7_slot3_selected
+    auto_fill_country = { COUNTRY = 26 }
+    set_country_flag = team8_slot3_selected
+    auto_fill_country = { COUNTRY = 27 }
+    set_country_flag = team9_slot3_selected
+    auto_fill_country = { COUNTRY = 28 }
+    set_country_flag = team10_slot3_selected
+    auto_fill_country = { COUNTRY = 29 }
+    set_country_flag = team1_slot4_selected
+    auto_fill_country = { COUNTRY = 30 }
+}
+
+auto_fill_country = {
+    if = {
+        limit = { exists = event_target:country$COUNTRY$ event_target:country$COUNTRY$ = { has_federation = no not = { has_country_flag = is_already_in_team } } }
+        event_target:country$COUNTRY$ = { save_event_target_as = chosen_country } event_target:country$COUNTRY$_name = { save_event_target_as = chosen_country_name }  coop_menu_select_country = yes 
+        removeAllSlotSelectedFlags = yes
+    }
+}

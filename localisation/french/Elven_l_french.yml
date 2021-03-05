@@ -1,0 +1,401 @@
+﻿l_french:
+
+FLAG_CATEGORY_elven:0 "Elven"
+
+####################################
+# Name Lists
+####################################
+name_list_ELVEN1:0 "Elves: Ayleid"
+name_list_ELVEN2:0 "Elves: Wild"
+name_list_ELVEN3:0 "Elves: Hidden"
+## QUENYA
+name_list_ELVEN4:0 "Elves: Eldali"
+## Pseudo-Gaulish
+name_list_ELVEN5:0 "Elves: Aenarí"
+
+####################################
+# System Initializers
+####################################
+elven_system_imperial_initializer_NAME:0 "Elven Origins"
+elven_system_imperial_initializer_DESC:0 "§LYour people reside on an Avari world, the original home of the Eldar.§!\n\n$system_initializer_DESC$"
+elven_system_lhuren_initializer_NAME:0 "Aurlûnor Cluster"
+elven_system_lhuren_initializer_DESC:0 "§LYour homeworld orbits a star in the infamous Dragon Cluster.§!\n\n$system_initializer_DESC$"
+elven_system_gaul_initializer_NAME:0 "Dwarf Binary"
+elven_system_gaul_initializer_DESC:0 "§LA binary system consisting of an F class star paired with a brown dwarf.§!\n\n$system_initializer_DESC$"
+
+####################################
+# Origins 
+####################################
+
+origin_elven_foundations:0 "Elven Foundations"
+origin_elven_foundations_desc:0 "Your people came of age on world populated with the many wonders of an ancient Eldar empire."
+origin_tooltip_elven_foundations_effects:3 "§YStarting location§!:\n Start in a §Ycustom star cluster§!\n\n§YCapital system§!:\n Has an §REnvironmental Hazard§!\n\n§YHomeworld§!:\n Has §Y3§! §EUnique§! features\n Starts with §YAvari Ring§! that:\n   Provides a small amount of £housing£ §YHousing§!\n   Improves planetary £physics£ £society£ £engineering£ §YResearch§!\n   Increases £resource_time£ §YBuilding Construction Speed§!\n   Reduces £ship_stats_build_cost£ §YBuilding Construction Cost§!"
+
+origin_elven_arcadian_symbiosis:0 "Arcadian Symbiosis"
+origin_elven_arcadian_symbiosis_desc:0 "Your civilization arose as a grouping of sparsely populated natural habitats coexisting with sentient plantlife."
+origin_tooltip_elven_arcadian_symbiosis_effects:3 "§YStarting location§!:\n Start in a §Ycustom star cluster§!\n §RNearby habitable worlds are not§!\n §Rguaranteed to be of your preferable type!§!\n\n§YHomeworld§!:\n Is a £planet£ §Y$pc_continental$§!\n Has §GNatural Beauty§! modifier\n Has §Y3§! §EUnique§! features\n §Y6§! £pop£ Pops are §Yplantoid Treants§! with traits:\n   §GServiles§!\n   §GVery Strong§!\n   §GResilient§!\n   §RSlow Breeders§!\n   §RSedentary§!\n §YTreants§! increase planetary habitability\n\n§YEmpire§!:"
+
+origin_elven_celestial_throne:0 "Celestial Throne"
+origin_elven_celestial_throne_desc:0 "A philosophy of peace and introspection swept over your world and facilitated the creation of empire who's chief purpose was protection from external influences."
+origin_tooltip_elven_celestial_throne_effects:3 "§YStarting location§!:\n Start in a §Ycustom star system§!\n §GGuaranteed habitable worlds are§!\n §Glocated in your capital system§!\n\n§YCapital system§!:\n Has an §REnvironmental Hazard§!\n\n§YHomeworld§!:\n Has §Y3§! §EUnique§! features\n Starts with §YAvari Shield§! that:\n   Protects from orbital bombardment\n   Increases £stability£ §YStability§!\n   Reduces £crime£ §YCrime§!\n   Reduces §YMigration§!\n\n§YEmpire§!:\nStart with §MFlaming Pearl§! relic"
+
+####################################
+# Species Classes
+####################################
+ELVEN:0 "Elven"
+ELVEN_desc:1 "Species Class has no effect on your Empire, but Elven species may consider other Elves to be less alien than other Species Classes."
+ELVEN_plural:0 "Elves"
+ELVEN_insult_01:0 "beast"
+ELVEN_insult_plural_01:0 "beasts"
+ELVEN_compliment_01:0 "angel"
+ELVEN_compliment_plural_01:0 "angels"
+ELVEN_spawn:0 "maiden"
+ELVEN_spawn_plural:0 "maidens"
+ELVEN_sound_01:0 "growling"
+ELVEN_sound_02:0 "grunting"
+ELVEN_sound_03:0 "yapping"
+ELVEN_sound_04:0 "yowling"
+ELVEN_sound_05:0 "mewling"
+ELVEN_organ:0 "stomach"
+ELVEN_mouth:0 "mouth"
+
+RT_DRUID:0 "Druid"
+
+####################################
+# MEGASTRUCTURES
+####################################
+
+elven_avari_ring_MEGASTRUCTURE_DETAILS:1 "An artificial ring that can alter the climate conditions on a planet to conform to the whatever desired."
+elven_avari_ring_CONSTRUCTION_INFO_DELAYED:2 "§YAvari Rings§! create psionic fields that alter climates of a world to conform to the needs of any sentient beings presently living there."
+elven_avari_ring:0 "Avari Ring"
+elven_avari_ring_DESC:0 "An artificial orbital ring that both alters the climate based on whomever resides as well as providing easy transport to orbit."
+
+elven_avari_shield_MEGASTRUCTURE_DETAILS:1 "A defensive structure that protects against bombardment and calms the populace."
+elven_avari_shield_CONSTRUCTION_INFO_DELAYED:2 "§YAvari Shields§! encompass the entire planet. Both protecting against attacks as well as calming the populace on the surface."
+elven_avari_shield:0 "Avari Shield"
+elven_avari_shield_DESC:0 "A planet encompassing shield that protects from attacks and calms the populace on the surface."
+
+####################################
+# Traits
+####################################
+
+trait_elven_true:0 "Elven"
+trait_elven_true_desc:0 "§LThis civilization descends from the mysterious Eldar and as such have enormous lifespans.§!\n"
+TRAIT_ELVEN_TRUE_EFFECT:0 "Leader Lifespan: §GImmortal§!\nPop $consumer_goods$ Upkeep: §R+15%§!\n$MOD_POP_GROWTH_SPEED_REDUCTION$: §R10%§!"
+trait_elven_savage:0 "Elven Savage"
+trait_elven_savage_desc:0 "§LAn offshoot of the mysterious Eldar that seems to have embraced savagery.§!\n"
+
+####################################
+# OPINION MODIFIERS
+####################################
+
+ elven_triggered_opinion_elf_and_elf:0 "Eldar Affinity"
+ elven_triggered_opinion_elf_and_drow:0 "Eldar Affinity"
+ elven_triggered_opinion_drow_and_elf:0 "Eldar Affinity"
+
+####################################
+# CIVICS
+####################################
+
+civic_elven_arcane_minded:0 "Arcane Societies"
+civic_elven_arcane_minded_desc:0 "Studying the metaphysical is a national pastime. The vagaries of the arcane are commonly discussed at all levels of society. This rich environment of ideas spurs the imagination of researchers."
+civic_tooltip_arcane_minded_effects:0 "Slightly increased chance of discovering an §Yarchaeological site§!\n"
+#civic_tooltip_arcane_minded_effects:0 "$mod_category_psionics_research_speed_mult$: §G+15%§!\n$MOD_SHIP_ANOMALY_GENERATION_CHANCE$: §G+15%§!\nSlightly increased chance of discovering an §Yarchaeological site§!\n"
+
+civic_elven_craft:0 "Elegant Artistry"
+civic_elven_craft_desc:0 "Perfection and beauty in all endeavors is the goal. From architecture to spacecraft all things must be as beautiful as they are functional."
+civic_elven_tooltip_craft_effects:0 "Citizen Pop Happiness: §G+10%§!\nHull Strength: §G+5%§!\nFortification Defensive Bonus: §G+10%§!"
+
+civic_elven_great_firewall:0 "Great Firewall"
+civic_elven_great_firewall_desc:0 "Realizing dissident thinking is harmful to any society, a civilization wide effort was made to create the ultimate solution: the Great Firewall. Not only an enormous physical barrier, it is a shield against harmful ideologies. Destructive ideas are quickly and efficiently removed from public discourse regardless of origin."
+
+# New restriction text not in vanilla
+civic_elven_tooltip_not_materialistic:0 "Is not §YMaterialistic§!"
+
+agenda_elven_isolationism:0 "Economic Self-Reliance"
+
+####################################
+# Policies 
+####################################
+
+policy_elven_gender_policy:0 "Gender Policy"
+policy_elven_gender_policy_desc:0 "These policies affect which genders are allowed for certain leadership positions.\n\n§RNote: policy changes have no affect on current leaders or heirs!§!\n"
+
+elven_gender_default_name:0 "Equality"
+elven_gender_default:0 "Equality"
+elven_gender_default_desc:0 "Males and females can both fulfill the same leadership positions. Which makes things terribly boring. And unfashionable."
+
+elven_gender_matriarchy_full_name:0 "Absolute Matriarchy"
+elven_gender_matriarchy_full:0 "Absolute Matriarchy"
+elven_gender_matriarchy_full_desc:0 "This policy pretends that males do not exist and tries to hide them from outsiders for fear that their limited fashion sense may be discovered."
+#"Males are prone to emotionality and clouded judgement. It therefore follows that only females should be leaders at all levels of society."
+
+elven_gender_matriarchy_governor_name: "Matrilinear Leadership"
+elven_gender_matriarchy_governor:0 "Matrilinear Leadership"
+elven_gender_matriarchy_governor_desc:0 "Men look good in a suit. But not so much in a gown. Hence, women fulfill all leadership positions where gowns are absolutely required."
+#"Females are more suited for ruling and top tier management. All rulers and governors are female."
+
+elven_gender_patriarchy_military_name:0 "Chivalry"
+elven_gender_patriarchy_military:0 "Chivalry"
+elven_gender_patriarchy_military_desc:0 "Everyone knows males look better when involved in hurting things. Therefore males fill all military leadership roles."
+#"It is the sacred duty of males to defend the weak and defensless. As such, only males are involved in combat oriented positions."
+
+elven_gender_patriarchy_full_name:0 "Absolute Patriarchy"
+elven_gender_patriarchy_full:0 "Absolute Patriarchy"
+elven_gender_patriarchy_full_desc:0 "Why should females have to bother with boring leadership positions? Males should fulfill those roles so females have more time to manage new fashion.... and plot murders."
+
+####################################
+# Diplomacy
+####################################
+
+personality_ayleid_personality:0 "Ayleid Imperialists"
+personality_ayleid_personality_desc:0 "Ayleid Imperialists believe they are the rightful rulers of all Elven-kind. They are expansionist but have little interest in other races unless they are perceived as a threat."
+
+personality_sidh_personality:0 "Edhel Peacemakers"
+personality_sidh_personality_desc:0 "Edhel Peacemakers seek to create harmony and understanding wherever possible. Either directly or by migrating to other civilizations to promote peace."
+
+personality_gaul_personality:0 "Vigilant Artisans"
+personality_gaul_personality_desc:0 "Vigilant Artisans tend to keep to their own affairs and prefer to be isolated from greater concerns. If threatened by some external force however, they rapidly band together in a unified common purpose: that of destroying the threat."
+
+gov_elven_druid_circle:0 "Druid Circle"
+gov_elven_druid_circle_desc:0 "This government is a spiritualistic form of oligarchy, where the circle of wise druids controls the state. No division exists between the state and the circle."
+
+####################################
+# Nations 
+####################################
+
+EMPIRE_DESIGN_elven_civ1:0 "Serene Kingdom of Senalata"
+EMPIRE_DESIGN_elven_civ1_desc:0 "Xeno historians grudgingly admit the Ayleids appear to have always existed on their world. The prevailing hypothesis, whether encouraged by Ayleids or not, is that they were part of a massive interstellar empire at some distant point in pre-history. What it was called or how far it extended have long since been lost.\n\nRegardless of origins, they now seek to have a more active role outside their system. Their calm and disinterested demeanor is best not underestimated however as they have been known to be quite lethal when provoked to violence.§!\n"
+EMPIRE_DESIGN_elven_civ2:0 "Aenarí Circle"
+EMPIRE_DESIGN_elven_civ2_desc:0 "The ancient Aenarí were comprised of distinct tribes often fighting for territory or resources. One of those resources being the strong but slow Treants. Very powerful but incredibly subservient, they were and still are used mostly as laborers.\n\nLife went on as usual until a major threat appeared. The specifics have been lost to time but it was an extinction level threat. The tribes united and were victorious.\n\nSince that time the Aenarí have gradually expanded along with their dutiful servants to claim their entire world. They kept their tribal nature but have forgone the petty infighting of their ancestors.\n\nRecent technological advancements have allowed the Aenarí the ability to consider life beyond their homeworld. While generally friendly, it should be noted they have not lost their tendency to unite as one against threats.§!\n"
+EMPIRE_DESIGN_elven_civ3:0 "Aurlûnor Velande"
+EMPIRE_DESIGN_elven_civ3_desc:0 "Hidden away amongst the dense stars of the Dragon Cluster, very little is known of the Aurlûnor. What scant interaction has occurred, revealed a civilization centered around order and uniformity. Perceived threats to this order appear to provoke overwhelmingly violent responses.§!\n"
+
+#############
+### STARS ###
+#############
+
+pc_elven_prismatic_star:0 "Prismatic Star"
+pc_elven_prismatic_star_desc:0 "A rare star that cannot be classified. It emits light on different wavelengths that seem to change by some mechanism that has eluded the most brilliant scientists from many civilizations. Regular mass ejections, curiously benign to most life forms, create spectacular displays of color. Most lifeforms display a measurable positive effect for reasons that so far remain a mystery."
+
+#################
+### BUILDINGS ###
+#################
+
+elven_building_army_primitive:0 "Barad Elenath"
+elven_building_army_primitive_desc:0 "An ancient, mystical order of protectors that defend the world from all external threats."
+
+##############
+### ARMIES ###
+##############
+
+elven_primitive_army:0 "Maethoren Elenath"
+
+########################
+### PLANET MODIFIERS ###
+########################
+
+elven_avari_ring_modifier:0 "Avari World"
+elven_avari_ring_modifier_desc:0 "A world with an artificial orbital ring that somehow changes the terrain based on whomever resides."
+
+elven_avari_shield_modifier:0 "Avari Shield"
+elven_avari_shield_modifier_desc:0 "This world is encased by an immense shield that protects from attacks and calms the populace on the surface."
+
+elven_mineral_poor:1 "Poor Quality Minerals"
+elven_mineral_poor_desc:1 "It is unknown if this planet simply formed this way, or if some unknown race once stripped it of its more valuable resources. However, we do know that the minerals present on this planet are of unusally poor quality."
+
+elven_natural_beauty:0 "Natural Beauty"
+elven_natural_beauty_desc:0 "The scenery on this planet is simply beautiful, anyone living on this planet will be constantly finding new wonders to behold."
+
+elven_irradiated_planet:0 "Irradiated"
+elven_irradiated_planet_desc:0 "Some long-ago calamity rendered this planet rather heavily irradiated."
+
+elven_storm_world_modifier:0 "Psionic Storm"
+elven_storm_world_modifier_desc:0 "The surface of this world is an amorphous metal with strange properties. Mountains, valleys and other typical geological features exist, yet probes landing on these features sink as if touching down in an ocean. Repeated scans show that entire mountain ranges have vanished while others have appeared from nowhere. Even light on this world reacts strangely. Surfaces that should be lit by the nearby star remain dark, while areas on the far side are as bright as day. Whatever phenomena, be it natural or otherwise, that has created this world is thoroughly beyond our understanding."
+
+elven_great_firewall_modifier:0 "Great Firewall"
+elven_great_firewall_modifier_desc:0 "The culmination of thousands of years of engineering, the Great Firewall protects this world both from extraterrestrial and terrestrial dissidents."
+
+elven_treant_harmony_5:0 "Phytovitalization"
+elven_treant_harmony_5_desc:0 "Every §Y5 Treants§! increase habitability of this planet by §G5%§!"
+elven_treant_harmony_10:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_10_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_15:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_15_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_20:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_20_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_25:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_25_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_30:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_30_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_35:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_35_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_40:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_40_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_45:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_45_desc:0 "$elven_treant_harmony_5_desc$"
+elven_treant_harmony_50:0 "$elven_treant_harmony_5$"
+elven_treant_harmony_50_desc:0 "$elven_treant_harmony_5_desc$"
+
+##############
+### EVENTS ###
+##############
+
+elven_leader_events.33.name:0 "Substance Abuser"
+elven_leader_events.33.desc:0 "§R[deceased_leader.GetName]§!'s unhealthy lifestyle has come to its logical conclusion. After prolonged failure to report for duty, [deceased_leader.GetSheHe] was found dead. Investigation has determined overdose of an illicit substance to be the cause of death."
+
+elven_decision_arcology_project:0 "$ap_arcology_project$"
+elven_decision_arcology_project_effects:1 "Turns the planet into an §Y$pc_city$§!, increasing £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§! and unlocking special £district£ §YArcology Districts§! at the expense of the planet's natural resources becoming §Rinaccessible§!, preventing all further construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!."
+elven_decision_arcology_project_effects_short:2 "Increases £housing£ §Y$PLANET_HOUSING_TITLE$§!, §YResource Production§! and §YPop Growth§!\nEnables £district£ §YArcology Districts§!\nDisables construction of £district£ §YGenerator§!, §YMining§! and §YAgriculture Districts§!"
+elven_decision_arcology_project_requirements:0 "£trigger_no£ §RAll district slots on the planet must be filled with§! §Y$district_city_plural$§!"
+elven_decision_arcology_project_desc:1 "An unceasing stretch of arcologies will unite the planet from pole to pole, creating one global megacity, one ecumenopolis."
+
+####################
+### STAR CLASSES ###
+####################
+
+sc_elven_prismatic:1 "Prismatic Star"
+sc_elven_prismatic_black_hole:1 "Prismatic Black Hole"
+sc_elven_binary_1:1 "$sc_binary_1$"
+sc_elven_binary_2:1 "$sc_binary_1$"
+sc_elven_binary_3:1 "$sc_binary_1$"
+sc_elven_binary_4:1 "$sc_binary_1$"
+sc_elven_binary_5:1 "$sc_binary_1$"
+sc_elven_binary_6:1 "$sc_binary_1$"
+sc_elven_binary_prismatic_black_hole:1 "$sc_binary_1$"
+sc_elven_trinary_1:1 "$sc_trinary_1$"
+sc_elven_trinary_2:1 "$sc_trinary_1$"
+sc_elven_sexenary_1:1 "Sexenary Stars"
+sc_elven_septenary_1:1 "Septenary Stars"
+sc_elven_septenary_2:1 "Septenary Stars"
+sc_elven_super_1:1 "Quindenary Stars"
+sc_elven_gaul:1 "$sc_binary_1$"
+sc_elven_imperial:1 "$sc_pulsar$"
+sc_elven_polydora:1 "Class A Star"
+
+############
+### JOBS ###
+############
+
+job_elven_dragon_researcher:0 "Dragon Researcher"
+job_elven_dragon_researcher_plural:0 "Dragon Researchers"
+job_elven_dragon_researcher_desc:0 "The eternal mystery of the world is its comprehensibility."
+job_elven_dragon_researcher_effect_desc:0 "£job_elven_dragon_researcher£ $job_elven_dragon_researcher_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £society£ §YResearch Points§! for new technologies"
+mod_job_elven_dragon_researcher_add:0 "$job_elven_dragon_researcher$ Jobs"
+mod_job_elven_dragon_researcher_per_pop:0 "§G+1§! $job_elven_dragon_researcher$ Job per $VALUE$ Pops"
+mod_job_elven_dragon_researcher_per_pop_short:0 "\n§G+1§! £mod_elven_dragon_researcher_add£ per $VALUE$ £pop£"
+
+job_elven_dragon_priest:0 "Dragon Priest"
+job_elven_dragon_priest_plural:0 "Dragon Priests"
+job_elven_dragon_priest_desc:0 "The spiritual guidance of the masses is performed by the most pious and devout."
+job_elven_dragon_priest_effect_desc:0 "£job_elven_dragon_priest£ $job_elven_dragon_priest_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§! and £society£ §Y$society_research$§!"
+mod_job_elven_dragon_priest_add:0 "$job_elven_dragon_priest$ Jobs"
+mod_job_elven_dragon_priest_per_pop:0 "§G+1§! $job_elven_dragon_priest$ Job per $VALUE$ Pops"
+mod_job_elven_dragon_priest_per_pop_short:0 "\n§G+1§! £mod_elven_dragon_priest_add£ per $VALUE$ £pop£"
+
+job_elven_archaeologist:0 "Archaeologist"
+job_elven_archaeologist_plural:0 "Archaeologists"
+job_elven_archaeologist_desc:0 "The eternal mystery of the world is its comprehensibility."
+job_elven_archaeologist_effect_desc:0 "£job_elven_archaeologist£ $job_elven_archaeologist_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £society£ and £engineering£ §YResearch Points§! for new technologies"
+mod_job_elven_archaeologist_add:0 "$job_elven_archaeologist$ Jobs"
+mod_job_elven_archaeologist_per_pop:0 "§G+1§! $job_elven_archaeologist$ Job per $VALUE$ Pops"
+mod_job_elven_archaeologist_per_pop_short:0 "\n§G+1§! £mod_elven_archaeologist_add£ per $VALUE$ £pop£"
+
+#######################
+### PLANET FEATURES ###
+#######################
+
+# AYLEID #
+
+d_elven_planetary_tir_aranad:0 "Tir Aranad"
+d_elven_planetary_tir_aranad_desc:0 "Commonly referred to as the Eternal Tower, this immense spire is so tall it requires pressurization at its highest levels. Built at some point in pre-history, it has always been the seat of the reigning power. The tower is fashioned of stone yet appears to be impervious to even modern weaponry. Accordingly, theories as to how this can be vary wildly. Aside from housing rulers over all of history, the tower has also been the home of a number of researchers desperately trying to divine the true nature of the structure."
+
+d_elven_planetary_frensca_tol_blocker:0 "£blocker£ Frensca Tol"
+d_elven_planetary_frensca_tol_blocker_desc:0 "An immense floating continent that at first glance seems to defy physics. A closer look reveals an advanced network of ancient devices that keep the continent afloat in the sky. The origins of this continent are a hotly argued topic among academics. There are records of its existence going back millenia, but no one is clear exactly who created this wonder of science. Presently the surface is entirely wild and would require an investment in infrastructure to make it liveable."
+
+d_elven_planetary_frensca_tol:0 "Frensca Tol"
+d_elven_planetary_frensca_tol_desc:0 "An immense floating continent that at first glance seems to defy physics. A closer look reveals an advanced network of ancient devices that keep the continent afloat in the sky. The origins of this continent are a hotly argued topic among academics. There are records of its existence going back millenia, but no one is clear exactly who created this wonder of science. The overgrowth has been managed and modern infrastructure has now been added allowing the continent to be settled for perhaps the first time in several millenia."
+
+# LHUREN #
+
+d_elven_planetary_sentient_dragons:0 "Sentient Dragons"
+d_elven_planetary_sentient_dragons_desc:0 "An enigmatic race of possibly reptilian origin inhabit this world. Communication is always initiated first by them and generally always in difficult to understand riddles. Over millennia wars and entire nations have been shaped by their cryptic advice. What drives their interest in us, their population, or where they even live have thus far completely eluded even the best of scientific minds. The only observable fact is that they exist."
+
+d_elven_planetary_sentient_dragons_blocker:0 "£blocker£ Sentient Dragons"
+d_elven_planetary_sentient_dragons_blocker_desc:0 "$d_elven_planetary_sentient_dragons_desc$"
+
+d_elven_planetary_gardens_of_heaven:0 "Gardens of Heaven"
+d_elven_planetary_gardens_of_heaven_desc:0 "Many fantastic legends, with equally dubious evidence, speak of how the gardens began. Some say divine beings directed the construction. Others claim it was a matter of one ruler after another constantly increasing thier size. Whatever thier origins, the gardens now cover an area so large they can easily be identified without aid from orbit. Typically the site of important events, the gardens have become a symbol of our ingenuity."
+
+d_elven_planetary_gardens_of_heaven_blocker:0 "£blocker£ Gardens of Heaven"
+d_elven_planetary_gardens_of_heaven_blocker_desc:0 "$d_elven_planetary_gardens_of_heaven_desc$"
+
+d_elven_planetary_forbidden_arcology:0 "Forbidden Arcology"
+d_elven_planetary_forbidden_arcology_desc:0 "The legend goes that it began with a suggestion to live 'apart from the common citizenry'. It ended with the construction of something that taxed the minds of the greatest scientists and engineers alike. An enormous building so tall it almost pierces the atmosphere. Completely self sufficient, this city-sized structure houses the elite of society. Penalties for attempting to gain unauthorized access are harsh."
+
+# SIDH #
+
+d_elven_planetary_light_of_altanis:0 "Light of Altanis"
+d_elven_planetary_light_of_altanis_desc:0 "A giant pulsing beacon of light sent out into the vastness of space. A concept borne of the mind of the philosopher Altanis (during one of her famous carousing celebrations). The beacon austensibly sends a message of peace and joy to the universe itself. Whether or not the universe cares is a question still debated."
+
+d_elven_planetary_daerlas_mina_blocker:0 "£blocker£ Daerlas Mina"
+d_elven_planetary_daerlas_mina_blocker_desc:0 "Ancient Sidh legends claim that Lord Mina, tired of the constant celebratory atmosphere in his subjects, decided to construct a city for the sole purpose of merryment. Whether or not this story was true no longer matters as today the city is a non-stop party from one end to the other."
+
+d_elven_planetary_daerlas_mina:0 "Daerlas Mina"
+d_elven_planetary_daerlas_mina_desc:0 "$d_elven_planetary_daerlas_mina_blocker_desc$"
+
+d_elven_planetary_aerostat_plantations:0 "Aerostat Plantations"
+d_elven_planetary_aerostat_plantations_desc:0 "A great Sidh farmer, who's name has been lost to history, once said that crops prefer peace and quiet. Something one is hard pressed to find in any Sidh dwelling. To remedy this unfortunate situation, as well as to get unsightly crops as far away as possible, large aerostat platforms were devised which were capable of carrying vast fields of plantlife. Now the Sidh can enjoy natural beauty around their homes and also not starve."
+
+d_elven_healing_spring:0 "Spring of Fertility"
+d_elven_healing_spring_desc:0 "Existing well before written history, this wellspring has been proven to provide a boost to fertility with a small sip. It is now customary for couples the world over to make a ritual pilgrimage to taste the waters."
+
+# ARCHEOLOGY RELATED #
+
+d_elven_planetary_elenyas_gate:0 "Elenya's Gate"
+d_elven_planetary_elenyas_gate_desc:0 "<UNUSED: former Sidh feature, probably needs cleanup>"
+
+#######################
+###     RELICS      ###
+#######################
+
+# LHUREN #
+
+r_elven_flaming_pearl:0 "Flaming Pearl"
+r_elven_flaming_pearl_desc:0 "A strange object of unknown origin and unidentified material composition whose properties defy many commonly accepted laws of science.\n\nBut even more curious is the fact that, when set alight, the unnatural incense seems to attract enigmatic draconic creatures whose provenance and behavior mystify even the most esoteric minds.\n\nLegends claim that should the dragons find the bearer of the Pearl worthy, some might be inclined to grant their wishes. Might."
+elven_relic_flaming_pearl_active:0 "Seek audience with the Dragons and...\n§Ywho knows?§!"
+elven_relic_events.0101.name:0 "The Dragon's Nest"
+elven_relic_events.0101.desc:0 "Nine unsually personable dragons responded to the beacon, seeking nothing more than a stimulating conversation. Taking advantage of the opportunity, §Y[Root.GetRulerTitle] [Root.GetRulerName]§! managed to persuade them to shed light on the greatest mystery surrounding their kind: where do they come from?\n\nThe dragons were more than happy to enlighten [Root.Ruler.GetHimHer]. All of them, each with a different answer, stranger, more abstract and more contradictory than the last, and yet all nine seemed to be in perfect agreement that it was the whole truth and no detail was omitted.\n\nIn the end, the [Root.GetRulerTitle] found it impossible to discern the true answer. Nevertheless, some scholars believe that the dragons were indeed honest, but rather than take us directly to the answer, they showed us a path to reach it ourselves... one day."
+elven_relic_events.0101.a:0 "Could we have expected any different?"
+elven_relic_events.0102.name:0 "Ridiculous Riddles"
+elven_relic_events.0102.desc:0 "A lone dragon chanced upon the site of the summoning, offering a peculiar trade: something of 'infinite value' for merely a riddle that she could not answer in one attempt.\n\nThe price proved more difficult to meet than §Y[Root.GetRulerTitle] [Root.GetRulerName]§! initially expected, exhausting dozens of ideas before [Root.Ruler.GetSheHe] finally found one witty enough to give the dragon pause. Impressed, the dragon held up her own end of the bargain: giving us a riddle to solve in exchange.\n\nThe brigthest erudites of [Root.GetName] are already losing sleep trying to solve it, but in doing so their minds have become more awake than ever."
+elven_relic_events.0102.a:0 "It's at the tip of my tongue, I almost have it!"
+elven_relic_events.0103.name:0 "Counting the Scales"
+elven_relic_events.0103.desc:0 "A vain dragon answered the call, claiming that [Root.GetSpeciesName] could divine all secrets of the universe simply by admiring her polished scales. In fact, she readily promised §Y[Root.GetRulerTitle] [Root.GetRulerName]§! that great breakthroughs awaited [Root.Ruler.GetHimHer] people if [Root.Ruler.GetSheHe] could personally count all of the beautiful scales on her body.\n\nThe final count turned out to be one-hundred and sixteen, but in the process the [Root.GetRulerTitle] had spotted an uneven gap. Rather than courting the vain dragon's wrath by pointing out the imperfection, [Root.Ruler.GetSheHe] lied that there were exactly one-hundred and seventeen scales.\n\nPleased with the answer, the dragon complimented [Root.GetRulerName]'s diligence and left.\n\nA single scale remained after her departure and scientists cannot wait to examine it."
+elven_relic_events.0103.a:0 "The things we do for science..."
+elven_relic_events.0104.name:0 "Wisdom of Aeons"
+elven_relic_events.0104.desc:0 "A wise elder dragon came by the beacon this time, graciously accepting the offerings and deciding to repay by regaling §Y[Root.GetRulerTitle] [Root.GetRulerName]§! with the wisdom of millennia past, tales of civilizations long gone and stars so old and alien that [Root.Ruler.GetSheHe] was unsure if they could even be found in this galaxy, or this universe.\n\nThe [Root.GetRulerTitle] had many questions, but just as [Root.Ruler.GetSheHe] was about to start asking, another dragon joined them and started spinning its own story, and then another, and another.\nNew guests kept coming and going, and as it went on, started conversing amongst themselves as if [Root.GetRulerName] was not even there. Not a single opportunity to interject presented itself for the rest of the gathering, but [Root.Ruler.GetSheHe] was content to just listen and learn.\n\nThe [Root.GetRulerTitle]'s recollections of that meeting have inspired creative souls across [Root.GetName] to try and depict those fantastical tales in art."
+elven_relic_events.0104.a:0 "But were any of those stories actualy true?"
+elven_relic_events.0105.name:0 "Lesson in Humility"
+elven_relic_events.0105.desc:0 "§Y[Root.GetRulerTitle] [Root.GetRulerName]§! lit the Pearl and awaited the coming of dragons, first for hours, then days, until eventually the flames faltered and fizzled out.\n\nIt seems that despite following the ritual to letter and preparing enticing offerings, [Root.GetRulerName]'s summons were summarily ignored. But maybe that should come as no surprise; the Pearl grants [Root.Ruler.GetHimHer] no power over them, it merely draws their attention. Perhaps none simply had the whim to approach this time.\n\nIf nothing else, the experience gave the [Root.GetRulerTitle] much to ponder and a healthy dose of humility to come to terms with."
+elven_relic_events.0105.a:0 "Unpredictable creatures."
+elven_relic_events.0106.name:0 "Generous Rainfall"
+elven_relic_events.0106.desc:0 "A diminitive and sorry-looking dragon approached the site of the ritual, asking to be fed for he was hungry.\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§! was willing to induldge the creature and ordered some food to be prepared. When offered, the dragon asked the chef to explain in detail what it was and how it had been prepared, after which he refused and requested a different dish. The situation repeated no less than eight more times, at which point the dragon finally declared that his curiosity had been sated.\n\nIn exchange, he promised that he would bring life-giving rain to all [Root.GetAdj] worlds so that we might come up with even more plentiful and diverse cuisine."
+elven_relic_events.0106.a:0 "Everyone's a gourmand these days..."
+elven_relic_flaming_pearl_rainfall:0 "Flaming Pearl: Generous Rainfall"
+elven_relic_events.0107.name:0 "Inspired Artifice"
+elven_relic_events.0107.desc:0 "Several dragons were attracted to the Pearl this time, yet all but one of them lingered only for a moment before departing. The last one to arrive stayed a little longer and was persuaded to explain the others' strange behaviour. As it turned out, they had simply found [Root.GetSpeciesNamePlural] boring and their offerings unworthy of attention. They judged us so by beholding our craftsmanship, which had apparently 'lost its novelty' and stagnated.\n\nSuffice to say, artisans across [Root.GetName] took the harsh judgement as a challenge and impetus to innovate."
+elven_relic_events.0107.a:0 "The dragons will eat their words."
+elven_relic_flaming_pearl_artifice:0 "Flaming Pearl: Inspired Artifice"
+elven_relic_events.0108.name:0 "Jade Rush"
+elven_relic_events.0108.desc:0 "A jade-scaled dragon answered the summons but would not speak, and rather than take any of the presented offerings, left us a gift instead and vanished promptly thereafter. The unexpected memento was a small piece of jadeite ore, a rare sight in this day and age given that its natural deposits had been mined out since ancient times, yet hardly valuable thanks to modern synthesis technology.\n\nHowever, further examination of the sample revealed physical properties that the gem should not possess - this 'draconic jade' is an excellent energy conductor, is harder than duranium and clearer than most synthetic lens crystals!\n\nMoreover, mining facilies across [Root.GetName] report that deposits of this baffling mineral have sprung up overnight as far as the eye can see!"
+elven_relic_events.0108.a:0 "Green is back in vogue!"
+elven_relic_flaming_pearl_jade:0 "Flaming Pearl: Jade Rush"
+elven_relic_events.0109.name:0 "Heavenly Authority"
+elven_relic_events.0109.desc:0 "Two dragons were attracted by the Flaming Pearl, both claiming to be its sole rightful owner and demanding it to be returned at once.\nIt did not take long before their attention shifted away from us and onto one another. Neither willing to back down from their claim, they began to fight. Although incredibly fascinating to watch at first, the duel dragged on for days and the collateral damage of it was beginning to take its toll on planetary and orbital infrastructure.\n\nIn an attempt to put a stop to it, §Y[Root.GetRulerTitle] [Root.GetRulerName]§! proposed a truce between the two. Since it was clear that neither could defeat the other in combat, [Root.Ruler.GetSheHe] proposed that [Root.GetName] would serve as impartial safekeepers of the Pearl until such a time that either of them could convince the other of the validity of their claim. Much to the [Root.GetRulerTitle]'s relief and no small amount of surprise, the rival dragons accepted the terms without question and went their separate ways."
+elven_relic_events.0109.a:0 "What... just happened?"
+elven_relic_flaming_pearl_authority:0 "Flaming Pearl: Heavenly Authority"
+elven_relic_events.0110.name:0 "Celestial Guardian"
+elven_relic_events.0110.desc:0 "A young dragon with a taste for adventure approached §Y[Root.GetRulerTitle] [Root.GetRulerName]§! and expressed interest in exploring the stars alongside [Root.GetSpeciesNamePlural]. In exchange, he offered to act as the empire's protector for a limited time. He would accompany our fleets and keep them out of danger as well as safeguard the peace and safety of our planets.\n\nExactly how he means to back that bold claim remains to be seen, but the [Root.GetRulerTitle] saw no reason to refuse him."
+elven_relic_events.0110.a:0 "And he was so adorable!"
+elven_relic_flaming_pearl_guardian:0 "Flaming Pearl: Celestial Guardian"

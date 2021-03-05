@@ -1,0 +1,62 @@
+###_z mm framework --- planet classes	##########################################################################
+
+
+
+
+#_dummy行星用于定位巨建
+z_fw_dummy_pc = {
+	entity = "z_dummy_star_entity"
+	entity_scale = 0.1
+	picture = "z_pc_nova"
+	
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	atmosphere_color 		= hsv { 0.6 0.3 0.6 }
+	atmosphere_intensity 	= 1.5
+	atmosphere_width 		= 3.5
+	
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 6 max = 12 }	#_RS属性, vanilla 20-35
+	
+	colonizable = no
+}
+
+
+
+
+# Nova 1
+z_pc_nova = {
+	entity = "z_nova_entity"
+	entity_scale = 8
+	picture = "z_pc_nova"
+
+	atmosphere_color 		= hsv { 0.6 0.3 0.6 }
+	atmosphere_intensity 	= 1.5
+	atmosphere_width 		= 3.5
+	
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 6 max = 12 }	#_RS属性, vanilla 20-35
+	
+	colonizable = no
+}

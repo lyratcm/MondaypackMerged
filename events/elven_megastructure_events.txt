@@ -1,0 +1,367 @@
+namespace = elven_megastructure_events
+
+planet_event = {
+	id = elven_megastructure_events.11
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = avari_ring_loc
+
+		if = {
+			limit = { has_ring = yes }
+			set_ring = no
+		}
+
+		if = {
+			limit = {
+				OR = {
+					elven_is_ps_1_3 = yes
+					elven_is_ps_4_6 = yes
+					elven_is_ps_7_9 = yes
+				}
+			}
+			create_ambient_object = {
+				type = "avari_ring_ambient_small"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_10_12 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_10_12_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_13_15 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_13_15_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_16_18 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_16_18_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+					elven_is_ps_19_21 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_19_21_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+					elven_is_ps_22_24 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_22_24_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+					elven_is_ps_25_27 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_25_27_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+					elven_is_ps_28_30 = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_28_30_ambient_entity"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_humongous = yes
+			}
+			create_ambient_object = {
+				type = "avari_ring_ambient_humongous"
+				location = this
+			}
+		}
+
+		solar_system = {
+			random_system_ambient_object = {
+				limit = {
+					is_same_value = last_created_ambient_object
+				}
+				set_location = {
+					target = event_target:avari_ring_loc
+					distance = 0
+					angle = 0
+				}
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = elven_megastructure_events.12
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = avari_shield_loc
+
+		if = {
+			limit = {
+				elven_is_ps_1_3 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_1_3"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_4_6 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_4_6"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_7_9 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_7_9"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_10_12 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_10_12"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_13_15 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_13_15"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_16_18 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_16_18"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_19_21 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_19_21"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_22_24 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_22_24"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_25_27 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_25_27"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_28_30 = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_28_30"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_humongous = yes
+			}
+			create_ambient_object = {
+				type = "avari_shield_ambient_humongous"
+				location = this
+			}
+		}
+
+		solar_system = {
+			random_system_ambient_object = {
+				limit = {
+					is_same_value = last_created_ambient_object
+				}
+				set_location = {
+					target = event_target:avari_shield_loc
+					distance = 0
+					angle = 0
+				}
+			}
+		}
+	}
+}
+
+################
+## SIDH RINGS ##
+################
+planet_event = {
+	id = elven_megastructure_events.13
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		save_event_target_as = sidh_ring_loc
+
+		if = {
+			limit = {
+				elven_is_ps_1_3 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_1_3"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_4_6 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_4_6"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_7_9 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_7_9"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_10_12 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_10_12"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_13_15 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_13_15"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_16_18 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_16_18"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_19_21 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_19_21"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_22_24 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_22_24"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_25_27 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_25_27"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_28_30 = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_28_30"
+				location = this
+			}
+		}
+		else_if = {
+			limit = {
+				elven_is_ps_humongous = yes
+			}
+			create_ambient_object = {
+				type = "sidh_rings_ambient_humongous"
+				location = this
+			}
+		}
+
+		solar_system = {
+			random_system_ambient_object = {
+				limit = {
+					is_same_value = last_created_ambient_object
+				}
+				set_location = {
+					target = event_target:sidh_ring_loc
+					distance = 0
+					angle = 0
+				}
+			}
+		}
+	}
+}

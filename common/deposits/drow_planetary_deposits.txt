@@ -1,0 +1,606 @@
+########################
+## PLANETARY FEATURES ##
+########################
+
+#############
+## TULSHAR ##
+#############
+
+## VALSHAQUELLAR STUFF ##
+
+d_drow_planetary_speleostructural_instability = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_speleostructural_instability
+
+	category = deposit_cat_blockers
+
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_cheel_xsaus = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_cheel_xsaus
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 		
+		planet_max_districts_add = -1
+		## Also clueless here for the moment.
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_murrpau_sanguine = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_murrpau_sanguine
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 		
+		bio_pop_growth_speed = -0.1
+		planet_jobs_society_research_produces_mult = 0.2
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_murrpau_sanguine_blocker = {
+	time = 540
+
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_murrpau_sanguine
+
+	category = deposit_cat_blockers
+
+	planet_modifier = { 		
+		pop_growth_speed = -0.1
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_zhevalshath_blocker = {
+	time = 600
+	
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_zhevalshath
+
+	category = deposit_cat_blockers
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+			minerals = 500
+		}
+	}
+	
+	on_cleared = {
+		add_deposit = d_drow_planetary_zhevalshath
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_zhevalshath = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_zhevalshath
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 
+		planet_housing_add = 6
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_domination_imperious_architecture
+			}					
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_patrol_drone_add = 3
+		job_warrior_drone_add = 3
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				NOR = {
+					has_authority = auth_corporate
+					has_authority = auth_imperial
+					has_civic = civic_aristocratic_elite
+				}
+			}					
+		}
+		modifier = {
+			job_administrator_add = 1
+			job_enforcer_add = 2
+			job_soldier_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_corporate }
+		}
+		modifier = {
+			job_executive_add = 1
+			job_enforcer_add = 2
+			job_soldier_add = 3
+		}
+	}	
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+						has_civic = civic_aristocratic_elite
+						has_authority = auth_imperial
+				}
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_enforcer_add = 2
+			job_soldier_add = 3
+		} 
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+## DELMASK'RI FARMING ##
+
+d_drow_planetary_buried_sea = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_buried_sea
+
+	category = deposit_cat_food
+
+	planet_modifier = { 		
+		district_farming_max = 3
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_subterranean_hydroponics = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_subterranean_hydroponics
+
+	category = deposit_cat_food
+
+	planet_modifier = { 		
+		district_farming_max = 2
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_happy_lizard_farms = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_happy_lizard_farms
+
+	category = deposit_cat_food
+
+	planet_modifier = { 		
+		district_farming_max = 2
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_shroom_flats = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_shroom_flats
+
+	category = deposit_cat_food
+
+	planet_modifier = { 		
+		district_farming_max = 1
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_luminous_lichen = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_luminous_lichen
+
+	category = deposit_cat_food
+
+	planet_modifier = { 		
+		district_farming_max = 1
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+## DELMASK'RI ENERGY ##
+
+d_drow_planetary_ancient_dynamos = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_ancient_dynamos
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_sunken_geysers = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_sunken_geysers
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_serpentine_trench = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_serpentine_trench
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_generator_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+## DELMASK'RI MINERALS ##
+
+d_drow_planetary_metal_wastefields = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_metal_wastefields
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_aurous_fissures = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_aurous_fissures
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_carbon_subterrane = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_carbon_subterrane
+	
+	category = deposit_cat_minerals
+	
+	planet_modifier = { 
+		district_mining_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#################
+## EILISTRAEEN ##
+#################
+
+d_drow_planetary_feral_fairies = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_faeries_1
+
+	category = deposit_cat_blockers
+
+	can_be_cleared = { always = no }
+
+	planet_modifier = {
+		planet_jobs_food_produces_mult = -0.15
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+
+	potential = {
+	
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_glowing_forests = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_glowing_forests
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_artisan_per_pop = 0.04
+			job_merchant_per_pop = 0.025
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_artisan_drone_per_pop = 0.02
+		}
+	}
+
+	potential = {
+	
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_glowing_forests_blocker = {
+	time = 540
+
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_glowing_forests
+
+	category = deposit_cat_blockers
+
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+	
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_cheel_krezust = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_cheel_krezust
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_elven_archaeologist_per_pop = 0.025
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_per_pop = 0.025
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_per_pop = 0.025
+		}
+	}
+
+	potential = {
+	
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_drow_planetary_glowing_oceans = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_glowing_oceans
+
+	category = deposit_cat_rare
+
+	planet_modifier = { 
+		planet_jobs_physics_research_produces_mult = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_amenities_add = 10
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+##########################
+## CITY PLANET VARIANTS ##
+##########################
+
+d_drow_planetary_cp_klepto_fairies = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_cp_faeries_klepto
+
+	category = deposit_cat_blockers
+
+	can_be_cleared = { always = no }
+
+	planet_modifier = { 		
+		planet_crime_add = 40
+		trade_value_add = 5
+		planet_jobs_society_research_produces_mult = 0.15
+	}
+
+	potential = {
+	
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#################
+## DROW FALLEN ##
+#################
+
+## DROW FALLEN GRAVEYARD ON VALSHATH SSINSS ##
+d_drow_planetary_cheel_phalar_blocker = {
+	time = 600
+
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_cheel_phalar_blocker
+
+	category = deposit_cat_blockers
+
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+			minerals = 500
+		}
+	}
+
+	potential = { }
+
+	on_cleared = {
+		add_deposit = d_drow_planetary_cheel_phalar_cursed
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+## CURSED WORLD AFTER CLEARING GRAVEYARD ##
+d_drow_planetary_cheel_phalar_cursed = {
+	is_for_colonizeable = yes
+	icon = d_drow_planetary_cheel_phalar_cursed
+
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		pop_citizen_happiness = -0.10
+		planet_stability_add = -20
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

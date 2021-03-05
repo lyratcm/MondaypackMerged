@@ -1,0 +1,56 @@
+@primary = 0.80
+@secondary = 0.60
+@tertiary = 0.20
+@gaia_habitability = 0.50
+
+trait_pc_lunari_arctic_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_lunari_arctic_preference.dds"
+	modification = no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	sorting_priority = 30
+	modifier = {
+		pc_lunari_arctic_habitability = 2.0
+
+		pc_arctic_habitability = 0.3
+
+		pc_tundra_habitability = -0.1
+		pc_alpine_habitability = -0.1
+
+		pc_ocean_habitability = -0.4
+		pc_continental_habitability = -0.4
+		pc_tropical_habitability = -0.4
+
+		pc_savannah_habitability = -1.0
+		pc_arid_habitability = -1.0
+		pc_desert_habitability = -1.0
+	}
+	ai_weight = {
+		weight = 0
+	}
+}
+
+## THERE IS NO SANCTUARY!!!!!!!##
+trait_pc_elven_sanctuary_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+	modification = no
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
+	sorting_priority = 30
+	modifier = {
+		pc_elven_sanctuary_habitability = 1.0
+		
+		pc_continental_habitability = @primary	
+		pc_tropical_habitability = @secondary
+		pc_ocean_habitability = @secondary
+		
+		pc_desert_habitability = @primary
+		pc_arid_habitability = @secondary
+		pc_tundra_habitability = @secondary
+		
+		pc_arctic_habitability = @primary	
+		pc_alpine_habitability = @secondary
+		pc_savannah_habitability = @secondary
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

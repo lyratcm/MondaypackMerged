@@ -1,0 +1,95 @@
+eac_create_governor_ecologist_alpha = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_ecologist_alpha
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_marshall_alpha = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_marshall_alpha
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_diplomat_alpha = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_diplomat_alpha
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_bureaucrat_alpha = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_bureaucrat_alpha
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_pioneer_alpha = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_pioneer_alpha
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_governor_prodigy = {
+	create_leader = {
+		class = governor
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_prodigy
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}

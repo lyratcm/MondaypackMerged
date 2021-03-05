@@ -1,0 +1,274 @@
+AR_give_tech = {
+    set_country_flag = AR_gived_tech
+    give_technology = { tech = $tech$ message = yes }
+    if = {
+        limit = {
+            OR = {
+                has_country_flag = AR_pick_advanced
+                has_country_flag = AR_pick_cheapest
+                has_country_flag = AR_pick_random
+            }
+        }
+        set_country_flag = AR_shuffle_tech_$category$
+        set_variable = { which = AR_selected_$category$_tech value = -1 }
+    }
+}
+
+AR_upgrade_if_possible_physics = {
+    if = { # if there is a selected tech
+        limit = {
+            check_variable = { which = AR_selected_physics_tech value >= 0 }
+        }
+        # Initialize cost with the level cost
+        set_variable = {
+            which = AR_phy_cost
+            value = @repeatableTechLevelCost
+        }
+        # Get the level of the tech which is selected
+        SLEX_get_list_variable_var_index = {
+            LIST = AR_physics_tech_levels
+            INDEX = AR_selected_physics_tech
+            VALUE = AR_level
+        }
+        multiply_variable = {
+            which = AR_phy_cost
+            value = AR_level
+        }
+        # Add fixed cost
+        change_variable = {
+            which = AR_phy_cost
+            value = @repeatableTechBaseCost
+        }
+        # Add sprawl induced multiplier (AR_sprawl >= 1)
+        multiply_variable = {
+            which = AR_phy_cost
+            value = AR_sprawl
+        }
+        multiply_variable = {
+            which = AR_phy_cost
+            value = AR_research_cost_multiplier
+        }
+        # Check if has enough research stored
+        if = {
+            limit = {
+                check_variable = {
+                    which = AR_phy_cost
+                    value <= AR_physic_stocked
+                }
+            }
+            # Remove cost from stocked
+            multiply_variable = {
+                which = AR_phy_cost
+                value = -1
+            }
+            SLEX_add_resource = {
+                RESOURCE = physics_research
+                AMOUNT = AR_phy_cost
+            }
+            # Give the tech
+            if = { limit = { check_variable = { which = AR_selected_physics_tech value = 0 } }
+                AR_give_tech = { tech = tech_repeatable_improved_tile_energy_output category = physics } 
+            } else_if = { limit = { check_variable = { which = AR_selected_physics_tech value = 1 } }
+                AR_give_tech = { tech = tech_repeatable_improved_shield_output category = physics } 
+            } else_if = { limit = { check_variable = { which = AR_selected_physics_tech value = 2 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_energy_damage category = physics } 
+            } else_if = { limit = { check_variable = { which = AR_selected_physics_tech value = 3 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_energy_fire_rate category = physics } 
+            } else_if = { limit = { check_variable = { which = AR_selected_physics_tech value = 4 } }
+                AR_give_tech = { tech = tech_repeatable_reduced_building_cost category = physics } 
+            }
+        }
+        # cleanup
+        set_variable = { which = AR_phy_cost value = 0 }
+        set_variable = { which = AR_level value = 0 }
+    }
+}
+
+AR_upgrade_if_possible_society = {
+    if = { # if there is a selected tech
+        limit = {
+            check_variable = { which = AR_selected_society_tech value >= 0 }
+        }
+        # Initialize cost with the level cost
+        set_variable = {
+            which = AR_soc_cost
+            value = @repeatableTechLevelCost
+        }
+        # Get the level of the tech which is selected
+        SLEX_get_list_variable_var_index = {
+            LIST = AR_society_tech_levels
+            INDEX = AR_selected_society_tech
+            VALUE = AR_level
+        }
+        multiply_variable = {
+            which = AR_soc_cost
+            value = AR_level
+        }
+        # Add fixed cost
+        change_variable = {
+            which = AR_soc_cost
+            value = @repeatableTechBaseCost
+        }
+        # Add sprawl induced multiplier (AR_sprawl >= 1)
+        multiply_variable = {
+            which = AR_soc_cost
+            value = AR_sprawl
+        }
+        multiply_variable = {
+            which = AR_soc_cost
+            value = AR_research_cost_multiplier
+        }
+        # Check if has enough research stored
+        if = {
+            limit = {
+                check_variable = {
+                    which = AR_soc_cost
+                    value <= AR_society_stocked
+                }
+            }
+            # Remove cost from stocked
+            multiply_variable = {
+                which = AR_soc_cost
+                value = -1
+            }
+            SLEX_add_resource = {
+                RESOURCE = society_research
+                AMOUNT = AR_soc_cost
+            }
+            # Give the tech
+            if = { limit = { check_variable = { which = AR_selected_society_tech value = 0 } }
+                AR_give_tech = { tech = tech_repeatable_improved_tile_food_output category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 1 } }
+                AR_give_tech = { tech = tech_repeatable_improved_core_system_cap category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 2 } }
+                AR_give_tech = { tech = tech_repeatable_improved_edict_length category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 3 } }
+                AR_give_tech = { tech = tech_repeatable_improved_army_damage category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 4 } }
+                AR_give_tech = { tech = tech_repeatable_improved_army_health category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 5 } }
+                AR_give_tech = { tech = tech_repeatable_improved_leader_life_span category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 6 } }
+                AR_give_tech = { tech = tech_repeatable_naval_cap category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 7 } }
+                AR_give_tech = { tech = tech_repeatable_command_limit category = society } 
+            } else_if = { limit = { check_variable = { which = AR_selected_society_tech value = 8 } }
+                AR_give_tech = { tech = tech_repeatable_improved_starbase_capacity category = society } 
+            }
+        }
+        # cleanup
+        set_variable = { which = AR_soc_cost value = 0 }
+        set_variable = { which = AR_level value = 0 }
+    }
+}
+
+AR_upgrade_if_possible_engineering = {
+    if = { # if there is a selected tech
+        limit = {
+            check_variable = { which = AR_selected_engineering_tech value >= 0 }
+        }
+        # Initialize cost with the level cost
+        set_variable = {
+            which = AR_eng_cost
+            value = @repeatableTechLevelCost
+        }
+        # Get the level of the tech which is selected
+        SLEX_get_list_variable_var_index = {
+            LIST = AR_engineering_tech_levels
+            INDEX = AR_selected_engineering_tech
+            VALUE = AR_level
+        }
+        multiply_variable = {
+            which = AR_eng_cost
+            value = AR_level
+        }
+        # Add fixed cost
+        change_variable = {
+            which = AR_eng_cost
+            value = @repeatableTechBaseCost
+        }
+        # Add sprawl induced multiplier (AR_sprawl >= 1)
+        multiply_variable = {
+            which = AR_eng_cost
+            value = AR_sprawl
+        }
+        multiply_variable = {
+            which = AR_eng_cost
+            value = AR_research_cost_multiplier
+        }
+        # Check if has enough research stored
+        if = {
+            limit = {
+                check_variable = {
+                    which = AR_eng_cost
+                    value <= AR_engineering_stocked
+                }
+            }
+            # Remove cost from stocked
+            multiply_variable = {
+                which = AR_eng_cost
+                value = -1
+            }
+            SLEX_add_resource = {
+                RESOURCE = engineering_research
+                AMOUNT = AR_eng_cost
+            }
+            # Give the tech
+            if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 0 } }
+                AR_give_tech = { tech = tech_repeatable_improved_tile_mineral_output category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 1 } }
+                AR_give_tech = { tech = tech_repeatable_improved_military_station_damage category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 2 } }
+                AR_give_tech = { tech = tech_repeatable_improved_military_station_health category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 3 } }
+                AR_give_tech = { tech = tech_repeatable_improved_armor_output category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 4 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_explosive_damage category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 5 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_explosive_fire_rate category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 6 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_kinetic_damage category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 7 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_kinetic_fire_rate category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 8 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_strike_craft_fire_damage category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 9 } }
+                AR_give_tech = { tech = tech_repeatable_weapon_type_strike_craft_fire_rate category = engineering } 
+            } else_if = { limit = { check_variable = { which = AR_selected_engineering_tech value = 10 } }
+                AR_give_tech = { tech = tech_repeatable_reduced_building_time category = engineering } 
+            }
+        }
+        # cleanup
+        set_variable = { which = AR_eng_cost value = 0 }
+        set_variable = { which = AR_level value = 0 }
+    }
+}
+
+AR_broadcast_research_cost_multiplier = {
+    every_country = {
+        limit = {
+            is_ai = no
+        }
+        set_variable = { which = AR_research_cost_multiplier value = prev }
+    }
+}
+
+AR_get_research_cost_multiplier = {
+    if = {
+        limit = {
+            any_country = {
+                check_variable = { which = AR_research_cost_multiplier value > 0 }
+            }
+        }
+        random_country = {
+            limit = {
+                check_variable = { which = AR_research_cost_multiplier value > 0 }
+            }
+            prev = {
+                set_variable = { which = AR_research_cost_multiplier value = prev }
+            }
+        }
+    } else = {
+        set_variable = { which = AR_research_cost_multiplier value = 1 }
+    }
+}

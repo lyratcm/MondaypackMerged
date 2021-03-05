@@ -1,0 +1,33 @@
+##########################################################################
+# Planet edicts
+##########################################################################
+
+# Sets the edict-cost for all edicts with this variable
+@planetEdictCost = 100
+@planetEdictDuration = 3600
+
+# Empire University
+decision_eac_empire_university = {
+	icon = eac_empire_university
+	resources = {
+		category = decisions
+		cost = { influence = 0 }
+
+	}
+	
+	potential = {
+		is_capital = yes
+		owner = { is_ai = no }
+	}
+	
+	effect = {
+		custom_tooltip = decision_eac_empire_university_tooltip
+		hidden_effect = {
+			owner = { country_event = { id = eac_university.1 } }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0	
+	}
+}

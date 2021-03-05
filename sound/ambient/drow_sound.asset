@@ -1,0 +1,25 @@
+
+####### PLANET AMBIENT ############
+sound =
+{
+	name = "drow_planet_01"
+	file = "drow_planet_01.wav"
+	always_load = no
+	volume = 1.1
+}
+
+sound =
+{
+	name = "drow_planet_02"
+	file = "drow_planet_02.wav"
+	always_load = no
+	volume = 1.1
+}
+
+sound =
+{
+	name = "drow_planet_03"
+	file = "drow_planet_03.wav"
+	always_load = no
+	volume = 1.1
+}

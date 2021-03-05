@@ -1,0 +1,96 @@
+##########################################################################
+# Decisions
+##########################################################################
+decision_planet_end_resettle_to = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_end_resettle_to
+
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		NOT = { has_modifier = planet_resettle_to }
+	}
+
+	effect = {
+		custom_tooltip = decision_planet_end_resettle_to_effects_short
+		add_modifier = { modifier = "planet_resettle_to" }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_begin_resettle_to = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_begin_resettle_to
+
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+		has_modifier = planet_resettle_to
+	}
+	
+	effect = {
+		custom_tooltip = decision_planet_begin_resettle_to_effects_short
+		hidden_effect = {
+			remove_modifier = planet_resettle_to
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_end_resettle_from = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_end_resettle_from
+
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+	}
+
+	allow = {
+		NOT = { has_modifier = planet_resettle_from }
+	}
+
+	effect = {
+		custom_tooltip = decision_planet_end_resettle_from_effects_short
+		add_modifier = { modifier = "planet_resettle_from" }
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_planet_begin_resettle_from = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_begin_resettle_from
+
+	potential = {
+		exists = owner
+		owner = { is_ai = no }
+		has_modifier = planet_resettle_from
+	}
+	
+	effect = {
+		custom_tooltip = decision_planet_begin_resettle_from_effects_short
+		hidden_effect = {
+			remove_modifier = planet_resettle_from
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

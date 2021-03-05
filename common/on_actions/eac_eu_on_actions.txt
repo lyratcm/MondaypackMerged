@@ -1,0 +1,23 @@
+# # No scope, like on_game_start
+# on_monthly_pulse = {
+# 	events = {
+#         eac_eu_leaders.0
+#     }
+# }
+
+# # Executed as a leader has died
+# # This = Country
+# # From = Leader
+# on_leader_death = {
+# 	events = {
+#         eac_eu_leaders.1
+#     }
+# }
+
+# # a new leader is generated for an empire, to be available for recruitment
+# # scope: country, from: leader
+# on_leader_spawned = {
+# 	events = {
+#         eac_eu_leaders.1
+#     }
+# }

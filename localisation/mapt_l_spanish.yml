@@ -1,0 +1,10 @@
+﻿l_spanish:
+mapt_ap_tech:0 "Advanced $tech_ascension_theory$"
+mapt_ap_tech_desc:0 "$tech_ascension_theory_desc$"
+
+#Start Event
+mapt_start.1:0 "More Ascension Perks for Tradtions+"
+mapt_start.1.desc:0 "Choose how many Ascension Perks you would like to be able to unlock, the number of slots shown will not change. §RChoose wisely as you CANNOT change your choice later."
+
+mapt_start.1.a:0 "40 Ascension Perks"
+mapt_start.1.b:0 "18 Ascension Perks"

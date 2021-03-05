@@ -1,0 +1,26 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_origins_elven_sunless_realms"
+		texturefile = "gfx/event_pictures/origins/origins_elven_sunless_realms.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origins_elven_foundations"
+		texturefile = "gfx/event_pictures/origins/origins_elven_foundations.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origins_elven_arcadian_symbiosis"
+		texturefile = "gfx/event_pictures/origins/origins_elven_arcadian_symbiosis.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origins_elven_celestial_throne"
+		texturefile = "gfx/event_pictures/origins/origins_elven_celestial_throne.dds"
+		alwaystransparent = yes
+	}
+}

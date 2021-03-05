@@ -1,0 +1,1703 @@
+#################
+# Campaigns
+# shorter duration, cost energy
+#################
+
+@Edict1Cost = 100
+@Edict2Cost = 200
+@Edict3Cost = 300
+
+@EdictDuration = 3600
+
+# Sets the cost for all campaigns with this variable
+@campaignCost = 1000
+@campaignDuration = 3600
+
+fear_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		country_unity_produces_mult = 0.10
+		pop_ethic_xenophobe_attraction_mult = 0.25
+	}
+
+	potential = {
+		is_xenophobe = yes
+		has_comms_with_alien_civilization = yes
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			has_resource = { type = energy amount > 5000 }
+		}
+	}
+}
+
+army_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_army_build_speed_mult = 0.25
+		army_starting_experience_add = 100
+		pop_ethic_militarist_attraction_mult  = 0.25
+	}
+	
+	potential = {
+		is_militarist = yes
+		has_comms_with_alien_civilization = yes
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+			has_resource = { type = energy amount > 5000 }
+		}
+	}
+}
+
+education_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+recycling_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.10
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			has_monthly_income = {
+				resource = consumer_goods
+				value < 0
+			}
+		}
+	}
+}
+
+healthcare_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+construction_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_structures_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			is_at_war = no
+			resource_stockpile_compare = { resource = energy value >= 7500 }
+			any_owned_planet = {
+				OR = {
+					free_district_slots >= 1
+					free_building_slots >= 1
+				}
+			}
+		}
+	}
+}
+
+###########
+# Machine Empire
+###########
+
+robot_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_pop_assembly_mult = 0.10
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+machine_warbot_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_army_build_speed_mult = 0.25
+		army_starting_experience_add = 100
+	}
+	
+	potential = {
+		OR = {
+			has_civic = civic_machine_warbots	
+			has_civic = civic_machine_terminator	
+		}
+		has_comms_with_alien_civilization = yes
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+			has_resource = { type = energy amount > 5000 }
+		}
+	}
+}
+
+machine_learning_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		has_authority = auth_machine_intelligence
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+machine_construction_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		planet_structures_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.1
+	}
+
+	potential = {
+		has_authority = auth_machine_intelligence
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			is_at_war = no
+			resource_stockpile_compare = { resource = energy value >= 7500 }
+			any_owned_planet = {
+				OR = {
+					free_district_slots >= 1
+					free_building_slots >= 1
+				}
+			}
+		}
+	}
+}
+
+machine_research_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	modifier = {
+		category_computing_research_speed_mult = 0.1
+		country_engineering_tech_research_speed = 0.1
+	}
+
+	potential = {
+		is_robot_empire = yes
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		modifier = {
+			weight = @EdictLowPrio
+			root = {
+				resource_stockpile_compare = { resource = energy value >= 2500 }
+			}
+		}
+	}	
+}
+
+#################
+# Hive Mind
+#################
+
+@hiveFood = 500
+
+drone_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+
+	potential = {
+		always = no
+	}
+
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+learning_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+war_drone_campaign = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.15
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+construction_campaign_hive = {
+	length = @campaignDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = campaigns
+		cost = {
+			trigger = {
+				is_lithoid_empire = no
+			}
+			food = @hiveFood
+		}
+		cost = {
+			trigger = {
+				is_lithoid_empire = yes
+			}
+			minerals = @hiveFood
+		}
+	}
+
+	modifier = {
+		planet_structures_cost_mult = -0.15
+		planet_building_build_speed_mult = 0.15
+	}
+
+	potential = {
+		has_authority = auth_hive_mind
+		has_technology = tech_planetary_unification
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			is_at_war = no
+			resource_stockpile_compare = { resource = food value >= 750 }
+			any_owned_planet = {
+				OR = {
+					free_district_slots >= 1
+					free_building_slots >= 1
+				}
+			}
+		}
+	}
+}
+
+
+##########################################################################
+# Rare resource edicts
+##########################################################################
+
+terraforming_gas = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			exotic_gases = 25
+		}
+	}
+
+	modifier = {
+		terraform_speed_mult = 0.50
+	}
+
+	prerequisites = {
+		"tech_terrestrial_sculpting"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			any_planet_within_border = {
+				is_terraforming = yes
+			}
+		}
+	}
+}
+
+pitharan_fertilizer = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			exotic_gases = 25
+		}
+	}
+	
+	potential = {
+		OR = {
+			is_robot_empire = no
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_machine_consciousness
+		}
+	}
+
+	modifier = {
+		country_food_produces_mult = 0.15
+	}
+	
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			factor = 0
+			ROOT = {
+				has_monthly_income = {
+					resource = food
+					value > 10
+				}
+			}
+		}
+	}
+}
+
+fuel_gases = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			exotic_gases = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = exotic_gases amount > 0 }
+			has_edict = fuel_gases
+		}
+	}
+
+	modifier = {
+		ship_speed_mult = 0.15
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+shield_gases = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			exotic_gases = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = exotic_gases amount > 0 }
+			has_edict = shield_gases
+		}
+	}
+
+	modifier = {
+		ship_shield_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+clearing_motes  = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			volatile_motes = 25
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = volatile_motes amount > 0 }
+			has_edict = clearing_motes
+		}
+	}
+
+	modifier = {
+		deposit_blockers_cost_mult = -0.25
+		planet_clear_blocker_time_mult = -0.25
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+energy_motes = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			volatile_motes = 25
+		}
+	}
+
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.15
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			ROOT = {
+				has_monthly_income = {
+					resource = energy
+					value < 50
+				}
+			}
+		}
+	}	
+}
+
+motes_kinetic = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			volatile_motes = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = volatile_motes amount > 0 }
+			has_edict = motes_kinetic
+		}
+	}
+
+	modifier = {
+		weapon_type_kinetic_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			is_at_war = yes
+		}
+	}
+}
+
+motes_explosives = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			volatile_motes = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = volatile_motes amount > 0 }
+			has_edict = motes_explosives
+		}
+	}
+
+	modifier = {
+		weapon_type_explosive_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+motes_armor = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			volatile_motes = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = volatile_motes amount > 0 }
+			has_edict = motes_armor
+		}
+	}
+
+	modifier = {
+		ship_armor_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}
+
+crystalline_sensors  = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			rare_crystals = 25
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = rare_crystals amount > 0 }
+			has_edict = crystalline_sensors
+		}
+	}
+
+	modifier = {
+		ship_sensor_range_add = 1
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+crystalline_mining = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			rare_crystals = 25
+		}
+	}
+
+	modifier = {
+		planet_jobs_minerals_produces_mult = 0.15
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			ROOT = {
+				has_monthly_income = {
+					resource = minerals
+					value < 50
+				}
+			}
+		}
+	}	
+}
+
+crystalline_physics = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			rare_crystals = 25
+		}
+	}
+
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_researchers_upkeep_mult = -0.15
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+
+crystal_focus = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			rare_crystals = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = rare_crystals amount > 0 }
+			has_edict = crystal_focus
+		}
+	}
+
+	modifier = {
+		weapon_type_energy_weapon_damage_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			is_at_war = yes
+		}
+	}
+}
+
+crystal_hull = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			rare_crystals = 50
+		}
+	}
+
+	modifier = {
+		ship_hull_mult = 0.25
+	}
+	
+	prerequisites = {
+		"tech_crystal_armor_1"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			is_at_war = yes
+		}
+	}
+}
+
+living_metal_construction  = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_living_metal = 50
+		}
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = 0.50
+	}
+
+	prerequisites = {
+		"tech_mine_living_metal"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			any_megastructure = {
+				count >= 1
+				is_upgrading = yes
+			}
+		}
+	}
+}
+
+living_metal_health = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_living_metal = 25
+		}
+	}
+	
+	show_tech_unlock_if = {
+		is_robot_empire = no
+	}
+	
+	potential = {
+		is_robot_empire = no
+	}
+
+	modifier = {
+		custom_tooltip = edict_living_metal_health_tooltip
+	}	
+	
+	prerequisites = {
+		"tech_mine_living_metal"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_monthly_income = { resource = sr_living_metal value > 2 }
+			any_owned_planet = {
+				free_housing > 5
+			}
+		}
+	}
+}
+
+living_metal_robot = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_living_metal = 25
+		}
+	}
+	
+	show_tech_unlock_if = {
+		is_robot_empire = yes
+	}
+	
+	potential = {
+		is_robot_empire = yes
+	}
+
+	modifier = {
+		pop_assembly_speed = 0.10
+		planet_pop_assemblers_upkeep_mult = 0.25
+		
+	}	
+	
+	prerequisites = {
+		"tech_mine_living_metal"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_monthly_income = { resource = sr_living_metal value > 2 }
+			any_owned_planet = {
+				free_housing > 5
+			}
+		}
+	}
+}
+
+dark_matter_research = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_dark_matter = 25
+		}
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.10
+	}
+	
+	prerequisites = {
+		"tech_mine_dark_matter"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			ROOT = {
+				resource_stockpile_compare = { resource = sr_dark_matter value > 300 }
+				has_monthly_income = { resource = sr_dark_matter value > 3 }
+				is_at_war = no
+			}
+		}
+	}
+}
+
+zro_aphrodisiac = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			sr_zro = 25
+		}
+	}
+	
+	show_tech_unlock_if = {
+		is_robot_empire = no
+	}
+	
+	potential = {
+		is_robot_empire = no
+	}
+
+	modifier = {
+		custom_tooltip = edict_living_metal_health_tooltip
+	}
+	
+	prerequisites = {
+		"tech_psionic_healthcare"
+	}
+	
+	ai_weight = {
+		weight = @EdictMedPrio
+	}
+}
+
+zro_pilots = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = ship_edicts
+		cost = {
+			sr_zro = 50
+		}
+	}
+	
+	show_tech_unlock_if = {
+		is_robot_empire = no
+	}
+	
+	potential = {
+		is_robot_empire = no
+	}
+
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+		ship_evasion_mult = 0.10
+		ship_speed_mult = 0.10
+	}
+	
+	prerequisites = {
+		"tech_mine_zro"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			root = {
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+zro_army = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_zro = 50
+		}
+	}
+	
+	show_tech_unlock_if = {
+		is_robot_empire = no
+	}
+	
+	potential = {
+		is_robot_empire = no
+	}
+
+	modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+	}
+	
+	prerequisites = {
+		"tech_telepathy"
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			root = {
+				is_at_war = yes
+			}
+		}
+	}
+}
+
+nanite_actuators  = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			nanites = 50
+		}
+	}
+
+	potential = {
+		OR = {
+			has_resource = { type = nanites amount > 0 }
+			has_edict = nanite_actuators
+		}
+	}
+
+	modifier = {
+		all_technology_research_speed = 0.10
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+nanite_dust = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			nanites = 20
+		}
+	}
+	
+	potential = {
+		has_resource = { type = nanites amount > 0 }
+	}
+
+	modifier = {
+		terraform_speed_mult = 0.75
+		terraforming_cost_mult = 0.25
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			any_planet_within_border = { 
+				is_terraforming = yes
+			}
+		}
+	}	
+}
+
+nanite_scales = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			nanites = 25
+		}
+	}
+	
+	potential = {
+		has_resource = { type = nanites amount > 0 }
+		OR = {
+			is_robot_empire = no
+			has_valid_civic = civic_machine_servitor
+			has_valid_civic = civic_machine_assimilator
+			has_valid_civic = civic_machine_consciousness
+		}
+	}
+
+	modifier = {
+		country_food_produces_mult = 0.25
+	}
+	
+	ai_weight = {
+		weight = @EdictLowPrio
+		modifier = {
+			factor = 0
+			ROOT = {
+				OR = {
+					country_uses_food = no
+					has_monthly_income = {
+						resource = food
+						value > 10
+					}
+					has_monthly_income = {
+						resource = nanites
+						value < 1
+					}
+				}
+			}
+		}
+	}	
+}
+
+
+##########################################################################
+# Government edicts
+##########################################################################
+
+fund_underground_railroad = {
+	length = 360
+	resources = {
+		category = campaigns
+		cost = {
+			energy = @campaignCost
+		}
+	}
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+		has_technology = tech_planetary_unification
+		allows_slavery = no
+		OR = {
+			has_policy_flag = refugees_only_citizens
+			has_policy_flag = refugees_allowed
+		}
+	}
+	
+	allow = {
+		any_relation = {
+			has_communications = PREV
+			allows_slavery = yes
+			any_owned_planet = {
+				any_pop = { is_enslaved = yes }
+				NOT = { has_modifier = underground_railroad }
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = fund_underground_railroad_tooltip_effect
+		hidden_effect = {
+			random_relation = {
+				limit = {
+					has_communications = PREV
+					allows_slavery = yes
+					any_owned_planet = {
+						any_pop = { is_enslaved = yes }
+						NOT = { has_modifier = underground_railroad }
+					}
+				}
+				save_event_target_as = slaver_country
+				random_owned_planet = {
+					limit = {
+						any_pop = { is_enslaved = yes }
+						NOT = { has_modifier = underground_railroad }
+					}
+					save_event_target_as = slaver_planet
+					set_planet_flag = outside_underground_railroad
+					planet_event = { id = refugeeexpanded.29 }
+				}
+			}
+			country_event = { id = refugeeexpanded.32 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			OR = {
+				is_egalitarian = yes
+				is_xenophile = yes
+			}
+			is_xenophobe = no
+			is_authoritarian = no
+		}
+	}
+}
+
+criminal_bribery = {
+	length = 180
+	resources = {
+		category = edicts
+		cost = {
+			influence = 0
+		}
+	}
+	
+	allow = {
+		resource_stockpile_compare = { resource = consumer_goods value >= 500 }
+		custom_tooltip = edict_criminal_bribery_tooltip_allow
+		hidden_trigger = {
+			any_system = {
+				any_system_planet = {
+					has_branch_office = yes
+					branch_office_owner = { is_same_value = PREVPREVPREV }
+					NOT = { has_modifier = syndicate_bribery }
+					planet_crime < 50
+				}
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_criminal_bribery_tooltip_effect
+		hidden_effect = {
+			country_event = { id = civicsexpanded.15 }
+		}
+	}
+	
+	potential = {
+		is_criminal_syndicate = yes
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictLowPrio
+			has_resource = { type = consumer_goods amount >= 1000 }
+		}
+	}
+}
+
+depose_leader = {
+	length = 1
+	resources = {
+		category = edicts
+		cost = {
+			influence = 100
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = recently_deposed_ruler }
+	}
+	
+	effect = {
+		custom_tooltip = edict_depose_leader_tooltip_effect
+		hidden_effect = {
+			country_event = { id = civicsexpanded.38 }
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_valid_civic = civic_shadow_council
+			has_valid_civic = civic_shadow_council_megacorp
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+no_ai_fed_wars = {
+	length = 1
+	resources = {
+		category = edicts
+		cost = {
+			influence = 50
+		}
+	}
+	
+	effect = {
+		custom_tooltip = edict_no_ai_fed_wars_tooltip_effect
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_federation_with = PREV
+					is_ai = yes
+				}
+				set_timed_country_flag = { flag = ai_no_fed_wars days = 3600 }
+			}
+		}
+	}
+
+	potential = {
+		is_ai = no
+		any_country = {
+			is_in_federation_with = PREV
+			is_ai = yes
+		}
+	}
+	
+	allow = {
+		any_country = {
+			is_in_federation_with = PREV
+			is_ai = yes
+			NOT = { has_country_flag = ai_no_fed_wars }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+##########################################################################
+# Event edicts
+##########################################################################
+masters_writings_politics = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_masters_writings_politics
+	}
+	
+	modifier = {
+		planet_buildings_cost_mult = -0.1
+		planet_districts_cost_mult = -0.1
+		planet_building_build_speed_mult = 0.10
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+masters_writings_diplomacy = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_masters_writings_diplomacy
+	}
+	
+	modifier = {
+		country_trust_growth = 1
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+masters_writings_philosophy = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_masters_writings_philosophy
+	}
+	
+	modifier = {
+		country_society_tech_research_speed = 0.1
+		country_leader_pool_size = 1
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+masters_writings_war = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict1Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_masters_writings_war
+	}
+
+	modifier = {
+		country_naval_cap_mult = 0.1
+		armies_upkeep_mult = -0.15
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			is_at_war = yes
+		}
+	}
+}
+
+improved_work_environment = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_improved_work_environment
+	}
+	
+	modifier = {
+		pop_cat_worker_happiness = 0.08
+		pop_cat_specialist_happiness = 0.04
+		category_biology_research_speed_mult = 0.1
+		category_statecraft_research_speed_mult = 0.1
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+renewable_energy = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_renewable_energy
+	}
+	
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+		category_industry_research_speed_mult = 0.1
+		category_materials_research_speed_mult = 0.1
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+super_sensors = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = edict_super_sensors
+	}
+
+	modifier = {
+		ship_sensor_range_add = 1
+		ship_hyperlane_range_add = 2
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+nuumismatic_visualization = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+
+	resources = {
+		category = edicts
+		cost = {
+			influence = @Edict2Cost
+		}
+	}
+
+	potential = {
+		has_country_flag = nuumismatic_visualization
+	}
+	
+	modifier = {
+		planet_pops_consumer_goods_upkeep_mult = -0.05
+		category_statecraft_research_speed_mult = 0.1
+		country_energy_produces_mult = 0.10
+	}
+
+	allow = {
+	}
+
+	ai_weight = {
+		weight = @EdictHighPrio
+	}
+}
+
+### Workaround to get a decision
+infest_species = {
+	length = 0
+
+	effect = {
+		country_event = { id = civicsexpanded.27 }
+	}
+	
+	potential = {
+		has_valid_civic = civic_infestation
+		
+		any_owned_pop = {
+			species = {
+				NOT = { has_trait = trait_hive_mind }
+
+				NOT = { has_species_flag = flag_species_to_infest }
+				NOT = { has_species_flag = flag_species_infestation_project }
+				
+				has_species_flag = flag_species_infestation_refused
+				
+				#has_citizenship_type = { country = root type = citizenship_slavery }
+			}
+		}
+		
+		NOT = { has_country_flag = flag_species_infestation_project_possible }
+		NOT = { has_country_flag = flag_infest_species_open }
+	}
+	
+	ai_weight = {
+		weight = 1
+	}	
+}

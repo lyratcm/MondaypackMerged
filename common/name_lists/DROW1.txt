@@ -1,0 +1,662 @@
+﻿################
+## DROW NAMES ##
+################
+
+## Chiefly Dunmer!!
+
+DROW1 = {
+	randomized = no
+
+	ship_names = {
+		generic = {
+			Agrach Dyrr Aleanrahel Aleval Arabani Argith Arkhenneld Auvryndar Barrison Del'Armigo Claddath Despana DeVir Do'Urden Drezz'Lynur Druu'giir Eilsera Faen
+			Tlabbar Fey-Branche Freth Horlbar Hun'ett Jenn'Yxir Jusztiirn Kenafin Khalazza Kilsek Maerret Melarn Mezrylornyl Millithor Mylyl Naerth Nanitarim Noquar
+			Nurbonnis Oblodra Ousstyl Phaundal Q'Xorlarrin Rilynt'tar Shobalar Srune'lett Sshurlynder Symrivvin T'sarran Teken'duis Telenna Tlabbar Tlintarn Tuin'Tarl Vandree Xalyth
+			Xorlarrin Yauntyrr Yauthlo
+		}
+		
+		corvette = {
+			Adrusu Alarvyne Alavesa Aldyne Alenus Aleri Alfe Almse Almsi Aloie Alonisea Alurue Alvela Alveno Alvura Alynu Amili Andalin
+			Andilo Andilu Ane Angahran Anis Anise Aralosea Arara Arns Arnsa Arnsi Artisa Arvama Arvamea Arvela Arvso Aryne Aryni
+			Athesie Avoni Badala Badama Balen Baleni Balsa Balynu Barenziah Bedenea Bedynea Beleru Bevene Beyte Bidsi Bilsa Birama Bivale
+			Boderi Bodsa Boldrisa Bralsea Brara Bravora Bredasu Brelayne Brelda Brelyna Brerayne Brevasu Brevosi Brildraso Brilnosu Bronosa Dalami Dalnorea
+			Dalse Dalyne Danaronea Danasi Dandera Dandynea Danoso Danso Darane Dareru Daroso Darvala Darvame Darvasa Darvynea Daynali Daynas Daynillo
+			Deldasa Deldrise Delmene Delte Delyna Derar Derayna Dilami Dileno Dilvene Dinara Dinere Dinuro Diradeni Dirara Diren Dolmesa Dolsa
+			Dolvasie Domesea Dorisa Dorynu Dothasi Dovrosi Dralasa Dralisi Dralora Dralcea Dralosa Dralsea Draramu Drarayne Dratha Dravynea Dredyni Drelasa
+			Drelyne Drendrisa Dreveni Drilame Driloru Drireri Drolora Drorayni Drulene Drurile Duldresi Dulnea Edryno Eldrasea Eldrilu Elmera Elmussa Elvasea
+			Elynea Elynu Endase Endroni Eralane Erirvase Ernse Ervesa Ervona Ervyna Ethal Ethasi Evesa Evilu Fadase Fadile Falanu Falena
+			Falura Fanasa Fanisea Fanuse Faral Faralenu Farare Faras Farena Farusea Fathasa Fathusa Favani Favela Favilea Favise Favona Fedura
+			Feldrelo Felisa Felmena Felsa Felsu Feralea Ferise Ferone Fervsea Ferynu Fevasa Fevila Fieryra Folsi Folvalie Fomesa Fonari Fonas
+			Forvse Gadasu Gadela Gadyni Galas Galasa Galdal Galeri Galero Galore Galsu Galuro Galvene Galviso Galyn Gandela Gandosa Garalo
+			Garas Garila Garyne Gilse Ginadura Gindrala Girara Girvani Girynu Golana Golena Golmerea Golveso Golvyni Gomeso Gorenea Gorven Guldrise
+			Gulena Gulvilie Gureryne Haleneri Hlavora Hlendrisa Hlevala Hlireni Hlodala Idrenie Idronea Idroso Idula Ienasa Ienase Ienaso Ilmeni Ilmyna
+			Indrele Inera Irna Irvama Irvsie Ivela Iveri Ivramie Ivrosa Lauravenya Llaalamu Llaalsa Llandrale Llandreri Llarara Llaros Llarusea Llathise
+			Llathyno Llavane Llavelea Llavesa Llaynasa Lledsa Lledsea Llemisa Llerusa Llevana Llirala Llivas Llondresa Llorayna Llunela Madayna Madaynu Madrale
+			Madura Malsa Malven Manara Manse Manwe Maralie Marasa Maren Marena Marilia Mathesa Medila Medresi Melsu Meluria Melvona Melvuli
+			Melvure Meralyn Methulu Mevrenea Mevure Miara Milara Miluru Milvela Milvonu Minasi Mindeli Miraso Mirnelea Mornsu Moroni Morusu Movisa
+			Muldroni Mulvisie Mundrila Muvrulea Nadene Nalami Nalasa Nalmila Nalsie Nalvilie Nalvyna Narese Narile Narisa Nartise Nathala Nathyne Nedeni
+			Nelmyne Nelso Nerile Nervana Nevama Nevena Nevrasa Nevrila Nevusa Nidara Nidryne Nileno Nilera Nilvyn Nina Nirasa Nireli Noldrasi
+			Nothasea Novrynea Nuleno Nurisea Omesu Orero Orvona Olvyne Radene Raldenu Ranis Ranosa Rarusu Rarvela Rathyne Ravani Raven Ravoso
+			Rayna Raynasa Raynila Relamu Relmerea Relosa Relvese Remasa Rerilie Rerynea Reynel Ridena Rilasi Rilvase Rinori Riraynea Rolasa Runethyne
+			Ruthrisu Ruvene Sadal Sadela Salama Salora Salyni Sanaso Saruse Sathasa Satheri Satyana Savesea Savile Sedris Sedyni Selvura Senise
+			Serila Sernsi Seryne Sethesi Sevame Sevisa Sevyni Sodrara Sondryn Sorosi Sovali Sovisa Suldreni Tadara Tadera Talamu Talare Talmeni
+			Talmsa Talsi Taluri Taluro Tamira Tanar Tandasea Tanisie Tanusea Tarani Tavilu Tavynu Tedysa Teleri Telura Tenaru Tenisi Terenu
+			Tereri Teril Teruise Teryne Thalurea Thavere Thelsa Thelvamu Therana Thilse Thovasi Thurisea Tilena Tilore Tinaso Tirasie Tirele Tolmera
+			Tolvise Tolvone Tonas Tonasi Toranu Torasa Torosi Traldrisa Traynili Tredere Tremona Trerayna Trivura Tumsa Tunila Tuvene Tuvenie Tuveso
+			Ulenea Uleni Ulmesi Ulmiso Ulvena Ulveni Ulyne Ulyno Unila Urandile Urene Uresa Ureso Urtisa Urtiso Uryne Uupse Uvisea
+			Uvoo Vadeni Vadramea Vadusa Valveli Valvesu Valvosa Valyne Varasa Varenu Varona Varvsa Vaveli Vedelea Velanda Velyna Venasa Vendrela
+			Verara Vevrana Vilvyni Vindamea Vindyne Vireveri Vivyne Volene Volmyni Voneri Vuldronu Vulyne
+		}
+		
+		constructor = {
+		}
+		
+		colonizer = {
+		}
+		
+		science = {
+			Aearion Ainien Ainron Alaar Alaion Alastduil Alkannun Almaeon Almenil Alyadaeion Alyanole Amondan Andur Anion Anyan Aphcadoion Arantherinlerion Areurion
+			Artherien Athyadon Authcion Bararenien Bellantion Berronril Bregbellanon Castien Caunrinond Caunwe Cilion Daeron Dariadthon Daugorathil Dorsalernon Dracarion Draugien Draugmon
+			Draugnoion Durdur Durwe Edendil Edenion Eglerion Eldil Elfinion Elthradon Erucinison Erugadon Erumelon Erunefindad Eruthannin Eruthor Erynbund Falasbeliil Frauthion
+			Galasad Galdhortar Galentalion Garmion Gleinayaien Gleinayonthor Gondis Habrision Haralfaraston Harsalerion Hirion Hothhil Hurion Hurost Iauron Imnoeth Imwarthion Istuaran
+			Istuion Kiirar Kiirion Kithadhamion Kithnornon Laerdhorion Lairethraede Lairkanion Lanadhamdon Landaadon Landadirion Landath Laththerinyonien Legodan Limthil Lleaderlerthon Llenord Locien
+			Lydan Maeaias Maedion Maerion Maerrond Malthal Melcaudren Melimborn Melimron Melkanron Menamaethor Menamendur Minnibion Minronidan Minyonacan Moradhamon Morauthion Mordhudon
+			Morlathdon Mupantion Naraion Nararon Nemollon Neurton Nimadhamion Nithien Nithion Onunon Ordiron Orlanuth Orthorien Ovorien Polenthonion Polenthraidan Raincaunion Raindhoran
+			Rainpantdon Rainvantien Randost Rildion Rilian Rimedan Rimeion Rindagdornen Rindagnaiien Rission Rochen Rochenion Rohermornion Roheryahon Rost Saelglad Saelion Sidhlaeion
+			Sidhton Simenon Sirthor Suiayan Taenien Talaldolien Talglironion Talhasyonion Tamlaithion Tandan Tanethon Tanithas Tanlaerion Tantaran Taphenson Tauradhamion Tauraldorion Taurweldorren
+			Tean Teien Thaldur Thanthoren Tharnonien Thowaiien Tidireus Tidurion Tipantion Tithtarien Tolon Trisaithonien Tulluanion Tulthiion Turauthdan Turdhorede Turin Turlaion
+			Valcadothon Valweldolien Vanafinddien Vanalandil Veassen Velerathion Veran Verbaion
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+			Adinirahc Alauniira Alton Antatlab Aunrae Baragh Belarbreena Bhintel Briza Bruherd Calimar Chaszmyr Chessintra Dhaunae Dinin Divolg Drisinil Duagloth
+			Elvanshalee Faeryl Guldor Halisstra Houndaer Ilmryn Imrae Irae Istolil Istorvir Jaraxle Krenaste Lesaonar LiNeerlay Lirdnolu Lualyrr Malaggar Malice
+			Merinid Micarlin Minolin Molvayas Myrymma Nalfein Nilonim Nym Pellanistra Quave Quild Rauva Relonor Rizzen Ryld Ryltar Sabrae SiNafay
+			T'risstree Talabrina Talice Tathlyn Tsabrak Vorn Vuzlyn Xune Zebeyana
+		}
+		
+		battleship = {
+			Aamela Aamrila Aarela Adansa Adrasi Adryn Aerona Aeyne Alaru Aldyna Alicon Alli Alma Almise Almse Alsal Alurami Alvesi
+			Alvila Amila Andilan Aneyda Ani Anila Aralosi Arara Arela Arilu Arisa Arns Arvena Aryvena Aspera Athesa Aurona Badila
+			Bala Balsia Bameli Bameni Banda Bedena Bedyna Bedyni Belderi Belera Belosi Belya Bendyni Bera Berada Berari Berela Betya
+			Beyte Bidia Bidsa Biiri Bili Binayne Birila Bivala Bivessa Blivisi Boderia Bothisii Bralsa Bralsi Bravora Breda Bredami Brela
+			Brelaca Brelyn Brelynd Breva Brevasu Burila Buronii Butheli Byla Cadiva Cloya Daela Dala Daliina Dalmi Dalora Dalsa Dalsi
+			Damisi Dandea Dathlyn Dandrii Danis Darili Darva Dasila Davilia Daymi Dayni Denu Derami Deria Diina Dileni Dilyne Dinaria
+			Dirilu Dithisi Dolsia Domi Donta Drala Drathyra Drayna Dreska Dreyla Drissa Dunveril Durena Edrasa Edrisi Edryn Edwina Eldri
+			Elvasia Elyna Elynisi Enura Erila Eroni Ervyla Ervyni Ervynu Evessa Falan Falora Faltha Famdii Farona Faryon Farys Favel
+			Fealu Fedrasa Feduria Feldrasa Feldsii Felmina Felsa Fenila Ferdyn Ferva Fethesena Feyne Fieria Filu Foni Fonira Furoni Furu
+			Fyrayn Fyrona Gadila Gadsi Galdas Galdsa Galisa Galori Galsi Galyn Gami Gandilla Gariasa Gelaa Gelana Gelii Gena Girara
+			Girva Godyna Golvy Gorili Grona Gulvera Guroanii Guronii Gynisi Hadrill Hala Hanala Helma Hlana Hlaren Hlava Hlenia Hlethena
+			Hlisi Hlura Idrasa Idrenia Idria Idroni Ildrasai-daro Ilmeni Indra Indrasa Indrasi Indrela Indrele Indririi Ineria Inisa Inise Iriana
+			Iry Isabeau Ithrini Ivramia Kalara Kalina Kireth Ladrasa Lathisa Laureva Lena Lirielle Lirona Livisii Llaami Llaari Llarevis Llasi
+			Llavana Llivia Llorayna Llotha Llunela Lodyna Lolethys Lorara Lorolu Luranor Luryne Madrana Madria Madura Maedini Maera Malarel Malori
+			Mamyne Mari Mariia Marila Marlyn Marona Maronii Marwyn Melila Meralys Meram Merona Mervilda Meva Mevura Midrasi Miiga Miirist
+			Milia Milva Milvela Milyne Mindelyn Mirasa Mirise Mirnsa Mirusu Mivani Morami Morvani Mulvi Murela Myn Nadie Nandri Naresa
+			Narilii Nartisa Naryu Nedi Nedrasa Nela Nelmia Neloren Nelvana Nendrii Nerari Nervyna Nevusa Neyna Nida Nila Nilonii Niluva
+			Ninla Nirelia Nivama Nivene Nudryn Nurara Nurona Nurvyna Nusana Odesa Odrasa Odrys Odyna Olvyia Orama Orani Orara Orea
+			Orona Orvana Oryla Radrase Rala Ramavel Rami Ramila Ramu Rana Rania Ranyna Rarili Rarusi Ravania Ravel Ravila Raynil
+			Rela Reldsii Relmerea Relmeria Rena Rernel Revisii Rianor Ridinna Riinsi Rila Rironi Ris Rudrasa Ruvali Saalu Sadelia Salima
+			Salina Salori Salver Samtri Sanas Sathdira Sathryn Sava Savi Savila Sayla Sayne Sehlena Sela Semoa Sen Sena Serana
+			Seritath Servyna Seryna Sevame Sevy Seyne Seyrena Seryne Sethan Sethisa Sevame Shra Sia Siid Siila Silen Sirari Sirili
+			Sirilu Sivisia Sodra Sorosi Sovi Suldrini Surii Suronii Sursi Taderi Taelu Talama Talari Talmeni Talsi Talsyne Talvini Tama
+			Tarania Tarvili Tedoran Teldyni Telura Tenara Teranya Teroni Tevynni Thera Therana Tifosi Tildsi Tivela Tovisa Trayna Trayniria Tredare
+			Udrasi Urada Urava Uravasa Urila Urili Urona Urrila Uthisii Vadyne Vala Valana Valveli Valyia Valyn Vamoni Varoni Vayne
+			Vedyne Velas Veldrana Velsa Venae Venoni Veranim Verilu Veru Vethisa Vila Vilrani Vim Visthina Vivyne Vlaasti Vlesyl Voldsea
+			Volyn Vrali Vuri Vurila Wren Xand
+		}
+		
+		mining_station = { }
+		research_station = { }
+		observation_station = { }
+		
+		transport = { }
+
+		military_station_small = { }
+
+		ion_cannon = { }
+
+		titan = { }
+
+		colossus = { }
+	}
+
+	fleet_names = {
+		random_names = {
+			"L'ashm Imlar" "L'ashm Eirior" "L'ashm Valsharess" "L'ashm Yathtallar" "L'ashm Qu'essan" "L'ashm Delmah" "L'ashm Serisen" "L'ashm Drakta" "L'ashm Dalninin" "L'ashm Marala" "L'ashm d'Issan"
+		}
+		sequential_name = "%O% Dalharil L'ashm"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Zhentua Kyorl"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Delmah Kyorl"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Z'hindul Hosse"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Rothe Hosse"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Toha Hosse"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Naut-elghinyrr"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Vantua Hosse"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Vantua Kyorl"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% M'elzar d'Aron"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Phindar d'Aron"
+		}
+		
+		gene_warrior_army = {
+			random_names = { 
+			}
+			sequential_name = "%O% Karandras d'Aron"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Kyorl Plinn"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Vantua Plinn"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Abaeir Abaethaggar Abbandlyn Abburth Abbylan Adinirendlyn "Aedar Mora" "Aelus Yorn" Akordia Alakia Alanthendlyn Alauniira Altonia Alurenia Alystin Angaste "Annish Tor" Antatlab "Anulon Silor" Ardulace Areionia Argith Assarai "Atsus Tel" Aunrae "Axsa Vith" Baereghel Baltana Baragh "Bashuk Vorn" "Bekan Zhen" Belarbreena Belgos Berg'inyon Bhintel Bladen'Kerst Blaerabban Blundyth Brannessa Briza Bruherd Buraval Burryna "Bwael Xund" Chalithra Charinida Charrvhel'raugaust Chaszmyr Chaulssin "Che'el Anthor" "Che'el Gar'ven" "Che'el Lassen" "Che'el Linthar" "Che'el Nidir" "Che'el Renor" "Ched Nassad" "Chel Tsoss" Chessintra "Cheth Rrhinn" Coborel Coloara Conamori Cormrael Crysendlyn Dalael Dhaunae Dhuunyl Dilynrae Divolg Drisinil Duagloth Durdyn Eclavdra "Elan Ssinss" Elkantar Elpragh Elvanshalee Elvraema Eralda Erelda Erelhei-Cinlu Eryndlyn Faeryl Fanaedar Felyndiira Filfaere Filifar Filraen Fini'they G'eldriia Gaussra Gellaer Ghaun Ghaundar Ginafae Glannath Gomph Greyanna Guallindurth Guldor G'eldriia Haelra Halavin Halisstra Har'olen Haundrauth Hune Hyluan Idexoran Ilivarra Illistyn Ilmra Ilphrin Imrae Inidil Irae Irruit Istolil Ithilaughym Iymril Jhaelryna Jhalavar Jhanniss Jhulae Jrggred "Juba'ss Lyr" Jusztiirn Jyslin Kalannar "Kalur Yorn" Kalyarndlyn "Kanarvan Lyr" Kelnozz "Kerath Lyr" Khalazza Krondorl Laele Larynda Lesaonar Lhalabar LiNeerlay Lirdnolu "Lith My'athar" "Llurth Dreier" Lorendlyn Lualyrr Luen Luihaulen'tar "Luvoth Yorn" Lyme Maerimydra Malaggar Malice Masoj Maya Menzoberranzan Micarlin Minolin Mlezziir Molvayas Mourn Myrymma Naerth Nathrae Nec'perya Nedylene Neideirra "Nezak Tel" Nilonim Nulliira Olonrae Olorae Omriwin Orlytlar Pellanistra "Pelshos Mora" Phaere Pharaun Pharm Philiom Phyrra Qilue Qilué Quar'vellarin Quarra Quave Quavein Quellarin Quendar Quenthel Quild "Ramoth Yorn" Rauva Rhomduil Riklaunim Rilauven Rilrae Rilraendor Rizzen Rrostarr Ryld Ryltar Sabal Sabrae Sabrar "Sarn Tor" Seerear Seldszar "Serto Lyr" Shi'nayne ShriNeerune Shurdriira Shyntlara SiNafay Sos'Umptu Ssambra Ssapriina Sshamath Sshanntynlan "Suran Tel" Susprina Szithlin Szordrin T'lindhet Talabrina Talice Tebryn Tebryndyln "Tedra Zhen" Telenna Tlintarn Tlin'orzza Tluth Torendlyn "Tor Shi'nayne" Triel Tsabrak Tyrybblyn T'orgh T'risstree T'sarran "Ulan Nausura" Uloavae Uluitur Ulviirala Umrae Undraeth Urlryn "Ust Natha" V'elddrinnsshar Valas "Val Ezrad" "Val Sansiss" Veladorn Velkyndlyn Vendes Viconia Vierna Vlondril Vrammyr Vrinn Vuzlyn Waeglossz Waerva Welverin Wode Wuyondra Wyndyl Xarann Xiltyn Xothaerin Xullrae "Xund Acraba" "Xund Jivvin" Xune Yasraena Yauntyrr Yauthlo Yazston Yeuthindrynn Yochlyndlyn Yuethindrynn Yvarragh Zaknafein Zaphresz Zarra Zebeyana Zesstra Zestra Zhenutami Zilvra Zolond Zorendlyn
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				"Sel Xendlyn" "Sel Nathrendlyn" "Sel Larindelfae" "Sel Valtiris" "Sel Eryndlyn" "Sel Kestal" "Sel Valsharess" "Sel Qu'essan" "Sel Yatharil"
+				"Sel Serisen" "Sel Sabrendlyn" "Sel Narendlyn"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+		
+		pc_savannah = {
+			names = {
+			}
+		}
+
+		pc_alpine = {
+			names = {
+			}
+		}
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		names1 = {
+			weight = 40
+			first_names_male = {
+				Aanthis Adaves Adavos Adil Adol Adon Adondasi Adosi Adren Adrerel Adril Aeren Alam Alanil Alarel Aldam Aldos
+				Aldryn Alds Almas Almerel Alms Alnas Alonas Alval Alvan Alven Alvis Alvon Alvor Alvos Alvur Ambarys Amil Anas
+				Andel Anden Anderin Andril Anel Angaredhel Angaril Angarthal Anylos Anyn Aras Arayni Arelos Arelvam Aren Arendil Areth Arethan
+				Arethil Arilen Arnas Aroa Aron Aronel Aroni Aroth Arsyn Arvel Arven Arver Arverus Arvin Arvs Arvyn Aryo Aryon
+				Athal Athanas Athanden Athando Athelyn Ather Athis Athyn Aval Avron Avrus Avys Aymar Azarain Azarath Azarfar Azarien Azarik
+				Azaril Azarimal Azarimar Azarkan Azaron Azarpar Azarseth Baem Baladar Baladas Balras Balver Balves Balvos Balyn Balynor Banden Banor
+				Banus Barayin Baren Baros Barusi Barvyn Bedal Beivis Belas Beldrose Beldun Belmyne Belos Belron Belronen Bels Belvin Belvis
+				Belvo Belyn Benar Benaril Benas Benus Beraren Berel Berela Berol Beron Bertis Bervaso Bervyn Bethes Bevadar Biiril Bildren
+				Bilen Bilos Birer Bodsa Bolay Bolayn Boler Bolnor Bolor Bols Bolvus Bolvyn Bolyn Bongond Boran Boril Boryn Borynil
+				Bothus Bovis Bovoril Bradil Bradyn Braladar Bralas Bralen Bralis Bralyn Brara Brarayni Bratheru Brathus Bravosi Bravosil Bravynor Braynas
+				Brelar Brelo Brelyn Brerama Brethas Brethis Breves Breynis Brilnosu Brilyn Briras Broder Broris Brothes Buram Cadsu Calden Casain
+				Casath Casfar Casien Casik Casil Casimal Casimar Casimir Caskan Cason Caspar Casseth Charadin Cylben Da'ravis Daeril Dalam Daldur
+				Daledan Dalen Dalim Dalin Dalmil Dalmir Dalos Dalosil Dals Dalvus Dalyn Danar Dandras Danel Daneras Danir Danmon Danus
+				Danys Daral Daras Dardalmoth Daren Darns Daroder Dartis Daru Darvam Darvasen Daryn Dather Dathus Davas Davenas Davis Davur
+				Daynas Daynes Daynil Dedaenc Dedaenil Dedras Del Deleren Delmon Delmus Delos Delvam Dendras Denthis Denus Deras Deros Dethis
+				Dethisam Dethresa Deval Devas Diendus Diiril Dils Dinor Diram Dirver Dithis Divayth Dohna Dolmyn Dolril Dolyn Dondos Donus
+				Doril Dovor Dovres Dovyn Dralas Drallin Dralnas Drals Dralval Dram Dramis Drandryn Dranos Drarayne Drarel Draren Draron Drarus
+				Draryn Drathus Drathyn Draval Dravasa Dravin Dredase Drelas Drelayn Drelden Drelis Drels Drelse Drerel Drevis Dreynis Dreynos Dridas
+				Dridyn Drinar Drivas Drodos Drondar Dronos Drores Drovas Drulis Drulvan Duldrar Dulenil Dunel Dural Durel Duren Durodir Dururo
+				Duryn Dyleso Dynus Eanen Edd Edras Edril Elam Eldil Eldrar Elethus Elms Elo Elvas Elvil Endar Endril Endris
+				Endryn Endul Enrith Enthis Erandur Erebain Erebath Erebfar Erebien Erebik Erebil Erebimal Erebimar Erebkan Erebon Erebpar Erebseth Erene
+				Erer Ereven Eris Ernil Erns Eron Eronor Erranenen Ervas Erver Ethes Ethyan Ethys Eurnus Evo Evos Evul Fadar
+				Faderi Fadren Falam Falas Faldrus Falen Falseth Falso Falvel Falvis Fanvyn Farvam Farvyn Farwil Faryl Favas Favel Faven
+				Faver Faves Fedar Felas Felayn Felen Felisi Felrar Felsen Felvan Felvos Felvyn Femer Fendros Fendryn Fennus Fenus Feran
+				Feranos Ferele Feril Ferul Feruren Fervas Fervyn Fethis Fevris Fevus Fevyn Firon Folms Foloros Folsi Folvys Folyni Fons
+				Fonus Forven Foryn Fothas Fothyna Foves Fovus Frathen Furen Furon Fyrayn Gadayn Gadris Gaelion Galam Galdres Galdrus Galen
+				Galiel Galis Galmis Galmon Galms Gals Gamin Ganalyn Ganthis Ganus Garan Garer Garis Garisa Garnas Garvas Garvs Garyn
+				Gathal Gavas Gavesu Gavis Gavryn Gedras Geldis Gelds Gendyn Geril Geron Gethis Gidain Gidar Giden Giiril Gilan Gilasi
+				Gilen Gilmyn Gilur Gilvas Gilyan Gilyn Gilyne Gindas Ginur Girano Giras Giren Giron Giruss Girvas Giryn Golar Goldyn
+				Goler Gols Golun Golven Goralas Goras Gordol Goren Goris Goron Gorour Gorvas Gorvyn Gothren Goval Govar Govil Govyth
+				Gragus Grendis Gulmon Guls Gural Gureryne Guril Hadril Haladir Haldyn Halseth Harvyn Hekvid Helain Helath Helfar Helien Helik
+				Helil Helimal Helimar Helkan Helon Helpar Helseth Hennus Hervil Hiath Hilan Hladvyr Hlanas Hlarei Hlaren Hlaril Hlaroi Hlen
+				Hlenil Hlenir Hleras Hleseth Hloris Hloval Hort Idras Idros Ildos Iledas Ilem Ilen Ilet Ilvar Ilvel Ilver Indaryn
+				Iner Irarak Irasil Irer Irver Irvir Ithis Ivulan Ivulen Jiub Jubesil Kallin Kanat Kareth Kilao Kiliban Kovan Krem
+				Kylius Larthas Lassen Lenam Lendras Lenel Liiril Llaals Llaarar Lladrelo Llanas Llandras Llandres Llandresil Llandris Llandryn Llanel Llanvyn
+				Llarar Llarel Llaren Llaro Llarol Llavam Llenus Lleran Lleras Lleril Lleris Llero Llether Llevas Llevel Lliram Lliros Lliryn
+				Llivas Lloden Llodus Llonas Llondryn Llonvyn Lloros Llothan Llovyn Llovys Lludyn Llurour Lluther Loryvn Lyrin Lythelus Maddu Madov
+				Madran Madras Madres Madrus Madsu Malan Malar Maldus Malkur Mallam Mallas Malni Mals Malthyr Malur Maluril Malyn Manabi
+				Mandran Mandur Mandyn Manel Maner Manis Manolos Manyn Marayn Maril Marolos Maros Martos Marvor Marvyn Maryl Mastrius Mathin
+				Mathis Mathyn Mavis Mavon Mavus Medar Meden Meder Mednil Medyn Mehra Mel Melar Meldras Melil Mels Melur Mendyn
+				Menus Merail Meram Merano Merdyndril Meril Merlisi Mertis Mertisi Mervis Mervs Meryn Methal Methas Mevel Meven Mevil Mevilis
+				Mevis Midar Midari Miil Milam Milar Mils Milyn Miner Miron Mirvon Mithorpa Mivul Modryn Modyn Mondrar Mondros Monis
+				Movis Mrilen Mrylav Mudyn Mullas Munbi Muriil Muril Murilam Murilen Muron Muronad Muvis Myl Naddu Nadras Nads Naldyn
+				Nalis Nalman Nalmen Nalosi Naloso Nals Nalur Nam Naral Nardis Naril Naris Narivys Naro Narsis Narvyn Naryni Nathyn
+				Navam Navanu Navil Navlos Navren Neldris Nelmil Nelos Neloth Nels Nelvon Nelyn Nemyn Nerathren Nerer Neron Nethis Nethyn
+				Nevam Nevil Nevon Nevos Nevosi Niden Niil Nil Nilas Nilos Nilphas Nilthis Nilus Niras Nirm Nisain Nisath Nisfar
+				Nisien Nisik Nisil Nisimal Nisimar Niskan Nison Nispar Nisseth Nival Nivan Nivel Nivis Nivos Noris Norivin Norus Numyn
+				Odral Odril Odron Oisig Oldis Olleg Olyn Omin Ondar Ondres Orini Ornis Orns Orval Orvas Othrelos Othreloth Ovis
+				Quell Raddu Ral Ralam Ralden Raldis Ralds Raleth Ralim Ralis Ralmyn Raloro Ralos Ralsa Ralvas Ranes Ranor Rararyn
+				Raril Raryn Raston Rathal Ravam Raviso Ravos Ravyn Raynil Raynilie Raynor Redas Relam Relas Relen Relms Relmus Relnus
+				Rels Relur Relvic Relyn Remas Remyon Ren Renam Rendil Renli Rennus Renthis Renus Renvis Reraryn Rernel Reron Rervam
+				Revus Revyn Reynis Rhavil Ridras Riidras Riivel Rilas Rilaso Rilen Rilorns Rilos Rilus Rilver Rilyn Rindral Rirnas Rirns
+				Rithlen Riud Rivame Rol Rolis Rols Rolver Romlyn Roner Roneril Ronervi Rornas Rothis Rovone Rulantaril Rythe Sadas Saden
+				Sadis Sadryn Saevyr Salas Saldus Salen Salin Salvas Salver Salyn Samel Sanvyn Sanvyno Saras Sarayn Saril Sarthis Sarvil
+				Sarvilen Sarvur Saryn Saryne Saryvn Sathas Sathram Savor Savos Savur Savure Sedam Sedrane Seldus Seler Selman Selmen Seltin
+				Selvil Sen Senar Sendel Sendus Sendust Senil Seras Serer Sero Seron Serul Seruli Servos Seryn Sethesi Sethrin Sevan
+				Sevilo Sevilon Shalain Shalath Shalfar Shalien Shalik Shalil Shalimal Shalimar Shalkan Shalon Shalpar Shalseth Shashev Shishiv Shurain Shurath
+				Shurfar Shurien Shurik Shuril Shurimal Shurimar Shurkan Shuron Shurpar Shurseth Sil Sildras Silir Slitter Slythe Sodres Solvar Sondas
+				Soris Sortis Sovor Stlennius Strav Sulen Sulinor Sulis Sunel Sur Surilen Suron Surond Suryn Suryvn Suvryn Svadstar Sylvain
+				Symmachus Syndelius Tadas Tadis Taldyn Talmis Talms Talnus Talres Talvas Talvur Tamthis Tandram Tanel Tanur Tanuro Tanval Tarar
+				Tarel Taren Tarer Taril Tarir Taron Taros Tarrent Tarvus Tarvyn Tarvynil Taumas Taves Tavis Tedras Tedrel Tedril Tedryn
+				Tedur Tel Telbaril Teldryn Telis Tels Telvon Temis Tendir Tendren Tendris Tendyn Tennus Tens Tenval Terer Teres Teris
+				Tervur Tethal Tethis Tethyno Tevyn Thadar Thaden Thandon Thanelen Thanelon Thanethen Thanusel Tharer Thathas Thauraver Thelas Theldyn Thervam
+				Thiile Thiran Thole Tholer Thoryn Threval Threvul Thrush Thys Tidras Tidros Tidyn Tiiril Tinos Tiram Tiras Tirer Tireso
+				Tiril Tirnur Tirvel Tivam Tolendos Toris Torolon Tovas Tralas Tralayn Tramerel Traven Tredyn Trelam Trelon Trels Trendrus Treram
+				Treras Trevyn Trilam Trivon Tryvilis Tullas Tuls Tunus Turain Turath Turfar Turien Turik Turil Turimal Turimar Turkan Turnol
+				Turon Turpar Turril Turseth Tythis Ulain Ulath Ulen Ulfar Ulien Ulik Ulil Ulimal Ulimar Ulkan Ulms Ulon Ulpar
+				Ulseth Ultis Ultus Ulverin Ulves Ulvil Ulvon Ulyn Unel Uradras Uradris Ureval Urilis Urnel Urvan Urvel Urven Uryn
+				Urynnar Uthrel Uvele Uvren Vadelen Vaden Vadinil Valdam Valec Valen Valeyn Valin Vals Vamen Vanel Vanikain Vanikath Vanikfar
+				Vanikien Vanikik Vanikil Vanikimal Vanikimar Vanikkan Vanikon Vanikpar Vanikseth Vanryth Varam Varel Varen Vares Varis Varon Varryn Vartis
+				Varvir Varvur Vatollia Vaves Vavil Vavran Vedam Vedra Vedran Velam Velis Velms Velvul Velyn Venali Vendil Vendras Veneval
+				Venthin Venthis Veren Veros Vevos Vevul Viiron Vildras Vilms Vilur Vilval Vilyn Vinder Viras Viros Virvyn Vitollia Vivos
+				Vivrun Vivul Vobend Vodryn Vonden Vonos Vorar Vorir Voruse Vunal Vunden Vurdras Vurvyn Vuval Vuvil Wiliban Wyndelius Yeveth
+				Yurilas Zahshur Zanain Zanath Zanfar Zanien Zanik Zanil Zanimal Zanimar Zankan Zanon Zanpar Zanseth Zimmeron Zirain Zirath Zirfar
+				Zirien Zirik Ziril Zirimal Zirimar Zirkan Ziron Zirpar Zirseth
+			}
+			first_names_female = {
+				Aamela Aamrila Aarela Adansa Adosi Adrasi Adrusu Adryn Aduri Aerona Aeyne Alaru Alarvyne Alavesa Aldyna Aldyne Alenus Aleri
+				Alfe Alicon Alli Alma Almise Almse Almsi Aloie Alonisea Alsal Alurami Alurue Alvela Alveno Alves Alvesi Alvila Alvura
+				Alynu Amila Amili Anara Andalin Andilan Andilo Andilu Ane Aneyda Angahran Ani Anila Anis Anise Aphia Aralosea Aralosi
+				Aramea Aranea Arara Arela Arilu Arisa Arns Arnsa Arnsi Artisa Arvama Arvamea Arvela Arvena Arvso Aryne Aryni Aryvena
+				Aspera Athesa Athesie Aurona Avoni Avrusa Badala Badama Badila Bala Balen Baleni Balsa Balsia Balynu Bameli Bameni Banda
+				Barenziah Bedena Bedenea Bedyna Bedynea Bedyni Belderi Belera Beleru Belosi Belya Bendyni Bera Berada Berari Berela Betya Bevene
+				Beyte Bidia Bidsa Bidsi Biiri Bili Bilsa Binayne Birama Birila Bivala Bivale Bivessa Blivisi Boderi Boderia Bodsa Boldrisa
+				Bothisii Bralsa Bralsea Bralsi Brara Bravora Breda Bredami Bredasu Brela Brelaca Brelayne Brelda Brelyn Brelyna Brelynd Brema Brerayne
+				Breva Brevasu Brevosi Brildraso Brilnosu Bronosa Burila Buronii Butheli Byla Cadiva Cindiri Cloya Daela Dala Dalami Daliina Dalmi
+				Dalnorea Dalora Dalsa Dalse Dalsi Dalyne Damisi Danaronea Danasi Dandea Dandera Dandrii Dandynea Danis Danoso Danso Darane Dareru
+				Darili Daroso Darva Darvala Darvame Darvasa Darvynea Dasila Dathlyn Davela Davilia Daymi Daynali Daynas Daynea Dayni Daynillo Deldasa
+				Deldrise Delmene Delte Delyna Dematah Denu Derami Derar Derayna Deria Dervera Diina Dilami Dileni Dileno Dilvene Dilyne Dinara
+				Dinaria Dinere Dinuro Dinya Diradeni Dirara Diren Dirilu Dithisi Dolmesa Dolsa Dolsia Dolvasie Domesea Domi Donta Dorisa Dorynu
+				Dothasi Dovesi Dovrosi Drala Dralasa Dralcea Dralisi Dralora Dralosa Dralsea Draramu Drarana Drarayne Dratha Drathyra Dravynea Drayna Dredena
+				Dredyni Drelasa Drelliane Drelyne Drendrisa Dreska Dreveni Dreyla Drilame Driloru Drireri Drissa Drivanas Drolora Drorayni Drulene Drurile Duldresi
+				Dulnea Dunveril Durena Duroni Edrasa Edrisi Edryn Edryno Edwina Eldrasea Eldri Eldrilu Elmera Elmussa Elneri Elvali Elvasea Elvasia
+				Elyna Elynea Elynisi Elynu Endase Endroni Enura Eralane Erila Erirvase Ernse Eroni Ervesa Ervona Ervyla Ervyna Ervyni Ervynu
+				Ethal Ethasi Evesa Evessa Evilu Evisi Fadase Fadile Falan Falanu Falena Falora Faltha Falura Famdii Fanasa Fanisea Fanuse
+				Faral Faralenu Farare Faras Farena Farona Farusea Faryon Farys Fathasa Fathusa Favani Favel Favela Favilea Favise Favona Fealu
+				Fedrasa Fedura Feduria Feldrasa Feldrelo Feldsii Felisa Felmena Felmina Felsa Felsu Fenila Feralea Ferdyn Ferise Ferone Ferva Fervsea
+				Ferynu Fethesena Fevasa Fevila Feyne Fieria Fieryra Filu Folsi Folvalie Fomesa Fonari Fonas Foni Fonira Forvse Furoni Furu
+				Fyrayn Fyrona Gadasu Gadela Gadeneri Gadila Gadsi Gadyni Galas Galasa Galdal Galdas Galdsa Galeri Galero Galisa Galore Galori
+				Galotha Galsi Galsu Galuro Galvene Galviso Galyn Gami Gandela Gandilla Gandosa Garalo Garas Gariasa Garila Garyne Gelaa Gelana
+				Gelii Gena Gilse Ginadura Gindrala Girara Girva Girvani Girynu Glistel Godyna Golana Golena Golmerea Golveso Golvy Golvyni Gomeso
+				Gorenea Gorili Gorven Grona Guldrise Gulena Gulvera Gulvilie Gureryne Guroanii Guronii Gynisi Hadrill Hala Haleneri Hanala Helma Hlana
+				Hlaren Hlava Hlavora Hlendrisa Hlenia Hlethena Hlevala Hlireni Hlisi Hlodala Hlura Iachilla Idesa Idrasa Idrenia Idrenie Idria Idronea
+				Idroni Idroso Idula Ienasa Ienase Ienaso Ildari Ildrasai-daro Ilmeni Ilmyna Indra Indrasa Indrasi Indrela Indrele Indririi Inera Ineria
+				Inisa Inise Inzoliah Iriana Irileth Irna Irvama Irvsie Iry Isabeau Ithrini Ivaynel Ivela Iveri Ivramia Ivramie Ivrosa Jenassa
+				Kalara Kalina Karliah Katariah Kireth Ladrasa Lathisa Lauravenya Laureva Lena Lirielle Lirona Livisii Llaalamu Llaalsa Llaami Llaari Llandrale
+				Llandreri Llarara Llarevis Llaros Llarusea Llasi Llathasa Llathise Llathyno Llavana Llavane Llavelea Llavesa Llaynasa Lledsa Lledsea Llemisa Llensi
+				Llerusa Llevana Llirala Llivas Llivia Llondresa Llorayna Llotha Llunela Lodyna Lolethys Lorara Lorolu Louna Luaffyn Luranor Luryne Madayna
+				Madaynu Madrale Madrana Madria Madura Maedini Maera Malarel Malori Malsa Malven Malyani Mamyne Manara Manse Manwe Maralie Marasa
+				Maren Marena Mari Mariia Marila Marilia Marise Marlyn Marona Maronii Marwyn Mathesa Medila Medresi Melila Melisi Melsu Meluria
+				Melvona Melvuli Melvure Mensa Meralyn Meralys Meram Merilar Merona Mervilda Methulu Meva Mevrenea Mevura Mevure Miara Midrasi Miiga
+				Miirist Milara Milia Milore Miluru Milva Milvela Milvonu Milyne Minasi Mindeli Mindelyn Mirasa Miraso Mireli Mirili Mirise Mirnelea
+				Mirnsa Mirri Mirusu Mivani Mivryna Morami Mornsu Moroni Morusu Morvani Movisa Muldroni Mulvi Mulvisie Mundrila Murela Muvrulea Myn
+				Myvryna Nadene Nadie Nalami Nalasa Nalmila Nalsie Nalvilie Nalvyna Nandri Nardhil Naresa Narese Narile Narilii Narisa Nartisa Nartise
+				Naryu Nathala Nathyne Nedeni Nedi Nedrasa Nela Nelmia Nelmyne Neloren Nelso Nelvana Nendrii Nerari Neria Nerile Nervana Nervyna
+				Nevama Nevena Nevrasa Nevrila Nevusa Neyna Nida Nidara Nidryne Nila Nileno Nilera Nilonii Niluva Nilvyn Nina Ninla Nirasa
+				Nireli Nirelia Nivama Nivene Noldrasi Norasa Noreni Nothasea Noveni Novrynea Nudryn Nuleno Nurara Nurisea Nurona Nurvyna Nusana Odesa
+				Odrasa Odrys Odyna Olvyia Olvyne Omesu Orama Orani Orara Orea Orero Orona Orvana Orvona Oryla Peliah Radene Radrase
+				Rala Raldenu Ralsa Ramavel Rami Ramila Ramu Rana Rania Ranis Ranosa Ranyna Rarili Rarusi Rarusu Rarvela Rathyne Ravani
+				Ravania Ravel Raven Ravila Ravoso Rayna Raynasa Raynil Raynila Rela Relamu Reldsii Relmerea Relmeria Relmyna Relosa Relvese Remasa
+				Rena Rerilie Rernel Rerynea Revisii Reynel Rianor Ridena Ridinna Riinsi Rila Rilasi Rilvase Rinori Riraynea Rironi Ris Rolasa
+				Rudrasa Runethyne Ruthrisu Ruvali Ruvene Saalu Sadal Sadela Sadelia Salama Salima Salina Salora Salori Salver Salyni Samtri Sanas
+				Sanaso Saruse Satha Sathasa Sathdira Satheri Sathryn Satyana Sava Saveri Savesea Savi Savila Savile Sayla Sayne Sedris Sedyni
+				Sehlena Sela Selveni Selvura Semoa Sen Sena Sendrasa Senise Serana Serila Seritath Sernsi Servyna Seryna Seryne Sethan Sethesi
+				Sethisa Sevame Sevisa Sevy Sevyni Seyne Seyrena Shra Sia Siid Siila Silen Sirari Sirili Sirilu Sivisia Sodra Sodrara
+				Sondryn Sorosi Sovali Sovi Sovisa Suldreni Suldrini Surii Suronii Sursi Suvaris Synda Tadara Tadera Taderi Tadrose Taelu Talama
+				Talamu Talare Talari Talmeni Talmsa Talsi Talsyne Taluri Taluro Talvini Tama Tamira Tanar Tanasa Tandasea Tanisie Tanusea Tarani
+				Tarania Tarvili Tavilu Tavynu Tedoran Tedysa Teldyni Teleri Telura Tenara Tenaru Tenisi Teranya Terenu Tereri Teril Teroni Teruise
+				Teryne Tevynni Thalurea Thavere Thelama Thelsa Thelvamu Thera Therana Thilse Thovasi Thurisea Tifosi Tildsi Tilena Tilisu Tilore Tilse
+				Tinaso Tirasie Tirele Tivela Tolisi Tolmera Tolvasa Tolvise Tolvone Tonas Tonasi Toranu Torasa Torosi Tovisa Traldrisa Trayna Traynili
+				Trayniria Tredare Tredere Tremona Trerayna Trivura Tumsa Tunila Turala Tuvene Tuvenie Tuveso Udrasi Ulene Ulenea Uleni Ulmesi Ulmiso
+				Ulvena Ulveni Ulyne Ulyno Undena Unila Urada Urandile Urava Uravasa Urene Uresa Ureso Urila Urili Urnsi Urona Urrila
+				Urtisa Urtiso Uryne Uthisii Uupse Uvisea Uvoo Vadeni Vadramea Vadusa Vadyne Vala Valana Valesu Valveli Valvesu Valvosa Valyia
+				Valyn Valyne Vamoni Varasa Varenu Varona Varoni Varvsa Vaveli Vayne Vedelea Vedyne Velanda Velas Veldrana Velsa Velyna Venae
+				Venasa Vendrela Venoni Veranim Verara Verilu Veru Vethisa Vevrana Vila Vilrani Vilvyni Vim Vindamea Vindyne Vireveri Visthina Vivyne
+				Vlaasti Vlesyl Voldsea Volene Volmyni Volyn Voneri Vrali Vuldronu Vulyne Vuri Vurila Wren Xand
+			}
+			second_names = {
+				Adas Adlain Adlam Adlan Adlaron Adlathil Adlbruk Adlen Adlenar Adlis Adlon Adlone Adlul Adram Adren Adryn Adus Alam
+				Alan Alari Alas Alen Alver Alvor Amori Andalas Andalen Andalor Andaram Andaren Andarys Andas Andavel Andoren Andoril Andothan
+				Andral Andrani Andrano Andrelo Andrethi Andrilo Androm Andromo Androthi Andules Andus Apo Aradil Aralas Aralen Aram Aran Arano
+				Aravel Arelas Areleth Areloth Aren Arenim Ares Areth Arethan Arethi Arinith Arns Arobar Arothan Arval Arvel Aryon Arys
+				Athelvis Athin Athones Athram Athren Athrys Avalain Avalam Avalan Avalaron Avalathil Avalbruk Avalen Avalenar Avalis Avalon Avalone Avalul
+				Avani Avel Avilo Balen Balur Balvel Bandas Baram Barelo Baren Baro Barus Baryon Barys Bavani Bedas Belaal Belan
+				Belaram Belas Belden Beleth Beloren Bels Belvani Belvayn Belvilo Bemis Benelas Beneran Benethran Beni Beran Berano Bereloth Beren
+				Berendas Berendus Berer Berethi Bero Bethrano Bethrimo Bradyn Braryn Braven Brenos Brenur Brilyn Carvaren Dagoth Dalas Dalen Dalis
+				Dalobar Dalomo Dals Dalvani Damori Danoran Daram Darano Dareleth Daren Darethi Darethran Darothril Darvel Daryon Darys Dathren Davor
+				Davus Daynes Delms Deltis Delvi Demnevanni Deras Dilmyn Dobar Doran Doren Dorvayn Doves Dradas Dral Dralas Dralayn Dralen
+				Dralno Dralor Drals Dran Drath Drathen Dredayn Dredil Drelas Dreleth Dreloth Dren Drenim Dres Dreth Drethan Driler Drilvi
+				Drin Drinith Drivam Drobar Drolan Drolnor Drom Drora Droryn Droth Drothan Drurel Dulfass Dulni Dulo Duro Elarven Elval
+				Elvul Enakain Enakam Enakan Enakaron Enakathil Enakbruk Enaken Enakenar Enakis Enakon Enakone Enakul Ertis Evos Fadathram Falandas Falas
+				Falavel Falen Falos Fals Falvani Famori Faralen Faram Farandas Farano Faravel Fareloth Faren Farethan Farethi Farothran Faryon Farys
+				Fatheran Fathyron Favani Favel Favelnim Faveran Fedos Felas Felder Fels Fendyn Fererus Fevur Folvyn Fyr Gadar Galen Gals
+				Garer Garil Garvon Gavos Gavyn Gidran Gilaram Gilnith Gilvani Gilvayn Gilvilo Gimalvel Gimayn Gimothran Gindu Ginith Giral Giralvel
+				Girando Girano Girendas Girethi Girith Girothran Girvayne Githendas Githrano Givyn Gobor Golathyn Gols Goran Gorvas Grulain Grulam Grulan
+				Grularon Grulathil Grulbruk Grulen Grulenar Grulis Grulon Grulone Grulul Guls Guvron Hardil Heladren Helan Helas Helbain Helbam Helban
+				Helbaron Helbathil Helbbruk Helben Helbenar Helbis Helbon Helbone Helbul Heleran Helni Helothan Helothran Helothren Helvi Henim Heran Herandus
+				Herendas Herothran Hlaalo Hlaalu Hlaano Hlan Hlando Hlarar Hlaren Hlarys Hlas Hledas Hledri Hlen Hler Hleran Hlervi Hlervu
+				Hloran Ieneth Ienith Ildram Ilnith Imayn Indalas Indalen Indaram Indaren Indarys Indavel Indobar Indoran Indrano Indules Inlador Irano
+				Irathi Irethi Ledd Lladri Llando Llandu Llaram Llaren Llarys Llendo Llendu Llenim Lleran Llerayn Llervi Llervu Lleryn Llethan
+				Llethri Lloran Lloryn Llothas Llothri Madalas Madalvel Madryon Malas Maloren Malvayn Manas Mandas Manel Mano Maren Marvani Marvayn
+				Marvel Marvos Maryon Marys Mathendis Mavandes Mels Menas Mencele Merys Milar Milo Mirel Moabain Moabam Moaban Moabaron Moabathil
+				Moabbruk Moaben Moabenar Moabis Moabon Moabone Moabul Molor Moran Moren Morvayn Mothryon Nadram Nadus Nalyn Naros Navur Nedalor
+				Neladren Nelaram Nelas Neleth Nelvani Nelvayn Nelvilo Nerandas Nerano Nerethi Nerothan Nerothren Nerus Nervion Nethalen Nethan Nilem Nilvon
+				Nirith Nithryon Nolar Norvayn Norvayne Nothro Nothryon Nulen Ofemalen Omalas Omalen Omalor Omani Omaren Omavel Omayn Omoran Omoril
+				Omothan Ondyn Onmar Oran Orelu Oren Ores Orethi Oreyn Oril Othan Othralas Othralen Othran Othravel Othrelas Othreleth Othreloth
+				Othren Othrenim Othril Othrobar Quintella R'ain R'am R'an R'aron R'athil R'bruk R'en R'enar R'is R'on R'one R'ul R'zamain
+				R'zamam R'zaman R'zamaron R'zamathil R'zambruk R'zamen R'zamenar R'zamis R'zamon R'zamone R'zamul Radarys Radas Radobar Ralaal Ralas Raledran Ralen
+				Rallain Rallam Rallan Rallaron Rallathil Rallbruk Rallen Rallenar Rallis Rallon Rallone Rallul Raloran Ralvani Ralvayn Ramarys Ramoran Ramori
+				Ramothran Randas Raram Rathri Rathryon Ravel Raviro Redas Redoran Redothril Reladren Relarys Relas Relavel Relenim Releth Relnim Reloro
+				Reloth Relvani Rendas Rendo Reni Renim Reram Rervam Rethan Rethandus Rethelas Retheran Rethul Reyas Rilvayn Rindo Rindu Rinith
+				Rivul Rols Romandas Romari Romavel Romayn Romoran Romoren Romori Romothran Rothalen Rothalnim Rothalor Rothan Rothandus Rothari Rotheloth Rotheran
+				Rothrano Rothren Rurvyn Ryon S'thain S'tham S'than S'tharon S'thathil S'thbruk S'then S'thenar S'this S'thon S'thone S'thul Sadalas Sadalvel
+				Sadas Sadoro Sadralo Sadrano Sadri Sadryon Sadrys Sadus Sailain Sailam Sailan Sailaron Sailathil Sailbruk Sailen Sailenar Sailis Sailon
+				Sailone Sailul Sala Salam Salandas Salaren Salaron Salas Salavel Salen Salenim Salmyn Salobar Salor Salothan Salothran Salvani Salvel
+				Salvi Samandas Samarys Samori Sandas Sandus Saram Sarandas Sarandus Sarano Sarathram Sareloth Saren Sarendas Sarethan Sarethi Sari Sarinith
+				Sarobar Sarothran Sarothren Sarothril Saryon Saryoni Sarys Sathendas Sathis Sathren Sathryon Savani Savel Savil Sedas Sedrethi Sedri Selandas
+				Selaren Selaro Selarys Selas Seles Seleth Seloth Selothan Selvayn Selvilo Sendas Sendu Senim Senoril Seralas Seran Serano Serethi
+				Seri Serothan Serven Sethan Sethandas Sethandus Sethri Surishpi T'rizain T'rizam T'rizan T'rizaron T'rizathil T'rizbruk T'rizen T'rizenar T'rizis T'rizon
+				T'rizone T'rizul Talds Tedalen Tedas Tedran Telandas Telas Telmon Telnim Telvani Telvayn Teneran Tenim Teran Terandas Terano Teri
+				Teria Terilu Tervayn Thalas Thalor Thando Tharam Tharen Tharyon Tharys Thelas Theman Thendas Thenim Therayn Therethi Thilandas Thilarvel
+				Thimalvel Thindo Thiralas Thirandus Thirano Thireloth Thirith Thirothan Thirvayn Tilvur Tistar Tobor Trandel Tunel Tures Tyravel Uleni Ules
+				Ulessen Ulom Ulvel Ulven Ulver Urns Urvon Urvyn Uvalas Uvalen Uvalor Uvani Uvaram Uvaren Uvayn Uvelas Uveleth Uvenim
+				Uveran Uvirith Uvulas Vadryon Valaai Valas Valen Valno Valor Vando Vandram Vandus Varam Varen Vari Varis Varo Varyon
+				Varys Vavas Vavyn Vedaren Vedas Vedralu Vedran Vedrano Velas Velendas Veleth Velni Veloren Veloth Velothren Velothril Vendu Venim
+				Veralor Veran Verano Verelas Verelnim Verendas Verethi Veri Verilnith Verothan Viake Vian Vibato Vidron Vilas Vinden Virith Volos
+				Vules
+			}
+			regnal_first_names_male = {
+				Aanthis Adaves Adavos Adil Adol Adon Adondasi Adosi Adren Adrerel Adril Aeren Alam Alanil Alarel Aldam Aldos Aldryn
+				Alds Almas Almerel Alms Alnas Alonas Alval Alvan Alven Alvis Alvon Alvor Alvos Alvur Ambarys Amil Anas Andel
+				Anden Anderin Andril Anel Angaredhel Angaril Angarthal Anylos Anyn Aras Arayni Arelos Arelvam Aren Arendil Areth Arethan Arethil
+				Arilen Arnas Aroa Aron Aronel Aroni Aroth Arsyn Arvel Arven Arver Arverus Arvin Arvs Arvyn Aryo Aryon Athal
+				Athanas Athanden Athando Athelyn Ather Athis Athyn Aval Avron Avrus Avys Aymar Azarain Azarath Azarfar Azarien Azarik Azaril
+				Azarimal Azarimar Azarkan Azaron Azarpar Azarseth Baem Baladar Baladas Balras Balver Balves Balvos Balyn Balynor Banden Banor Banus
+				Barayin Baren Baros Barusi Barvyn Bedal Beivis Belas Beldrose Beldun Belmyne Belos Belron Belronen Bels Belvin Belvis Belvo
+				Belyn Benar Benaril Benas Benus Beraren Berel Berela Berol Beron Bertis Bervaso Bervyn Bethes Bevadar Biiril Bildren Bilen
+				Bilos Birer Bodsa Bolay Bolayn Boler Bolnor Bolor Bols Bolvus Bolvyn Bolyn Bongond Boran Boril Boryn Borynil Bothus
+				Bovis Bovoril Bradil Bradyn Braladar Bralas Bralen Bralis Bralyn Brara Brarayni Bratheru Brathus Bravosi Bravosil Bravynor Braynas Brelar
+				Brelo Brelyn Brerama Brethas Brethis Breves Breynis Brilnosu Brilyn Briras Broder Broris Brothes Buram Cadsu Calden Casain Casath
+				Casfar Casien Casik Casil Casimal Casimar Casimir Caskan Cason Caspar Casseth Charadin Cylben Da'ravis Daeril Dalam Daldur Daledan
+				Dalen Dalim Dalin Dalmil Dalmir Dalos Dalosil Dals Dalvus Dalyn Danar Dandras Danel Daneras Danir Danmon Danus Danys
+				Daral Daras Dardalmoth Daren Darns Daroder Dartis Daru Darvam Darvasen Daryn Dather Dathus Davas Davenas Davis Davur Daynas
+				Daynes Daynil Dedaenc Dedaenil Dedras Del Deleren Delmon Delmus Delos Delvam Dendras Denthis Denus Deras Deros Dethis Dethisam
+				Dethresa Deval Devas Diendus Diiril Dils Dinor Diram Dirver Dithis Divayth Dohna Dolmyn Dolril Dolyn Dondos Donus Doril
+				Dovor Dovres Dovyn Dralas Drallin Dralnas Drals Dralval Dram Dramis Drandryn Dranos Drarayne Drarel Draren Draron Drarus Draryn
+				Drathus Drathyn Draval Dravasa Dravin Dredase Drelas Drelayn Drelden Drelis Drels Drelse Drerel Drevis Dreynis Dreynos Dridas Dridyn
+				Drinar Drivas Drodos Drondar Dronos Drores Drovas Drulis Drulvan Duldrar Dulenil Dunel Dural Durel Duren Durodir Dururo Duryn
+				Dyleso Dynus Eanen Edd Edras Edril Elam Eldil Eldrar Elethus Elms Elo Elvas Elvil Endar Endril Endris Endryn
+				Endul Enrith Enthis Erandur Erebain Erebath Erebfar Erebien Erebik Erebil Erebimal Erebimar Erebkan Erebon Erebpar Erebseth Erene Erer
+				Ereven Eris Ernil Erns Eron Eronor Erranenen Ervas Erver Ethes Ethyan Ethys Eurnus Evo Evos Evul Fadar Faderi
+				Fadren Falam Falas Faldrus Falen Falseth Falso Falvel Falvis Fanvyn Farvam Farvyn Farwil Faryl Favas Favel Faven Faver
+				Faves Fedar Felas Felayn Felen Felisi Felrar Felsen Felvan Felvos Felvyn Femer Fendros Fendryn Fennus Fenus Feran Feranos
+				Ferele Feril Ferul Feruren Fervas Fervyn Fethis Fevris Fevus Fevyn Firon Folms Foloros Folsi Folvys Folyni Fons Fonus
+				Forven Foryn Fothas Fothyna Foves Fovus Frathen Furen Furon Fyrayn Gadayn Gadris Gaelion Galam Galdres Galdrus Galen Galiel
+				Galis Galmis Galmon Galms Gals Gamin Ganalyn Ganthis Ganus Garan Garer Garis Garisa Garnas Garvas Garvs Garyn Gathal
+				Gavas Gavesu Gavis Gavryn Gedras Geldis Gelds Gendyn Geril Geron Gethis Gidain Gidar Giden Giiril Gilan Gilasi Gilen
+				Gilmyn Gilur Gilvas Gilyan Gilyn Gilyne Gindas Ginur Girano Giras Giren Giron Giruss Girvas Giryn Golar Goldyn Goler
+				Gols Golun Golven Goralas Goras Gordol Goren Goris Goron Gorour Gorvas Gorvyn Gothren Goval Govar Govil Govyth Gragus
+				Grendis Gulmon Guls Gural Gureryne Guril Hadril Haladir Haldyn Halseth Harvyn Hekvid Helain Helath Helfar Helien Helik Helil
+				Helimal Helimar Helkan Helon Helpar Helseth Hennus Hervil Hiath Hilan Hladvyr Hlanas Hlarei Hlaren Hlaril Hlaroi Hlen Hlenil
+				Hlenir Hleras Hleseth Hloris Hloval Hort Idras Idros Ildos Iledas Ilem Ilen Ilet Ilvar Ilvel Ilver Indaryn Iner
+				Irarak Irasil Irer Irver Irvir Ithis Ivulan Ivulen Jiub Jubesil Kallin Kanat Kareth Kilao Kiliban Kovan Krem Kylius
+				Larthas Lassen Lenam Lendras Lenel Liiril Llaals Llaarar Lladrelo Llanas Llandras Llandres Llandresil Llandris Llandryn Llanel Llanvyn Llarar
+				Llarel Llaren Llaro Llarol Llavam Llenus Lleran Lleras Lleril Lleris Llero Llether Llevas Llevel Lliram Lliros Lliryn Llivas
+				Lloden Llodus Llonas Llondryn Llonvyn Lloros Llothan Llovyn Llovys Lludyn Llurour Lluther Loryvn Lyrin Lythelus Maddu Madov Madran
+				Madras Madres Madrus Madsu Malan Malar Maldus Malkur Mallam Mallas Malni Mals Malthyr Malur Maluril Malyn Manabi Mandran
+				Mandur Mandyn Manel Maner Manis Manolos Manyn Marayn Maril Marolos Maros Martos Marvor Marvyn Maryl Mastrius Mathin Mathis
+				Mathyn Mavis Mavon Mavus Medar Meden Meder Mednil Medyn Mehra Mel Melar Meldras Melil Mels Melur Mendyn Menus
+				Merail Meram Merano Merdyndril Meril Merlisi Mertis Mertisi Mervis Mervs Meryn Methal Methas Mevel Meven Mevil Mevilis Mevis
+				Midar Midari Miil Milam Milar Mils Milyn Miner Miron Mirvon Mithorpa Mivul Modryn Modyn Mondrar Mondros Monis Movis
+				Mrilen Mrylav Mudyn Mullas Munbi Muriil Muril Murilam Murilen Muron Muronad Muvis Myl Naddu Nadras Nads Naldyn Nalis
+				Nalman Nalmen Nalosi Naloso Nals Nalur Nam Naral Nardis Naril Naris Narivys Naro Narsis Narvyn Naryni Nathyn Navam
+				Navanu Navil Navlos Navren Neldris Nelmil Nelos Neloth Nels Nelvon Nelyn Nemyn Nerathren Nerer Neron Nethis Nethyn Nevam
+				Nevil Nevon Nevos Nevosi Niden Niil Nil Nilas Nilos Nilphas Nilthis Nilus Niras Nirm Nisain Nisath Nisfar Nisien
+				Nisik Nisil Nisimal Nisimar Niskan Nison Nispar Nisseth Nival Nivan Nivel Nivis Nivos Noris Norivin Norus Numyn Odral
+				Odril Odron Oisig Oldis Olleg Olyn Omin Ondar Ondres Orini Ornis Orns Orval Orvas Othrelos Othreloth Ovis Quell
+				Raddu Ral Ralam Ralden Raldis Ralds Raleth Ralim Ralis Ralmyn Raloro Ralos Ralsa Ralvas Ranes Ranor Rararyn Raril
+				Raryn Raston Rathal Ravam Raviso Ravos Ravyn Raynil Raynilie Raynor Redas Relam Relas Relen Relms Relmus Relnus Rels
+				Relur Relvic Relyn Remas Remyon Ren Renam Rendil Renli Rennus Renthis Renus Renvis Reraryn Rernel Reron Rervam Revus
+				Revyn Reynis Rhavil Ridras Riidras Riivel Rilas Rilaso Rilen Rilorns Rilos Rilus Rilver Rilyn Rindral Rirnas Rirns Rithlen
+				Riud Rivame Rol Rolis Rols Rolver Romlyn Roner Roneril Ronervi Rornas Rothis Rovone Rulantaril Rythe Sadas Saden Sadis
+				Sadryn Saevyr Salas Saldus Salen Salin Salvas Salver Salyn Samel Sanvyn Sanvyno Saras Sarayn Saril Sarthis Sarvil Sarvilen
+				Sarvur Saryn Saryne Saryvn Sathas Sathram Savor Savos Savur Savure Sedam Sedrane Seldus Seler Selman Selmen Seltin Selvil
+				Sen Senar Sendel Sendus Sendust Senil Seras Serer Sero Seron Serul Seruli Servos Seryn Sethesi Sethrin Sevan Sevilo
+				Sevilon Shalain Shalath Shalfar Shalien Shalik Shalil Shalimal Shalimar Shalkan Shalon Shalpar Shalseth Shashev Shishiv Shurain Shurath Shurfar
+				Shurien Shurik Shuril Shurimal Shurimar Shurkan Shuron Shurpar Shurseth Sil Sildras Silir Slitter Slythe Sodres Solvar Sondas Soris
+				Sortis Sovor Stlennius Strav Sulen Sulinor Sulis Sunel Sur Surilen Suron Surond Suryn Suryvn Suvryn Svadstar Sylvain Symmachus
+				Syndelius Tadas Tadis Taldyn Talmis Talms Talnus Talres Talvas Talvur Tamthis Tandram Tanel Tanur Tanuro Tanval Tarar Tarel
+				Taren Tarer Taril Tarir Taron Taros Tarrent Tarvus Tarvyn Tarvynil Taumas Taves Tavis Tedras Tedrel Tedril Tedryn Tedur
+				Tel Telbaril Teldryn Telis Tels Telvon Temis Tendir Tendren Tendris Tendyn Tennus Tens Tenval Terer Teres Teris Tervur
+				Tethal Tethis Tethyno Tevyn Thadar Thaden Thandon Thanelen Thanelon Thanethen Thanusel Tharer Thathas Thauraver Thelas Theldyn Thervam Thiile
+				Thiran Thole Tholer Thoryn Threval Threvul Thrush Thys Tidras Tidros Tidyn Tiiril Tinos Tiram Tiras Tirer Tireso Tiril
+				Tirnur Tirvel Tivam Tolendos Toris Torolon Tovas Tralas Tralayn Tramerel Traven Tredyn Trelam Trelon Trels Trendrus Treram Treras
+				Trevyn Trilam Trivon Tryvilis Tullas Tuls Tunus Turain Turath Turfar Turien Turik Turil Turimal Turimar Turkan Turnol Turon
+				Turpar Turril Turseth Tythis Ulain Ulath Ulen Ulfar Ulien Ulik Ulil Ulimal Ulimar Ulkan Ulms Ulon Ulpar Ulseth
+				Ultis Ultus Ulverin Ulves Ulvil Ulvon Ulyn Unel Uradras Uradris Ureval Urilis Urnel Urvan Urvel Urven Uryn Urynnar
+				Uthrel Uvele Uvren Vadelen Vaden Vadinil Valdam Valec Valen Valeyn Valin Vals Vamen Vanel Vanikain Vanikath Vanikfar Vanikien
+				Vanikik Vanikil Vanikimal Vanikimar Vanikkan Vanikon Vanikpar Vanikseth Vanryth Varam Varel Varen Vares Varis Varon Varryn Vartis Varvir
+				Varvur Vatollia Vaves Vavil Vavran Vedam Vedra Vedran Velam Velis Velms Velvul Velyn Venali Vendil Vendras Veneval Venthin
+				Venthis Veren Veros Vevos Vevul Viiron Vildras Vilms Vilur Vilval Vilyn Vinder Viras Viros Virvyn Vitollia Vivos Vivrun
+				Vivul Vobend Vodryn Vonden Vonos Vorar Vorir Voruse Vunal Vunden Vurdras Vurvyn Vuval Vuvil Wiliban Wyndelius Yeveth Yurilas
+				Zahshur Zanain Zanath Zanfar Zanien Zanik Zanil Zanimal Zanimar Zankan Zanon Zanpar Zanseth Zimmeron Zirain Zirath Zirfar Zirien
+				Zirik Ziril Zirimal Zirimar Zirkan Ziron Zirpar Zirseth
+			}
+			regnal_first_names_female = {
+				Aamela Aamrila Aarela Adansa Adosi Adrasi Adrusu Adryn Aduri Aerona Aeyne Alaru Alarvyne Alavesa Aldyna Aldyne Alenus Aleri
+				Alfe Alicon Alli Alma Almise Almse Almsi Aloie Alonisea Alsal Alurami Alurue Alvela Alveno Alves Alvesi Alvila Alvura
+				Alynu Amila Amili Anara Andalin Andilan Andilo Andilu Ane Aneyda Angahran Ani Anila Anis Anise Aphia Aralosea Aralosi
+				Aramea Aranea Arara Arela Arilu Arisa Arns Arnsa Arnsi Artisa Arvama Arvamea Arvela Arvena Arvso Aryne Aryni Aryvena
+				Aspera Athesa Athesie Aurona Avoni Avrusa Badala Badama Badila Bala Balen Baleni Balsa Balsia Balynu Bameli Bameni Banda
+				Barenziah Bedena Bedenea Bedyna Bedynea Bedyni Belderi Belera Beleru Belosi Belya Bendyni Bera Berada Berari Berela Betya Bevene
+				Beyte Bidia Bidsa Bidsi Biiri Bili Bilsa Binayne Birama Birila Bivala Bivale Bivessa Blivisi Boderi Boderia Bodsa Boldrisa
+				Bothisii Bralsa Bralsea Bralsi Brara Bravora Breda Bredami Bredasu Brela Brelaca Brelayne Brelda Brelyn Brelyna Brelynd Brema Brerayne
+				Breva Brevasu Brevosi Brildraso Brilnosu Bronosa Burila Buronii Butheli Byla Cadiva Cindiri Cloya Daela Dala Dalami Daliina Dalmi
+				Dalnorea Dalora Dalsa Dalse Dalsi Dalyne Damisi Danaronea Danasi Dandea Dandera Dandrii Dandynea Danis Danoso Danso Darane Dareru
+				Darili Daroso Darva Darvala Darvame Darvasa Darvynea Dasila Dathlyn Davela Davilia Daymi Daynali Daynas Daynea Dayni Daynillo Deldasa
+				Deldrise Delmene Delte Delyna Dematah Denu Derami Derar Derayna Deria Dervera Diina Dilami Dileni Dileno Dilvene Dilyne Dinara
+				Dinaria Dinere Dinuro Dinya Diradeni Dirara Diren Dirilu Dithisi Dolmesa Dolsa Dolsia Dolvasie Domesea Domi Donta Dorisa Dorynu
+				Dothasi Dovesi Dovrosi Drala Dralasa Dralcea Dralisi Dralora Dralosa Dralsea Draramu Drarana Drarayne Dratha Drathyra Dravynea Drayna Dredena
+				Dredyni Drelasa Drelliane Drelyne Drendrisa Dreska Dreveni Dreyla Drilame Driloru Drireri Drissa Drivanas Drolora Drorayni Drulene Drurile Duldresi
+				Dulnea Dunveril Durena Duroni Edrasa Edrisi Edryn Edryno Edwina Eldrasea Eldri Eldrilu Elmera Elmussa Elneri Elvali Elvasea Elvasia
+				Elyna Elynea Elynisi Elynu Endase Endroni Enura Eralane Erila Erirvase Ernse Eroni Ervesa Ervona Ervyla Ervyna Ervyni Ervynu
+				Ethal Ethasi Evesa Evessa Evilu Evisi Fadase Fadile Falan Falanu Falena Falora Faltha Falura Famdii Fanasa Fanisea Fanuse
+				Faral Faralenu Farare Faras Farena Farona Farusea Faryon Farys Fathasa Fathusa Favani Favel Favela Favilea Favise Favona Fealu
+				Fedrasa Fedura Feduria Feldrasa Feldrelo Feldsii Felisa Felmena Felmina Felsa Felsu Fenila Feralea Ferdyn Ferise Ferone Ferva Fervsea
+				Ferynu Fethesena Fevasa Fevila Feyne Fieria Fieryra Filu Folsi Folvalie Fomesa Fonari Fonas Foni Fonira Forvse Furoni Furu
+				Fyrayn Fyrona Gadasu Gadela Gadeneri Gadila Gadsi Gadyni Galas Galasa Galdal Galdas Galdsa Galeri Galero Galisa Galore Galori
+				Galotha Galsi Galsu Galuro Galvene Galviso Galyn Gami Gandela Gandilla Gandosa Garalo Garas Gariasa Garila Garyne Gelaa Gelana
+				Gelii Gena Gilse Ginadura Gindrala Girara Girva Girvani Girynu Glistel Godyna Golana Golena Golmerea Golveso Golvy Golvyni Gomeso
+				Gorenea Gorili Gorven Grona Guldrise Gulena Gulvera Gulvilie Gureryne Guroanii Guronii Gynisi Hadrill Hala Haleneri Hanala Helma Hlana
+				Hlaren Hlava Hlavora Hlendrisa Hlenia Hlethena Hlevala Hlireni Hlisi Hlodala Hlura Iachilla Idesa Idrasa Idrenia Idrenie Idria Idronea
+				Idroni Idroso Idula Ienasa Ienase Ienaso Ildari Ildrasai-daro Ilmeni Ilmyna Indra Indrasa Indrasi Indrela Indrele Indririi Inera Ineria
+				Inisa Inise Inzoliah Iriana Irileth Irna Irvama Irvsie Iry Isabeau Ithrini Ivaynel Ivela Iveri Ivramia Ivramie Ivrosa Jenassa
+				Kalara Kalina Karliah Katariah Kireth Ladrasa Lathisa Lauravenya Laureva Lena Lirielle Lirona Livisii Llaalamu Llaalsa Llaami Llaari Llandrale
+				Llandreri Llarara Llarevis Llaros Llarusea Llasi Llathasa Llathise Llathyno Llavana Llavane Llavelea Llavesa Llaynasa Lledsa Lledsea Llemisa Llensi
+				Llerusa Llevana Llirala Llivas Llivia Llondresa Llorayna Llotha Llunela Lodyna Lolethys Lorara Lorolu Louna Luaffyn Luranor Luryne Madayna
+				Madaynu Madrale Madrana Madria Madura Maedini Maera Malarel Malori Malsa Malven Malyani Mamyne Manara Manse Manwe Maralie Marasa
+				Maren Marena Mari Mariia Marila Marilia Marise Marlyn Marona Maronii Marwyn Mathesa Medila Medresi Melila Melisi Melsu Meluria
+				Melvona Melvuli Melvure Mensa Meralyn Meralys Meram Merilar Merona Mervilda Methulu Meva Mevrenea Mevura Mevure Miara Midrasi Miiga
+				Miirist Milara Milia Milore Miluru Milva Milvela Milvonu Milyne Minasi Mindeli Mindelyn Mirasa Miraso Mireli Mirili Mirise Mirnelea
+				Mirnsa Mirri Mirusu Mivani Mivryna Morami Mornsu Moroni Morusu Morvani Movisa Muldroni Mulvi Mulvisie Mundrila Murela Muvrulea Myn
+				Myvryna Nadene Nadie Nalami Nalasa Nalmila Nalsie Nalvilie Nalvyna Nandri Nardhil Naresa Narese Narile Narilii Narisa Nartisa Nartise
+				Naryu Nathala Nathyne Nedeni Nedi Nedrasa Nela Nelmia Nelmyne Neloren Nelso Nelvana Nendrii Nerari Neria Nerile Nervana Nervyna
+				Nevama Nevena Nevrasa Nevrila Nevusa Neyna Nida Nidara Nidryne Nila Nileno Nilera Nilonii Niluva Nilvyn Nina Ninla Nirasa
+				Nireli Nirelia Nivama Nivene Noldrasi Norasa Noreni Nothasea Noveni Novrynea Nudryn Nuleno Nurara Nurisea Nurona Nurvyna Nusana Odesa
+				Odrasa Odrys Odyna Olvyia Olvyne Omesu Orama Orani Orara Orea Orero Orona Orvana Orvona Oryla Peliah Radene Radrase
+				Rala Raldenu Ralsa Ramavel Rami Ramila Ramu Rana Rania Ranis Ranosa Ranyna Rarili Rarusi Rarusu Rarvela Rathyne Ravani
+				Ravania Ravel Raven Ravila Ravoso Rayna Raynasa Raynil Raynila Rela Relamu Reldsii Relmerea Relmeria Relmyna Relosa Relvese Remasa
+				Rena Rerilie Rernel Rerynea Revisii Reynel Rianor Ridena Ridinna Riinsi Rila Rilasi Rilvase Rinori Riraynea Rironi Ris Rolasa
+				Rudrasa Runethyne Ruthrisu Ruvali Ruvene Saalu Sadal Sadela Sadelia Salama Salima Salina Salora Salori Salver Salyni Samtri Sanas
+				Sanaso Saruse Satha Sathasa Sathdira Satheri Sathryn Satyana Sava Saveri Savesea Savi Savila Savile Sayla Sayne Sedris Sedyni
+				Sehlena Sela Selveni Selvura Semoa Sen Sena Sendrasa Senise Serana Serila Seritath Sernsi Servyna Seryna Seryne Sethan Sethesi
+				Sethisa Sevame Sevisa Sevy Sevyni Seyne Seyrena Shra Sia Siid Siila Silen Sirari Sirili Sirilu Sivisia Sodra Sodrara
+				Sondryn Sorosi Sovali Sovi Sovisa Suldreni Suldrini Surii Suronii Sursi Suvaris Synda Tadara Tadera Taderi Tadrose Taelu Talama
+				Talamu Talare Talari Talmeni Talmsa Talsi Talsyne Taluri Taluro Talvini Tama Tamira Tanar Tanasa Tandasea Tanisie Tanusea Tarani
+				Tarania Tarvili Tavilu Tavynu Tedoran Tedysa Teldyni Teleri Telura Tenara Tenaru Tenisi Teranya Terenu Tereri Teril Teroni Teruise
+				Teryne Tevynni Thalurea Thavere Thelama Thelsa Thelvamu Thera Therana Thilse Thovasi Thurisea Tifosi Tildsi Tilena Tilisu Tilore Tilse
+				Tinaso Tirasie Tirele Tivela Tolisi Tolmera Tolvasa Tolvise Tolvone Tonas Tonasi Toranu Torasa Torosi Tovisa Traldrisa Trayna Traynili
+				Trayniria Tredare Tredere Tremona Trerayna Trivura Tumsa Tunila Turala Tuvene Tuvenie Tuveso Udrasi Ulene Ulenea Uleni Ulmesi Ulmiso
+				Ulvena Ulveni Ulyne Ulyno Undena Unila Urada Urandile Urava Uravasa Urene Uresa Ureso Urila Urili Urnsi Urona Urrila
+				Urtisa Urtiso Uryne Uthisii Uupse Uvisea Uvoo Vadeni Vadramea Vadusa Vadyne Vala Valana Valesu Valveli Valvesu Valvosa Valyia
+				Valyn Valyne Vamoni Varasa Varenu Varona Varoni Varvsa Vaveli Vayne Vedelea Vedyne Velanda Velas Veldrana Velsa Velyna Venae
+				Venasa Vendrela Venoni Veranim Verara Verilu Veru Vethisa Vevrana Vila Vilrani Vilvyni Vim Vindamea Vindyne Vireveri Visthina Vivyne
+				Vlaasti Vlesyl Voldsea Volene Volmyni Volyn Voneri Vrali Vuldronu Vulyne Vuri Vurila Wren Xand
+			}
+			regnal_second_names = {
+				Adas Adlain Adlam Adlan Adlaron Adlathil Adlbruk Adlen Adlenar Adlis Adlon Adlone Adlul Adram Adren Adryn Adus Alam
+				Alan Alari Alas Alen Alver Alvor Amori Andalas Andalen Andalor Andaram Andaren Andarys Andas Andavel Andoren Andoril Andothan
+				Andral Andrani Andrano Andrelo Andrethi Andrilo Androm Andromo Androthi Andules Andus Apo Aradil Aralas Aralen Aram Aran Arano
+				Aravel Arelas Areleth Areloth Aren Arenim Ares Areth Arethan Arethi Arinith Arns Arobar Arothan Arval Arvel Aryon Arys
+				Athelvis Athin Athones Athram Athren Athrys Avalain Avalam Avalan Avalaron Avalathil Avalbruk Avalen Avalenar Avalis Avalon Avalone Avalul
+				Avani Avel Avilo Balen Balur Balvel Bandas Baram Barelo Baren Baro Barus Baryon Barys Bavani Bedas Belaal Belan
+				Belaram Belas Belden Beleth Beloren Bels Belvani Belvayn Belvilo Bemis Benelas Beneran Benethran Beni Beran Berano Bereloth Beren
+				Berendas Berendus Berer Berethi Bero Bethrano Bethrimo Bradyn Braryn Braven Brenos Brenur Brilyn Carvaren Dagoth Dalas Dalen Dalis
+				Dalobar Dalomo Dals Dalvani Damori Danoran Daram Darano Dareleth Daren Darethi Darethran Darothril Darvel Daryon Darys Dathren Davor
+				Davus Daynes Delms Deltis Delvi Demnevanni Deras Dilmyn Dobar Doran Doren Dorvayn Doves Dradas Dral Dralas Dralayn Dralen
+				Dralno Dralor Drals Dran Drath Drathen Dredayn Dredil Drelas Dreleth Dreloth Dren Drenim Dres Dreth Drethan Driler Drilvi
+				Drin Drinith Drivam Drobar Drolan Drolnor Drom Drora Droryn Droth Drothan Drurel Dulfass Dulni Dulo Duro Elarven Elval
+				Elvul Enakain Enakam Enakan Enakaron Enakathil Enakbruk Enaken Enakenar Enakis Enakon Enakone Enakul Ertis Evos Fadathram Falandas Falas
+				Falavel Falen Falos Fals Falvani Famori Faralen Faram Farandas Farano Faravel Fareloth Faren Farethan Farethi Farothran Faryon Farys
+				Fatheran Fathyron Favani Favel Favelnim Faveran Fedos Felas Felder Fels Fendyn Fererus Fevur Folvyn Fyr Gadar Galen Gals
+				Garer Garil Garvon Gavos Gavyn Gidran Gilaram Gilnith Gilvani Gilvayn Gilvilo Gimalvel Gimayn Gimothran Gindu Ginith Giral Giralvel
+				Girando Girano Girendas Girethi Girith Girothran Girvayne Githendas Githrano Givyn Gobor Golathyn Gols Goran Gorvas Grulain Grulam Grulan
+				Grularon Grulathil Grulbruk Grulen Grulenar Grulis Grulon Grulone Grulul Guls Guvron Hardil Heladren Helan Helas Helbain Helbam Helban
+				Helbaron Helbathil Helbbruk Helben Helbenar Helbis Helbon Helbone Helbul Heleran Helni Helothan Helothran Helothren Helvi Henim Heran Herandus
+				Herendas Herothran Hlaalo Hlaalu Hlaano Hlan Hlando Hlarar Hlaren Hlarys Hlas Hledas Hledri Hlen Hler Hleran Hlervi Hlervu
+				Hloran Ieneth Ienith Ildram Ilnith Imayn Indalas Indalen Indaram Indaren Indarys Indavel Indobar Indoran Indrano Indules Inlador Irano
+				Irathi Irethi Ledd Lladri Llando Llandu Llaram Llaren Llarys Llendo Llendu Llenim Lleran Llerayn Llervi Llervu Lleryn Llethan
+				Llethri Lloran Lloryn Llothas Llothri Madalas Madalvel Madryon Malas Maloren Malvayn Manas Mandas Manel Mano Maren Marvani Marvayn
+				Marvel Marvos Maryon Marys Mathendis Mavandes Mels Menas Mencele Merys Milar Milo Mirel Moabain Moabam Moaban Moabaron Moabathil
+				Moabbruk Moaben Moabenar Moabis Moabon Moabone Moabul Molor Moran Moren Morvayn Mothryon Nadram Nadus Nalyn Naros Navur Nedalor
+				Neladren Nelaram Nelas Neleth Nelvani Nelvayn Nelvilo Nerandas Nerano Nerethi Nerothan Nerothren Nerus Nervion Nethalen Nethan Nilem Nilvon
+				Nirith Nithryon Nolar Norvayn Norvayne Nothro Nothryon Nulen Ofemalen Omalas Omalen Omalor Omani Omaren Omavel Omayn Omoran Omoril
+				Omothan Ondyn Onmar Oran Orelu Oren Ores Orethi Oreyn Oril Othan Othralas Othralen Othran Othravel Othrelas Othreleth Othreloth
+				Othren Othrenim Othril Othrobar Quintella R'ain R'am R'an R'aron R'athil R'bruk R'en R'enar R'is R'on R'one R'ul R'zamain
+				R'zamam R'zaman R'zamaron R'zamathil R'zambruk R'zamen R'zamenar R'zamis R'zamon R'zamone R'zamul Radarys Radas Radobar Ralaal Ralas Raledran Ralen
+				Rallain Rallam Rallan Rallaron Rallathil Rallbruk Rallen Rallenar Rallis Rallon Rallone Rallul Raloran Ralvani Ralvayn Ramarys Ramoran Ramori
+				Ramothran Randas Raram Rathri Rathryon Ravel Raviro Redas Redoran Redothril Reladren Relarys Relas Relavel Relenim Releth Relnim Reloro
+				Reloth Relvani Rendas Rendo Reni Renim Reram Rervam Rethan Rethandus Rethelas Retheran Rethul Reyas Rilvayn Rindo Rindu Rinith
+				Rivul Rols Romandas Romari Romavel Romayn Romoran Romoren Romori Romothran Rothalen Rothalnim Rothalor Rothan Rothandus Rothari Rotheloth Rotheran
+				Rothrano Rothren Rurvyn Ryon S'thain S'tham S'than S'tharon S'thathil S'thbruk S'then S'thenar S'this S'thon S'thone S'thul Sadalas Sadalvel
+				Sadas Sadoro Sadralo Sadrano Sadri Sadryon Sadrys Sadus Sailain Sailam Sailan Sailaron Sailathil Sailbruk Sailen Sailenar Sailis Sailon
+				Sailone Sailul Sala Salam Salandas Salaren Salaron Salas Salavel Salen Salenim Salmyn Salobar Salor Salothan Salothran Salvani Salvel
+				Salvi Samandas Samarys Samori Sandas Sandus Saram Sarandas Sarandus Sarano Sarathram Sareloth Saren Sarendas Sarethan Sarethi Sari Sarinith
+				Sarobar Sarothran Sarothren Sarothril Saryon Saryoni Sarys Sathendas Sathis Sathren Sathryon Savani Savel Savil Sedas Sedrethi Sedri Selandas
+				Selaren Selaro Selarys Selas Seles Seleth Seloth Selothan Selvayn Selvilo Sendas Sendu Senim Senoril Seralas Seran Serano Serethi
+				Seri Serothan Serven Sethan Sethandas Sethandus Sethri Surishpi T'rizain T'rizam T'rizan T'rizaron T'rizathil T'rizbruk T'rizen T'rizenar T'rizis T'rizon
+				T'rizone T'rizul Talds Tedalen Tedas Tedran Telandas Telas Telmon Telnim Telvani Telvayn Teneran Tenim Teran Terandas Terano Teri
+				Teria Terilu Tervayn Thalas Thalor Thando Tharam Tharen Tharyon Tharys Thelas Theman Thendas Thenim Therayn Therethi Thilandas Thilarvel
+				Thimalvel Thindo Thiralas Thirandus Thirano Thireloth Thirith Thirothan Thirvayn Tilvur Tistar Tobor Trandel Tunel Tures Tyravel Uleni Ules
+				Ulessen Ulom Ulvel Ulven Ulver Urns Urvon Urvyn Uvalas Uvalen Uvalor Uvani Uvaram Uvaren Uvayn Uvelas Uveleth Uvenim
+				Uveran Uvirith Uvulas Vadryon Valaai Valas Valen Valno Valor Vando Vandram Vandus Varam Varen Vari Varis Varo Varyon
+				Varys Vavas Vavyn Vedaren Vedas Vedralu Vedran Vedrano Velas Velendas Veleth Velni Veloren Veloth Velothren Velothril Vendu Venim
+				Veralor Veran Verano Verelas Verelnim Verendas Verethi Veri Verilnith Verothan Viake Vian Vibato Vidron Vilas Vinden Virith Volos
+				Vules
+			}
+		}
+	}
+}

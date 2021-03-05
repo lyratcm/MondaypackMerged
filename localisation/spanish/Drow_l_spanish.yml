@@ -1,0 +1,320 @@
+﻿l_spanish:
+FLAG_CATEGORY_drow:0 "Drow"
+
+####################################
+# Name Lists
+####################################
+
+name_list_DROW1:0 "Drow: Dunmer"
+name_list_DROW2:0 "Drow: Ilythiiri"
+
+####################################
+# System Initializers
+####################################
+drow_system_tulshar_initializer_NAME:0 "Subterranean Beginnings"
+drow_system_tulshar_initializer_DESC:0 "§LYour people began in vast subterranean cities. Now it's time to claim the stars.§!\n\n$system_initializer_DESC$"
+drow_system_eilistraee_initializer_NAME:0 "Prismatic Provenance"
+drow_system_eilistraee_initializer_DESC:0 "§LYour people live under the colorful skies of a prismatic star and its black hole companion.§!\n\n$system_initializer_DESC$"
+
+####################################
+# Origins 
+####################################
+
+origin_drow_subterranean_inception:0 "Subterranean Inception"
+origin_drow_subterranean_inception_desc:0 "For millenia your civilization existed in the vast caverns of your homeworld. Eventually breaching the surface your people are now ready to break through another barrier: space itself."
+origin_tooltip_drow_subterranean_inception_effects:3 "§YStarting location§!:\n Start in a §Ycustom star cluster§!\n\n§YCapital system§!:\n Has an §REnvironmental Hazard§!\n Contains §Y$pc_drow_valshaquellar$§! megastructure that:\n   Is §Rbroken§! but can potentially be restored\n   Has §HRelic§! planetary features\n\n§YHomeworld§!:\n Is £planet£ §Y$pc_drow_speleoterrestrial$§!\n Has §Y1§! §EUnique§! feature\n\n§YSpecies§!:\n Habitability is set to §Y$trait_pc_drow_speleoterrestrial_preference$§!\n §GAll types of planets are desirable, but\n never ideal§!"
+
+origin_drow_prismatic_refuge:0 "Prismatic Refuge"
+origin_drow_prismatic_refuge_desc:0 "Fleeing your home system due to persecution, your primitive colony vessel miraculously happened upon a paradise world. Having now mastered this world your civilization turns its attention to the stars once again."
+origin_tooltip_drow_prismatic_refuge_effects:3 "§YStarting location§!:\n Start in a §Ycustom star cluster§!\n\n§YCapital system§!:\n Has an §REnvironmental Hazard§!\n Contains a §Rdangerous wormhole§!\n\n§YHomeworld§!:\n Has §Y3§! §EUnique§! features\n\n§YEmpire§!:\nStart with §MWormhole Stabilization§! technology"
+
+########################
+### PLANET MODIFIERS ###
+########################
+
+drow_glowing_waters:0 "Phosphorescent Oceans"
+drow_glowing_waters_desc:0 "The plankton in the oceans give off slight electromagnetic radiation at night resulting in a pleasant glow."
+
+drow_strong_magnetic_field:0 "Strong Magnetic Field"
+drow_strong_magnetic_field_desc:1 "This planet has an abnormally high magnetic field. This will interfere with many of our instruments and computers."
+
+drow_defunct_lifesupport:0 "Defunct Life Support"
+drow_defunct_lifesupport_desc:0 "§LThe life support systems on this structure are entirely destroyed.§!"
+
+drow_decimated_infrastructure:0 "Decimated infrastructure"
+drow_decimated_infrastructure_desc:0 "§LWhere once there was plentiful infrastructure, now only twisted metal remains.§!"
+
+drow_trait_xenocidal_terror:0 "Xenocidal Terror"
+drow_trait_xenocidal_terror_desc:0 "A portion of the planet's population has mysteriously vanished! The local §RXenocidal§! population is in agreement that this must be a clerical error. They don't recall the allegedly §Ymissing§! aliens ever living there."
+
+####################################
+# Species Classes
+####################################
+DROW:0 "Drow"
+DROW_desc:1 "Species Class has no effect on your Empire, but Drow species may consider other Drow to be less alien than other Species Classes."
+DROW_plural:0 "Ilythiiri"
+DROW_insult_01:0 "demon"
+DROW_insult_plural_01:0 "demons"
+DROW_compliment_01:0 "angel"
+DROW_compliment_plural_01:0 "angels"
+DROW_spawn:0 "child"
+DROW_spawn_plural:0 "children"
+DROW_sound_01:0 "growling"
+DROW_sound_02:0 "grunting"
+DROW_sound_03:0 "yapping"
+DROW_sound_04:0 "yowling"
+DROW_sound_05:0 "mewling"
+DROW_organ:0 "stomach"
+DROW_mouth:0 "mouth"
+
+RT_VALSHARESS:0 "Valsharess"
+
+ILYTHIIRI:0 "Ilythiiri"
+ILYTHIIRI_desc:0 "Species Class has no effect on your Empire, but Drow species may consider other Drow to be less alien than other Species Classes."
+ILYTHIIRI_plural:0 "Ilythiiri"
+ILYTHIIRI_insult_01:0 "demon"
+ILYTHIIRI_insult_plural_01:0 "demons"
+ILYTHIIRI_compliment_01:0 "angel"
+ILYTHIIRI_compliment_plural_01:0 "angels"
+ILYTHIIRI_spawn:0 "child"
+ILYTHIIRI_spawn_plural:0 "children"
+ILYTHIIRI_sound_01:0 "growling"
+ILYTHIIRI_sound_02:0 "groping"
+ILYTHIIRI_sound_03:0 "yapping"
+ILYTHIIRI_sound_04:0 "yowling"
+ILYTHIIRI_sound_05:0 "mewling"
+ILYTHIIRI_organ:0 "stomach"
+ILYTHIIRI_mouth:0 "mouth"
+
+####################################
+# Traits
+####################################
+trait_drow:0 "Dark Elven"
+trait_drow_desc:0 "§LAn offshoot of the ancient Eldar. No longer immortal but very long lived.§!\n"
+trait_drow_savage:0 "Dark Elven Savage"
+trait_drow_savage_desc:0 "§LAn offshoot of the ancient Eldar that considers savagery a type of art form.§!\n"
+trait_drow_xenocidal:0 "Xenocidal"
+trait_drow_xenocidal_desc:0 "§LThis species is known to kill off un-enslaved races living on the same world. Egalitarians, xenophiles and pacifists are particularly prone to §Yaccidents§!.§!\n"
+
+####################################
+# Civics 
+####################################
+
+civic_drow_eilistraee:0 "Peacekeepers"
+civic_drow_eilistraee_desc:0 "Peace and order via persuasion is the goal. If that fails however, force is to be applied for the good of all. Unrestrained chaos must not be allowed to exist."
+civic_drow_eilistraee_tooltip_effects:0 ""
+civic_drow_warriors:0 "Tekartas"
+civic_drow_warriors_desc:0 "A philosophy that encourages success through the dual methods of strength and subterfuge. Where one fails, the other is employed. Leaders plot against each other constantly resulting in learning fast or dying. Society is divided into a class system not based on heredity, but rather psionic ability. The psionic meritocracy controls every major endeavor from public to private and is in a state of constant succession battle."
+civic_drow_arcane:0 "Faer Talthalra"
+civic_drow_arcane_desc:0 "Society is divided into a class system not based on heredity, but rather psionic ability. The psionic meritocracy controls every major endeavor from public to private and is in a state of constant succession battle."
+
+civic_tooltip_drow_warriors_effects:0 "Leaders and rulers are prone to §Yaccidents§!\nCannot use §YEquality§!, §YChivalry§! and §YAbsolute Patriarchy§! gender policies\n"
+#civic_tooltip_drow_warriors_effects:0 "Leaders and rulers are prone to §Yaccidents§!\nCannot use §YEquality§!, §YChivalry§! and §YAbsolute Patriarchy§! gender policies\n$MOD_COUNTRY_INFLUENCE_GAIN_ADD$: §G+1§!\n$MOD_COUNTRY_LEADER_POOL_SIZE$: §G+1§!\n$mod_leaders_cost_mult$: §G-50%§!\n$MOD_COUNTRY_ELECTION_INFLUENCE_COST$: §G-50%§!\n$MOD_LEADER_SPECIES_EXP_GAIN$: §G+25%§!\n$mod_category_psionics_research_speed_mult$: §G+25%§!\n$MOD_COUNTRY_INSULT_EFFICIENCY$: §G+50%§!\n$MOD_COUNTRY_TRUST_CAP_ADD$: §R-50§!\n$MOD_COUNTRY_TRUST_GROWTH$: §R-75%§!\n$MOD_COUNTRY_DIPLOMACY_INFLUENCE_COST$: §R+50%§!\n"
+
+# New restriction text not in vanilla
+civic_drow_tooltip_not_materialistic:0 "Is not §YMaterialistic§!"
+
+####################################
+# Diplomacy
+####################################
+
+personality_tulshar_personality:0 "Ilythiiri Valsharen"
+personality_tulshar_personality_desc:0 "Valsharen believe all alien life forms are only fit for subjugation. They are highly aggressive, expansionist, and will think nothing of eradicating anything in their path."
+
+personality_eilistraeean_personality:0 "Orthae d'Aronen"
+personality_eilistraeean_personality_desc:0 "Orthae d'Aronen, Holy Knights in Drowish, believe it is their sacred duty to bring order to the galaxy. Peacefully if possible but by force if necessary. They are known for being extremely loyal once friendship is established."
+
+gov_drow_matriarchal_council:0 "Matriarchal Council"
+gov_drow_matriarchal_council_desc:0 "This government is a spiritualistic form of oligarchy, where the absolute leadership lies in the hands of female leaders of various Houses. Ruthless competition for political influence between Houses and succession battles are encouraged, but open murder is outlawed."
+
+####################
+### PLANET STUFF ###
+####################
+
+## VALSHAQUELLAR ##
+pc_drow_valshaquellar:0 "Valshaquellar"
+pc_drow_valshaquellar_desc:0 "A colossal artificial world that appears to be designed to support only specific forms of life."
+mod_pc_drow_valshaquellar_habitability:0 "Valshaquellar Habitability"
+trait_pc_drow_valshaquellar_preference:0 "Valshaquellar Preference"
+trait_pc_drow_valshaquellar_preference_desc:0 "§LClimate preference is determined at the genetic level, by Creation or skillful manipulation.§!"
+
+pc_drow_valshaquellar_dead:0 "Valshaquellar"
+pc_drow_valshaquellar_dead_desc:0 "A colossal artificial world that appears to be designed to support only specific forms of life."
+mod_pc_drow_valshaquellar_dead_habitability:0 "Valshaquellar Habitability"
+trait_pc_drow_valshaquellar_dead_preference:0 "Valshaquellar Preference"
+trait_pc_drow_valshaquellar_dead_preference_desc:0 "§LClimate preference is determined at the genetic level, by Creation or skillful manipulation.§!"
+
+pc_drow_speleoterrestrial:0 "Speleoterrestrial World"
+pc_drow_speleoterrestrial_desc:0 "Rocky world that formed with expansive subterranean caverns. The light nitrogen-oxygen atmosphere is suitable for some forms of life."
+pc_drow_speleoterrestrial_habitability:0 "Subterranean Preference"
+mod_pc_drow_speleoterrestrial_habitability:0 "Subterranean Habitability"
+trait_pc_drow_speleoterrestrial_preference:0 "Subterranean Preference"
+trait_pc_drow_speleoterrestrial_preference_desc:1 "§LClimate preference is determined at the genetic level, by Creation or skillful manipulation.§!"
+
+pc_drow_valshaquellar_tile:0 "Valshaquellar Terrain"
+pc_drow_valshaquellar_tile_desc:0 "Harsh terrain only truly suitable for certain forms of life." 
+
+#################
+### BUILDINGS ###
+#################
+
+drow_building_army_primitive:0 "Quellarin Zeklet'tau"
+drow_building_army_primitive_desc:0 "An ancient order of defenders that are called upon when in great need."
+
+##############
+### ARMIES ###
+##############
+
+drow_primitive_army:0 "Myrlochar d'Aron"
+
+####################################
+# Nations 
+####################################
+EMPIRE_DESIGN_drow_civ1:0 "Children of Eilistraee"
+EMPIRE_DESIGN_drow_civ1_desc:0 "Tales say the Eilistraeans left their original home to flee a "great evil". Guided by their Goddess Eilistraee or just by sheer luck, their primitive vessel survived the traversal of a wormhole. On the other side they found a paradise world where they have remained content for many millenia.\n\nRecently their curiosity has been stirred and they are once again looking to the stars. This time to spread a message of peace and hope. By force if necessary.§!\n"
+
+EMPIRE_DESIGN_drow_tulshar_civ:0 "Ilythiiri Tulshar"
+EMPIRE_DESIGN_drow_tulshar_civ_desc:0 "Ilythiiri history can be divided into two epochs: pre and post surfacing. For millennia, they dwelt underneath the surface of their world. They created vast underground cities and then promptly fought over them. Then one day, a tunneler broke into a new world: the Above. The shock of this discovery rocked every Ilythiiri civilization to its core. Capitalizing on the social unrest following the discovery, one warlord managed to unite the entire underground in a single purpose: conquering the Above.\n\nLittle did they know how much Above there was to conquer. Having now tamed the surface of their world, they now look to tame everything else that lies beyond.§!\n"
+
+###################
+### EVENT STUFF ###
+###################
+#[Root.GetName]
+## VALSHAQUELLAR ##
+drow_special.1.name:0 "Restoring Valshaquellar"
+drow_special.1.desc:0 "Our recent advances in £society §Y$tech_ecological_adaptation$§! have allowed us to properly analyze the situation on [event_target:drow_valshaquellar.GetName]. We are uncertain what caused the systems failure on the massive station, however we believe the knowledge necessary reactivate it is now within our grasp."
+drow_special.1a.desc:0 "Having attained §Y$decision_mastery_of_nature$§! we have analyzed the situation on [event_target:drow_valshaquellar.GetName]. While the original cause of the station's power failure is unknown, we believe we have the knowledge necessary to fully restore operations."
+drow_special.1.a:0 "Worth considering"
+drow_special.2.name:0 "Restoration Complete"
+drow_special.2.desc:0 "We have successfully restored [From.From.GetName] to its former glory!\n\nThe megastructure is ready for settlement!"
+drow_special.2.a:0 "Glory to the empire!"
+drow_decision_valshaquellar_repair:0 "Repair Valshaquellar"
+drow_decision_valshaquellar_repair_desc:0 "A significant investment will be required to restore the massive habitat to its former brilliance. Once repaired, it will finally become habitable."
+drow_decision_valshaquellar_repair_tooltip:0 "§YValshaquellar§! becomes habitable for species with §Y$trait_pc_drow_speleoterrestrial_preference$§!"
+
+elven_valshaquellar_chain_title:0 "Restoring Valshaquellar"
+elven_valshaquellar_chain_desc:0 "We believe with further research in §Y$tech_ecological_adaptation$§! will give us the ability to restore Valshaquellar to its former glory."
+
+START_SCREEN_SUBTERRANEAN_INCEPTION:0 "Technological progress has been swift, but as our numbers grew the civilian population became increasingly restless. With our world on the brink of anarchy, the military stepped in to restore the rule of law. A new order was established to safeguard our nation from all threats, both external and internal."
+
+####################
+### STAR CLASSES ###
+####################
+
+sc_drow_binary_1:1 "$sc_binary_1$"
+sc_drow_binary_2:1 "$sc_binary_1$"
+sc_drow_binary_3:1 "$sc_binary_1$"
+sc_drow_trinary_1:1 "$sc_trinary_1$"
+sc_drow_trinary_2:1 "$sc_trinary_1$"
+sc_drow_quaternary_1:1 "Quaternary Stars"
+sc_drow_quaternary_2:1 "Quaternary Stars"
+sc_drow_tulshar:0 "$sc_m_giant$"
+
+#######################
+### PLANET FEATURES ###
+#######################
+
+## TULSHAR ##
+
+d_drow_planetary_speleostructural_instability:1 "£blocker£ Speleostructural Instability"
+d_drow_planetary_speleostructural_instability_desc:0 "Due to the abundant artificial and natural cave systems, surface structures must have shallow foundations. This prevents the construction of elevated buildings and greatly reduces the available buildable land on the surface.\n\n§RCannot be removed§!"
+
+d_drow_planetary_cheel_xsaus:0 "Che'el Xsa'us"
+d_drow_planetary_cheel_xsaus_desc:0 "Ancient ruins that predate the discovery of the Above. Presumably this was once a city of some importance, but whatever significance it had has long ago been forgotten. The ruins are particular infamous due to a disturbing fact: no person, ship, probe, or anything sent within the bounds of the ruins ever returns. Modern attempts included long range bombardment only to have no apparent affect. Whatever force exists in these ruins is beyond current understanding."
+
+d_drow_planetary_murrpau_sanguine:0 "Murrpau Sanguine"
+d_drow_planetary_murrpau_sanguine_desc:0 "Furred parasitic quadrupeds with the ability of flight, even a newborn Murrpau can be lethal. Fortunately they are both solitary and limit their hunting periods to low light conditions. Though they will feed off the blood of nearly anything, tests have conclusively shown they have a preference for the blood of sentient beings. To date, no explanation for this phenomena has been forthcoming."
+
+d_drow_planetary_murrpau_sanguine_blocker:0 "£blocker£ Murrpau Sanguine"
+d_drow_planetary_murrpau_sanguine_blocker_desc:0 "$d_drow_planetary_murrpau_sanguine_desc$"
+
+d_drow_planetary_zhevalshath_blocker:0 "£blocker£ Zhevalshath"
+d_drow_planetary_zhevalshath_blocker_desc:0 "The obsidian walls of this mysterious tower miraculously manage to deflect even modern weaponry. Possibly serving as some sort of palace and fortress, it now lays abandoned and in disrepair.  Getting the fortress liveable again would take a significant investment but is not beyond the realm of possibility."
+
+d_drow_planetary_zhevalshath:0 "Zhevalshath"
+d_drow_planetary_zhevalshath_desc:0 "More fortress than palace, Zevalshath was originally the tallest of many derelict towers. Massive obsidian walls manage to intimidate whether approached by foot or by sky. Those same walls are now lined with modern defense weaponry and are sure to dissuade anyone from attacking. It now houses the seat of any ruler fortunate enough to control this megastructure."
+
+d_drow_planetary_subterranean_hydroponics:0 "Subterranean Hydroponics"
+d_drow_planetary_subterranean_hydroponics_desc:0 "Vast caverns carved out of the rock beneath the surface for the sole purpose of farming."
+
+d_drow_planetary_buried_sea:0 "Buried Sea"
+d_drow_planetary_buried_sea_desc:0 "A vast underground ocean teaming with chemical based life forms. Many of which are quite nourishing."
+
+d_drow_planetary_happy_lizard_farms:0 "Poisonous Reptile Farms"
+d_drow_planetary_happy_lizard_farms_desc:0 "Domesticated in prehistory, this region is home to a very large and very poisonous reptile that now primarily resides in cattle farms. Their meat is nutritious sustenance and the poison equally as useful for dispatching all manner of life-forms."
+
+d_drow_planetary_shroom_flats:0 "Mushroom Flats"
+d_drow_planetary_shroom_flats_desc:0 "A region covered with large forests of giant flat fungi. Among these forests are "plump helmets", edible fungi that can be cultivated."
+
+d_drow_planetary_luminous_lichen:0 "Luminous Lichen"
+d_drow_planetary_luminous_lichen_desc:0 "Phosphorescent lichen grows in this region that is not only edible but rather saporific."
+
+d_drow_planetary_ancient_dynamos:0 "Ancient Dynamos"
+d_drow_planetary_ancient_dynamos_desc:0 "Ancient power generators created by an unknown civilization. Conspiracy theorists love to weave tales that they are the last remnants of some forgotten alien race. The accepted theory is they are simply the only positive result of an empire too unimportant for history to remember."
+
+d_drow_planetary_sunken_geysers:0 "Sunken Geysers"
+d_drow_planetary_sunken_geysers_desc:0 "Subterranean geysers that mysteriously erupt in isochronal intervals."
+
+d_drow_planetary_serpentine_trench:0 "Serpentine Trench"
+d_drow_planetary_serpentine_trench_desc:0 "A long and winding submerged trench with high speed currents. Most known for its use in underwater racing events, it is also capable of being easily harnessed as a source of hydroelectric power."
+
+d_drow_planetary_metal_wastefields:0 "Metal Wastefields"
+d_drow_planetary_metal_wastefields_desc:0 "An ancient site of what seems to be mostly pure metal and various alloys organized into vast squares of land. Aside from the order of the design, there are no overt signs as to whom created these fields nor the purpose for which they were intended."
+
+d_drow_planetary_aurous_fissures:0 "Aurous Fissures"
+d_drow_planetary_aurous_fissures_desc:0 "A unique configuration of natural formations in this region has created fissures of nearly pure gold. They erupt periodically and are of a low enough heat to allow for effortless extraction."
+
+d_drow_planetary_carbon_subterrane:0 "Carbon Subterrane"
+d_drow_planetary_carbon_subterrane_desc:0 "Entire caverns full of solid crystallized carbon. Both a natural wonder and an excellent source of raw minerals."
+
+## VALSHAQUELLAR ##
+
+d_drow_collapsed_spire:1 "£blocker£ Collapsed Spire"
+d_drow_collapsed_spire_desc:0 "An immense residential spire has collapsed under its own weight in this region, blocking access. While it was still standing, this towering structure must have been among the tallest on the planet."
+d_drow_massive_crevice:1 "£blocker£ Massive Crevice"
+d_drow_massive_crevice_desc:0 "This region is divided by a vast crevice that cuts through what was once a dense urban zone. The ground here is extremely unstable, with frequent earthquakes and landslides."
+d_drow_shattered_solar_array:1 "£blocker£ Shattered Solar Array"
+d_drow_shattered_solar_array_desc:0 "The shattered remnants of some kind of colossal solar array. When it was still functional, it must have provided power to a significant portion of this planet."
+d_drow_flooded_reactor_pits:1 "£blocker£ Flooded Reactor Pits"
+d_drow_flooded_reactor_pits_desc:0 "These deep pits appear to have once housed the planet's main energy production facilities. Over the eons, rain and flooding have filled the pits with murky water."
+d_drow_ancient_reactor_pits:0 "Ancient Reactor Pits"
+d_drow_ancient_reactor_pits_desc:0 "These deep pits near the planet's equator once housed its primary energy generators. Much of the surprisingly sturdy infrastructure has survived, and new reactors can be slotted into it."
+d_drow_immense_solar_array:0 "Immense Solar Array"
+d_drow_immense_solar_array_desc:0 "This solar array is nearly the size of a small continent. Most of it has been smashed beyond repair, but the underlying power infrastructure has survived, making it a good site for energy production."
+d_drow_central_spire:0 "Central Spire"
+d_drow_central_spire_desc:0 "This towering structure appears to have served as the administrative center of the planet. Its central location and mostly intact interior provides an unmatched opportunity to research the ruins of this world."
+d_drow_industrial_sector:0 "Industrial Sector"
+d_drow_industrial_sector_desc:0 "This entire region once served as the industrial heartland of the planet. The factories and refineries that operated here have long since stopped working, but vast amounts of scattered resources can still be found in the area."
+d_drow_relic_dense_ruins:0 "Dense Ruins"
+d_drow_relic_dense_ruins_desc:0 "The study of the dense ruins that cover this world are a boon to science, but their presence also limits the amount of livable space."
+
+## EILISTRAEEN ##
+
+d_drow_planetary_feral_fairies:0 "Omophagous Faeries"
+d_drow_planetary_feral_fairies_desc:0 "A race of diminutive sentient creatures that fly in groups. It is known they possess language and rudimentary forms of technology. Any information beyond that tends to be hampered by the fact that they swarm and devour anyone foolish enough to attempt contact. In small numbers they frequently steal food and anything else they can manage to carry. They rarely outright attack settlements though there have been cases of swarms wiping out entire dwellings in the past."
+
+d_drow_planetary_cp_klepto_fairies:0 "Kleptomanic Faeries"
+d_drow_planetary_cp_klepto_fairies_desc:0 "A race of diminutive sentient creatures that fly in groups. Originally thought to have been eradicated when their native forests were destroyed, they have adapted surprisingly well to their new environment. They now make their homes among the perches of skyscrapers and arcologies. Stealing food has given way to stealing technology and trading in stolen goods. It is estimated that up to three fourths of all black markets on the planet are managed by one of more faeries."
+
+d_drow_planetary_feral_fairies_blocker:0 "£blocker£ Omophagous Faeries"
+d_drow_planetary_feral_fairies_blocker_desc:0 "$d_drow_planetary_feral_fairies_desc$"
+
+d_drow_planetary_glowing_forests:0 "Bioluminescent Forests"
+d_drow_planetary_glowing_forests_desc:0 "Forests with a high degree of plantlife that give off chemical based light. While attractive they are also dangerous as the bioluminescent plant forms are generally carnivorous. Some plant species have even been known to eat large animals or even foolish citizens. If done safely, the plants can be harvested to produce compounds with a variety of unique properties."
+
+d_drow_planetary_glowing_forests_blocker:0 "£blocker£ Bioluminescent Forests"
+d_drow_planetary_glowing_forests_blocker_desc:0 "$d_drow_planetary_glowing_forests_desc$"
+
+d_drow_planetary_cheel_krezust:0 "Che'el K'rezust"
+d_drow_planetary_cheel_krezust_desc:0 "The ancient site where the ark ship carrying our people to safety first landed and the our first city. Having been constantly expanded over the eons it is now a sprawling mega-city and is considered to be the capital of both the planet and of our culture."
+
+d_drow_planetary_glowing_oceans:0 "Phosphorescent Oceans"
+d_drow_planetary_glowing_oceans_desc:0 "The plankton in the oceans give off slight electromagnetic radiation at night resulting in a pleasant glow."
+
+## FALLEN EMPIRES ##
+
+d_drow_planetary_cheel_phalar_blocker:0 "£blocker£ Arcologies of the Dead"
+d_drow_planetary_cheel_phalar_blocker_desc:0 "Vast portions of this world are covered with spiring arcologies full of dead remains. Explorers report odd occurrences when surveying. Abnormal equipment failure. Sounds of creatures laughing, crying, and even screaming. Our scientists assure us that it nothing more than overactive imaginations. What is quite certain however is that the arcologies are so congested with dead remains they will need to be demolished to even be usable. This will come at a great cost of time and effort."
+
+d_drow_planetary_cheel_phalar_cursed:0 "Curse of the Dead"
+d_drow_planetary_cheel_phalar_cursed_desc:0 "Dismantling the arcologies full of alien remains was an arduous task. The frequent equipment failure explained away as normal. Matters are now considerably worse. At first it was persistent power failures for no apparent reason. Then it was the occasional missing colonist. Now entire groups of colonists have vanished. In some cases within minutes of communication. It is clear someone or some thing is behind these events but nothing can ever be established. The situation is so bad that the colony is presently in a perpetual state of terror wondering what can possibly go wrong next."

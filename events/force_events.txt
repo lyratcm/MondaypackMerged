@@ -1,0 +1,121 @@
+namespace = force_event
+
+country_event = {
+	id = force_event.1
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	trigger = {
+		has_ascension_perk = eap_galactic_force_projection
+	}
+	immediate = {
+		country_event = { id = force_event.2 }
+		country_event = { id = force_event.1 days = 3600 }
+	} 
+}
+
+country_event = {
+	id = force_event.2
+	title = force_event.2.title
+	desc = force_event.2_desc
+	picture = GFX_evt_hangar_bay
+	show_sound = event_ship_thrusters
+	location = root
+
+	is_triggered_only = yes
+
+	option = {		
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_Spearhead"
+				effect = {
+					set_owner = root
+					random_list = {
+						1 = { 
+							while = {
+								count = 1 
+								create_ship = {
+									random_existing_design = battleship
+								}
+							}
+							set_location = {
+								target = root.capital_scope
+								distance = 5
+								angle = random
+							}
+						}
+						2 = { 
+							while = {
+								count = 2 
+								create_ship = {
+									name = random
+									random_existing_design = battleship
+								}
+							}
+							set_location = {
+								target = root.capital_scope
+								distance = 5
+								angle = random
+							}
+						}
+						3 = { 
+							while = {
+								count = 3 
+								create_ship = {
+									name = random
+									random_existing_design = battleship
+								}
+							}
+							set_location = {
+								target = root.capital_scope
+								distance = 5
+								angle = random
+							}
+						}
+						2 = { 
+							while = {
+								count = 4 
+								create_ship = {
+									name = random
+									random_existing_design = battleship
+								}
+							}
+							set_location = {
+								target = root.capital_scope
+								distance = 5
+								angle = random
+							}
+						}
+						1 = { 
+							while = {
+								count = 5 
+								create_ship = {
+									name = random
+									random_existing_design = battleship
+								}
+							}
+							set_location = {
+								target = root.capital_scope
+								distance = 5
+								angle = random
+							}	
+						}	
+					}
+				}
+			}
+		}
+		name = world_shaper.a
+		custom_tooltip = force_event.tooltip 
+	}
+	option = {	
+		hidden_effect = { 
+			add_resource = { energy = 10000 }
+			add_resource = { influence = 100 }
+		 }
+		name = force_event.b
+		custom_tooltip = force_event_b.tooltip 
+	}
+}
+
+		

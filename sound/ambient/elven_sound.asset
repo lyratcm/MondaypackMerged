@@ -1,0 +1,25 @@
+
+####### PLANET AMBIENT ############
+sound =
+{
+	name = "elven_planet_01"
+	file = "elven_planet_01.wav"
+	always_load = no
+	volume = 0.3
+}
+
+sound =
+{
+	name = "elven_planet_02"
+	file = "elven_planet_02.wav"
+	always_load = no
+	volume = 0.3
+}
+
+sound =
+{
+	name = "elven_planet_03"
+	file = "elven_planet_03.wav"
+	always_load = no
+	volume = 0.3
+}

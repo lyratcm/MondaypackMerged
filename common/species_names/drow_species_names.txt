@@ -1,0 +1,129 @@
+DROW = {
+	drow_name_1 = {
+		name = "Kivviiri"
+		plural = "Kivviiri"
+		home_planet = "Ishmanti Delmah"
+		home_system = "Ishmanti"
+		name_list = "DROW1"
+	}
+	
+	drow_name_2 = {
+		name = "Silinrul"
+		plural = "Silinrai"
+		home_planet = "Kashagon Delmah"
+		home_system = "Kashagon"
+		name_list = "DROW2"
+	}
+	
+	drow_name_3 = {
+		name = "Drothiiri"
+		plural = "Drothiiri"
+		home_planet = "Sisaroth Delmah"
+		home_system = "Sisaroth"
+		name_list = "DROW1"
+	}
+	
+	drow_name_4 = {
+		name = "Talyarii"
+		plural = "Talyarii"
+		home_planet = "Armon Lyr"
+		home_system = "Xeleron"
+		name_list = "DROW2"
+	}
+	
+	drow_name_5 = {
+		name = "Qunnessaan"
+		plural = "Qunnessaari"
+		home_planet = "Zhennu Delmah"
+		home_system = "Kyorl'urn"
+		name_list = "DROW1"
+	}
+	
+	drow_name_6 = {
+		name = "Suriliiri"
+		plural = "Suriliiri"
+		home_planet = "Drala Sol"
+		home_system = "Drala"
+		name_list = "DROW2"
+	}
+	
+	drow_name_7 = {
+		name = "Malar"
+		plural = "Malari"
+		home_planet = "Vharrus"
+		home_system = "Malar Tor"
+		name_list = "DROW1"
+	}
+	
+	drow_name_8 = {
+		name = "Fashkaari"
+		plural = "Fashkaari"
+		home_planet = "Toryll"
+		home_system = "Itami"
+		name_list = "DROW2"
+	}
+
+	drow_name_9 = {
+		name = "Duergan"
+		plural = "Duergani"
+		home_planet = "Kry'stona"
+		home_system = "Har'olen"
+		name_list = "DROW1"
+	}
+	
+	drow_name_10 = {
+		name = "Vlorissi"
+		plural = "Vlorissi"
+		home_planet = "Zer'tath"
+		home_system = "Kelliat"
+		name_list = "DROW2"
+	}
+	
+	drow_name_11 = {
+		name = "Conamor"
+		plural = "Conamori"
+		home_planet = "Serisonor"
+		home_system = "Seriso"
+		name_list = "DROW1"
+	}
+	
+	drow_name_12 = {
+		name = "Jubassi"
+		plural = "Jubassi"
+		home_planet = "Bel'lator"
+		home_system = "Khluryar"
+		name_list = "DROW2"
+	}
+	
+	drow_name_13 = {
+		name = "Kerathiiri"
+		plural = "Kerathiiri"
+		home_planet = "Linth'el"
+		home_system = "Caghresst"
+		name_list = "DROW1"
+	}
+	
+	drow_name_14 = {
+		name = "Faeriiri"
+		plural = "Faeriiri"
+		home_planet = "Faellarin"
+		home_system = "Faelaria"
+		name_list = "DROW2"
+	}
+	
+	drow_name_15 = {
+		name = "Kyorias"
+		plural = "Kyorias"
+		home_planet = "Maelthra"
+		home_system = "Tagnik'zur"
+		name_list = "DROW1"
+	}
+	
+	drow_name_16 = {
+		name = "Kalxi"
+		plural = "Kalxi"
+		home_planet = "Lisse'lea"
+		home_system = "Ilhar"
+		name_list = "DROW2"
+	}
+}

@@ -1,0 +1,1821 @@
+@entries_row1_y = 60
+@entries_row2_y = 327
+@entries_row3_y = 594 ## Traditions+
+@entries_column1 = 11
+@entries_column2 = 325
+@entries_column3 = 640
+@entries_column4 = 954
+@entry_h = 260
+@entry_w = 308
+guiTypes = {
+	################################################################
+	# TRADITION ENTRY POSITIONS
+	################################################################
+	#####   #####   #####
+	#61 #   #131#   #201#
+	#####   #####   #####
+		#####   #####
+		#96 #   #166#
+		#####   #####
+	######################Traditions+
+	######################Expansion
+	positionType = { name = "trp_expansion_colonization_a"  position = { x = 9 y = 65 } }
+	positionType = { name = "trp_expansion_colonization_b"  position = { x = 9 y = 93 } }
+	positionType = { name = "trp_expansion_colonization_c"  position = { x = 9 y = 121 } }
+	positionType = { name = "trp_expansion_space_race_a"    position = { x = 113 y = 65 } }
+	positionType = { name = "trp_expansion_space_race_b"    position = { x = 113 y = 93 } }
+	positionType = { name = "trp_expansion_space_race_c"    position = { x = 113 y = 121 } }
+	positionType = { name = "trp_expansion_population_a"    position = { x = 215 y = 65 } }
+	positionType = { name = "trp_expansion_population_b"    position = { x = 215 y = 93 } }
+	positionType = { name = "trp_expansion_population_c"    position = { x = 215 y = 121 } }
+	positionType = { name = "trp_expansion_infrastructure_a"    position = { x = 9 y = 172 } }
+	positionType = { name = "trp_expansion_infrastructure_b"    position = { x = 9 y = 200 } }
+	positionType = { name = "trp_expansion_infrastructure_c"    position = { x = 9 y = 227 } }
+	positionType = { name = "trp_expansion_foundation_a"    position = { x = 113 y = 172 } }
+	positionType = { name = "trp_expansion_foundation_b"    position = { x = 113 y = 200 } }
+	positionType = { name = "trp_expansion_foundation_c"    position = { x = 113 y = 227 } }
+	positionType = { name = "trp_expansion_bureaucracy_a"   position = { x = 215 y = 172 } }
+	positionType = { name = "trp_expansion_bureaucracy_b"   position = { x = 215 y = 200 } }
+	positionType = { name = "trp_expansion_bureaucracy_c"   position = { x = 215 y = 227 } }
+	####################SUPREMACY
+	positionType = { name = "trp_supremacy_quantity_a"      position = { x = 9 y = 65 } }
+	positionType = { name = "trp_supremacy_quantity_b"      position = { x = 9 y = 93  } }
+	positionType = { name = "trp_supremacy_quantity_c"      position = { x = 9 y = 121 } }
+	positionType = { name = "trp_supremacy_quality_a"       position = { x = 113 y = 65 } }
+	positionType = { name = "trp_supremacy_quality_b"       position = { x = 113 y = 93 } }
+	positionType = { name = "trp_supremacy_quality_c"       position = { x = 113 y = 121 } }
+	positionType = { name = "trp_supremacy_deterrence_a"    position = { x = 215 y = 65 } }
+	positionType = { name = "trp_supremacy_deterrence_b"    position = { x = 215 y = 93 } }
+	positionType = { name = "trp_supremacy_deterrence_c"    position = { x = 215 y = 121 } }
+	positionType = { name = "trp_supremacy_admirality_a"    position = { x = 9 y = 172 } }
+	positionType = { name = "trp_supremacy_admirality_b"    position = { x = 9 y = 200 } }
+	positionType = { name = "trp_supremacy_admirality_c"    position = { x = 9 y = 227 } }
+	positionType = { name = "trp_supremacy_warfare_a"       position = { x = 113 y = 172 } }
+	positionType = { name = "trp_supremacy_warfare_b"       position = { x = 113 y = 200 } }
+	positionType = { name = "trp_supremacy_warfare_c"       position = { x = 113 y = 227 } }
+	positionType = { name = "trp_supremacy_devastation_a"   position = { x = 215 y = 172 } }
+	positionType = { name = "trp_supremacy_devastation_b"   position = { x = 215 y = 200 } }
+	positionType = { name = "trp_supremacy_devastation_c"   position = { x = 215 y = 227 } }
+	#########################Diplomacy
+	positionType = { name = "trp_diplomacy_federation_a"    position = { x = 9 y = 65 } }
+	positionType = { name = "trp_diplomacy_federation_b"    position = { x = 9 y = 93 } }
+	positionType = { name = "tr_diplomacy_the_federation"   position = { x = 9 y = 121 } }
+	positionType = { name = "trp_diplomacy_ideology_a"  position = { x = 113 y = 65 } }
+	positionType = { name = "trp_diplomacy_ideology_b"  position = { x = 113 y = 93 } }
+	positionType = { name = "trp_diplomacy_ideology_c"  position = { x = 113 y = 121 } }
+	positionType = { name = "trp_diplomacy_association_a"   position = { x = 215 y = 65 } }
+	positionType = { name = "trp_diplomacy_association_b"   position = { x = 215 y = 93 } }
+	positionType = { name = "trp_diplomacy_association_c"   position = { x = 215 y = 121 } }
+	positionType = { name = "trp_diplomacy_government_a"    position = { x = 9 y = 172  } }
+	positionType = { name = "trp_diplomacy_government_b"    position = { x = 9 y = 200 } }
+	positionType = { name = "trp_diplomacy_government_c"    position = { x = 9 y = 227 } }
+	positionType = { name = "trp_diplomacy_integration_a"   position = { x = 113 y = 172  } }
+	positionType = { name = "trp_diplomacy_integration_b"   position = { x = 113 y = 200 } }
+	positionType = { name = "trp_diplomacy_integration_c"   position = { x = 113 y = 227 } }
+	positionType = { name = "trp_diplomacy_administration_a"    position = { x = 215 y = 172 } }
+	positionType = { name = "trp_diplomacy_administration_b"    position = { x = 215 y = 200 } }
+	positionType = { name = "trp_diplomacy_administration_c"    position = { x = 215 y = 227 } }
+	#########DISCOVERY
+	positionType = { name = "trp_discovery_exploration_a"   position = { x = 9 y = 65 } }
+	positionType = { name = "trp_discovery_exploration_b"   position = { x = 9 y = 93 } }
+	positionType = { name = "trp_discovery_exploration_c"   position = { x = 9 y = 121 } }
+	positionType = { name = "trp_discovery_curiosity_a"     position = { x = 113 y = 65 } }
+	positionType = { name = "trp_discovery_curiosity_b"     position = { x = 113 y = 93 } }
+	positionType = { name = "trp_discovery_curiosity_c"     position = { x = 113 y = 121 } }
+	positionType = { name = "trp_discovery_academy_a"       position = { x = 215 y = 65 } }
+	positionType = { name = "trp_discovery_academy_b"       position = { x = 215 y = 93 } }
+	positionType = { name = "trp_discovery_academy_c"       position = { x = 215 y = 121 } }
+	positionType = { name = "trp_discovery_engineering_a"   position = { x = 215 y = 172 } }
+	positionType = { name = "trp_discovery_engineering_b"   position = { x = 215 y = 200 } }
+	positionType = { name = "trp_discovery_engineering_c"   position = { x = 215 y = 227 } }
+	positionType = { name = "trp_discovery_society_a"       position = { x = 113 y = 172 } }
+	positionType = { name = "trp_discovery_society_b"       position = { x = 113 y = 200 } }
+	positionType = { name = "trp_discovery_society_c"       position = { x = 113 y = 227 } }
+	positionType = { name = "trp_discovery_physics_a"       position = { x = 9 y = 172 } }
+	positionType = { name = "trp_discovery_physics_b"       position = { x = 9 y = 200 } }
+	positionType = { name = "trp_discovery_physics_c"       position = { x = 9 y = 227 } }
+	#######################Production
+	positionType = { name = "trp_production_excavation_a"       position = { x = 9 y = 65 } }
+	positionType = { name = "trp_production_excavation_b"       position = { x = 9 y = 93 } }
+	positionType = { name = "trp_production_excavation_c"       position = { x = 9 y = 121 } }
+	positionType = { name = "trp_production_manufacturing_a"    position = { x = 113 y = 65 } }
+	positionType = { name = "trp_production_manufacturing_b"    position = { x = 113 y = 93 } }
+	positionType = { name = "trp_production_manufacturing_c"    position = { x = 113 y = 121 } }
+	positionType = { name = "trp_production_fabrication_a"      position = { x = 215 y = 65 } }
+	positionType = { name = "trp_production_fabrication_b"      position = { x = 215 y = 93 } }
+	positionType = { name = "trp_production_fabrication_c"      position = { x = 215 y = 121 } }
+	positionType = { name = "trp_production_assembly_a"         position = { x = 9 y = 172 } }
+	positionType = { name = "trp_production_assembly_b"         position = { x = 9 y = 200 } }
+	positionType = { name = "trp_production_assembly_c"         position = { x = 9 y = 227 } }
+	positionType = { name = "trp_production_refinement_a"       position = { x = 113 y = 172 } }
+	positionType = { name = "trp_production_refinement_b"       position = { x = 113 y = 200 } }
+	positionType = { name = "trp_production_refinement_c"       position = { x = 113 y = 227 } }
+	positionType = { name = "trp_production_agriculture_a"      position = { x = 215 y = 172 } }
+	positionType = { name = "trp_production_agriculture_b"      position = { x = 215 y = 200 } }
+	positionType = { name = "trp_production_agriculture_c"      position = { x = 215 y = 227 } }
+	#####COMMERCE
+	positionType = { name = "trp_commerce_exchange_a"           position = { x = 9 y = 65 } }
+	positionType = { name = "trp_commerce_exchange_b"           position = { x = 9 y = 93 } }
+	positionType = { name = "trp_commerce_exchange_c"           position = { x = 9 y = 121 } }
+	positionType = { name = "trp_commerce_trade_a"              position = { x = 113 y = 65 } }
+	positionType = { name = "trp_commerce_trade_b"              position = { x = 113 y = 93 } }
+	positionType = { name = "trp_commerce_trade_c"              position = { x = 113 y = 121 } }
+	positionType = { name = "trp_commerce_security_a"           position = { x = 215 y = 65 } }
+	positionType = { name = "trp_commerce_security_b"           position = { x = 215 y = 93 } }
+	positionType = { name = "trp_commerce_security_c"           position = { x = 215 y = 121 } }
+	positionType = { name = "trp_commerce_accumulation_a"       position = { x = 9 y = 172 } }
+	positionType = { name = "trp_commerce_accumulation_b"       position = { x = 9 y = 200 } }
+	positionType = { name = "trp_commerce_accumulation_c"       position = { x = 9 y = 227 } }
+	positionType = { name = "trp_commerce_capability_a"         position = { x = 113 y = 172 } }
+	positionType = { name = "trp_commerce_capability_b"         position = { x = 113 y = 200 } }
+	positionType = { name = "trp_commerce_capability_c"         position = { x = 113 y = 227 } }
+	positionType = { name = "trp_commerce_enterprises_a"        position = { x = 215 y = 172 } }
+	positionType = { name = "trp_commerce_enterprises_b"        position = { x = 215 y = 200 } }
+	positionType = { name = "trp_commerce_enterprises_c"        position = { x = 215 y = 227 } }
+	###PROSPERITY
+	positionType = { name = "trp_prosperity_aesthetics_a"       position = { x = 9 y = 65 } }
+	positionType = { name = "trp_prosperity_aesthetics_b"       position = { x = 9 y = 93 } }
+	positionType = { name = "trp_prosperity_aesthetics_c"       position = { x = 9 y = 121 } }
+	positionType = { name = "trp_prosperity_tranquillity_a"     position = { x = 113 y = 65 } }
+	positionType = { name = "trp_prosperity_tranquillity_b"     position = { x = 113 y = 93 } }
+	positionType = { name = "trp_prosperity_tranquillity_c"     position = { x = 113 y = 121 } }
+	positionType = { name = "trp_prosperity_control_a"          position = { x = 215 y = 65 } }
+	positionType = { name = "trp_prosperity_control_b"          position = { x = 215 y = 93 } }
+	positionType = { name = "trp_prosperity_control_c"          position = { x = 215 y = 121 } }
+	positionType = { name = "trp_prosperity_renaissance_a"      position = { x = 9 y = 172 } }
+	positionType = { name = "trp_prosperity_renaissance_b"      position = { x = 9 y = 200 } }
+	positionType = { name = "trp_prosperity_renaissance_c"      position = { x = 9 y = 227 } }
+	positionType = { name = "trp_prosperity_alteration_a"           position = { x = 113 y = 172 } }
+	positionType = { name = "tr_prosperity_public_works"            position = { x = 113 y = 200 } }
+	positionType = { name = "trp_prosperity_alteration_c"           position = { x = 113 y = 227 } }
+	positionType = { name = "trp_prosperity_recreation_a"       position = { x = 215 y = 172 } }
+	positionType = { name = "trp_prosperity_recreation_b"       position = { x = 215 y = 200 } }
+	positionType = { name = "trp_prosperity_recreation_c"       position = { x = 215 y = 227 } }
+	################################################################
+	# ASCENSION PERKS ENTRY POSITIONS
+	################################################################
+	@ap_x_1_1 = 0
+	@ap_x_1_2 = 58
+	@ap_x_1_3 = 116
+	@ap_x_1_4 = 174
+	@ap_x_1_5 = 232
+	@ap_x_2_1 = 29
+	@ap_x_2_2 = 87
+	@ap_x_2_3 = 145
+	@ap_x_2_4 = 203
+	@ap_y_1 = 0
+	@ap_y_2 = 49
+	@ap_y_3 = 98
+	@ap_y_4 = 147
+	@ap_y_5 = 196
+	@ap_y_6 = 245
+	@ap_y_7 = 294
+	@ap_y_8 = 343
+	@ap_y_9 = 392
+	positionType = { name = "ap_0" position = { x = @ap_x_1_1 y = @ap_y_1 } }
+	positionType = { name = "ap_1" position = { x = @ap_x_1_2 y = @ap_y_1 } }
+	positionType = { name = "ap_2" position = { x = @ap_x_1_3 y = @ap_y_1 } }
+	positionType = { name = "ap_3" position = { x = @ap_x_1_4 y = @ap_y_1 } }
+	positionType = { name = "ap_4" position = { x = @ap_x_1_5 y = @ap_y_1 } }
+	positionType = { name = "ap_5" position = { x = @ap_x_2_1 y = @ap_y_2 } }
+	positionType = { name = "ap_6" position = { x = @ap_x_2_2 y = @ap_y_2 } }
+	positionType = { name = "ap_7" position = { x = @ap_x_2_3 y = @ap_y_2 } }
+	positionType = { name = "ap_8" position = { x = @ap_x_2_4 y = @ap_y_2 } }
+	positionType = { name = "ap_9" position =  { x = @ap_x_1_1 y = @ap_y_3 } }
+	positionType = { name = "ap_10" position = { x = @ap_x_1_2 y = @ap_y_3 } }
+	positionType = { name = "ap_11" position = { x = @ap_x_1_3 y = @ap_y_3 } }
+	positionType = { name = "ap_12" position = { x = @ap_x_1_4 y = @ap_y_3 } }
+	positionType = { name = "ap_13" position = { x = @ap_x_1_5 y = @ap_y_3 } }
+	positionType = { name = "ap_14" position = { x = @ap_x_2_1 y = @ap_y_4 } }
+	positionType = { name = "ap_15" position = { x = @ap_x_2_2 y = @ap_y_4 } }
+	positionType = { name = "ap_16" position = { x = @ap_x_2_3 y = @ap_y_4 } }
+	positionType = { name = "ap_17" position = { x = @ap_x_2_4 y = @ap_y_4 } }
+	positionType = { name = "ap_18" position = { x = @ap_x_1_1 y = @ap_y_5 } }
+	positionType = { name = "ap_19" position = { x = @ap_x_1_2 y = @ap_y_5 } }
+	positionType = { name = "ap_20" position = { x = @ap_x_1_3 y = @ap_y_5 } }
+	positionType = { name = "ap_21" position = { x = @ap_x_1_4 y = @ap_y_5 } }
+	positionType = { name = "ap_22" position = { x = @ap_x_1_5 y = @ap_y_5 } }
+	positionType = { name = "ap_23" position = { x = @ap_x_2_1 y = @ap_y_6 } }
+	positionType = { name = "ap_24" position = { x = @ap_x_2_2 y = @ap_y_6 } }
+	positionType = { name = "ap_25" position = { x = @ap_x_2_3 y = @ap_y_6 } }
+	positionType = { name = "ap_26" position = { x = @ap_x_2_4 y = @ap_y_6 } }
+	positionType = { name = "ap_27" position = { x = @ap_x_1_1 y = @ap_y_7 } }
+	positionType = { name = "ap_28" position = { x = @ap_x_1_2 y = @ap_y_7 } }
+	positionType = { name = "ap_29" position = { x = @ap_x_1_3 y = @ap_y_7 } }
+	positionType = { name = "ap_30" position = { x = @ap_x_1_4 y = @ap_y_7 } }
+	positionType = { name = "ap_31" position = { x = @ap_x_1_5 y = @ap_y_7 } }
+	positionType = { name = "ap_32" position = { x = @ap_x_2_1 y = @ap_y_8 } }
+	positionType = { name = "ap_33" position = { x = @ap_x_2_2 y = @ap_y_8 } }
+	positionType = { name = "ap_34" position = { x = @ap_x_2_3 y = @ap_y_8 } }
+	positionType = { name = "ap_35" position = { x = @ap_x_2_4 y = @ap_y_8 } }
+	positionType = { name = "ap_36" position = { x = @ap_x_1_1 y = @ap_y_9 } }
+	positionType = { name = "ap_37" position = { x = @ap_x_1_2 y = @ap_y_9 } }
+	positionType = { name = "ap_38" position = { x = @ap_x_1_3 y = @ap_y_9 } }
+	positionType = { name = "ap_39" position = { x = @ap_x_1_4 y = @ap_y_9 } }
+	positionType = { name = "ap_40" position = { x = @ap_x_1_5 y = @ap_y_9 } }
+	containerWindowType = {
+		name = "traditions_ascension_perk_entry"
+		size = { width = 44 height = 44 }
+		iconType = {
+			name = "icon"
+			position = { x = 2 y = 3 }
+			quadTextureSprite = "GFX_ascension_perk_slot_locked"
+			alwaysTransparent = yes
+			scale = 1.0
+		}
+		buttonType = {
+			name = "ascension_perk_button"
+			position = { x = -7 y = -2 }
+			spriteType = "GFX_flag_64_frame"
+			buttonFont = "cg_16b"
+			clicksound = click
+			oversound = no_sound
+		}
+	}
+	################################################################
+	# TRADITION ENTRY
+	################################################################
+	containerWindowType = {
+		name = "tradition_entry"
+		size = { width = 44 height = 44 }
+		buttonType = {
+			name = "adopt_button"
+			spriteType = "GFX_event_button_452"
+			buttonFont = "cg_16b"
+			clicksound = select_click
+			oversound = no_sound
+		}
+		#Need to hook this in
+		#Orange frame to show available traditions
+		iconType = {
+			name = "available_tradition"
+			spriteType = "GFX_tradition_available_button"
+			alwaysTransparent = yes
+			position = { x = -22 y = -22 }
+		}
+	}
+	################################################################
+	# TRADITION VIEW
+	################################################################
+	@tradition_w = 1580
+	containerWindowType = {
+		name = "traditions_view"
+		size = { width = @tradition_w height = 639 } #Traditions+ #1272
+		show_position = { x = 35 y = 50 }
+		hide_position = { x = -100% y = 50 }
+		animation_time = 200
+		animation_type = decelerated
+		if_resolution = {
+			min_width = 2560
+			show_position = { x = 55 y = 50 }
+		}
+		moveable = no
+		clipping = no
+		show_sound = "interface"
+		background = {
+			name = "background"
+			spriteType = "GFX_tile_large_bg_plain"
+		}
+		iconType = {
+			name = "hex_bg"
+			spriteType = "GFX_hex_bg"
+			position = { x = 0 y = -12 }
+			if_resolution = {
+				min_width = 2560
+				position = { x = -10 y = -12 }
+			}
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "empire_header_line"
+			quadTextureSprite = "GFX_line_long"
+			position = { x = 6 y = 21 }
+		}
+		instantTextBoxType = {
+			name = "header"
+			font = "malgun_goth_24"
+			text = "TRADITIONS"
+			position = { x = 35 y = 5 }
+			if_resolution = {
+				min_width = 2560
+				position = { x = 25 y = 5 }
+			}
+			maxWidth = 300
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+		}
+		buttonType = {
+			name = "close"
+			spriteType = "GFX_close"
+			position = { x = -45 y = 7 }
+			orientation = upper_right
+			shortcut = "ESCAPE"
+			clicksound = "back_click"
+			pdx_tooltip = "CLOSE_TITLE"
+		}
+		########################
+		# TIERS
+		########################
+		########################
+		# TABS
+		########################
+		@tabHeight = -2
+		@tab_x1 = 895
+		@tab_x2 = 1024
+		buttonType = {
+			name = "tab_traditions"
+			quadTextureSprite = "GFX_tab_1_inactive"
+			position = { x = -20 y = @tabHeight }
+			orientation = lower_left
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+		buttonType = {
+			name = "tab_traditions_active"
+			quadTextureSprite = "GFX_tab_1_active"
+			position = { x = -20 y = @tabHeight }
+			orientation = lower_left
+			font = "cg_16b"
+			buttonText = "TRADITIONS"
+			buttonFont = "cg_16b"
+			shortcut = "z"
+			clicksound = "tab_click"
+		}
+		buttonType = {
+			name = "tab_relics"
+			quadTextureSprite = "GFX_tab_2_inactive"
+			position = { x = 109 y = @tabHeight }
+			orientation = lower_left
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+		buttonType = {
+			name = "tab_relics_active"
+			quadTextureSprite = "GFX_tab_2_active"
+			position = { x = 109 y = @tabHeight }
+			orientation = lower_left
+			font = "cg_16b"
+			buttonText = "RELICS"
+			buttonFont = "cg_16b"
+			shortcut = "x"
+			clicksound = "tab_click"
+		}
+		################################################################
+		# TRADITION TAB
+		################################################################
+		containerWindowType = {
+			name = "traditions_window"
+			size = { width = 100% height = 100%% }
+			moveable = no
+			position = { x = 0 y = 0 }
+			containerWindowType = {
+				name = "tradition_box"
+				size = { width = 610 height = 36 }
+				position = { x = 646 y = 12 }
+				iconType = {
+					name = "progress"
+					spriteType = "GFX_ui_progressbar_609"
+					position = { x = 0 y = 0 }
+				}
+				instantTextBoxType = {
+					name = "tradition_cost"
+					font = "malgun_goth_24"
+					position = { x = -100 y = 5 }
+					orientation = center_up
+					maxWidth = 200
+					maxHeight = 20
+					fixedSize = yes
+					format = center
+				}
+				instantTextBoxType = {
+					name = "time_to_next_tradition"
+					font = "malgun_goth_24"
+					text = "11 months"
+					position = { x = -131 y = 5 }
+					orientation = upper_right
+					maxWidth = 120
+					maxHeight = 20
+					fixedSize = yes
+					format = right
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY TRADITIONS+ EXPANSION
+			################################################################
+			containerWindowType = {
+				name = "tradition_expansion_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column2 y = @entries_row1_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_purple"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_purple"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile"
+					position = { x = 4 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_expansion_plus"
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 135 y = 4 }
+					text = "tier_1_label"
+					pdx_tooltip = "tier_1_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_expansion_plus_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_colonization_label"
+						font = "cg_16b"
+						position = { x = 14 y = 45 }
+						text = "tradition_expansion_path_colonization_label"
+						pdx_tooltip = "path_colonization_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_space_race_label"
+						font = "cg_16b"
+						position = { x = 116 y = 45 }
+						text = "tradition_expansion_path_space_race_label"
+						pdx_tooltip = "path_space_race_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_population_label"
+						font = "cg_16b"
+						position = { x = 224 y = 45 }
+						text = "tradition_expansion_path_population_label"
+						pdx_tooltip = "path_population_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_infrastructure_label"
+						font = "cg_16b"
+						position = { x = 11 y = 153 }
+						text = "tradition_expansion_path_infrastructure_label"
+						pdx_tooltip = "path_infrastructure_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_foundation_label"
+						font = "cg_16b"
+						position = { x = 120 y = 153 }
+						text = "tradition_expansion_path_foundation_label"
+						pdx_tooltip = "path_foundation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_bureaucracy_label"
+						font = "cg_16b"
+						position = { x = 217 y = 153 }
+						text = "tradition_expansion_path_bureaucracy_label"
+						pdx_tooltip = "path_bureaucracy_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 76 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY TRADITIONS+ SUPREMACY
+			################################################################
+			containerWindowType = {
+				name = "tradition_supremacy_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column1 y = @entries_row1_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_red"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_red"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile"
+					position = { x = 4 y = 42 }
+					alwaysTransparent = yes
+					text = "trp_mutually_exclusive"
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_supremacy_plus"
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 135 y = 4 }
+					text = "tier_1_label"
+					pdx_tooltip = "tier_1_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_supremacy_plus_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_quantity_label"
+						font = "cg_16b"
+						position = { x = 25 y = 45 }
+						text = "tradition_supremacy_path_quantity_label"
+						pdx_tooltip = "path_quantity_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_quality_label"
+						font = "cg_16b"
+						position = { x = 134 y = 45 }
+						text = "tradition_supremacy_path_quality_label"
+						pdx_tooltip = "path_quality_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_deterrence_label"
+						font = "cg_16b"
+						position = { x = 224 y = 45 }
+						text = "tradition_supremacy_path_deterrence_label"
+						pdx_tooltip = "path_deterrence_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_admirality_label"
+						font = "cg_16b"
+						position = { x = 19 y = 153 }
+						text = "tradition_supremacy_path_admirality_label"
+						pdx_tooltip = "path_admirality_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_warfare_label"
+						font = "cg_16b"
+						position = { x = 131 y = 153 }
+						text = "tradition_supremacy_path_warfare_label"
+						pdx_tooltip = "path_warfare_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_devastation_label"
+						font = "cg_16b"
+						position = { x = 220 y = 153 }
+						text = "tradition_supremacy_path_devastation_label"
+						pdx_tooltip = "path_devastation_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY TRADITIONS+ PROSPERITY
+			################################################################
+			containerWindowType = {
+				name = "tradition_prosperity_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column3 y = @entries_row2_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_green"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_green"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile3"
+					position = { x = 104 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_discovery"
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 131 y = 4 }
+					text = "tier_2_label"
+					pdx_tooltip = "tier_2_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_harmony_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_aesthetics_label"
+						font = "cg_16b"
+						position = { x = 19 y = 45 }
+						text = "tradition_prosperity_path_aesthetics_label"
+						pdx_tooltip = "path_aesthetics_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+					instantTextBoxType = {
+						name = "path_tranquillity_label"
+						font = "cg_16b"
+						position = { x = 130 y = 45 }
+						text = "tradition_prosperity_path_tranquillity_label"
+						pdx_tooltip = "path_isolation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_renaissance_label"
+						font = "cg_16b"
+						position = { x = 13 y = 153 }
+						text = "tradition_prosperity_path_renaissance_label"
+						pdx_tooltip = "path_renaissance_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_alteration_label"
+						font = "cg_16b"
+						position = { x = 123 y = 153 }
+						text = "tradition_prosperity_path_alteration_label"
+						pdx_tooltip = "path_alteration_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_control_label"
+						font = "cg_16b"
+						position = { x = 218 y = 45 }
+						text = "tradition_prosperity_path_control_label"
+						pdx_tooltip = "path_cooperation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_recreation_label"
+						font = "cg_16b"
+						position = { x = 224 y = 153 }
+						text = "tradition_prosperity_path_recreation_label"
+						pdx_tooltip = "path_recreation_label_ttp"
+					}
+				}
+			}
+			################################################################
+			# TRADITIONS CATEGORY TRADITIONS+ DISCOVERY
+			################################################################
+			containerWindowType = {
+				name = "tradition_discovery_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column4 y = @entries_row1_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_gray2"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_gray"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile"
+					position = { x = 4 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_discovery_plus"
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 135 y = 4 }
+					text = "tier_1_label"
+					pdx_tooltip = "tier_1_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_discovery_plus_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_exploration_label"
+						font = "cg_16b"
+						position = { x = 16 y = 45 }
+						text = "tradition_discovery_path_exploration_label"
+						pdx_tooltip = "path_exploration_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_curiosity_label"
+						font = "cg_16b"
+						position = { x = 129 y = 45 }
+						text = "tradition_discovery_path_curiosity_label"
+						pdx_tooltip = "path_curiosity_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_academy_label"
+						font = "cg_16b"
+						position = { x = 226 y = 45 }
+						text = "tradition_discovery_path_academy_label"
+						pdx_tooltip = "path_academy_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_physics_label"
+						font = "cg_16b"
+						position = { x = 28 y = 153 }
+						text = "tradition_discovery_path_physics_label"
+						pdx_tooltip = "path_physics_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_society_label"
+						font = "cg_16b"
+						position = { x = 134 y = 153 }
+						text = "tradition_discovery_path_society_label"
+						pdx_tooltip = "path_society_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_engineering_label"
+						font = "cg_16b"
+						position = { x = 220 y = 153 }
+						text = "tradition_discovery_path_engineering_label"
+						pdx_tooltip = "path_engineering_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY TRADITIONS+ STATECRAFT
+			################################################################
+			containerWindowType = {
+				name = "tradition_diplomacy_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column3 y = @entries_row1_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_blue" #snciker
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_blue"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile2"
+					position = { x = 3 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_diplomacy_plus"
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile2"
+					position = { x = -51 y = 50 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 135 y = 4 }
+					text = "tier_1_label"
+					pdx_tooltip = "tier_1_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_diplomacy_plus_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_federation_label"
+						font = "cg_16b"
+						position = { x = 18 y = 45 }
+						text = "tradition_diplomacy_path_federation_label"
+						pdx_tooltip = "path_federation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_ideology_label"
+						font = "cg_16b"
+						position = { x = 128 y = 45 }
+						text = "tradition_diplomacy_path_ideology_label"
+						pdx_tooltip = "path_ideology_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_association_label"
+						font = "cg_16b"
+						position = { x = 221 y = 45 }
+						text = "tradition_diplomacy_path_association_label"
+						pdx_tooltip = "path_association_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_government_label"
+						font = "cg_16b"
+						position = { x = 12 y = 153 }
+						text = "tradition_diplomacy_path_government_label"
+						pdx_tooltip = "path_government_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_integration_label"
+						font = "cg_16b"
+						position = { x = 121 y = 153 }
+						text = "tradition_diplomacy_path_integration_label"
+						pdx_tooltip = "path_integration_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_administration_label"
+						font = "cg_16b"
+						position = { x = 212 y = 153 }
+						text = "tradition_diplomacy_path_administration_label"
+						pdx_tooltip = "path_administration_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY COMMERCE
+			################################################################
+			containerWindowType = {
+				name = "tradition_commerce_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column2 y = @entries_row2_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_yellow"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_yellow"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile2"
+					position = { x = 3 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_commerce_plus"
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 131 y = 4 }
+					text = "tier_2_label"
+					pdx_tooltip = "tier_2_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_commerce_plus_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					instantTextBoxType = {
+						name = "path_exchange_label"
+						font = "cg_16b"
+						position = { x = 19 y = 45 }
+						text = "tradition_commerce_path_exchange_label"
+						pdx_tooltip = "path_exchange_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_trade_label"
+						font = "cg_16b"
+						position = { x = 138 y = 45 }
+						text = "tradition_commerce_path_trade_label"
+						pdx_tooltip = "path_trade_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_security_label"
+						font = "cg_16b"
+						position = { x = 234 y = 45 }
+						text = "tradition_commerce_path_security_label"
+						pdx_tooltip = "path_security_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_accumulation_label"
+						font = "cg_16b"
+						position = { x = 8 y = 153 }
+						text = "tradition_commerce_path_accumulation_label"
+						pdx_tooltip = "path_accumulation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_capability_label"
+						font = "cg_16b"
+						position = { x = 123 y = 153 }
+						text = "tradition_commerce_path_capability_label"
+						pdx_tooltip = "path_capability_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_enterprises_label"
+						font = "cg_16b"
+						position = { x = 225 y = 153 }
+						text = "tradition_commerce_path_enterprises_label"
+						pdx_tooltip = "path_enterprises_label_ttp"
+					}
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+				}
+			}
+			################################################################
+			# TRADITION CATEGORY PRODUCTION TRADITIONS+
+			################################################################
+			containerWindowType = {
+				name = "tradition_production_plus"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column1 y = @entries_row2_y }
+				background = {
+					name = "black"
+					spriteType = "GFX_tradition_category_tile_gray" #snciker
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_tradition_hex_bg_dark"
+					position = { x = -23 y = -18 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "category_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "tradition_production"
+				}
+				iconType = {
+					name = "trp_mutually_exclusive_tile"
+					spriteType = "GFX_trp_mutually_exclusive_tile3"
+					position = { x = 104 y = 42 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "tier_label"
+					font = "malgun_goth_24"
+					position = { x = 131 y = 4 }
+					text = "tier_2_label"
+					pdx_tooltip = "tier_2_label_ttp"
+				}
+				containerWindowType = {
+					name = "adopted_count"
+					size = { width = 150 height = 40 }
+					position = { x = 163 y = -2 }
+					background = {
+						name = "adopted_hitbox"
+						spriteType = "GFX_invisible"
+					}
+					iconType = {
+						name = "adopted"
+						spriteType = "GFX_adopted_tradition_category_bg_orange"
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "value"
+						font = "cg_16b"
+						position = { x = 33 y = 10 }
+						maxWidth = 100
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
+				}
+				buttonType = {
+					name = "adopt_button"
+					size = { x = 298 y = 35 }
+					position = { x = 163 y = -5 }
+					spriteType = "GFX_adopt_tradition_category_button"
+					buttonFont = "cg_16b"
+					text = "TRADITION_ADOPT_BUTTON"
+					font = "cg_16b"
+					oversound = mouse_over
+				}
+				instantTextBoxType = {
+					name = "category_desc"
+					font = "cg_16b"
+					position = { x = 10 y = 37 }
+					maxWidth = 280
+					format = center
+					vertical_alignment = center
+					alwaystransparent = yes
+					text = "tradition_production_desc"
+				}
+				containerWindowType = {
+					name = "tree"
+					iconType = {
+						name = "arrow_1"
+						spriteType = "GFX_arrow_merge_wide"
+						position = { x = 160 y = 100 }
+					}
+					instantTextBoxType = {
+						name = "path_excavation_label"
+						font = "cg_16b"
+						position = { x = 17 y = 45 }
+						text = "tradition_production_path_excavation_label" ##banana
+						pdx_tooltip = "path_excavation_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_manufacturing_label"
+						font = "cg_16b"
+						position = { x = 110 y = 45 }
+						text = "tradition_production_path_manufacturing_label"
+						pdx_tooltip = "path_manufacturing_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_mass_production_label"
+						font = "cg_16b"
+						position = { x = 223 y = 45 }
+						text = "tradition_production_path_mass_production_label"
+						pdx_tooltip = "path_mass_production_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_assembly_label"
+						font = "cg_16b"
+						position = { x = 17 y = 153 }
+						text = "tradition_production_path_assembly_label"
+						pdx_tooltip = "path_assembly_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_refinement_label"
+						font = "cg_16b"
+						position = { x = 120 y = 153 }
+						text = "tradition_production_path_refinement_label"
+						pdx_tooltip = "path_refinement_label_ttp"
+					}
+					instantTextBoxType = {
+						name = "path_agriculture_label"
+						font = "cg_16b"
+						position = { x = 223 y = 153 }
+						text = "tradition_production_path_agriculture_label"
+						pdx_tooltip = "path_agriculture_label_ttp"
+					}
+				}
+			}
+			################################################################
+			# EMPTY BOX FOR ART
+			################################################################
+			containerWindowType = {
+				name = "empty_art_box"
+				size = { width = @entry_w height = @entry_h }
+				position = { x = @entries_column4 y = @entries_row2_y }
+				background = {
+					name = "fake_background"
+					spriteType = "GFX_tiled_window_transparent"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "background"
+					spriteType = "GFX_ui_start_screen_bg"
+					scale = 0.48
+					alwaysTransparent = yes
+				}
+				containerWindowType = {
+					name = "fake_background"
+					size = { width = 100% height = 100% }
+					position = { x = 0 y = 0 }
+					background = {
+						name = "fake_background"
+						spriteType = "GFX_ui_plain_bg_tile"
+						alwaysTransparent = yes
+					}
+				}
+			}
+			################################################################
+			# TRADITION ASCENSION PERKS
+			################################################################
+			containerWindowType = {
+				name = "ascension_perks_fake_background"
+				size = { width = 301 height = 527 }
+				position = { x = 1268 y = @entries_row1_y }
+				background = {
+					name = "fake_background"
+					spriteType = "GFX_plain_bg_tile"
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_bg"
+					position = { x = -15 y = -15 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "ascension_perks_label"
+					font = "malgun_goth_24"
+					position = { x = 18 y = 4 }
+					text = "ASCENSION_PERKS"
+					alwaysTransparent = yes
+				}
+			}
+			containerWindowType = {
+				name = "ascension_perks"
+				size = { width = 300 height = 491 }
+				position = { x = 1274 y = 105 }
+				verticalScrollbar = "right_vertical_slider_thick"
+				margin = { top = 0 bottom = 0 }
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+				}
+				containerWindowType = {
+					name = "tradition_box"
+					size = { width = 300 height = 491 }
+					position = { x = 0 y = 0 }
+				}
+			}
+		}
+		###############################
+		# RELICS TAB
+		###############################
+		containerWindowType = {
+			name = "relics_window"
+			size = { width = 100% height = 100%% }
+			moveable = no
+			position = { x = 0 y = 0 }
+			###############################
+			# RELICS
+			###############################
+			@relicsWidth = 1048
+			@relicsWidthWide = 1048
+			###############################
+			# RELICS BOX
+			###############################
+			containerWindowType = {
+				name = "relics_box"
+				size = { width = @relicsWidth height = -15 }
+				position = { x = 10 y = 50 }
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidth height = 100%% }
+					position = { x = 0 y = 61 }
+					verticalScrollbar = "right_vertical_slider_thick"
+					margin = { top = 0 bottom = 0 }
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_ui_relics_panel_background"
+					}
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = 69 y = 0 }
+						size = { width = 920 height = -20 }
+						slotSize = {
+							width = 184
+							height = 194
+						}
+						format = "UPPER_LEFT"
+						max_slots_horizontal = 5
+					}
+				}
+				containerWindowType = {
+					name = "relics_frame"
+					size = { width = 100% height = 100%% }
+					position = { x = 0 y = 54 }
+					background = {
+						name = "relics_frame"
+						quadTextureSprite = "GFX_planet_bg_tile_frame"
+						alwaysTransparent = yes
+					}
+				}
+				containerWindowType = {
+					name = "relics_header_right"
+					size = { width = 100%% height = 66 }
+					position = { x = 912 y = 0 }
+					background = {
+						name = "relics_header_right"
+						quadTextureSprite = "GFX_ui_relics_panel_header_tile"
+						alwaysTransparent = yes
+					}
+				}
+				iconType = {
+					name = "relics_header"
+					spriteType = "GFX_ui_relics_panel_header"
+					position = { x = 0 y = 0 }
+				}
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidth height = 65 }
+					position = { x = 0 y = 0 }
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 170 height = 65 }
+						position = { x = 0 y = 0 }
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 10 y = 15 }
+							text = "RELICS_FOUND"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 10 y = 35 }
+							maxWidth = 150
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+					}
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 674 height = 65 }
+						position = { x = 175 y = 0 }
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_ui_progressbar_609"
+							position = { x = 65 y = 12 }
+						}
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 100 y = 20 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 250
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "malgun_goth_24"
+							position = { x = 108 y = 17 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 302
+							maxHeight = 22
+							fixedSize = yes
+							format = right
+							text_color_code = "H"
+						}
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "malgun_goth_24"
+							position = { x = -258 y = 17 }
+							orientation = upper_right
+							maxWidth = 70
+							maxHeight = 30
+							fixedSize = yes
+							format = left
+						}
+					}
+				}
+			}
+			###############################
+			# RELICS BOX WIDE
+			###############################
+			containerWindowType = {
+				name = "relics_box_wide"
+				size = { width = @relicsWidthWide height = -15 }
+				position = { x = 10 y = 50 }
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_tiled_window_transparent"
+				}
+				containerWindowType = {
+					name = "relics_box_bg"
+					size = { width = @relicsWidth height = 100%% }
+					position = { x = 0 y = 60 }
+					background = {
+						name = "planet_bg"
+						spriteType = "GFX_ui_relics_panel_background"
+						alwaysTransparent = yes
+					}
+				}
+				# RELICS CONTENT
+				containerWindowType = {
+					name = "relics_content"
+					size = { width = @relicsWidthWide height = 100%% }
+					position = { x = 0 y = 61 }
+					verticalScrollbar = "right_vertical_slider_thick"
+					margin = { top = 0 bottom = 0 }
+					background = {
+						name = "bg"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+					gridBoxType = {
+						name = "relics_grid"
+						position = { x = -459 y = 0 }
+						orientation = center_up
+						size = { width = 918 height = -20 }
+						slotSize = {
+							width = 184
+							height = 194
+						}
+						format = "UPPER_LEFT"
+						max_slots_horizontal = 5
+					}
+				}
+				iconType = {
+					name = "relics_header"
+					spriteType = "GFX_ui_relics_panel_header"
+					position = { x = 0 y = 0 }
+				}
+				# TOP BAR
+				containerWindowType = {
+					name = "relics_topbar"
+					size = { width = @relicsWidthWide height = 65 }
+					position = { x = 0 y = 0 }
+					# LEFT SIDE
+					containerWindowType = {
+						name = "relics_topbar_left"
+						size = { width = 170 height = 65 }
+						position = { x = 0 y = 0 }
+						instantTextBoxType = {
+							name = "relics_found_text"
+							font = "cg_16b"
+							position = { x = 10 y = 15 }
+							text = "RELICS_FOUND"
+							maxWidth = 150
+							maxHeight = 22
+							fixedSize = yes
+							format = centre
+							text_color_code = "H"
+						}
+						instantTextBoxType = {
+							name = "relics_found_value"
+							font = "cg_16b"
+							position = { x = 10 y = 35 }
+							maxWidth = 150
+							maxHeight = 30
+							fixedSize = yes
+							format = centre
+						}
+					}
+					# RIGHT SIDE
+					containerWindowType = {
+						name = "relics_topbar_right"
+						size = { width = 674 height = 65 }
+						position = { x = 175 y = 0 }
+						iconType = {
+							name = "progressbar"
+							spriteType = "GFX_ui_progressbar_609"
+							position = { x = 65 y = 12 }
+						}
+						instantTextBoxType = {
+							name = "no_triumph_text"
+							font = "cg_16b"
+							position = { x = 100 y = 20 }
+							text = "ACTIVATE_RELIC_FOR_TRIUMPH"
+							maxWidth = 250
+							maxHeight = 22
+							fixedSize = yes
+							text_color_code = "Y"
+						}
+						instantTextBoxType = {
+							name = "active_triumph_text"
+							font = "malgun_goth_24"
+							position = { x = 108 y = 17 }
+							text = "ACTIVE_TRIUMPH_TEXT"
+							maxWidth = 302
+							maxHeight = 22
+							fixedSize = yes
+							format = right
+							text_color_code = "H"
+						}
+						instantTextBoxType = {
+							name = "active_triumph_value"
+							font = "malgun_goth_24"
+							position = { x = -258 y = 17 }
+							orientation = upper_right
+							maxWidth = 70
+							maxHeight = 30
+							fixedSize = yes
+							format = left
+						}
+					}
+				}
+			}
+			###############################
+			# ARTIFACTS
+			###############################
+			@artifactsWidth = 502
+			containerWindowType = {
+				name = "artifacts_box"
+				size = { width = @artifactsWidth height = -15 }
+				position = { x = -512 y = 70 }
+				orientation = upper_right
+				background = {
+					name = "bg"
+					quadTextureSprite = "GFX_artifacts_panel_bg"
+				}
+				# TOP BAR
+				containerWindowType = {
+					name = "artifacts_topbar"
+					size = { width = @artifactsWidth height = 65 }
+					position = { x = 0 y = 0 }
+					instantTextBoxType = {
+						name = "artifacts_header"
+						font = "cg_16b"
+						position = { x = 20 y = 14 }
+						text = "MINOR_ARTIFACTS"
+						maxWidth = 400
+						maxHeight = 22
+						fixedSize = yes
+						format = left
+						text_color_code = "H"
+					}
+					instantTextBoxType = {
+						name = "artifacts_count_value"
+						font = "cg_16b"
+						position = { x = 422 y = 14 }
+						maxWidth = 60
+						maxHeight = 22
+						fixedSize = yes
+						format = right
+						text = "45"
+					}
+				}
+				# CONTENT
+				containerWindowType = {
+					name = "artifacts_content"
+					size = { width = 503 height = 100%% }
+					position = { x = 1 y = 40 }
+					margin = { top = 0 bottom = 0 }
+					clipping = yes
+					verticalScrollbar = "right_vertical_slider_thick"
+					background = {
+						name = "background"
+						quadTextureSprite = "GFX_tiled_window_transparent"
+					}
+					gridBoxType = {
+						name = "artifact_actions_grid"
+						position = { x = 8 y = 10 }
+						size = { width = 484 height = -20 }
+						format = "UPPER_LEFT"
+						slotSize = {
+							width = 484
+							height = 44
+						}
+						max_slots_horizontal = 1
+					}
+				}
+			}
+		}
+	}
+	# RELIC GRID BOX ENTRY
+	containerWindowType = {
+		name = "relic_grid_entry"
+		size = {
+			width = 182
+			height = 194
+		}
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			no_clicksound = yes # this will be manually set by the relic type and played in the UI via code
+		}
+		iconType = {
+			name = "frame"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame"
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "frame_unused"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_relics_frame_unused"
+			alwaysTransparent = yes
+		}
+		iconType = {
+			name = "relic_portrait"
+			position = { x = 10 y = 15 }
+			quadTextureSprite = "GFX_tiled_window_transparent"
+			alwaysTransparent = yes
+		}
+	}
+	# ARTIFACT ACTION GRID BOX ENTRY
+	containerWindowType = {
+		name = "artifact_action_grid_entry"
+		size = {
+			width =  484
+			height = 42
+		}
+		background = {
+			name = "bg"
+			quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+		}
+		instantTextBoxType = {
+			name = "title"
+			font = "cg_16b"
+			position = { x = 10 y = 14 }
+			text = "MINOR_ARTIFACTS"
+			maxWidth = 400
+			maxHeight = 22
+			fixedSize = yes
+			format = left
+			#alwaysTransparent = yes
+		}
+		instantTextBoxType = {
+			name = "cost"
+			font = "cg_16b"
+			position = { x = 410 y = 14 }
+			maxWidth = 60
+			maxHeight = 22
+			fixedSize = yes
+			format = right
+			text = "45"
+			#alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "button"
+			quadTextureSprite = "GFX_button_light"
+			position = { x = 0 y = 0 }
+			clicksound = "queuing_building"
+			size = { x = 484 y = 42 }
+		}
+	}
+}

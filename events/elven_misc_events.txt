@@ -1,0 +1,76 @@
+namespace = elven_misc_events
+
+# Arcane Societies get another dice roll for a tiny chance to spawn an archaeological site.
+ship_event = {
+	id = elven_misc_events.1
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_ancrel = yes
+		FROM = {
+			NOT = { exists = archaeological_site }
+		}
+	}
+
+	immediate = {
+		random_list = {
+			400 = {}
+			2 = {
+				modifier = {
+					factor = 0.2
+					owner = { is_ai = yes }
+				}
+				from = {
+					prevent_anomaly = yes
+					create_archaeological_site = random
+				}
+			}
+		}
+	}
+}
+
+# Prismatic refugees establish contact with a FE.
+# THIS = Fleet
+# FROM = System jumping to
+# FROMFROM = System jumped from
+fleet_event = {
+	id = elven_misc_events.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_established_contact = FROM.owner
+			}
+		}
+		FROM = {
+			has_owner = yes
+			owner = {
+				OR = {
+					is_country_type = fallen_empire
+					is_country_type = dormant_marauders
+
+					# Highly unlikely but still:
+					is_country_type = awakened_fallen_empire
+					is_country_type = awakened_marauders
+				}
+			}
+		}
+		FROMFROM = {
+			has_star_flag = eilistraee_system
+		}
+	}
+
+	immediate = {
+		owner = {
+			establish_contact = {
+				who = FROM.owner
+				location = FROM
+			}
+		}
+	}
+}

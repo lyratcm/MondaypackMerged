@@ -1,0 +1,351 @@
+namespace = elven_setup
+
+#################################
+# ELVEN STARTING MEGASTRUCTURES #
+#################################
+
+event = {
+	id = elven_setup.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			limit = {
+				has_planet_flag = elven_ring_start
+				owner = {
+					is_species_class = ELVEN
+				}
+			}
+			
+			create_avari_ring = yes
+			
+			remove_planet_flag = elven_ring_start
+		}
+	}
+}
+
+event = {
+	id = elven_setup.12
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			limit = {
+				has_planet_flag = elven_shield_start
+				owner = {
+					is_species_class = ELVEN
+				}
+			}
+			
+			create_avari_shield = yes
+			
+			remove_planet_flag = elven_shield_start
+		}
+	}
+}
+
+event = {
+	id = elven_setup.13
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_planet = {
+			limit = {
+				has_planet_flag = elven_sidh_rings_start
+				owner = {
+					is_species_class = ELVEN
+				}
+			}
+			
+			create_sidh_rings = yes
+			
+			remove_planet_flag = elven_sidh_rings_start
+		}
+	}
+}
+
+#############################################
+# OVERRIDE VANILLA CAPITAL PLANET RESOURCES #
+#############################################
+
+country_event = {
+	id = elven_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		capital_scope = {
+			generate_elven_capital_deposits_and_blockers = yes
+			replace_elven_incompatible_deposits = yes
+		}
+	}
+}
+
+#######################
+# ELVEN ORIGINS SETUP #
+#######################
+
+## ARCADIAN SYMBIOSIS ##
+country_event = {
+	id = elven_setup.31
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_origin = origin_elven_arcadian_symbiosis }
+
+			capital_scope = {
+				create_species = {
+					name = "Treant"
+					plural = "Treants"
+					class = PLANT
+					portrait = pla14
+					namelist = PLANT4
+					homeworld = THIS
+
+					traits = {
+						trait = "trait_syncretic_proles"
+						trait = "trait_very_strong"
+						trait = "trait_resilient"
+						trait = "trait_slow_breeders"
+						trait = "trait_sedentary"
+					}
+
+					effect = {
+						set_species_flag = elven_arcadian_symbiosis_treants
+
+						save_global_event_target_as = elven_treant_species
+					}
+				}
+
+				while = {
+					count = 6
+					random_pop = {
+						kill_pop = yes
+					}
+				}
+
+				while = {
+					count = 6
+					create_pop = {
+						species = event_target:elven_treant_species
+					}
+				}
+
+				recalculate_treant_habitability_bonus = yes
+			}
+		}
+	}
+}
+
+## PRISMATIC REFUGE WORMHOLE ##
+country_event = {
+	id = elven_setup.32
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_origin = origin_drow_prismatic_refuge }
+
+			set_country_flag = encountered_first_wormhole
+			add_seen_bypass_type = wormhole
+			#add_research_option = tech_wormhole_stabilization
+			give_technology = { message = no tech = tech_wormhole_stabilization }
+
+			find_a_suitable_wormhole_candidate_system = yes
+
+			capital_scope = {
+				solar_system = {
+					event_target:drow_prismatic_refuge_escape_system = {
+						spawn_natural_wormhole = {
+							bypass_type = wormhole
+							random_pos = no
+							orbit_angle = 360
+						}
+					}
+					spawn_natural_wormhole = {
+						bypass_type = wormhole
+						random_pos = no
+						orbit_angle = 270
+					}
+					link_wormholes = event_target:drow_prismatic_refuge_escape_system
+				}
+			}
+		}
+	}
+}
+
+##########################
+# ELVEN SLAVERY SETTINGS #
+##########################
+
+# Disable slavery for authoritarian elves by default
+event = {
+	id = elven_setup.41
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_species_class = ELVEN
+				has_ethic = ethic_authoritarian
+			}
+
+			set_policy = {
+				policy = slavery
+				option = slavery_not_allowed
+				cooldown = no
+			}
+		}
+	}
+}
+
+# Disable caste system for authoritarian drow by default
+event = {
+	id = elven_setup.42
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				is_species_class = DROW
+				has_ethic = ethic_authoritarian
+			}
+
+			save_event_target_as = drow_country
+
+			owner_species = {
+				set_citizenship_type = {
+					country = event_target:drow_country
+					type = citizenship_full
+					cooldown = no
+				}
+			}
+		}
+	}
+}
+
+########################
+# LHUREN CLUSTER SETUP #
+########################
+
+event = {
+	id = elven_setup.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_spawn_system_batch = begin
+		every_system = {
+			limit = {
+				has_star_flag = "lhuren_capital_system"
+			}
+
+			save_event_target_as = lhuren_capital_system
+
+			spawn_system = {
+				min_distance = 12
+				max_distance = 12
+				initializer = elven_system_lhuren_neighbor1_initializer
+			}
+
+			spawn_system = {
+				min_distance = 10
+				max_distance = 10
+				initializer = elven_system_lhuren_neighbor2_initializer
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = "lhuren_neighbor1_system"
+				}
+
+				remove_star_flag = "lhuren_neighbor1_system"
+
+				add_hyperlane = {
+					from = this
+					to = event_target:lhuren_capital_system
+				}
+
+				save_event_target_as = lhuren_neighbor1_system
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = "lhuren_neighbor2_system"
+				}
+
+				remove_star_flag = "lhuren_neighbor2_system"
+
+				add_hyperlane = {
+					from = this
+					to = event_target:lhuren_capital_system
+				}
+
+				add_hyperlane = {
+					from = this
+					to = event_target:lhuren_neighbor1_system
+				}
+
+				save_event_target_as = lhuren_neighbor2_system
+			}
+
+			every_neighbor_system = {
+				random_list = {
+					33 = {
+						add_hyperlane = {
+							from = this
+							to = event_target:lhuren_neighbor1_system
+						}
+					}
+					66 = { }
+				}
+
+				random_list = {
+					33 = {
+						add_hyperlane = {
+							from = this
+							to = event_target:lhuren_neighbor2_system
+						}
+					}
+					66 = { }
+				}
+			}
+		}
+		set_spawn_system_batch = end
+	}
+}
+
+########################################
+# ELVES START WITH MORE CONSUMER GOODS #
+########################################
+
+event = {
+	id = elven_setup.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			limit = {
+				has_trait = trait_elven_true
+				NOR = {
+					has_government = gov_stagnant_ascendancy
+					has_government = gov_awakened_ascendancy
+					has_government = gov_tribal_society
+					has_government = gov_feudal_realms
+					has_government = gov_fragmented_nation_states
+				}
+			}
+			
+			add_resource = { consumer_goods = 150 }
+		}
+	}
+}

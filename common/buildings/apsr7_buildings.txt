@@ -1,0 +1,481 @@
+### COST 
+@apsr7cordoncost_minerals = 250	
+@apsr7cordoncost_alloys = 300
+@apsr7cordoncost_time = 300
+
+@apsr7part1cost_minerals = 2500	
+@apsr7part1cost_time = 750			
+
+@apsr7part2cost_minerals = 5000	
+@apsr7part2cost_time = 1000			
+
+@apsr7part3cost_minerals = 10000
+@apsr7part3cost_time = 1500			
+
+
+### UPKEEP (2 ресурса только)
+@apsr7cordonupkeep_energy = 4
+@apsr7cordonupkeep_minerals = 3
+@apsr7cordonupkeep_fake = 2
+
+@apsr7part1upkeep_energy = 0
+@apsr7part1upkeep_minerals = 4
+@apsr7part1upkeep_fake = 1									
+									
+@apsr7part2upkeep_energy = 0
+@apsr7part2upkeep_minerals = 8	
+@apsr7part2upkeep_fake = 3					
+
+@apsr7part3upkeep_energy = 0
+@apsr7part3upkeep_minerals = 20	
+@apsr7part3upkeep_fake = 5					
+
+
+
+# SOLDIER JOBS
+@apsr7cordonjob = 3
+
+# TECHNICIAN JOBS
+@apsr7part1job = 2
+@apsr7part2job = 9
+@apsr7part3job = 17
+
+# POWER ENGINEER JOBS
+@apsr7part1powjob = 1
+@apsr7part2powjob = 3
+@apsr7part3powjob = 10
+
+
+
+apsr7_building_cordon = {
+	base_buildtime = @apsr7cordoncost_time
+	icon = apsr7_building_cordon
+	base_cap_amount = 1
+	
+	is_capped_by_modifier = no
+
+	category = resource
+	
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		AND = {
+			has_modifier = "apsr7_planet_modifier"
+			NOT = {
+				OR = {
+					has_building = apsr7_building_part1
+					has_building = apsr7_building_part2
+					has_building = apsr7_building_part3
+					has_building = apsr7_building_part1_fake
+					has_building = apsr7_building_part2_fake
+					has_building = apsr7_building_part3_fake
+				}
+			}
+		}
+	}
+
+			
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_apsr7_soldier_hive_add = @apsr7cordonjob
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_apsr7_soldier_machine_add = @apsr7cordonjob
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_apsr7_soldier_normal_add = @apsr7cordonjob
+		}
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7cordoncost_minerals
+			alloys = @apsr7cordoncost_alloys
+		}
+		upkeep = {
+			energy = @apsr7cordonupkeep_energy
+			minerals = @apsr7cordonupkeep_minerals
+		}
+	}
+	
+	upgrades = {
+		"apsr7_building_part1"
+	}	
+	
+	prerequisites = {
+		"tech_apsr7_building_cordon"
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+
+apsr7_building_part1 = {
+	base_buildtime = @apsr7part1cost_time
+	icon = apsr7_building_part1
+	
+	is_capped_by_modifier = no
+
+	category = resource
+	
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+
+			
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_hive_add = @apsr7part1job
+			job_apsr7_power_engineer_hive_add = @apsr7part1powjob
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_machine_add = @apsr7part1job
+			job_apsr7_power_engineer_machine_add = @apsr7part1powjob
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_apsr7_technician_normal_add = @apsr7part1job
+			job_apsr7_power_engineer_normal_add = @apsr7part1powjob
+		}
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part1cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part1upkeep_energy
+			minerals = @apsr7part1upkeep_minerals
+		}
+	}
+	
+	upgrades = {
+		"apsr7_building_part2"
+	}	
+	
+	prerequisites = {
+		"tech_apsr7_building_part1"
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+apsr7_building_part2 = {
+	base_buildtime = @apsr7part2cost_time
+	icon = apsr7_building_part2
+	
+	is_capped_by_modifier = no
+
+	category = resource
+		
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+
+			
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_hive_add = @apsr7part2job
+			job_apsr7_power_engineer_hive_add = @apsr7part2powjob
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_machine_add = @apsr7part2job
+			job_apsr7_power_engineer_machine_add = @apsr7part2powjob
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_apsr7_technician_normal_add = @apsr7part2job
+			job_apsr7_power_engineer_normal_add = @apsr7part2powjob
+		}
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part2cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part2upkeep_energy
+			minerals = @apsr7part2upkeep_minerals
+		}
+	}
+	
+	upgrades = {
+		"apsr7_building_part3"
+	}	
+	
+	prerequisites = {
+		"tech_apsr7_building_part2"
+	}	
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+apsr7_building_part3 = {
+	base_buildtime = @apsr7part3cost_time
+	icon = apsr7_building_part3
+	
+	is_capped_by_modifier = no
+
+	category = resource
+		
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+
+			
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_hive_add = @apsr7part3job
+			job_apsr7_power_engineer_hive_add = @apsr7part3powjob
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_apsr7_technician_machine_add = @apsr7part3job
+			job_apsr7_power_engineer_machine_add = @apsr7part3powjob
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+			}
+		}
+		modifier = {
+			job_apsr7_technician_normal_add = @apsr7part3job
+			job_apsr7_power_engineer_normal_add = @apsr7part3powjob
+		}
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part3cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part3upkeep_energy
+			minerals = @apsr7part3upkeep_minerals
+		}
+	}	
+	
+	prerequisites = {
+		"tech_apsr7_building_part3"
+	}
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+
+
+### FAKE ###
+
+apsr7_building_part1_fake = {
+	base_buildtime = @apsr7part1cost_time
+	icon = "apsr7_building_part1"
+	
+	is_capped_by_modifier = no
+
+	category = resource
+		
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part1cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part1upkeep_fake
+		}
+	}	
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+apsr7_building_part2_fake = {
+	base_buildtime = @apsr7part2cost_time
+	icon = "apsr7_building_part2"
+	
+	is_capped_by_modifier = no
+
+	category = resource
+		
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part2cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part2upkeep_fake
+		}
+	}	
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+}
+
+apsr7_building_part3_fake = {
+	base_buildtime = @apsr7part3cost_time
+	icon = "apsr7_building_part3"
+	
+	is_capped_by_modifier = no
+
+	category = resource
+		
+	can_build = no
+#	can_demolish = no
+#	can_be_ruined = no
+	
+	potential = {
+		has_modifier = "apsr7_planet_modifier"
+	}
+	
+	resources = {
+		category = planet_apsr_buildings
+		cost = {
+			minerals = @apsr7part3cost_minerals
+		}
+		upkeep = {
+			energy = @apsr7part3upkeep_fake
+		}
+	}	
+	
+	allow = {
+		has_major_upgraded_capital = yes
+	}
+	
+	ai_weight = {
+		weight = 50000
+	}
+
+}

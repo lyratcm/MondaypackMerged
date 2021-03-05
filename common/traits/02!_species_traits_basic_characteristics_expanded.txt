@@ -1,0 +1,281 @@
+# species_potential_add = {}
+# show the trait to add to species when genemodding or randomizing traits.
+# Scopes are this = species, from = country performing the modification.
+# default = always=yes
+
+# species_possible_remove = {}
+# allow to remove the trait when genemodding.
+# Scopes are this = species, from = country performing the modification.
+# default = always=yes
+trait_photosynthetic = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	sorting_priority = 20
+
+	initial = yes
+	randomized = no
+	modification = no
+	forced_happiness = no
+	immortal_leaders = no
+	allowed_archetypes = { PLANTOID }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.50
+		pop_housing_usage_mult = 0.20
+		planet_livestock_food_produces_add = 2
+		# Wet Habitability
+		pc_ocean_habitability = 0.3
+		pc_continental_habitability = 0.3
+		pc_tropical_habitability = 0.3
+		pc_cascadian_habitability = 0.3
+		pc_desertislands_habitability = 0.3
+		pc_subarctic_habitability = 0.3
+		pc_mangrove_habitability = 0.3
+		pc_hajungle_habitability = 0.3
+		pc_biolumen_habitability = 0.3
+		pc_retinal_habitability = 0.3
+		# Dry Habitability
+		pc_desert_habitability = -0.15
+		pc_arid_habitability = -0.15
+		pc_savannah_habitability = -0.15
+		pc_steppe_habitability = -0.15
+		pc_sandsea_habitability = -0.15
+		pc_oasis_habitability = -0.15
+		pc_mesa_habitability = -0.15
+		pc_hadesert_habitability = -0.15
+		pc_prairie_habitability = -0.15
+	}
+	custom_tooltip = TRAIT_PLANTOID_EFFECT
+	ai_weight = {
+		weight = 0
+	}
+}
+
+trait_decomposers = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	
+	sorting_priority = 20
+
+	initial = yes
+	randomized = no
+	modification = no
+	forced_happiness = no
+	immortal_leaders = no
+	allowed_archetypes = { FUNGOID }
+	modifier = {
+		planet_pops_organics_food_upkeep_mult = -0.2
+		pop_environment_tolerance = 0.10
+		leader_age = -30
+	}
+	leader_age_min = 20
+	leader_age_max = 40
+	opposites = { "trait_fleeting" }
+}
+
+### NEW GOVERNMENT TRAITS ###
+
+trait_primitive_cybernetic = {
+	cost = 0
+	
+	opposites = { "trait_cybernetic" "trait_latent_psionic" "trait_psionic" }
+
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_cybernetic.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pop_environment_tolerance = 0.10
+		army_damage_mult = 0.05
+		leader_age = 20
+	}
+}
+
+trait_ecologists = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_conservational.dds"
+	
+	opposites = { "trait_wasteful" }
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pop_environment_tolerance = 0.1
+		pop_amenities_usage_mult = -0.1
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+}
+
+trait_mechanist = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_natural_engineers.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	custom_tooltip = TRAIT_MECHANIST_EFFECT
+	
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.1
+	}
+}
+
+trait_exploiter = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_industrious.dds"
+	
+	opposites = { "trait_conservational" "trait_communal" "trait_agrarian" "trait_traditional" }
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		planet_miners_minerals_produces_mult = 0.05
+		planet_metallurgists_produces_mult = 0.05
+		planet_pops_consumer_goods_upkeep_mult = 0.05
+	}
+}
+
+trait_homeworld_exploited_wet = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_pc_arid_preference.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pc_arid_habitability = 0.65
+	}
+}
+
+trait_homeworld_exploited_dry = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_pc_arid_preference.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pc_arid_habitability = 0.35
+	}
+}
+
+trait_homeworld_exploited_dry_2 = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_pc_desert_preference.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pc_desert_habitability = 0.35
+	}
+}
+
+trait_homeworld_exploited_cold = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_pc_arctic_preference.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pc_arctic_habitability = 0.35
+	}
+}
+
+trait_homeworld_exploited_cold_2 = {
+	cost = 0
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_pc_tundra_preference.dds"
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	modifier = {
+		pc_tundra_habitability = 0.35
+	}
+}
+
+trait_syncretic_equal = {
+	cost = -1
+	initial = no
+	randomized = no
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_primitive.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+}
+
+trait_infested_basic = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_amenities_usage_mult = 0.2
+		planet_pops_organics_food_upkeep_mult = 0.2
+		planet_pops_organics_minerals_upkeep_mult = 0.2
+		species_empire_size_mult = 0.2
+	}
+}
+
+trait_infested = {
+	cost = 0
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_amenities_usage_mult = 0.1
+		planet_pops_organics_food_upkeep_mult = 0.1
+		planet_pops_organics_minerals_upkeep_mult = 0.1
+		species_empire_size_mult = -0.2
+	}
+}
+
+trait_infested_advanced = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_infested.dds"
+
+	initial = no
+	randomized = no
+	modification = no
+
+	sorting_priority = 10
+
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		species_empire_size_mult = -0.2
+	}
+}

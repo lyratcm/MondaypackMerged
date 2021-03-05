@@ -1,0 +1,10 @@
+tr_harmony_adopt = {
+	modifier = {
+		#
+	}
+}
+tr_harmony_finish = {
+	modifier = {
+		#
+	}
+}

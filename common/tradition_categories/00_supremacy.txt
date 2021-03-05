@@ -1,0 +1,7 @@
+tradition_supremacy = {
+	adoption_bonus = "tr_supremacy_adopt"
+	finish_bonus = "tr_supremacy_finish"
+	traditions = {
+		"tr_supremacy_great_game"
+	}
+}

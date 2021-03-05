@@ -1,0 +1,276 @@
+namespace = elven_colony_events
+
+# I don't want AI renaming my planets after they colonize.
+planet_event = {
+	id = elven_colony_events.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_owner = yes
+				owner = {
+					is_ai = yes
+				}
+				has_planet_flag = planet_polydora
+			}
+			
+			set_name = "Polydora"
+		}
+		else_if = {
+			limit = {
+				has_owner = yes
+				owner = {
+					is_ai = yes
+				}
+				has_planet_flag = planet_narenwyn
+			}
+			
+			set_name = "Narenwýn"
+		}
+		else_if = {
+			limit = {
+				has_owner = yes
+				owner = {
+					is_ai = yes
+				}
+				has_planet_flag = planet_morelyn
+			}
+			
+			set_name = "Morelýn"
+		}
+	}
+}
+
+# Okay, so the previous event does not work for advanced empires obviously.
+# Have to call this on game start.
+event = {
+	id = elven_colony_events.12
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_planet = {
+			if = {
+				limit = {
+					has_owner = yes
+					owner = {
+						is_ai = yes
+					}
+					has_planet_flag = planet_polydora
+				}
+				
+				set_name = "Polydora"
+			}
+			else_if = {
+				limit = {
+					has_owner = yes
+					owner = {
+						is_ai = yes
+					}
+					has_planet_flag = planet_narenwyn
+				}
+				
+				set_name = "Narenwýn"
+			}
+			else_if = {
+				limit = {
+					has_owner = yes
+					owner = {
+						is_ai = yes
+					}
+					has_planet_flag = planet_morelyn
+				}
+				
+				set_name = "Morelýn"
+			}
+		}
+	}
+}
+
+planet_event = {
+	id = elven_colony_events.2
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		elven_check_for_incompatible_deposits = yes
+	}	
+	
+	immediate = {
+		replace_elven_incompatible_deposits = yes
+	}
+}
+
+# Valshaquellar Homeworld Repair
+country_event = {
+	id = elven_colony_events.21
+	title = "drow_special.1.name"
+	desc = "drow_special.1.desc"
+	picture = GFX_evt_colony_settlement
+	show_sound = event_air_raid_siren
+	location = event_target:drow_valshaquellar
+
+	is_triggered_only = yes
+
+	trigger = {
+		OR = {
+			last_increased_tech = tech_ecological_adaptation
+		}
+		any_planet_within_border = {
+			has_planet_flag = drow_valshaquellar_project
+			NOT = { has_planet_flag = drow_valshaquellar_repaired }
+		}
+	}
+
+	immediate = {
+	}
+	
+	option = {
+		name = drow_special.1.a
+	}
+}
+
+# Special Project Completed
+planet_event = {
+	id = elven_colony_events.22
+	title = "drow_special.2.name"
+	desc = "drow_special.2.desc"
+	picture = GFX_evt_colony_settlement
+	show_sound = event_activating_unknown_technology
+	location = ROOT
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_effect = {
+			set_planet_flag = drow_valshaquellar_repaired
+
+			clear_deposits = yes
+			clear_planet_modifiers = yes # Does not work?
+			clear_blockers = yes
+
+			remove_modifier = drow_defunct_lifesupport
+			remove_modifier = drow_decimated_infrastructure
+
+			change_pc = pc_drow_valshaquellar
+
+			add_deposit = d_drow_planetary_zhevalshath_blocker
+
+			solar_system = {
+				random_system_ambient_object = {
+					limit = { has_ambient_object_flag = drow_valshaquellar_debris }
+					destroy_ambient_object = this
+				}
+
+				space_owner = {
+					end_event_chain = elven_valshaquellar_chain
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = drow_special.2.a
+	}
+}
+
+# Warn the player that using the Baol relic on a Permafrost world is a bad idea
+country_event = {
+	id = elven_colony_events.41
+	title = "elven_colony_events.41.name"
+	desc = "elven_colony_events.41.desc"
+	picture = GFX_evt_analyzing_artifacts
+
+	fire_only_once = yes
+
+	trigger = {
+		NOT = { has_country_flag = permafrost_baol_warning_issued }
+		has_relic = r_the_last_baol
+		any_owned_planet = {
+			has_planet_flag = lunari_planet_flag
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	immediate = {
+		set_country_flag = permafrost_baol_warning_issued
+	}
+
+	option = {
+		name = elven_colony_events.41.a
+	}
+}
+
+# Terraformed Permafrost worlds are reverted back to Permafrost after some time
+planet_event = {
+	id = elven_colony_events.42
+	title = "elven_colony_events.42.name"
+	desc = "elven_colony_events.42.desc"
+	picture = GFX_evt_cold_barren
+	show_sound = event_air_raid_siren
+	location = ROOT
+
+	trigger = {
+		has_planet_flag = lunari_planet_flag
+		NOR = {
+			is_planet_class = pc_city
+			is_planet_class = pc_lunari_arctic
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 12
+    }
+
+	immediate = {
+		revert_planet_to_permafrost = yes
+
+		# Nasty modifier as a bonus.
+		# What, you thought you could break origin rules and get a Gaia world?
+		add_modifier = {
+			modifier = "lunari_ecological_retaliation"
+			days = 7200
+		}
+	}
+
+	option = {
+		name = elven_colony_events.42.a
+	}
+}
+
+# Baoled Valshaquellar is reverted back in a month (without warning).
+planet_event = {
+	id = elven_colony_events.43
+	hide_window = yes
+
+	trigger = {
+		has_planet_flag = drow_valshaquellar_project
+		NOR = {
+			is_planet_class = pc_drow_valshaquellar_dead
+			is_planet_class = pc_drow_valshaquellar
+		}
+    }
+
+    mean_time_to_happen = {
+        months = 1
+    }
+
+	immediate = {
+		if = {
+			limit = {
+				has_planet_flag = drow_valshaquellar_repaired
+			}
+
+			change_pc = pc_drow_valshaquellar
+		}
+		else = {
+			change_pc = pc_drow_valshaquellar_dead
+		}
+	}
+}

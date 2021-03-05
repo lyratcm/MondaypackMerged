@@ -1,0 +1,61 @@
+namespace = eap_defender
+
+country_event = {
+	id = eap_defender.1
+	title = eapdefender
+	desc = eapdefender_desc
+	picture = GFX_evt_archaeological_dig
+	show_sound = event_mystic_reveal_light
+	location = root
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		set_global_flag = galactic_crisis_happened
+	}
+
+	option = {
+		name = defender1
+		hidden_effect = {
+			country_event = { id = crisis.10 days = 3630 }
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+	option = {
+		name = defender2
+		hidden_effect = {
+			country_event = { id = crisis.1000 days = 3630 }
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+	option = {
+		name = defender3
+		hidden_effect = {
+			country_event = { id = crisis.2005 days = 3630 }
+			country_event = { id = eap_defender.2 days = 30 }
+		}
+	}
+}
+
+country_event = {
+	id = eap_defender.2
+	title = eapdefender2
+	desc = eapdefender2_desc
+	picture = GFX_evt_glitchy_matrix
+	show_sound = event_mega_structure_other_empire_build_start
+	location = root
+	
+	is_triggered_only = yes
+
+	immediate = { 
+		owner = {
+			add_relic = "r_defender"
+		}
+	}
+	option = {
+		name = eapdefender2.a
+		custom_tooltip = eapdefender2.a.tooltip 
+	}
+}
+
+

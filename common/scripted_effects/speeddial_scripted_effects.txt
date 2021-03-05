@@ -1,0 +1,139 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+
+speeddial_remove_standard_shroud_timer_flags_effect = {
+  remove_country_flag = speeddial_shroud_3600_timer  #10 years
+  remove_country_flag = speeddial_shroud_1800_timer  #5 years
+  remove_country_flag = speeddial_shroud_1440_timer  #4 years
+  remove_country_flag = speeddial_shroud_1080_timer  #3 years
+  remove_country_flag = speeddial_shroud_720_timer  #2 years
+  remove_country_flag = speeddial_shroud_360_timer  #1 year
+  
+  remove_country_flag = speeddial_shroud_180_timer  #6 months
+  remove_country_flag = speeddial_shroud_150_timer  #5 months
+  remove_country_flag = speeddial_shroud_120_timer  #4 months
+  remove_country_flag = speeddial_shroud_90_timer  #3 months
+  remove_country_flag = speeddial_shroud_60_timer  #2 months
+  remove_country_flag = speeddial_shroud_30_timer  #1 months
+}
+
+speeddial_set_shroud_precog_cooldown_timer_flags_effect = {
+  set_timed_country_flag = { flag = "speeddial_shroud_3600_timer" days = 1800 }
+  set_timed_country_flag = { flag = "speeddial_shroud_1800_timer" days = 2160 }
+  set_timed_country_flag = { flag = "speeddial_shroud_1440_timer" days = 2520 }
+  set_timed_country_flag = { flag = "speeddial_shroud_1080_timer" days = 2880 }
+  set_timed_country_flag = { flag = "speeddial_shroud_720_timer" days = 3240 }
+  set_timed_country_flag = { flag = "speeddial_shroud_360_timer" days = 3420 }
+  set_timed_country_flag = { flag = "speeddial_shroud_180_timer" days = 3450 }
+  set_timed_country_flag = { flag = "speeddial_shroud_150_timer" days = 3480 }
+  set_timed_country_flag = { flag = "speeddial_shroud_120_timer" days = 3510 }
+  set_timed_country_flag = { flag = "speeddial_shroud_90_timer" days = 3540 }
+  set_timed_country_flag = { flag = "speeddial_shroud_60_timer" days = 3570 }
+  set_timed_country_flag = { flag = "speeddial_shroud_30_timer" days = 3600 }    
+  
+  set_timed_country_flag = { flag = "speeddial_shroud_catch_precog_timer" days = 3700 }           
+}
+
+speeddial_set_shroud_cooldown_timer_flags_effect = {
+  set_timed_country_flag = { flag = "speeddial_shroud_1800_timer" days = 360 }
+  set_timed_country_flag = { flag = "speeddial_shroud_1440_timer" days = 720 }
+  set_timed_country_flag = { flag = "speeddial_shroud_1080_timer" days = 1080 }
+  set_timed_country_flag = { flag = "speeddial_shroud_720_timer" days = 1440 }
+  set_timed_country_flag = { flag = "speeddial_shroud_360_timer" days = 1620 }
+  set_timed_country_flag = { flag = "speeddial_shroud_180_timer" days = 1650 }
+  set_timed_country_flag = { flag = "speeddial_shroud_150_timer" days = 1680 }
+  set_timed_country_flag = { flag = "speeddial_shroud_120_timer" days = 1710 }
+  set_timed_country_flag = { flag = "speeddial_shroud_90_timer" days = 1740 }
+  set_timed_country_flag = { flag = "speeddial_shroud_60_timer" days = 1770 }
+  set_timed_country_flag = { flag = "speeddial_shroud_30_timer" days = 1800 }    
+  
+  set_timed_country_flag = { flag = "speeddial_shroud_catch_timer" days = 1900 }         
+}
+
+speeddial_shroud_custom_tooltip = {
+  if = {
+    limit = { has_country_flag = speeddial_shroud_3600_timer }
+    custom_tooltip = speeddial_effect_trigger_shroud_3600_tooltip
+    else = {
+      if = { 
+        limit = { has_country_flag = speeddial_shroud_1800_timer }
+        custom_tooltip = speeddial_effect_trigger_shroud_1800_tooltip
+        else = {
+          if = { 
+            limit = { has_country_flag = speeddial_shroud_1440_timer }
+            custom_tooltip = speeddial_effect_trigger_shroud_1440_tooltip
+            else = {
+              if = { 
+                limit = { has_country_flag = speeddial_shroud_1080_timer }
+                custom_tooltip = speeddial_effect_trigger_shroud_1080_tooltip
+                else = {
+                  if = { 
+                    limit = { has_country_flag = speeddial_shroud_720_timer }
+                    custom_tooltip = speeddial_effect_trigger_shroud_720_tooltip
+                    else = {
+                      if = { 
+                        limit = { has_country_flag = speeddial_shroud_360_timer }
+                        custom_tooltip = speeddial_effect_trigger_shroud_360_tooltip
+                        else = {
+                          if = { 
+                            limit = { has_country_flag = speeddial_shroud_180_timer }
+                            custom_tooltip = speeddial_effect_trigger_shroud_180_tooltip
+                            else = {
+                              if = { 
+                                limit = { has_country_flag = speeddial_shroud_150_timer }
+                                custom_tooltip = speeddial_effect_trigger_shroud_150_tooltip
+                                else = {
+                                  if = { 
+                                    limit = { has_country_flag = speeddial_shroud_120_timer }
+                                    custom_tooltip = speeddial_effect_trigger_shroud_120_tooltip
+                                    else = {
+                                      if = { 
+                                        limit = { has_country_flag = speeddial_shroud_90_timer }
+                                        custom_tooltip = speeddial_effect_trigger_shroud_90_tooltip
+                                        else = {
+                                          if = { 
+                                            limit = { has_country_flag = speeddial_shroud_60_timer }
+                                            custom_tooltip = speeddial_effect_trigger_shroud_60_tooltip
+                                            else = {
+                                              if = { 
+                                                limit = { has_country_flag = speeddial_shroud_30_timer }
+                                                custom_tooltip = speeddial_effect_trigger_shroud_30_tooltip
+                                                else = {
+                                                  custom_tooltip = speeddial_effect_trigger_shroud_tooltip 
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }                                           
+}

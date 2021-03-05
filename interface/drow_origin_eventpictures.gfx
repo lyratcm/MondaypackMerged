@@ -1,0 +1,14 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_origin_drow_subterranean_inception"
+		texturefile = "gfx/event_pictures/origins/origins_drow_subterranean_inception.dds"
+		alwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_origin_drow_prismatic_refuge"
+		texturefile = "gfx/event_pictures/origins/origins_drow_prismatic_refuge.dds"
+		alwaystransparent = yes
+	}
+}

@@ -1,0 +1,276 @@
+namespace = nnnethic_event
+
+country_event = {
+	id = nnnethic_event.1
+	hide_window = yes
+
+	mean_time_to_happen = {
+		months = 10
+	}
+
+	trigger = {
+		has_ascension_perk = eap_one_vision 
+	}
+	immediate = {
+		every_owned_planet = {
+				planet_event = { id = nnnethic_event.2 }
+		}
+	} 
+}
+
+planet_event = {
+	id = nnnethic_event.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_authoritarian_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_authoritarian }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_egalitarian_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_egalitarian }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_materialist_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_materialist }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_spiritualist_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_spiritualist }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_xenophobe_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_xenophobe }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_xenophile_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_pacifist"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_xenophile }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_pacifist_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_militarist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_pacifist }
+					90 = {}
+				}
+			}
+		}
+		if = {
+			limit = {
+				owner = { has_policy_flag = nnnethic_militarist_attraction }
+			}
+			every_owned_pop = {
+				limit = {
+					or = {
+						has_ethic = "ethic_authoritarian"
+						has_ethic = "ethic_egalitarian"
+						has_ethic = "ethic_materialist"
+						has_ethic = "ethic_spiritualist"
+						has_ethic = "ethic_xenophobe"
+						has_ethic = "ethic_xenophile"
+						has_ethic = "ethic_pacifist"
+					}
+				}
+				random_list = {
+					10 = { pop_change_ethic = ethic_militarist }
+					90 = {}
+				}
+			}
+		}
+	}
+}
+
+
+
+event = {
+	id = nnnethic_event.3
+	id = nnnethic_event.3
+	title = "nnnethic_event.3.name"
+	desc = "nnnethic_event.3.desc"
+	picture = GFX_evt_news_room
+	show_sound = event_factions
+	is_triggered_only = yes
+	trigger = {
+		last_changed_policy = nnn_ethic_attraction
+		or = { 
+			has_policy_flag = nnnethic_authoritarian_attraction
+			has_policy_flag = nnnethic_egalitarian_attraction 
+			has_policy_flag = nnnethic_materialist_attraction
+			has_policy_flag = nnnethic_spiritualist_attraction
+			has_policy_flag = nnnethic_xenophobe_attraction
+			has_policy_flag = nnnethic_xenophile_attraction 
+			has_policy_flag = nnnethic_pacifist_attraction
+			has_policy_flag = nnnethic_militarist_attraction
+		}
+		not = { has_country_flag = nnnethic_attraction }
+		
+	}
+	immediate = {
+		country_event = { id = nnnethic_event.4 days=3601 }
+		set_country_flag = nnnethic_attraction
+	}
+}
+		
+
+country_event = {
+	id = nnnethic_event.4
+	title = "nnnethic_event.4.name"
+	desc = "nnnethic_event.4.desc"
+	picture = GFX_evt_news_room
+	show_sound = event_factions
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				or = { 
+					has_policy_flag = nnnethic_authoritarian_attraction
+					has_policy_flag = nnnethic_egalitarian_attraction 
+					has_policy_flag = nnnethic_materialist_attraction
+					has_policy_flag = nnnethic_spiritualist_attraction
+					has_policy_flag = nnnethic_xenophobe_attraction
+					has_policy_flag = nnnethic_xenophile_attraction 
+					has_policy_flag = nnnethic_pacifist_attraction	
+					has_policy_flag = nnnethic_militarist_attraction
+				} 
+			}
+			hidden_effect = {
+				set_policy = {
+					policy = nnn_ethic_attraction
+					option = government_ethic_attraction
+					cooldown = no
+				}
+			}
+			remove_country_flag = nnnethic_attraction
+		}
+	}
+}	
+		
+		
+		
+		
+		

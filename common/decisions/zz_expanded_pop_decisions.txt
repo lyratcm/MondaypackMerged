@@ -1,0 +1,992 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+### Resources ###
+decision_spawning_food_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	resources = {
+		category = decisions
+		cost = {
+			food = 100
+		}
+	}
+	
+	potential = {
+		always = no
+		owner = { is_hive_empire = yes }
+		NOR = {
+			has_modifier = planet_growth_discouraged
+			has_modifier = planet_population_control
+			has_modifier = planet_population_control_gestalt
+		}
+		OR = {
+			has_building = building_spawning_pool
+			has_building = building_spawning_pool_2
+		}
+	}
+	
+	allow = {
+		NOT = { has_modifier = hive_spawning }
+	}	
+	
+	effect = {
+		add_modifier = { modifier = "hive_spawning" days = -1 }
+	}
+	
+	ai_weight = {
+		weight = 8
+
+		# don't encourage growth if there is no free housing
+		modifier = {
+			factor = 0
+			free_housing < 1
+		}
+		modifier = {
+			factor = 0
+			has_planet_flag = ended_food
+		}
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = food value < 10 }
+				is_lithoid_empire = no
+			}
+		}
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = food value < 10 }
+				is_lithoid_empire = yes
+			}
+		}
+	}
+}
+
+decision_end_spawning_food_boost = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_resources
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 10
+		}
+	}
+	
+	potential = {
+		has_modifier = hive_spawning
+	}	
+	
+	effect = {
+		remove_modifier = hive_spawning
+		hidden_effect = {
+			set_timed_planet_flag = { flag = ended_food days = 1800 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			AND = {
+				free_housing < 1
+				num_free_districts = {
+					type = any
+					value < 1
+				}
+				has_building_construction = no #Added since they're probably building housing
+			}
+		}
+		modifier = {
+			weight = 10
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = food value < 2 }
+				is_lithoid_empire = no
+			}
+		}
+		modifier = {
+			weight = 10
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = minerals value < 2 }
+				is_lithoid_empire = yes
+			}
+		}
+		modifier = {
+			weight = 10
+			OR = {
+				free_jobs < 5
+				free_housing < 5
+				free_amenities < 5
+			}
+			exists = owner
+			owner = {
+				has_monthly_income = { resource = food value < 10 }
+				any_owned_planet = {
+					is_under_colonization = no
+					NOT = { has_modifier = hive_spawning }
+					OR = {
+						num_pops < 10
+						free_jobs > 5
+					}
+				}
+			}
+		}
+		modifier = {
+			weight = 100
+			exists = owner
+			owner = { is_robot_empire = yes }
+		}
+	}
+}
+
+decision_lithoid_prospect = {
+	owned_planets_only = yes
+	icon = decision_prospect
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	potential = {
+		is_homeworld = no
+		habitable_structure = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_relic }
+		owner = {
+			is_lithoid_empire = yes
+		}
+		NOT = { has_planet_flag = planet_lithoid_prospected }
+	}
+	
+	allow = {
+		NOT = { has_modifier = delicate_ecosystem }
+		custom_tooltip = decision_lithoid_prospect_trigger
+		hidden_trigger = {
+			OR = {
+				has_deposit = d_lichen_fields
+				has_deposit = d_bountiful_plains
+				has_deposit = d_rugged_woods
+				has_deposit = d_green_hills
+				has_deposit = d_forgiving_tundra
+				has_deposit = d_boggy_fens
+				has_deposit = d_nutritious_mudland
+				has_deposit = d_fungal_caves
+				has_deposit = d_lush_jungle
+				has_deposit = d_fertile_lands
+				has_deposit = d_great_river
+				has_deposit = d_black_soil
+				has_deposit = d_teeming_reef
+				has_deposit = d_marvelous_oasis
+				has_deposit = d_tropical_island
+				has_deposit = d_fungal_forest
+				has_deposit = d_natural_farmland
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = decision_lithoid_prospect_effects_short
+		add_planet_devastation = 25
+		hidden_effect = {
+			set_planet_flag = planet_lithoid_prospected
+			random_deposit = {
+				limit = {
+					OR = {
+						is_deposit_type = d_lichen_fields
+						is_deposit_type = d_bountiful_plains
+						is_deposit_type = d_rugged_woods
+						is_deposit_type = d_green_hills
+						is_deposit_type = d_forgiving_tundra
+						is_deposit_type = d_boggy_fens
+						is_deposit_type = d_nutritious_mudland
+						is_deposit_type = d_fungal_caves
+						is_deposit_type = d_lush_jungle
+						is_deposit_type = d_fertile_lands
+						is_deposit_type = d_great_river
+						is_deposit_type = d_black_soil
+						is_deposit_type = d_teeming_reef
+						is_deposit_type = d_marvelous_oasis
+						is_deposit_type = d_tropical_island
+						is_deposit_type = d_fungal_forest
+						is_deposit_type = d_natural_farmland
+					}
+				}
+				remove_deposit = yes
+			}
+			random_list = {
+				3 = {
+					add_deposit = d_veiny_cliffs
+					add_deposit = d_veiny_cliffs
+					modifier = {
+						factor = 0
+						is_dry = yes
+					}
+				}
+				3 = {
+					add_deposit = d_mineral_fields
+					add_deposit = d_mineral_fields
+				}
+				3 = {
+					add_deposit = d_prosperous_mesa
+					modifier = {
+						factor = 0
+						is_cold = yes
+					}
+				}
+				3 = {
+					add_deposit = d_ore_rich_caverns
+					modifier = {
+						factor = 0
+						is_wet = yes
+					}
+				}
+				1 = {
+					add_deposit = d_rich_mountain
+					modifier = {
+						factor = 0
+						is_wet = yes # for balancing purposes only
+					}
+				}
+				1 = {
+					add_deposit = d_submerged_ore_veins
+					modifier = {
+						factor = 0
+						OR = {
+							is_dry = yes
+							is_cold = yes
+						}
+					}
+				}
+			}
+			create_message = {
+				type = MESSAGE_TYPE_PLANET_PROSPECTED
+				localization = MESSAGE_PLANET_PROSPECTED
+				days = 30
+				target = this
+				variable = {
+					type = name
+					localization = PLANET
+					scope = this
+				}				
+				variable = {
+					type = name
+					localization = DEPOSIT
+					scope = last_added_deposit
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 20
+		}
+	}	
+}
+
+### Government ###
+decision_subterranean_expansion = {
+	owned_planets_only = yes
+	icon = decision_mastery_of_nature
+
+	#enactment_time = 720 # do everything by event
+	resources = {
+		category = decisions
+		cost = {
+			influence = 50
+			energy = 2000
+			minerals = 2000
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_subterranean_evolution
+		}
+		habitable_structure = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_city }
+		NOT = { has_planet_flag = seismic_disturbance }
+		OR = {
+			NOT = { has_planet_flag = planet_sub_expanded }
+			AND = {
+				owner = { has_ascension_perk = ap_mastery_of_nature }
+				NOT = { has_planet_flag = planet_sub_expanded_2 }
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = decision_subterranean_expansion_effects
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_planet_flag = planet_sub_expanded } }
+				set_planet_flag = planet_sub_expanded
+			}
+			else_if = {
+				limit = { NOT = { has_planet_flag = planet_sub_expanded_2 } }
+				set_planet_flag = planet_sub_expanded_2
+			}
+			random_list = {
+				1 = {
+					planet_event = { id = civicsexpanded.1 days = 170 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_farm
+					}
+					modifier = {
+						factor = 0
+						exists = owner
+						owner = {
+							OR = {
+								is_machine_empire = yes
+								is_lithoid_empire = yes
+							}
+							country_uses_food = no
+						}
+						NAND = {
+							has_deposit = d_underground_mine
+							has_deposit = d_underground_generator
+						}
+					}
+				}
+				2 = {
+					planet_event = { id = civicsexpanded.3 days = 170 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_mine
+					}
+				}
+				2 = {
+					planet_event = { id = civicsexpanded.5 days = 170 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_generator
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 20
+		}
+		modifier = {
+			factor = 0
+			colony_age < 10
+		}
+	}	
+}
+
+decision_mastery_of_nature_subterranean = {
+	owned_planets_only = yes
+	icon = decision_mastery_of_nature
+
+	#enactment_time = 720 # do everything by event
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+			energy = 4000
+			minerals = 4000
+		}
+	}
+	
+	potential = {
+		owner = {
+			NOR = {
+				has_origin = origin_subterranean_evolution
+				has_global_flag = MasterNature_active
+			}
+			has_ascension_perk = ap_mastery_of_nature
+		}
+		habitable_structure = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_city }
+		NOT = { has_planet_flag = seismic_disturbance }
+		NOT = { has_planet_flag = planet_sub_expanded }
+	}
+	
+	allow = {
+		has_modifier = mastery_of_nature
+		exists = owner
+		owner = {
+			OR = {
+				has_technology = tech_deep_sinkhole
+				has_technology = tech_mining_2
+			}
+		}
+	}
+	
+	effect = {
+		custom_tooltip = decision_subterranean_expansion_effects
+		hidden_effect = {
+			set_planet_flag = planet_sub_expanded
+			random_list = {
+				1 = {
+					planet_event = { id = civicsexpanded.1 days = 210 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_farm
+					}
+					modifier = {
+						factor = 0
+						exists = owner
+						owner = {
+							OR = {
+								is_machine_empire = yes
+								is_lithoid_empire = yes
+							}
+							NOR = {
+								has_valid_civic = civic_machine_servitor
+								has_valid_civic = civic_machine_assimilator
+								any_owned_planet = {
+									OR = {
+										num_districts = { type = district_farming value > 0 }
+										num_districts = { type = district_rw_farming value > 0 }
+									}
+								}
+							}
+						}
+						NAND = {
+							has_deposit = d_underground_mine
+							has_deposit = d_underground_generator
+						}
+					}
+				}
+				2 = {
+					planet_event = { id = civicsexpanded.3 days = 210 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_mine
+					}
+				}
+				2 = {
+					planet_event = { id = civicsexpanded.5 days = 210 random = 30 }
+					modifier = {
+						factor = 0
+						has_deposit = d_underground_generator
+					}
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+		modifier = {
+			factor = 0
+			num_pops < 20
+		}
+		modifier = {
+			factor = 0
+			colony_age < 10
+		}
+	}
+}
+
+decision_subterranean_expansion_removal = {
+	owned_planets_only = yes
+	icon = decision_resources
+
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			energy = 4000
+			minerals = 4000
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_deposit = d_underground_farm
+			has_deposit = d_underground_mine
+			has_deposit = d_underground_generator
+		}
+		exists = owner
+		owner = { has_ascension_perk = ap_arcology_project }
+	}
+	
+	effect = {
+		custom_tooltip = decision_subterranean_expansion_removal_effects
+		hidden_effect = {
+			remove_deposit = d_underground_farm
+			remove_deposit = d_underground_mine
+			remove_deposit = d_underground_generator
+			remove_planet_flag = planet_sub_expanded
+			remove_planet_flag = planet_sub_expanded_2
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+decision_hunting_preserve = {
+	owned_planets_only = yes
+
+	enactment_time = 30
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		NOT = {
+			is_planet_class = pc_city
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+			is_planet_class = pc_hive
+		}
+		NOT = { has_deposit = d_hunting_preserve }
+		exists = owner
+		owner = { has_civic = civic_natural_hunters }
+		OR = {
+			has_deposit = d_dangerous_wildlife_blocker
+			has_planet_flag = has_dangerous_wildlife
+			has_modifier = dangerous_wildlife
+		}
+	}
+	
+	effect = {
+		add_deposit = d_hunting_preserve
+		random_deposit = {
+			limit = {
+				is_deposit_type = d_dangerous_wildlife_blocker
+			}
+			clear_blocker = yes
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 6
+		}
+	}	
+}
+
+decision_remove_hunting_preserve = {
+	owned_planets_only = yes
+	icon = decision_politics
+
+	enactment_time = 120
+	resources = {
+		category = decisions
+		cost = {
+			energy = 200
+		}
+	}
+	
+	potential = {
+		exists = owner
+		OR = {
+			owner = { NOT = { has_civic = civic_natural_hunters } }
+			habitable_structure = yes
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+		has_deposit = d_hunting_preserve
+	}
+	
+	effect = {
+		remove_planet_flag = hunting_preserve_added
+		remove_deposit = d_hunting_preserve
+	}
+	
+	ai_weight = {
+		weight = 0
+	}	
+}
+
+decision_nature_preserve = {
+	owned_planets_only = yes
+	icon = decision_animal_wildlife
+	
+	enactment_time = 30
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_city }
+		NOT = { has_deposit = d_nature_preserve }
+		NOT = { has_global_flag = EcologyMod_active }
+		exists = owner
+		owner = { has_civic = civic_environmentalist }
+	}
+	
+	allow = {
+		free_district_slots > 0
+	}
+	
+	effect = {
+		add_deposit = d_nature_preserve
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 6
+		}
+	}
+}
+
+decision_remove_nature_preserve = {
+	owned_planets_only = yes
+	icon = decision_politics
+	
+	enactment_time = 30
+	resources = {
+		category = decisions
+		cost = {
+			energy = 100
+		}
+	}
+	
+	potential = {
+		exists = owner
+		OR = {
+			owner = { NOT = { has_civic = civic_environmentalist } }
+			habitable_structure = yes
+			is_planet_class = pc_machine
+			is_planet_class = pc_city
+		}
+		has_deposit = d_nature_preserve
+	}
+	
+	effect = {
+		remove_deposit = d_nature_preserve
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_corvee_public_works = {
+	owned_planets_only = yes
+	icon = decision_politics
+	
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_civic = civic_corvee_system }
+		NOT = { has_modifier = corvee_public_works }
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = "corvee_public_works"
+			days = 3600
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				free_district_slots > 0
+				free_building_slots > 0
+				any_pop = {
+					is_unemployed = yes
+				}
+			}
+		}
+	}
+}
+
+# Expel Excess Population
+decision_expel_population_gestalt = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_expel_population
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 10
+		}
+	}
+
+	potential = {
+		owner = { 
+			is_gestalt = yes
+			pop_percentage = {
+				percentage >= 0.20
+				limit = {
+					is_free_resident_pop_gestalt = yes
+				}
+			}
+		}
+		any_pop = { is_free_resident_pop_gestalt = yes }
+	}
+
+
+	allow = {
+		NOT = { has_modifier = planet_population_expelled }
+	}
+
+	effect = {
+		custom_tooltip = decision_expel_population_effects
+		add_modifier = { modifier = "planet_population_expelled" days = 1800 }		
+		hidden_effect = {
+			while = {
+				count = 10
+				random_pop = {
+					limit = {
+						is_free_resident_pop_gestalt = yes
+					}
+					if = {
+						limit = { is_valid_refugee_pop = yes }
+						save_event_target_as = refugee_pop #Must be saved for refugee_pop_effect to work
+						refugee_pop_effect = yes					
+					}
+					else = {
+						kill_pop = yes
+					}
+				}
+			}		
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 0
+			owner = {
+				pop_percentage = {
+					percentage < 0.40
+					limit = {
+						is_free_resident_pop_gestalt = yes
+					}
+				}
+				NOR = {
+					has_valid_civic = civic_harm_hive
+					has_valid_civic = civic_harm_machine
+				}
+			}
+		}
+	}
+}
+
+# Lithoid Hibernation
+decision_hibernating_lithoids = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+		}
+	}
+
+	potential = {
+		owner = { 
+			is_lithoid_empire = yes 
+			NOT = { has_policy_flag = population_controls_not_allowed }
+		}
+	}
+
+
+	allow = {
+		owner = {
+			NOT = { has_policy_flag = population_controls_not_allowed }
+		}
+		NOT = { has_modifier = planet_population_hibernation }
+		any_pop = {
+			is_lithoid = yes
+			is_unemployed = yes
+		}
+	}
+
+	effect = {
+		custom_tooltip = decision_hibernating_lithoids_effects
+		add_modifier = { modifier = "planet_population_hibernation" days = 1800 }		
+		hidden_effect = {
+			while = {
+				count = 10
+				limit = {
+					any_pop = {
+						is_lithoid = yes
+						is_unemployed = yes
+					}
+				}
+				random_pop = {
+					limit = {
+						is_lithoid = yes
+						is_unemployed = yes
+					}
+					kill_pop = yes
+				}
+				add_deposit = d_sleeping_lithoid
+			}		
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_memorialist_excavation = {
+	owned_planets_only = yes
+	icon = decision_archaeological_dig
+	sound = event_dig_site
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	potential = {
+		has_ancrel = yes
+		NOT = { has_planet_flag = memorialist_excavated }
+		OR = {
+			is_planet_class = pc_nuked
+			is_planet_class = pc_irradiated
+			is_planet_class = pc_relic
+		}
+		owner = {
+			OR = {
+				has_valid_civic = civic_memorialist
+				has_valid_civic = civic_memorialist_corp
+				has_valid_civic = civic_hive_memorialist
+				has_valid_civic = civic_machine_memorialist
+			}
+		}
+	}
+	
+	allow = {
+		always = yes
+	}
+	
+	effect = {
+		custom_tooltip = decision_memorialist_excavation_effects_short
+		hidden_effect = {
+			set_planet_flag = memorialist_excavated
+			medium_artifact_reward = yes
+		}
+		create_message = {
+			type = MESSAGE_TYPE_PLANET_PROSPECTED
+			localization = MESSAGE_PLANET_EXCAVATED
+			days = 30
+			target = this
+			variable = {
+				type = name
+				localization = PLANET
+				scope = this
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+	}	
+}
+
+### Ascension ###
+decision_train_telepaths = {
+	owned_planets_only = yes
+	icon = decision_politics
+	
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			sr_zro = 50
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_country_flag = built_one_psi_corps }
+		NOT = { has_planet_flag = built_one_psi_corps }
+	}
+	
+	allow = {
+		NOT = { has_modifier = resort_colony }
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	effect = {
+		custom_tooltip = decision_trait_telepaths_effects_tooltip
+		hidden_effect = {
+			set_planet_flag = built_one_psi_corps
+		}
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			planet_crime < 1
+			planet_stability > 90
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_pop = {
+					OR = {
+						has_trait = trait_latent_psionic
+						has_trait = trait_psionic
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 10
+			or = {
+				planet_crime > 10
+				planet_stability < 50			
+			}
+		}
+	}
+}

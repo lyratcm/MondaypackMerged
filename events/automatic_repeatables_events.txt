@@ -1,0 +1,230 @@
+namespace = automatic_repeatables
+
+# On monthly pulse country
+# this = country
+country_event = {
+    id = automatic_repeatables.1
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    
+    immediate = {
+        if = {
+            limit = {
+                SLEX_not_installed = yes
+            }
+            if = {
+                limit = {
+                    NOT = { has_country_flag = AR_SLEX_not_installed }
+                }
+                set_country_flag = AR_SLEX_not_installed
+                country_event = { id = automatic_repeatables.99 days = 3 }
+            }
+        } else = {
+            remove_country_flag = AR_SLEX_not_installed
+            country_event = { id = automatic_repeatables.2 days = 7 }
+            if = {
+                limit = {
+                    check_variable = { which = AR_priority_physics_0 value = 0 }
+                    check_variable = { which = AR_priority_physics_1 value = 0 }
+                }
+                AR_initalize_weights = yes
+                AR_initalize_selected = yes
+            }
+        }
+    }
+}
+
+# On game start country
+country_event = {
+    id = automatic_repeatables.100
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    
+    immediate = {
+        set_country_flag = AR_pick_advanced
+        country_event = { id = automatic_repeatables.3 days = 15 }
+    }
+}
+
+# On the 8th of each month
+# Check and research repeatables if possible
+country_event = {
+    id = automatic_repeatables.2
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        is_ai = no
+    }
+    
+    immediate = {
+        # Get the tech/tradition cost multiplier
+        get_galaxy_setup_value = {
+            which = AR_research_cost_multiplier
+            setting = tech_costs_scale
+        }
+        # Get the sprawl over admin cap
+        if = {
+            limit = {
+                empire_sprawl_over_cap >= 0x100
+            }
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = empire_sprawl_over_cap
+                VARIABLE = AR_sprawl
+                ROUNDING_ZEROES = 0
+            }
+        } else = {
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = empire_sprawl_over_cap
+                VARIABLE = AR_sprawl
+            }
+        }
+        if = { limit = { check_variable = { which = AR_sprawl value < 0 } }
+            set_variable = { which = AR_sprawl value = 0 }
+        }
+        # Multiply by 0.04
+        multiply_variable = { which = AR_sprawl value = 0.004 }
+        # if corporate, add 50%. If machine, add 100%. If hivemind, reduce 25%
+        if = { limit = { has_authority = auth_corporate }
+            multiply_variable = { which = AR_sprawl value = 1.5 }
+        } else_if = { limit = { has_authority = auth_machine_intelligence }
+            multiply_variable = { which = AR_sprawl value = 2 }
+        } else_if = { limit = { has_authority = auth_hive_mind }
+            multiply_variable = { which = AR_sprawl value = 0.75 }
+        }
+        # Add 1
+        change_variable = { which = AR_sprawl value = 1 }
+        # Now get the stored physic, society and engineering
+        if = {
+            limit = {
+                stored_physics_points >= 0x100000
+            }
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_physics_points
+                VARIABLE = AR_physic_stocked
+                ROUNDING_ZEROES = 00000
+            }
+        } else = {
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_physics_points
+                VARIABLE = AR_physic_stocked
+                ROUNDING_ZEROES = 000
+            }
+        }
+        if = {
+            limit = {
+                stored_society_points >= 0x100000
+            }
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_society_points
+                VARIABLE = AR_society_stocked
+                ROUNDING_ZEROES = 00000
+            }
+        } else = {
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_society_points
+                VARIABLE = AR_society_stocked
+                ROUNDING_ZEROES = 000
+            }
+        }
+        if = {
+            limit = {
+                stored_engineering_points >= 0x100000
+            }
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_engineering_points
+                VARIABLE = AR_engineering_stocked
+                ROUNDING_ZEROES = 00000
+            }
+        } else = {
+            SLEX_get_custom_parameter = {
+                CONDITION_NAME = stored_engineering_points
+                VARIABLE = AR_engineering_stocked
+                ROUNDING_ZEROES = 000
+            }
+        }
+        # Check for tech cost multiplier
+        # Not needed anymore, keep it for legacy purpose in case someone updated the mod on a playthrough
+        if = { limit = { check_variable = { which = AR_research_cost_multiplier value <= 0 } }
+            AR_get_research_cost_multiplier = yes
+        }
+        if = {
+            limit = {
+                has_country_flag = AR_pick_advanced
+            }
+            AR_select_repeatable_physics_advanced = yes
+            AR_select_repeatable_society_advanced = yes
+            AR_select_repeatable_engineering_advanced = yes
+        } else_if = {
+            limit = {
+                has_country_flag = AR_pick_random
+            }
+            AR_select_repeatable_physics_random = yes
+            AR_select_repeatable_society_random = yes
+            AR_select_repeatable_engineering_random = yes
+        } else_if = {
+            limit = {
+                has_country_flag = AR_pick_cheapest
+            }
+            AR_select_repeatable_physics_cheapest = yes
+            AR_select_repeatable_society_cheapest = yes
+            AR_select_repeatable_engineering_cheapest = yes
+        } else = {
+            AR_upgrade_if_possible_physics = yes
+            AR_upgrade_if_possible_society = yes
+            AR_upgrade_if_possible_engineering = yes
+        }
+    }
+}
+
+# On game start + 15 days
+# Welcome screen? Explains the mod
+country_event = {
+    id = automatic_repeatables.3
+    title = "automatic_repeatables.3.name"
+    desc = "automatic_repeatables.3.desc"
+    picture = GFX_evt_ship_in_orbit
+    is_triggered_only = yes
+    
+    option = { # Awesome
+        name = automatic_repeatables.3.awesome
+    }
+}
+
+# SLEX not installed
+country_event = {
+    id = automatic_repeatables.99
+    title = "automatic_repeatables.99.name"
+    desc = "automatic_repeatables.99.desc"
+    picture = GFX_evt_ship_in_orbit
+    is_triggered_only = yes
+    
+    option = {
+        name = automatic_repeatables.99.okay
+    }
+}
+
+# Dummy event for vscode
+country_event = {
+    id = automatic_repeatables.1001
+    hide_window = yes
+    is_triggered_only = yes
+    
+    immediate = {
+        set_global_flag = AR_initialized
+        set_country_flag = AR_shuffle_tech_physics
+        set_country_flag = AR_shuffle_tech_society
+        set_country_flag = AR_shuffle_tech_engineering
+        set_variable = { which = AR_tech_id value = 1 }
+        set_variable = { which = AR_physic_stocked value = 1 }
+        set_variable = { which = AR_society_stocked value = 1 }
+        set_variable = { which = AR_engineering_stocked value = 1 }
+        set_variable = { which = AR_research_cost_multiplier value = 1 }
+        set_variable = { which = AR_research_speed_multiplier value = 1 }
+    }
+}

@@ -1,0 +1,223 @@
+AR_update_physics_flags = {
+    if = { limit = { has_country_flag = AR_energy_output }
+        set_variable = {
+            which = AR_selected_physics_tech
+            value = 0
+        }
+    } else_if = { limit = { has_country_flag = AR_shield_output }
+        set_variable = {
+            which = AR_selected_physics_tech
+            value = 1
+        }
+    } else_if = { limit = { has_country_flag = AR_energy_damage }
+        set_variable = {
+            which = AR_selected_physics_tech
+            value = 2
+        }
+    } else_if = { limit = { has_country_flag = AR_energy_fire_rate }
+        set_variable = {
+            which = AR_selected_physics_tech
+            value = 3
+        }
+    } else_if = { limit = { has_country_flag = AR_building_cost }
+        set_variable = {
+            which = AR_selected_physics_tech
+            value = 4
+        }
+    }
+    remove_country_flag = AR_energy_output
+    remove_country_flag = AR_shield_output
+    remove_country_flag = AR_energy_damage
+    remove_country_flag = AR_energy_fire_rate
+    remove_country_flag = AR_building_cost
+}
+
+AR_update_society_flags = {
+    if = { limit = { has_country_flag = AR_food_output }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 0
+        }
+    } else_if = { limit = { has_country_flag = AR_system_cap }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 1
+        }
+    } else_if = { limit = { has_country_flag = AR_edict_length }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 2
+        }
+    } else_if = { limit = { has_country_flag = AR_army_damage }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 3
+        }
+    } else_if = { limit = { has_country_flag = AR_army_health }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 4
+        }
+    } else_if = { limit = { has_country_flag = AR_leader_lifespan }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 5
+        }
+    } else_if = { limit = { has_country_flag = AR_naval_cap }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 6
+        }
+    } else_if = { limit = { has_country_flag = AR_command_limit }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 7
+        }
+    } else_if = { limit = { has_country_flag = AR_starbase_capacity }
+        set_variable = {
+            which = AR_selected_society_tech
+            value = 8
+        }
+    }
+    remove_country_flag = AR_food_output
+    remove_country_flag = AR_system_cap
+    remove_country_flag = AR_edict_length
+    remove_country_flag = AR_army_damage
+    remove_country_flag = AR_army_health
+    remove_country_flag = AR_leader_lifespan
+    remove_country_flag = AR_naval_cap
+    remove_country_flag = AR_command_limit
+    remove_country_flag = AR_starbase_capacity
+}
+
+AR_update_engineering_flags = {
+    if = { limit = { has_country_flag = AR_minerals_output }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 0
+        }
+    } else_if = { limit = { has_country_flag = AR_station_damage }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 1
+        }
+    } else_if = { limit = { has_country_flag = AR_station_health }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 2
+        }
+    } else_if = { limit = { has_country_flag = AR_armor_output }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 3
+        }
+    } else_if = { limit = { has_country_flag = AR_explosive_damage }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 4
+        }
+    } else_if = { limit = { has_country_flag = AR_explosive_fire_rate }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 5
+        }
+    } else_if = { limit = { has_country_flag = AR_kinetic_damage }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 6
+        }
+    } else_if = { limit = { has_country_flag = AR_kinetic_fire_rate }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 7
+        }
+    } else_if = { limit = { has_country_flag = AR_strike_craft_damage }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 8
+        }
+    } else_if = { limit = { has_country_flag = AR_strike_craft_fire_rate }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 9
+        }
+    } else_if = { limit = { has_country_flag = AR_building_time }
+        set_variable = {
+            which = AR_selected_engineering_tech
+            value = 10
+        }
+    }
+    remove_country_flag = AR_minerals_output
+    remove_country_flag = AR_station_damage
+    remove_country_flag = AR_station_health
+    remove_country_flag = AR_armor_output
+    remove_country_flag = AR_explosive_damage
+    remove_country_flag = AR_explosive_fire_rate
+    remove_country_flag = AR_kinetic_damage
+    remove_country_flag = AR_kinetic_fire_rate
+    remove_country_flag = AR_strike_craft_damage
+    remove_country_flag = AR_strike_craft_fire_rate
+    remove_country_flag = AR_building_time
+}
+
+AR_update_physics_levels_to_lists = {
+    set_variable = { which = AR_physics_tech_levels_0 value = AR_energy_output }
+    set_variable = { which = AR_physics_tech_levels_1 value = AR_shield_output }
+    set_variable = { which = AR_physics_tech_levels_2 value = AR_energy_damage }
+    set_variable = { which = AR_physics_tech_levels_3 value = AR_energy_fire_rate }
+    set_variable = { which = AR_physics_tech_levels_4 value = AR_building_cost }
+    set_variable = { which = AR_physics_tech_levels_length value = 5 }
+    set_variable = { which = AR_energy_output value = 0 }
+    set_variable = { which = AR_shield_output value = 0 }
+    set_variable = { which = AR_energy_damage value = 0 }
+    set_variable = { which = AR_energy_fire_rate value = 0 }
+    set_variable = { which = AR_building_cost value = 0 }
+}
+
+AR_update_society_levels_to_lists = {
+    set_variable = { which = AR_society_tech_levels_0 value = AR_food_output }
+    set_variable = { which = AR_society_tech_levels_1 value = AR_system_cap }
+    set_variable = { which = AR_society_tech_levels_2 value = AR_edict_length }
+    set_variable = { which = AR_society_tech_levels_3 value = AR_army_damage }
+    set_variable = { which = AR_society_tech_levels_4 value = AR_army_health }
+    set_variable = { which = AR_society_tech_levels_5 value = AR_leader_lifespan }
+    set_variable = { which = AR_society_tech_levels_6 value = AR_naval_cap }
+    set_variable = { which = AR_society_tech_levels_7 value = AR_command_limit }
+    set_variable = { which = AR_society_tech_levels_8 value = AR_starbase_capacity }
+    set_variable = { which = AR_society_tech_levels_length value = 9 }
+    set_variable = { which = AR_food_output value = 0 }
+    set_variable = { which = AR_system_cap value = 0 }
+    set_variable = { which = AR_edict_length value = 0 }
+    set_variable = { which = AR_army_damage value = 0 }
+    set_variable = { which = AR_army_health value = 0 }
+    set_variable = { which = AR_leader_lifespan value = 0 }
+    set_variable = { which = AR_naval_cap value = 0 }
+    set_variable = { which = AR_command_limit value = 0 }
+    set_variable = { which = AR_starbase_capacity value = 0 }
+}
+
+AR_update_engineering_levels_to_lists = {
+    set_variable = { which = AR_engineering_tech_levels_0 value = AR_minerals_output }
+    set_variable = { which = AR_engineering_tech_levels_1 value = AR_station_damage }
+    set_variable = { which = AR_engineering_tech_levels_2 value = AR_station_health }
+    set_variable = { which = AR_engineering_tech_levels_3 value = AR_armor_output }
+    set_variable = { which = AR_engineering_tech_levels_4 value = AR_explosive_damage }
+    set_variable = { which = AR_engineering_tech_levels_5 value = AR_explosive_fire_rate }
+    set_variable = { which = AR_engineering_tech_levels_6 value = AR_kinetic_damage }
+    set_variable = { which = AR_engineering_tech_levels_7 value = AR_kinetic_fire_rate }
+    set_variable = { which = AR_engineering_tech_levels_8 value = AR_strike_craft_damage }
+    set_variable = { which = AR_engineering_tech_levels_9 value = AR_strike_craft_fire_rate }
+    set_variable = { which = AR_engineering_tech_levels_a value = AR_building_time }
+    set_variable = { which = AR_engineering_tech_levels_length value = 11 }
+    set_variable = { which = AR_minerals_output value = 0 }
+    set_variable = { which = AR_station_damage value = 0 }
+    set_variable = { which = AR_station_health value = 0 }
+    set_variable = { which = AR_armor_output value = 0 }
+    set_variable = { which = AR_explosive_damage value = 0 }
+    set_variable = { which = AR_explosive_fire_rate value = 0 }
+    set_variable = { which = AR_kinetic_damage value = 0 }
+    set_variable = { which = AR_kinetic_fire_rate value = 0 }
+    set_variable = { which = AR_strike_craft_damage value = 0 }
+    set_variable = { which = AR_strike_craft_fire_rate value = 0 }
+    set_variable = { which = AR_building_time value = 0 }
+}

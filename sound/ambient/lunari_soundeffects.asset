@@ -1,0 +1,33 @@
+
+########## PLANET VIEW AMBIENT #########
+soundeffect = {
+	name = pc_lunari_shielded
+	volume = 0.2
+	loop = no
+	sounds = {
+		sound = drow_planet_01
+		sound = drow_planet_02
+		sound = drow_planet_03
+	} 
+	max_audible = 1
+	max_audible_behaviour = fail	
+}
+
+soundeffect = {
+	name = pc_lunari_arctic
+	volume = 0.4
+	loop = no
+	sounds = {
+		sound = pc_lunari_arctic_01
+		sound = pc_lunari_arctic_02
+		sound = pc_lunari_arctic_03
+		sound = pc_lunari_arctic_04
+		sound = pc_lunari_arctic_05
+		sound = pc_lunari_arctic_06
+		sound = pc_lunari_arctic_07
+		sound = pc_lunari_arctic_08
+	} 
+	playbackrate_random_offset = { -10 20.0 }
+	max_audible = 1
+	max_audible_behaviour = fail	
+}

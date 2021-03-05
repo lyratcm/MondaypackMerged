@@ -1,0 +1,44 @@
+namespace = speeddial_mod
+
+# need to bounce to get inherited scopes right
+#
+#
+
+# bounce mercs
+country_event = {
+	id = speeddial_mod.100
+	is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    from = {
+      country_event = { id = mercMenu.100 }
+    }
+  }  
+}
+
+# bounce hfe - pirates
+country_event = {
+	id = speeddial_mod.200
+	is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    from = {
+      country_event = { id =  human_fallen_empires_pirate.100 }
+    }
+  }  
+}
+# bounce hfe - ??? station
+country_event = {
+	id = speeddial_mod.201
+	is_triggered_only = yes
+  hide_window = yes
+
+  immediate = {
+    from = {
+      country_event = { id =  human_fallen_empires.710 }
+    }
+  }  
+}
+

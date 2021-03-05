@@ -1,0 +1,27 @@
+
+on_policy_changed = {
+	events = {
+		nnnethic_event.3
+	}
+}
+
+on_tech_increased = {
+	events = {
+		shared_destiny.1
+		shared_destiny.2
+		shared_destiny.3
+		shared_destiny.4
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		nnnethic_event.1
+	}
+}
+
+on_month_pulse = {
+	events = {
+		eap_imperial_prerogative.1
+	}
+}

@@ -1,0 +1,2934 @@
+
+# RELIC
+special_project = {
+	key = "apsr_terminal_site_relic"
+	tech_department = engineering_technology	
+	days_to_research = 1000
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	
+	on_success = {
+		ship_event = { id = apsr_enclave.209 }
+	}
+
+	on_fail = { }
+}
+special_project = {
+	key = "apsr_terminal_site_relic_fallen"
+	tech_department = engineering_technology	
+	days_to_research = 1000
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 5
+	}
+	
+	on_success = {
+		ship_event = { id = apsr_enclave.209 }
+	}
+
+	on_fail = { }
+}
+
+# 01
+special_project = {
+	key = "apsr_terminal_site_01"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site01_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.301 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site01_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.201 }
+			}
+			set_global_flag = apsr_terminal_site01_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 02
+special_project = {
+	key = "apsr_terminal_site_02"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site02_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.302 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site02_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.202 }
+			}
+			set_global_flag = apsr_terminal_site02_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 03
+special_project = {
+	key = "apsr_terminal_site_03"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site03_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.303 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site03_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.203 }
+			}
+			set_global_flag = apsr_terminal_site03_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 04
+special_project = {
+	key = "apsr_terminal_site_04"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site04_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.304 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site04_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.204 }
+			}
+			set_global_flag = apsr_terminal_site04_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 05
+special_project = {
+	key = "apsr_terminal_site_05"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site05_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.305 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site05_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.205 }
+			}
+			set_global_flag = apsr_terminal_site05_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 06
+special_project = {
+	key = "apsr_terminal_site_06"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site06_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.306 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site06_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.206 }
+			}
+			set_global_flag = apsr_terminal_site06_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 07
+special_project = {
+	key = "apsr_terminal_site_07"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site07_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.307 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site07_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.207 }
+			}
+			set_global_flag = apsr_terminal_site07_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 08
+special_project = {
+	key = "apsr_terminal_site_08"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site08_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.308 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site08_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.208 }
+			}
+			set_global_flag = apsr_terminal_site08_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 09
+special_project = {
+	key = "apsr_terminal_site_09"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site09_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.309 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site09_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.209 }
+			}
+			set_global_flag = apsr_terminal_site09_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 10
+special_project = {
+	key = "apsr_terminal_site_10"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site10_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.310 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site10_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.210 }
+			}
+			set_global_flag = apsr_terminal_site10_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 11
+special_project = {
+	key = "apsr_terminal_site_11"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site11_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.311 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site11_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.211 }
+			}
+			set_global_flag = apsr_terminal_site11_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 12
+special_project = {
+	key = "apsr_terminal_site_12"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site12_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.312 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site12_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.212 }
+			}
+			set_global_flag = apsr_terminal_site12_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 13
+special_project = {
+	key = "apsr_terminal_site_13"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site13_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.313 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site13_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.213 }
+			}
+			set_global_flag = apsr_terminal_site13_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 14
+special_project = {
+	key = "apsr_terminal_site_14"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site14_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.314 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site14_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.214 }
+			}
+			set_global_flag = apsr_terminal_site14_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 15
+special_project = {
+	key = "apsr_terminal_site_15"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site15_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.315 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site15_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.215 }
+			}
+			set_global_flag = apsr_terminal_site15_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 16
+special_project = {
+	key = "apsr_terminal_site_16"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site16_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.316 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site16_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.216 }
+			}
+			set_global_flag = apsr_terminal_site16_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 17
+special_project = {
+	key = "apsr_terminal_site_17"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site17_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.317 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site17_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.217 }
+			}
+			set_global_flag = apsr_terminal_site17_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 18
+special_project = {
+	key = "apsr_terminal_site_18"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site18_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.318 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site18_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.218 }
+			}
+			set_global_flag = apsr_terminal_site18_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 19
+special_project = {
+	key = "apsr_terminal_site_19"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site19_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.319 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site19_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.219 }
+			}
+			set_global_flag = apsr_terminal_site19_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 20
+special_project = {
+	key = "apsr_terminal_site_20"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site20_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.320 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site20_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.220 }
+			}
+			set_global_flag = apsr_terminal_site20_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 21
+special_project = {
+	key = "apsr_terminal_site_21"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site21_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.321 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site21_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.221 }
+			}
+			set_global_flag = apsr_terminal_site21_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 22
+special_project = {
+	key = "apsr_terminal_site_22"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site22_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.322 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site22_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.222 }
+			}
+			set_global_flag = apsr_terminal_site22_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 23
+special_project = {
+	key = "apsr_terminal_site_23"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site23_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.323 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site23_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.223 }
+			}
+			set_global_flag = apsr_terminal_site23_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 24
+special_project = {
+	key = "apsr_terminal_site_24"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site24_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.324 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site24_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.224 }
+			}
+			set_global_flag = apsr_terminal_site24_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 25
+special_project = {
+	key = "apsr_terminal_site_25"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site25_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.325 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site25_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.225 }
+			}
+			set_global_flag = apsr_terminal_site25_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 26
+special_project = {
+	key = "apsr_terminal_site_26"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site26_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.326 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site26_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.226 }
+			}
+			set_global_flag = apsr_terminal_site26_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 27
+special_project = {
+	key = "apsr_terminal_site_27"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site27_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.327 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site27_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.227 }
+			}
+			set_global_flag = apsr_terminal_site27_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 28
+special_project = {
+	key = "apsr_terminal_site_28"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site28_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.328 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site28_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.228 }
+			}
+			set_global_flag = apsr_terminal_site28_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 29
+special_project = {
+	key = "apsr_terminal_site_29"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site29_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.329 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site29_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.229 }
+			}
+			set_global_flag = apsr_terminal_site29_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 30
+special_project = {
+	key = "apsr_terminal_site_30"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site30_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.330 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site30_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.230 }
+			}
+			set_global_flag = apsr_terminal_site30_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 31
+special_project = {
+	key = "apsr_terminal_site_31"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site31_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.331 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site31_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.231 }
+			}
+			set_global_flag = apsr_terminal_site31_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 32
+special_project = {
+	key = "apsr_terminal_site_32"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site32_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.332 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site32_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.232 }
+			}
+			set_global_flag = apsr_terminal_site32_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 33
+special_project = {
+	key = "apsr_terminal_site_33"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site33_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.333 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site33_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.233 }
+			}
+			set_global_flag = apsr_terminal_site33_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 34
+special_project = {
+	key = "apsr_terminal_site_34"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site34_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.334 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site34_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.234 }
+			}
+			set_global_flag = apsr_terminal_site34_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 35
+special_project = {
+	key = "apsr_terminal_site_35"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site35_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.335 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site35_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.235 }
+			}
+			set_global_flag = apsr_terminal_site35_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 36
+special_project = {
+	key = "apsr_terminal_site_36"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site36_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.336 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site36_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.236 }
+			}
+			set_global_flag = apsr_terminal_site36_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 37
+special_project = {
+	key = "apsr_terminal_site_37"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site37_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.337 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site37_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.237 }
+			}
+			set_global_flag = apsr_terminal_site37_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 38
+special_project = {
+	key = "apsr_terminal_site_38"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site38_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.338 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site38_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.238 }
+			}
+			set_global_flag = apsr_terminal_site38_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 39
+special_project = {
+	key = "apsr_terminal_site_39"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site39_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.339 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site39_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.239 }
+			}
+			set_global_flag = apsr_terminal_site39_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 40
+special_project = {
+	key = "apsr_terminal_site_40"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site40_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.340 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site40_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.240 }
+			}
+			set_global_flag = apsr_terminal_site40_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 41
+special_project = {
+	key = "apsr_terminal_site_41"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site41_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.341 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site41_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.241 }
+			}
+			set_global_flag = apsr_terminal_site41_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 42
+special_project = {
+	key = "apsr_terminal_site_42"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site42_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.342 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site42_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.242 }
+			}
+			set_global_flag = apsr_terminal_site42_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 43
+special_project = {
+	key = "apsr_terminal_site_43"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site43_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.343 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site43_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.243 }
+			}
+			set_global_flag = apsr_terminal_site43_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 44
+special_project = {
+	key = "apsr_terminal_site_44"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site44_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.344 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site44_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.244 }
+			}
+			set_global_flag = apsr_terminal_site44_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 45
+special_project = {
+	key = "apsr_terminal_site_45"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site45_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.345 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site45_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.245 }
+			}
+			set_global_flag = apsr_terminal_site45_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 46
+special_project = {
+	key = "apsr_terminal_site_46"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site46_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.346 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site46_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.246 }
+			}
+			set_global_flag = apsr_terminal_site46_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 47
+special_project = {
+	key = "apsr_terminal_site_47"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site47_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.347 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site47_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.247 }
+			}
+			set_global_flag = apsr_terminal_site47_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 48
+special_project = {
+	key = "apsr_terminal_site_48"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site48_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.348 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site48_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.248 }
+			}
+			set_global_flag = apsr_terminal_site48_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 49
+special_project = {
+	key = "apsr_terminal_site_49"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site49_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.349 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site49_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.249 }
+			}
+			set_global_flag = apsr_terminal_site49_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 50
+special_project = {
+	key = "apsr_terminal_site_50"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site50_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.350 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site50_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.250 }
+			}
+			set_global_flag = apsr_terminal_site50_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 51
+special_project = {
+	key = "apsr_terminal_site_51"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site51_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.351 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site51_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.251 }
+			}
+			set_global_flag = apsr_terminal_site51_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 52
+special_project = {
+	key = "apsr_terminal_site_52"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site52_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.352 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site52_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.252 }
+			}
+			set_global_flag = apsr_terminal_site52_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 53
+special_project = {
+	key = "apsr_terminal_site_53"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site53_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.353 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site53_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.253 }
+			}
+			set_global_flag = apsr_terminal_site53_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 54
+special_project = {
+	key = "apsr_terminal_site_54"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site54_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.354 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site54_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.254 }
+			}
+			set_global_flag = apsr_terminal_site54_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 55
+special_project = {
+	key = "apsr_terminal_site_55"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site55_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.355 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site55_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.255 }
+			}
+			set_global_flag = apsr_terminal_site55_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 56
+special_project = {
+	key = "apsr_terminal_site_56"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site56_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.356 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site56_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.256 }
+			}
+			set_global_flag = apsr_terminal_site56_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 57
+special_project = {
+	key = "apsr_terminal_site_57"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site57_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.357 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site57_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.257 }
+			}
+			set_global_flag = apsr_terminal_site57_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 58
+special_project = {
+	key = "apsr_terminal_site_58"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site58_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.358 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site58_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.258 }
+			}
+			set_global_flag = apsr_terminal_site58_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 59
+special_project = {
+	key = "apsr_terminal_site_59"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site59_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.359 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site59_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.259 }
+			}
+			set_global_flag = apsr_terminal_site59_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 60
+special_project = {
+	key = "apsr_terminal_site_60"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site60_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.360 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site60_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.260 }
+			}
+			set_global_flag = apsr_terminal_site60_clear
+			fleet = {
+				kill_leader = { type = scientist show_notification = yes}
+				destroy_fleet = this
+			}
+		}
+	}
+
+	on_fail = { }
+}
+
+# 61
+special_project = {
+	key = "apsr_terminal_site_61"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site61_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.361 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site61_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.261 }
+			}
+			set_global_flag = apsr_terminal_site61_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 62
+special_project = {
+	key = "apsr_terminal_site_62"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site62_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.362 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site62_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.262 }
+			}
+			set_global_flag = apsr_terminal_site62_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 63
+special_project = {
+	key = "apsr_terminal_site_63"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site63_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.363 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site63_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.263 }
+			}
+			set_global_flag = apsr_terminal_site63_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 63a
+special_project = {
+	key = "apsr_terminal_site_63a"
+	tech_department = engineering_technology	
+	days_to_research = 360
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = apsr_terminal.96301 }
+		}
+	}
+
+	on_fail = { }
+}
+
+# 64
+special_project = {
+	key = "apsr_terminal_site_64"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site64_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.364 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site64_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.264 }
+			}
+			set_global_flag = apsr_terminal_site64_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 64a
+special_project = {
+	key = "apsr_terminal_site_64a"
+	tech_department = engineering_technology	
+	days_to_research = 360
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = apsr_terminal.96401 }
+		}
+	}
+
+	on_fail = { }
+}
+
+# 65
+special_project = {
+	key = "apsr_terminal_site_65"
+	tech_department = engineering_technology	
+	days_to_research = 720
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		if = {
+			limit = {
+				has_global_flag = apsr_terminal_site65_clear
+			}
+			owner = {
+				country_event = { id = apsr_terminal.365 }
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					has_global_flag = apsr_terminal_site65_clear
+				}
+			}
+			owner = {
+				country_event = { id = apsr_terminal.265 }
+			}
+			set_global_flag = apsr_terminal_site65_clear
+		}
+	}
+
+	on_fail = { }
+}
+
+# 65a
+special_project = {
+	key = "apsr_terminal_site_65a"
+	tech_department = engineering_technology	
+	days_to_research = 360
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		owner = {
+			country_event = { id = apsr_terminal.96501 }
+		}
+	}
+
+	on_fail = { }
+}
+
+# 65b
+special_project = {
+	key = "apsr_terminal_site_65b"
+	tech_department = engineering_technology	
+	days_to_research = 360
+	timelimit = -1
+	picture = GFX_evt_ship_in_orbit 
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		skill = 3
+	}
+	
+	on_success = {
+		random_list = {
+			50 = {
+				owner = {
+					country_event = { id = apsr_terminal.96502 }
+				}
+			}
+			25 = {
+				owner = {
+					country_event = { id = apsr_terminal.96503 }
+				}
+			}
+			25 = {
+				owner = {
+					country_event = { id = apsr_terminal.96504 }
+				}
+			}	
+		}
+	}
+
+	on_fail = { }
+}

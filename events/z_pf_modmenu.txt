@@ -1,0 +1,822 @@
+namespace = z_pf_modmenu
+
+#_[z_pf_提示]
+#_[z_pf_dec]
+#_[z_pf_全局设置]
+
+
+
+
+###_[z_pf_提示]	###################################################
+
+#_z_pf_tips	工作检测-关闭
+country_event = {
+	id = z_pf_modmenu.101
+	title = z_pf_tips_job_checking_off
+	desc = z_pf_tips_job_checking_off_desc
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_tips"
+	
+	#_关闭
+	option = {
+		name = z_pf_tips_confirm
+        custom_gui = "z_mm_button_evt_sub_green"
+	}
+}
+#_z_pf_tips	工作检测-自动
+country_event = {
+	id = z_pf_modmenu.102
+	title = z_pf_tips_job_checking_automatic
+	desc = z_pf_tips_job_checking_automatic_desc
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_tips"
+	
+	#_关闭
+	option = {
+		name = z_pf_tips_confirm
+        custom_gui = "z_mm_button_evt_sub_green"
+	}
+}
+#_z_pf_tips	阶级固化-开启
+country_event = {
+	id = z_pf_modmenu.103
+	title = z_pf_tips_solidification
+	desc = z_pf_tips_solidification_desc
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_tips"
+	
+	#_关闭
+	option = {
+		name = z_pf_tips_confirm
+        custom_gui = "z_mm_button_evt_sub_green"
+	}
+}
+#_z_pf_tips	杀灭
+country_event = {
+	id = z_pf_modmenu.104
+	title = z_pf_tips_uep_clean
+	desc = z_pf_tips_uep_clean_desc
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_tips"
+	
+	#_关闭
+	option = {
+		name = z_pf_tips_confirm
+        custom_gui = "z_mm_button_evt_sub_green"
+	}
+}
+
+
+
+
+
+
+
+
+###_[z_pf_dec]	星球细节设置	###################################################
+planet_event = {
+	id = z_pf_modmenu.1
+	title = z_pf_dec_title
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_dec"
+	
+	#_关闭
+	option = {
+		name = z_pf_dec_exit
+		trigger = { NOT = { has_global_flag = z_modmenu_installed } }
+		hidden_effect = {
+			clear_global_event_target = z_pf_tgt_plnt_dec
+		}
+	}
+	#_关闭-MODMENU
+	option = {
+		name = z_pf_dec_exit_mm
+        custom_gui = "z_mm_button_evt_sub_red"
+		trigger = { has_global_flag = z_modmenu_installed }
+		hidden_effect = {
+			clear_global_event_target = z_pf_tgt_plnt_dec
+		}
+	}
+	#_测试---加人口
+	option = {
+		name = z_pf_dec_test_add_pop
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { always = no }
+		hidden_effect = {
+			while = {
+				count = 100
+				create_pop = {
+					species = owner
+					ethos = owner
+				}
+			}
+			planet_event = { id = z_pf_modmenu.1 }
+		}
+	}
+}
+
+
+
+
+
+
+
+
+###_[z_pf_全局设置]	###################################################
+#_[z_modmenu]	handle_excess_pops/handle_excess_pops_AI/handle_excess_pops_PC
+country_event = {
+	id = z_pf_modmenu.11
+	title = z_performance_title
+	picture = GFX_evt_z_performance
+	is_triggered_only = yes
+	
+	diplomatic = yes
+	custom_gui = "z_pf_gui_modmenu"
+	
+	desc = {
+		trigger = {
+			#_总人口数
+			success_text = {
+				text = z_pf2_title_desc_pop_non
+				check_variable = { which = z_galaxy_pop_var value = 0 }
+			}
+			success_text = {
+				text = z_pf2_title_desc_pop
+				check_variable = { which = z_galaxy_pop_var value > 0 }
+			}
+			#_失业人口数
+			success_text = {
+				text = z_pf2_title_desc_unemployed_non
+				check_variable = { which = z_galaxy_pop_unemployed_var value = 0 }
+			}
+			success_text = {
+				text = z_pf2_title_desc_unemployed
+				check_variable = { which = z_galaxy_pop_unemployed_var value > 0 }
+			}
+			#_main
+			success_text = {
+				text = z_performance_title_desc
+				has_global_flag = z_performance_installed
+			}
+		}
+	}
+	
+	#_关闭
+	option = {
+		name = z_modmenu_return
+		custom_tooltip = z_modmenu_return_desc
+        custom_gui = "z_mm_button_evt_option_red"
+		hidden_effect = {
+			z_mm_unlock_setting_panel = yes
+			set_variable = { which = z_galaxy_pop_var value = 0 }
+			set_variable = { which = z_galaxy_pop_unemployed_var value = 0 }
+		}
+	}
+	
+	immediate = {
+		set_variable = { which = z_galaxy_pop_var value = 0 }
+		set_variable = { which = z_galaxy_pop_unemployed_var value = 0 }
+		every_country = {
+			limit = { num_pops > 0 }
+			every_owned_pop = {
+				if = {
+					limit = { is_unemployed = yes }
+					ROOT = {
+						change_variable = { which = z_galaxy_pop_var value = 1 }
+						change_variable = { which = z_galaxy_pop_unemployed_var value = 1 }
+					}
+				}
+				else = {
+					ROOT = { change_variable = { which = z_galaxy_pop_var value = 1 } }
+				}
+			}
+		}
+	}
+
+	###_job checking and automatic degrade	######################################
+	#_vanilla
+#	option = {
+#		name = z_performance.11.a
+#		custom_tooltip = z_performance.11.a.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { has_global_flag = z_performance_always }
+#		hidden_effect = {
+#			remove_global_flag = z_performance_always
+#			set_global_flag = z_performance_high
+#			
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	#_high
+#	option = {
+#		name = z_performance.11.b
+#		custom_tooltip = z_performance.11.b.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { has_global_flag = z_performance_high }
+#		hidden_effect = {
+#			remove_global_flag = z_performance_high
+#			set_global_flag = z_performance_mid
+#			
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	#_mid
+#	option = {
+#		name = z_performance.11.c
+#		custom_tooltip = z_performance.11.c.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { has_global_flag = z_performance_mid }
+#		hidden_effect = {
+#			
+#			remove_global_flag = z_performance_mid
+#			set_global_flag = z_performance_low
+#			
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	#_low
+#	option = {
+#		name = z_performance.11.e
+#		custom_tooltip = z_performance.11.e.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { has_global_flag = z_performance_low }
+#		hidden_effect = {
+#			remove_global_flag = z_performance_low
+#			set_global_flag = z_performance_always
+#			
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	
+	#_uep check
+#	option = {
+#		name = z_performance.11.j1
+#		custom_tooltip = z_performance.11.j1.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { has_global_flag = z_pf_uep_check_disabled }
+#		hidden_effect = {
+#			remove_global_flag = z_pf_uep_check_disabled
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+#	option = {
+#		name = z_performance.11.j2
+#		custom_tooltip = z_performance.11.j2.tooltip
+#        custom_gui = "z_mm_button_evt_option_normal"
+#		trigger = { NOT = { has_global_flag = z_pf_uep_check_disabled } }
+#		hidden_effect = {
+#			set_global_flag = z_pf_uep_check_disabled
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	
+	#_全局检测频率-中(默认)
+	option = {
+		name = z_performance.11.q1
+		custom_tooltip = z_performance.11.q1.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_frequency_low
+				has_global_flag = z_pf_frequency_high
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_frequency_high
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_全局检测频率-高
+	option = {
+		name = z_performance.11.q2
+		custom_tooltip = z_performance.11.q2.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_frequency_high }
+		hidden_effect = {
+			remove_global_flag = z_pf_frequency_high
+			set_global_flag = z_pf_frequency_low
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_全局检测频率-低
+	option = {
+		name = z_performance.11.q3
+		custom_tooltip = z_performance.11.q3.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_frequency_low }
+		hidden_effect = {
+			remove_global_flag = z_pf_frequency_low
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_工作检测-原版
+	option = {
+		name = z_performance.11.r1
+		custom_tooltip = z_performance.11.r1.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_flg_glbl_job_disable
+				has_global_flag = z_pf_flg_glbl_job_automatic
+			}
+		}
+		allow = {
+			custom_tooltip = {#_需要兼容
+				hidden_trigger = { has_global_flag = z_pfc_installed }
+				fail_text = z_pf_tips_no_pfc
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_flg_glbl_job_disable
+			country_event = { id = z_pf_modmenu.11 }
+			country_event = { id = z_pf_modmenu.101 }
+		}
+	}
+	#_工作检测-关闭
+	option = {
+		name = z_performance.11.r2
+		custom_tooltip = z_performance.11.r2.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_flg_glbl_job_disable }
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_glbl_job_disable
+			set_global_flag = z_pf_flg_glbl_job_automatic
+			country_event = { id = z_pf_modmenu.11 }
+			country_event = { id = z_pf_modmenu.102 }
+		}
+	}
+	#_工作检测-自动
+	option = {
+		name = z_performance.11.r3
+		custom_tooltip = z_performance.11.r3.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_flg_glbl_job_automatic }
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_glbl_job_automatic
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_阶层变动---启用
+	option = {
+		name = z_performance.11.p1
+		custom_tooltip = z_performance.11.p1.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_job_check_full }
+		allow = {
+			custom_tooltip = {#_需要兼容
+				hidden_trigger = { has_global_flag = z_pfc_installed }
+				fail_text = z_pf_tips_no_pfc
+			}
+		}
+		hidden_effect = {
+			remove_global_flag = z_pf_job_check_full
+			country_event = { id = z_pf_modmenu.11 }
+			country_event = { id = z_pf_modmenu.103 }
+		}
+	}
+	#_阶层变动---禁用
+	option = {
+		name = z_performance.11.p2
+		custom_tooltip = z_performance.11.p2.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { NOT = { has_global_flag = z_pf_job_check_full } }
+		hidden_effect = {
+			set_global_flag = z_pf_job_check_full
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_degrade
+	option = {
+		name = z_performance.11.i1
+		custom_tooltip = z_performance.11.i1.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = { has_global_flag = z_pf_flg_glbl_demote }
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_glbl_demote
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {
+		name = z_performance.11.i2
+		custom_tooltip = z_performance.11.i2.tooltip
+        custom_gui = "z_mm_button_evt_option_normal"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_flg_glbl_demote
+				has_global_flag = z_pf_flg_glbl_demote_noai
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_flg_glbl_demote_noai
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {
+		name = z_performance.11.i3
+		custom_tooltip = z_performance.11.i3.tooltip
+		trigger = { has_global_flag = z_pf_flg_glbl_demote_noai }
+        custom_gui = "z_mm_button_evt_option_normal"
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_glbl_demote_noai
+			set_global_flag = z_pf_flg_glbl_demote
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	###_[handle_excess_pops]	######################################
+	#_开
+	option = {
+		name = z_performance.11.n1
+		custom_tooltip = z_performance.11.n1.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = {
+			has_global_flag = z_pf_heup_automatic_on
+		}
+		hidden_effect = {
+			remove_global_flag = z_pf_heup_automatic_on
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_关
+	option = {
+		name = z_performance.11.n2
+		custom_tooltip = z_performance.11.n2.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_heup_automatic_on
+				has_global_flag = z_pf_heup_automatic_noai
+			}
+		}
+		hidden_effect = {
+			if = {#_[产业革命]
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				set_global_flag = z_pf_heup_automatic_noai
+			}
+			else = {
+				set_global_flag = z_pf_heup_automatic_on
+			}
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_仅玩家
+	option = {
+		name = z_performance.11_pc
+		custom_tooltip = z_performance.11_pc.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_heup_automatic_noai }
+		hidden_effect = {
+			remove_global_flag = z_pf_heup_automatic_noai
+			set_global_flag = z_pf_heup_automatic_on
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_[handle_excess_pops_AI]
+	option = {
+		name = z_performance.11.k1
+		custom_tooltip = z_performance.11.k1.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_excess_ai_resettle
+				has_global_flag = z_pf_excess_ai_resettle_kill
+				has_global_flag = z_pf_excess_ai_kill
+			}
+		}
+		allow = {
+			custom_tooltip = {#_[原版模式]
+				hidden_trigger = { NOT = { any_country = { has_country_flag = z_pr_flg_cntr_1 } } }
+				fail_text = z_pf_tips_pr
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_excess_ai_resettle
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {
+		name = z_performance.11.k2
+		custom_tooltip = z_performance.11.k2.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_ai_resettle }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_ai_resettle
+			if = {#_[产业革命]
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				country_event = { id = z_pf_modmenu.11 }
+			}
+			else = {
+				set_global_flag = z_pf_excess_ai_resettle_kill
+				country_event = { id = z_pf_modmenu.11 }
+				country_event = { id = z_pf_modmenu.104 }
+			}
+		}
+	}
+	option = {
+		name = z_performance.11.k3
+		custom_tooltip = z_performance.11.k3.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_ai_resettle_kill }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_ai_resettle_kill
+			if = {#_[产业革命]
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				country_event = { id = z_pf_modmenu.11 }
+			}
+			else = {
+				set_global_flag = z_pf_excess_ai_kill
+				country_event = { id = z_pf_modmenu.11 }
+				country_event = { id = z_pf_modmenu.104 }
+			}
+		}
+	}
+	option = {
+		name = z_performance.11.k4
+		custom_tooltip = z_performance.11.k4.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_ai_kill }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_ai_kill
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_[handle_excess_pops_PC]
+	option = {
+		name = z_performance.11.l1
+		custom_tooltip = z_performance.11.l1.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_excess_pc_resettle
+				has_global_flag = z_pf_excess_pc_resettle_kill
+				has_global_flag = z_pf_excess_pc_kill
+			}
+		}
+		allow = {
+			custom_tooltip = {#_[原版模式]
+				hidden_trigger = { NOT = { any_country = { has_country_flag = z_pr_flg_cntr_1 } } }
+				fail_text = z_pf_tips_pr
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_excess_pc_resettle
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {
+		name = z_performance.11.l2
+		custom_tooltip = z_performance.11.l2.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_pc_resettle }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_pc_resettle
+			if = {#_[产业革命]
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				country_event = { id = z_pf_modmenu.11 }
+			}
+			else = {
+				set_global_flag = z_pf_excess_pc_resettle_kill
+				country_event = { id = z_pf_modmenu.11 }
+				country_event = { id = z_pf_modmenu.104 }
+			}
+		}
+	}
+	option = {
+		name = z_performance.11.l3
+		custom_tooltip = z_performance.11.l3.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_pc_resettle_kill }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_pc_resettle_kill
+			if = {#_[产业革命]
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				country_event = { id = z_pf_modmenu.11 }
+			}
+			else = {
+				set_global_flag = z_pf_excess_pc_kill
+				country_event = { id = z_pf_modmenu.11 }
+				country_event = { id = z_pf_modmenu.104 }
+			}
+		}
+	}
+	option = {
+		name = z_performance.11.l4
+		custom_tooltip = z_performance.11.l4.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_excess_pc_kill }
+		hidden_effect = {
+			remove_global_flag = z_pf_excess_pc_kill
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_handle excess pops-resettle cap
+	option = {#_默认
+		name = z_performance.11.m1
+		custom_tooltip = z_performance.11.m.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = {
+			NOR = {
+				has_global_flag = z_pf_flg_cntr_heup_var_low
+				has_global_flag = z_pf_flg_cntr_heup_var_high
+			}
+		}
+		allow = {
+			custom_tooltip = {#_[原版模式]
+				hidden_trigger = { NOT = { any_country = { has_country_flag = z_pr_flg_cntr_1 } } }
+				fail_text = z_pf_tips_pr
+			}
+		}
+		hidden_effect = {
+			set_global_flag = z_pf_flg_cntr_heup_var_low
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {#_少
+		name = z_performance.11.m2
+		custom_tooltip = z_performance.11.m.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_flg_cntr_heup_var_low }
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_cntr_heup_var_low
+			if = {#_[原版模式]
+				limit = { NOT = { any_country = { has_country_flag = z_pr_flg_cntr_1 } } }
+				set_global_flag = z_pf_flg_cntr_heup_var_high
+			}
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	option = {#_多
+		name = z_performance.11.m3
+		custom_tooltip = z_performance.11.m.tooltip
+        custom_gui = "z_mm_button_evt_option_orange"
+		trigger = { has_global_flag = z_pf_flg_cntr_heup_var_high }
+		hidden_effect = {
+			remove_global_flag = z_pf_flg_cntr_heup_var_high
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	
+	#_restart
+#	option = {
+#		name = z_performance.11.f
+#		custom_tooltip = z_performance.11.f.tooltip
+#        custom_gui = "z_mm_button_evt_option_blue"
+#		trigger = { has_global_flag = z_performance_never }
+#		hidden_effect = {
+#			remove_global_flag = z_performance_never
+#			set_global_flag = z_performance_high
+#			
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	#_shut down
+#	option = {
+#		name = z_performance.11.f1
+#		custom_tooltip = z_performance.11.f1.tooltip
+#       custom_gui = "z_mm_button_evt_option_blue"
+#		trigger = { NOT = { has_global_flag = z_performance_never } }
+#		hidden_effect = {
+#			remove_global_flag = z_performance_always
+#			remove_global_flag = z_allow_job_check		#_全人口检测
+#			remove_global_flag = z_performance_high
+#			remove_global_flag = z_performance_mid
+#			remove_global_flag = z_performance_low
+#			set_global_flag = z_performance_never
+#			country_event = { id = z_performance.11 }
+#		}
+#	}
+	
+	#_Debug-default
+	option = {
+		name = z_performance.11.f2
+		custom_tooltip = z_performance.11.f2.tooltip
+        custom_gui = "z_mm_button_evt_option_blue"
+		hidden_effect = {
+		#	set_global_flag = z_performance_always
+		#	remove_global_flag = z_performance_high
+		#	remove_global_flag = z_performance_mid
+		#	remove_global_flag = z_performance_low
+		#	remove_global_flag = z_performance_never
+		#	set_global_flag = z_pf_uep_check_disabled
+			#_检测频率
+			remove_global_flag = z_pf_frequency_low
+			remove_global_flag = z_pf_frequency_high
+			#_工作检测
+			remove_global_flag = z_pf_flg_glbl_job_disable
+			remove_global_flag = z_pf_flg_glbl_job_automatic
+			#_阶层流动
+			set_global_flag = z_pf_job_check_full
+			#_自动降级
+			remove_global_flag = z_pf_flg_glbl_demote
+			set_global_flag = z_pf_flg_glbl_demote_noai
+			#_resettle
+			remove_global_flag = z_pf_heup_automatic_on
+			remove_global_flag = z_pf_excess_ai_resettle
+			remove_global_flag = z_pf_excess_ai_resettle_kill
+			remove_global_flag = z_pf_excess_ai_kill
+			remove_global_flag = z_pf_excess_pc_resettle
+			remove_global_flag = z_pf_excess_pc_resettle_kill
+			remove_global_flag = z_pf_excess_pc_kill
+			remove_global_flag = z_pf_flg_cntr_heup_var_low
+			remove_global_flag = z_pf_flg_cntr_heup_var_high
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_resettle best setting
+	option = {
+		name = z_performance.11.f3
+		custom_tooltip = z_performance.11.f3.tooltip
+        custom_gui = "z_mm_button_evt_option_blue"
+		allow = {
+			hidden_trigger = {
+				NAND = {
+					has_global_flag = z_pf_heup_automatic_on
+					has_global_flag = z_pf_excess_ai_kill
+					has_global_flag = z_pf_excess_pc_resettle
+				}
+			}
+		}
+		hidden_effect = {
+			#_处理density
+			remove_global_flag = z_pf_frequency_low
+			remove_global_flag = z_pf_frequency_high
+			#_开启heup
+			set_global_flag = z_pf_heup_automatic_on
+			if = {
+				limit = { any_country = { has_country_flag = z_pr_flg_cntr_1 } }
+				remove_global_flag = z_pf_heup_automatic_on
+				set_global_flag = z_pf_heup_automatic_noai
+				#_处理方式
+				remove_global_flag = z_pf_excess_ai_resettle
+				remove_global_flag = z_pf_excess_ai_resettle_kill
+				remove_global_flag = z_pf_excess_ai_kill
+				remove_global_flag = z_pf_excess_pc_resettle
+				remove_global_flag = z_pf_excess_pc_resettle_kill
+				remove_global_flag = z_pf_excess_pc_kill
+				#_每次数目
+				remove_global_flag = z_pf_flg_cntr_heup_var_low
+				remove_global_flag = z_pf_flg_cntr_heup_var_high
+			}
+			else = {
+				#_处理方式
+				remove_global_flag = z_pf_excess_ai_resettle
+				remove_global_flag = z_pf_excess_ai_resettle_kill
+				set_global_flag = z_pf_excess_ai_kill
+				set_global_flag = z_pf_excess_pc_resettle
+				remove_global_flag = z_pf_excess_pc_resettle_kill
+				remove_global_flag = z_pf_excess_pc_kill
+				#_每次数目
+				remove_global_flag = z_pf_flg_cntr_heup_var_low
+				remove_global_flag = z_pf_flg_cntr_heup_var_high
+			}
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	
+	#_隐藏dec
+	option = {
+		name =  z_pf_evt_hide_dec
+		custom_tooltip = z_pf_tips_hide_dec
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = {
+			has_country_flag = z_pf_flg_cntr_hide_dec
+		}
+		hidden_effect = {
+			remove_country_flag = z_pf_flg_cntr_hide_dec
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+	#_显示dec
+	option = {
+		name = z_pf_evt_show_dec
+		custom_tooltip = z_pf_tips_show_dec
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { NOT = { has_country_flag = z_pf_flg_cntr_hide_dec } }
+		hidden_effect = {
+			set_country_flag = z_pf_flg_cntr_hide_dec
+			country_event = { id = z_pf_modmenu.11 }
+		}
+	}
+}

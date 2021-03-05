@@ -1,0 +1,284 @@
+elven_system_gaul_initializer = {
+	name = "Adarenon"
+	
+	class = "sc_elven_gaul"
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		if = {
+			limit = { NOT = { is_inside_nebula = yes } }
+
+			create_nebula_3 = yes
+		}
+	}
+	
+	flags = { empire_home_system custom_system }
+	usage = origin
+	
+	planet = {
+		name = "Adarenon"
+		class = "pc_f_star"
+		orbit_distance = 25
+		size = 32
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_5
+		}
+	}
+	
+	planet = {
+		name = "Cosis"
+		class = "pc_t_star"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 35
+
+		flags = { starting_mining_target }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_5
+		}
+	}
+
+	planet = {
+		name = "Cemnecias"
+		size = 25
+		class = "pc_molten"
+		orbit_distance = 65
+		orbit_angle = random
+		has_ring = no
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Redsa"
+		class = "pc_barren"
+		entity = "elven_01_barren_01_faeranel"
+		orbit_distance = 30
+		orbit_angle = 120
+		size = { min = 20 max = 25 }
+		has_ring = yes
+
+		flags = { starting_research_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_physics_3
+		}
+	}
+	
+	planet = {
+		name = "Laccat"
+		class = "pc_barren"
+		orbit_distance = 30
+		orbit_angle = 120
+		size = { min = 16 max = 18 }
+		has_ring = no
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_2
+		}
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 200
+	}
+	
+	planet = {
+		name = "Ridan"
+		class = "pc_ice_asteroid"
+		orbit_distance = 50
+		orbit_angle = random
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_trade_value_4
+		}
+	}
+
+	planet = {
+		name = "Cecan"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Tunan"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		flags = { starting_mining_target }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_5
+		}
+	}
+	
+	planet = {
+		name = "Uodan"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		flags = { starting_mining_target }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_5
+		}
+	}
+	
+	planet = {
+		name = "Cellica"
+		class = ideal_planet_class
+		orbit_distance = 60
+		orbit_angle = 180
+		size = 19
+		home_planet = yes
+		starting_planet = yes
+		has_ring = no
+		flags = { gaul_capital }
+		
+		init_effect = {
+			if = {
+				limit = {
+					is_planet_class = pc_continental
+				}
+
+				set_planet_entity = {
+					entity = "elven_planet_cellica_entity"
+				}
+			}
+		}
+		
+		moon = {
+			name = "Aucuet"
+			class = "pc_barren"
+			entity = "elven_01_barren_nurilmi"
+			orbit_distance = 20
+			orbit_angle = 0
+			size = { min = 14 max = 18 }
+
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Ixsuet"
+			class = "pc_barren"
+			entity = "elven_01_barren_03_issilmi"
+			orbit_distance = 8
+			orbit_angle = 180
+			size = { min = 9 max = 13 }
+
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+		
+	}
+	
+	planet = {
+		name = "Certuinessamis"
+		class = "pc_gas_giant"
+		entity = "elven_01_gas_giant_laergondsel"
+		orbit_distance = 70
+		orbit_angle = random
+		size = { min = 30 max = 40 }
+		has_ring = yes
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_3
+		}
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 390
+	}
+	
+	planet = {
+		name = "Assac-1148A"
+		class = "pc_ice_asteroid"
+		orbit_distance = 60
+		orbit_angle = random
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Assac-1358B"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Assac-1400C"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Assac-1520D"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_engineering_2
+		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_gaul_neighbor1_initializer"
+	}
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_gaul_neighbor2_initializer"
+	}
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_gaul_neighbor3_initializer"
+	}
+}
+

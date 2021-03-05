@@ -1,0 +1,544 @@
+#####################################
+# Superior Species On-Action Events #
+#####################################
+
+namespace = ssgene
+
+# Swap all assembly buildings to Organic
+country_event = {
+	id = ssgene.6
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_policy_flag = assembly_organic }
+	immediate = {
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_building = building_robot_assembly_plant
+				}
+				remove_building = building_robot_assembly_plant
+				add_building = building_clone_vats
+			}
+			if = {
+				limit = {
+					has_building = building_synthetic_megaplex
+					has_ascension_perk = ap_evolutionary_mastery
+				}
+				remove_building = building_synthetic_megaplex
+				add_building = building_genetic_development_facility
+			}
+			if = {
+				limit = {
+					has_building = building_synthetic_megaplex
+					NOT = { has_ascension_perk = ap_evolutionary_mastery }
+				}
+				remove_building = building_synthetic_megaplex
+				add_building = building_clone_vats
+			}
+			set_planet_flag = ss_cloning_flag
+			remove_planet_flag = ss_assembly_flag
+		}
+	}
+}
+
+# Swap all assembly buildings to Robotic
+country_event = {
+	id = ssgene.7
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { has_policy_flag = assembly_robotic }
+	immediate = {
+		every_owned_planet = {
+			if = {
+				limit = {
+					has_building = building_clone_vats
+				}
+				remove_building = building_clone_vats
+				add_building = building_robot_assembly_plant
+			}
+			if = {
+				limit = {
+					has_building = building_genetic_development_facility
+					NOT = { has_global_flag = mmplus_enabled_flag }
+				}
+				remove_building = building_genetic_development_facility
+				add_building = building_robot_assembly_plant
+			}
+			if = {
+				limit = {
+					has_building = building_genetic_development_facility
+					has_global_flag = mmplus_enabled_flag
+					has_technology = tech_synthetic_workers
+				}
+				remove_building = building_genetic_development_facility
+				add_building = building_synthetic_megaplex
+			}
+			if = {
+				limit = {
+					has_building = building_genetic_development_facility
+					has_global_flag = mmplus_enabled_flag
+					NOT = { has_technology = tech_synthetic_workers }
+				}
+				remove_building = building_genetic_development_facility
+				add_building = building_robot_assembly_plant
+			}
+			set_planet_flag = ss_assembly_flag
+			remove_planet_flag = ss_cloning_flag
+		}
+	}
+}
+
+# Set default assembly flag to Robotic
+country_event = {
+	id = ssgene.8
+	hide_window = yes
+	fire_only_once = yes
+	immediate = {
+		every_owned_planet = {
+			set_planet_flag = ss_assembly_flag
+		}
+	}
+}
+
+# Set assembly to organic if cloning is learned before robots
+country_event = {
+	id = ssgene.9
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_technology = tech_cloning
+		NOT = {
+			has_technology = tech_robotic_workers
+		}
+	}
+	immediate = {
+		every_owned_planet = {
+			set_planet_flag = ss_cloning_flag
+		}
+	}
+}
+
+#############################################
+## Genetic Experiments
+#############################################
+
+# Inform player when Genetic Experiments unlock: Bio-Thrall Design
+country_event = {
+	id = ssgene.50
+	title = "ssgene.50.name"
+	desc = "ssgene.50.desc"
+	picture = GFX_evt_clones
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_ascension_perk = ap_engineered_evolution
+			last_increased_tech = tech_gene_seed_purification
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = LEARNED_BIOTHRALL_DESIGN
+	}
+}
+
+# Inform player when Genetic Experiments unlock: Superior Species Project
+country_event = {
+	id = ssgene.51
+	title = "ssgene.51.name"
+	desc = "ssgene.51.desc"
+	picture = GFX_evt_clones
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_ascension_perk = ap_engineered_evolution
+			last_increased_tech = tech_genetic_resequencing
+		}
+	}
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = LEARNED_SUPERIOR_SPECIES
+	}
+}
+
+# Give Biomorphs an extra 1 trait points (for Targeted Gene Expressions)
+country_event = {
+	id = ssgene.52
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			last_increased_tech = tech_gene_expressions
+		}
+	}
+	
+	immediate = {
+		owner = {
+			BIOMORPH_species_trait_points_add = 1
+		}
+	}
+}
+
+# Give Biomorphs an extra 1 trait points (for Gene Tailoring)
+country_event = {
+	id = ssgene.53
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			last_increased_tech = tech_gene_tailoring
+		}
+	}
+	
+	immediate = {
+		owner = {
+			BIOMORPH_species_trait_points_add = 1
+		}
+	}
+}
+
+# Give Biomorphs an extra 2 trait points (for Technological Ascendancy)
+country_event = {
+	id = ssgene.54
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			last_increased_tech = tech_biology_breakthrough
+		}
+	}
+	
+	immediate = {
+		owner = {
+			BIOMORPH_species_trait_points_add = 2
+		}
+	}
+}
+
+# Biomorph Stage 1: Appearance
+country_event = {
+	id = ssgene.100
+	title = "ssgene.100.name"
+	desc = "ssgene.100.desc"
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ssgene.100.mam"
+		hidden_effect = {
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_fun
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_mam
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.rep"
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_fun
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_rep
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.avi"
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_fun
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_avi
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.art"
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_fun
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_art
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.mol"
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_fun
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_mol
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.fun"
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_pla
+			set_country_flag = biomorph_fun
+		}
+	}
+	
+	option = {
+		name = "ssgene.100.pla"
+		trigger = { host_has_dlc = "Plantoid" }
+		hidden_effect = {
+			remove_country_flag = biomorph_mam
+			remove_country_flag = biomorph_rep
+			remove_country_flag = biomorph_avi
+			remove_country_flag = biomorph_art
+			remove_country_flag = biomorph_mol
+			remove_country_flag = biomorph_fun
+			set_country_flag = biomorph_pla
+		}
+	}
+}
+
+# Biomorph Stage 2: Traits
+country_event = {
+	id = ssgene.110
+	title = "ssgene.110.name"
+	desc = "ssgene.110.desc"
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound_03
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "ssgene.110.serviles"
+		custom_tooltip = ssgene.110.serviles.tooltip
+		hidden_effect = {
+			remove_country_flag = biomorph_livestock
+			remove_country_flag = biomorph_starborn
+			remove_country_flag = biomorph_earthbound
+			remove_country_flag = biomorph_intellectual
+			remove_country_flag = biomorph_conservative
+			set_country_flag = biomorph_serviles
+		}
+	}
+	
+	option = {
+		name = "ssgene.110.livestock"
+		custom_tooltip = ssgene.110.livestock.tooltip
+		trigger = {
+			OR = {
+				has_technology = tech_epigenetic_triggers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = biomorph_serviles
+			remove_country_flag = biomorph_starborn
+			remove_country_flag = biomorph_earthbound
+			remove_country_flag = biomorph_intellectual
+			remove_country_flag = biomorph_conservative
+			set_country_flag = biomorph_livestock
+		}
+	}
+	
+	option = {
+		name = "ssgene.110.starborn"
+		custom_tooltip = ssgene.110.starborn.tooltip
+		trigger = {
+			OR = {
+				has_technology = tech_epigenetic_triggers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = biomorph_serviles
+			remove_country_flag = biomorph_livestock
+			remove_country_flag = biomorph_earthbound
+			remove_country_flag = biomorph_intellectual
+			remove_country_flag = biomorph_conservative
+			set_country_flag = biomorph_starborn
+		}
+	}
+	
+	option = {
+		name = "ssgene.110.earthbound"
+		custom_tooltip = ssgene.110.earthbound.tooltip
+		trigger = {
+			OR = {
+				has_technology = tech_epigenetic_triggers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = biomorph_serviles
+			remove_country_flag = biomorph_livestock
+			remove_country_flag = biomorph_starborn
+			remove_country_flag = biomorph_intellectual
+			remove_country_flag = biomorph_conservative
+			set_country_flag = biomorph_earthbound
+		}
+	}
+	
+	option = {
+		name = "ssgene.110.intellectual"
+		custom_tooltip = ssgene.110.intellectual.tooltip
+		trigger = {
+			OR = {
+				has_technology = tech_epigenetic_triggers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = biomorph_serviles
+			remove_country_flag = biomorph_livestock
+			remove_country_flag = biomorph_starborn
+			remove_country_flag = biomorph_earthbound
+			remove_country_flag = biomorph_conservative
+			set_country_flag = biomorph_intellectual
+		}
+	}
+	
+	option = {
+		name = "ssgene.110.conservative"
+		custom_tooltip = ssgene.110.conservative.tooltip
+		trigger = {
+			OR = {
+				has_technology = tech_epigenetic_triggers
+				has_ascension_perk = ap_evolutionary_mastery
+			}
+		}
+		hidden_effect = {
+			remove_country_flag = biomorph_serviles
+			remove_country_flag = biomorph_livestock
+			remove_country_flag = biomorph_starborn
+			remove_country_flag = biomorph_earthbound
+			remove_country_flag = biomorph_intellectual
+			set_country_flag = biomorph_conservative
+		}
+	}
+}
+
+# Biomorph Completion
+country_event = {
+	id = ssgene.120
+	title = "ssgene.120.name"
+	desc = "ssgene.120.desc"
+	picture = GFX_evt_clones
+	show_sound = event_laboratory_sound_03
+	trackable = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_biomorph_species = yes
+		clean_biomorph = yes
+	}
+}
+
+# Superior Species: Finish special project
+country_event = {
+	id = ssgene.200
+	title = "ssgene.200.name"
+	desc = "ssgene.200.desc"
+	picture = GFX_evt_clones
+	show_sound = event_mystic_reveal_03
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		set_country_flag = biomorph_empire
+		
+		modify_species = {
+			species = this
+			ideal_planet_class = pc_arid
+		}
+		modify_species = {
+			species = this
+			remove_trait = trait_pc_arid_preference
+		}
+
+		create_species = {
+			is_mod = yes
+			name = this
+			namelist = this
+			plural = this
+			class = Biomorphic
+			portrait = this
+			homeworld = capital_scope
+			traits = { trait = trait_biomorph }
+			traits = this
+			
+			effect = {
+				save_event_target_as = ascended_biomorphs
+				rename_species = {
+					prompt_country = root #If targeted country is a player they will get a popup asking for a name/plural/adjective combo. Otherwise the species will get a random name from the specified name_list
+					name_list = ascension_list
+				}
+			}
+		}
+
+		every_owned_pop = {
+			limit = { is_same_species = root }
+			change_species = event_target:ascended_biomorphs
+			hidden_effect = {
+				set_citizenship_type = {
+					country = root.owner
+					type = citizenship_full
+					cooldown = no
+				}
+			}
+		}
+
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				is_same_species = root
+			}
+			change_species = event_target:ascended_biomorphs
+		}
+
+		every_owned_leader = {
+			limit = { is_same_species = root }
+			change_species = event_target:ascended_biomorphs
+		}
+
+		every_pool_leader = {
+			limit = { is_same_species = root }
+			change_species = event_target:ascended_biomorphs
+		}
+		
+		change_dominant_species = { species = event_target:ascended_biomorphs }
+	}
+
+	option = {
+		name = EXCELLENT
+		custom_tooltip = BIOMORPH_ASSIMILATION_CITIZENSHIP_ENABLED
+	}
+}

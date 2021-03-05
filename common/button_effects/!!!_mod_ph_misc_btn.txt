@@ -1,0 +1,86 @@
+#_[topbar_modmenu]
+#_[z_FTA]
+
+
+
+
+###_[topbar_modmenu]	##########################################
+
+# Galactic Nations Assembly
+assembly_view_button_effect = {
+	potential = { has_global_flag = gna_mod_enabled }
+	allow = {
+		custom_tooltip = {
+			fail_text = mb_galactic_nations_assembly_tooltip
+			hidden_trigger = { always = no }
+		}
+	}
+}
+# Mod Menu
+modmenu_button_effect = {
+	potential = { has_global_flag = modmenu_installed }
+	allow = {
+		custom_tooltip = {
+			fail_text = mb_modmenu_tooltip
+			hidden_trigger = { always = no }
+		}
+	}
+}
+# Ruler Level System
+ruler_hobby_button_effect = {
+	potential = { has_global_flag = play_as_ruler_started }
+	allow = { 
+		custom_tooltip = {
+			fail_text = mb_ruler_hobby_button_tooltip
+			hidden_trigger = { always = no }
+		}
+	}
+}
+
+#_[z_FTA]
+fta_button_effects_start = {
+	potential = { always = no }
+	allow = { always = no }
+}
+rerolll_button_effects_governors = {
+	potential = { has_global_flag = z_modmenu_installed }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_fta_cd_governer } } }
+	effect = {
+		hidden_effect = {
+			custom_tooltip "fta.2.name"
+			country_event = { id = fire_them_all.2 }
+		}
+	}
+}
+rerolll_button_effects_scientists = {
+	potential = { has_global_flag = z_modmenu_installed }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_fta_cd_scientist } } }
+	effect = {
+		hidden_effect = {
+			custom_tooltip "fta.3.name"
+			country_event = { id = fire_them_all.3 }
+		}
+	}
+}
+rerolll_button_effects_admirals = {
+	potential = { has_global_flag = z_modmenu_installed }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_fta_cd_admiral } } }
+	effect = {
+		hidden_effect = {
+			custom_tooltip "fta.4.name"
+			country_event = { id = fire_them_all.4 }
+		}
+	}
+}
+rerolll_button_effects_generals = {
+	potential = { has_global_flag = z_modmenu_installed }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_fta_cd_general } } }
+	effect = {
+		hidden_effect = {
+			custom_tooltip "fta.5.name"
+			country_event = { id = fire_them_all.5 }
+		}
+	}
+}
+
+

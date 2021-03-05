@@ -1,0 +1,24 @@
+tradition_supremacy_plus = {
+	adoption_bonus = "trp_supremacy_adopt"
+	finish_bonus = "trp_supremacy_finish"
+	traditions = {
+		"trp_supremacy_quantity_a"
+		"trp_supremacy_quantity_b"
+		"trp_supremacy_quantity_c"
+		"trp_supremacy_quality_a"
+		"trp_supremacy_quality_b"
+		"trp_supremacy_quality_c"
+		"trp_supremacy_deterrence_a"
+		"trp_supremacy_deterrence_b"
+		"trp_supremacy_deterrence_c"
+		"trp_supremacy_admirality_a"
+		"trp_supremacy_admirality_b"
+		"trp_supremacy_admirality_c"
+		"trp_supremacy_warfare_a"
+		"trp_supremacy_warfare_b"
+		"trp_supremacy_warfare_c"
+		"trp_supremacy_devastation_a"
+		"trp_supremacy_devastation_b"
+		"trp_supremacy_devastation_c"
+	}
+}

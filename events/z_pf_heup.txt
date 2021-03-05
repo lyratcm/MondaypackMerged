@@ -1,0 +1,623 @@
+###_handle excess unemployed pops	#############################################################
+
+namespace = z_pf_heup
+
+###_[plnt_flg]	仅在trigger中使用
+#_单星人数预留
+#_		[z_pf_flg_plnt_migration_5][z_pf_flg_plnt_migration_10][z_pf_flg_plnt_migration_25]
+#_		[z_pf_flg_plnt_migration_50][z_pf_flg_plnt_migration_100][z_pf_flg_plnt_migration_150]
+#_单星无业人口预留
+#_		[z_pf_flg_plnt_migration_uep_5][z_pf_flg_plnt_migration_uep_10][z_pf_flg_plnt_migration_uep_25]
+
+
+
+
+###_[cntr_flg]
+#_		[z_pf_flg_cntr_heup_on]			temp 检测进行中
+
+###_[plnt_flg]
+#_迁出星球	
+#_		[z_pf_flg_plnt_migration_forced][z_pf_flg_plnt_migration_ignore]
+#_		[z_pf_flg_plnt_migration_prio]
+#_		[z_pf_flg_plnt_migration_non]	temp 完成标签
+
+#_迁入星球
+#_		[z_pf_flg_plnt_immigration_forced][z_pf_flg_plnt_immigration_ignore]
+#_		[z_pf_flg_plnt_immigration_prio]
+
+###_[pop_flag]
+#_		[z_pf_flg_pop_migration_non]	temp 完成标签
+#_		[z_pf_flg_pop_not_for_clean]	temp 禁止清理标签
+
+
+###_plnt_triggers
+#_		[z_pf_trgr_heup_immigration]	输入-基础
+#_		[z_pf_trgr_free_jobs_for_uep]	输入-职位空余
+#_		[z_pf_trgr_heup_migration]		输出-基础
+#_		[z_pf_trgr_no_building_ruin]	输出-防止建筑损毁
+#_		[z_pf_trgr_heup_pop_limit]		输出-预留pop
+
+###_[plnt_tgt]
+#_		[z_pf_tgt_plnt_migration][z_pf_tgt_plnt_immigration]
+#_		[z_pf_tgt_plnt_migration_express]快速执行
+###_[pop_tgt]
+#_		[z_pf_tgt_pop_heup]
+
+
+
+
+
+
+
+
+###_core	[id=1]
+#_glbl_flag	[z_pf_cd_glbl_automatic]
+
+#_[z_performance.13]	随机国家分别执行
+#_cntr_flg	[z_pf_flg_cntr_heup_on]		人口迁移进行中
+country_event = {
+	id = z_pf_heup.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#_迁移进行时
+		set_timed_country_flag = { flag = z_pf_flg_cntr_heup_on days = 1 }
+		#_设定输出plnt
+		clear_global_event_target = z_pf_tgt_plnt_migration
+		random_owned_planet = {#_normal
+			limit = {
+				NOT = { has_planet_flag = z_pf_flg_plnt_migration_non }
+				z_pf_trgr_heup_migration = yes
+			}
+			save_global_event_target_as = z_pf_tgt_plnt_migration
+		}
+		random_owned_planet = {#_prio
+			limit = {
+				has_planet_flag = z_pf_flg_plnt_migration_prio
+				NOT = { has_planet_flag = z_pf_flg_plnt_migration_non }
+				z_pf_trgr_heup_migration = yes
+			}
+			save_global_event_target_as = z_pf_tgt_plnt_migration
+		}
+		#_设定迁移上限
+		set_variable = { which = z_pf_var_cntr_heup_remain value = 0 }
+		if = {
+			limit = {
+				exists = event_target:z_pf_tgt_plnt_migration
+				OR = {
+					has_global_flag = z_pf_excess_ai_resettle
+					has_global_flag = z_pf_excess_ai_resettle_kill
+					has_global_flag = z_pf_excess_pc_resettle
+					has_global_flag = z_pf_excess_pc_resettle_kill
+				}
+			}
+			if = {
+				limit = { has_global_flag = z_pf_flg_cntr_heup_var_low }
+				set_variable = { which = z_pf_var_cntr_heup_remain value = 25 }
+			}
+			else_if = {
+				limit = { has_global_flag = z_pf_flg_cntr_heup_var_high }
+				set_variable = { which = z_pf_var_cntr_heup_remain value = 100 }
+			}
+			else = {
+				set_variable = { which = z_pf_var_cntr_heup_remain value = 50 }	#_默认
+			}
+		}
+		#_执行迁移AI
+		if = {
+			limit = { is_ai = yes }
+			#_AI迁移人口
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = z_pf_excess_ai_resettle
+						has_global_flag = z_pf_excess_ai_resettle_kill
+					}
+				}
+				country_event = { id = z_pf_heup.11 }	#_迁移循环
+			}
+			#_AI清理人口
+			else_if = {
+				limit = { has_global_flag = z_pf_excess_ai_kill }
+				country_event = { id = z_pf_heup.12 }	#_执行清理
+			}
+			#_AI不使用heup
+			else = {
+				#_切换国家继续执行
+				random_country = {
+					limit = {
+						NOR = {
+							is_same_value = root
+							has_country_flag = z_pf_flg_cntr_heup_on
+						}
+						z_pf_trgr_cntr_valid = yes
+					}
+					country_event = { id = z_pf_heup.1 }
+				}
+			}
+		}
+		#_执行迁移PC
+		else = {
+			#_PC迁移人口
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = z_pf_excess_pc_resettle
+						has_global_flag = z_pf_excess_pc_resettle_kill
+					}
+				}
+				country_event = { id = z_pf_heup.11 }	#_迁移循环
+			}
+			#_PC清理人口
+			else_if = {
+				limit = { has_global_flag = z_pf_excess_pc_kill }
+				country_event = { id = z_pf_heup.12 }	#_执行清理
+			}
+			#_PC不使用heup
+			else = {
+				#_切换国家继续执行
+				random_country = {
+					limit = {
+						NOR = {
+							is_same_value = root
+							has_country_flag = z_pf_flg_cntr_heup_on
+						}
+						z_pf_trgr_cntr_valid = yes
+					}
+					country_event = { id = z_pf_heup.1 }
+				}
+			}
+		}
+	}
+}
+
+
+
+
+#_[z_pf_heup.1][z_pf_heup.2]	迁移人口-自循环
+#_cntr_flg	[z_pf_flg_cntr_heup_on]		人口迁移进行中---清除
+country_event = {
+	id = z_pf_heup.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		###_迁移循环中
+		if = {
+			limit = {
+				#_检测是否存在可输出plnt
+				exists = event_target:z_pf_tgt_plnt_migration
+				#_迁移余量
+				check_variable = { which = z_pf_var_cntr_heup_remain value > 0 }
+			}
+			##_设定可迁移pop
+			clear_global_event_target = z_pf_tgt_pop_heup
+			event_target:z_pf_tgt_plnt_migration = {
+				random_owned_pop = {
+					limit = {#_包含完整条件
+						NOT = { has_pop_flag = z_pf_flg_pop_migration_non }
+						OR = {
+							prev = { has_planet_flag = z_pf_flg_plnt_migration_forced }
+							AND = {
+								is_unemployed = yes
+								#_无移民控制
+								NAND = {
+									is_robot_pop = no	#_智械无移民控制
+									has_migration_control = yes
+								}
+							}
+						}
+					}
+					save_global_event_target_as = z_pf_tgt_pop_heup
+				}
+			}
+			##_存在可迁移pop
+			if = {
+				limit = { exists = event_target:z_pf_tgt_pop_heup }
+				#_设定输入plnt
+				clear_global_event_target = z_pf_tgt_plnt_immigration
+				random_owned_planet = {#_normal
+					limit = {
+						z_pf_trgr_heup_immigration = yes
+						habitability = { who = event_target:z_pf_tgt_pop_heup value > 0.5 }
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_immigration
+				}
+				random_owned_planet = {#_prio
+					limit = {
+						has_planet_flag = z_pf_flg_plnt_immigration_prio
+						z_pf_trgr_heup_immigration = yes
+						habitability = { who = event_target:z_pf_tgt_pop_heup value > 0.5 }
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_immigration
+				}
+				#_存在输入plant---执行迁移
+				if = {
+					limit = { exists = event_target:z_pf_tgt_plnt_immigration }
+					#_迁入
+					resettle_pop = {
+						pop = event_target:z_pf_tgt_pop_heup
+						planet = event_target:z_pf_tgt_plnt_immigration
+					}
+					#_添加禁止清理flg
+					event_target:z_pf_tgt_pop_heup = {
+						clear_pop_category = yes	#_刷新class
+						set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }	#_隔离
+						set_timed_pop_flag = { flag = z_pf_flg_pop_not_for_clean days = 1 }
+					}
+					#_本次迁移余额统计
+					change_variable = { which = z_pf_var_cntr_heup_remain value = -1 }
+				}
+				#_不存在输入plnt添加隔离flg
+				else = {
+					event_target:z_pf_tgt_pop_heup = {
+						set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }
+					}
+				}
+			}
+			##_#_已无可输出pop,添加隔离
+			if = {
+				limit = { event_target:z_pf_tgt_plnt_migration = { z_pf_trgr_heup_migration = no } }
+				event_target:z_pf_tgt_plnt_migration = {
+					set_timed_planet_flag = { flag = z_pf_flg_plnt_migration_non days = 1 }
+				}
+				#_设定新输出plnt
+				clear_global_event_target = z_pf_tgt_plnt_migration
+				random_owned_planet = {#_normal
+					limit = {
+						NOT = { has_planet_flag = z_pf_flg_plnt_migration_non }
+						z_pf_trgr_heup_migration = yes
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_migration
+				}
+				random_owned_planet = {#_prio
+					limit = {
+						has_planet_flag = z_pf_flg_plnt_migration_prio
+						NOT = { has_planet_flag = z_pf_flg_plnt_migration_non }
+						z_pf_trgr_heup_migration = yes
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_migration
+				}
+			}
+			##_自循环
+			country_event = { id = z_pf_heup.11 }
+		}
+		###_迁移循环完成
+		else = {
+			#_清除glnl_tgt
+			clear_global_event_target = z_pf_tgt_plnt_migration
+			clear_global_event_target = z_pf_tgt_plnt_immigration
+			clear_global_event_target = z_pf_tgt_pop_heup
+			#_迁移余量归零
+			set_variable = { which = z_pf_var_cntr_heup_remain value = 0 }
+			##_触发heup清理
+			if = {
+				limit = {
+					OR = {
+						has_global_flag = z_pf_excess_ai_resettle_kill
+						has_global_flag = z_pf_excess_pc_resettle_kill
+					}
+				}
+				country_event = { id = z_pf_heup.12 }	#_迁移+清理循环
+			}
+			#_切换国家继续执行
+			else = {
+				random_country = {
+					limit = {
+						NOR = {
+							is_same_value = root
+							has_country_flag = z_pf_flg_cntr_heup_on
+						}
+						z_pf_trgr_cntr_valid = yes
+					}
+					country_event = { id = z_pf_heup.1 }
+				}
+			}
+		}
+	}
+}
+#_[z_pf_heup.1][z_pf_heup.12][z_pf_heup.2]	人口清理
+country_event = {
+	id = z_pf_heup.12
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		#_迁移余量
+		check_variable = { which = z_pf_var_cntr_heup_remain value < 1 }
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = {
+				is_unemployed = yes
+				NOR = {
+					has_pop_flag = z_pf_flg_pop_not_for_clean
+					#is_pop_category = ruler
+					#is_pop_category = specialist
+					is_pop_category = bio_trophy
+					is_pop_category = precursor
+					is_pop_category = xeno_ward
+					is_pop_category = pre_sapients
+				}
+			}
+			if = {
+				limit = { exists = owner }
+				owner = { add_resource = { energy = 500 } }	#_补贴
+			}
+			kill_pop = yes
+		}
+		#_切换国家继续执行
+		random_country = {
+			limit = {
+				NOR = {
+					is_same_value = root
+					has_country_flag = z_pf_flg_cntr_heup_on
+				}
+				z_pf_trgr_cntr_valid = yes
+			}
+			country_event = { id = z_pf_heup.1 }
+		}
+	}
+}
+
+
+
+
+#_[z_pf_dec_express]	快速手动
+#_plnt_tgt		[z_pf_tgt_plnt_migration]	<出入plnt条件判定需要用到,已在decision中设定>
+#_pop_eft		[z_pf_eft_pop_demote]	降级
+planet_event = {
+	id = z_pf_heup.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		##_设定可迁移pop
+		clear_global_event_target = z_pf_tgt_pop_heup
+		random_owned_pop = {
+			limit = {#_pop中要包含完整条件
+				NOT = { has_pop_flag = z_pf_flg_pop_migration_non }
+				OR = {
+					prev = {#_强制迁出
+						has_planet_flag = z_pf_flg_plnt_migration_forced
+						num_pops > 1
+						z_pf_trgr_heup_pop_limit = yes
+					}
+					AND = {
+						prev = {
+							z_pf_trgr_no_building_ruin = yes
+							z_pf_trgr_heup_pop_limit = yes
+						}
+						is_unemployed = yes
+						#_无移民控制
+						NAND = {
+							is_robot_pop = no	#_智械无移民控制
+							has_migration_control = yes
+						}
+					}
+				}
+			}
+			save_global_event_target_as = z_pf_tgt_pop_heup
+			set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }
+		}
+		##_存在可迁移pop
+		if = {
+			limit = { exists = event_target:z_pf_tgt_pop_heup }
+			#_设定输入plnt
+			clear_global_event_target = z_pf_tgt_plnt_immigration
+			owner = {
+				random_owned_planet = {
+					limit = {#_normal
+						z_pf_trgr_heup_immigration = yes
+						habitability = { who = event_target:z_pf_tgt_pop_heup value > 0.5 }
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_immigration
+				}
+				random_owned_planet = {#_prio
+					limit = {
+						has_planet_flag = z_pf_flg_plnt_immigration_prio
+						z_pf_trgr_heup_immigration = yes
+						habitability = { who = event_target:z_pf_tgt_pop_heup value > 0.5 }
+					}
+					save_global_event_target_as = z_pf_tgt_plnt_immigration
+				}
+			}
+			#_存在输入plnt
+			if = {
+				limit = { exists = event_target:z_pf_tgt_plnt_immigration }
+				#_执行迁入
+				resettle_pop = {
+					pop = event_target:z_pf_tgt_pop_heup
+					planet = event_target:z_pf_tgt_plnt_immigration
+				}
+				#_迁入完成---隔离/降级
+				event_target:z_pf_tgt_pop_heup = {
+					z_pf_eft_pop_demote = yes	#_降级
+					set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }	#_隔离
+					set_timed_pop_flag = { flag = z_pf_flg_pop_not_for_clean days = 1 }
+				}
+			}
+			#_不存在输入plnt仅隔离pop
+			else = {
+				event_target:z_pf_tgt_pop_heup = {
+					set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }	#_隔离
+				}
+			}
+			#_自循环<存在可迁移pop>
+			planet_event = { id = z_pf_heup.2 }
+		}
+		##_不存在可迁移pop,循环中断执行清理
+		else = {
+			#_heup清理
+			if = {
+				limit = {
+					OR = {
+					#	has_global_flag = z_pf_excess_ai_resettle_kill
+					#	has_global_flag = z_pf_excess_ai_kill
+						has_global_flag = z_pf_excess_pc_resettle_kill
+						has_global_flag = z_pf_excess_pc_kill
+					}
+				}
+				every_owned_pop = {
+					limit = {
+						is_unemployed = yes
+						NOR = {
+							has_pop_flag = z_pf_flg_pop_not_for_clean
+							#is_pop_category = ruler
+							#is_pop_category = specialist
+							is_pop_category = bio_trophy
+							is_pop_category = precursor
+							is_pop_category = xeno_ward
+							is_pop_category = pre_sapients
+						}
+					}
+					if = {
+						limit = { exists = owner }
+						owner = { add_resource = { energy = 500 } }	#_补贴
+					}
+					kill_pop = yes
+				}
+			}
+			#_工作检测
+			owner = {
+				every_owned_planet = {
+					set_timed_planet_flag = { flag = z_pf_flg_plnt_job_checker days = 1 }
+					z_pf_eft_job_check_district = yes
+				}
+			}
+			#_清除glnl_tgt
+			clear_global_event_target = z_pf_tgt_plnt_migration
+			clear_global_event_target = z_pf_tgt_plnt_immigration
+			clear_global_event_target = z_pf_tgt_pop_heup
+		}
+	}
+}
+
+
+
+
+#_[z_pf_dec_express_in_5]	快速手动迁入
+#_plnt_tgt		[z_pf_tgt_plnt_immigration]	<出入plnt条件判定需要用到,已在decision中设定>
+#_pop_eft		[z_pf_eft_pop_demote]	降级
+country_event = {
+	id = z_pf_heup.3
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#_设定输出plnt
+		if = {
+			limit = { NOT = { exists = event_target:z_pf_tgt_plnt_migration_express } }
+			#clear_global_event_target = z_pf_tgt_plnt_migration_express
+			random_owned_planet = {#_normal
+				limit = {
+					NOR = {
+						is_same_value = event_target:z_pf_tgt_plnt_immigration		#_已在decision中设定
+						has_planet_flag = z_pf_flg_plnt_migration_non
+					}
+					z_pf_trgr_heup_migration = yes
+				}
+				save_global_event_target_as = z_pf_tgt_plnt_migration_express
+			}
+			random_owned_planet = {#_prio
+				limit = {
+					has_planet_flag = z_pf_flg_plnt_migration_prio
+					NOR = {
+						is_same_value = event_target:z_pf_tgt_plnt_immigration		#_已在decision中设定
+						has_planet_flag = z_pf_flg_plnt_migration_non
+					}
+					z_pf_trgr_heup_migration = yes
+				}
+				save_global_event_target_as = z_pf_tgt_plnt_migration_express
+			}
+		}
+		#_存在输出plnt-执行迁移
+		if = {
+			limit = {
+				exists = event_target:z_pf_tgt_plnt_migration_express
+				check_variable = { which = z_pf_var_cntr_heup_remain value > 0 }
+			}
+			event_target:z_pf_tgt_plnt_migration_express = {
+				##_设定可迁移pop
+				clear_global_event_target = z_pf_tgt_pop_heup
+				random_owned_pop = {#_在迁出plnt失效前不会重新设定迁出plnt,所以pop中要包含完整条件
+					limit = {
+						NOT = { has_pop_flag = z_pf_flg_pop_migration_non }
+						OR = {
+							#_强制迁移
+							prev = {
+								has_planet_flag = z_pf_flg_plnt_migration_forced
+								num_pops > 1
+								z_pf_trgr_heup_pop_limit = yes
+							}
+							#_非强制
+							AND = {
+								prev = {
+									z_pf_trgr_no_building_ruin = yes
+									z_pf_trgr_heup_pop_limit = yes
+								}
+								is_unemployed = yes
+								#_无移民控制
+								NAND = {
+									is_robot_pop = no	#_智械无移民控制
+									has_migration_control = yes
+								}
+							}
+						}
+					}
+					save_global_event_target_as = z_pf_tgt_pop_heup
+				}
+				##_存在可迁移pop
+				if = {
+					limit = { exists = event_target:z_pf_tgt_pop_heup }
+					#_检测输入plnt宜居度
+					if = {
+						limit = {
+							event_target:z_pf_tgt_plnt_immigration = {
+								OR = {
+									has_planet_flag = z_pf_flg_plnt_immigration_forced		#_强制迁入
+									habitability = { who = event_target:z_pf_tgt_pop_heup value > 0.5 }
+								}
+							}
+						}
+						#_执行迁入
+						resettle_pop = {
+							pop = event_target:z_pf_tgt_pop_heup
+							planet = event_target:z_pf_tgt_plnt_immigration
+						}
+						#_降级
+						event_target:z_pf_tgt_pop_heup = { z_pf_eft_pop_demote = yes }
+						#_迁入余额debug
+						root = { change_variable = { which = z_pf_var_cntr_heup_remain value = -1 } }
+					}
+					#_不符合条件pop添加隔离flag
+					else = {
+						event_target:z_pf_tgt_pop_heup = {
+							set_timed_pop_flag = { flag = z_pf_flg_pop_migration_non days = 1 }
+						}
+					}
+				}
+				##_不存在可迁移pop,隔离迁出星球,evt_tgt清零
+				else = {
+					set_timed_planet_flag = { flag = z_pf_flg_plnt_migration_non days = 1 }
+					clear_global_event_target = z_pf_tgt_plnt_migration_express
+				}
+			}
+			#_自循环
+			country_event = { id = z_pf_heup.3 }
+		}
+		#_不存在输出plnt-归零
+		else = {
+			#_工作检测
+			event_target:z_pf_tgt_plnt_immigration = {
+				set_timed_planet_flag = { flag = z_pf_flg_plnt_job_checker days = 1 }
+				z_pf_eft_job_check_district = yes
+			}
+			#_tgt清零
+			clear_global_event_target = z_pf_tgt_plnt_migration_express
+			clear_global_event_target = z_pf_tgt_plnt_immigration
+			clear_global_event_target = z_pf_tgt_pop_heup
+		}
+	}
+}

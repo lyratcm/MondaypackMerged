@@ -1,0 +1,214 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+eac_create_admiral_trickster = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_trickster
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_fleet_logistician = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_fleet_logistician
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_maintenance_loop = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_maintenance_loop
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_engineer = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_engineer
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_aggressive = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_aggressive
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_cautious = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_cautious
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_scout = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_scout
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_unyielding = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_unyielding
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+eac_create_admiral_gale_speed = {
+	create_leader = {
+		class = admiral
+		species = owner_species
+		name = random
+		skill = 2
+		traits = {
+			trait = leader_trait_gale_speed
+			trait = leader_trait_university_educated_admiral
+		}
+	}
+	last_created_leader = { 
+		save_event_target_as = eac_last_leader_created
+		eac_add_leader_traits_after_creation = yes
+	}	
+}
+
+# eac_create_admiral_navigator = {
+# 	create_leader = {
+# 		class = admiral
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = eac_leader_trait_navigator
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }
+
+# eac_create_admiral_ground_pounder = {
+# 	create_leader = {
+# 		class = admiral
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = eac_aw_leader_trait_ground_pounder
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }
+
+# eac_create_admiral_starbase_technician = {
+# 	create_leader = {
+# 		class = admiral
+# 		species = owner_species
+# 		name = random
+# 		skill = 2
+# 		traits = {
+# 			trait = admiral_starbase_technician
+# 		}
+# 	}
+# 	last_created_leader = { 
+# 		save_event_target_as = eac_last_leader_created
+# 		eac_add_leader_traits_after_creation = yes
+# 	}	
+# }

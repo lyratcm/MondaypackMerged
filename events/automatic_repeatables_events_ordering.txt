@@ -1,0 +1,1174 @@
+namespace = automatic_repeatables_menu
+
+# Change research picking order : physics
+country_event = {
+    id = automatic_repeatables_menu.21
+    title = "automatic_repeatables_menu.21.name"
+    desc = "automatic_repeatables_menu.21.desc"
+    picture = GFX_evt_physics_research
+    is_triggered_only = yes
+    
+    option = { # First one, desactivated
+        name = {
+            text = "AR_tech_repeatable_improved_tile_energy_output"
+            trigger = { check_variable = { which = AR_priority_physics_0 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_shield_output"
+            trigger = { check_variable = { which = AR_priority_physics_0 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_damage"
+            trigger = { check_variable = { which = AR_priority_physics_0 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_fire_rate"
+            trigger = { check_variable = { which = AR_priority_physics_0 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_cost"
+            trigger = { check_variable = { which = AR_priority_physics_0 value = 4 } }
+        }
+        allow = {
+            always = no
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_energy_output"
+            trigger = { check_variable = { which = AR_priority_physics_1 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_shield_output"
+            trigger = { check_variable = { which = AR_priority_physics_1 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_damage"
+            trigger = { check_variable = { which = AR_priority_physics_1 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_fire_rate"
+            trigger = { check_variable = { which = AR_priority_physics_1 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_cost"
+            trigger = { check_variable = { which = AR_priority_physics_1 value = 4 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_physics_0 }
+            set_variable = { which = AR_priority_physics_0 value = AR_priority_physics_1 }
+            set_variable = { which = AR_priority_physics_1 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.21 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_energy_output"
+            trigger = { check_variable = { which = AR_priority_physics_2 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_shield_output"
+            trigger = { check_variable = { which = AR_priority_physics_2 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_damage"
+            trigger = { check_variable = { which = AR_priority_physics_2 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_fire_rate"
+            trigger = { check_variable = { which = AR_priority_physics_2 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_cost"
+            trigger = { check_variable = { which = AR_priority_physics_2 value = 4 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_physics_1 }
+            set_variable = { which = AR_priority_physics_1 value = AR_priority_physics_2 }
+            set_variable = { which = AR_priority_physics_2 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.21 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_energy_output"
+            trigger = { check_variable = { which = AR_priority_physics_3 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_shield_output"
+            trigger = { check_variable = { which = AR_priority_physics_3 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_damage"
+            trigger = { check_variable = { which = AR_priority_physics_3 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_fire_rate"
+            trigger = { check_variable = { which = AR_priority_physics_3 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_cost"
+            trigger = { check_variable = { which = AR_priority_physics_3 value = 4 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_physics_2 }
+            set_variable = { which = AR_priority_physics_2 value = AR_priority_physics_3 }
+            set_variable = { which = AR_priority_physics_3 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.21 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_energy_output"
+            trigger = { check_variable = { which = AR_priority_physics_4 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_shield_output"
+            trigger = { check_variable = { which = AR_priority_physics_4 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_damage"
+            trigger = { check_variable = { which = AR_priority_physics_4 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_energy_fire_rate"
+            trigger = { check_variable = { which = AR_priority_physics_4 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_cost"
+            trigger = { check_variable = { which = AR_priority_physics_4 value = 4 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_physics_3 }
+            set_variable = { which = AR_priority_physics_3 value = AR_priority_physics_4 }
+            set_variable = { which = AR_priority_physics_4 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.21 }
+        }
+    }
+    option = { # Back
+        name = automatic_repeatables_menu.back
+        country_event = { id = automatic_repeatables_menu.1 }
+    }
+    option = { # Close
+        name = automatic_repeatables_menu.close
+    }
+}
+
+# Change research picking order : society
+country_event = {
+    id = automatic_repeatables_menu.22
+    title = "automatic_repeatables_menu.22.name"
+    desc = "automatic_repeatables_menu.22.desc"
+    picture = GFX_evt_society_research
+    is_triggered_only = yes
+    
+    option = { # First one, desactivated
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_0 value = 8 } }
+        }
+        allow = {
+            always = no
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_1 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_0 }
+            set_variable = { which = AR_priority_society_0 value = AR_priority_society_1 }
+            set_variable = { which = AR_priority_society_1 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_2 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_1 }
+            set_variable = { which = AR_priority_society_1 value = AR_priority_society_2 }
+            set_variable = { which = AR_priority_society_2 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_3 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_2 }
+            set_variable = { which = AR_priority_society_2 value = AR_priority_society_3 }
+            set_variable = { which = AR_priority_society_3 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_4 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_3 }
+            set_variable = { which = AR_priority_society_3 value = AR_priority_society_4 }
+            set_variable = { which = AR_priority_society_4 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_5 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_4 }
+            set_variable = { which = AR_priority_society_4 value = AR_priority_society_5 }
+            set_variable = { which = AR_priority_society_5 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_6 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_5 }
+            set_variable = { which = AR_priority_society_5 value = AR_priority_society_6 }
+            set_variable = { which = AR_priority_society_6 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_7 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_6 }
+            set_variable = { which = AR_priority_society_6 value = AR_priority_society_7 }
+            set_variable = { which = AR_priority_society_7 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_food_output"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_core_system_cap"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_edict_length"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_damage"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_army_health"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_leader_life_span"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_naval_cap"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_command_limit"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_starbase_capacity"
+            trigger = { check_variable = { which = AR_priority_society_8 value = 8 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_society_7 }
+            set_variable = { which = AR_priority_society_7 value = AR_priority_society_8 }
+            set_variable = { which = AR_priority_society_8 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.22 }
+        }
+    }
+    option = { # Back
+        name = automatic_repeatables_menu.back
+        country_event = { id = automatic_repeatables_menu.1 }
+    }
+    option = { # Close
+        name = automatic_repeatables_menu.close
+    }
+}
+
+
+# Change research picking order : enngineering
+country_event = {
+    id = automatic_repeatables_menu.23
+    title = "automatic_repeatables_menu.23.name"
+    desc = "automatic_repeatables_menu.23.desc"
+    picture = GFX_evt_engineering_research
+    is_triggered_only = yes
+    
+    option = { # First one, desactivated
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_0 value = 10 } }
+        }
+        allow = {
+            always = no
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_1 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_0 }
+            set_variable = { which = AR_priority_engineering_0 value = AR_priority_engineering_1 }
+            set_variable = { which = AR_priority_engineering_1 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_2 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_1 }
+            set_variable = { which = AR_priority_engineering_1 value = AR_priority_engineering_2 }
+            set_variable = { which = AR_priority_engineering_2 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_3 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_2 }
+            set_variable = { which = AR_priority_engineering_2 value = AR_priority_engineering_3 }
+            set_variable = { which = AR_priority_engineering_3 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_4 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_3 }
+            set_variable = { which = AR_priority_engineering_3 value = AR_priority_engineering_4 }
+            set_variable = { which = AR_priority_engineering_4 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_5 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_4 }
+            set_variable = { which = AR_priority_engineering_4 value = AR_priority_engineering_5 }
+            set_variable = { which = AR_priority_engineering_5 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_6 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_5 }
+            set_variable = { which = AR_priority_engineering_5 value = AR_priority_engineering_6 }
+            set_variable = { which = AR_priority_engineering_6 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_7 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_6 }
+            set_variable = { which = AR_priority_engineering_6 value = AR_priority_engineering_7 }
+            set_variable = { which = AR_priority_engineering_7 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_8 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_7 }
+            set_variable = { which = AR_priority_engineering_7 value = AR_priority_engineering_8 }
+            set_variable = { which = AR_priority_engineering_8 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_9 value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_8 }
+            set_variable = { which = AR_priority_engineering_8 value = AR_priority_engineering_9 }
+            set_variable = { which = AR_priority_engineering_9 value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = {
+        name = {
+            text = "AR_tech_repeatable_improved_tile_mineral_output"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 0 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 1 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_military_station_health"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 2 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_improved_armor_output"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 3 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 4 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_explosive_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 5 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 6 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_kinetic_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 7 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_damage"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 8 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_weapon_type_strike_craft_fire_rate"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 9 } }
+        }
+        name = {
+            text = "AR_tech_repeatable_reduced_building_time"
+            trigger = { check_variable = { which = AR_priority_engineering_a value = 10 } }
+        }
+        hidden_effect = {
+            set_variable = { which = AR_temp value = AR_priority_engineering_9 }
+            set_variable = { which = AR_priority_engineering_9 value = AR_priority_engineering_a }
+            set_variable = { which = AR_priority_engineering_a value = AR_temp }
+            set_variable = { which = AR_temp value = 0 } # Cleanup
+            country_event = { id = automatic_repeatables_menu.23 }
+        }
+    }
+    option = { # Back
+        name = automatic_repeatables_menu.back
+        country_event = { id = automatic_repeatables_menu.1 }
+    }
+    option = { # Close
+        name = automatic_repeatables_menu.close
+    }
+}

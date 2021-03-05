@@ -1,0 +1,12 @@
+﻿l_braz_por:
+ ##############################################
+ # Replaced localisation for Superior Species #
+ ##############################################
+ 
+ ap_engineered_evolution_modifier_desc:1 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$\n§HUnlocks Edict:§! Begin Genetic Experiments"
+ ap_evolutionary_mastery_modifier_desc:0 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$"
+
+ 
+ 
+ 
+ 

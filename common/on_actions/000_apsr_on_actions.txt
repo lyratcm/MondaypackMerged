@@ -1,0 +1,97 @@
+
+on_press_begin = {
+    events = {	
+		# таймер 40 дней перед показом сообщения (apsr.2)
+		apsr.1
+    }
+}
+
+on_game_start = {
+	events = {
+		# таймер 6 дней перед появлением одного Остекленного Мира (apsr.6)
+		apsr.5
+	}
+}
+
+on_game_start_country = {
+	events = {
+		# запуск консоли
+		apsr.997
+		# раздача модификатора ботам
+		apsr.12
+		# Старт игры с истоком мода - генерация ресурсов на столице и смена типа планеты, генерация депозитов и т.д.
+		apsr.7
+	}
+}
+
+# При экранировании планеты Колоссом
+on_destroy_planet_with_PLANET_KILLER_SHIELDER = {
+	events = {
+		apsr.3
+	}
+}
+
+# При уничтожении планеты Колоссом
+on_destroy_planet_with_PLANET_KILLER_CRACKER = {
+	events = {
+		apsr.4
+	}
+}
+
+# Фикс ИИ
+on_planet_conquer = {
+	events = {
+		apsr.10 # раздача технологий при получении планеты
+		apsr_enclave.398 # при колонизации/захвате/передаче планет с спец депозитом
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		apsr.10 # раздача технологий при получении планеты
+		apsr_enclave.398 # при колонизации/захвате/передаче планет с спец депозитом
+	}
+}
+
+on_colonized = {
+	events = {
+		apsr.11 # раздача технологий при получении планеты
+	}
+}
+
+on_colonization_started = {
+	events = {
+		apsr.11 # раздача технологий при получении планеты
+		apsr_enclave.398 # при колонизации/захвате/передаче планет с спец депозитом
+	}
+}
+
+on_decade_pulse = {
+	events = {
+		apsr.13 # Принудительный терраформинг ценных миров
+	}
+}
+
+# Planet has taken damage from orbital bombardment
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		apsr.20
+	}
+}
+
+# A ship has surveyed a planet.
+# Scope = Ship
+# From = Planet
+on_survey = {
+	events = {
+		apsr.8 # Изучение Остекленного Мира
+	}
+}
+
+on_yearly_pulse = {
+	events = {
+		apsr.30 # Проверка что мод используется с начала игры
+	}
+}

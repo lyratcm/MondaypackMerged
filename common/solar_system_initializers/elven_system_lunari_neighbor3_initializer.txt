@@ -1,0 +1,137 @@
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 15
+@moon_min_size = 6
+@moon_max_size = 10
+
+elven_system_lunari_neighbor3_initializer = {
+	name = "Shayol Ghul"
+	class = "sc_m_giant"
+
+	flags = { custom_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		name = "Shai'tan"
+		class = star
+		orbit_distance = 0
+		orbit_angle = random
+		size = 28
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+	}
+
+	planet = {
+		name = "Ba'alzamon"
+		orbit_distance = 45
+		orbit_angle = random
+		size = 15
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_engineering_3
+		}
+	}
+
+	planet = {
+		name = "Moghedien"
+		class = "pc_barren"
+		entity = "elven_01_barren_01_lunsaer"
+		orbit_distance = 40
+		orbit_angle = random
+		size = { min = 16 max = 22 }
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Graendal"
+		class = "pc_barren"
+		entity = "elven_01_barren_01_faeranel"
+		orbit_distance = 30
+		orbit_angle = random
+		size = { min = 22 max = 30 }
+		has_ring = no
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_trade_value_4
+		}
+	}
+
+	planet = {
+		name = "Semirhage"
+		class = "pc_barren"
+		entity = "elven_01_barren_01_semirhage"
+		orbit_distance = 30
+		orbit_angle = random
+		size = { min = 30 max = 35 }
+		has_ring = yes
+
+		init_effect = {
+			random_list = {
+				50 = {
+					clear_deposits = yes
+					add_deposit = d_minerals_2
+				}
+				50 = {
+					clear_deposits = yes
+					add_deposit = d_minerals_3
+				}
+			}
+		}
+	}
+	
+	planet = {
+		name = "Lanfear"
+		class = "pc_gas_giant"
+		orbit_distance = 50
+		entity = "elven_01_gas_giant_lanfear"
+		orbit_angle = { min = 45 max = 315 }
+		size = { min = 32 max = 45 }
+		has_ring = yes
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_exotic_gases_1
+		}
+
+		change_orbit = 10
+
+		moon = {
+			name = "Cyndane"
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+
+			init_effect = {
+				random_list = {
+					75 = {
+						clear_deposits = yes
+						add_deposit = d_physics_2
+					}
+					25 = {
+						clear_deposits = yes
+						add_deposit = d_physics_3
+					}
+				}
+			}
+		}
+	}
+
+	neighbor_system = {
+		distance = { min = 10 max = 30 }	
+		initializer = "elven_system_lunari_neighbor4_initializer"
+	}
+}

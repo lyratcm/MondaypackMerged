@@ -1,0 +1,36 @@
+pasmod_army_drop_pods_trigger = {
+	OR = {
+		#tier I
+		has_component = pasmod_orbital_drop_pod_default
+		has_component = pasmod_orbital_drop_pod_clone
+		has_component = pasmod_orbital_drop_pod_gene
+		has_component = pasmod_orbital_drop_pod_psionic_force
+		has_component = pasmod_orbital_drop_pod_slave_army
+		has_component = pasmod_orbital_drop_pod_droid_army
+
+		has_component = pasmod_orbital_drop_pod_battle_frame
+		has_component = pasmod_orbital_drop_pod_bio_mech
+
+		#tier II
+		has_component = pasmod_orbital_drop_pod_default_2
+		has_component = pasmod_orbital_drop_pod_clone_2
+		has_component = pasmod_orbital_drop_pod_gene_2
+		has_component = pasmod_orbital_drop_pod_psionic_force_2
+		has_component = pasmod_orbital_drop_pod_slave_army_2
+		has_component = pasmod_orbital_drop_pod_droid_army_2
+
+		has_component = pasmod_orbital_drop_pod_battle_frame_2
+		has_component = pasmod_orbital_drop_pod_bio_mech_2
+
+		#tier III
+		has_component = pasmod_orbital_drop_pod_default_3
+		has_component = pasmod_orbital_drop_pod_clone_3
+		has_component = pasmod_orbital_drop_pod_gene_3
+		has_component = pasmod_orbital_drop_pod_psionic_force_3
+		has_component = pasmod_orbital_drop_pod_slave_army_3
+		has_component = pasmod_orbital_drop_pod_droid_army_3
+
+		has_component = pasmod_orbital_drop_pod_battle_frame_3
+		has_component = pasmod_orbital_drop_pod_bio_mech_3
+	}
+}

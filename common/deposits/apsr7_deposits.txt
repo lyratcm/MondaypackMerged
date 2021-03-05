@@ -1,0 +1,13 @@
+
+apsr7_deposit = {
+	is_for_colonizeable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes 
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

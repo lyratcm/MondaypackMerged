@@ -1,0 +1,7 @@
+# No scope, like on_game_start
+on_monthly_pulse = {
+  events = {
+    speeddial.1 #curator timer check
+    speeddial.2 #give curators flags AND notice for shroud-contacts(update only) - fire only once
+  }
+}

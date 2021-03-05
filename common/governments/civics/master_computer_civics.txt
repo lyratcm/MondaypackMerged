@@ -1,0 +1,484 @@
+civic_master_computer_eminence = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_egalitarian
+                value = ethic_egalitarian
+                value = ethic_fanatic_egalitarian
+            }
+        }
+    }
+
+    modifier = {
+        edict_length_mult = 0.2
+        pop_happiness = 0.05
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_logistitian = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    modifier = {
+        planet_pops_upkeep_mult = -0.15
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_industrialist = {
+    # description = civic_master_computer_industrialist_effect
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    modifier = {
+        planet_jobs_minerals_upkeep_mult = -0.15
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_surveillance = {
+    description = civic_master_computer_surveillance_effect
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+            NOT = { value = ethic_fanatic_egalitarian }
+        }
+        # civics = {
+        #     NOT = { value = civic_master_computer_wargamer }
+        # }
+    }
+
+    modifier = {
+        planet_stability_add = 5
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_mm_integrator = {
+    description = civic_master_computer_mm_integrator_effects
+    modification = no
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        civics = {
+            NOR = { 
+                value = civic_master_computer_purifier
+                value = civic_master_computer_virtual_world
+                value = civic_master_computer_datavore
+            }
+        }
+    }
+
+    modifier = {
+        job_master_computer_integrator_per_pop = 0.02
+    }
+
+    random_weight = { base = 1 }
+}
+
+civic_master_computer_wargamer = {
+    description = civic_master_computer_wargamer_effect
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+            OR = {
+				text = civic_tooltip_militarist
+				value = ethic_militarist
+				value = ethic_fanatic_militarist
+			}
+        }
+        civics = {
+            NOT = {
+                value = civic_master_computer_virtual_world
+            }
+        }
+    }
+
+    modifier = {
+        # country_naval_cap_mult = 0.05
+        ship_fire_rate_mult = 0.05
+        ship_evasion_mult = 0.05
+        # country_command_limit_add = 10
+    }
+
+    random_weight = { base = 10 }
+}
+
+civic_master_computer_urban_planner = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+    description = civic_master_computer_urban_planner_effect
+
+    modifier = {
+        # planet_housing_mult = 0.1
+        job_clerk_per_pop = 0.05
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_grid_manager = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    modifier = {
+        planet_structures_energy_upkeep_mult = -0.25
+        planet_jobs_energy_produces_mult = 0.05
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_censor = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+			}			
+		}
+        civics = {
+            NOT = { value = civic_master_computer_exchange }
+        }
+    }
+
+    modifier = {
+        country_unity_produces_mult = 0.10
+        pop_government_ethic_attraction = 0.33
+    }
+
+    random_weight = { base = 5 }
+}
+
+civic_master_computer_matchmaker = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+			NOR = {
+				text = civic_tooltip_not_egalitarian
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
+            }
+            NOR = {
+                text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+            }
+            OR = {
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}			
+		}
+    }
+
+    modifier = {
+        pop_growth_speed = 0.05
+        pop_environment_tolerance = 0.05
+    }
+
+    random_weight = { base = 10 }
+}
+
+civic_master_computer_purifier = {
+    description = civic_master_computer_purifier_effect
+    modification = no
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+            value = ethic_fanatic_xenophobe
+        }
+        civics = {
+            NOR = { 
+                value = civic_master_computer_mm_integrator
+                value = civic_master_computer_virtual_world
+                value = civic_master_computer_datavore
+                value = civic_syncretic_evolution
+            }
+        }
+    }
+
+    modifier = {
+        ship_shield_mult = 0.20
+        ship_armor_mult = 0.20
+        ship_weapon_damage = 0.20
+        all_technology_research_speed = 0.05
+        starbase_shipyard_build_cost_mult = -0.25
+        country_naval_cap_mult = 0.33
+        country_command_limit_add = 10
+    }
+
+    random_weight = { base = 100 }
+}
+
+civic_master_computer_efficient = {
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    modifier = {
+        empire_size_penalty_mult = -0.50
+    }
+
+    random_weight = { base = 5 }
+}
+
+
+
+civic_master_computer_physics = {
+	potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_master_computer_society
+                value = civic_master_computer_engineering
+            }
+        }
+    }
+    
+    modifier = {
+        planet_researchers_physics_research_produces_add = 1
+    }
+
+    random_weight = { 
+        base = 5 
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+    }
+}
+civic_master_computer_society = {
+	potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_master_computer_physics
+                value = civic_master_computer_engineering
+            }
+        }
+    }
+    
+    modifier = {
+        planet_researchers_society_research_produces_add = 1
+    }
+
+    random_weight = { 
+        base = 5 
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+    }
+}
+civic_master_computer_engineering = {
+	potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_master_computer_physics
+                value = civic_master_computer_society
+            }
+        }
+    }
+    
+    modifier = {
+        planet_researchers_engineering_research_produces_add = 1
+    }
+
+    random_weight = { 
+        base = 5 
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+    }
+}
+
+civic_master_computer_virtual_world = {
+    description = civic_master_computer_virtual_world_effect
+    modification = no
+
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+            NOR = {
+                text = civic_tooltip_not_authoritarian
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
+            OR = {
+				text = civic_tooltip_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+			}
+        }
+        civics = {
+            NOR = {
+                value = civic_master_computer_datavore
+                value = civic_master_computer_mm_integrator
+                value = civic_master_computer_purifier
+                value = civic_master_computer_wargamer
+            }
+        }
+    }
+
+    random_weight = { 
+        base = 5 
+        modifier = {
+            factor = 2
+            has_ethic = ethic_fanatic_materialist
+        }
+    }
+
+    modifier = {
+        # pop_growth_from_immigration = 0.05
+        pop_amenities_usage_mult = -0.10
+    }
+}
+
+civic_master_computer_datavore = {
+    description = civic_master_computer_datavore_effect
+    modification = no
+
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        ethics = {
+            OR = {
+                value = ethic_fanatic_militarist
+                value = ethic_militarist
+                value = ethic_fanatic_xenophobe
+                value = ethic_xenophobe
+            }
+            NOR = {
+                text = civic_tooltip_not_pacifist
+				value = ethic_pacifist
+				value = ethic_fanatic_pacifist
+            }
+        }
+        civics = {
+            NOR = {
+                value = civic_master_computer_virtual_world
+                value = civic_master_computer_mm_integrator
+                value = civic_master_computer_purifier
+                value = civic_master_computer_exchange
+            }
+        }
+    }
+
+    modifier = {
+        country_war_exhaustion_mult = -0.1
+    }
+
+    random_weight = {
+        base = 5
+    }
+}
+
+civic_master_computer_exchange = {
+    description = civic_master_computer_exchange_effect
+
+    potential = {
+        authority = {
+            value = auth_master_computer
+        }
+    }
+
+    possible = {
+        civics = {
+            NOR = { 
+                value = civic_master_computer_censor
+                value = civic_master_computer_datavore
+            }
+        }
+    }
+
+    modifier = {
+        num_tech_alternatives_add = 1
+    }
+
+    random_weight = {
+        base = 1
+    }
+}

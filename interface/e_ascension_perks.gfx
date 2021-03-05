@@ -1,0 +1,186 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_executive_vigor"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_executive_vigor.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_world_shaper"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_world_shaper.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_hive_worlds"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_hive_worlds.dds"
+		alwaystransparent = yes
+	}
+
+
+} 
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_galactic_force_projection"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_galactic_force_projection.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_master_builders"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_master_builders.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_interstellar_dominion"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_interstellar_dominion.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_technological_ascendancy"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_technological_ascendancy.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_one_vision"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_one_vision.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_imperial_prerogative"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_imperial_prerogative.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_imperial_prerogative_corp"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_imperial_prerogative.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_imperial_prerogative_corp2"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_imperial_prerogative.dds"
+		alwaystransparent = yes
+	}
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_shared_destiny"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_shared_destiny.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_universal_transactions"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_universal_transactions.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_galactic_force_projection"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_galactic_force_projection.dds"
+		alwaystransparent = yes
+	}
+
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_mastery_of_nature"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_mastery_of_nature.dds"
+		alwaystransparent = yes
+	}
+	
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_mastery_of_nature2"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_mastery_of_nature2.dds"
+		alwaystransparent = yes
+	}
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_defender_of_the_galaxy"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_defender_of_the_galaxy.dds"
+		alwaystransparent = yes
+	}
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_eap_transcendent_learning"
+		texturefile = "gfx/interface/icons/ascension_perks/eap_transcendent_learning.dds"
+		alwaystransparent = yes
+	}
+
+}
+
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_diplomacy_status_is_tributary2"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_tributary2.dds"
+	}	
+
+}
+
+spriteTypes = {
+	spriteType = {
+		name = "GFX_diplomacy_status_is_subsidiary2"
+		texturefile = "gfx/interface/icons/diplomacy/diplomacy_subsidiary2.dds"
+	}	
+
+}

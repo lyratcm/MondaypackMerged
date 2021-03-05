@@ -1,0 +1,245 @@
+﻿l_simp_chinese:
+
+# Perks
+
+ eap_world_shaper:0 "塑星大师"
+ eap_world_shaper_desc:0 "改造一个星球的生态系统对我们来说只是做一点微小的工作。"
+ 
+ eap_hive_worlds:0 "无尽蜂巢"
+ eap_hive_worlds_desc:0 "我们轻松的将一颗颗宜居星球改造为蜂巢，甚至将目光投向了一些很有潜力的贫瘠星球。"
+
+ eap_galactic_force_projection:0 "军备竞赛"
+ eap_galactic_force_projection_desc:0 "我们需要更多，更多的舰队，来确保我们的权利意志得到执行。"
+
+ eap_master_builders:0 "“造物之神”"
+ eap_master_builders_desc:0 "有些蒙昧的低等文明称呼我们为造物之神，其实也并不算太错。"
+
+ eap_interstellar_dominion:0 "星际霸权"
+ eap_interstellar_dominion_desc:0 "我们的地位至高无上，我们的疆土幅员辽阔。"
+
+ eap_technological_ascendancy:0 "技术奇点"
+ eap_technological_ascendancy_desc:0 "技术奇点是一个根据技术发展史总结出的观点，认为未来将要发生一件不可避免的事件：技术发展将会在很短的时间内发生极大的接近于无限的进步。"
+ deseap_technological_ascendancy_desc:0 "每§G3§!年举办一次§Y未来科技峰会§!"
+ eap_one_vision:0 "天下归心"
+ eap_one_vision_desc:0 "凡是中央的决策，我们都坚决维护；凡是中央的指示，我们都始终不渝地遵循。"
+
+ eap_imperial_prerogative:0 "中央特权"
+ eap_imperial_prerogative_desc:0 "经过一系列深刻的改革，中央政府的控制能力得到了进一步的提升。"
+ eap_imperial_prerogative_corp:0 "中央权势"
+ eap_imperial_prerogative_corp_desc:0 "经过一系列深刻的改革，中央公司的控制能力得到了进一步的提升。"
+ eap_imperial_prerogative_corp2:0 "中央权势"
+ eap_imperial_prerogative_corp2_desc:0 "经过一系列深刻的改革，中央公司的控制能力得到了进一步的提升。"
+
+ eap_shared_destiny:0 "共同辉煌"
+ eap_shared_destiny_desc:0 "那些忠于我们的人，辉煌的未来就在你们眼前。" 
+ deseap_shared_destiny_desc:0 "附庸£opinion §Y评价§!增加§G+200§!"
+ describe_shared_destiny:0 "§E附庸和朝贡国会在一段时间后提升为联统国。\n联统是附庸（朝贡）的高级形式。 他们只有有限的外交权， 必须和宗主并肩作战。\n需要上交§Y25%§!的月度科研，能量币和矿物收入作为朝贡。\n他们受到宗主国的产业扶持：能量币和矿物产出增加§!§Y100%§!§E。解除附庸关系后，加成效果会在一段时间后消失。§!"
+ triggered_opinion_eap_shared_destiny:0 "共同辉煌"
+ tributary_2:0 "宗主国扶持"
+ SUBJECT_tributary2:0 "联统国"
+ SUBJECT_DESC_tributary2:0 "联统是附庸（朝贡）的高级形式。 \n他们只有有限的外交权， 必须和宗主并肩作战。\n需要上交§Y25%§!的月度科研，能量币和矿物收入作为朝贡。\n他们受到宗主国的产业扶持：能量币和矿物产出增加§Y100%§!。\n解除附庸关系后，加成效果会在一段时间后消失。"
+ 
+ eap_universal_transactions:0 "资本渗透"
+ eap_universal_transactions_desc:0 "我们在银河各国不断的进行投资和贷款以获取高额利润，逐渐控制了他们的经济命脉，甚至影响到了一些高层的决策。"
+ describe_universal_transactions_desc:0 "附属公司£opinion §Y评价§!增加§G+200§!"
+ describe_universal_transactions:0 "§E附属公司会在一段时间后提升为全资子公司。\n他们只有有限的外交权，必须和母公司并肩作战。\n需要上交§Y25%§!的月度科研，能量币和矿物收入。\n他们受到母公司的扶持：能量币和矿物产出增加§!§Y100%§!§E。解除附属关系后，加成效果会在一段时间后消失。§!"
+ triggered_opinion_eap_universal_transactions:0 "资本渗透"
+ tributary_3:0 "总公司投资"
+ SUBJECT_subsidiary2:0 "全资子公司"
+ SUBJECT_DESC_subsidiary2:0 "全资子公司只有有限的外交权，必须和母公司并肩作战。\n需要上交§Y25%§!的月度科研，能量币和矿物收入。\n他们受到母公司的扶持：能量币和矿物产出增加§Y100%§!。\n解除附属关系后，加成效果会在一段时间后消失。"
+ 
+ eap_mastery_of_nature:0 "自然和谐"
+ eap_mastery_of_nature_desc:0 "我们转变了改造自然的方式，遵循自然规律，构建有利于我们与自然和谐共生的体系。"
+ eap_mastery_of_nature_unlocks:1 "解锁所有£society §Y星球适居性§!科技。"
+ allow_edict_land_clearance_perfection:0 "§H解锁星球决策:§! 自然和谐"
+ 
+ describe_edict_land_clearance_perfection:1 "§E此决策将使星球所支持的区划数量上限永久性增加§Y8§!。此决策在每颗星球上只可实施一次。§!"
+
+ decision_eapmastery_of_nature:0 "自然和谐"
+ decision_eapmastery_of_nature_desc:0 "我们与自然和谐相处，近乎完美的共生。"
+ d_AA:0 "自然的馈赠"
+ d_AA_desc:0 "一个可持续发展的世界。"
+   
+ eap_mastery_of_nature2:0 "征服自然"
+ eap_mastery_of_nature2_desc:0 "知识和经验已经足够，如今一切干扰我们扩张的自然环境因素都可以轻易排除。所有的世界都向我们敞开大门。我们是自然的征服者！"
+ eap_mastery_of_nature2_unlocks:1 "解锁所有£society §Y清理地块障碍§!科技。"
+ allow_edict_land_clearance_perfection2:0 "§H解锁星球决策:§! 征服自然"
+ decision_eapmastery_of_nature2:0 "征服自然"
+ decision_eapmastery_of_nature2_desc:0 "我们已经彻底征服了自然。"
+ d_BB:0 "移山填海"
+ d_BB_desc:0 "充分改造利用每一寸空间。"
+ 
+ deseap_one_vision_desc:0 "§H解锁政策：§!天下归心\n允许我们通过修改该政策开启不同的思潮宣传。"
+ 
+ 
+ nnn_galactic_force_projection_desc:0 "每隔§G10§!年获得§G1~5§!艘战列舰。"
+ 
+ eap_defender_of_the_galaxy:0 "银河守护者"
+ eap_defender_of_the_galaxy_desc:0 "我们的科研飞船在一颗荒芜的星球上发现了一个造型古朴刻满了神秘图案的盒子。经过初步研究，盒子本身蕴含着古老强力的技术，难以打开。其表面刻画的内容似乎是在说银河可能面临一场绝望的灾难，而盒内装着预防的方法。\n\n我们绝不允许银河陷入黑暗的未来！"
+ eap_defender_of_the_galaxy_modifier_desc:0 "对终末危机阵营造成伤害：§G+50%§!\n所有产出增加：§G+50%§!。"
+ eap_defender_of_the_galaxy_effect_opinion:0 "所有国家的£opinion §Y评价§!增加§G+80§!"
+ the_defender:0 "潘多拉魔盒"
+ eap_defender_of_the_galaxy_effect:0 "§R警告，将会导致终末危机！§!"
+ triggered_opinion_eap_defender_of_the_galaxy:0 "银河守护者"
+ 
+ eap_executive_vigor:0 "极效政府"
+ eap_executive_vigor_desc:0 "高素质人口的加入使得政府运转效率达到了极高的水平，每一条政令都被完美的执行。"
+ 
+ eap_transcendent_learning:0 "永无止境"
+ eap_transcendent_learning_desc:0 "我们开发出了一种神奇的喷雾药剂：NZT-48，能让吸入者的思维能力获得极大提升，同时学到新知识会获得巨大快感。经反复验证没有明显副作用。学习与研究成为了最好的娱乐方式！"
+ allow_decision_nzt48:0 "§H解锁决策:§! NZT-48"
+ describe_decision_nzt48:3 "§E这个行星决策将会持续§Y100§!年。在此期间增加£pop 人口§Y$MOD_POP_HAPPINESS$§!，增加人口§Y科研产出§!，减少§Y政府思潮吸引力§!。§!"
+ decision_nzt48:0 "NZT-48"
+ decision_nzt48_desc:0 "当地政府开始开始大面积喷洒NZT-48，星球笼罩在浓厚的学术氛围之中。"
+ 
+ eap_galactic_contender:0 "昭昭天命"
+ eap_galactic_contender_desc:0 "那些自称堕落帝国的异形已经在他们的星区中苟活了上万年，他们的文明在上万年中没有任何进步。我们的昭昭天命将彰显在它们的面前。让那些畏惧他们的异形同情者们无地自容吧！”"
+ eap_galactic_contender_effect_opinion:0 "§Y10§!年后§Y所有堕落帝国§!的£opinion §Y评价§!减少：§G-1000§!并觉醒"
+ eap_galactic_contender_effect:0 "§R警告，可能导致堕落帝国的攻击！所有堕落帝国都将在10年后觉醒！§!"
+ 
+
+# Techs
+
+ tech_world_shaper:0 "贫瘠世界重塑"
+ tech_world_shaper_desc:1 "即使是贫瘠星球，我们也能直接将其改造为一个能够让任何形态的生命都能完美适应的世界！\n\n"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_GAIA_CHANGE_TITLE:0 "§H解锁功能：§! 贫瘠星球改造"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_GAIA_CHANGE_DESC:0 "§H环境操控§!\n允许我们将部分被认为有潜力的贫瘠星球改造成盖亚星球。（部分贫瘠星球会获得“改造候选”）"
+ 
+ tech_hive_worlds:0 "贫瘠世界筑巢"
+ tech_hive_worlds_desc:1 "即使是贫瘠星球，我们也能直接将其改造为我们的蜂巢！\n\n"
+
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_TITLE:0 "§H解锁功能：§! 贫瘠星球改造"
+ TECH_UNLOCK_TERRAFORMING_BARREN_TO_HIVE_CHANGE_DESC:0 "§H环境操控§!\n允许我们将部分被认为有潜力的贫瘠星球改造成蜂巢世界。（部分贫瘠星球会获得“改造候选”）"
+ 
+ nnn_tech_repeatable_ascension_perks:0 "再现飞升"
+ nnn_tech_repeatable_ascension_perks_desc:0 "时间是个圆。我们所做的一切，或将要做的一切，我们将其做了一遍又一遍，直到永远。"
+ 
+ nnn_terraforming_candidate:0 "盖亚世界改造候选"
+ nnn_terraforming_candidate_desc:0 "当£society §H$tech_world_shaper$§!科技研究完成之后，\n我们可以将其直接改造为盖亚星球。"
+ 
+ nnn_terraforming_candidate2:0 "蜂巢世界改造候选"
+ nnn_terraforming_candidate2_desc:0 "当£society §H$tech_hive_worlds$§!科技研究完成之后，\n我们可以将其直接改造为蜂巢星球。"
+ 
+ tech_starbase_capacity:0 "快速扩张"
+ tech_starbase_capacity_desc:0 "后勤支持网络技术获得巨大突破，能够支持更多的恒星基地。我们将迎来一个高速扩张期。"
+ 
+# Misc
+
+ requires_ap_world_shaper:1 "$TRIGGER_FAIL$需要§Y$ap_world_shaper$§!飞升天赋。"
+ requires_ap_hive_worlds:1 "$TRIGGER_FAIL$需要§Y$ap_hive_worlds$§!飞升天赋。"
+ requires_ap_galactic_force_projection:1 "$TRIGGER_FAIL$需要§Y$ap_galactic_force_projection$§!飞升天赋。"
+ requires_ap_master_builders:0 "$TRIGGER_FAIL$需要§Y$ap_master_builders$§!飞升天赋。"
+ requires_ap_interstellar_dominion:0 "$TRIGGER_FAIL$需要§Y$ap_interstellar_dominion$§!或§Y$ap_grasp_the_void$§!飞升天赋。"
+ requires_ap_technological_ascendancy:0 "$TRIGGER_FAIL$需要§Y$ap_technological_ascendancy$§!飞升天赋。"
+ requires_ap_one_vision:0 "$TRIGGER_FAIL$需要§Y$ap_one_vision$§!飞升天赋。"
+ requires_ap_imperial_prerogative:0 "$TRIGGER_FAIL$需要§Y$ap_imperial_prerogative$§!飞升天赋。"
+ requires_ap_shared_destiny:1 "$TRIGGER_FAIL$需要§Y$ap_shared_destiny$§!飞升天赋。"
+ requires_tech_battleships:0 "$TRIGGER_FAIL$需要£engineering §Y$tech_battleships$§!科技。"
+ requires_ap_mastery_of_nature:1 "$TRIGGER_FAIL$需要§Y$ap_mastery_of_nature$§!飞升天赋。"
+ requires_not_eap_mastery_of_nature:1 "$TRIGGER_FAIL$不能拥有§Y$eap_mastery_of_nature$§!飞升天赋。"
+ requires_not_eap_mastery_of_nature2:1 "$TRIGGER_FAIL$不能拥有§Y$eap_mastery_of_nature2$§!飞升天赋。"
+ requires_ap_defender_of_the_galaxy:1 "$TRIGGER_FAIL$需要§Y$ap_defender_of_the_galaxy$§!飞升天赋。"
+ requires_years_2:0 "$TRIGGER_FAIL$需要超过§Y2250§!年。"
+ requires_no_crisis:0 "$TRIGGER_PASS$需要§Y尚未触发任何危机。§!"
+ requires_ap_executive_vigor:1 "$TRIGGER_FAIL$需要§Y$ap_executive_vigor$§!飞升天赋。"
+ requires_ap_transcendent_learning:1 "$TRIGGER_FAIL$需要§Y$ap_transcendent_learning$§!飞升天赋。"
+ requires_tech_subdermal_stimulation_or_hive:0 "$TRIGGER_FAIL$需要£society §Y$tech_subdermal_stimulation$§!科技或§Y$civic_tooltip_hive_mind$§!。"
+ requires_not_ap_synthetic_evolution:1 "$TRIGGER_PASS$不能拥有§Y$ap_synthetic_evolution$§!飞升天赋。"
+ requires_ap_universal_transactions:1 "$TRIGGER_FAIL$需要§Y$ap_universal_transactions$§!飞升天赋。"
+ 
+ mod_megastructures_cost_mult:0 "巨构建筑建造费用"
+ mod_megastructures_produces_mult:0 "巨构建筑资源生产率"
+
+ # Evenets
+ 
+ adevent:0 "未来科技峰会"
+ adevent_desc:0 "我们相信科学，更相信我们的科学还需要不断的发展，而远没有把世界变成无所不知，科学--就是不断把未知变为已知，这是我们伟大的真谛，也是弘扬探索精神之目的。\n"
+ eata:2 "三年一度的大会圆满召开"
+ eata.tooltip:2 "获得相当于§Y6§!个月产出的§Y科研点数§!。"
+ eata2:2 "我知道了，不要再通知我了"
+ eata2.tooltip:2 "获得相当于§Y6§!个月产出的§Y科研点数§!。\n不再显示此事件。"
+ 
+ nnnethic_event.3.name:0 "思潮宣传"
+ nnnethic_event.3.desc:1 "\n为期十年思想道德宣传活动开始了，国民将会逐步接受新的观念。\n"
+ 
+ nnnethic_event.4.name:0 "思潮宣传结束"
+ nnnethic_event.4.desc:1 "\n为期十年道德宣传活动结束了，总体效果令人满意。\n"
+ 
+ nnnworld_shaper:0 "贫瘠世界重塑"
+ nnnworld_shaper_desc:1 "我们的星球改造技术越来越成熟，首个全完全自主的贫瘠星球改造计划已经在筹备中了。\n"
+ world_shaper.a:0 "优秀"
+ world_shaper_tooltip:0 "添加可研究科技£society §H$tech_world_shaper$§!"
+ 
+ nnnworld_shaper2:0 "贫瘠世界重塑"
+ nnnworld_shaper2_desc:1 "我们的扩张能力越来越强，开始尝试对贫瘠星球进行蜂巢化改造。\n"
+ world_shaper2.a:0 "优秀"
+ world_shaper2_tooltip:0 "添加可研究科技£society §H$tech_hive_worlds$§!"
+ 
+ force_event.2.title:0 "海军大建"
+ force_event.2_desc:1 "我们的军工厂全力开工大建，几乎总能超额完成任务！"
+ force_event.tooltip:1 "获得§G1~5§!艘战列舰"
+ force_event.b:0 "富余的生产力用来造民用船"
+ force_event_b.tooltip:1 "获得§G10000§!能量，获得§G100§!影响力。"
+ 
+ trade_protection:0 "保护贸易路线"
+ 
+ 
+ eapdefender:0 "终末危机？"
+ eapdefender_desc:0 "我们的专家一刻不停的研究着这个盒子。经过解析，盒子上的图案似乎是想表达一个银河可能面临的终末危机，而盒内有预防这场危机的技术或方法。"
+ defender1:2 "这个危机似乎是源自于...亚空间生物？"
+ defender2:2 "这些图案表达的内容好像是和纬度有关。"
+ defender3:2 "一个神秘的信号？那是什么意思？"
+ 
+ eapdefender2:0 "潘多拉魔盒"
+ eapdefender2_desc:0 "我们做错了，我们被骗了！盒子打开的瞬间，我们监测到一条可能是用来标记这个银河的信号从中发射了出去，无法拦截，目的不明。\n灾难随时可能降临，我们必须立刻开始做准备应对这场危机。\n幸而盒子本身蕴含的技术，让我们的各项生产力都大大提高了。\n"
+ eapdefender2.a:0 "该来的終会来，我们无所畏惧"
+ eapdefender2.a.tooltip:1 "§R终末危机§!将在§R10§!年后触发\n获得遗珍：§Y潘多拉魔盒§!"
+ 
+ eip:0 "中央特权"
+ eip_desc:0 "中央政府控制力不断提升，牢牢的把控着每一个星区。"
+ eip_event.a:0 "所有星区尽在掌控之中"
+ eip_tooltip:1 "§Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!增加：§G+50§!"
+ 
+ # Relic
+ 
+ r_defender:0 "潘多拉魔盒"
+ r_defender_desc:0 "魔盒引来灾难，但又给予力量，我们对它又爱又恨！"
+ 
+ # Policy
+ 
+ policy_nnn_ethic_attraction:0 "天下归心"
+ policy_nnn_ethic_attraction_desc:0 "从蒙昧艰难的岁月一路走来，中央政府已经证明了他的绝对正确性，人民毫不犹豫的相信所有中央政府希望人民相信的东西。"
+ government_ethic_attraction:0 "维持当前政府主流思潮"
+ government_ethic_attraction_desc:0 "目前无需对人民的思潮进行引导。"
+ ethic_authoritarian_attraction:0 "转向威权主义思潮"
+ ethic_authoritarian_attraction_desc:0 "开启为期十年的威权主义思潮宣传"
+ ethic_egalitarian_attraction:0 "转向平权主义思潮"
+ ethic_egalitarian_attraction_desc:0 "开启为期十年的平权主义思潮宣传"
+ ethic_materialist_attraction:0 "转向唯物主义思潮"
+ ethic_materialist_attraction_desc:0 "开启为期十年的唯物主义思潮宣传"
+ ethic_spiritualist_attraction:0 "转向唯心主义思潮"
+ ethic_spiritualist_attraction_desc:0 "开启为期十年的唯心主义思潮宣传"
+ ethic_xenophobe_attraction:0 "转向排外主义思潮"
+ ethic_xenophobe_attraction_desc:0 "开启为期十年的排外主义思潮宣传"
+ ethic_xenophile_attraction:0 "转向崇外主义思潮"
+ ethic_xenophile_attraction_desc:0 "开启为期十年的崇外主义思潮宣传"
+ ethic_pacifist_attraction:0 "转向和平主义思潮"
+ ethic_pacifist_attraction_desc:0 "开启为期十年的和平主义思潮宣传"
+ ethic_militarist_attraction:0 "转向军国主义思潮"
+ ethic_militarist_attraction_desc:0 "开启为期十年的军国主义思潮宣传"
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

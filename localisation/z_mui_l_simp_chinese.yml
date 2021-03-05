@@ -1,0 +1,25 @@
+﻿l_simp_chinese:
+#_[UI Overhaul Dynamic - Extended Topbar & Modbuttons]
+
+
+
+
+#_UI Overhaul Dynamic - Extended Topbar & Modbuttons
+ mb_modmenu_tooltip:0 "§HMod Menu§!并未安装！"
+ mb_galactic_nations_assembly_tooltip:0 "§HGalactic Nations Assembly§!并未安装！"
+ mb_quibble_propaganda_tooltip:0 "§HPropaganda and Espionage§!并未安装！"
+ mb_ruler_hobby_button_tooltip:0 "§HRuler Level System§!并未安装！"
+
+
+#_FTA
+ REROLL:0 "招贤纳士"
+ FIRE:0 "全部解雇！"
+ CASHOUT:0 "帝国无上的荣光！只有精英才能胜任帝国的领袖，派遣心腹前往帝国学院招募人才。"
+ INFOUT:0 "帝国的意志万岁！任何有才华的公民都该为帝国服务，派遣特工在全国范围征募人才。"
+ fta.1.name:0 "解雇他们！"
+ fta.1.desc:0 "第二天新的领袖候选人名单就会呈递在你的办公室。"
+ fta.2.name:0 "招募一批新的总督候选人"
+ fta.2.desc:0 "无尽的繁星充满着未知，为了帝国更美好的未来！我们目前急需一批新的人才！"
+ fta.3.name:0 "招募一批新的科学家候选人"
+ fta.4.name:0 "招募一批新的舰队司令候选人"
+ fta.5.name:0 "招募一批新的陆军统帅候选人"

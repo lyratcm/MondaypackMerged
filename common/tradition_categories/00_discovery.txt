@@ -1,0 +1,7 @@
+tradition_discovery = {
+	adoption_bonus = "tr_discovery_adopt"
+	finish_bonus = "tr_discovery_finish"
+	traditions = {
+		##
+	}
+}

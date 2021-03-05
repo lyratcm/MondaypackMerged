@@ -1,0 +1,212 @@
+building_clone_vats = {
+	base_buildtime = 360
+
+	category = pop_assembly
+	
+	base_cap_amount = 1
+	
+	potential = {
+		owner = {
+			has_policy_flag = assembly_organic
+			has_technology = tech_cloning
+		}
+		NOT = { has_modifier = resort_colony }
+	}
+	
+	destroy_trigger = {
+		owner = {
+			is_machine_empire = yes
+			is_mechanical_empire = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = { job_life_crafter_add = 2 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = { job_life_weaver_add = 2 }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}	
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	triggered_desc = {
+		text = job_life_crafter_effect_desc
+	}	
+	
+	prerequisites = {
+		"tech_cloning"
+	}
+	
+	upgrades = {
+		building_genetic_development_facility
+	}
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_genetic_development_facility = {
+	base_buildtime = 480
+	can_build = no
+
+	category = pop_assembly
+	
+	potential = {
+		owner = {
+			has_policy_flag = assembly_organic
+			has_ascension_perk = ap_evolutionary_mastery
+		}
+		has_building = building_clone_vats
+	}
+	
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	destroy_trigger = {
+		owner = {
+			is_machine_empire = yes
+			is_mechanical_empire = yes
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = { job_life_crafter_add = 5 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = { job_life_weaver_add = 5 }
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+			exotic_gases = 50
+		}	
+		upkeep = {
+			energy = 5
+			exotic_gases = 1
+		}
+	}
+	
+	triggered_desc = {
+		text = job_life_crafter_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 5
+	}
+}
+
+building_robot_assembly_plant = {
+	base_buildtime = 360
+	base_cap_amount = 1
+
+	category = pop_assembly
+	
+	potential = {
+		owner = { 
+			is_regular_empire = yes 
+			has_policy_flag = assembly_robotic
+			NOT = { has_policy_flag = robots_outlawed }
+		}
+		NOT = { has_modifier = slave_colony }
+	}
+	
+	convert_to = {
+		building_machine_assembly_plant
+	}
+	
+	destroy_trigger = {
+		owner = {
+			is_regular_empire = no
+			is_machine_empire = no
+			is_mechanical_empire = no
+		}
+	}
+	
+	planet_modifier = {
+		job_roboticist_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_global_flag = mmplus_enabled_flag
+		}
+		modifier = { job_roboticist_add = 1 }
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 500
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+	
+	triggered_desc = {
+		text = job_roboticist_effect_desc
+	}	
+	
+	prerequisites = {
+		"tech_robotic_workers"
+	}
+	
+	upgrades = {
+		building_synthetic_megaplex
+	}
+	
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 5
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			count_owned_pops = { 
+				limit = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+				count < 1
+			}
+		}
+	}
+}

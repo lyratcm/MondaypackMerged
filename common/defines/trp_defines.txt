@@ -1,0 +1,6 @@
+		NGameplay = {
+			## tradition cost = ( base_cost + ( cost_tradition * num_traditions )^traditions_exponential ) * ( 1 + cost_planet*num_planets + cost_system*num_systems )
+			TRADITION_COST_TRADITION				= 4		# change this value if you want to increase all costs
+			TRADITION_COST_TRADITION_EXP			= 1.900 	# change this value if you want to increase costs at the end
+			TRADITION_COST_MULT_TRADITION_GROUP		= 0.005	# each adopted group adds +X% to total cost
+		}
