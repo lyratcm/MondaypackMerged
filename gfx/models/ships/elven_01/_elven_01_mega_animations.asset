@@ -1,0 +1,45 @@
+###################
+## HABITAT ANIMS ##
+###################
+
+animation = {
+	name = "elven_01_habitat_frame_construction_animation"
+	file = "elven_01_habitat_frame_construction.anim"
+}
+
+animation = {
+	name = "elven_01_habitat_frame_idle_animation"
+	file = "elven_01_habitat_frame_idle.anim"
+}
+
+#####################
+## SANCTUARY ANIMS ##
+#####################
+
+animation = {
+	name = "elven_01_sanctuary_frame_construction_animation"
+	file = "elven_01_sanctuary_frame_construction.anim"
+}
+
+animation = {
+	name = "elven_01_sanctuary_frame_idle_animation"
+	file = "elven_01_sanctuary_frame_idle.anim"
+}
+
+##########################
+## SENSOR STATION ANIMS ##
+##########################
+
+animation = {
+	name = "elven_01_sensor_station_frame_idle_animation"
+	file = "elven_01_sensor_station_frame_idle.anim"
+}
+
+#################
+## NEXUS ANIMS ##
+#################
+
+animation = {
+	name = "elven_01_nexus_frame_idle_animation"
+	file = "elven_01_nexus_frame_idle.anim"
+}

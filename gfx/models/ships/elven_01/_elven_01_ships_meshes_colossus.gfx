@@ -1,0 +1,36 @@
+####################
+## ELVEN COLOSSUS ##
+####################
+
+objectTypes = {
+
+	###############
+	## COLOSSUS ##
+	###############
+
+	pdxmesh = {
+		name = "elven_01_colossus_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_colossus.mesh"
+
+		animation = { id = "idle"			type = "elven_01_colossus_idle_animation" }
+		animation = { id = "open"			type = "elven_01_colossus_open_animation" }
+		animation = { id = "opening"		type = "elven_01_colossus_opening_animation" }
+		animation = { id = "closing"		type = "elven_01_colossus_closing_animation" }
+		animation = { id = "closed_death"	type = "elven_01_colossus_closed_death_animation" }
+		animation = { id = "opened_death"	type = "elven_01_colossus_opened_death_animation" }
+		
+		scale = 2.2
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

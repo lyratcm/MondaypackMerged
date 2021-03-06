@@ -1,0 +1,259 @@
+###########################
+### ELVEN AVARI SHIELDS ###
+###########################
+
+@Planet_Offset = -150.00
+
+###########################
+## FINAL SCALED ENTITIES ##
+###########################
+
+## NOTE: These are the entities called by "elven_megastructure_events.12". We attach an entity at the @Plant_Offset level so they actually show up over planets.
+
+entity = {
+	name = "avari_shield_entity_size_1_3"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_1_3" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_4_6"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_4_6" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_7_9"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_7_9" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_10_12"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_10_12" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_13_15"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_13_15" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_16_18"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_16_18" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_19_21"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_19_21" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_22_24"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_22_24" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_25_27"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_25_27" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_28_30"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_28_30" }
+
+	scale = 1.0
+}
+
+entity = {
+	name = "avari_shield_entity_size_humongous"
+	pdxmesh = "elven_01_empty_mesh"
+	cull_radius = 250.00
+
+	locator = { name = "center"	position = { 0 @Planet_Offset 0 } }
+	attach = { "center" = "avari_shield_primary_entity_size_humongous" }
+
+	scale = 1.0
+}
+
+#####################
+## SCALED ENTITIES ##
+#####################
+
+## NOTE: These are scaled specificaly for each size!
+
+entity = {
+	name = "avari_shield_primary_entity_size_1_3"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 1.6
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_4_6"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 2.4
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_7_9"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 3.4
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_10_12"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 4.5
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_13_15"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 5.7
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_16_18"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 6.9
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_19_21"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 8.1
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_22_24"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 9.3
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_25_27"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 10.5
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_28_30"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 11.7
+}
+
+entity = {
+	name = "avari_shield_primary_entity_size_humongous"
+	pdxmesh = "elven_great_firewall_mesh"
+	cull_radius = 250.0
+
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" }
+	
+	scale = 16.5
+}

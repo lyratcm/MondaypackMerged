@@ -1,0 +1,75 @@
+####################
+## MEGASTRUCTURES ##
+####################
+
+objectTypes = {
+
+	###############
+	## SANCTUARY ##
+	###############
+	
+	
+	## CENTRAL FRAME (Includes Anims!!) ##
+	pdxmesh = {
+		name = "elven_01_sanctuary_frame_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_sanctuary_frame.mesh"
+		scale = 5.0
+		
+		animation = { id = "idle" type = "elven_01_sanctuary_frame_idle_animation" }
+		animation = { id = "construction" type = "elven_01_sanctuary_frame_construction_animation" }
+	}
+	
+	## SANCTUARY TOP ##
+	pdxmesh = {
+		name = "elven_01_sanctuary_top_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_sanctuary_top.mesh"				
+		scale = 5.0
+		
+		# Used to specify the TGA for no other reason than it stops an error showing up in the log.
+		# meshsettings = {
+			# name = "TopSwept"
+			# texture_normal = "elven_01_habitat_normal.tga"
+		# }
+	}
+
+	## SANCTUARY MIDDLE ##
+	pdxmesh = {
+		name = "elven_01_sanctuary_middle_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_sanctuary_mid.mesh"				
+		scale = 5.0
+		
+		# Used to specify the TGA for no other reason than it stops an error showing up in the log.
+		# meshsettings = {
+			# name = "polySurface5"
+			# texture_normal = "elven_01_habitat_normal.tga"
+		# }
+	}
+
+	## SANCTUARY Bottom ##
+	pdxmesh = {
+		name = "elven_01_sanctuary_bottom_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_sanctuary_bottom.mesh"				
+		scale = 5.0
+		
+		# Used to specify the TGA for no other reason than it stops an error showing up in the log.
+		# meshsettings = {
+			# name = "polySurface10"
+			# texture_normal = "elven_01_habitat_normal.tga"
+		# }
+	}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+

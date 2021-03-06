@@ -1,0 +1,14 @@
+objectTypes = {
+
+	
+	########################PLANETS################################
+
+	pdxmesh = {
+		name = "lunari_moon_mesh"
+		file = "gfx/models/planets/luna_shielded.mesh"
+		animation = { id = "idle"	type = "lunari_moon_idle" }
+		scale = 1
+		cull_distance = 99999999.0f
+	}
+	
+}			

@@ -1,0 +1,16 @@
+####################
+## MEGASTRUCTURES ##
+####################
+
+objectTypes = {
+
+	################
+	## ION CANNON ##
+	################
+	
+	pdxmesh = {
+		name = "elven_01_ion_cannon_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_ion_cannon.mesh"
+		scale = 1.0
+	}
+}

@@ -1,0 +1,153 @@
+## ELVEN GFX FILE ##
+# So clothes aren't borked ever again! ;-)
+
+objectTypes = {
+
+	pdxmesh = {
+		name = "elven_female_01_mesh"
+		file = "gfx/models/portraits/elven/elven_female_01.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "elven_female_01_happy_animation" }
+		animation = { id = "idle2"	type = "elven_female_01_happy_2_animation" }
+		animation = { id = "sad"	type = "elven_female_01_sad_animation" }
+		animation = { id = "sad2"	type = "elven_female_01_sad_2_animation" }
+
+		meshsettings = {
+			name = "Human_female_hair:hair_rightShape"
+			index = 0
+			texture_diffuse = "elven_female_hair_style_03_blond.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitHair"
+		}
+
+		meshsettings = {
+			name = "Human_female_hair:hair_leftShape"
+			index = 0
+			texture_diffuse = "elven_female_hair_style_03_blond.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitHair"
+		}
+
+		meshsettings = {
+			name = "whiteShape"
+			index = 0
+			texture_diffuse = "elven_female_body_01_violet.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "Pupil_RShape"
+			index = 0
+			texture_diffuse = "elven_female_body_01_violet.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "pupil_LShape"
+			index = 0
+			texture_diffuse = "elven_female_body_01_violet.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "body1Shape"
+			index = 0
+			texture_diffuse = "elven_female_body_01_violet.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "outfitShape"
+			index = 0
+			texture_diffuse = "elven_female_clothing_common_gown1_black.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitClothes"
+		}
+
+		meshsettings = {
+			name = "Human_female_hair:hair_mainShape"
+			index = 0
+			texture_diffuse = "elven_female_hair_style_03_blond.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitHair"
+		}
+	}
+	
+	pdxmesh = {
+		name = "elven_male_01_mesh"
+		file = "gfx/models/portraits/elven/elven_male_01.mesh"
+		scale = 1.0
+		
+		animation = { id = "idle"	type = "elven_male_01_happy_animation" }
+		animation = { id = "idle2"	type = "elven_male_01_happy_2_animation" }
+		animation = { id = "sad"	type = "elven_male_01_sad_animation" }
+		animation = { id = "sad2"	type = "elven_male_01_sad_2_animation" }
+
+		meshsettings = {
+			name = "whiteShape"
+			index = 0
+			texture_diffuse = "elven_male_body_01_purple.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "Pupil_RShape"
+			index = 0
+			texture_diffuse = "elven_male_body_01_purple.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "pupil_LShape"
+			index = 0
+			texture_diffuse = "elven_male_body_01_purple.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "body1Shape"
+			index = 0
+			texture_diffuse = "elven_male_body_01_purple.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortrait"
+		}
+
+		meshsettings = {
+			name = "outfitShape"
+			index = 0
+			texture_diffuse = "elven_male_clothing_wealthy_suit1_black.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitClothes"
+		}
+
+		meshsettings = {
+			name = "Human_male_hair1:hairShape"
+			index = 0
+			texture_diffuse = "elven_male_hair_style_02_black.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+			shader = "PdxMeshPortraitHair"
+		}
+	}
+}
