@@ -1,0 +1,474 @@
+#####################
+## LHUREN GUY HAIR ##
+#####################
+
+################
+## HAIR NOTES ##
+################
+
+## COLORS ##
+
+# COLOR    : ELVES : SIDH : LHUREN : LUNARI : DROW : EILISTRAEEN :
+# BLACK	   :   X   :  X   :    X   :        :      :     X       :
+# BLOND    :   X   :  X   :        :        :      :     X       :
+# BLUE     :       :  X   :        :   X    :      :     X       :
+# BROWN    :   X   :  X   :    X?  :        :      :     X       :
+# RED      :   X   :  X   :        :        :      :     X       :
+# VERDE    :       :  X   :        :        :      :     X       :
+# VIOLA    :       :  X   :        :   X    :      :     X       :
+# WHITE    :       :  X   :        :   X    :  X   :     X       :
+
+lhuren_male_hair_01 = {
+	default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+		
+		random = {
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+			}
+		}
+	}
+	
+	###############
+	## POP SCOPE ##
+	###############
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+
+		###############################################################
+		# HAIR LIST: Used to line up hair in the ruler design window! #
+		###############################################################
+		random = {
+			trigger = { always = no }
+			list = {
+			
+				## LHUREN EMPEROR ##
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_brown.dds"
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_purple.dds"
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_red.dds"
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_white.dds"
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_yellow.dds"
+			
+				## LHUREN SCHOLAR ##
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_scholar_black.dds"
+			
+				## ELF COMMON HAIR ##
+				
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+				
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"		
+				
+				## WINTER HAIR ##
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_winter01_black.dds"
+			}
+		}
+		
+		######################
+		## GENERAL POP HAIR ##
+		######################
+		random = {
+			trigger = { 
+							nor = {
+									is_enslaved = yes
+									# Cold planets get HATS!
+									planet = { is_planet_class = pc_arctic }
+									planet = { is_planet_class = pc_tundra }
+									planet = { is_planet_class = pc_alpine }
+							}
+			}
+			list = {
+				
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}
+		
+		random = {
+			trigger = { 
+							or = {
+									is_enslaved = no
+									# Cold planets get HATS!
+									planet = { is_planet_class = pc_arctic }
+									planet = { is_planet_class = pc_tundra }
+									planet = { is_planet_class = pc_alpine }
+							}
+			}
+			list = {
+				## WINTER HAIR ##
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_winter01_black.dds"
+			}
+		}
+
+		#####################
+		### SLAVE SECTION ###
+		#####################
+		
+		# DOMESTIC
+		random = {
+			trigger = { 
+						AND = { 
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_domestic }
+						}
+			}
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}
+		
+		# Battle Thralls
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_military }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"		
+			}
+		}
+		
+		# FOOD
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_livestock }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"		
+			}
+		}
+		
+		# LABORERS
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_normal }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"		
+			}
+		}
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { #scientists, generals, admirals, governor
+	
+		default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+	
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+				
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"	
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+				# LHUREN SCHOLAR 
+				"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_scholar_black.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blond.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_red.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_verde.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_viola.dds"
+				#"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"			
+			}
+		}	
+	}
+	
+	####################
+	### LEADER SCOPE ###
+	####################
+	
+	ruler = { 
+		
+		default = "gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+		
+		################################
+		## SPECIAL CASE - TECHNOCRACY ##
+		################################
+		random = {
+			trigger = { 
+				OR = {
+							owner =  { has_civic = civic_technocracy }
+				}
+			}
+			
+			list = {
+					# Style 1
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_black.dds"
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_brown.dds"
+					
+					# Style 2
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_brown.dds"
+					
+					# Style 3
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_black.dds"
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_brown.dds"
+			}
+		}
+		
+		###################
+		## SPECIAL CASES ##
+		###################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_government = gov_celestial_empire }
+				}
+			}
+			list = {
+						## LHUREN EMPEROR ##
+						"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_purple.dds"
+			}
+		}
+		
+		###############################
+		## SPECIAL CASE - THEOCRATIC ##
+		###############################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_government = gov_theocratic_monarchy }
+							owner = { has_government = gov_theocratic_dictatorship }
+							owner = { has_government = gov_theocratic_oligarchy }
+							owner = { has_government = gov_theocratic_republic }
+							owner = { has_government = gov_divine_empire }
+							owner = { has_government = gov_holy_tribunal }
+							owner = { has_government = gov_megachurch }
+				}
+			}
+			
+			list = {
+					## LHUREN EMPEROR ##
+					"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_white.dds"
+			}
+		}
+		
+		################
+		## DEMOCRATIC ##
+		################
+		random = {
+			trigger = { owner =  { has_authority = auth_democratic } }
+			list = {
+						## LHUREN EMPEROR ##
+						"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_brown.dds"
+			}
+		}
+		 
+		################
+		## OLIGARCHIC ##
+		################
+		random = {
+			trigger = { owner =  { has_authority = auth_oligarchic } }
+			list = {
+						## LHUREN EMPEROR ##
+						"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_red.dds"
+			}
+		} 
+		
+		#################
+		## DICTATORIAL ##
+		#################
+		random = {
+			trigger = { owner =  { has_authority = auth_dictatorial } }
+			list = {
+						## LHUREN EMPEROR ##
+						"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_black.dds"
+			}
+		}
+		
+		##############
+		## IMPERIAL ##
+		##############
+		random = {
+			trigger = { owner =  { has_authority = auth_imperial } }
+			list = {
+						## LHUREN EMPEROR ##
+						"gfx/models/portraits/lhuren_hair/male/elven_male_hair_lhuren_ruler1_yellow.dds"
+			}
+		}
+	}
+}

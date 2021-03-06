@@ -1,0 +1,10 @@
+objectTypes = {
+
+	## PRISMATIC STAR EFFECTS ##
+	pdxparticle = {
+		name = "elven_prismatic_class_star_particle"
+		type = "elven_prismatic_class_star_emitter"
+		scale = 1.0
+	}
+
+}

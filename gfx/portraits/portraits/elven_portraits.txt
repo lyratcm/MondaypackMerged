@@ -1,0 +1,458 @@
+####################
+## PORTRAIT NOTES ##
+####################
+
+## FEMALE BASE ##
+# Pheno    : Elves : Drow  : Lhuren : Sidh  : Lunari :
+# FEMALE_01:   X   :   X   :   X    :   X   :   X    :
+# FEMALE_02:       :   X   :   X    :   X   :        : FLUFFY! :-)
+# FEMALE_03:   X   :   X   :        :   X   :   X    :
+# FEMALE_04:   X   :   X   :        :   X   :   X    :
+# FEMALE_05:   X   :   X   :        :   X   :   X    :
+# FEMALE_06:   X   :   X   :        :   X   :   X    :
+# FEMALE_07:   X   :   X   :        :   X   :   X    : ELENYA!
+# FEMALE_08:   X   :   X   :        :   X   :        : YSOLDA!
+# FEMALE_09:       :   X   :   X    :   X   :        :
+# FEMALE_10:       :   X   :   X    :   X   :   X    : CHEN-LING!
+
+## MALE BASE ##
+# Pheno    : Elves : Drow  : Lhuren : Sidh  : Lunari :
+# MALE_01  :   X   :   X   :        :   X   :   X    :
+# MALE_02  :   X   :   X   :        :   X   :   X    :
+# MALE_03  :   X   :   X   :        :   X   :   X    :
+# MALE_04  :   X   :   X   :   X    :   X   :   X    :
+# MALE_05  :   X   :   X   :   X    :   X   :        :
+# MALE_06  :   X   :   X   :   X    :   X   :   X    :
+# MALE_07  :       :   X   :   X    :   X   :        :
+# MALE_08  :   X   :   X   :        :   X   :   X    : THRANDUIL!
+
+
+portraits = {
+
+#elven LADIES
+	elven_female_01 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_01_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_01_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_01_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_01_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_01_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_01_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_01_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_01_violet.dds"	
+		}
+	}
+	
+	elven_female_02 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_02_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_02_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_02_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_02_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_02_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_02_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_02_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_02_violet.dds"
+		}
+	}
+	
+	elven_female_03 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_03_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_03_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_03_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_03_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_03_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_03_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_03_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_03_violet.dds"
+		}
+	}
+	
+	elven_female_04 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_04_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_04_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_04_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_04_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_04_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_04_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_04_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_04_violet.dds"
+		}
+	}
+	
+	elven_female_05 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_05_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_05_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_05_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_05_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_05_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_05_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_05_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_05_violet.dds"
+		}
+	}
+	
+	elven_female_06 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_06_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_06_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_06_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_06_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_06_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_06_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_06_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_06_violet.dds"
+		}
+	}
+	
+	elven_female_07 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_07_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_07_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_07_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_07_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_07_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_07_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_07_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_07_violet.dds"
+		}
+	}
+	
+	elven_female_08 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_08_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_08_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_08_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_08_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_08_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_08_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_08_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_08_violet.dds"
+		}
+	}
+	
+	elven_female_09 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_09_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_09_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_09_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_09_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_09_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_09_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_09_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_09_violet.dds"
+		}
+	}
+	
+	elven_female_10 = {
+		entity = "portrait_elven_female_01_entity" clothes_selector = "elven_female_clothes_01" hair_selector = "elven_female_hair_01" greeting_sound = "humanoid_portrait_b_female"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_female_body_10_blue.dds"
+			"gfx/models/portraits/elven/elven_female_body_10_brown.dds"
+			#"gfx/models/portraits/elven/elven_female_body_10_dragon.dds"
+			#"gfx/models/portraits/elven/elven_female_body_10_gold.dds"
+			"gfx/models/portraits/elven/elven_female_body_10_green.dds"
+			"gfx/models/portraits/elven/elven_female_body_10_ice.dds"
+			#"gfx/models/portraits/elven/elven_female_body_10_pink.dds"
+			"gfx/models/portraits/elven/elven_female_body_10_violet.dds"
+		}
+	}
+	
+#ELF GENTLEMEN
+
+	elven_male_01 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_01_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_01_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_01_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_01_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_01_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_01_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_01_purple.dds"
+		}
+	}
+	
+	elven_male_02 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_02_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_02_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_02_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_02_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_02_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_02_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_02_purple.dds"
+		}
+	}
+ 
+	elven_male_03 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_03_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_03_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_03_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_03_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_03_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_03_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_03_purple.dds"
+		}
+	}
+	
+	elven_male_04 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_04_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_04_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_04_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_04_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_04_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_04_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_04_purple.dds"
+		}
+	}
+	
+	elven_male_05 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_05_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_05_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_05_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_05_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_05_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_05_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_05_purple.dds"
+		}
+	}
+	
+	elven_male_06 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_06_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_06_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_06_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_06_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_06_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_06_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_06_purple.dds"
+		}
+	}
+	
+	elven_male_07 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_07_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_07_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_07_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_07_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_07_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_07_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_07_purple.dds"
+		}
+	}
+	
+	elven_male_08 = {
+		entity = "portrait_elven_male_01_entity" clothes_selector = "elven_male_clothes_01" hair_selector = "elven_male_hair_01" greeting_sound = "humanoid_portrait_b_male"
+		character_textures = {
+			"gfx/models/portraits/elven/elven_male_body_08_blue.dds"
+			"gfx/models/portraits/elven/elven_male_body_08_brown.dds"
+			#"gfx/models/portraits/elven/elven_male_body_08_dragon.dds"
+			#"gfx/models/portraits/elven/elven_male_body_08_gold.dds"
+			"gfx/models/portraits/elven/elven_male_body_08_green.dds"
+			"gfx/models/portraits/elven/elven_male_body_08_ice.dds"
+			"gfx/models/portraits/elven/elven_male_body_08_purple.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	elven = {
+		default = elven_female_01
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					elven_male_01
+					elven_male_02
+					elven_male_03
+					elven_male_04
+					elven_male_05
+					elven_male_06
+					#elven_male_07
+					elven_male_08
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					elven_female_01
+					#elven_female_02
+					elven_female_03
+					elven_female_04
+					elven_female_05
+					elven_female_06
+					elven_female_07
+					elven_female_08
+					#elven_female_09
+					#elven_female_10
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					elven_female_01
+					#elven_female_02
+					elven_female_03
+					elven_female_04
+					elven_female_05
+					elven_female_06
+					elven_female_07
+					elven_female_08
+					#elven_female_09
+					#elven_female_10
+					
+					elven_male_01
+					elven_male_02
+					elven_male_03
+					elven_male_04
+					elven_male_05
+					elven_male_06
+					#elven_male_07
+					elven_male_08
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					owner = { NOT = { has_policy_flag = elven_gender_patriarchy_full } }
+				}
+				portraits = {
+					elven_female_01
+					#elven_female_02
+					elven_female_03
+					elven_female_04
+					elven_female_05
+					elven_female_06
+					elven_female_07
+					elven_female_08
+					#elven_female_09
+					#elven_female_10
+				}
+			}
+			add = {
+				trigger = {
+					owner = { NOT = { has_policy_flag = elven_gender_matriarchy_full } }
+				}
+				portraits = {
+					elven_male_01
+					elven_male_02
+					elven_male_03
+					elven_male_04
+					elven_male_05
+					elven_male_06
+					#elven_male_07
+					elven_male_08
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					elven_female_01
+					#elven_female_02
+					elven_female_03
+					elven_female_04
+					elven_female_05
+					elven_female_06
+					elven_female_07
+					elven_female_08
+					#elven_female_09
+					#elven_female_10
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					elven_male_01
+					elven_male_02
+					elven_male_03
+					elven_male_04
+					elven_male_05
+					elven_male_06
+					#elven_male_07
+					elven_male_08
+				}
+			}
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					elven_female_01
+					#elven_female_02
+					elven_female_03
+					elven_female_04
+					elven_female_05
+					elven_female_06
+					elven_female_07
+					elven_female_08
+					#elven_female_09
+					#elven_female_10
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					elven_male_01
+					elven_male_02
+					elven_male_03
+					elven_male_04
+					elven_male_05
+					elven_male_06
+					#elven_male_07
+					elven_male_08
+				}
+			}
+		}
+	}
+}

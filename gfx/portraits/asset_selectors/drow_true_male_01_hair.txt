@@ -1,0 +1,263 @@
+####################
+## DROW MALE HAIR ##
+####################
+
+################
+## HAIR NOTES ##
+################
+
+## COLORS ##
+
+# COLOR    : ELVES : SIDH : LHUREN : LUNARI : DROW : EILISTRAEEN :
+# BLACK	   :   X   :  X   :    X   :        :      :     X       :
+# BLOND    :   X   :  X   :        :        :      :     X       :
+# BLUE     :       :  X   :        :   X    :      :     X       :
+# BROWN    :   X   :  X   :    X?  :        :      :     X       :
+# RED      :   X   :  X   :        :        :      :     X       :
+# VERDE    :       :  X   :        :        :      :     X       :
+# VIOLA    :       :  X   :        :   X    :      :     X       :
+# WHITE    :       :  X   :        :   X    :  X   :     X       :
+
+drow_true_male_hair_01 = {
+	default = "gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+		
+		random = {
+		
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}
+	}
+	
+	###############
+	## POP SCOPE ##
+	###############
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+
+		###############################################################
+		# HAIR LIST: Used to line up hair in the ruler design window! #
+		###############################################################
+		random = {
+			trigger = { always = no }
+			list = {
+				
+				############
+				## RULERS ##
+				############
+				
+				## DROW CROWNS ##
+				
+				# Style 1 - Ruler 2 - Drow
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+				
+				# Style 2 - Ruler 2 - Drow
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_02_white.dds"
+				
+				## ELF CROWNS ##
+				
+				# Style 1 - Ruler 1 - Elf
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler1_style_01_white.dds"
+				
+				# Style 2 - Ruler 1 - Elf
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler1_style_02_white.dds"
+				
+				############
+				## COMMON ##
+				############
+				
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+				
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"
+			}
+		}
+		
+		######################
+		## GENERAL POP HAIR ##
+		######################
+		random = {
+			trigger = { 
+							or = {
+									 is_enslaved = no
+							}
+			}
+			list = {
+				
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+				
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"
+			}
+		}
+
+		#####################
+		### SLAVE SECTION ###
+		#####################
+		
+		# DOMESTIC
+		random = {
+			trigger = { 
+						AND = { 
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_domestic }
+						}
+			}
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}
+		
+		# Battle Thralls
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_military }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"
+			}
+		}
+		
+		# FOOD
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_livestock }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"
+			}
+		}
+		
+		# LABORERS
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_normal }
+						}
+			}
+			list = {
+				# Style 3
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_03_white.dds"
+			}
+		}
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { #scientists, generals, admirals, governor
+	
+		default = "gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+	
+		random = {
+			trigger = { 
+							or = {
+									leader_class = admiral
+									leader_class = scientist
+									leader_class = governor
+									leader_class = general
+							}
+			}
+			list = {
+				# Style 1
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_01_white.dds"
+				
+				# Style 2
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_white.dds"
+			}
+		}	
+	}
+	
+	####################
+	### LEADER SCOPE ###
+	####################
+	
+	ruler = { 
+		
+		default = "gfx/models/portraits/shared_hair/male/elven_male_hair_ruler1_style_01_white.dds"
+		
+		###########################
+		## DROW GET DROW CROWNS! ##
+		###########################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_government = gov_stagnant_ascendancy } 
+							owner = { has_government = gov_awakened_ascendancy }
+							owner =  { has_authority = auth_hive_mind }
+							
+							owner = { has_government = gov_curator_enclave } 
+							owner = { has_government = gov_trader_enclave }
+							owner = { has_government = gov_artist_enclave }
+							
+							owner = { has_authority = auth_oligarchic }
+							owner = { has_authority = auth_dictatorial }
+							owner = { has_authority = auth_imperial	}	 
+				}
+			}
+			
+			list = {
+			
+					# Style 1 - Ruler 2 - Drow
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_01_white.dds"
+					
+					# Style 2 - Ruler 2 - Drow
+					"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler2_style_02_white.dds"	
+			}
+		}
+		
+		######################################
+		## SPECIAL - IDIOTS GET ELF CROWNS! ##
+		######################################
+		
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_authority = auth_democratic }				 
+				}
+			}
+			
+		list = {
+				# Style 1 - Ruler 1 - Elf
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler1_style_01_white.dds"
+				
+				# Style 2 - Ruler 1 - Elf
+				"gfx/models/portraits/shared_hair/male/elven_male_hair_ruler1_style_02_white.dds"
+			}
+		}	
+	}
+}
