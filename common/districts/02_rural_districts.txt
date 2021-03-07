@@ -99,7 +99,19 @@ district_generator = {
 			food = 0.3
 		}
 	}
-
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_socialistic
+            }
+        }
+        modifier = {
+            job_technician_add = 1
+            planet_technician_upkeep_mult = 0.15
+            planet_housing_add = 1
+        }
+    }
 	planet_modifier = {
 		planet_housing_add = 2
 	}
@@ -390,7 +402,19 @@ district_mining = {
 			food = 0.3
 		}
 	}
-
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_socialistic
+            }
+        }
+        modifier = {
+            job_miner_add = 1
+            planet_miner_upkeep_mult = 0.15
+            planet_housing_add = 1
+        }
+    }
 	planet_modifier = {
 		planet_housing_add = 2
 	}
@@ -737,7 +761,19 @@ district_farming = {
 			planet_housing_add = 1
 		}
 	}
-
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_socialistic
+            }
+        }
+        modifier = {
+            job_farmer_add = 1
+            planet_farmer_upkeep_mult = 0.15
+            planet_housing_add = 1
+        }
+    }
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

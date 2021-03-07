@@ -60,7 +60,14 @@ head_researcher = {
 			planet_amenities_add = -1
 		}
 	}
-
+    triggered_planet_modifier = {
+        potential = {
+            OR = {
+                has_civic = civic_welfare_state
+            }
+        }
+        planet_amenities_add = 5
+    }
 	weight = {
 		weight = @ruler_job_weight
 		modifier = {
