@@ -200,6 +200,7 @@ war_philosophy = {
                 NOT = {
                     has_ethic = "ethic_fanatic_pacifist"
                 }
+            }
             modifier = {
                 factor = 0
                 NOR = {

@@ -85,6 +85,7 @@ colonist = {
             }
             unity = 5
         }
+    }
     resources = {
         category = planet_jobs
         produces = {

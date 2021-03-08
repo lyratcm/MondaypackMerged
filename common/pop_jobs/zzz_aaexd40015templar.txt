@@ -70,6 +70,7 @@ templar = {
                 }
             }
         }
+    }
     triggered_planet_modifier = {
         potential = {
             owner = {

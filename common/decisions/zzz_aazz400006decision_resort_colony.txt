@@ -95,6 +95,7 @@ decision_resort_colony = {
             }
             add_deposit = d_resort_world_robot
         }
+    }
     effect = {
         add_modifier = {
             modifier = resort_colony

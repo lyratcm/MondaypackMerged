@@ -29,6 +29,7 @@ mogul = {
                 }
             }
         }
+    }
     triggered_planet_modifier = {
         potential = {
             has_trait = trait_thrifty
@@ -65,6 +66,7 @@ mogul = {
                 has_trait = trait_nuumismatic_administration
             }
         }
+    }
     triggered_planet_modifier = {
         potential = {
             OR = {

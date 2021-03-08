@@ -95,6 +95,7 @@ warrior_drone = {
                 has_swapped_tradition = trp_supremacy_warfare_b_gestalt
             }
         }
+    }
     triggered_planet_modifier = {
         potential = {
             planet = {

@@ -138,6 +138,7 @@ decision_boost_market_nomination = {
                     has_valid_civic = civic_merchant_guilds
                     has_valid_civic = eco_civic_consumerist
                 }
+            }
         }
         modifier = {
             factor = 2

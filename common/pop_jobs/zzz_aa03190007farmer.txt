@@ -215,6 +215,7 @@ farmer = {
                 has_trait = trait_charismatic
             }
         }
+    }
     triggered_planet_modifier = {
         potential = {
             owner = {

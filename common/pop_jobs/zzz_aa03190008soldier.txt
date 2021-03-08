@@ -78,6 +78,7 @@ soldier = {
                 has_tradition = trp_supremacy_warfare_b
             }
         }
+    }
     triggered_pop_modifier = {
         potential = {
             exists = owner

@@ -46,6 +46,7 @@ calculator = {
                 has_trait = trait_adaptable_evolution_robot
             }
         }
+    }
     resources = {
         produces = {
             trigger = {

@@ -37,6 +37,7 @@ generate_start_pops = {
                     add_trait = trait_machine_unit
                     add_traits_at_start_of_list = yes
                 }
+            }
             last_created_species = {
                 save_event_target_as = last_created_species
             }
@@ -202,6 +203,7 @@ generate_start_pops = {
                         has_origin = origin_default
                     }
                 }
+            }
             else = {
                 while = {
                     count = 2

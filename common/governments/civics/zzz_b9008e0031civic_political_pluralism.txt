@@ -21,6 +21,7 @@ civic_political_pluralism = {
                 value = ethic_elitist
                 value = ethic_fanatic_elitist
             }
+        }
         authority = {
             NOT = {
                 value = auth_imperial

@@ -82,6 +82,7 @@ decision_market_nomination = {
                                 has_valid_civic = eco_civic_consumerist
                             }
                         }
+                    }
                     modifier = {
                         factor = 0.33
                         from = {

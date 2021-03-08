@@ -71,6 +71,7 @@ healthcare = {
                 }
             }
         }
+    }
     option = {
         name = "healthcare_for_profit"
         valid = {

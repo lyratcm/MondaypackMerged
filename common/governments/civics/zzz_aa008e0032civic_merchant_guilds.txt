@@ -50,6 +50,7 @@ civic_merchant_guilds = {
             OR = {
                 value = ethic_fanatic_capitalism
             }
+        }
         ethics = {
             value = ethic_fanatic_capitalism
             NOT = {
