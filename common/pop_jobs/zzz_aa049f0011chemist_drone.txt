@@ -34,7 +34,6 @@ chemist_drone = {
             }
             minerals = 8
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

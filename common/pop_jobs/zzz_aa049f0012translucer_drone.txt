@@ -45,7 +45,6 @@ translucer_drone = {
             }
             energy = 10
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

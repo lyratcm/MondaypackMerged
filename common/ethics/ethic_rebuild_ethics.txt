@@ -2,11 +2,15 @@
 #########################
 ####mod ethic rebuild####
 ethic_categories = {
-
+	
 	soc = {}
 
-	foc = {}
+	grn = {}
+		
+	elt = {}	
 
+    foc = {}	
+	
 }
 
 

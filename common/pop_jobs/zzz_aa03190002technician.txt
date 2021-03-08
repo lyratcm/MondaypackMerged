@@ -39,7 +39,6 @@ technician = {
             }
             energy = 1
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

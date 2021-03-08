@@ -49,7 +49,6 @@ foundry = {
             }
             alloys = 1
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner
@@ -62,7 +61,6 @@ foundry = {
             }
             minerals = -0.5
         }
-    }
     }
     triggered_pop_modifier = {
         potential = {

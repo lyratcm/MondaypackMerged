@@ -39,7 +39,6 @@ bio_trophy = {
             planet_amenities_mult = 0.001
         }
     }
-    }
     triggered_pop_modifier = {
         pop_housing_usage_add = -1
     }

@@ -49,7 +49,6 @@ brain_drone = {
             }
             physics_research = 1
         }
-    }
         upkeep = {
             trigger = {
                 is_lithoid = no

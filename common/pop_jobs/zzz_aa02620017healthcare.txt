@@ -163,7 +163,6 @@ healthcare = {
         modifier = {
             planet_amenities_add = 1
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

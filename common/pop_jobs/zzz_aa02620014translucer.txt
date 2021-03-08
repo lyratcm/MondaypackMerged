@@ -30,7 +30,6 @@ translucer = {
             }
             energy = 10
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

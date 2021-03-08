@@ -86,7 +86,6 @@ underground_contact_drone = {
             }
             energy = 6
         }
-    }
         produces = {
             trigger = {
                 owner = {

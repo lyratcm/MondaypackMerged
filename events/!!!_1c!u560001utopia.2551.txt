@@ -438,10 +438,8 @@ country_event = {
             id = carry.2
             days = 1
         }
-    }
             set_country_flag = synthetic_age
         }
-    }
     option = {
         name = "utopia.2551.a"
         custom_tooltip = SYNTH_ASSIMILATION_CITIZENSHIP_ENABLED

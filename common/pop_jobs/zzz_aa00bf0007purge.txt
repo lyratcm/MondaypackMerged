@@ -163,7 +163,6 @@ purge = {
             society_research = 1
         }
     }
-    }
         produces = {
             trigger = {
                 has_purge_type = {
@@ -200,7 +199,6 @@ purge = {
             }
             sr_zro = 0.1
         }
-    }
     resources = {
         produces = {
             trigger = {

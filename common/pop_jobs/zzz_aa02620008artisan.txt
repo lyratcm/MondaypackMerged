@@ -232,7 +232,6 @@ artisan = {
         modifier = {
             planet_stability_add = 2
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner
@@ -255,14 +254,14 @@ artisan = {
                     }
                 }
             }
+        }
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
             owner = {
                 has_swapped_tradition = trp_commerce_enterprises_c_entertainment
             }
-            }
-        }
             food = 3
             minerals = 3
         }

@@ -159,7 +159,6 @@ trade_policy = {
         AI_weight = {
             factor = 0
         }
-    }
         policy_flags = {
             trade_policy_default_corp
         }

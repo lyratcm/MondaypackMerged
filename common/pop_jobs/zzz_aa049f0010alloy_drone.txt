@@ -55,7 +55,6 @@ alloy_drone = {
             }
             energy = 1
         }
-    }
         produces = {
             trigger = {
                 exists = owner

@@ -190,7 +190,6 @@ district_hive = {
                 type = district_farming
                 value = 0
             }
-            }
             OR = {
                 num_free_districts = {
                     type = district_mining
@@ -245,6 +244,7 @@ district_hive = {
                 num_free_districts = {
                     type = district_mining
                 value = 0
+                }
             }
             num_free_districts = {
                 type = district_generator_uncapped

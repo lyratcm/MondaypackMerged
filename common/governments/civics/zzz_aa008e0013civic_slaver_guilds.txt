@@ -22,7 +22,6 @@ civic_slaver_guilds = {
                 value = ethic_fanatic_authoritarian
             }
         }
-        }
         civics = {
             NOR = {
                 value = civic_technocracy

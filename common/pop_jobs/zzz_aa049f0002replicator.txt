@@ -67,8 +67,6 @@ replicator = {
             planet_pop_assembly_mult = 0.1
         }
     }
-    }
-    }
     weight = {
         weight = @spawner_drone_job_weight
         modifier = {
