@@ -1,0 +1,21 @@
+rerolll_button_effects_admirals = {
+    potential = {
+        has_global_flag = z_modmenu_installed
+    }
+    allow = {
+        hidden_trigger = {
+            NOT = {
+                has_country_flag = z_mui_flg_fta_cd_admiral
+            }
+        }
+    }
+    effect = {
+        hidden_effect = {
+            custom_tooltip
+            "fta.4.name"
+            country_event = {
+                id = fire_them_all.4
+            }
+        }
+    }
+}

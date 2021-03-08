@@ -1,0 +1,43 @@
+@EdictPerpetual = -1
+maintenance_subsidies = {
+    length = @EdictPerpetual
+    icon = "GFX_edict_type_policy"
+    edict_cap_usage = 1
+    resources = {
+        category = edicts
+        cost = {
+            trigger = {
+                NOT = {
+                    has_edict = refinery_subsidies
+                }
+            }
+            influence = 200
+        }
+        cost = {
+            trigger = {
+                has_edict = refinery_subsidies
+            }
+            influence = 100
+        }
+    }
+    modifier = {
+        custom_tooltip = tr_synchronicity_kinship_gestalt
+    }
+    potential = {
+        OR = {
+            has_swapped_tradition = tr_prosperity_efficiency_algorithms
+            has_swapped_tradition = tr_prosperity_efficiency_instincts
+        }
+    }
+    ai_weight = {
+        weight = @EdictMedPrio
+        modifier = {
+            factor = 0
+            NOT = {
+                any_owned_planet = {
+                    free_amenities < 5
+                }
+            }
+        }
+    }
+}

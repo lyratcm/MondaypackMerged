@@ -1,0 +1,67 @@
+@EdictPerpetual = -1
+forge_subsidies = {
+    length = @EdictPerpetual
+    icon = "GFX_edict_type_policy"
+    edict_cap_usage = 1
+    resources = {
+        category = edicts
+        cost = {
+            trigger = {
+                NOT = {
+                    has_edict = forge_subsidies
+                }
+            }
+            influence = 200
+        }
+        cost = {
+            trigger = {
+                has_edict = forge_subsidies
+            }
+            influence = 100
+        }
+    }
+    modifier = {
+        planet_metallurgists_produces_mult = 0.1
+        custom_tooltip = edict_forge_subsidies_tooltip
+        show_only_custom_tooltip = no
+    }
+    prerequisites = {
+        tech_global_production_strategy
+    }
+    ai_weight = {
+        weight = @EdictHighPrio
+        modifier = {
+            factor = 0.75
+            ROOT = {
+                has_monthly_income = {
+                    resource = alloys
+                    value > 150
+                }
+            }
+        }
+        modifier = {
+            factor = 0.75
+            ROOT = {
+                has_monthly_income = {
+                    resource = alloys
+                    value > 300
+                }
+            }
+        }
+        modifier = {
+            factor = 0
+            ROOT = {
+                is_pacifist = yes
+                NOT = {
+                    any_war = {
+                        is_war_participant = {
+                            who = root
+                            side = defenders
+                        }
+                    }
+                }
+                has_crisis = no
+            }
+        }
+    }
+}

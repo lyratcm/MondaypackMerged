@@ -1,0 +1,10 @@
+ethic_categories = {
+    soc = {
+    }
+    grn = {
+    }
+    elt = {
+    }
+    foc = {
+    }
+}

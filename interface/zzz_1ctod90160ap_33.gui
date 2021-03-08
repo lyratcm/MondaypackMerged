@@ -1,0 +1,11 @@
+guiTypes = {
+    @ap_x_2_2 = 87
+    @ap_y_8 = 343
+    positionType = {
+        name = "ap_33"
+        position = {
+            x = @ap_x_2_2
+            y = @ap_y_8
+        }
+    }
+}

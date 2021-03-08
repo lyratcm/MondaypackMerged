@@ -1,0 +1,16 @@
+gov_benevolent_aristocracy = {
+    ruler_title = RT_CUSTODIAN
+    ruler_title_female = RT_CUSTODIAN
+    should_force_rename = yes
+    possible = {
+        OR = {
+            has_ethic = ethic_socialism
+            has_ethic = ethic_egalitarian
+        }
+        has_valid_civic = civic_aristocratic_elite
+        has_authority = auth_oligarchic
+    }
+    weight = {
+        base = 1000
+    }
+}

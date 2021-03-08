@@ -1,0 +1,24 @@
+trait_robot_emotion_emulators = {
+    cost = 1
+    opposites = {
+        "trait_robot_uncanny"
+    }
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    custom_tooltip = TRAIT_EMOTION_EMULATORS_EFFECT
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                AND = {
+                    has_policy_flag = ai_full_rights
+                    has_technology = tech_synthetic_workers
+                }
+                has_country_flag = synthetic_empire
+                is_machine_empire = yes
+            }
+        }
+    }
+}

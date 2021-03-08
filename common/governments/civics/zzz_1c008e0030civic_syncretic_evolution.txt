@@ -1,0 +1,51 @@
+civic_syncretic_evolution = {
+    modification = no
+    playable = {
+        host_has_dlc = "Utopia"
+    }
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+            }
+        }
+    }
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_mechanists
+                value = civic_fanatic_purifiers
+                value = civic_agrarian_idyll
+                value = civic_post_apocalyptic
+                value = civic_life_seeded
+                value = civic_shared_burden
+                value = civic_slaver_guilds
+            }
+        }
+    }
+    random_weight = {
+        base = 1
+        modifier = {
+            factor = 0
+            NOT = {
+                host_has_dlc = "Utopia"
+            }
+        }
+        modifier = {
+            factor = 0
+            has_global_flag = game_started
+        }
+    }
+    description = civic_tooltip_syncretic_evolution_effects
+    has_secondary_species = {
+        title = civic_syncretic_evolution_secondary_species
+        traits = {
+            trait = trait_syncretic_proles
+        }
+    }
+}

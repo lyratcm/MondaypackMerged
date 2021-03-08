@@ -1,0 +1,28 @@
+namespace = immortal_ruler
+namespace = unity_patrons
+namespace = glorious_fleet
+namespace = voice_planet
+namespace = ethic_rebuild_clear_blocker
+namespace = observation
+planet_event = {
+    id = unity_patrons.1
+    hide_window = yes
+    is_triggered_only = yes
+    location = ROOT
+    pre_triggers = {
+        has_owner = yes
+    }
+    trigger = {
+        owner = {
+            has_valid_civic = civic_peacekeepers
+        }
+    }
+    immediate = {
+        owner = {
+            add_modifier = {
+                modifier = "unity_patrons"
+                days = 3650
+            }
+        }
+    }
+}

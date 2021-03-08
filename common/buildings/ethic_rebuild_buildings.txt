@@ -1,5 +1,3 @@
-
-
 building_factory_1 = {
 	base_buildtime = @b1_time
 
@@ -53,7 +51,7 @@ building_factory_1 = {
 			job_artisan_drone_add = @b1_jobs
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -62,7 +60,7 @@ building_factory_1 = {
 		modifier = {
 			job_artisan_add = 1
 		}
-	}	
+	}
 
 	resources = {
 		category = planet_buildings
@@ -213,7 +211,7 @@ building_factory_2 = {
 			job_artisan_drone_add = 5
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -222,7 +220,7 @@ building_factory_2 = {
 		modifier = {
 			job_artisan_add = 2
 		}
-	}	
+	}
 
 	resources = {
 		category = planet_buildings
@@ -274,7 +272,6 @@ building_factory_2 = {
 			always = yes
 		}
 	}
-
 }
 
 building_factory_3 = {
@@ -336,7 +333,7 @@ building_factory_3 = {
 			job_artisan_drone_add = @b3_jobs
 		}
 	}
-	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -345,7 +342,7 @@ building_factory_3 = {
 		modifier = {
 			job_artisan_add = 3
 		}
-	}	
+	}
 
 	resources = {
 		category = planet_buildings
@@ -393,28 +390,7 @@ building_factory_3 = {
 			always = yes
 		}
 	}
-
-	on_queued = {
-		IF = {
-			limit = {
-				owner = { has_technology = tech_construction_templates }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 270 } }
-		}
-		ELSE_IF = {
-			limit = {
-				owner = { has_technology = tech_assembly_pattern }
-			}
-			owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 390 } }
-		}
-		ELSE = {
-			planet = {
-				owner = { set_timed_country_flag = { flag = buildings_new_crystal_building days = 510 } }
-			}
-		}
-	}
 }
-
 
 building_clone_vats = {
 	base_buildtime = @b1_time
@@ -978,8 +954,6 @@ building_fortress = {
 		text = job_mercenary_effect_desc
 	}
 
-
-
 	ai_weight = {
 		weight = 0
 		modifier = {
@@ -1265,7 +1239,7 @@ building_sacred_nexus = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood } }
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			job_high_priest_add = 2
@@ -1299,7 +1273,7 @@ building_sacred_nexus = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood } }
+			owner = { is_theocracy = yes }
 		}
 		text = job_high_priest_effect_desc
 	}
@@ -1326,13 +1300,7 @@ building_sacred_nexus = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = buildings_new_crystal_building }
-		}
 	}
-
-
 }
 
 building_citadel_of_faith = {
@@ -1375,9 +1343,9 @@ building_citadel_of_faith = {
 			owner = { not = { has_valid_civic = civic_defenders_faith } }
 		}
 		modifier = {
-		job_priest_add = @b2_jobs
-		job_high_priest_add = 1
-		pop_ethic_spiritualist_attraction_mult = 0.2
+			job_priest_add = @b2_jobs
+			job_high_priest_add = 1
+			pop_ethic_spiritualist_attraction_mult = 0.2
 		}
 	}
 
@@ -1406,7 +1374,7 @@ building_citadel_of_faith = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood } }
+			owner = { is_theocracy = yes }
 		}
 		modifier = {
 			job_high_priest_add = 1
@@ -1475,13 +1443,7 @@ building_citadel_of_faith = {
 				}
 			}
 		}
-		modifier = {
-			factor = 0
-			owner = { has_country_flag = buildings_new_crystal_building }
-		}
 	}
-
-
 }
 
 
@@ -1580,7 +1542,6 @@ building_hall_judgment = {
 		}
 	}
 
-
 	planet_modifier = {
 		job_enforcer_add = 5
 	}
@@ -1602,7 +1563,6 @@ building_hall_judgment = {
 			energy = 2
 		}
 	}
-
 
 	prerequisites = {
 		"tech_colonial_centralization"
@@ -1723,6 +1683,7 @@ building_energy_grid = {
 			minerals = 100
 			alloys = 100
 		}
+
 		upkeep = {
 			energy = 2
 		}
@@ -1799,6 +1760,7 @@ building_energy_grid = {
 building_energy_nexus = {
 	base_buildtime = @b2_time
 	can_build = no
+
 	category = resource
 
 	allow = {
@@ -1940,18 +1902,13 @@ building_energy_nexus = {
 			always = yes
 		}
 	}
-
-
 }
 
 
-
 building_mecha_monastery = {
-
+	category = pop_assembly
 	base_buildtime = 360
 	base_cap_amount = 1
-
-	category = pop_assembly
 
 	potential = {
 		owner = { has_valid_civic = civic_machine_cult }
@@ -1962,12 +1919,8 @@ building_mecha_monastery = {
 		has_upgraded_capital = yes
 	}
 
-	allow = {	}
-
 	planet_modifier = {
-
 		job_techno_priest_add = 3
-
 	}
 
 	resources = {
@@ -1979,7 +1932,6 @@ building_mecha_monastery = {
 			energy = 2
 		}
 	}
-
 
 	triggered_desc = {
 		text = job_techno_priest_effect_desc
@@ -2205,9 +2157,8 @@ building_hospital = {
 			buildings_has_exotic_gases = yes
 		}
 	}
-
-
 }
+
 
 #############
 # Capital buildings
@@ -2313,104 +2264,67 @@ building_capital = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				NOR = {
-					has_authority = auth_corporate
-					has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_aristocratic_elite
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_exalted_priesthood
-                    has_valid_civic = civic_technocracy
-                    has_valid_civic = civic_bureaucracy
-                    has_valid_civic = civic_stratocracy
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
-		modifier = {
-			job_administrator_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_corporate }
-		}
-		modifier = {
-			job_executive_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood  }	}
-		}
+		potential = { has_administrators = yes }
 		modifier = {
 			job_administrator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_administrators = yes }
+		modifier = {
+			job_administrator_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_executives = yes }
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_executives = yes }
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_theocracy = yes }
+		modifier = {
 			job_high_priest_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		potential = { is_aristocracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_noble_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos   has_valid_civic = civic_technocracy  }	}
-		}
+		potential = { is_technocracy = yes }
 		modifier = {
 			job_head_researcher_add = 1
-			job_administrator_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_merchant_guilds   has_valid_civic = civic_state_monopoly } }
-		}
+		potential = { is_plutocracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_mogul_add = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy }	}
-		}
+		potential = { is_stratocracy = yes }
 		modifier = {
-
-			job_administrator_add = 1
 			job_commandante_add = 1
 
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy  }	}
-		}
+		potential = { is_bureaucracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_supervisor_add = 1
 		}
 	}
@@ -2427,66 +2341,46 @@ building_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood  }
-			}
+			is_theocracy = yes
 		}
 		text = job_high_priest_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_aristocratic_elite
-			}
+			is_aristocracy = yes
 		}
 		text = job_noble_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos   has_valid_civic = civic_technocracy  }
-			}
+			is_technocracy = yes
 		}
 		text = job_head_researcher_effect_desc
 	}
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_merchant_guilds   has_valid_civic = civic_state_monopoly } }
+			is_plutocracy = yes
 		}
 		text = job_mogul_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy  }
-			}
+			is_stratocracy = yes
 		}
 		text = job_commandante_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy  }
-			}
+			is_bureaucracy = yes
 		}
 		text = job_supervisor_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				NOT = { has_authority = auth_corporate }
-				is_regular_empire = yes
-			}
+			has_administrators = yes
 		}
 		text = job_administrator_effect_desc
 	}
@@ -2501,10 +2395,7 @@ building_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			has_executives = yes
 		}
 		text = job_executive_effect_desc
 	}
@@ -2616,100 +2507,93 @@ building_major_capital = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				NOR = {
-					has_authority = auth_corporate
-					has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_aristocratic_elite
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_exalted_priesthood    has_valid_civic = civic_technocracy   has_valid_civic = civic_bureaucracy    has_valid_civic = civic_stratocracy
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
+		potential = { has_administrators = yes }
 		modifier = {
-			job_administrator_add = 3
+			job_administrator_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_authority = auth_corporate }
-		}
-		modifier = {
-			job_executive_add = 3
-		}
-	}
-
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood }		}
+			has_administrators = yes
+			is_plutocracy = no
+			is_theocracy = no
+			is_bureaucracy = no
 		}
 		modifier = {
 			job_administrator_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_administrators = yes }
+		modifier = {
+			job_administrator_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { has_executives = yes }
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			has_executives = yes
+			is_plutocracy = no
+			is_theocracy = no
+			is_bureaucracy = no
+		}
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_executives = yes }
+		modifier = {
+			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_theocracy = yes
+		}
+		modifier = {
 			job_high_priest_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
+			is_aristocracy = yes
 		}
 		modifier = {
 			job_noble_add = 1
-			job_administrator_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy }	}
-		}
+		potential = { is_technocracy = yes }
 		modifier = {
 			job_head_researcher_add = 1
-			job_administrator_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_merchant_guilds   has_valid_civic = civic_state_monopoly } }
-		}
+		potential = { is_plutocracy = yes }
 		modifier = {
 			job_mogul_add = 2
-			job_administrator_add = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy }	}
-		}
+		potential = { is_stratocracy = yes }
 		modifier = {
-			job_administrator_add = 2
 			job_commandante_add = 1
+
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic  has_valid_civic = civic_bureaucracy }	}
-		}
+		potential = { is_bureaucracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_supervisor_add = 2
 		}
 	}
@@ -2726,67 +2610,46 @@ building_major_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy
-			} }
+			is_theocracy = yes
+		}
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_aristocracy = yes
+		}
+		text = job_noble_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_technocracy = yes
+		}
+		text = job_head_researcher_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_plutocracy = yes
+		}
+		text = job_mogul_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			is_stratocracy = yes
 		}
 		text = job_commandante_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy }
-			}
+			is_bureaucracy = yes
 		}
 		text = job_supervisor_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood }
-			}
-		}
-		text = job_high_priest_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_aristocratic_elite
-			}
-		}
-		text = job_noble_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy }
-			}
-		}
-		text = job_head_researcher_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_merchant_guilds
-			}
-		}
-		text = job_mogul_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				NOT = { has_authority = auth_corporate }
-				is_regular_empire = yes
-			}
+			has_administrators = yes
 		}
 		text = job_administrator_effect_desc
 	}
@@ -2801,10 +2664,7 @@ building_major_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			has_executives = yes
 		}
 		text = job_executive_effect_desc
 	}
@@ -2856,7 +2716,6 @@ building_system_capital = {
 		building_ancient_control_center
 		building_ancient_palace
 	}
-
 
 	allow = {
 		num_pops >= 80
@@ -2931,102 +2790,71 @@ building_system_capital = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				NOR = {
-					has_authority = auth_corporate
-					has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_aristocratic_elite
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_exalted_priesthood    has_valid_civic = civic_technocracy   has_valid_civic = civic_bureaucracy    has_valid_civic = civic_stratocracy
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
+		potential = { has_administrators = yes }
 		modifier = {
-			job_administrator_add = 4
+			job_administrator_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_corporate }
-		}
+		potential = { has_regular_administrators = yes }
 		modifier = {
-			job_executive_add = 4
-		}
-	}
-
-
-
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or =  { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy   has_valid_civic = civic_exalted_priesthood } }
-		}
-		modifier = {
-			job_high_priest_add = 2
 			job_administrator_add = 2
 		}
 	}
 
 	triggered_planet_modifier = {
+		potential = { has_executives = yes }
+		modifier = {
+			job_executive_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_executives = yes }
+		modifier = {
+			job_executive_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
+			is_theocracy = yes
+		}
+		modifier = {
+			job_high_priest_add = 3
+		}
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_aristocracy = yes
 		}
 		modifier = {
 			job_noble_add = 2
-			job_administrator_add = 2
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy } }
-		}
+		potential = { is_technocracy = yes }
 		modifier = {
 			job_head_researcher_add = 2
-			job_administrator_add = 2
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { is_plutocracy = yes }
+		modifier = {
+			job_mogul_add = 3
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_merchant_guilds   has_valid_civic = civic_state_monopoly } }
-		}
+		potential = { is_stratocracy = yes }
 		modifier = {
-			job_mogul_add = 2
-			job_administrator_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service   has_valid_civic = civic_stratocracy } }
-		}
-		modifier = {
-			job_administrator_add = 2
 			job_commandante_add = 2
+
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic  has_valid_civic = civic_bureaucracy } }
-		}
+		potential = { is_bureaucracy = yes }
 		modifier = {
-			job_administrator_add = 2
 			job_supervisor_add = 2
 		}
 	}
@@ -3043,67 +2871,46 @@ building_system_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy }
-			}
+			is_theocracy = yes
+		}
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_aristocracy = yes
+		}
+		text = job_noble_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_technocracy = yes
+		}
+		text = job_head_researcher_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_plutocracy = yes
+		}
+		text = job_mogul_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			is_stratocracy = yes
 		}
 		text = job_commandante_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy }
-			}
+			is_bureaucracy = yes
 		}
 		text = job_supervisor_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy   has_valid_civic = civic_exalted_priesthood }
-			}
-		}
-		text = job_high_priest_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_aristocratic_elite
-			}
-		}
-		text = job_noble_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy }
-			}
-		}
-		text = job_head_researcher_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_merchant_guilds
-			}
-		}
-		text = job_mogul_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				NOT = { has_authority = auth_corporate }
-				is_regular_empire = yes
-			}
+			has_administrators = yes
 		}
 		text = job_administrator_effect_desc
 	}
@@ -3118,10 +2925,7 @@ building_system_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			has_executives = yes
 		}
 		text = job_executive_effect_desc
 	}
@@ -3179,21 +2983,10 @@ building_hab_major_capital = {
 		}
 	}
 
-
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
 	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_voidborn }
-		}
-		modifier = {
-			 planet_max_buildings_add = 2
-		}
-	}	
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3229,179 +3022,113 @@ building_hab_major_capital = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				NOR = {
-					has_authority = auth_corporate
-					has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy
-					has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service
-					has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic
-					has_valid_civic = civic_aristocratic_elite
-					has_valid_civic = civic_merchant_guilds
-					has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos
-					has_valid_civic = civic_exalted_priesthood    has_valid_civic = civic_technocracy   has_valid_civic = civic_bureaucracy    has_valid_civic = civic_stratocracy
-					has_valid_civic = civic_state_monopoly
-				}
-			}
-		}
-		modifier = {
-			job_administrator_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_authority = auth_corporate }
-		}
-		modifier = {
-			job_executive_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service   has_valid_civic = civic_stratocracy }}
-		}
+		potential = { has_administrators = yes }
 		modifier = {
 			job_administrator_add = 1
-			job_commandante_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_administrators = yes }
+		modifier = {
+			job_administrator_add = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy }			}
-		}
+		potential = { has_executives = yes }
 		modifier = {
-			job_administrator_add = 1
-			job_supervisor_add = 1
+			job_executive_add = 1
+		}
+	}
+	triggered_planet_modifier = {
+		potential = { has_regular_executives = yes }
+		modifier = {
+			job_executive_add = 1
 		}
 	}
 
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood }	}
-		}
+		potential = { is_theocracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_high_priest_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_aristocratic_elite }
-		}
+		potential = { is_aristocracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_noble_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy }	}
-		}
+		potential = { is_technocracy = yes }
 		modifier = {
 			job_head_researcher_add = 1
-			job_administrator_add = 1
 		}
 	}
-
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { or = { has_valid_civic = civic_merchant_guilds   has_valid_civic = civic_state_monopoly } }
-		}
+		potential = { is_plutocracy = yes }
 		modifier = {
-			job_administrator_add = 1
 			job_mogul_add = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_ascension_perk = ap_voidborn }
-		}
+		potential = { is_stratocracy = yes }
 		modifier = {
-			 planet_max_buildings_add = 2
+			job_commandante_add = 1
+
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = { is_bureaucracy = yes }
+		modifier = {
+			job_supervisor_add = 1
 		}
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_cyber_dictatorship  has_valid_civic = civic_science_directorate  has_valid_civic = civic_cyber_demos_cratos  has_valid_civic = civic_technocracy }
-			}
+			is_theocracy = yes
+		}
+		text = job_high_priest_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_aristocracy = yes
+		}
+		text = job_noble_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			is_technocracy = yes
 		}
 		text = job_head_researcher_effect_desc
 	}
+	triggered_desc = {
+		trigger = {
+			is_plutocracy = yes
+		}
+		text = job_mogul_effect_desc
+	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_military_dictatorship  has_valid_civic = civic_military_junta  has_valid_civic = civic_citizen_service  has_valid_civic = civic_stratocracy }
-			}
+			is_stratocracy = yes
 		}
 		text = job_commandante_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_executive_committee  has_valid_civic = civic_philosopher_king  has_valid_civic = civic_peaceful_republic   has_valid_civic = civic_bureaucracy }
-			}
+			is_bureaucracy = yes
 		}
 		text = job_supervisor_effect_desc
 	}
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				or = { has_valid_civic = civic_imperial_cult  has_valid_civic = civic_divine_council  has_valid_civic = civic_spiritual_democracy  has_valid_civic = civic_exalted_priesthood }
-			}
-		}
-		text = job_high_priest_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_aristocratic_elite
-			}
-		}
-		text = job_noble_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_merchant_guilds
-			}
-		}
-		text = job_mogul_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				NOT = { has_authority = auth_corporate }
-				is_regular_empire = yes
-			}
+			has_administrators = yes
 		}
 		text = job_administrator_effect_desc
 	}
@@ -3416,44 +3143,12 @@ building_hab_major_capital = {
 
 	triggered_desc = {
 		trigger = {
-			exists = owner
-			owner = {
-				has_authority = auth_corporate
-			}
+			has_executives = yes
 		}
 		text = job_executive_effect_desc
 	}
-
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
 		text = job_enforcer_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_coordinator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		text = job_replicator_effect_desc
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		text = job_synapse_drone_effect_desc
 	}
 
 	ai_weight = {
@@ -3464,7 +3159,6 @@ building_hab_major_capital = {
 		}#This is here to prevent the AI from queuing up to buy this building when it could really do with another mineral district
 	}
 }
-
 
 
 #############
@@ -3540,7 +3234,7 @@ building_commercial_zone = {
 		"building_commercial_megaplex"
 	}
 
-	ai_weight = {
+ai_weight = {
 		weight = 0
 		modifier = {
 			weight = 5
@@ -3667,7 +3361,6 @@ building_commercial_megaplex = {
 			always = yes
 		}
 	}
-
 }
 
 building_galactic_stock_exchange = {
@@ -3779,7 +3472,21 @@ building_paradise_dome = {
 	category = amenity
 
 	potential = {
-    has_building = building_luxury_residence
+    	has_building = building_luxury_residence
+		OR = {
+			NOT = { is_planet_class = pc_habitat }
+			AND = {
+				has_planet_flag = advanced_habitat
+				exists = owner
+				owner = {
+					has_ascension_perk = ap_voidborn
+				}
+			}
+		}
+	}
+
+	allow = {
+		has_upgraded_capital = yes
 	}
 
 	destroy_trigger = {
@@ -3790,10 +3497,6 @@ building_paradise_dome = {
 			buildings_no_crystals = yes
 			has_modifier = slave_colony
 		}
-	}
-
-	allow = {
-		has_upgraded_capital = yes
 	}
 
 	convert_to = {
@@ -3862,226 +3565,9 @@ building_paradise_dome = {
 			weight = 1
 			buildings_has_crystals = yes
 		}
-	}
-
-
-}
-
-
-building_bank_branch = {
-	base_buildtime = @b1_time
-
-	branch_office_building = yes
-
-	possible = {
-		OR = { has_branch_office = yes
-		branch_office_owner = { is_criminal_syndicate = no }
-		owner = {has_valid_civic = civic_bank_corp}
-		}
-	}
-
-	planet_modifier = {
-		job_bank_manager_add = 1
-		job_clerk_add = 1
-	}
-
-	resources = {
-		category = planet_branch_office_buildings
-		cost = {
-			minerals = 500
-		}
-		produces = {
-			energy = 10
-		}
-		upkeep = {
-			consumer_goods = 1
-		}
-	}
-
-	ai_weight = {
-		weight = 3
 		modifier = {
-			factor = 5
-			branch_office_owner = {
-				has_monthly_income = {
-					resource = consumer_goods
-					value < 0
-				}
-			}
-		}
-		modifier = {
-			factor = 0.5
-			branch_office_owner = {
-				has_monthly_income = {
-					resource = consumer_goods
-					value >= 10
-				}
-			}
-		}
-	}
-}
-building_fleet_command_post = {
-	base_buildtime = 240
-	add_to_first_building_slot = yes
-
-	category = army
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-	destroy_trigger = {
-		exists = owner
-		owner = { is_ai = yes }
-		num_buildings = { type = building_stronghold value > 1 }
-		AND = {
-			OR = {
-				num_buildings = { type = building_stronghold value > 1 }
-				has_building = building_fortress
-			}
-			free_building_slots = 0
-			owner = {
-				used_naval_capacity_percent < 0.6
-				is_at_war = no # don't destroy while at war
-			}
-		}
-	}
-
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-			   is_gestalt = no
-			   not = { has_valid_civic = civic_private_militaries }
-			   }
-		}
-		modifier = {
-			job_naval_support_staff_add = 1
-		}
-	}
-
-	resources = {
-		category = planet_buildings_strongholds
-		cost = {
-			minerals = @b1_minerals
-		}
-		upkeep = {
-			energy = 1
-		}
-	}
-
-	upgrades = {
-		"building_office_of_the_admiralty"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_naval_support_effect_desc
-	}
-	
-	prerequisites = {
-		"tech_naval_support_infrastructure"
-	}
-	
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1
-			free_jobs < 1
-			free_building_slots > 1
-			owner = { used_naval_capacity_percent > 0.9	}
-		}
-		modifier = {
-			weight = 100
-			is_planet_class = pc_habitat
-			owner = { used_naval_capacity_percent > 0.8	}
-		}
-		modifier = {
-			weight = 50000
-			num_pops >= 40
-			NOR = {
-				has_building = building_stronghold
-				has_building = building_fortress
-			}
-		}
-	}
-}
-
-
-building_office_of_the_admiralty = {
-	base_buildtime = @b1_time
-	can_build = no
-	add_to_first_building_slot = yes
-
-	category = army
-
-	allow = {
-		has_upgraded_capital = yes
-	}
-
-
-	destroy_trigger = {
-		exists = owner
-		owner = { is_ai = yes }
-		OR = {
-			AND = {
-				num_buildings = { type = building_fortress value > 1 }
-				free_building_slots = 0
-				owner = { used_naval_capacity_percent < 0.4	}
-			}
-			buildings_no_motes = yes
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-			   is_gestalt = no
-			   not = { has_valid_civic = civic_private_militaries }
-			   }
-		}
-		modifier = {
-			job_naval_support_staff_add = 3
-		}
-	}
-
-	resources = {
-		category = planet_buildings_strongholds
-		cost = {
-			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
-		}
-		upkeep = {
-			energy = 1
-			volatile_motes = @b2_rare_upkeep
-		}
-	}
-
-	prerequisites = {
-		"tech_global_defense_grid"
-	}
-	
-	prerequisites = {
-		"tech_naval_support_infrastructure"
-	}
-	
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_naval_support_effect_desc
-	}
-
-
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 1
-			buildings_has_motes = yes
+			factor = 10
+			free_housing < 0
 		}
 	}
 }

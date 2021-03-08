@@ -1,0 +1,10 @@
+tr_prosperity_public_works = {
+    modifier = {
+    }
+    possible = {
+        has_tradition = trp_prosperity_alteration_a
+    }
+    ai_weight = {
+        factor = 1000
+    }
+}

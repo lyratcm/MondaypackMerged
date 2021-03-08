@@ -1,0 +1,22 @@
+ap_transcendent_learning = {
+    modifier = {
+        leader_skill_levels = 2
+        species_leader_exp_gain = 0.5
+    }
+    on_enabled = {
+        custom_tooltip = "transcendent_learning_tooltip"
+        hidden_effect = {
+            every_pool_leader = {
+                add_skill = 1
+            }
+        }
+    }
+    potential = {
+        NOT = {
+            has_ascension_perk = ap_transcendent_learning
+        }
+    }
+    ai_weight = {
+        factor = 10
+    }
+}

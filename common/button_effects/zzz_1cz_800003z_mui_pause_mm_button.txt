@@ -1,0 +1,25 @@
+z_mui_pause_mm_button = {
+    potential = {
+        NOT = {
+            has_country_flag = z_fw_flg_cntr_mui_button_hide
+        }
+        check_variable = {
+            which = ehof_phase
+            value < 1
+        }
+    }
+    allow = {
+        hidden_trigger = {
+            z_mm_menu_locked = no
+        }
+    }
+    effect = {
+        hidden_effect = {
+            z_mm_lock_menu = yes
+            country_event = {
+                id = z_modmenu.1
+            }
+        }
+        custom_tooltip = z_modmenu_button
+    }
+}

@@ -1,0 +1,26 @@
+trait_genetic_memory = {
+    potential_crossbreeding_chance = 0.5
+    cost = 4
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_deep_connections.dds"
+    initial = no
+    randomized = no
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_inept"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = "tech_genetic_mastery"
+        }
+    }
+    modifier = {
+        species_leader_exp_gain = 1
+        leader_skill_levels = 2
+        planet_jobs_unity_produces_mult = 0.2
+    }
+}

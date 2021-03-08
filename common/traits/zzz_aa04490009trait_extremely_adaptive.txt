@@ -1,0 +1,22 @@
+trait_extremely_adaptive = {
+    cost = 4
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_nonadaptive"
+        "trait_adaptive"
+        "trait_robust"
+        "trait_ageless"
+        "trait_amphibious"
+        "trait_desert_reptile"
+        "trait_endemic"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_environment_tolerance = 0.2
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

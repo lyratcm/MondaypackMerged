@@ -18,8 +18,13 @@ xenoist = {
 
 	is_potential = {
 		years_passed > 10
-		has_encountered_other_species = yes
 		NOT = { has_ethic = ethic_gestalt_consciousness }
+		count_owned_pops = {
+			count >= 5
+			limit = {
+				has_ethic = ethic_xenophile
+			}
+		}
 	}
 	
 	parameters = {
@@ -31,10 +36,13 @@ xenoist = {
 		}
 	}
 	
-	can_join_faction = {
+	can_join_pre_triggers = {
 		is_enslaved = no
-		is_shackled_robot = no
 		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
 		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
@@ -85,7 +93,29 @@ xenoist = {
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}	
+		}
+	}
+	
+	demand = {
+		title = "FACTION_OUTRAGED_GC"
+		unfulfilled_title = "FACTION_OUTRAGED_GC"
+		desc = "FACTION_OUTRAGED_GC_DESC"
+
+		fulfilled_effect = -20
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = faction_xenophile_outraged_gc
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_country_flag = faction_xenophile_outraged_gc
+			}
+		}
 	}
 
 	demand = {
@@ -123,6 +153,13 @@ xenoist = {
 		potential = {
 			exists = owner
 			owner = {
+				OR = {
+					NOR = {
+						has_valid_civic = civic_slaver_guilds
+						has_valid_civic = civic_indentured_assets
+					}
+					is_ai = no # players can understand, ai can not
+				}
 				any_owned_pop = {
 					NOR = {
 						is_same_species = root.owner
@@ -210,7 +247,11 @@ xenoist = {
 			owner = {
 				any_relation = {
 					has_communications = root.owner
-					is_country_type = default
+					OR = {
+						is_country_type = default
+						is_country_type = ascended_empire
+						is_country_type = lost_empire
+					}
 				}
 			}
 		}
@@ -396,6 +437,161 @@ xenoist = {
 		}
 	}
 	
+	demand = {
+		title = "XENOIST_VASSAL_CONTROL"
+		unfulfilled_title = "XENOIST_NO_VASSAL_CONTROL"
+		desc = "XENOIST_VASSAL_CONTROL_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -5
+
+		potential = {
+			exists = owner
+			owner = {
+				is_overlord = yes
+				is_authoritarian = no
+				NOR = {
+					has_valid_civic = civic_feudal_realm
+					is_megacorp = yes
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT = { has_policy_flag = vassal_expansion_not_allowed }
+			}
+		}
+	}
+	
+	demand = { 
+		title = "XENOIST_LAND_OF_OPPORTUNITY"
+		unfulfilled_title = "XENOIST_NO_LAND_OF_OPPORTUNITY"
+		desc = "XENOIST_LAND_OF_OPPORTUNITY_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				any_relation = {
+					has_communications = root.owner
+					OR = {
+						has_diplo_migration_treaty = root.owner
+						root = {
+							owner = {
+								has_diplo_migration_treaty = prevprev
+							}
+						}
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_edict = land_of_opportunity
+			}
+		}
+	}
+	
+	demand = { 
+		title = "XENOIST_DIPLOMATIC_GRANTS"
+		unfulfilled_title = "XENOIST_NO_DIPLOMATIC_GRANTS"
+		desc = "XENOIST_DIPLOMATIC_GRANTS_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_non_swapped_tradition = tr_diplomacy_adopt
+				has_comms_with_alien_empire = yes
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_edict = diplomatic_grants
+			}
+		}
+	}
+	
+	demand = {
+		title = "XENOIST_CELEBRATE_DIVERSITY"
+		unfulfilled_title = "XENOIST_NO_CELEBRATE_DIVERSITY"
+		desc = "XENOIST_CELEBRATE_DIVERSITY_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_modifier = celebrate_diversity
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_modifier = celebrate_diversity
+			}
+		}
+	}
+
+	demand = {
+		title = "XENOIST_PROCLAIM_SUPREMACY"
+		unfulfilled_title = "XENOIST_NO_PROCLAIM_SUPREMACY"
+		desc = "XENOIST_PROCLAIM_SUPREMACY_DESC"
+
+		unfulfilled_effect = -5
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_modifier = proclaim_superiority
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOT= { has_modifier = proclaim_superiority }
+			}
+		}
+	}
+	
+	demand = {
+		title = "COOPERATIVE_DIPLO_STANCE"
+		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
+		desc = "COOPERATIVE_DIPLO_STANCE_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_homicidal = no
+				OR = {
+					is_country_type = default
+					is_country_type = ascended_empire
+					is_country_type = lost_empire
+				}
+
+				has_policy_flag = diplo_stance_cooperative
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_policy_flag = diplo_stance_cooperative
+			}
+		}
+	}
+	
 	on_create = {
 		pop_faction_event = { id = factions.1 }
 	}
@@ -427,7 +623,6 @@ xenoist = {
 			potential = {
 				exists = owner
 				owner = {
-					NOT = { has_authority = auth_master_computer }
 					OR = {
 						is_subject = no
 						NOT = { is_subject_type = dominion }
@@ -466,7 +661,11 @@ xenoist = {
 						every_relation = {
 							limit = {
 								is_ai = no
-								is_country_type = default			
+								OR = {
+									is_country_type = default
+									is_country_type = ascended_empire
+									is_country_type = lost_empire
+								}
 								has_communications = prev
 							}
 							country_event = { id = factions.2000 }
@@ -485,6 +684,10 @@ xenoist = {
 					}
 				}
 				modifier = {
+					factor = 0.25
+					support < 0.50
+				}
+				modifier = {
 					factor = 0
 					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}				
@@ -500,13 +703,13 @@ xenoist = {
 					}
 				}
 				modifier = {
+					factor = 0.1
+					owner = { has_ethic = ethic_xenophobe }
+				}
+				modifier = {
 					factor = 0
-					owner = {
-						count_pop_factions = {
-							count < 4
-						}					
-					}
-				}			
+					owner = { has_ethic = ethic_fanatic_xenophobe }
+				}
 			}
 		}
 		promote_faction = {

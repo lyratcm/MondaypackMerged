@@ -1,0 +1,18 @@
+trait_venerable = {
+    cost = 4
+    potential_crossbreeding_chance = 1
+    modifier = {
+        leader_age = 80
+    }
+    opposites = {
+        "trait_enduring"
+        "trait_fleeting"
+        "trait_fungal_colony"
+        "trait_ancient"
+        "trait_seasonal"
+        "trait_ageless"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+}

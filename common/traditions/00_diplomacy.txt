@@ -1,10 +1,9 @@
 
 tr_diplomacy_adopt = {
-	modifier = {		
+	modifier = {
 		diplomacy_upkeep_mult = -0.5
-		pop_growth_from_immigration = 0.10
 	}
-	
+
 	tradition_swap = {
 		name = tr_adaptability_adopt
 		inherit_effects = no
@@ -13,12 +12,12 @@ tr_diplomacy_adopt = {
 		trigger = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
-				has_valid_civic = civic_master_computer_purifier
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				is_criminal_syndicate = yes
+				has_origin = origin_necrophage
 			}
 		}
 		modifier = {
@@ -28,7 +27,7 @@ tr_diplomacy_adopt = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_adopt
 		inherit_effects = no
@@ -44,7 +43,7 @@ tr_diplomacy_adopt = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 10
 		modifier = {
@@ -59,69 +58,36 @@ tr_diplomacy_adopt = {
 			factor = 3
 			has_ethic = ethic_fanatic_xenophile
 		}
+
 		modifier = {
 			factor = 0
-			has_global_flag = gai_enabled_flag
-		}
-		modifier = {
-			weight = 100
-			has_global_flag = gai_enabled_flag
-			OR = {
-				has_tradition = tr_supremacy_finish
-				AND = {
-					has_ai_personality = federation_builders
-					has_tradition = tr_expansion_finish
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			has_global_flag = gai_enabled_flag
-			OR = {
-				AND = {
-					is_materialist = yes
-					NOT = { has_tradition = tr_discovery_finish }
-				}
-				AND = {
-					has_authority = "auth_hive_mind"
-					NOT = { has_tradition = tr_harmony_finish }
-				}
-			}
-		}
-		modifier = {
-			factor = 0
-			has_global_flag = gai_enabled_flag
 			OR = {
 				AND = {
 					has_tradition = tr_discovery_adopt
 					NOT = { has_tradition = tr_discovery_finish }
 				}
 				AND = {
-					has_tradition = tr_diplomacy_adopt
-					NOT = { has_tradition = tr_diplomacy_finish }
-				}
-				AND = {
-					has_tradition = tr_supremacy_adopt
-					NOT = { has_tradition = tr_supremacy_finish }
-				}
-				AND = {
-					has_tradition = tr_prosperity_adopt
-					NOT = { has_tradition = tr_prosperity_finish }
-				}
-				AND = {
-					has_tradition = tr_harmony_adopt
-					NOT = { has_tradition = tr_harmony_finish }
+					has_tradition = tr_domination_adopt
+					NOT = { has_tradition = tr_domination_finish }
 				}
 				AND = {
 					has_tradition = tr_expansion_adopt
 					NOT = { has_tradition = tr_expansion_finish }
 				}
 				AND = {
-					has_tradition = tr_domination_adopt
-					NOT = { has_tradition = tr_domination_finish }
+					has_tradition = tr_harmony_adopt
+					NOT = { has_tradition = tr_harmony_finish }
+				}
+				AND = {
+					has_tradition = tr_prosperity_adopt
+					NOT = { has_tradition = tr_prosperity_finish }
+				}
+				AND = {
+					has_tradition = tr_supremacy_adopt
+					NOT = { has_tradition = tr_supremacy_finish }
 				}
 			}
-		}		
+		}
 	}
 }
 
@@ -131,7 +97,7 @@ tr_diplomacy_finish = {
 		country_trust_cap_add = 50
 		country_trust_growth = 0.33
 	}
-	
+
 	tradition_swap = {
 		name = tr_adaptability_finish
 		inherit_effects = no
@@ -141,21 +107,21 @@ tr_diplomacy_finish = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_master_computer_purifier
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				is_criminal_syndicate = yes
+				has_origin = origin_necrophage
 			}
 		}
-		modifier = {		
+		modifier = {
 			ascension_perks_add = 1
 		}
 		weight = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_finish
 		inherit_effects = no
@@ -175,9 +141,12 @@ tr_diplomacy_finish = {
 }
 
 tr_diplomacy_the_federation = {
-	
+
 	#unlocks federation mechanic
-	
+	modifier = {
+		envoys_add = 1
+	}
+
 	tradition_swap = {
 		name = tr_adaptability_dietary_enrichment
 		inherit_effects = no
@@ -187,12 +156,17 @@ tr_diplomacy_the_federation = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				has_valid_civic = civic_hive_devouring_swarm
-				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				has_valid_civic = civic_master_computer_purifier
-				is_criminal_syndicate = yes
+
+				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
+				AND = {
+					has_valid_civic = civic_barbaric_despoilers
+					has_federations_dlc = no
+				}
 			}
+			is_lithoid_empire = no
 		}
 		modifier = {
 			country_food_produces_mult = 0.10
@@ -201,7 +175,37 @@ tr_diplomacy_the_federation = {
 			factor = 1
 		}
 	}
-	
+
+	tradition_swap = {
+		name = tr_adaptability_recycling
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
+				has_valid_civic = civic_hive_devouring_swarm
+
+				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
+				AND = {
+					has_valid_civic = civic_barbaric_despoilers
+					has_federations_dlc = no
+				}
+
+			}
+			is_lithoid_empire = yes
+		}
+		modifier = {
+			planet_building_refund_mult = 0.15
+		}
+		weight = {
+			factor = 1
+		}
+	}
+
 	tradition_swap = {
 		name = tr_versatility_universal_compatibility
 		inherit_effects = no
@@ -209,6 +213,7 @@ tr_diplomacy_the_federation = {
 		inherit_name = no
 		trigger = {
 			is_machine_empire = yes
+			NOT = { has_valid_civic = civic_closed_network }
 		}
 		modifier = {
 			country_synthetic_trust_cap_add = 50
@@ -217,7 +222,7 @@ tr_diplomacy_the_federation = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 1000
 	}
@@ -231,7 +236,7 @@ tr_diplomacy_entente_coordination = {
 	modifier = {
 		federation_naval_cap_contribution_mult = 1.00
 	}
-	
+
 	tradition_swap = {
 		name = tr_adaptability_survival_fittest
 		inherit_effects = no
@@ -241,11 +246,11 @@ tr_diplomacy_entente_coordination = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				has_valid_civic = civic_master_computer_purifier
-				is_criminal_syndicate = yes
+				has_origin = origin_necrophage
 			}
 		}
 		modifier = {
@@ -256,7 +261,7 @@ tr_diplomacy_entente_coordination = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_adaptive_programming
 		inherit_effects = no
@@ -264,6 +269,7 @@ tr_diplomacy_entente_coordination = {
 		inherit_name = no
 		trigger = {
 			is_machine_empire = yes
+			NOT = { has_valid_civic = civic_closed_network }
 		}
 		modifier = {
 			country_trade_fee = -0.10
@@ -282,8 +288,8 @@ tr_diplomacy_open_markets = {
 
 	modifier = {
 		trade_value_mult = 0.1
-	}	
-	
+	}
+
 	tradition_swap = {
 		name = tr_adaptability_environmental_diversification
 		inherit_effects = no
@@ -293,10 +299,11 @@ tr_diplomacy_open_markets = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				has_valid_civic = civic_master_computer_purifier
+				has_origin = origin_necrophage
 			}
 		}
 		modifier = {
@@ -306,7 +313,7 @@ tr_diplomacy_open_markets = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_spatial_optimization
 		inherit_effects = no
@@ -322,7 +329,7 @@ tr_diplomacy_open_markets = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 5000
 	}
@@ -336,7 +343,7 @@ tr_diplomacy_insider_trading = {
 	modifier = {
 		country_trade_fee = -0.10
 	}
-	
+
 	tradition_swap = {
 		name = tr_adaptability_adaptive_ecology
 		inherit_effects = no
@@ -346,10 +353,11 @@ tr_diplomacy_insider_trading = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				has_valid_civic = civic_master_computer_purifier
+				has_origin = origin_necrophage
 			}
 		}
 		modifier = {
@@ -359,25 +367,25 @@ tr_diplomacy_insider_trading = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_material_analysis
-		
+
 		inherit_effects = no
 		inherit_icon = no
 		inherit_name = no
 		trigger = {
 			is_machine_empire = yes
-		}	
+		}
 		weight = {
 			factor = 1
 		}
-		
+
 		modifier = {
 			planet_jobs_upkeep_mult = -0.05
-		}	
+		}
 	}
-	
+
 	ai_weight = {
 		factor = 5000
 	}
@@ -387,11 +395,11 @@ tr_diplomacy_secure_shipping = {
 	possible = {
 		has_tradition = tr_diplomacy_open_markets
 	}
-	
+
 	modifier = {
 		local_trade_protection_add = 5
 	}
-	
+
 	tradition_swap = {
 		name = tr_adaptability_appropriation
 		inherit_effects = no
@@ -401,10 +409,11 @@ tr_diplomacy_secure_shipping = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_closed_collective
+				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
-				has_valid_civic = civic_master_computer_datavore
-				has_valid_civic = civic_master_computer_purifier
+				has_origin = origin_necrophage
 			}
 		}
 		modifier = {
@@ -414,7 +423,7 @@ tr_diplomacy_secure_shipping = {
 			factor = 1
 		}
 	}
-	
+
 	tradition_swap = {
 		name = tr_versatility_operational_proxies
 		inherit_effects = no
@@ -425,12 +434,12 @@ tr_diplomacy_secure_shipping = {
 		}
 		modifier = {
 			pop_resettlement_cost_mult = -0.33
-		}		
+		}
 		weight = {
 			factor = 1
 		}
 	}
-	
+
 	ai_weight = {
 		factor = 1000
 	}

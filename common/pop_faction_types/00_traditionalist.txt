@@ -18,9 +18,13 @@ traditionalist = {
 
 	is_potential = {
 		years_passed > 10
-		has_encountered_other_species = yes
 		NOT = { has_ethic = ethic_gestalt_consciousness }
-		NOT = { has_authority = auth_master_computer }
+		count_owned_pops = {
+			count >= 5
+			limit = {
+				has_ethic = ethic_spiritualist
+			}
+		}
 	}
 	
 	parameters = {
@@ -32,15 +36,27 @@ traditionalist = {
 		}
 	}
 	
-	can_join_faction = {
+	can_join_pre_triggers = {
 		is_enslaved = no
-		is_shackled_robot = no
 		is_being_purged = no
+	}
+
+	can_join_faction = {
+		is_shackled_robot = no
 		has_culture_shock = no
 		NOT = { has_trait = trait_nerve_stapled }
 		OR = {
 			has_ethic = ethic_spiritualist
 			has_ethic = ethic_fanatic_spiritualist
+		}
+		OR = {
+			NOT = { is_same_species = owner_species }
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
 		}
 		is_robot_pop = no
 	}
@@ -74,23 +90,108 @@ traditionalist = {
 				has_trait = "trait_mechanical"		
 			}			
 		}
+		
+		modifier = {
+			factor = 0
+			leader_class = scientist
+		}
+		modifier = {
+			factor = 0
+			exists = owner
+			owner = { is_govenor_election = yes }
+			NOR = {
+				leader_class = governor
+			}
+		}
 
 		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}		
+		}
+	}
+	
+	demand = {
+		title = "FACTION_OUTRAGED_GC"
+		unfulfilled_title = "FACTION_OUTRAGED_GC"
+		desc = "FACTION_OUTRAGED_GC_DESC"
+
+		fulfilled_effect = -20
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_country_flag = faction_spiritualist_outraged_gc
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_country_flag = faction_spiritualist_outraged_gc
+			}
+		}
+	}
+	
+	demand = {
+		title = "TRADITIONALIST_IMPERIAL_CULT"
+		unfulfilled_title = "TRADITIONALIST_NO_IMPERIAL_CULT"
+		desc = "TRADITIONALIST_IMPERIAL_CULT_DESC"
+		
+		unfulfilled_effect = -30
+		fulfilled_effect = 5
+		
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_valid_civic = civic_imperial_cult
+					has_country_flag = has_imperial_cult 
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				has_valid_civic = civic_imperial_cult
+			}
+		}
 	}
 
+	demand = {
+		title = "TRADITIONALIST_NO_ROBOTS_FANATIC"
+		unfulfilled_title = "TRADITIONALIST_ROBOTS_FANATIC"
+		desc = "TRADITIONALIST_NO_ROBOTS_FANATIC_DESC"
+		
+		unfulfilled_effect = -5
+		fulfilled_effect = 5
+		
+		potential = {
+			exists = owner
+			owner = {
+				has_ethic = ethic_fanatic_spiritualist
+			}
+		}
+		
+		trigger = {
+			owner = {
+				has_policy_flag = robots_outlawed
+			}
+		}
+	}
+	
 	demand = { # "TRADITIONALIST_NO_ROBOTS"
 		title = "TRADITIONALIST_NO_ROBOTS"
 		unfulfilled_title = "TRADITIONALIST_ROBOTS"
 		desc = "TRADITIONALIST_NO_ROBOTS_DESC"
 		
-		unfulfilled_effect = -5
-		fulfilled_effect = 0.001
+		unfulfilled_effect = -0.001
+		fulfilled_effect = 5
 		
 		potential = {
 			exists = owner
+			owner = {
+				NOT = { has_ethic = ethic_fanatic_spiritualist }
+			}
 		}
 		
 		trigger = {
@@ -145,7 +246,42 @@ traditionalist = {
 			}
 		}
 	}
-
+	
+	demand = {
+		title = "TRADITIONALIST_NO_ALIEN_RIGHTS"
+		unfulfilled_title = "TRADITIONALIST_ALIEN_RIGHTS"
+		desc = "TRADITIONALIST_NO_ALIEN_RIGHTS_DESC"
+		
+		unfulfilled_effect = -20
+		fulfilled_effect = 5
+		
+		potential = {
+			exists = owner
+			owner = {
+				num_species > 1
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				NOT = {
+					any_owned_pop = {
+						NOT = { is_same_species = owner_species }
+						has_citizenship_type = {
+							country = root.owner
+							type = citizenship_full
+						}
+					}
+				}
+			}
+		}
+	}
+	
 	demand = { # "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
 		title = "TRADITIONALIST_SPIRITUALIST_GOVERNMENT"
 		unfulfilled_title = "TRADITIONALIST_SECULAR_GOVERNMENT"
@@ -167,6 +303,249 @@ traditionalist = {
 			}
 		}
 	}
+	
+	demand = {
+		title = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION"
+		unfulfilled_title = "SUPREMACIST_ISOLATIONIST_FEDERATION"
+		desc = "TRADITIONALIST_NO_FEDERATION_DESC"
+		
+		fulfilled_effect = 5
+		unfulfilled_effect = -15
+		
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 0
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				has_federation = no
+			}
+		}
+	}
+	
+	demand = {
+		title = "ISOLATIONIST_MOVEMENT_RESTRICTED"
+		unfulfilled_title = "ISOLATIONIST_MOVEMENT_UNRESTRICTED"
+		desc = "ISOLATIONIST_MOVEMENT_RESTRICTED_DESC"
+		
+		unfulfilled_effect = -5
+		fulfilled_effect = 0.001
+		
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 2
+				NOT = { has_valid_civic = civic_fanatic_purifiers }
+				OR = {
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				NOR = {
+					any_relation = {
+						has_communications = root.owner
+						OR = {
+							has_diplo_migration_treaty = root.owner
+							root = {
+								owner = {
+									has_diplo_migration_treaty = prevprev
+								}
+							}
+						}
+					}
+					has_policy_flag = refugees_allowed
+				}
+			}
+		}
+	}
+	
+	demand = { # "XENOIST_NO_SLAVES"
+		title = "XENOIST_NO_SLAVES"
+		unfulfilled_title = "XENOIST_SLAVES"
+		desc = "TRADITIONALIST_NO_SLAVES_DESC"
+
+		unfulfilled_effect = -15
+		fulfilled_effect = 0.001
+		
+		potential = {
+			exists = owner
+			owner = {
+				NOR = {
+					has_valid_civic = civic_slaver_guilds
+					has_valid_civic = civic_indentured_assets
+				}
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				any_owned_pop = {
+					NOR = {
+						is_same_species = root.owner
+						is_robot_pop = yes
+						is_sapient = no
+					}
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				NOT = {
+					#has_policy_flag = slavery_allowed
+					any_owned_pop = {
+						has_citizenship_type = { country = prev type = citizenship_slavery }
+					}
+				}
+			}
+		}
+	}
+	
+	demand = { # "XENOIST_NO_PURGE"
+		title = "XENOIST_NO_PURGE"
+		unfulfilled_title = "XENOIST_PURGE"
+		desc = "TRADITIONALIST_NO_PURGE_DESC"
+
+		unfulfilled_effect = -20
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = purge_displacement_only
+					has_policy_flag = purge_allowed
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "XENOIST_RECENT_COMMS"
+		unfulfilled_title = "XENOIST_NO_RECENT_COMMS"
+		desc = "XENOIST_RECENT_COMMS_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_ethic = ethic_xenophile
+					has_ethic = ethic_fanatic_xenophile
+				}
+				any_country = {
+					NOT = { has_communications = prev}
+					OR = {
+						is_country_type = default
+						is_country_type = fallen_empire
+						is_country_type = awakened_fallen_empire
+					}
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_country_flag = recent_comms_timed
+			}
+		}
+	}
+	
+	demand = {
+		title = "PROSPERITY_NOT_AGGRESSOR"
+		unfulfilled_title = "PROSPERITY_AGGRESSOR"
+		desc = "TRADITIONALIST_NOT_AGGRESSOR_DESC"
+
+		unfulfilled_effect = -20
+		fulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				num_communications > 2
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				OR = {
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
+			}
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_country_flag = entered_war_as_attacker
+					any_war = { is_war_participant = { who = prev side = attackers } }
+				}
+			}
+		}
+	}
+	
+	demand = {
+		title = "TRADITIONALIST_IMPOSE_RELIGION"
+		unfulfilled_title = "TRADITIONALIST_NO_IMPOSE_RELIGION"
+		desc = "TRADITIONALIST_IMPOSE_RELIGION_DESC"
+		
+		fulfilled_effect = 10
+		unfulfilled_effect = -0.001
+		
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+				OR = {
+					has_ethic = ethic_militarist
+					has_ethic = ethic_fanatic_militarist
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+					has_valid_civic = civic_crusaders
+				}
+				any_relation = {
+					has_communications = root.owner
+					OR = {
+						is_country_type = default
+						is_country_type = ascended_empire
+						is_country_type = lost_empire
+					}
+					NOT = { exists = overlord }
+				}
+			}
+		}
+		
+		trigger = {
+			owner = {
+				has_country_flag = imperialist_liberation_timed_flag
+			}
+		}
+	}
 
 	demand = { # "TRADITIONALIST_NO_TOMB_WORLDS"
 		title = "TRADITIONALIST_NO_TOMB_WORLDS"
@@ -181,8 +560,10 @@ traditionalist = {
 			owner = {
 				has_surveyed_class = pc_nuked
 				NOR = {
-					has_civic = civic_post_apocalyptic
+					has_origin = origin_post_apocalyptic
 					has_country_flag = worm_tomb_ending
+					has_valid_civic = civic_memorialist
+					has_valid_civic = civic_memorialist_corp
 				}
 			}
 		}
@@ -192,10 +573,12 @@ traditionalist = {
 				NOR = {
 					any_owned_planet = {
 						is_planet_class = pc_nuked
+						NOT = { has_modifier = ancestrial_homeworld }
 					}
 					any_planet_within_border = { 
 						is_planet_class = pc_nuked
 						is_terraforming = yes
+						NOT = { has_modifier = ancestrial_homeworld }
 					}
 				}
 			}
@@ -340,6 +723,29 @@ traditionalist = {
 			}
 		}
 	}
+	
+	demand = { # "TRADITIONALIST_CITY_WORLD"
+		title = "TRADITIONALIST_CITY_WORLD"
+		unfulfilled_title = "TRADITIONALIST_NO_CITY_WORLD"
+		desc = "TRADITIONALIST_CITY_WORLD_DESC"
+
+		fulfilled_effect = -15
+		unfulfilled_effect = 0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_ascension_perk = ap_arcology_project
+				has_civic = civic_environmentalist
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_country_flag = made_city_planet
+			}
+		}
+	}
 
 	demand = { # "TRADITIONALIST_SHROUD_BOON"
 		title = "TRADITIONALIST_SHROUD_BOON"
@@ -385,6 +791,50 @@ traditionalist = {
 		}
 	}
 	
+	demand = { 
+		title = "TRADITIONALIST_SAINTS"
+		unfulfilled_title = "TRADITIONALIST_NO_SAINTS"
+		desc = "TRADITIONALIST_SAINTS_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				is_spiritualist = yes
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_edict = veneration_of_saints
+			}
+		}
+	}
+	
+	demand = {
+		title = "TRADITIONALIST_RELIGIOUS_FINDING"
+		unfulfilled_title = "TRADITIONALIST_NO_RELIGIOUS_FINDING"
+		desc = "TRADITIONALIST_RELIGIOUS_FINDING_DESC"
+
+		fulfilled_effect = 5
+		unfulfilled_effect = -0.001
+
+		potential = {
+			exists = owner
+			owner = {
+				has_modifier = proclaim_religious_finding
+			}
+		}
+
+		trigger = {
+			owner = {
+				has_modifier = proclaim_religious_finding
+			}
+		}
+	}
+	
 	on_create = {
 		pop_faction_event = { id = factions.1 }
 	}
@@ -416,7 +866,6 @@ traditionalist = {
 			potential = {
 				exists = owner
 				owner = {
-					NOT = { has_authority = auth_master_computer }
 					OR = {
 						is_subject = no
 						NOT = { is_subject_type = dominion }
@@ -455,13 +904,17 @@ traditionalist = {
 						every_relation = {
 							limit = {
 								is_ai = no
-								is_country_type = default			
+								OR = {
+									is_country_type = default
+									is_country_type = ascended_empire
+									is_country_type = lost_empire
+								}
 								has_communications = prev
 							}
 							country_event = { id = factions.2000 }
 						}
-					}				
-				}				
+					}
+				}
 			}
 			
 			ai_weight = {
@@ -474,9 +927,22 @@ traditionalist = {
 					}
 				}
 				modifier = {
+					factor = 0.25
+					support < 0.50
+				}
+				modifier = {
 					factor = 0
 					owner = { has_valid_civic = civic_fanatic_purifiers }
-				}				
+				}
+				modifier = {
+					factor = 0
+					owner = {
+						OR = {
+							has_civic = civic_iron_despot
+							has_civic = civic_corp_iron_despot
+						}
+					}
+				}
 				modifier = {
 					factor = 0
 					NOT = { 
@@ -489,13 +955,13 @@ traditionalist = {
 					}
 				}
 				modifier = {
+					factor = 0.1
+					owner = { has_ethic = ethic_materialist }
+				}
+				modifier = {
 					factor = 0
-					owner = {
-						count_pop_factions = {
-							count < 4
-						}					
-					}
-				}				
+					owner = { has_ethic = ethic_fanatic_materialist }
+				}
 			}
 		}
 		promote_faction = {

@@ -1,0 +1,20 @@
+z_modmenu_button_effect = {
+    potential = {
+        exists = from
+        has_global_flag = z_modmenu_installed
+    }
+    allow = {
+        hidden_trigger = {
+            z_mm_menu_locked = no
+        }
+    }
+    effect = {
+        hidden_effect = {
+            z_mm_lock_menu = yes
+            country_event = {
+                id = z_modmenu.1
+            }
+        }
+        custom_tooltip = z_modmenu_button
+    }
+}

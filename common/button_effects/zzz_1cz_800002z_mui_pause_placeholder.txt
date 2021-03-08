@@ -1,0 +1,11 @@
+z_mui_pause_placeholder = {
+    potential = {
+        has_country_flag = z_fw_flg_cntr_mui_button_hide
+        check_variable = {
+            which = ehof_phase
+            value < 1
+        }
+    }
+    effect = {
+    }
+}
