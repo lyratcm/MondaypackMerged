@@ -168,12 +168,12 @@ entertainer = {
         }
     }
     weight = {
-        weight = @specialist_job_weight
+        weight = 20
         modifier = {
-            weight = 2
+            weight = 4
             OR = {
                 planet = {
-                    free_amenities < 6
+                    free_amenities < 10
                 }
                 has_job = entertainer
             }

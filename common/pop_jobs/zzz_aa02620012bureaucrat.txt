@@ -101,7 +101,7 @@ bureaucrat = {
         }
     }
     weight = {
-        weight = @specialist_job_weight
+        weight = 20
         modifier = {
             factor = 0.2
             has_citizenship_rights = no
