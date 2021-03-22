@@ -1,0 +1,4 @@
+suppressed_industrial = {
+    pop_ethic_industrial_attraction_mult = -0.75
+    country_base_influence_produces_add = -1
+}

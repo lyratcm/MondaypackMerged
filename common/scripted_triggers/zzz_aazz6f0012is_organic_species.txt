@@ -1,0 +1,17 @@
+is_organic_species = {
+    species = {
+        OR = {
+            is_archetype = BIOLOGICAL
+            is_archetype = BIOMORPH
+            is_archetype = REPTILIAN
+            is_archetype = FUNGOID
+            is_archetype = PLANTOID
+            is_archetype = half_species
+            is_archetype = half_species_special
+            is_archetype = half_aberration
+            is_archetype = half_perfect
+            is_archetype = half_amalgamated
+            is_archetype = LITHOID
+        }
+    }
+}

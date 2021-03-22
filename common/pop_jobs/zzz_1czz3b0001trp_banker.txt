@@ -1,0 +1,53 @@
+trp_banker = {
+    category = ruler
+    condition_string = RULER_JOB_TRIGGER
+    building_icon = building_galactic_stock_exchange
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        ruler_job_check_trigger = yes
+    }
+    planet_modifier = {
+        planet_amenities_add = 5
+        planet_stability_add = 5
+    }
+    country_modifier = {
+        country_resource_max_add = 5000
+    }
+    weight = {
+        weight = @ruler_job_weight
+        modifier = {
+            factor = 5
+            has_job = trp_banker
+        }
+        modifier = {
+            factor = 0.01
+            exists = planet
+            exists = planet.controller
+            planet.controller = {
+                OR = {
+                    is_country_type = swarm
+                    is_country_type = ai_empire
+                }
+            }
+            OR = {
+                NOT = {
+                    exists = event_target:custodian_bot
+                }
+                AND = {
+                    exists = event_target:custodian_bot
+                    NOT = {
+                        species = {
+                            is_same_value = event_target:custodian_bot
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+trait_deviants = {
+    cost = -1
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_government_ethic_attraction = -0.15
+        pop_ethics_shift_speed_mult = 0.15
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_conformists"
+        "trait_hive_mind"
+        "trait_machine_unit"
+        "trait_obedient"
+    }
+    ai_weight = {
+        weight = 0.1
+    }
+}

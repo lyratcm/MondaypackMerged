@@ -44,7 +44,8 @@ building_vfb_armory = {
 	}
 	
 	planet_modifier = {
-
+        planet_building_build_speed_mult = 0.1
+        pop_environment_tolerance = 0.05
 	}
 	
 	triggered_planet_modifier = {
@@ -52,7 +53,6 @@ building_vfb_armory = {
 			exists = owner
 		}
 		job_healthcare_add = 1		#Field Medic
-		job_vfb_engineer_add = 1	#Colonial Infrastructure
 		job_colonist_add = 1		#Pioneer
 	}
 	
@@ -128,7 +128,8 @@ building_vfb_plaza = {
 	}
 	
 	planet_modifier = {
-
+        planet_building_build_speed_mult = 0.2
+        pop_environment_tolerance = 0.01
 	}
 	
 	triggered_planet_modifier = {
@@ -137,7 +138,6 @@ building_vfb_plaza = {
 		}
 		
 		job_healthcare_add = 2			#Physician
-		job_vfb_engineer_add = 2		#Public Works
 		job_enforcer_add = 1			#Gendarme
 	}
 	
@@ -250,7 +250,8 @@ building_vfb_administration = {
 	}
 	
 	planet_modifier = {
-
+        planet_building_build_speed_mult = 0.2
+        pop_environment_tolerance = 0.01
 	}
 	
 	triggered_planet_modifier = {
@@ -259,7 +260,6 @@ building_vfb_administration = {
 		}
 		
 		job_healthcare_add = 2			#Physician
-		job_vfb_engineer_add = 2		#Public Works
 		job_enforcer_add = 1			#Gendarme
 		
 	}

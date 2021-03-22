@@ -1,0 +1,21 @@
+trait_additrait_customized_servitors = {
+    cost = 4
+    initial = no
+    randomized = no
+    opposites = {
+        trait_robot_domestic_protocols
+    }
+    allowed_archetypes = {
+        ROBOT
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_droid_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    custom_tooltip = TRAIT_CUSTOMIZED_SERVITORS_EFFECT
+}

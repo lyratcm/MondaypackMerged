@@ -1,0 +1,18 @@
+trait_thrifty_synth = {
+    cost = 2
+    icon = "gfx/interface/icons/traits/trait_thrifty.dds"
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            has_technology = tech_synthetic_workers
+            NOT = {
+                has_policy_flag = ai_outlawed
+            }
+        }
+    }
+    custom_tooltip = TRAIT_THRIFTY_EFFECT
+}

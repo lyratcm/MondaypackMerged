@@ -1,0 +1,533 @@
+trade_policy = {
+    potential = {
+        NOT = {
+            has_ethic = ethic_gestalt_consciousness
+        }
+    }
+    option = {
+        name = "trade_policy_default"
+        potential = {
+            NOR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+        }
+        AI_weight = {
+            factor = 1
+        }
+    }
+    option = {
+        name = "trade_policy_consumer_goods"
+        potential = {
+            NOR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_consumer_goods
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 20
+                is_at_war = no
+                resource_stockpile_compare = {
+                    resource = consumer_goods
+                    value < 500
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value > 200
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_unity"
+        potential = {
+            NOR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_unity
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 15
+                is_at_war = no
+                has_monthly_income = {
+                    resource = energy
+                    value > 500
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_consumer_goods"
+        potential = {
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_consumer_goods
+        }
+        valid = {
+            is_country_type = default
+            NOR = {
+                has_policy_flag = "economic_stance_planned"
+                has_ethic = "ethic_fanatic_socialism"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_default_corp"
+        potential = {
+            OR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+        }
+        policy_flags = {
+            trade_conversion_unity
+        }
+        potential = {
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        valid = {
+            is_country_type = default
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_policy_flag = "economic_stance_planned"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+        policy_flags = {
+            trade_policy_default_corp
+        }
+        AI_weight = {
+            factor = 1
+        }
+    }
+    option = {
+        name = "trade_policy_mineral_corp"
+        potential = {
+            OR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_mineral_corp
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 20
+                is_at_war = no
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value < 500
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value > 200
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_trade_league"
+        potential = {
+            has_federation = yes
+            federation = {
+                has_federation_perk = trade_federation_passive
+            }
+        }
+        policy_flags = {
+            trade_conversion_trade_league
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_growth_dev"
+        policy_flags = {
+            trade_conversion_growth_dev
+        }
+        valid = {
+            is_country_type = default
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_ethic = "ethic_fanatic_capitalism"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_food_corp"
+        potential = {
+            OR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_food_corp
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 20
+                is_at_war = no
+                is_lithoid_empire = no
+                resource_stockpile_compare = {
+                    resource = food
+                    value < 500
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value > 200
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_growth_dev"
+        policy_flags = {
+            trade_conversion_growth_dev
+        }
+        valid = {
+            is_country_type = default
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_ethic = "ethic_fanatic_capitalism"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_development"
+        policy_flags = {
+            trade_conversion_development
+        }
+        modifier = {
+            planet_building_build_speed_mult = 0.15
+            starbase_shipyard_build_speed_mult = 0.15
+            planet_colony_development_speed_mult = 0.15
+        }
+        valid = {
+            is_country_type = default
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_ethic = "ethic_fanatic_capitalism"
+            }
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_innovation"
+        policy_flags = {
+            trade_conversion_innovation
+        }
+        valid = {
+            is_country_type = default
+            or = {
+                has_technology = tech_innovations
+            }
+            NOR = {
+                has_valid_civic = civic_ultimate_collective
+            }
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_policy_flag = "economic_stance_planned"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_consumer_goods_corp"
+        potential = {
+            OR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_consumer_goods_corp
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 20
+                is_at_war = no
+                resource_stockpile_compare = {
+                    resource = consumer_goods
+                    value < 500
+                }
+                has_monthly_income = {
+                    resource = energy
+                    value > 200
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_innovation"
+        policy_flags = {
+            trade_conversion_innovation
+        }
+        valid = {
+            is_country_type = default
+            or = {
+                has_technology = tech_innovations
+            }
+            NOR = {
+                has_valid_civic = civic_ultimate_collective
+            }
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+                has_policy_flag = "economic_stance_planned"
+            }
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_unity_corp"
+        potential = {
+            OR = {
+                is_megacorp = yes
+                has_civic = civic_corporate_dominion
+            }
+            OR = {
+                has_federation = no
+                AND = {
+                    has_federation = yes
+                    federation = {
+                        NOT = {
+                            has_federation_perk = trade_federation_passive
+                        }
+                    }
+                }
+            }
+        }
+        policy_flags = {
+            trade_conversion_unity_corp
+        }
+        modifier = {
+        }
+        AI_weight = {
+            weight = 0
+            modifier = {
+                weight = 15
+                is_at_war = no
+                has_monthly_income = {
+                    resource = energy
+                    value > 500
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_mining"
+        policy_flags = {
+            trade_conversion_mining
+        }
+        modifier = {
+        }
+        valid = {
+            is_country_type = default
+            or = {
+                has_technology = tech_mining_consortium
+            }
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+            }
+        }
+    option = {
+        name = "trade_policy_growth"
+        policy_flags = {
+            trade_conversion_growth
+        }
+        modifier = {
+        }
+        valid = {
+            is_country_type = default
+            or = {
+                has_technology = tech_agri_consortium
+            }
+            NOR = {
+                has_policy_flag = "economic_stance_market"
+            }
+        }
+        AI_weight = {
+            factor = 0
+        }
+    }
+    option = {
+        name = "trade_policy_trade_league"
+        potential = {
+            has_federation = yes
+            federation = {
+                has_federation_perk = trade_federation_passive
+            }
+        }
+        policy_flags = {
+            trade_conversion_trade_league
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 2
+            modifier = {
+                factor = 5
+                OR = {
+                    country_uses_food = no
+                    resource_stockpile_compare = {
+                        resource = food
+                        value > 500
+                    }
+                }
+                resource_stockpile_compare = {
+                    resource = minerals
+                    value > 500
+                }
+            }
+        }
+    }
+    option = {
+        name = "trade_policy_trade_league_raw"
+        potential = {
+            has_federation = yes
+            federation = {
+                has_federation_perk = trade_federation_passive
+            }
+        }
+        policy_flags = {
+            trade_conversion_trade_league_raw
+        }
+        modifier = {
+        }
+        AI_weight = {
+            factor = 5
+        }
+    }
+}

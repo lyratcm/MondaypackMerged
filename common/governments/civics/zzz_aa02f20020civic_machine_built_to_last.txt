@@ -1,0 +1,11 @@
+civic_machine_built_to_last = {
+    potential = {
+        always = no
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        pop_amenities_usage_no_happiness_mult = -0.25
+    }
+}

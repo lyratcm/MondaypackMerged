@@ -1,0 +1,91 @@
+building_clone_vats = {
+    base_buildtime = 360
+    category = pop_assembly
+    base_cap_amount = 1
+    potential = {
+        exists = owner
+        owner = {
+            has_policy_flag = assembly_organic
+            has_technology = tech_cloning
+        }
+        NOT = {
+            has_modifier = resort_colony
+        }
+    }
+    destroy_trigger = {
+        owner = {
+            is_machine_empire = yes
+            is_mechanical_empire = yes
+        }
+    }
+        OR = {
+            AND = {
+                owner = {
+                    is_ai = yes
+                }
+                planet = {
+                    free_district_slots = 0
+                    free_building_slots = 0
+                }
+            }
+            NOT = {
+                owner = {
+                    has_ascension_perk = ap_engineered_evolution
+                }
+            }
+        }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_regular_empire = yes
+            }
+        }
+        modifier = {
+            job_life_crafter_add = 2
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_valid_civic = civic_symbiotic_race
+            }
+        }
+        modifier = {
+            planet_jobs_unity_produces_mult = 0.05
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        modifier = {
+            job_life_weaver_add = 2
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 5
+        }
+    }
+    triggered_desc = {
+        text = job_life_crafter_effect_desc
+    }
+    prerequisites = {
+        "tech_cloning"
+    }
+    upgrades = {
+        building_genetic_development_facility
+    }
+    ai_weight = {
+        weight = 5
+    }
+}

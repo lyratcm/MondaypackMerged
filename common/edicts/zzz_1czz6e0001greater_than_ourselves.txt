@@ -1,0 +1,31 @@
+@EdictPerpetual = -1
+greater_than_ourselves = {
+    length = @EdictPerpetual
+    icon = "GFX_edict_type_policy"
+    edict_cap_usage = 1
+    resources = {
+        category = edicts
+        cost = {
+            trigger = {
+                NOT = {
+                    has_edict = greater_than_ourselves
+                }
+            }
+            influence = 300
+        }
+        cost = {
+            trigger = {
+                has_edict = greater_than_ourselves
+            }
+            influence = 200
+        }
+    }
+    modifier = {
+    }
+    potential = {
+        always = yes
+    }
+    ai_weight = {
+        weight = @EdictHighPrio
+    }
+}

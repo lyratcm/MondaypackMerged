@@ -1,0 +1,17 @@
+gov_xenophile_democracy = {
+    ruler_title = RT_CHAIRMAN
+    ruler_title_female = RT_CHAIRMAN
+    possible = {
+        or = {
+            has_valid_civic = civic_symbiotic_race
+        }
+        OR = {
+            has_authority = auth_direct_democratic
+            has_authority = auth_democratic
+        }
+    }
+    should_force_rename = yes
+    weight = {
+        base = 5000
+    }
+}

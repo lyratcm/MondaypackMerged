@@ -1,11 +1,9 @@
 guiTypes = {
-    @ap_x_1_2 = 58
-    @ap_y_7 = 294
     positionType = {
         name = "ap_28"
         position = {
-            x = @ap_x_1_2
-            y = @ap_y_7
+            x = 503
+            y = 59
         }
     }
 }

@@ -1,0 +1,24 @@
+gov_timocracy = {
+    ruler_title = RT_ARCHON
+    ruler_title_female = RT_ARCHON
+    possible = {
+        OR = {
+            has_ethic = ethic_fanatic_capitalism
+        }
+        NOR = {
+            has_ethic = ethic_fanatic_egalitarian
+        }
+        NOR = {
+            has_ethic = ethic_pluralist
+            has_ethic = ethic_fanatic_pluralist
+        }
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_direct_democratic
+        }
+    }
+    should_force_rename = yes
+    weight = {
+        base = 300
+    }
+}

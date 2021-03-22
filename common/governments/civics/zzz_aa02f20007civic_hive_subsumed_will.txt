@@ -1,0 +1,15 @@
+civic_hive_subsumed_will = {
+    potential = {
+        authority = {
+            value = auth_hive_mind
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        edicts_cost_mult = -0.33
+        empire_size_pops_mult = -0.2
+        diplo_weight_pops_mult = 0.1
+    }
+}

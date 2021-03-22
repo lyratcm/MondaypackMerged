@@ -1,0 +1,45 @@
+civic_indentured_assets = {
+    description = "civic_tooltip_indentured_assets_effects"
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            OR = {
+                value = auth_corporate
+                value = auth_cooperative
+                value = auth_private
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    possible = {
+        ethics = {
+            NOR = {
+                value = ethic_fanatic_pluralist
+            }
+            OR = {
+                text = civic_tooltip_authoritarian
+                value = ethic_authoritarian
+                value = ethic_fanatic_authoritarian
+            }
+        }
+        civics = {
+            NOR = {
+                value = civic_reeducated_labor
+                value = civic_free_haven_corp
+            }
+        }
+    }
+    modifier = {
+        planet_jobs_slave_produces_mult = 0.1
+        slave_market_cost_mult = -0.25
+        country_pop_enslaved_mult = 0.25
+        planet_stability_add = -5
+        country_pop_enslaved_mult = 0.4
+    }
+}

@@ -1,0 +1,43 @@
+Trait_GAPS_Universal_Water_Habitibility = {
+    icon = "gfx/interface/icons/traits/Trait_GAPS_Universal_Water_Habitibility.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+        ROBOT
+        MACHINE
+    }
+    cost = 0
+    initial = no
+    randomized = no
+    modification = yes
+    sorting_priority = 30
+    species_potential_add = {
+        exists = from
+        from = {
+            has_origin = Origin_GAPS_Aquaifiers
+            OR = {
+                has_technology = tech_gene_tailoring
+                has_technology = tech_robomodding_m
+            }
+        }
+    }
+    modifier = {
+        pop_environment_tolerance = -2
+        pc_GAPS_pure_water_habitability = 5
+        pc_ocean_habitability = 4
+        pc_aquatic_habitability = 4
+        pc_aquatichot_habitability = 4
+        pc_aquaticcold_habitability = 4
+        pc_aquaticcity_habitability = 4
+        pc_desertislands_habitability = 4
+        pc_subarctic_habitability = 4
+        pc_storm_habitability = 4
+        army_defense_damage_mult = 1
+        army_defense_morale_mult = 1.4
+        army_defense_health_mult = 3
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

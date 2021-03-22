@@ -1672,165 +1672,29 @@ can_species_procreate = {
 # Root = Planet
 can_species_be_assembled = {
 	is_sapient = yes
-	NOR = {
+	NOT = {
 		has_citizenship_type = { country = root.owner type = citizenship_assimilation }
-		has_trait = trait_plentiful_traditions_cocoon
 	}
-	OR = {
-		AND = {
-			root.owner = {
-				NOR = {
-					has_policy_flag = no_robot_machine_pop
-					AND = {
-						has_global_flag = has_wsg_mod
-						has_wg_special_authority = yes
-					}
-					has_authority = auth_commonwealth
-					has_authority = auth_kan
-					has_authority = auth_scarlet_rule
-					has_authority = auth_asharmdolls
-					has_authority = auth_azur_dictatorial
-					has_authority = auth_azur_lane_1
-					has_authority = auth_azur_lane_2
-					AND = {
-						has_global_flag = complex_hive
-						is_hive_empire = yes
-					}
-				}
-			}
-			has_trait = trait_machine_unit
-		}
-		AND = {
-			has_trait = trait_mechanical
-			root.owner = {
-				NOR = {
-					has_policy_flag = robots_outlawed
-					AND = {
-						has_global_flag = has_wsg_mod
-						has_wg_special_authority = yes
-					}
-					has_authority = auth_asharmdolls
-					has_authority = auth_commonwealth
-					has_authority = auth_scarlet_rule
-					has_authority = auth_azur_dictatorial
-					has_authority = auth_azur_lane_1
-					has_authority = auth_azur_lane_2
-					AND = {
-						has_global_flag = complex_hive
-						is_hive_empire = yes
-					}
-				}
+	if = {
+		limit = {
+			owner = {
+				has_policy_flag = assembly_organic
 			}
 		}
-		AND = {
-			OR={
-				has_trait = wsg_trait_warshipgirls
-				has_trait = wsg_trait_warshipgirls1
-				has_trait = wsg_trait_warshipgirls2
-			}
-			root.owner = {
-				OR = { 
-					has_authority = auth_warshipgirls 
-					has_edict = wg_cross_assemble
-				}
-			}
-		}
-		AND = {
-			OR = {
-				has_trait = sh_trait_shenhai
-				has_trait = sh_trait_shenhai1
-				has_trait = sh_trait_shenhai2
-				has_trait = sh_trait_shenhai3
-			}
-			root.owner = {
-				OR = { 
-					has_authority = auth_shenhai 
-					has_edict = wg_cross_assemble
-				}
-			}
-		}
-		AND = {
-			has_trait = swg_trait_starshipgirls
-			root.owner = { has_authority = auth_starshipgirls }
-		}
-		AND = {
-			has_trait = adf_trait_dolls
-			root.owner = { has_authority = auth_asharmdolls }
-		}
-		AND = {
-			has_trait = trait_doll
-			root.owner = { has_authority = auth_commonwealth }
-		}
-		AND = {
-			is_same_species = root.owner
-			root.owner = {
-				has_ascension_perk = ap_life_assemblers
-				NOT = { has_ascension_perk = ap_life_masters }
-			}
-		}
-		AND = {
-			root.owner = {
-				has_origin = origin_hive_overmind 
-				has_ascension_perk = ap_life_assemblers
-				NOT = { has_ascension_perk = ap_life_masters }			
-			}
-			OR = {
-				has_trait = trait_hive_mind_remote_drone
-				has_species_flag = overminded_flag
-			}
-		}
-		AND = {
-			root.owner = { has_ascension_perk = ap_life_masters }	
-			NOR = {
-				has_trait = trait_machine_unit
-				has_trait = trait_mechanical				
-				has_trait = me_trait_full_ai
-			}
-		}
-		AND = {
-			OR={
-				has_trait = kancolle_trait_kanmusu
-				has_trait = kancolle_trait_kanmusu1
-				has_trait = kancolle_trait_kanmusu2
-				has_trait = trait_gaosujianzao
-			}
-			ROOT = { owner = { has_authority = auth_kan } }
-		}
-		AND = {
-			has_trait = trait_scarlet_dolls
-			root.owner = { has_authority = auth_scarlet_rule }
-		}
-		AND = {
-			OR = {
-				has_trait = trait_machine_unit
-				has_trait = trait_mechanical
-				has_trait = me_trait_full_ai
-			}
-			ROOT = { 
-				owner = { 
-					NOR = { 
-						has_authority = auth_azur_dictatorial 
-						has_authority = auth_azur_lane_1
-						has_authority = auth_azur_lane_2
-					} 
-				}
-			}
-		}
-		AND = {
-			OR={
-				has_trait = trait_azur_a1
-				has_trait = trait_azurlanegirls
-			}
-			ROOT.owner = { 
-				OR = { 
-					has_authority = auth_azur_dictatorial 
-					has_authority = auth_azur_lane_0
-					has_authority = auth_azur_lane_1
-					has_authority = auth_azur_lane_2
-				}
-			}
+		OR = {
+			is_archetype = BIOLOGICAL
+			is_archetype = BIOMORPH
 		}
 	}
+	# else_if = {
+	# 	limit = {
+	# 		owner = {
+	# 			has_policy_flag = assembly_robotic
+	# 		}
+	# 	}
+	# 	is_archetype = ROBOT
+	# }
+	# is_archetype = MACHINE
 }
 
 #This rule is a condition for bombarding planets

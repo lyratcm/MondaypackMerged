@@ -1,0 +1,36 @@
+building_smuggling_rings = {
+    base_buildtime = 480
+    base_cap_amount = 1
+    branch_office_building = yes
+    potential = {
+        has_branch_office = yes
+        branch_office_owner = {
+            is_criminal_syndicate = yes
+        }
+    }
+    planet_modifier = {
+        planet_crime_add = 60
+        branch_office_value_mult = 0.25
+        job_merchant_add = 1
+        job_smuggler_add = 2
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 800
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    upgrades = {
+        "building_smuggling_rings_2"
+    }
+    ai_weight = {
+        weight = 2
+        modifier = {
+            factor = 4
+            num_pops >= 50
+        }
+    }
+}

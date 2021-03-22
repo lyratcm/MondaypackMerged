@@ -1,0 +1,98 @@
+chemist_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_chemical_plant
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        complex_drone_job_check_trigger = yes
+    }
+    resources = {
+        category = planet_chemists
+        produces = {
+            volatile_motes = 2
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    NOT = {
+                        has_swapped_tradition = trp_production_refinement_b_gestalt
+                    }
+                }
+            }
+            minerals = 10
+        }
+        upkeep = {
+            trigger = {
+                owner = {
+                    has_swapped_tradition = trp_production_refinement_b_gestalt
+                }
+            }
+            minerals = 8
+        }
+        upkeep = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_edict = refinery_subsidies
+                }
+            }
+            energy = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                has_tradition = trp_production_refinement_c
+            }
+        }
+        modifier = {
+            planet_stability_add = 3
+        }
+    }
+    weight = {
+        weight = @complex_drone_job_weight
+        modifier = {
+            factor = 1.5
+            has_trait = trait_clever
+        }
+        modifier = {
+            factor = 3
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+                has_trait = trait_adaptable_evolution
+                has_trait = trait_adaptable_evolution_robot
+            }
+        }
+        modifier = {
+            factor = 4
+            OR = {
+                has_trait = trait_ageless
+                has_trait = trait_sleepless
+            }
+        }
+        modifier = {
+            factor = 0.9
+            exists = owner
+            years_passed < 1
+            owner = {
+                has_valid_civic = civic_machine_assimilator
+            }
+            has_trait = trait_cybernetic
+        }
+        modifier = {
+            factor = 5
+            has_job = chemist_drone
+            OR = {
+                has_trait = trait_robust
+                has_trait = trait_robot_efficient_processors
+            }
+        }
+    }
+}

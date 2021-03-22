@@ -1,0 +1,20 @@
+trait_enduring = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    modifier = {
+        leader_age = 20
+    }
+    opposites = {
+        "trait_venerable"
+        "trait_fleeting"
+        "trait_fleeting_lithoid"
+        "trait_fungal_colony"
+        "trait_ancient"
+        "trait_seasonal"
+        "trait_ageless"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+}

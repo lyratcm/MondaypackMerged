@@ -1,0 +1,27 @@
+trait_delicate = {
+    cost = -1
+    icon = "gfx/interface/icons/traits/trait_weak.dds"
+    allowed_archetypes = {
+        ROBOT
+        MACHINE
+    }
+    modifier = {
+        army_damage_mult = -0.2
+        planet_pops_robotics_upkeep_mult = 0.05
+    }
+    species_potential_add = {
+        exists = from
+        from = {
+            OR = {
+                has_technology = tech_droid_workers
+                is_machine_empire = yes
+            }
+        }
+    }
+    opposites = {
+        "trait_garrison_bot"
+    }
+    ai_weight = {
+        weight = 0.1
+    }
+}

@@ -1,0 +1,31 @@
+can_species_be_assembled = {
+    is_sapient = yes
+    NOT = {
+        has_citizenship_type = {
+            country = root.owner
+            type = citizenship_assimilation
+        }
+    }
+    OR = {
+        if = {
+            limit = {
+                root = {
+                    has_planet_flag = ss_cloning_flag
+                }
+            }
+            OR = {
+                is_archetype = BIOLOGICAL
+                is_archetype = BIOMORPH
+            }
+        }
+        else_if = {
+            limit = {
+                root = {
+                    has_planet_flag = ss_assembly_flag
+                }
+            }
+            is_archetype = ROBOT
+        }
+        is_archetype = MACHINE
+    }
+}

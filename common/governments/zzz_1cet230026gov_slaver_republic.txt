@@ -1,0 +1,17 @@
+gov_slaver_republic = {
+    ruler_title = RT_CONSUL
+    ruler_title_female = RT_CONSUL
+    election_candidates = {
+    }
+    should_force_rename = yes
+    possible = {
+        has_valid_civic = civic_slaver_guilds
+        OR = {
+            has_authority = auth_democratic
+            has_authority = auth_direct_democratic
+        }
+    }
+    weight = {
+        base = 10000
+    }
+}

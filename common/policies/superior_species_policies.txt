@@ -13,12 +13,6 @@ assembly = {
 				has_authority = auth_hive_mind
 			}
 		}
-		valid = {
-			OR = {
-				has_technology = tech_robotic_workers
-				has_authority = auth_machine_intelligence
-			}
-		}
 		policy_flags = {
 			assembly_robotic
 		}
@@ -43,7 +37,6 @@ assembly = {
 				has_authority = auth_machine_intelligence
 			}
 		}
-		valid = { has_technology = tech_cloning }
 		policy_flags = {
 			assembly_organic
 		}

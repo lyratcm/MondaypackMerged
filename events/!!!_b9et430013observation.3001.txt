@@ -1,0 +1,56 @@
+namespace = immortal_ruler
+namespace = unity_patrons
+namespace = glorious_fleet
+namespace = voice_planet
+namespace = observation
+country_event = {
+    id = observation.3001
+    hide_window = yes
+    trigger = {
+        is_country_type = primitive
+        NOT = {
+            has_ethic = ethic_fanatic_pluralist
+        }
+        capital_scope = {
+            has_observation_outpost = yes
+            observation_outpost = {
+                has_mission = native_indoctrination
+            }
+            observation_outpost_owner = {
+                OR = {
+                    has_ethic = ethic_fanatic_pluralist
+                    has_ethic = ethic_pluralist
+                }
+            }
+            any_owned_pop = {
+                has_ethic = ethic_pluralist
+            }
+            OR = {
+                root = {
+                    NOT = {
+                        has_ethic = ethic_pluralist
+                    }
+                }
+                count_pops = {
+                    limit = {
+                        has_ethic = ethic_pluralist
+                    }
+                    count > 1
+                }
+            }
+        }
+    }
+    mean_time_to_happen = {
+        months = 12
+    }
+    immediate = {
+        shift_ethic = "ethic_pluralist"
+        capital_scope = {
+            observation_outpost_owner = {
+                country_event = {
+                    id = observation.3002
+                }
+            }
+        }
+    }
+}

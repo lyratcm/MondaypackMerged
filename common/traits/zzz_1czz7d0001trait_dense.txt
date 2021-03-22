@@ -1,0 +1,16 @@
+trait_dense = {
+    cost = 2
+    potential_crossbreeding_chance = 0.5
+    initial = no
+    randomized = no
+    advanced_trait = yes
+    allowed_archetypes = {
+        LITHOID
+    }
+    modifier = {
+        planet_livestock_minerals_produces_add = 2
+    }
+    slave_cost = {
+        energy = 100
+    }
+}

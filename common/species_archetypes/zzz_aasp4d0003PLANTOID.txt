@@ -1,0 +1,6 @@
+PLANTOID = {
+    inherit_trait_points_from = BIOLOGICAL
+    inherit_traits_from = {
+        BIOLOGICAL
+    }
+}

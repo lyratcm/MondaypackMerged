@@ -1,0 +1,126 @@
+district_liv_food_productor = {
+    base_buildtime = 400
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = Liv_station
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    potential = {
+        uses_district_set = Liv_station
+        owner = {
+            is_machine_empire = yes
+        }
+    }
+    conversion_ratio = 1
+    convert_to = {
+        district_liv_civilian
+        district_liv_feeder
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = 500
+        }
+        upkeep = {
+            energy = 3
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        modifier = {
+            job_agri_drone_add = 3
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        text = job_agri_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 1
+        modifier = {
+            factor = 30
+            OR = {
+                has_monthly_income = {
+                    resource = food
+                    value < 15
+                }
+                has_monthly_income = {
+                    resource = consumer_goods
+                    value < 10
+                }
+            }
+        }
+        modifier = {
+            factor = 20
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = food
+                        value < 40
+                    }
+                    has_monthly_income = {
+                        resource = consumer_goods
+                        value < 15
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 10
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = food
+                        value < 100
+                    }
+                    has_monthly_income = {
+                        resource = consumer_goods
+                        value < 25
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 5
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = food
+                        value < 200
+                    }
+                    has_monthly_income = {
+                        resource = consumer_goods
+                        value < 40
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 1
+            owner = {
+                OR = {
+                    has_monthly_income = {
+                        resource = food
+                        value < 250
+                    }
+                    has_monthly_income = {
+                        resource = consumer_goods
+                        value < 80
+                    }
+                }
+            }
+        }
+    }
+}

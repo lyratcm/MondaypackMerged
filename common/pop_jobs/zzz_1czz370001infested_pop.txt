@@ -1,0 +1,49 @@
+infested_pop = {
+    category = worker
+    clothes_texture_index = 1
+    possible_pre_triggers = {
+        has_owner = yes
+        is_being_assimilated = yes
+    }
+    possible = {
+        exists = owner
+        owner = {
+            has_valid_civic = civic_infestation
+        }
+        species = {
+            can_be_infested = yes
+        }
+    }
+    resources = {
+        category = planet_necro_apprentices
+        produces = {
+            unity = 2
+        }
+        upkeep = {
+            trigger = {
+                is_organic_species = yes
+                is_lithoid = no
+            }
+            food = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                is_lithoid = yes
+            }
+            minerals = @living_standard_food_normal
+        }
+        upkeep = {
+            trigger = {
+                is_robotic_species = yes
+            }
+            energy = @living_standard_energy_normal
+        }
+    }
+    weight = {
+        weight = @special_job_weight
+        modifier = {
+            factor = 5000
+            is_being_assimilated = yes
+        }
+    }
+}

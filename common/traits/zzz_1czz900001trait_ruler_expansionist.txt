@@ -1,0 +1,15 @@
+trait_ruler_expansionist = {
+    cost = 1
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_expansionist.dds"
+    modifier = {
+        starbase_outpost_cost_mult = -0.15
+        country_starbase_influence_cost_mult = -0.15
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+}
