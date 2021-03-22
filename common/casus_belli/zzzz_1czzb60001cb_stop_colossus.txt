@@ -36,6 +36,7 @@ cb_stop_colossus = {
                 is_ship_class = shipclass_military_special
                 any_owned_ship = {
                     is_ship_size = colossus
+                }
             }
         }
         NOT = {

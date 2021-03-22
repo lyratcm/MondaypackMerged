@@ -61,6 +61,10 @@ building_system_capital = {
                 }
                 NOT = {
                     has_planet_flag = built_one_psi_corps
+                }
+            }
+        }
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -70,10 +74,6 @@ building_system_capital = {
         }
         modifier = {
             job_enforcer_add = 1
-        }
-    }
-                }
-            }
         }
         modifier = {
             job_enforcer_add = 3
@@ -343,6 +343,7 @@ building_system_capital = {
             job_administrator_add = 2
             job_supervisor_add = 2
         }
+    }
     triggered_planet_modifier = {
         potential = {
             exists = owner
@@ -355,6 +356,7 @@ building_system_capital = {
             job_administrator_add = 2
             job_executive_add = 2
         }
+    }
     resources = {
         category = planet_buildings
         cost = {
@@ -363,7 +365,6 @@ building_system_capital = {
         upkeep = {
             energy = @b4_upkeep
         }
-    }
     }
     triggered_planet_modifier = {
         potential = {
@@ -400,6 +401,7 @@ building_system_capital = {
         modifier = {
             job_soldier_add = 2
         }
+    }
     triggered_desc = {
         trigger = {
             exists = owner
@@ -413,7 +415,6 @@ building_system_capital = {
             }
         }
         text = job_commandante_effect_desc
-    }
     }
     resources = {
         category = planet_buildings

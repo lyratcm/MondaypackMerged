@@ -34,13 +34,22 @@ high_priest = {
                 }
             }
             unity = 2
+        }
+    }
     resources = {
         category = planet_priests
         produces = {
             unity = 7
             society_research = 2
         }
-    }
+        produces = {
+            trigger = {
+                owner = {
+                    has_authority = auth_imperial
+                    has_origin = origin_ancient_dynasty
+                }
+            }
+            unity = 1
         }
         produces = {
             trigger = {
@@ -54,16 +63,6 @@ high_priest = {
     }
     planet_modifier = {
         planet_amenities_add = 5
-    }
-        produces = {
-            trigger = {
-                owner = {
-                    has_authority = auth_imperial
-                    has_origin = origin_ancient_dynasty
-                }
-            }
-            unity = 1
-        }
     }
     triggered_country_modifier = {
         potential = {

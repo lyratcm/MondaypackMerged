@@ -39,7 +39,6 @@ building_precinct_house = {
                             is_criminal_syndicate = yes
                         }
                     }
-                    }
                 }
             }
         }

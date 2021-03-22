@@ -59,6 +59,7 @@ civic_merchant_guilds = {
                 value = ethic_pluralist
                 value = ethic_fanatic_pluralist
             }
+        }
         ethics = {
             value = ethic_fanatic_capitalism
             NOT = {

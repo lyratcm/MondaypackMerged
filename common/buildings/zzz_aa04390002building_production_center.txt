@@ -30,6 +30,7 @@ building_production_center = {
                 is_capital = yes
                 is_sector_capital = yes
             }
+        }
     }
     allow = {
         has_major_upgraded_capital = yes

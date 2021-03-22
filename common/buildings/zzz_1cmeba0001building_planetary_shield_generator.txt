@@ -33,7 +33,6 @@ building_planetary_shield_generator = {
             }
             unity = 4
         }
-    }
             energy = 5
         }
     }

@@ -125,6 +125,7 @@ building_temple = {
                 has_valid_civic = civic_death_cult
                 has_valid_civic = civic_death_cult_corporate
             }
+        }
     }
     triggered_desc = {
         text = job_priest_effect_desc

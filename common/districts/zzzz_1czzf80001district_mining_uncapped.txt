@@ -98,7 +98,6 @@ district_mining_uncapped = {
             }
             energy = 0.2
         }
-    }
         upkeep = {
             trigger = {
                 exists = owner

@@ -18,6 +18,7 @@ civic_terraforming = {
                 value = ethic_fanatic_materialist
                 value = ethic_materialist
             }
+        }
         civics = {
             NOT = {
                 value = civic_industrial_economy

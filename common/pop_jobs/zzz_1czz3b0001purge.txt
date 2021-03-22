@@ -141,6 +141,7 @@ purge = {
         }
     }
     resources = {
+        category = planet_metallurgists
         produces = {
             trigger = {
                 exists = owner
@@ -151,17 +152,15 @@ purge = {
             energy = 2
         }
     }
-    resources = {
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_swapped_tradition = trp_production_agriculture_b_machine
-                }
+    produces = {
+        trigger = {
+            exists = owner
+            owner = {
+                has_swapped_tradition = trp_production_agriculture_b_machine
             }
-            physics_research = 1
-            society_research = 1
         }
+        physics_research = 1
+        society_research = 1
     }
     produces = {
         trigger = {

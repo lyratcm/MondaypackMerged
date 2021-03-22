@@ -52,8 +52,6 @@ civic_citizen_service = {
                 value = civic_stratocracy
             }
         }
-            }
-        }
     }
     random_weight = {
         base = 5

@@ -33,6 +33,7 @@ civic_environmentalist = {
                 value = ethic_green
                 value = ethic_fanatic_green
             }
+        }
         civics = {
             NOR = {
                 value = civic_industrial_economy

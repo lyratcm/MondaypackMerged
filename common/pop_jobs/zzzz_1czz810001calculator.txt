@@ -46,6 +46,7 @@ calculator = {
                 has_trait = trait_adaptable_evolution_robot
             }
         }
+    }
     resources = {
         produces = {
             trigger = {
@@ -78,7 +79,6 @@ calculator = {
             }
             unity = 0.5
         }
-    }
         modifier = {
             factor = 2
             OR = {
@@ -86,6 +86,7 @@ calculator = {
                 has_trait = trait_sleepless
             }
         }
+    }
     resources = {
         produces = {
             trigger = {

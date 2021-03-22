@@ -66,8 +66,8 @@ building_GAPS_Adorable_Embassy = {
 		has_upgraded_capital = yes
 	}
 	planet_modifier = {
-		 = 0.04
-		 = 1
+		job_GAPS_adorable_ambassador_per_pop = 0.04
+		job_GAPS_adorable_ambassador_Add = 1
 	}
 	triggered_planet_modifier = {
 		potential = {

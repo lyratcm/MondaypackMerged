@@ -29,6 +29,23 @@ miner = {
             }
             minerals = 1
         }
+        produces = {
+            trigger = {
+                owner = {
+                    is_lithoid_empire = yes
+                }
+            }
+            minerals = 2
+        }
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_swapped_tradition = trp_production_agriculture_c_lithoid
+                }
+            }
+            minerals = 1
+        }
         upkeep = {
             trigger = {
                 exists = owner
@@ -124,25 +141,6 @@ miner = {
         }
         modifier = {
             planet_amenities_add = 0.4
-        }
-    }
-        produces = {
-            trigger = {
-                owner = {
-                    is_lithoid_empire = yes
-                }
-            }
-            minerals = 2
-        }
-    }
-        produces = {
-            trigger = {
-                exists = owner
-                owner = {
-                    has_swapped_tradition = trp_production_agriculture_c_lithoid
-                }
-            }
-            minerals = 1
         }
     }
     triggered_planet_modifier = {

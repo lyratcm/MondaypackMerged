@@ -42,7 +42,6 @@ decision_resort_colony = {
             }
         }
         habitable_structure = no
-        has_upgraded_capital = no
         NOT = {
             owner = {
                 any_owned_planet = {

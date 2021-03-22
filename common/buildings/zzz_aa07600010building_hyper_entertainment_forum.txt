@@ -32,12 +32,6 @@ building_hyper_entertainment_forum = {
             job_entertainer_add = @b2_jobs
         }
     }
-            owner = {
-                has_valid_civic = civic_warrior_culture
-            }
-            has_modifier = slave_colony
-        }
-    }
     convert_to = {
         building_virtual_combat_arena
     }
@@ -105,7 +99,6 @@ building_hyper_entertainment_forum = {
             food = 3
             exotic_gases = @b2_rare_upkeep
         }
-    }
     prerequisites = {
         "tech_hyper_entertainment_forum"
     }

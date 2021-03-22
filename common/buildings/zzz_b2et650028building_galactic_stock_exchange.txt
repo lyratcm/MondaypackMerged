@@ -38,6 +38,8 @@ building_galactic_stock_exchange = {
     }
     planet_modifier = {
         job_mogul_add = 2
+        trade_value_mult = 0.2
+    }
     country_modifier = {
         job_mogul_per_pop = 0.02
         trade_value_mult = 0.2
@@ -73,6 +75,7 @@ building_galactic_stock_exchange = {
     }
     triggered_desc = {
         text = job_mogul_effect_desc
+    }
     on_queued = {
         owner = {
             set_country_flag = building_stocks
