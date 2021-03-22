@@ -1,7 +1,6 @@
-version="1.2"
+version="1"
 tags={
 	"Overhaul"
 }
-name="MondaypackMerged"
+name="Cool Weather"
 supported_version="2.8.1"
-remote_file_id="2411790867"
