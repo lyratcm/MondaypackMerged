@@ -43,18 +43,3 @@ on_arch_site_finished = {
 		
 	}
 }
-# A ship has been built
-# Root = Ship
-# From = Planet
-on_ship_built = {
-	events = {
-		Events_Civic_GAPS_Seekers.6
-	}
-}
-# A ship has been upgraded
-#  Root = Ship
-on_ship_upgraded = {
-	events = {
-		Events_Civic_GAPS_Seekers.6
-	}
-}

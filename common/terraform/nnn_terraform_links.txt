@@ -9,14 +9,8 @@ terraform_link = {
 	energy = 10000
 	duration = 3600
 	
-	potential = {
-		from = { has_modifier = nnn_terraforming_candidate }
-	}
 	condition = {
 		has_technology = "tech_world_shaper"
-	}
-	effect = {
-		from = { remove_modifier = nnn_terraforming_candidate }
 	}
 	
 	ai_weight = {
@@ -31,14 +25,8 @@ terraform_link = {
 	energy = 10000
 	duration = 3600
 	
-	potential = {
-		from = { has_modifier = nnn_terraforming_candidate }
-	}
 	condition = {
 		has_technology = "tech_world_shaper"
-	}
-	effect = {
-		from = { remove_modifier = nnn_terraforming_candidate }
 	}
 	
 	ai_weight = {
@@ -54,15 +42,11 @@ terraform_link = {
 	energy = 10000
 	duration = 3600
 	
-	potential = {
-		from = { has_modifier = nnn_terraforming_candidate2 }
-	}
+
 	condition = {
 		has_technology = "tech_hive_worlds"
 	}
-	effect = {
-		from = { remove_modifier = nnn_terraforming_candidate2 }
-	}
+
 	
 	ai_weight = {
 		weight = 5
@@ -76,15 +60,11 @@ terraform_link = {
 	energy = 10000
 	duration = 3600
 	
-	potential = {
-		from = { has_modifier = nnn_terraforming_candidate2 }
-	}
+
 	condition = {
 		has_technology = "tech_hive_worlds"
 	}
-	effect = {
-		from = { remove_modifier = nnn_terraforming_candidate2 }
-	}
+
 	
 	ai_weight = {
 		weight = 5
