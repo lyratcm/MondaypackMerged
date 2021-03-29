@@ -1,0 +1,17 @@
+triggered_country_modifier = {
+    potential = {
+        exists = planet
+        planet = {
+            exists = sector
+            sector = {
+                exists = leader
+                leader = {
+                    has_trait = leader_trait_mindfulness
+                }
+            }
+        }
+    }
+    modifier = {
+        country_admin_cap_add = 1
+    }
+}

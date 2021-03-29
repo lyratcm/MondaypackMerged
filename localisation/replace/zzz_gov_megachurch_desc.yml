@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_megachurch_desc:1000 "This government is an oligarchy based on a curious blend of commercial and spiritualistic values, in which the positions of ordained minister and corporate officer have merged into a single role.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_executive£ §Y$job_executive$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n$job_high_priest_effect_desc$§!"

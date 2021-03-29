@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_irenic_monarchy_desc:1000 "This government is a pacifist form of hereditary autocracy, where the ruler is regarded as a benevolent guardian that is striving to protect the citizens from a violent galaxy.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"

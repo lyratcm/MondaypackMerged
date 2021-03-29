@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_divine_empire_desc:1000 "This government is a form of spiritualistic autocracy. Everything is shaped by the official state religion, and the ruler is worshiped as an infallible living god.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n$job_high_priest_effect_desc$§!"

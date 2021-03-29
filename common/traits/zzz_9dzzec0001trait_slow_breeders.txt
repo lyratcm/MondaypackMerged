@@ -1,0 +1,24 @@
+trait_slow_breeders = {
+    cost = -3
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_rapid_breeders"
+        "trait_fertile"
+        "trait_rapid_breeders_lithoid"
+        "trait_fungal_colony"
+        "trait_clonal_colony"
+        "trait_clones"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    modifier = {
+        pop_growth_speed = -0.1
+    }
+    slave_cost = {
+        energy = -100
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

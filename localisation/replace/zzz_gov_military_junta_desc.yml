@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_military_junta_desc:1000 "This government is a militaristic form of oligarchy, where power rests with a council of high-ranking military officers who oversee all matters of state.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!\n\n$job_commandante_effect_desc$§!"

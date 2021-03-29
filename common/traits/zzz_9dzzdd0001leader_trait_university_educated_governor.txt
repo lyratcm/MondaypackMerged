@@ -1,0 +1,18 @@
+leader_trait_university_educated_governor = {
+    cost = 1
+    modification = no
+    initial = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_university_educated.dds"
+    modifier = {
+        trade_value_mult = 0.05
+        planet_building_build_speed_mult = 0.05
+        planet_buildings_upkeep_mult = -0.05
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+}

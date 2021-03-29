@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_illuminated_autocracy_desc:1000 "This government is a materialistic form of hereditary autocracy, based on technocratic principles that the sovereign is sworn to uphold. Nothing is valued more highly than scientific knowledge and the advancement of technology.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_materialist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n\n$job_head_researcher_effect_desc$§!"

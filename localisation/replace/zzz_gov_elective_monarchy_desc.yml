@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_elective_monarchy_desc:1000 "This government is a form of enlightened autocracy, where a strong emphasis is put on the knowledge and qualifications of the elected monarch.\n\n§EEffects:§!\n§T£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\n\n$job_noble_effect_desc$§!"

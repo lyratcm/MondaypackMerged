@@ -1,0 +1,15 @@
+trait_talented = {
+    cost = 1
+    potential_crossbreeding_chance = 1
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_inept"
+    }
+    modifier = {
+        leader_skill_levels = 1
+    }
+}

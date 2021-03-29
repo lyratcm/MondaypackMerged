@@ -1,0 +1,42 @@
+synapse_drone = {
+    category = complex_drone
+    condition_string = DRONE_JOB_TRIGGER
+    building_icon = building_hive_capital
+    possible_pre_triggers = {
+        has_owner = yes
+        is_enslaved = no
+        is_being_purged = no
+        is_being_assimilated = no
+    }
+    possible = {
+        drone_job_check_trigger = yes
+    }
+    country_modifier = {
+        country_admin_cap_add = 5
+    }
+    resources = {
+        produces = {
+            trigger = {
+                exists = owner
+                owner = {
+                    has_swapped_tradition = trp_expansion_bureaucracy_b_hive
+                }
+            }
+            society_research = 2
+        }
+    }
+    upkeep = {
+        trigger = {
+            is_lithoid = no
+        }
+        food = 2
+        energy = 2
+    }
+    upkeep = {
+        trigger = {
+            is_lithoid = yes
+        }
+        minerals = 2
+        energy = 2
+    }
+}

@@ -27,7 +27,7 @@ country_event = { ##Ascension Perk System
 		trigger = {
 			AND = {
 				has_country_flag = trp_ascension_perk_ready
-				num_ascension_perks < 7
+				num_ascension_perks < 39
 				NOT = { has_country_flag = trp_ascension_perk_complete }
 			}
 		}
@@ -45,7 +45,7 @@ country_event = { ##Ascension Perk System
 	option = {
 		name = ia_setup_event.2.c
 		trigger = {
-				num_ascension_perks > 7
+				num_ascension_perks > 39
 		}
 		remove_country_flag = trp_ascension_perk_ready
 		set_country_flag = trp_ascension_perk_complete

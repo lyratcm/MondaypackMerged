@@ -1,0 +1,21 @@
+trait_endemic = {
+    cost = -4
+    potential_crossbreeding_chance = 0.5
+    icon = "gfx/interface/icons/traits/trait_nonadaptive.dds"
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    opposites = {
+        "trait_adaptive"
+        "trait_extremely_adaptive"
+        "trait_nonadaptive"
+        "trait_robust"
+        "trait_ageless"
+    }
+    modifier = {
+        pop_environment_tolerance = -0.2
+    }
+    ai_weight = {
+        weight = 0.1
+    }
+}

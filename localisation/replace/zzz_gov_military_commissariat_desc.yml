@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_military_commissariat_desc:1000 "This government is nominally democratic, with the dividing line between the civil administration and the military having blurred to the point where they have largely become one and the same.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!\n\n$job_commandante_effect_desc$§!"

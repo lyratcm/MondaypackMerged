@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_holy_tribunal_desc:1000 "This government is a spiritualistic form of oligarchy, where a divinely guided council made up of clergy controls the state. No division exists between the state and the dominant organized religion.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_spiritualist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest£ §Y$job_high_priest_plural$§!\n\n$job_high_priest_effect_desc$§!"

@@ -1,0 +1,2 @@
+﻿l_english:
+ gov_military_dictatorship_desc:1000 "This government is a militaristic form of autocracy, with the ruler serving as the undisputed head of the military which is firmly in control of the state apparatus.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_militarist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!\n\n$job_commandante_effect_desc$§!"
