@@ -128,12 +128,13 @@ district_mining = {
         potential = {
             exists = owner
             owner = {
-                has_valid_civic = civic_mining_guilds
+                has_valid_civic = civic_welfare_state
             }
         }
         modifier = {
-            planet_housing_add = 1
             job_miner_add = 1
+            planet_miner_upkeep_mult = 0.15
+            planet_housing_add = 1
         }
     }
     triggered_planet_modifier = {

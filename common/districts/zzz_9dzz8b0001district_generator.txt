@@ -104,6 +104,19 @@ district_generator = {
         potential = {
             exists = owner
             owner = {
+                has_valid_civic = civic_welfare_state
+            }
+        }
+        modifier = {
+            job_technician_add = 1
+            planet_technician_upkeep_mult = 0.15
+            planet_housing_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
                 has_valid_civic = civic_agrarian_idyll
             }
         }
