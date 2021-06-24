@@ -1,0 +1,629 @@
+######################
+## LUNARI GIRL HAIR ##
+######################
+
+## NOTES:
+## -- Lunari only have blue, gray, and purple hair.
+## -- Lunari have their own ruler and governor crowns. Black exists but is NOT used!
+
+lunari_female_hair_01 = {
+	default = "gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+		
+		random = {
+		
+			list = {
+				#Style 1 - Long
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+				
+				#Style 2 - Classy Bun
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_purple.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_white.dds"
+				
+				#Style 3 - Bun
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+				
+				#Style 4 - Vulcan
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+				
+				#Style 6 - Short Bangs
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+				
+				#Style 7 - Lunari Fancy Bun
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_blue.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_viola.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_white.dds"
+			}
+		}
+	}
+	
+	###############
+	## POP SCOPE ##
+	###############
+	pop = { #for a specific pop
+	
+		default = "gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+		
+		###############################################################
+		# HAIR LIST: Used to line up hair in the ruler design window! #
+		###############################################################
+		random = {
+			trigger = { always = no }
+			list = {
+
+					## LUNARI RULERS ##
+					
+					## LUNARI RULER TYPE CROWN ##
+					
+					#Style 1 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_viola.dds"
+					
+					#Style 3 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_purple.dds"
+					
+					#Style 4 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_purple.dds"
+					
+					#Style 6 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_viola.dds"
+					
+					## LUNARI GOVERNOR CROWN ##
+					
+					#Style 1 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_viola.dds"
+					
+					#Style 2 - Ruler1a
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_purple.dds"
+
+					#Style 3 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_grey.dds"
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_pink.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_purple.dds"
+					
+					#Style 4 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_purple.dds"
+					
+					#Style 6 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_viola.dds"
+					
+					## COMMON ##
+					
+					#Style 1 - Long
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+					
+					#Style 2 - Classy Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_purple.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_white.dds"
+					
+					#Style 3 - Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+					
+					#Style 4 - Vulcan
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+					
+					#Style 6 - Short Bangs
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+					
+					#Style 7 - Lunari Fancy Bun
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_viola.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_white.dds"
+					
+					## SLAVERY ##
+					
+					# CAT EARS
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_white.dds"
+					
+					## SCIFI ##
+					
+					# SCIFI - Style 6 - Admiral
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_white.dds"
+			}
+		}
+		
+		######################
+		## GENERAL POP HAIR ##
+		######################
+		random = {
+			trigger = { 
+							or = {
+									 is_enslaved = no
+							}
+			}
+			list = {
+					#Style 1 - Long
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+					
+					#Style 2 - Classy Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_purple.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_white.dds"
+					
+					#Style 3 - Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+					
+					#Style 4 - Vulcan
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+					
+					#Style 6 - Short Bangs
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+					
+					#Style 7 - Lunari Fancy Bun
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_viola.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_white.dds"
+			}
+		}
+
+		#####################
+		### SLAVE SECTION ###
+		#####################
+		
+		# DOMESTIC
+		random = {
+			trigger = { 
+						AND = { 
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_domestic }
+						}
+			}
+			list = {
+					# CAT EARS
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_white.dds"
+					
+					#Style 1 - Long
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+			}
+		}
+		
+		# Battle Thralls
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_military }
+						}
+			}
+			list = {
+						#Style 3 - Bun
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+						
+						#Style 6 - Short Bangs
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+			}
+		}
+		
+		# FOOD
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_livestock }
+						}
+			}
+			list = {
+						#Style 3 - Bun
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+						
+						#Style 6 - Short Bangs
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+			}
+		}
+		
+		# LABORERS
+		random = {
+			trigger = { 
+						AND = {
+									is_enslaved = yes
+									has_slavery_type = { country = owner type = slavery_normal }
+						}
+			}
+			list = {
+						#Style 3 - Bun
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+						
+						#Style 6 - Short Bangs
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+						"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+			}
+		}
+		
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { 
+	
+		default = "gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+	
+		### TECHNOCRACIES ###
+		random = {
+			trigger = { 
+							AND = {
+										owner =  { has_civic = civic_technocracy }
+										leader_class = admiral
+							}
+			}
+			list = {
+					# SCIFI - Style 6 - Admiral
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_scifi_admiral_white.dds"
+			}
+		}
+		
+		### END TECHNOCRACIES ###
+	
+		random = {
+			trigger = { leader_class = general }
+			list = {
+				#Style 1 - Long
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+					
+				#Style 3 - Bun
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+					
+				#Style 4 - Vulcan
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+					
+				#Style 6 - Short Bangs
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+				"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = admiral }
+			list = {
+					#Style 1 - Long
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+					
+					#Style 2 - Classy Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_purple.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_white.dds"
+					
+					#Style 3 - Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+					
+					#Style 4 - Vulcan
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+					
+					#Style 6 - Short Bangs
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+					
+					#Style 7 - Lunari Fancy Bun
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_viola.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_white.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = scientist }
+			list = {
+					#Style 1 - Long
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_01_w_white_viola.dds"
+					
+					#Style 2 - Classy Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_purple.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_02_white.dds"
+					
+					#Style 3 - Bun
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_03_white.dds"
+					
+					#Style 4 - Vulcan
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_white.dds"
+					
+					#Style 6 - Short Bangs
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_white.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_black.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_06_w_white_viola.dds"
+					
+					#Style 7 - Lunari Fancy Bun
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_viola.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_style_07_white.dds"
+			}
+		}
+		
+		random = {
+			trigger = { leader_class = governor }
+			list = {
+				## LUNARI GOVERNOR CROWN ##
+					
+				#Style 1 - Ruler1a
+				#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_black.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_cyan.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_gray.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_viola.dds"
+				
+				#Style 2 - Ruler1a
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_blue.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_grey.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_purple.dds"
+
+				#Style 3 - Ruler1a
+				#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_black.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_blue.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_grey.dds"
+				#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_pink.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_purple.dds"
+				
+				#Style 4 - Ruler1a
+				#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_black.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_blue.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_grey.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_purple.dds"
+				
+				#Style 6 - Ruler1a
+				#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_black.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_blue.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_gray.dds"
+				"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_viola.dds"
+			}
+		}
+	}
+	
+	##############
+	### RULERS ###
+	##############
+	
+	ruler = { 
+		
+		default = "gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_cyan.dds"
+		
+		#################################
+		## SPECIAL CASES - GOV CROWNS! ##
+		#################################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_authority = auth_democratic }
+
+							owner = { has_government = gov_curator_enclave } 
+							owner = { has_government = gov_trader_enclave }
+				}
+			}
+			
+		list = {
+					## LUNARI GOVERNOR CROWN ##
+					
+					#Style 1 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_01_viola.dds"
+					
+					#Style 2 - Ruler1a
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_02_purple.dds"
+
+					#Style 3 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_grey.dds"
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_pink.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_03_purple.dds"
+					
+					#Style 4 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_04_purple.dds"
+					
+					#Style 6 - Ruler1a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler1a_style_06_viola.dds"
+			}
+		}
+		
+		#####################
+		## SPECIAL - ARTSY ##
+		#####################
+		random = {
+			trigger = { 
+				OR = {
+					owner = { has_government = gov_artist_enclave }
+				}
+			}
+			
+			list = {
+					# CAT EARS
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_blue.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_viola.dds"
+					"gfx/models/portraits/shared_hair/female/elven_female_hair_style_04_cat_white.dds"
+			}	
+		}
+		
+		##############################
+		## LUNARI GET RULER CROWNS! ##
+		##############################
+		random = {
+			trigger = {  
+				OR = {
+							owner = { has_authority = auth_oligarchic }
+							owner = { has_authority = auth_dictatorial }
+							owner = { has_authority = auth_imperial	}
+							owner = { has_authority = auth_hive_mind }							
+				}
+			}
+			
+		list = {
+					## LUNARI RULER TYPE CROWN ##
+					
+					#Style 1 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_01_viola.dds"
+					
+					#Style 3 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_03_purple.dds"
+					
+					#Style 4 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_blue.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_grey.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_04_purple.dds"
+					
+					#Style 6 - Ruler2a
+					#"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_black.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_cyan.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_gray.dds"
+					"gfx/models/portraits/lunari/hair_female/lunari_female_hair_ruler2a_style_06_viola.dds"
+			}
+		}
+	}
+}

@@ -1,0 +1,136 @@
+particle={
+	name="z_fw_fx_ambt_star_exp_green_core"
+	subsystem={
+		name="core_0"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_flare_core.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 200 15 }
+			y=255
+			z={ 120 10 }
+			alpha=135,alpha_core
+		}
+		position={
+		}
+		duration=0.5
+		life=3.5
+		emission=10
+		size=150,grow_core
+		rotation=-45
+	}
+	subsystem={
+		name="core_1"
+		max_amount=50
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_flare_core_radio.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 150 25 }
+			y=255
+			z={ 50 10 }
+			alpha={ 120,alpha_core 20 }
+		}
+		position={
+		}
+		duration=0.5
+		life=3
+		emission=10
+		size={ 91,grow_core 7 }
+		rotation_speed=-29
+	}
+	subsystem={
+		name="core_2"
+		max_amount=50
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_flare_core_radio.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 150 25 }
+			y=255
+			z={ 50 10 }
+			alpha={ 85,alpha_core 5 }
+		}
+		position={
+		}
+		duration=0.5
+		life=2.8
+		emission=10
+		size={ 103,grow_core 9 }
+		rotation_speed=-57
+	}
+	animation={
+		name="grow_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=0.97
+		curve={
+			0 0 0.06765 0.5 0.14118 0.75781 0.24706 0.91406 0.42941 0.98438 0.72647 0.96094 0.83235 0.75781 0.95 0.14063 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=0.9
+		curve={
+			0 0 0.03824 0.14844 0.11765 0.80469 0.28529 1 0.6 0.95313 0.76471 0.70313 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=5
+	}
+}

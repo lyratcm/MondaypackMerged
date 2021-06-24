@@ -1,0 +1,17 @@
+objectTypes = {
+
+	## ELVEN BLUE STORM ##
+	pdxparticle = {
+		name = "elven_space_storm_blue_effect"
+		type = "elven_space_storm_blue"
+		scale = 1.0
+	}
+
+	## ELVEN PINK STORM ##
+	pdxparticle = {
+		name = "elven_space_storm_pink_effect"
+		type = "elven_space_storm_pink"
+		scale = 1.0
+	}
+
+}

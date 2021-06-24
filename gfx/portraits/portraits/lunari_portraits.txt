@@ -1,0 +1,327 @@
+portraits = {
+
+#elven LADIES
+	lunari_female_01 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_01_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_01_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_01_ice.dds"
+		}
+	}
+	
+	lunari_female_02 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_02"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_02_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_02_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_02_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_03 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_03_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_03_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_03_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_04 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_04"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_04_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_04_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_04_ice.dds"
+		}
+	}
+	
+	lunari_female_05 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_05"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_05_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_05_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_05_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_06 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_06_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_06_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_06_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_07 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_02"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_07_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_07_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_07_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_08 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_08_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_08_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_08_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_09 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_09_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_09_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_09_ice.dds"
+			
+		}
+	}
+	
+	lunari_female_10 = {
+		entity = "portrait_lunari_female_01_entity" clothes_selector = "lunari_female_clothes_01" hair_selector = "lunari_female_hair_01" greeting_sound = "human_female_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_female_body_10_violet.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_10_blue.dds"
+			"gfx/models/portraits/lunari/lunari_female_body_10_ice.dds"
+			
+		}
+	}
+	
+#ELF GENTLEMEN
+
+	lunari_male_01 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_01_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_01_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_01_ice.dds"
+		}
+	}
+	
+	lunari_male_02 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_02"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_02_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_02_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_02_ice.dds"
+		}
+	}
+ 
+	lunari_male_03 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_03"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_03_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_03_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_03_ice.dds"
+		}
+	}
+	
+	lunari_male_04 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_04"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_04_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_04_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_04_ice.dds"
+		}
+	}
+	
+	lunari_male_05 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_05"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_05_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_05_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_05_ice.dds"
+		}
+	}
+	
+	lunari_male_06 = {
+		entity = "portrait_lunari_male_01_entity" clothes_selector = "lunari_male_clothes_01" hair_selector = "lunari_male_hair_01" greeting_sound = "human_male_greetings_01"
+		character_textures = {
+			"gfx/models/portraits/lunari/lunari_male_body_06_purple.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_06_blue.dds"
+			"gfx/models/portraits/lunari/lunari_male_body_06_ice.dds"
+		}
+	}
+}
+
+portrait_groups = {
+	lunari = {
+		default = lunari_female_08
+		game_setup = { #will run with a limited country scope. species and government is set but the country does not actually exist
+			add = {
+				trigger = {
+					ruler = { gender = male }
+				}
+				portraits = {
+					lunari_male_01
+					lunari_male_02
+					lunari_male_03
+					lunari_male_04
+					lunari_male_05
+					lunari_male_06
+				}
+			}
+			add = {
+				trigger = {
+					ruler = { gender = female }
+				}
+				portraits = {
+					#lunari_female_01
+					#lunari_female_02
+					lunari_female_03
+					lunari_female_04
+					lunari_female_05
+					lunari_female_06
+					lunari_female_07
+					lunari_female_08
+					lunari_female_09
+					lunari_female_10
+				}
+			}
+			#set = {
+			#	trigger = { ... }
+			#	portraits = { ... }
+			#	#using "set =" instead of "add" will first clear any portraits already added
+			#}
+		}
+		
+		#species scope
+		species = { #generic portrait for a species
+			add = {
+				portraits = {
+					#lunari_female_01
+					#lunari_female_02
+					lunari_female_03
+					lunari_female_04
+					lunari_female_05
+					lunari_female_06
+					lunari_female_07
+					lunari_female_08
+					lunari_female_09
+					lunari_female_10
+					
+					lunari_male_01
+					lunari_male_02
+					lunari_male_03
+					lunari_male_04
+					lunari_male_05
+					lunari_male_06
+				}
+			}
+		}
+		
+		#pop scope
+		pop = { #for a specific pop
+			add = {
+				trigger = {
+					owner = { NOT = { has_policy_flag = elven_gender_patriarchy_full } }
+				}
+				portraits = {
+					#lunari_female_01
+					#lunari_female_02
+					lunari_female_03
+					lunari_female_04
+					lunari_female_05
+					lunari_female_06
+					lunari_female_07
+					lunari_female_08
+					lunari_female_09
+					lunari_female_10
+				}
+			}
+			add = {
+				trigger = {
+					owner = { NOT = { has_policy_flag = elven_gender_matriarchy_full } }
+				}
+				portraits = {
+					lunari_male_01
+					lunari_male_02
+					lunari_male_03
+					lunari_male_04
+					lunari_male_05
+					lunari_male_06
+				}
+			}
+		}
+		
+		#leader scope
+		leader = { #scientists, generals, admirals, governor
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					#lunari_female_01
+					#lunari_female_02
+					lunari_female_03
+					lunari_female_04
+					lunari_female_05
+					lunari_female_06
+					lunari_female_07
+					lunari_female_08
+					lunari_female_09
+					lunari_female_10
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lunari_male_01
+					lunari_male_02
+					lunari_male_03
+					lunari_male_04
+					lunari_male_05
+					lunari_male_06
+				}
+			}
+		}
+		
+		#ruler scope 
+		ruler = {
+			add = {
+				trigger = {
+					gender = female
+				}
+				portraits = {
+					#lunari_female_01
+					#lunari_female_02
+					lunari_female_03
+					lunari_female_04
+					lunari_female_05
+					lunari_female_06
+					lunari_female_07
+					lunari_female_08
+					lunari_female_09
+					lunari_female_10
+				}
+			}
+			add = {
+				trigger = {
+					gender = male
+				}
+				portraits = {
+					lunari_male_01
+					lunari_male_02
+					lunari_male_03
+					lunari_male_04
+					lunari_male_05
+					lunari_male_06
+				}
+			}
+		}
+	}
+}

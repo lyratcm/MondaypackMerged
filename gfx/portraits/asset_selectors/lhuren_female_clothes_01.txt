@@ -1,0 +1,984 @@
+lhuren_female_clothes_01 = {
+	default = "gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+	}
+	
+	#############
+	## SPECIES ##
+	#############
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+			
+			# EVERYONE #
+			random = {
+				list = {
+						#####################
+						## LHUREN CLOTHING ##
+						#####################
+						
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_brown.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_yellow.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_white.dds"
+						
+						# GOVERNOR 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+					
+						# COMMON 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_yellow.dds"
+						
+						# GOWN 1 - GOLD
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_white.dds"
+						
+						# GOWN 1A - SILVER
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_white.dds"
+
+						# WINTER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_yellow.dds"
+				}
+			}
+				
+	}
+	
+	#########
+	## POP ##
+	#########
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+		
+		#####################################################################
+		# clothing LIST: Used to line up clothing in the ruler design window! #
+		#####################################################################
+		random = {
+			trigger = { always = no }
+			list = {
+						#####################
+						## LHUREN CLOTHING ##
+						#####################
+						
+						#############
+						## LEADERS ##
+						#############
+						
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_brown.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_yellow.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_white.dds"
+					
+						# ADMIRAL 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_white.dds"
+						
+						# GOVERNOR 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+						
+						# GENERAL 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_gold.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_silver.dds"
+					
+						# SCIENTIST 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_lavender.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_powder.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_white.dds"
+			
+						############
+						## COMMON ##
+						############
+					
+						# COMMON 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_yellow.dds"
+						
+						# GOWN 1 - GOLD
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_white.dds"
+						
+						# GOWN 1A - SILVER
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_white.dds"
+						
+						############
+						## WINTER ##
+						############
+						
+						# WINTER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_yellow.dds"
+						
+						###############
+						## SPECIALTY ##
+						###############
+						
+						# BLISS 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_white.dds"
+						
+						# BLISS 2 - GOLD - WA!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_blackgold.dds"		#WA!!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_whitegold.dds"		#WA!!
+						
+						# BLISS 2 - SILVER - WA!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_blacksilver.dds"	#WA!!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_whitesilver.dds"	#WA!!
+						
+						#############
+						# HIVE MIND #
+						#############
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_hivemind1.dds"
+						
+						
+						###########################
+						## STANDARD ELF CLOTHING ##
+						###########################
+						
+						#########
+						# SCIFI #
+						#########
+						
+						# SUIT 1
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_gold.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_silver.dds"
+						
+						# SUIT 2
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_gold.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_pink.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_silver.dds"
+						
+						# SUIT 3
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_blue.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_red.dds"
+
+						# FATIGUES
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_jungle.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_desert.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_winter.dds"
+						
+						# ADMIRAL
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_cyan.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_navy.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_red.dds"
+						
+						##########
+						# Savage #
+						##########
+						
+						# Barbarians
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1_topless.dds"	#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2_brown.dds"		#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian3.dds"
+						
+						# Huntress
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_brown.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_necklace.dds"	#WA!!
+						
+						#################
+						# OMEGA DANCERS #
+						#################
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_pink.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_red.dds"
+						
+						#########
+						# MAIDS #
+						#########
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_maid.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_maid2.dds"
+						
+						#########
+						# Slave #
+						#########
+						
+						# Purge/Refugee #
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_purge_brown.dds"
+						
+						# Domestic Slaves
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_leather_black.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_leather_white.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_rose.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_spike.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_collar1_gold.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_collar2_steel.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_dangly.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_bowtie_red.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_bowtie_purple.dds"				#WA!
+						
+						# Battle Thralls
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_bat_armor_1.dds"	
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_bat_armor_2.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_bat_armor_3.dds"
+						
+						# Laborers
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_rags_1.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_collar_1.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_harness.dds"					#WA!
+						
+						# Food
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_cat_chains_1.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_cat_rags_1.dds"
+						
+						##############
+						# GENERIC WA #
+						##############
+						
+						"gfx/models/portraits/shared_clothing/female/elven_female_without_apparel.dds"						#WA!
+			}
+		}
+		####################
+		# END clothing LIST #
+		####################
+		
+		## PRESAPIENT ##
+		random = {
+			trigger = { is_pop_category = pre_sapients }
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_without_apparel.dds"						#WA!
+			}
+		}
+		
+		###########
+		# SLAVERY #
+		###########
+		
+		## DOMESETIC ##
+		random = {
+			trigger = { has_job = slave_toiler }
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_leather_black.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_leather_white.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_rose.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_spike.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_collar1_gold.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_collar2_steel.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_kink_dangly.dds"				#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_bowtie_red.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_bowtie_purple.dds"				#WA!
+			}
+		}
+		
+		## FOOD ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = organic_battery
+								has_job = livestock
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_cat_chains_1.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_cat_rags_1.dds"
+			}
+		}
+
+		## GENERIC SLAVE ##
+		random = {
+			trigger = {
+							OR = {
+								is_pop_category = slave
+								is_enslaved = yes
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_rags_1.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_collar_1.dds"					#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_lab_harness.dds"					#WA!
+			}
+		}
+		
+		#############
+		## WORKERS ##
+		#############
+		
+		## MAIDS ##
+		random = {
+			trigger = { has_job = servant }
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_maid.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_slave_dom_maid2.dds"
+			}
+		}
+		
+		## SAVAGES ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = hunter_gatherer
+								has_job = peasant
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1_topless.dds"	#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2.dds"			#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2_brown.dds"		#WA!
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian3.dds"
+						
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_brown.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_necklace.dds"	#WA!!
+			}
+		}
+		
+		## COMMON WORKERS ##
+		random = {
+			trigger = { is_pop_category = worker }
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_yellow.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_white.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_winter1_yellow.dds"
+			}
+		}
+		
+		## DANCER/ENTERTAINERS ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = fe_hedonist
+								has_job = entertainer
+								has_job = culture_worker
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_pink.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_omega_dancer_red.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss1_white.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_blackgold.dds"		#WA!!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_whitegold.dds"		#WA!!
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_blacksilver.dds"	#WA!!
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_bliss2_whitesilver.dds"	#WA!!
+			}
+		}
+		
+		## POLICE/ENFORCERES ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = enforcer
+								has_job = soldier
+								has_job = slave_overseer
+								has_job = fe_protector
+								has_job = fe_xeno_keeper
+								has_job = primitive_warrior
+								has_job = primitive_warrior_2
+							}
+			}
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_gold.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_silver.dds"
+			}
+		}
+		
+		## SPECIALISTS ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = fe_xeno_ward
+								is_pop_category = specialist
+							}
+			}
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_green.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_lavender.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_powder.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_white.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_white.dds"
+			}
+		}
+		
+		## NOBILITY ##
+		random = {
+			trigger = {
+							OR = {
+								is_pop_category = ruler
+								is_pop_category = bio_trophy
+							}
+			}
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_pink.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_white.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+						
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_black.dds"
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_white.dds"
+			}
+		}
+		
+		## CRIMINALS ##
+		random = {
+			trigger = { is_pop_category = criminal }
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_hivemind1.dds"
+			}
+		}
+		
+		## PURGE ##
+		random = {
+			trigger = { is_pop_category = purge }
+			list = {
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_purge_brown.dds"
+			}
+		}
+		
+		## PRECURSOR ##
+		random = {
+			trigger = { is_pop_category = precursor }
+			list = {
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+			}
+		}
+		
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { #scientists, generals, admirals, governor
+		
+		# Hive Minds are all BORG
+		random = {
+			trigger = { owner =  { has_authority = auth_hive_mind } }
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_hivemind1.dds"
+			}
+		}
+		
+		## TECHNOCRACIES ##
+		
+		## TECHNO ADMIRALS ##
+		random = {
+			trigger = {
+							and = {
+									owner =  { has_civic = civic_technocracy }
+									leader_class = admiral
+							}
+			}
+			list = {
+						# ADMIRAL
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_cyan.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_navy.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_admiral_red.dds"
+			}
+		}
+		
+		## TECHNO GOVERNORS ##
+		random = {
+			trigger = {
+							and = {
+									owner =  { has_civic = civic_technocracy }
+									leader_class = governor
+							}
+			}
+			list = {
+						# SUIT 2
+						#"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_black.dds"
+						#"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_gold.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_green.dds"
+						#"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_pink.dds"
+						#"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_silver.dds"
+			}
+		}
+		
+		## TECHNO GENERALS ##
+		random = {
+			trigger = {
+							and = {
+									owner =  { has_civic = civic_technocracy }
+									leader_class = general
+							}
+			}
+			list = {
+						# SUIT 1
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_gold.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit1_silver.dds"
+						
+						# FATIGUES
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_jungle.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_desert.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_fatigues_winter.dds"
+			}
+		}
+		
+		## TECHNO SCIENTISTS ##
+		random = {
+			trigger = {
+							and = {
+									owner =  { has_civic = civic_technocracy }
+									leader_class = scientist
+							}
+			}
+			list = {
+						# SUIT 3
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_blue.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit3_red.dds"
+			}
+		}
+		
+		## END TECHNOCRACIES ##
+		
+		
+		#Savages get their own clothing
+		random = {
+			trigger = { owner = { has_trait = trait_elven_savage } }
+			list = {
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2.dds"			#WA!
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2_brown.dds"		#WA!
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian3.dds"
+					
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_black.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_brown.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_green.dds"	
+			}
+		}
+		
+		## ADMIRALS ##
+		random = {
+			
+			trigger = { 
+							and = {
+								leader_class = admiral
+								nor = {
+										
+										owner = { has_trait = trait_elven_savage }
+										owner = { has_trait = trait_drow_savage }
+										
+								}
+							}
+						}
+			list = {
+			
+					# ADMIRAL 1
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_black.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_purple.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_pink.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_red.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_admiral1_white.dds"
+			}
+		}
+		
+		## SCIENTISTS ##
+		random = {
+			trigger = { 
+							and = {
+								leader_class = scientist
+								nor = {
+										
+											owner = { has_trait = trait_elven_savage }
+											owner = { has_trait = trait_drow_savage }
+										
+								}
+							}
+						}
+			list = {
+				
+				# SCIENTIST 1
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_black.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_blue.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_green.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_lavender.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_pink.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_powder.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_red.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_scientist1_white.dds"		
+			}
+		}
+		
+		## GENERALS ###
+		random = {
+			trigger = { 
+						and = {
+							leader_class = general
+							nor = {
+									
+									owner = { has_trait = trait_elven_savage }
+									
+							}
+						}
+			}
+			list = {
+			
+				# GENERAL 1
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_gold.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_green.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_purple.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_red.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_silver.dds"
+				
+			}
+		}
+		
+		## GOVERNORS
+		random = {
+			trigger = { 
+							and = {
+								leader_class = governor
+								nor = {
+									
+										owner = { has_trait = trait_elven_savage }
+										
+								}
+							}
+						}
+			list = {
+				
+				# GOVERNOR 1
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+			}
+		}
+	}
+	
+	############
+	## RULERS ##
+	############
+	ruler = {
+		default = "gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+		
+		################
+		## HIVE MINDS ##
+		################
+		random = {
+			trigger = { owner =  { has_authority = auth_hive_mind } }
+			list = {
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_hivemind1.dds"
+			}
+		}
+		
+		#################
+		## TECHNOCRACY ##
+		#################
+		random = {
+			trigger = { owner =  { has_civic = civic_technocracy } }
+			list = {
+						# SUIT 2
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_black.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_gold.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_green.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_pink.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_purple.dds"
+						"gfx/models/portraits/shared_clothing/female/elven_female_clothing_scifi_suit2_silver.dds"
+			}
+		}
+		
+		###################
+		## SPECIAL CASES ##
+		###################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_government = gov_celestial_empire }
+				}
+			}
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_purple.dds"
+			}
+		}
+		
+		################
+		## THEOCRATIC ##
+		################
+		random = {
+			trigger = { 
+				OR = {
+							owner = { has_government = gov_theocratic_monarchy }
+							owner = { has_government = gov_theocratic_dictatorship }
+							owner = { has_government = gov_theocratic_oligarchy }
+							owner = { has_government = gov_theocratic_republic }
+							owner = { has_government = gov_divine_empire }
+							owner = { has_government = gov_holy_tribunal }
+							owner = { has_government = gov_megachurch }
+				}
+			}
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_white.dds"
+			}
+		}
+		
+		
+		################
+		## DEMOCRATIC ##
+		################
+		random = {
+			trigger = { owner =  { has_authority = auth_democratic } }
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_brown.dds"
+			}
+		}
+		 
+		################
+		## OLIGARCHIC ##
+		################
+		random = {
+			trigger = { owner =  { has_authority = auth_oligarchic } }
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_red.dds"
+			}
+		} 
+		
+		#################
+		## DICTATORIAL ##
+		#################
+		random = {
+			trigger = { owner =  { has_authority = auth_dictatorial } }
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_black.dds"
+			}
+		}
+		
+		##############
+		## IMPERIAL ##
+		##############
+		random = {
+			trigger = { owner =  { has_authority = auth_imperial } }
+			list = {
+						# RULER 1
+						"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_ruler1_yellow.dds"
+			}
+		}
+		
+		################
+		## PRIMITIVES ##
+		################
+		random = {
+			trigger = { 
+						or = {
+							owner = { has_government = gov_tribal_society }
+						}
+			}
+			list = {
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian3.dds"
+					
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_black.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_brown.dds"
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_green.dds"
+
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian1_topless.dds"	#WA!
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_barbarian2.dds"			#WA!
+					
+					"gfx/models/portraits/shared_clothing/female/elven_female_clothing_savage_huntress_necklace.dds"	#WA!
+			}
+		}
+
+		#########################
+		## ADVANCED PRIMITIVES ##
+		#########################
+		random = {
+			trigger = { 
+						or = {
+							owner = { has_government = gov_feudal_realms }
+							owner = { has_government = gov_fragmented_nation_states }
+						}
+			}
+			list = {
+					# GOVERNOR 1
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackred.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blackviolet.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_blue.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_cyan.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_purple.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_red.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_governor1_white.dds"
+			}
+		}
+
+		###############
+		## SENTINELS ##
+		###############
+		random = {
+			trigger = { 
+						owner = { has_government = gov_military_order  }
+			}
+			list = {
+					# GENERAL 1
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_gold.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_green.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_purple.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_red.dds"
+					"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_general1_silver.dds"
+			}
+		}
+		
+		###################
+		## MISCELLANEOUS ##
+		###################
+		random = {
+			trigger = { 
+						or = {
+								owner = { has_government = gov_curator_enclave }
+								owner = { has_government = gov_trader_enclave }
+								owner = { has_government = gov_artist_enclave } 
+						}
+			}
+			list = {
+				# COMMON 1
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_black.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_cyan.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_green.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_pink.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_purple.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_red.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_white.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_common1_yellow.dds"
+				
+				# GOWN 1 - GOLD
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_black.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1_white.dds"
+				
+				# GOWN 1A - SILVER
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_black.dds"
+				"gfx/models/portraits/lhuren_clothing/female/elven_female_clothing_lhuren_gown1a_white.dds"
+			}
+		}
+	}
+}
+
+lhuren_female_hair_1 = { 
+	default = "gfx/models/portraits/lhuren_hair/female/elven_female_hair_lhuren_style02_black.dds"
+}
+

@@ -1,0 +1,201 @@
+######
+# Ilythiiri 01
+######
+	
+objectTypes = {
+	
+	#Ship explosions
+	
+	pdxparticle = {
+		name = "ilythiiri_small_ship_explosion_particle"
+		type = "ilythiiri_small_ship_explosion_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_large_ship_explosion_particle"
+		type = "ilythiiri_01_large_ship_explosion"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_huge_ship_explosion_particle"
+		type = "ilythiiri_01_large_ship_explosion"
+		
+		scale = 2.0
+	}
+	
+	####
+	
+	pdxparticle = {
+		name = "ilythiiri_01_2_0_ship_exhaust_oblong_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_oblong_file"
+		scale = 2.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_6_exhaust_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_file"
+		scale = 1.6
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_5_0_exhaust_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_file"
+		scale = 5.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_5_0_ship_exhaust_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_file"
+		scale = 5.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_2_7_ship_exhaust_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_file"
+		scale = 2.7
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_3_0_ship_exhaust_oblong_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_oblong_file"
+		scale = 3.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_0_ship_exhaust_oblong_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_oblong_file"
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_2_2_ship_exhaust_oblong_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_oblong_file"
+		scale = 2.2
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_7_ship_exhaust_oblong_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_oblong_file"
+		scale = 1.7
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_1_exhaust_oblong_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_large_file"
+		scale = 1.1
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_7_exhaust_oblong_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_large_file"
+		scale = 1.7
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_1_7_ship_exhaust_moving_particle"
+		type = "ilythiiri_01_ship_exhaust_file"
+		scale = 1.7
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_2_2_exhaust_oblong_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_large_file"
+		scale = 2.2
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_01_3_0_exhaust_oblong_idle_particle"
+		type = "ilythiiri_01_ship_exhaust_idle_large_file"
+		scale = 3.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_light_viola_effect"
+		type = "ilythiiri_ship_light_viola_effect_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_light_red_regular_effect"
+		type = "ilythiiri_ship_light_red_regular_effect_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_light_red_rolling_effect"
+		type = "ilythiiri_ship_light_red_rolling_effect_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_light_viola_rolling_effect"
+		type = "ilythiiri_ship_light_viola_rolling_effect_file"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_light_viola_regular_effect"
+		type = "ilythiiri_ship_light_viola_regular_effect_file"
+		
+		scale = 1.0
+	}
+	
+	# For scans
+	
+	pdxparticle = {
+		name = "ilythiiri_survey_effect"
+		type = "ilythiiri_survey_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_scan_trail_effect"
+		type = "ilythiiri_scan_trail_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "ilythiiri_ship_orbit_effect"
+		type = "ilythiiri_ship_orbit_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "drow_survey_effect"
+		type = "drow_survey_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "drow_scan_trail_effect"
+		type = "drow_scan_trail_effect"
+		
+		scale = 1.0
+	}
+	
+	pdxparticle = {
+		name = "drow_ship_orbit_effect"
+		type = "drow_ship_orbit_effect"
+		
+		scale = 1.0
+	}
+	
+	
+	
+	
+	
+	
+	
+}
