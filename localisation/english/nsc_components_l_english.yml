@@ -49,6 +49,9 @@ special_ship_slot_DESC:0 "A special component slot."
 exploration_ship_slot:0 "Exploration Component"
 exploration_ship_slot_DESC:0 "A special Exploration component slot."
 
+hq_ftl_components:0 "Headquarters Jump Drive"
+hq_ftl_components_DESC:0 "A slot for the Headquarters Jump Drive."
+
 SPECIAL_SLOT_MULTIPHASIC_SENSORS:0 "Multiphasic Sensors"
 SPECIAL_SLOT_MULTIPHASIC_SENSORS_DESC:0 "These advanced sensors increase sensor range using multiphase generators, updating and adding to our map of the galaxy by conducting preliminary scans of wide swathes of space from afar."
 SPECIAL_SLOT_DAMAGE_CONTROL:0 "Damage Control Teams"
@@ -79,9 +82,11 @@ SPECIAL_SLOT_MARS_WEAPON_SYSTEM_DESC:0 "This advanced point-defense weapon syste
 EXPLORATION_SLOT_ANOMALY_LAB:0 "Anomaly Research Laboratory"
 EXPLORATION_SLOT_ANOMALY_LAB_DESC:0 "This laboratory is dedicated to the study of anomalies, those strange and wonderful things in the galaxy that don't seem to follow the same rules as everything else. Each one deserves a full, comprehensive analysis, but there is so much to discover, and so little time. By optimizing the laboratory for the study of these delightful oddities, we can insure that every anomaly gets the attention it deserves, while also dramatically speeding up research time."
 EXPLORATION_SLOT_SURVEY_LAB:0 "Survey Laboratory"
-EXPLORATION_SLOT_SURVEY_LAB_DESC:0 "There are so many planets and systems out there, waiting, begging to be discovered, and each one might hold the key to new discoveries. There's no time to waste, and this specialized laboratory will allow us to conduct our surveys much, much faster--which means we'll be able to survey more and more space in the same amount of time. More surveys means more discovery, more adventure, and more knowledge about the galaxy."
+EXPLORATION_SLOT_SURVEY_LAB_DESC:0 "There are so many planets and systems out there, waiting, begging to be discovered, and each one might hold the key to new discoveries. There's no time to waste, and this specialized laboratory will allow us to conduct our surveys much, much faster - which means we'll be able to survey more and more space in the same amount of time. More surveys means more discovery, more adventure, and more knowledge about the galaxy."
 EXPLORATION_SLOT_ANALYSIS_LAB:0 "Advanced Analysis Laboratory"
 EXPLORATION_SLOT_ANALYSIS_LAB_DESC:0 "Every anomaly, by its very nature, forces us to ask questions, to challenge previously-held assumptions. There is nothing more valuable than this, when it comes to the advancement of science. We cannot risk missing any potential anomalies, and the secrets they hold. This specialized laboratory will ensure that we find every last anomaly the galaxy has to offer."
+EXPLORATION_SLOT_ARCH_LAB:0 "Advanced Archaeology Laboratory"
+EXPLORATION_SLOT_ARCH_LAB_DESC:0 "This laboratory is dedicated to the study of archaeological research sites. These sites hold untold mysteries which fire the imagination, and they deserve a dedicated lab where everything about them can be analyzed in full."
 EXPLORATION_SLOT_STELLAR_CARTOGRAPHY:0 "Stellar Cartography"
 EXPLORATION_SLOT_STELLAR_CARTOGRAPHY_DESC:0 "This large system is used for mapping the surrounding space, allowing the ship's computers to calculate and recover from FTL jumps with greatly increased speed. Far more effective than the model used on regular warships, these Stellar Cartography modules are also far more finicky, and require the steady hand of a highly-trained Science Officer to maintain."
 EXPLORATION_SLOT_QUANTUM_THRUSTERS:0 "Quantum Thrusters"
@@ -104,6 +109,16 @@ EXPLORATION_SLOT_SOLAR_ARRAY_DESC:0 "§HProduces:§! 7 Energy\n§HUpkeep:§! 5 M
 EXPLORATION_SLOT_ALLOY_REFINERY:0 "Alloy Refinery"
 EXPLORATION_SLOT_ALLOY_REFINERY_DESC:0 "§HProduces:§! 7 Alloys\n§HUpkeep:§! 3 Minerals & 3 Energy\nThis facility allows an empire to convert an old Exploration Cruiser into a modern alloy refinery, able to produce a small amount of alloys each month."
 
+FIGHTERS_HANGAR_PD_1:0 "Basic Fighter Wing (PD)"
+FIGHTERS_HANGAR_PD_1_DESC:0 "Basic Fighter-class strike craft will deploy to engage nearby hostiles when the mothership enters battle. Will stay close to its carrier to intercept bombers and missiles."
+FIGHTERS_HANGAR_PD_2:0 "Improved Fighter Wing (PD)"
+FIGHTERS_HANGAR_PD_2_DESC:0 "Improved Fighters target smaller enemy vessels as well as bombers and strike craft in coordinated maneuvers. Will stay close to its carrier to intercept bombers and missiles."
+FIGHTERS_HANGAR_PD_3:0 "Advanced Fighter Wing (PD)"
+FIGHTERS_HANGAR_PD_3_DESC:0 "An Advanced Fighter Wing is capable of doing significant damage to smaller enemy vessels and hold its own against hostile strike craft. Will stay close to its carrier to intercept bombers and missiles."
+
+LARGE_FIGHTERS_HANGAR_PD_1:0 "Basic Fighter Wing (PD)"
+LARGE_FIGHTERS_HANGAR_PD_2:0 "Improved Fighter Wing (PD)"
+LARGE_FIGHTERS_HANGAR_PD_3:0 "Advanced Fighter Wing (PD)"
 
 NSC_REACTOR_BOOSTER_1:0 "Graviton Boosters"
 NSC_REACTOR_BOOSTER_1_DESC:0 "Reactor boosters augmented by Graviton Power Technology"
@@ -131,6 +146,10 @@ sm_nsc_nanite_field_desc:0 "This facility builds, houses, and deploys advanced n
 
 FLAGSHIP_JUMP_DRIVE:0 "Flagship Jump Drive"
 FLAGSHIP_JUMP_DRIVE_DESC:0 "The Flagship Jump Drive tears ship-sized holes in the very fabric of reality, allowing for near-instantaneous movement between systems. The nature of the space the ship passes through on this journey is still poorly understood."
+
+HEADQUARTERS_JUMP_DRIVE:0 "Headquarters Jump Drive"
+HEADQUARTERS_JUMP_DRIVE_DESC:0 "The Headquarters Jump Drive tears ship-sized holes in the very fabric of reality, allowing for near-instantaneous movement between systems. Because of the size and mass of the station, this drive has an extremely long recharge time and can only be used very sporadically."
+
 
 
 ##################################################################################################################################################################################################################

@@ -1,2 +1,0 @@
-﻿l_english:
- ap_engineered_evolution_modifier_desc:1000 "$species_trait_points_add$: $POINTS|0=+$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: $COST_MULT|%0=-$\n§HUnlocks Edict:§! Begin Genetic Experiments"

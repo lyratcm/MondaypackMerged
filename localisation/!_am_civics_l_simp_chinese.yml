@@ -27,17 +27,17 @@ l_simp_chinese:
  ### Social Media Giant
  civic_am_civics_social_media_giant:0 "社媒巨头"
  civic_am_civics_social_media_giant_desc:0 "该企业政府以社交媒体发家，每个国民都生活在社交评分系统中：拥有良好社会地位与极度活跃者可获得诸多奖励， 而有害发言、不活跃或与低分国民互动等行为则不被鼓励，甚至视为犯罪。"
- tooltip_civic_am_civics_social_media_giant_effects:0 "§H可建造建筑：§!信息港\n  生产：3 £society_research£ §Y$society_research$§!\n  可由行星决议施加特殊效果。"
+ tooltip_civic_am_civics_social_media_giant_effects:0 "§H可建造建筑：§!信息港\n  生产：£society_research£3 §Y$society_research$§!\n  可由行星决议施加特殊效果。"
    
  ### Knowledge is Profit
  civic_am_civics_knowledge_is_profit:0 "知识就是利润"
  civic_am_civics_knowledge_is_profit_desc:0 "该巨型企业在获取并贩卖知识方面有着丰富的经验。"
- tooltip_civic_am_civics_knowledge_merchants_effects:0 "在勘探完毕一个星系后，获得 §G50§! £energy£ §Y$energy$§! 与 §G5§! £influence£ §Y$influence$§! 。"
+ tooltip_civic_am_civics_knowledge_merchants_effects:0 "在勘探完毕一个星系后，获得 §G50§! £energy£ §Y$energy$§! 与 £influence£§G5§! §Y$influence$§! 。"
  
  ### Urban Pacification Tools
  civic_am_civics_urban_parcification_tools:0 "机械化执法机构"
  civic_am_civics_urban_parcification_tools_desc:0 "该巨型企业把持着高度机械化的执法机构，这些高效且无情的机器一丝不苟地执行并强化着法律。在它们身上看不到一丝迟疑与同情，除非……罪犯是企业的股东。"
- tooltip_civic_am_civics_urban_parcification_tools_effects:0 "£crime£ 犯罪率§G-20§!\n\n§H可以建造$BRANCH_OFFICE_BUILDING$§!:警察总局\n    +1 £job_enforcer£ 执行者\n    生产：10 £energy£ §Y$energy$§!\n          当£crime£犯罪率低于20时为20 £energy£ §Y$energy$§!。"
+ tooltip_civic_am_civics_urban_parcification_tools_effects:0 "£crime£ 犯罪率§G-20§!\n\n§H可以建造$BRANCH_OFFICE_BUILDING$§!:警察总局\n    +1 £job_enforcer£ 执行者\n    生产：10 £energy£ §Y$energy$§!\n          当£crime£犯罪率低于20时为20£energy£ 。"
  
  ### Corporate Growth
  civic_am_civics_corporate_growth:0 "企业增值"

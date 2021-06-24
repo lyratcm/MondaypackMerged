@@ -1,2 +1,0 @@
-﻿l_english:
- gov_irenic_dictatorship_desc:1000 "This government is a pacifist form of autocracy, where the state is charged with protecting the citizenry from their own violent tendencies as well as any external threats.\n\n§EEffects:§!\n§TWith §Y$ethic_fanatic_pacifist$§!, £building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!\n\n$job_supervisor_effect_desc$§!"

@@ -119,8 +119,7 @@ nsc_flagship_admiral_selection_tooltip.10:0 "Costs: £energy£2000"
 
 nsc_events.31.name:0 "Voluntary Disarmament"
 nsc_events.31.desc:0 "The existence of mighty superweapons such as the Flagship have powerful ripple effects. The maintenance costs of such incredible warships are significant, and their mere existence serves as a symbol of a nation's martial disposition - and can raise international tensions and accelerate the naval arms race.\n\nWhether due to economics or politics, you, our honored [Root.GetRulerTitle], has decided to dismantle their Flagship, though the Shipyard remains operational. It is possible to invest the significant resources to immediately begin construction of a new Flagship, though it will be difficult to keep such a massive project a secret - easier this time, at least, since the massive shipyards themselves are already in existence - and the rationale for dismantling and then reconstructing such a massive project is dubious at best. In any event, doing so will require a Special Project.\n\nOn the other hand, if it is more prudent to wait and keep our options open for a later date, there is now a Flagship Reconstruction Edict available, for the time when it becomes necessary or desirable to build another Flagship."
-nsc_events.31.a:0 "We are ready to begin construction of a new Flagship immediately."
-nsc_events.31.b:0 "Not right now - we will rebuild the Flagship when it is needed."
+nsc_events.31.a:0 "We will rebuild the Flagship when it is needed."
 
 ##################################################################################################################################################################################################################
 ### FLAGSHIP DUEL EVENT ###

@@ -86,7 +86,7 @@
  z_lctr_r_adv_sensor_desc:0 "Since the birth of the universe, $z_name_graysnow$ has been committed to fighting against $z_name_entropius$. In order to discover the world covered by the Entropy Mist, $z_lctr_r_adv_sensor$ was designed. This kind of mighty sensor matrix can accurately capture the §Bdark energy§! signals overflowing in the galaxy, whether it is located in a cosmic storm or a system that has been sealed for various other reasons. Because §BDark Energy, Omnipotent!§!\n\nWith this relic, you can use the advanced locator to locate a target in any corner of the universe, even if it is in a system in the unknown world behind darkness. \nIn addition, after activating this relic, your sensors can detect all hidden system, as long as they are in your sensor range."
  
 #_war
- z_cltr_cb_plunder_relic: "Hold $z_lctr_r_adv_sensor$"
+ casus_belli_z_lctr_cb_plunder_relic: "Hold $z_lctr_r_adv_sensor$"
  war_goal_z_lctr_wg_plunder_relic: "Seize $z_lctr_r_adv_sensor$"
  war_goal_z_lctr_wg_plunder_relic_desc: "Launch a war to seize $z_lctr_r_adv_sensor$. If you win, the functions of the sensor and advanced locator will be enhanced."
  z_lctr_tips_good: "That's great."

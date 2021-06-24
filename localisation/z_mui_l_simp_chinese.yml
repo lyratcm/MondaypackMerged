@@ -1,5 +1,9 @@
 ﻿l_simp_chinese:
 #_[UI Overhaul Dynamic - Extended Topbar & Modbuttons]
+#_[刷新领袖]
+#_[快速联系]
+#_[面板按钮]
+#_[伞の优化]
 
 
 
@@ -9,17 +13,65 @@
  mb_galactic_nations_assembly_tooltip:0 "§HGalactic Nations Assembly§!并未安装！"
  mb_quibble_propaganda_tooltip:0 "§HPropaganda and Espionage§!并未安装！"
  mb_ruler_hobby_button_tooltip:0 "§HRuler Level System§!并未安装！"
+ 
+ z_ic_tips_main:0 "讨论群§Y251840474§! 粉丝群§Y6909692§! B站搜索§Y小傘の§!"
+ z_ic_tips_subtitle:0 ""
+ 
+ z_mui_text_privacy:0 "隐私政策"
+ z_mui_text_homepage:0 "主页"
+ z_mui_text_forum:0 "论坛"
+ z_mui_text_facebook:0 "Facebook"
+ z_mui_text_twitter:0 "Twitter"
 
 
-#_FTA
+###_[刷新领袖]
  REROLL:0 "招贤纳士"
  FIRE:0 "全部解雇！"
- CASHOUT:0 "帝国无上的荣光！只有精英才能胜任帝国的领袖，派遣心腹前往帝国学院招募人才。"
- INFOUT:0 "帝国的意志万岁！任何有才华的公民都该为帝国服务，派遣特工在全国范围征募人才。"
- fta.1.name:0 "解雇他们！"
- fta.1.desc:0 "第二天新的领袖候选人名单就会呈递在你的办公室。"
- fta.2.name:0 "招募一批新的总督候选人"
- fta.2.desc:0 "无尽的繁星充满着未知，为了帝国更美好的未来！我们目前急需一批新的人才！"
- fta.3.name:0 "招募一批新的科学家候选人"
- fta.4.name:0 "招募一批新的舰队司令候选人"
- fta.5.name:0 "招募一批新的陆军统帅候选人"
+ use_credits:0 "用能量币给予违约金/每人§G25§!元"
+ use_influence:0 "依靠影响力压制舆论/每人§B3§!点"
+ z_mui_reroll.1.name:0 "解雇他们！"
+ z_mui_reroll.1.desc:0 "第二天新的领袖候选人名单就会呈递在你的办公室。"
+ z_mui_reroll.2.name:0 "招募一批新的总督候选人"
+ z_mui_reroll.2.desc:0 "无尽的繁星充满着未知，为了帝国更美好的未来！我们目前急需一批新的人才！"
+ z_mui_reroll.3.name:0 "招募一批新的科学家候选人"
+ z_mui_reroll.4.name:0 "招募一批新的舰队司令候选人"
+ z_mui_reroll.5.name:0 "招募一批新的陆军统帅候选人"
+ 
+
+
+
+###_[快速联系] 
+ z_mui_ec:0 "§B暗蓝UI：快速联系§!"
+ z_mui_btn_ec_folded:0 "$z_mui_ec$\n当前为§H收起§!状态，点击以展开通信标签。"
+ z_mui_btn_ec_unfolded:0 "$z_mui_ec$\n当前为§G展开§!状态，点击以收起通信标签。"
+ 
+ z_mui_btn_ec_switch:0 "§B切换联系人§!\n切换到下一位当前类别下可用的联系人。"
+ 
+ z_mui_tips_ec_disabled:0 "无法联系当前阵营"
+ z_mui_tips_ec_disabled_attacked:0 "我们攻击了此阵营并与之处于敌对状态。"
+ z_mui_tips_ec_disabled_engaged:0 "我们当前正在与一个当前类别的阵营进行通信。"
+ 
+ z_mui_btn_ec_marauder:0 "§B快速联系：§!$NUM_MARAUDER_EMPIRES$\n他们可以为我们提供强大的舰队司令与雇佣军服务。"
+ 
+ z_mui_btn_ec_trader_1:0 "§B快速联系：§!$guardian.100.name$\n他们可以为我们提供£exotic_gases£§G$exotic_gases$§!。"
+ z_mui_btn_ec_trader_2:0 "§B快速联系：§!$guardian.103.name$\n他们可以为我们提供£volatile_motes£§R$volatile_motes$§!。"
+ z_mui_btn_ec_trader_3:0 "§B快速联系：§!$guardian.104.name$\n他们可以为我们提供£rare_crystals£§Y$rare_crystals$§!。"
+ 
+ z_mui_btn_ec_curator:0 "§B快速联系：§!$gov_curator_enclave$\n他们可以为我们提供科研协助并可以作为顾问。"
+ 
+ z_mui_btn_ec_artist:0 "§B快速联系：§!$gov_artist_enclave$\n他们可以为我们提供文化支援并举办艺术节。"
+ z_mui_tips_ec_disabled_artist_ignore:0 "他们当前正忙于别的事情，没空搭理我们。"
+ 
+ #_[卓尔的轮盘]
+ z_mui_btn_ec_caravaneer_base:0 "§B快速联系：§!$NAME_Caravaneer_Home$\n他们会向我们出售一些特殊商品并提供抽奖活动。"
+ #_[范格利集团]
+ z_mui_btn_ec_caravaneer_fleet_1:0 "§B快速联系：§!$NAME_Caravaneer_Fleet1$\n他们会以随机选项的价格来推销随机选项的物品，遇到这个行商所进行的交易完全看脸。"
+ #_[奴玛教团]
+ z_mui_btn_ec_caravaneer_fleet_2:0 "§B快速联系：§!$NAME_Caravaneer_Fleet2$\n奴玛教团是一个信奉财富女神奴玛的唯心主义商团，他们拥有在任意宜居星球上钻孔以获得巨大财富的独特技术（添加特殊矿脉“奴玛之息”），且可以提供特殊的神殿“奴玛神殿”。"
+ #_[拉奇工业集团]
+ z_mui_btn_ec_caravaneer_fleet_3:0 "§B快速联系：§!$NAME_Caravaneer_Fleet3$\n拉奇工业集团是鼠人星族的同胞，他们非兜售垃圾散布的轨道轰炸辅助组件（通过降低行星防御来提升轰炸伤害）、垃圾处理中心（建筑）、拉奇人口、机械人口（仅限机械帝国）、一些领袖等。"
+ 
+ z_mui_btn_ec_shroud:0 "§B快速联系：§!虚境\n这是一片独立于物质宇宙之外的灵能之海。"
+ z_mui_tips_ec_disabled_shroud:0 "虚境通信当前冷却中。"
+ z_mui_tips_shroud_cd:0 "我们必须等待§H[This.z_mui_tips_shroud_cd]个月§!才能进入§M$utopia.3000.name$§!。"
+

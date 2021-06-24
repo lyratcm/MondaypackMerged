@@ -1,15 +1,14 @@
 ﻿l_english:
- #lesbians and gay men are great.
- #free hong kong in it
- #free tibet
- #also free tiwan
- #free uyghur muslims
- #free crimea
- #Free California Free New York and save US pneumonia patients MAGA
- Trait_GAPS_Lunar:0 "Lunar"
- Trait_GAPS_Lunar_desc:0 "This species is more effective the more moons are on its planet."
+
+ Trait_GAPS_Lunar:0 "Moon-gazers"
+ Trait_GAPS_Lunar_desc:0 "The activity of this species is tied to the moon, even on planets other than their homeworld. The more moons, the better."
  Trait_GAPS_Lunar_Effect:0 "Worker Pop Resource Output Per Moon: §G+2%§!"
  
+ Pop_Modifier_GAPS_Lunar_Boost:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_desc:0 "Lunar Boost"
+ 
+ 
+ #THSE AREN:T USED ANYMORE JUST HERE TO AVOID ERRORS WHILE SAVE GAMES UPDATE TO THE NEW CODE
  Pop_Modifier_GAPS_Lunar_Boost_1:0 "Lunar Boost"
  Pop_Modifier_GAPS_Lunar_Boost_2:0 "Lunar Boost"
  Pop_Modifier_GAPS_Lunar_Boost_3:0 "Lunar Boost"
@@ -20,4 +19,53 @@
  Pop_Modifier_GAPS_Lunar_Boost_8:0 "Lunar Boost"
  Pop_Modifier_GAPS_Lunar_Boost_9:0 "Lunar Boost"
  Pop_Modifier_GAPS_Lunar_Boost_10:0 "Lunar Boost"
- 
+ Pop_Modifier_GAPS_Lunar_Boost_11:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_12:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_13:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_14:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_15:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_16:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_17:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_18:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_19:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_20:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_21:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_22:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_23:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_24:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_25:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_26:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_27:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_28:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_29:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_30:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_1_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_2_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_3_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_4_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_5_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_6_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_7_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_8_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_9_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_10_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_11_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_12_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_13_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_14_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_15_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_16_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_17_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_18_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_19_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_20_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_21_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_22_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_23_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_24_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_25_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_26_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_27_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_28_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_29_desc:0 "Lunar Boost"
+ Pop_Modifier_GAPS_Lunar_Boost_30_desc:0 "Lunar Boost"

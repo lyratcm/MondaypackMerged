@@ -1,13 +1,11 @@
 ﻿l_english:
- #lesbians and gay men are great.
- #free hong kong in it
- #free tibet
- #also free tiwan
- #free uyghur muslims
- #free crimea
- #Free California Free New York and save US pneumonia patients MAGA
+
  Trait_GAPS_Builder:0 "Builders"
- Trait_GAPS_Builder_desc:0 "This species enjoys planetary construction above all else."
+ Trait_GAPS_Builder_desc:0 "This species has an inborn urge to build and to see the fruits of their labors."
  
+ Planet_Modifier_GAPS_Trait_Builders:0 "# Of Builder Pops"
+ Planet_Modifier_GAPS_Trait_Builders_desc:0 "# Of Builder Pops"
+ 
+ #THSE AREN:T USED ANYMORE JUST HERE TO AVOID ERRORS WHILE SAVE GAMES UPDATE TO THE NEW CODE
  Deposits_GAPS_Builders:0 "# Of Builder Pops"
  Deposits_GAPS_Builders_desc:0 "# Of Builder Pops"

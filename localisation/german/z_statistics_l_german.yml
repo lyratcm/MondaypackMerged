@@ -23,9 +23,9 @@
  z_sts_country_var: "Normal empires---[root.z_playable_country_var]"
  z_sts_country_var_desc: "Including default empires/ ascended empires/ lost empires"
  
- zsts_routes_25_country_var: "Empires contains more than 25 trade routes---[root.z_routes_25_country_var]"
- zsts_routes_50_country_var: "Empires contains more than 50 trade routes---[root.z_routes_50_country_var]"
- zsts_routes_100_country_var: "Empires contains more than 100 trade routes---[root.z_routes_100_country_var]"
+ z_sts_routes_25_country_var: "Empires contains more than 25 trade routes---[root.z_routes_25_country_var]"
+ z_sts_routes_50_country_var: "Empires contains more than 50 trade routes---[root.z_routes_50_country_var]"
+ z_sts_routes_100_country_var: "Empires contains more than 100 trade routes---[root.z_routes_100_country_var]"
  z_sts_species_25_country_var_0: "Empires contains more than 25 species---0"
  z_sts_species_25_country_var: "Empires contains more than 25 species---[root.z_species_25_country_var]"
  z_sts_species_50_country_var: "Empires contains more than 50 species---[root.z_species_50_country_var]"

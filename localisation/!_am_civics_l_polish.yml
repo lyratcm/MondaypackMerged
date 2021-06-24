@@ -8,7 +8,7 @@ l_polish:
  
  civic_am_civics_locust_capitalism_start_screen_message_1:0 "The [GetSpeciesName] have been living under a system of Locust Capitalism for a few hundred years: A society dominated by ruthless exploitation, where the quarterly profit reports have become the only measurements of success. Social and environmental issues have fallen in disregard." 
  civic_am_civics_locust_capitalism_start_screen_message_2:0 "The Scientific Community - or what little of it managed to stay profitable - has been warning for decades now that the current economic model will not be sustainable for much longer, and that the [GetSpeciesName] are in the process of leading their planet right into a mass-extinction event. They have fallen on deaf ears."
- civic_am_civics_locust_capitalism_start_screen_message_3:0 "Now, with the discovery of the hyperlane network, their warnings seem less significant then ever: A whole Galaxy full of resources and opportunities has opened up for the [GetName]. The future of [GetHomeWorldName] seems faintly insignificant in contrast."
+ civic_am_civics_locust_capitalism_start_screen_message_3:0 "Now, with the discovery of the hyperlane network, their warnings seem less significant then ever: An entire Galaxy full of resources and opportunities has opened up for the [GetName]. The future of [GetHomeWorldName] seems faintly insignificant in contrast."
  tooltip_civic_am_civics_pacifist:0 "is some degree of §YPacifist§!"
  tooltip_civic_am_civics_not_pacifist:0 "is NOT §YPacifist§!"
 
@@ -19,60 +19,60 @@ l_polish:
  ### Off-World Investors
  civic_am_civics_off_world_investors:0 "Off-World Investors"
  civic_am_civics_off_world_investors_desc:0 "The galaxy is full of treasures and naturally occurring curiosities that are just waiting to be exploited. This Megacorporation is constantly looking for new ways to make profit from the many different goods that have been found on uninhabited planets."
- tooltip_civic_am_civics_off_world_investors_effects:0 "At the end of the year, every £trade_value£ §Y$TRADE_VALUE$§! deposit within our territory is re-evaluated and §Yhas a small chance to be upgraded§! to a higher value.\n\nHigh-value deposits are less likely to be upgraded, and deposits cannot be upgraded beyond 7 £trade_value£ §Y$TRADE_VALUE$§!."
+ tooltip_civic_am_civics_off_world_investors_effects:0 "At the end of the year, every £trade_value£ §Y$TRADE_VALUE$§! deposit within our territory is re-evaluated and §Yhas a small chance to be upgraded§! to a higher value.\n\nHigh-value deposits are less likely to be upgraded, and deposits cannot be upgraded beyond 10 £trade_value£ §Y$TRADE_VALUE$§!."
  
  ### Stellar Travel Agency
  civic_am_civics_stellar_travel_agency:0 "Stellar Travel Agency"
  civic_am_civics_stellar_travel_agency_desc:0 "This Megacorporation has gained most of its influence by monopolizing private space travel."
- tooltip_civic_am_civics_stellar_travel_agency_effects:0 "§HUnlocks Starbase Building:§!\nTourist Quarters\n  Produces:\n    4 £unity£ §Y$UNITY$§!\n  Upkeep:    \n    4 £energy£ §Y$energy$§!\n  Effect:\n    All planets in this system\n    produce +25% £trade_value£ §Y$TRADE_VALUE$§!."
+ tooltip_civic_am_civics_stellar_travel_agency_effects:0 "§HUnlocks Starbase Building:§! Tourist Quarters\nProduces: £unity£4 | Upkeep: £energy£4\nAll planets in this system produce §G+25%§! £trade_value£ §Y$TRADE_VALUE$§!, and have a §G+25%§! increased §YAutomatic Resettlement chance§!."
  
  ### Social Media Giant
  civic_am_civics_social_media_giant:0 "Social Media Giant"
  civic_am_civics_social_media_giant_desc:0 "This Megacorporation grew from a Social Media Provider to a governmental body.\n\nIts Citizens are integrated into a compulsory Social Score System: Users with good social standing and high activity on Social Media are rewarded with access to unique benefits.\n\nToxicity, inactivity, and interaction with users of low Social Scores is discouraged."
- tooltip_civic_am_civics_social_media_giant_effects:0 "§HUnlocks Building:§! Social Media Hub\n  Produces:\n    3 £society_research£ §Y$society_research$§!\n  Additional Effects can be added with\n  Planetary Decisions."
+ tooltip_civic_am_civics_social_media_giant_effects:0 "§HUnlocks Building:§! Social Media Hub\nProduces: £society_research£3\nAdditional Effects can be added through Planetary Decisions."
    
  ### Knowledge is Profit
  civic_am_civics_knowledge_is_profit:0 "Knowledge is Profit"
  civic_am_civics_knowledge_is_profit_desc:0 "This Megacorporation is specialized in acquiring knowledge and selling, or reselling, it to interested parties."
- tooltip_civic_am_civics_knowledge_merchants_effects:0 "Gain §G50§! £energy£ §Y$energy$§! and §G5§! £influence£ §Y$influence$§! after fully surveying a system."
+ tooltip_civic_am_civics_knowledge_merchants_effects:0 "Gain £energy£§G100§! and £influence£§G20§! after fully surveying a system."
  
  ### Urban Pacification Tools
  civic_am_civics_urban_parcification_tools:0 "Urban Pacification Tools"
  civic_am_civics_urban_parcification_tools_desc:0 "This Megacorporation operates a mechanized Police Force. Highly efficient and not held back by moral qualms, these machines enforce the law as it is written without leniency or mercy.\n\nThat is, unless the lawbreaker is a shareholder of the Megacorporation."
- tooltip_civic_am_civics_urban_parcification_tools_effects:0 "£crime£ Crime: §G-20§!\n\n§HUnlocks $BRANCH_OFFICE_BUILDING$§!:\nOmni Police Station\n    +1 £job_enforcer£ Enforcer Job\n    Produces:\n        10 £energy£ §Y$energy$§!\n          or\n        20 £energy£ §Y$energy$§! if £crime£ Crime\n        is below 20."
+ tooltip_civic_am_civics_urban_parcification_tools_effects:0 "£crime£ Crime: §G-20§!\n\n§HUnlocks $BRANCH_OFFICE_BUILDING$§!: Omni Police Station\nProduces: £energy£10, or £energy£20 if £crime£ Crime is below 20. Grants +1 £job_enforcer£ Enforcer Job"
  
  ### Corporate Growth
  civic_am_civics_corporate_growth:0 "Corporate Growth"
  civic_am_civics_corporate_growth_desc:0 "To this Megacorporation it seems impossible to imagine something with more growth potential than a habitable planet waiting to be colonized."
- tooltip_civic_am_civics_corporate_growth_effects:0 "Newly established colonies start with a free §Y$district_city$§!, and gain a §G+15%§! Modifier towards £job£ Jobs that produce £minerals£ §Y$minerals$§!, £energy£ §Y$energy$§! and £food£ §Y$food$§! for 10 years."
+ tooltip_civic_am_civics_corporate_growth_effects:0 "Newly established colonies start with a free §Y$district_city$§!, gain §G+15%§! Growth from Immigration and a §G+15%§! Modifier towards £job£ Jobs that produce £minerals£ §Y$minerals$§!, £energy£ §Y$energy$§! and £food£ §Y$food$§! for 20 years."
  
  ### Charitable Efforts
  civic_am_civics_charitable_efforts:0 "Charitable Efforts"
- civic_am_civics_charitable_efforts_desc:0 "This Megacorporation was once a charitable_efforts. It has now devoted itself to generating profit, but still invests a portion of its revenue towards causes that improve the lives of those in need."
- tooltip_civic_am_civics_charitable_efforts_effects:0 "Gain a significant §Gpositive Opinion Modifier§! with most Empire types."
+ civic_am_civics_charitable_efforts_desc:0 "This Megacorporation was once a Charity. It has now devoted itself to generating profit, but still invests a portion of its revenue towards causes that improve the lives of those in need."
+ tooltip_civic_am_civics_charitable_efforts_effects:0 "Gain a significant §Hpositive Opinion Modifier§! with most Empire types."
  
  ### Locust Capitalism
  civic_am_civics_locust_capitalism:0 "Locust Capitalism"
  civic_am_civics_locust_capitalism_desc:0 "Unregulated Capitalism, focused solely on profit margins and exponential growth has dominated this Empire for centuries. The ravenous business practices of the governing corporation focus only on draining all profits frome their surroundings as efficiently as possible with no regards for sustainability."
- tooltip_civic_am_civics_locust_capitalism_effects:0 " \n§RUnsustainable use of resources causes Mining Deposits owned by us and our Subjects to deplete over time.\n\nPlanets owned by us are drained over time, and will eventually be destroyed.§!\n  "
+ tooltip_civic_am_civics_locust_capitalism_effects:0 "§RWARNING: Challenging Civic\n\nUnsustainable use of resources causes Mining Deposits owned by us and our Subjects to deplete over time.\n\nPlanets owned by us are drained over time, and will eventually be destroyed.§!\n  "
  
  ### Military-Industrial Complex
  civic_am_civics_military_industrial_complex:0 "Military-Industrial Complex"
  civic_am_civics_military_industrial_complex_desc:0 "This Megacorporation is specialized in the production of military equipment. It appears that some of its diplomatic decisions are influenced by the prospect of generating profit from conflict."
- tooltip_civic_am_civics_military_industrial_complex_effects:0 "After entering a war, choose §Yone§! of the following options:\n\n  Fund Weapons Manufacturers\n    $MOD_SHIP_FIRE_RATE_MULT$: §G+10%§!\n    $TRADE_VALUE$: §G+10%§!\n  Fund Arms Industry\n    $MOD_ARMY_DAMAGE_MULT$: §G+25%§!\n    $MOD_ARMY_ATTACK_HEALTH_MULT$: §G+10%§!\n    $TRADE_VALUE$: §G+10%§!\n  Fund Shipaards\n    $MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+25%§!\n    $MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-10%§!\n    $TRADE_VALUE$: §G+10%§!\n\nThe chosen bonus stays active for 15 Years. While none of these bonuses are active, Trade Value is reduced by §R5%§!."
+ tooltip_civic_am_civics_military_industrial_complex_effects:0 "After entering a war, choose §Yone§! of the following options:\n\n§HFund Weapons Manufacturers§!\n$MOD_SHIP_FIRE_RATE_MULT$: §G+10%§!\n$TRADE_VALUE$: §G+10%§!\n\n§HFund Arms Industry§!\n$MOD_ARMY_DAMAGE_MULT$: §G+25%§!\n$MOD_ARMY_ATTACK_HEALTH_MULT$: §G+10%§!\n$TRADE_VALUE$: §G+10%§!\n\n§HFund Shipards§!\n$MOD_STARBASE_SHIPYARD_BUILD_SPEED_MULT$: §G+25%§!\n$MOD_STARBASE_SHIPYARD_BUILD_COST_MULT$: §G-10%§!\n$TRADE_VALUE$: §G+10%§!\n\nThe chosen bonus stays active for 15 Years. While none of these bonuses are active, Trade Value is reduced by §R5%§!."
  
  ### banking_giant
  civic_am_civics_banking_giant:0 "Banking Giant"
  civic_am_civics_banking_giant_desc:0 "This Megacorporation was once a Banking Giant before it used its influence to facilitate a hostile takeover of the World Government."
- tooltip_civic_am_civics_banking_giant_effects:0 "§HUnlocks Building:§! Stellar Banking Institute\n  Empire Unique Building\n  Generates £trade_value£ §Y$TRADE_VALUE$§! based on the\n  amount of £energy£ §YEnergy§! in our stockpile,\n  at an annual interest rate of roughly §Y6%§!."
+ tooltip_civic_am_civics_banking_giant_effects:0 "§HUnlocks Building:§! Stellar Banking Institute\nEmpire Unique. Generates £trade_value£ §Y$TRADE_VALUE$§! based on the amount of £energy£ §YEnergy§! in our stockpile, at an annual interest rate of roughly §Y6%§!, capped at a maximum of §Y50000§! stored £energy£Energy."
  
  #######################################################
  ### STARBASE BUILDINGS                              ###
  #######################################################
  
  sm_starbase_building_am_civics_tourist_quarters:0 "Tourist Quarters"
- sm_starbase_building_am_civics_tourist_quarters_desc:0 "Dedicated Tourist Quarters for tourists and travelers from planets in this system."
- starbase_building_am_civics_tourist_quarters_desc_modifier:0 "All planets in this system\nproduce §G+25%§! £trade_value£ §Y$TRADE_VALUE$§!."
+ sm_starbase_building_am_civics_tourist_quarters_desc:0 "\nDedicated Tourist Quarters for tourists and travelers from planets in this system."
+ starbase_building_am_civics_tourist_quarters_desc_modifier:0 "Produces: £unity£4\n\nAll planets in this system produce §G+25%§! £trade_value£ §Y$TRADE_VALUE$§!, and have a §G+25%§! increased §YAutomatic Resettlement chance§!"
 
  #######################################################
  ### BUILDINGS                                       ###
@@ -80,17 +80,17 @@ l_polish:
  
  building_am_civics_omni_police_station:0 "Omni Police Station"
  building_am_civics_omni_police_station_desc:0 "A Police Station that operates a mechanized Police Force. The Megacorporation receives a monthly payment for their services."
- building_am_civics_omni_police_station_triggered_desc:0 "Produces 8 £energy£ §Y$energy$§!, or 16 £energy£ §Y$energy$§! if £crime£ Crime is below 20.\n\n$job_enforcer_effect_desc$"
+ building_am_civics_omni_police_station_triggered_desc:0 "Produces £energy£10, or £energy£16 if £crime£ Crime is below 20.\n\n$job_enforcer_effect_desc$"
 
  building_am_civics_social_media_hub:0 "Social Media Hub"
- building_am_civics_social_media_hub_desc:0 "A dedicated Government Facility that centralizes and the planet-wide Social Media Network. It is designed to allow for easy manipulation of Social Media by the Government."
+ building_am_civics_social_media_hub_desc:0 "A dedicated Government Facility that centralizes the planet-wide Social Media Network."
  building_am_civics_social_media_hub_triggered_desc:0 "Additional effects can be added with Planetary Decisions once the building is completed.\n  "
  building_am_civics_social_media_hub_triggered_desc_constructed:0 "Additional effects can be added with Planetary Decisions.\n  "
  building_am_civics_social_media_hub_triggered_desc_maxed:0 "§GThis building has all possible upgrades!§!\n  "
  
  building_am_civics_stellar_banking_institute:0 "Stellar Banking Institute"
  building_am_civics_stellar_banking_institute_desc:0 "A giant, centralized banking complex where money is invested to generate profits. Automated trading systems handle most transitions and sell and buy stock at a rapid pace."
- building_am_civics_stellar_banking_institute_summary:0 "Generates §Y$TRADE_VALUE$§! based on the amount of £energy£ §YEnergy§! in our stockpile, at an annual interest rate of roughly §G6%§!.\n\n§YOnly one copy can be built in our Empire.§!\n  "
+ building_am_civics_stellar_banking_institute_summary:0 "Generates §Y$TRADE_VALUE$§! based on the amount of £energy£ §YEnergy§! in our stockpile, at an annual interest rate of roughly §Y6%§!, capped at a maximum of §Y50000§! stored £energy£Energy.\n\n§YOnly one copy can be built in our Empire.§!\n  "
  
  #######################################################
  ### DECISIONS                                       ###
@@ -100,12 +100,12 @@ l_polish:
  decision_am_civics_generic_influence_cost_tt:0 "§Y£influence£ Influence§! cost of other Social Media Decisions on this planet is increased by §R25§!."
  
  decision_am_civics_building_social_media_hub_1:0 "Social Media: Behavioral Analysis"
- decision_am_civics_building_social_media_hub_1_desc:0 "A lot of knowledge about human behavior can be gained by analyzing the behavior of individuals or groups on social media. A lot more can be gained by manipulating their Social Media environment and analyzing their reactions."
+ decision_am_civics_building_social_media_hub_1_desc:0 "A lot of knowledge about human behavior can be gained by analyzing the behavior of individuals or groups on social media. A lot more knowledge can be gained by manipulating their Social Media environment and analyzing their reactions."
  decision_am_civics_building_social_media_hub_1_effect:0 "£building£ §Y$building_am_civics_social_media_hub$:§!\n$mod_planet_jobs_society_research_produces_mult$: §G+35%§!\n$decision_am_civics_generic_influence_cost_tt$"
  
- decision_am_civics_building_social_media_hub_2:0 "Social Media: Pacification Algorithm"
- decision_am_civics_building_social_media_hub_2_desc:0 "By controlling the content available to users on our Social Network, we are able to manipulate our population into a calmer mindset."
- decision_am_civics_building_social_media_hub_2_effect:0 "£building£ §Y$building_am_civics_social_media_hub$:§!\n\n\n$MOD_PLANET_STABILITY_ADD$ increased by §G+5§!\n$decision_am_civics_generic_influence_cost_tt$"
+ decision_am_civics_building_social_media_hub_2:0 "Social Media: Obedience Algorithm"
+ decision_am_civics_building_social_media_hub_2_desc:0 "By controlling the content available to users on our Social Network, we are able to direct our population into a more accepting mindset."
+ decision_am_civics_building_social_media_hub_2_effect:0 "£building£ §Y$building_am_civics_social_media_hub$:§!\n$MOD_PLANET_STABILITY_ADD$ increased by §G+5§!\n\n$decision_am_civics_generic_influence_cost_tt$"
  
  decision_am_civics_building_social_media_hub_3:0 "Social Media: Targeted Commercials"
  decision_am_civics_building_social_media_hub_3_desc:0 "Targeted Commercials are placed on Social Media to 'improve' the spending habits of our citizens."
@@ -115,8 +115,8 @@ l_polish:
  decision_am_civics_building_social_media_hub_4_desc:0 "By sending subliminal messages to our population, we can improve their work ethics."
  decision_am_civics_building_social_media_hub_4_effect:0 "£building£ §Y$building_am_civics_social_media_hub$:§!\n$mod_planet_jobs_worker_produces_mult$ increased by §G5%§!\n\n$decision_am_civics_generic_influence_cost_tt$"
  
- decision_am_civics_building_social_media_hub_5:0 "Social Media: Media Personalities"
- decision_am_civics_building_social_media_hub_5_desc:0 "By creating and promoting government-controlled Social Media Personalities (Influencers), we can manipulate the thoughts and opinions of our citizens directly."
+ decision_am_civics_building_social_media_hub_5:0 "Social Media: State Media Personalities"
+ decision_am_civics_building_social_media_hub_5_desc:0 "By creating and promoting government-controlled Social Media Personalities (Influencers), we can actively direct the thoughts and opinions of our citizens."
  decision_am_civics_building_social_media_hub_5_effect:0 "£building£ §Y$building_am_civics_social_media_hub$:§!\n$planet_entertainers$: §G+2§!\n\n$decision_am_civics_generic_influence_cost_tt$"
  
  #######################################################
@@ -177,6 +177,9 @@ l_polish:
  static_modifier_am_civics_locust_habitat_3:0 "$static_modifier_am_civics_locust_habitat_1$"
  static_modifier_am_civics_locust_habitat_3_desc:0 "$static_modifier_am_civics_locust_habitat_1_desc$\n\n§HNeo-Duct-Tape has been applied to fix a hull breach.§!"
  
+ static_modifier_am_civics_locust_habitat_4:0 "$static_modifier_am_civics_locust_habitat_1$"
+ static_modifier_am_civics_locust_habitat_4_desc:0 "$static_modifier_am_civics_locust_habitat_3_desc$"
+ 
  static_modifier_am_civics_locust_habitat_5:0 "$static_modifier_am_civics_locust_habitat_1$"
  static_modifier_am_civics_locust_habitat_5_desc:0 "$static_modifier_am_civics_locust_habitat_1_desc$\n\n§HNeo-Duct-Tape has been applied to fix a hull breach - twice!§!"
  
@@ -199,7 +202,7 @@ l_polish:
  ### OPINION MODIFIERS                               ###
  #######################################################
  
- opinion_am_civics_is_charitable_efforts:0 "Charitable Megacorporation"
+ triggered_opinion_am_civics_is_charitable_efforts:0 "Charitable Megacorp"
  
  #######################################################
  ### PERSONALITIES                                   ###
@@ -208,7 +211,7 @@ l_polish:
  personality_am_civics_locust:0 "Locust Capitalist"
  personality_am_civics_locust_desc:0 "Locust Capitalists only care about one thing: Profit. They will do whatever they deem necessary to improve their quarterly reports."
  personality_am_civics_charitable_capitalist:0 "Ethical Capitalist"
- personality_am_civics_charitable_capitalist_desc:0 "Ethical Capitalists think that the power of the Economy should be used to turn the galaxy into a better place. They are very willing to enter agreements with other nations, and will usually try to stay away from military conflicts."
+ personality_am_civics_charitable_capitalist_desc:0 "Ethical Capitalists who with to use the power of the Economy to turn the galaxy into a better place. They are very willing to enter agreements with other nations, and will usually try to stay away from military conflicts."
  
  #######################################################
  ### GOVERNMENTS                                     ###

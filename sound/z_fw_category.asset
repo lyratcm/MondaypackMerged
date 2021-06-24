@@ -1,11 +1,17 @@
 ###_z fw 音效类别	#############################################################
 
 category = {
-	name = "Effects"
+	name = "z_fx_effects"
 	soundeffects = {
 		####### UI SFX
 		z_fw_sfx_ui_mouse_over
 		z_fw_sfx_ui_click
+		z_fw_sfx_fx_star_exp				#_[star_exp]
+		z_fw_sfx_fx_star_exp_charge
+		z_fw_sfx_fx_star_exp_charge_done
+		z_fw_sfx_fx_ltn_emp_near			#_[闪电emp]
+		z_fw_sfx_fx_ltn_emp_mid
+		z_fw_sfx_fx_ltn_emp_far
 	}
 	
 	compressor =  {

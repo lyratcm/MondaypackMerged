@@ -29,7 +29,8 @@
  eap_imperial_prerogative_corp2_desc:0 "После чреды глубоких реформ у нашего правительства крайне улучшилась способность контроля над мирами империи."
  eap_imperial_prerogative_corp:0 "Испольнительная прерогатива"
  eap_imperial_prerogative_corp2_desc:0 "После чреды глубоких реформ у нашего правительства крайне улучшилась способность контроля над мирами империи."
-
+ eap_imperial_prerogative1:0 "Enforce Prerogative"
+ 
  eap_shared_destiny:0 "Общие ценности" 
  eap_shared_destiny_desc:0 "Тех, кто лоялен нам - ведет дорога к светлому будущему." 
  deseap_shared_destiny_desc:0 "£opinion Отношение подданных будет увеличено на §G+200§!" 

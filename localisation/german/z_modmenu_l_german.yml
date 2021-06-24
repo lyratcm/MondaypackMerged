@@ -20,8 +20,14 @@
 
 
 ###_欢迎与群介绍/主选单
- z_mm_tips_misc_welcome: "Welcome to Infinite Stellaris!\nIf you want to support my work, §YRate§! this mod on Steam workshop. Or you can §YDonate through§! Paypal with the link on Steam workshop page of this mod."
+ z_mm_tips_misc_welcome: "Welcome to Infinite Stellaris!\nNew battle FX mod and Production Revolution 2 is working in progress."
  z_ic_tips_main:0 "Welcome to Infinite Stellaris!"
+ z_ic_tips_subtitle:0 ""
+ 
+ z_mm_tips_intro_welcome: "Welcome to Infinite Stellaris!"
+ z_mm_tips_intro_rate: "If this mod helps, please rate it."
+ z_mm_tips_intro_wip: ""
+ z_mm_tips_intro_chat:0 ""
 
 ###_作者
  z_modmenu.141.name: "§GInfinite Stellaris:§! Author Information"
@@ -49,6 +55,7 @@
 
 ###_IS panel-start
  z_mm_tip_intro_welcome: "Choose the mode, start the game!"
+ z_mm_tip_intro_welcome_debug: "Please note that §GInfintie Stellaris§! start setting is forced to stop when planet or fleet interface is open, which means the settings cannot continue. Please close all additional interfaces like fleet or planet interface until you have finished all start settings. If you force this to continue, something wrong may happen in mod parameter."
  
  z_modmenu_start_mode_choose: "§GInfinite Stellaris§! Mode Selector"
  z_mm_tips_framework_modmenu: "\n\nThis mode will not activate §BInfinite Stellaris Framework§!, and this mod will be a pure setting panel for the supported mods. All other new contents of §BInfinite Stellaris Framework§! will be disabled except for the new map modes. If you want to reactivate these new functions during the game, please click on LOGO in the settings panel to open §BFramework Settings§!, and activate the framework.\n\nIf you choose this mode, please carefully review the options in the upcoming start game settings window."
@@ -183,7 +190,7 @@
  z_modmenu.13.c2:0 "Infintie Stellaris Frameworks §HDisabled§!"
  z_modmenu.13.c2.tooltip:0 "$z_modmenu.13.c1.tooltip$"
  z_modmenu.13.c3:0 "Get initial technologies"
- z_modmenu.13.c3.tooltip:0 "In Infinite Stellaris system some non-initial techs will be set as initial techs, such as Automatic Exploration."
+ z_modmenu.13.c3.tooltip:0 "$z_fw_tech_core_start_boost$"
  z_modmenu.13.c4:0 "Refresh Infinite Stellaris Easter Egg Relics"
  z_modmenu.13.c4.tooltip:0 "The original relics of the Infinite Stellaris will be initialized and separated among the galaxy, this function can only be used once."
  z_fw_evt_r_koh_plague_enabled:0 "Spontaneous Infection of Headhunter skunks §GEnabled§!"
@@ -288,7 +295,7 @@
  
 #_evts z modmenu misc
  z_modmenu.130.name:0 "Supreme relics obtained"
- z_modmenu.130.desc:0 "$z_fw_r_celestial_orrey$, $z_fw_r_cheat_quantum_beacon$, $z_fw_r_cheat_hyper_blade$, $z_fw_r_cheat_mega_sword$ and $z_fw_r_cheat_fury$ obtained."
+ z_modmenu.130.desc:0 "$z_fw_r_celestial_orrey$, $z_fw_r_cheat_quantum_beacon$, $z_fw_r_cheat_hyper_blade$, $z_fw_r_cheat_mega_sword$, $z_fw_r_cheat_fury$ and $z_fw_r_cht_emp$ obtained."
  z_modmenu.not_host:0 "You are not the HOST"
  z_modmenu.not_host.desc:0 "Only HOST of this game is allowed to use this option."
  z_modmenu.131.name:0 "Cheater appears"
@@ -304,11 +311,9 @@
  z_mm_tips_autostation_desc: "§YEmpire Energy Income§! §G>5§!"
  z_mm_full_sensor_desc: "§BFull Sensor Switcher§!: \n\nYou can choose to turn on or off the full sensor function. Of course, it will only take effect if you have the condition like §YSentinel Array§!, or it make no sense.\n\nNote: The full sensor view will cause severe frame loss in the Galaxy map mode because the system has too many UI objects to calculate." 
  z_mm_full_sensor_desc: "§BProtector of the Empire - Webway Switcher§!：\n\nYou can choose to activate or disable the webway system. Building §Y$sm_warp_fluctuator$§! at the starbase will allow the fleet to enter the webway system and quickly shuttle through your territory.\n\nNote: Every time a fleet passes through the webway, it will consume energy."
- z_mm_pf_manual_job_check_button: "$edict_z_performance_manual_edt$\n$edict_z_performance_manual_edt_desc$\n\nPerform §BProduction Revolution§! Checking to all empires\n§BProduction Parameters§! will be counted, and §HPops
-/Manpower Transfer§! will be carried out."
- z_mm_pf_manual_job_own_button: "$edict_z_pf_edt_manual_own$\n$edict_z_pf_edt_manual_own_desc$\n\nPerform §BProduction Revolution§! Checking\n§BProduction Parameters§! will be counted, and §HPops
-/Manpower Transfer§! will be carried out."
- z_mm_pf_manual_job_checking: "Manually job check ongoing."
+ z_mm_pf_manual_job_check_button: "Perform a manual population migration for all countries, transporting the unemployed to the world where there are vacant jobs. Each planet can move up to 25 people, and the planet's population migration setting will affect the result. \nNote that this is a global behavior and may be stuck for a while.\n\nPerform §BProduction Revolution§! Checking to all empires\n§BProduction Parameters§! will be counted, and §HPops/ Manpower Transfer§! will be carried out."
+ z_mm_pf_manual_job_own_button: "Perform a manual population migration for all countries, transporting the unemployed to the world where there are vacant jobs. Each planet can move up to 25 people, and the planet's population migration setting will affect the result.\n\nPerform §BProduction Revolution§! Checking\n§BProduction Parameters§! will be counted, and §HPops/ Manpower Transfer§! will be carried out."
+ z_mm_pf_manual_job_checking: "Manually job check ongoing.\nEmpire manual migration consumes §G25§!£energy£§Y$energy$§! per pop, and the migration command will not be executed when §Y$energy$§! is insufficient."
  z_mm_pf2_merge_ai_species_button: "$z_performance_misc.11.f1$\n$z_performance_misc.11.f1.tooltip$"
  z_mm_pf2_ai_species_merging: "Merging AI species ongoing."
  z_mm_pf2_merge_ai_flt_button: "$z_performance_misc.11.f5$\n$z_performance_misc.11.f5.tooltip$"
@@ -322,7 +327,7 @@
  
 ###_SUB MODULES
  z_mm_performance_desc: "§GInfintie Stellaris§!: Performance\nA mod which optimizes the job checking system to improve late game performance. Sub mod of Infinite Stellaris Project."
- z_mm_pf2_desc: "§GInfintie Stellaris§!: Performance Plus\nA mod that optimizes the game in all aspects to improve late game performance. Sub mod of Infinite Stellaris Project."
+ z_mm_pf2_desc: "§GBetter Performance§!\nA mod that optimizes the game in all aspects, improves the speed of the later game, and provides a variety of convenient functions."
  z_mm_statistic_desc: "§GInfintie Stellaris§!: Performance Statistics\nA mod for game data statistics, which provides reference for optimization and debugging. Sub mod of Infinite Stellaris Project."
  z_mm_cm_desc: "§GInfintie Stellaris§!: Crisis Master\nA powerful crisis manager and crisis expansion mod which make crisis and the War in Haven more challenging and interesting. Sub mod of Infinite Stellaris Project."
  z_mm_lctr_desc: "§GInfinite Stellaris:§! Advanced Locator\nA powerful positioning system that can display systems containing specific targets on Galaxy map as points of interest. This will make it easy for you to find some special systems. Please follow the instructions after opening the sub-module menu."
@@ -366,6 +371,7 @@
  z_mm_tips_sp_wsg_shimakaze: "Available after getting the Shimakaze."
  
  z_mm_sp_uap_desc: "§BUnique Ascension Perks§! Setting\nAdd some new interesting unique ascensions."
+ z_mm_sp_iisc_desc: "§BInterstellar Incorporated: Space Corp§! Setting\nCreate a living space and economy."
  z_mm_sp_complex_potv_desc: "§BPantheons of the Void§! Religious Tree\nIn this mod you will be able to chose your religious system in the empire creation screen, this selection will determine what your empire supports as faith. Faith or Religious systems go from Atheism to Animatism."
  z_mm_sp_bcm_desc: "§BBetterCheats§! Setting Menu\nYou will have a variety of new cheating options, covering almost any resource type and game category."
  z_mm_sp_ace_desc: "§BAggressive Crisis Engine§! \nA collaborative Stellaris mod with new crisis AI and a great amount of crisis improvements."
@@ -380,7 +386,7 @@
  
  z_mm_tips_csp_misc_fleet_dismantle_on: "Fleet Destruction: §GEnabled§!"
  z_mm_tips_csp_misc_fleet_dismantle_off: "Fleet Destruction: §HDisabled§!"
- z_mm_tips_csp_misc_fleet_dismantle: "Fleet Destruction: After enabling it, select any fleet and order it to move to orbit of capital planet (to use moving command and right click on the capital planet), select "set as the target fleet" in the pop-up event. After the setting is completed, the fleet will become a neutral target and add fragile buffs. Using any of your own fleets to destroy this fleet will generate ship wreckage and allow reverse engineering on it."
+ z_mm_tips_csp_misc_fleet_dismantle: "Fleet Destruction: After enabling it, select any fleet and order it to move to orbit of capital planet (to use moving command and right click on the capital planet), select "set as the target fleet" in the pop-up event.  \nIf you have installed §BDark Blue UI Overhaul§!, after selecting the fleet, a self-dismantle button will be added to the fleet panel. \nAfter the setting is completed, the fleet will become a neutral target and add fragile buffs. Using any of your own fleets to destroy this fleet will generate ship wreckage and allow reverse engineering on it."
  
  z_mm_tips_csp_misc_edt_show: "Setting Edicts of Supported Mods §GShown§!"
  z_mm_tips_csp_misc_edt_hide: "Setting Edicts of Supported Mods §HHidden§!\n\nSettings menu edicts form some mods are hidden to keep the list clean."

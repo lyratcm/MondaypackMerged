@@ -8,6 +8,8 @@
 #_[战争类型]
 #_[巨建拆解]
 #_[自我拆解]
+#_[tgt_目标定位器]
+#_[misc_船/舰船行为]
 
 
 ###_[test]  ##############################################################################################
@@ -56,6 +58,8 @@
 #_modifiers
  z_fw_temp_function:0 "§G功能性修正§!"
  z_fw_temp_function_desc:0 "执行特殊功能的短暂修正。"
+ z_fw_mod_cntr_default:0 "§G无尽群星：§!默认修正"
+ z_fw_mod_cntr_default_desc:0 "拆船者/"
 
 #_mian event chain SP用Root EC用This,EC等同country本身
  z_chain_main_title: "§G无尽群星：核心系统§!"
@@ -76,13 +80,18 @@
 
 ###_[开局设置文本]
 #_evts
- z_fw_start_setting:0 "§G无尽群星§!开局设置"
- z_fw_start_setting_desc:0 "你已经开启了无尽群星框架，并决定使用框架自带的游戏内容。\n在这里你将对无尽群星以及其子mod中的核心内容进行前置设定，请将光标移动到每一个选项上停留，并仔细阅读每个选项的介绍。如果想要更改设定，直接点击选项。\n完成设定后请点击最下方§G$z_fw1_misc.1.c$§!，否则你将无法退出此菜单。如果你找不到§G$z_fw1_misc.1.c$§!，请使用§B右方滑动条§!。"
+ z_fw_start_setting_0:0 "§G无尽群星§!开局设置：战争与经济"
+ z_fw_start_setting_0_desc:0 "你已经开启了无尽群星框架，并决定使用框架自带的游戏内容。\n在这里你将对无尽群星以及其子mod中的核心内容进行前置设定，请将光标移动到每一个选项上停留，并仔细阅读每个选项的介绍。如果想要更改设定，直接点击选项。\n注意：使用§B右方滑动条§!。\n所有有关战争，经济，天灾和科技的设定。"
+ z_fw_start_setting_1:0 "§G无尽群星§!开局设置：优化与功能"
+ z_fw_start_setting_1_desc:0 "你已经开启了无尽群星框架，并决定使用框架自带的游戏内容。\n在这里你将对无尽群星以及其子mod中的核心内容进行前置设定，请将光标移动到每一个选项上停留，并仔细阅读每个选项的介绍。如果想要更改设定，直接点击选项。\n注意：使用§B右方滑动条§!。\n所有有关优化和特殊功能的设定。"
+ z_fw_start_setting_2:0 "§G无尽群星§!开局设置：其他内容"
+ z_fw_start_setting_2_desc:0 "你已经开启了无尽群星框架，并决定使用框架自带的游戏内容。\n在这里你将对无尽群星以及其子mod中的核心内容进行前置设定，请将光标移动到每一个选项上停留，并仔细阅读每个选项的介绍。如果想要更改设定，直接点击选项。\n注意：使用§B右方滑动条§!。\n彩蛋，独立内容等，此类别下大部分设定无法在游戏中更改。"
  z_fw_start_setting_done:0 "已完成设定"
  z_fw_tips_start_setting_done:0 "完成设定后点击esc退出此菜单并初始化，你也可以在游戏中随时开启设置面板调整设定。"
+ z_fw_start_setting_next:0 "下一类设定"
  
  z_fw_start_title:0 "欢迎使用§G无尽群星§!"
- z_fw_start_desc:0 "§G无尽群星§!致力于§Y整合优质MOD§!，在使各MOD互相§Y兼容§!的基础下最大化发挥他们的功能。这将建立一个全新的游戏体系，而无尽群星框架和它所支持的子MOD则这是这个体系的基础。\n\n当前本框架自带的内容有§Y基础兼容补丁/星球人口上限/新战争理由/新地图模式/高级武器科技联动系统/动态难度系统/自动工程船/哨兵阵列开关/高级作弊系统/新遗珍与事件等§!，在设置面板点击LOGO可以开启框架设置来关闭或者开启这些功能。\n\n你的支持就是我前进的动力，我是作者§H小伞INFINI7E§!，我们的Q群§Bα群251840474和β群768522242§!，欢迎mod爱好者入驻。\n\n请将光标放置在每个开局设置选项按钮上以获得详细的介绍。"
+ z_fw_start_desc:0 "§G无尽群星§!致力于构建完整的新游戏体系，提升运行效率，添加全新内容，并对部分主力mod提供基础的兼容。\n\n当前本框架自带的内容有§Y基础兼容补丁/星球人口上限/新战争理由/新地图模式/高级武器科技联动系统/动态难度系统/自动工程船/哨兵阵列开关/高级作弊系统/新遗珍与事件等§!，在设置面板点击LOGO可以开启框架设置来关闭或者开启这些功能。\n\n你的支持就是我前进的动力，我是作者§H小伞§!，我们的Q群§Bα群6909692§!和β群251840474§!，欢迎mod爱好者入驻。\n\n请将光标放置在每个开局设置选项按钮上以获得详细的介绍。"
  
  z_fw1_misc.1.a1: "星辰大海的渴望§G已开启§!"
  z_fw1_misc.1.a1.tooltip: "这个物种热切地渴望着开拓疆土，获得$z_fw_r_monument$，会使游戏难度下降，适应于拥有高强度敌人的mod环境.星辰大海的渴望点数§G+6§!，母星获得人口增长buff。\n\n星辰大海的渴望点数可用于开启星球决策$z_fw_dec_desire_for_stars$或通过$z_fw_r_monument$发动大远征。"
@@ -355,16 +364,21 @@
 
 
 
-###_[极限作弊]    ########################################################################################
+###_[极限作弊]    cht_璀璨星图/cht_永恒星炬/cht_闪电之球 ########################################################################################
 
-###_璀璨星图
+###_[cht_璀璨星图]
 #_evts
- z_fw_r_co_choice_power.name:0 "§G璀璨星图§!: 模式选择."
- z_fw_r_co_choice_power.desc:0 "感受神怒吧，我们必须选择一种方式引爆这颗恒星. 马上，一切都将归于沉寂. 秩序会随着灭日的璀璨光芒回归这个星系."
- z_fw1_misc.31.a1:0 "引爆星核."
- z_fw1_misc.31.a2:0 "引爆星系内所有恒星的星核."
- z_fw1_misc.31.a3:0 "引爆附近星系内所有恒星的星核."
- z_fw1_misc.31.a4:0 "引爆星核并摧毁该星系所属的帝国."
+ z_fw_r_cht_co_choice_power.name:0 "§G璀璨星图§!: 模式选择."
+ z_fw_r_cht_co_choice_power.desc:0 "感受神怒吧，我们必须选择一种方式引爆这颗恒星. 马上，一切都将归于沉寂. 秩序会随着灭日的璀璨光芒回归这个星系."
+ 
+ z_fw1_misc.31.exp_executing:0 "当前星系正在被爆破中"
+ z_fw1_misc.31.plnt_random:0 "引爆随机天体"
+ z_fw1_misc.31.plnt_random_bh:0 "引爆随机天体并使其坍縮为黑洞"
+ z_fw1_misc.31.sstm:0 "引爆星系内所有天体"
+ z_fw1_misc.31.sstm_bh:0 "引爆星系内所有天体并使它们坍縮为黑洞"
+ z_fw1_misc.31.sstm_near:0 "引爆当前星系与附近星系内所有天体"
+ z_fw1_misc.31.cntr:0 "直接摧毁当前星系所属的文明"
+ 
  z_fw1_misc.313.name:0 "[LastKilledCountryName]被彻底毁灭了"
  z_fw1_misc.313.desc:0 "我们得知[LastKilledCountryName]已经被某种不知名的可怕力量彻底摧毁了，不到一个月的时间内，他们国土中的恒星相继爆发，让整个星空变得无比璀璨，只可惜他们自己也变成了光。他们珍贵的舰队，辉煌的巨建，繁荣的星球，如今连残骸都没有留下。而闪烁的超新星与天体的碎片交织在一起，构成了一副无比壮美的画面，令人陶醉。"
  z_fw1_misc.314.name:0 "[LastKilledCountryName]被彻底毁灭了"
@@ -377,9 +391,10 @@
 #_tooltips
  z_fw_r_celestial_orrey_not_activited:0 "璀璨星图§H未激活.§!"
  z_fw_r_celestial_orrey_activited:0 "璀璨星图已§G激活§!，在工程船§Y巨建建设面板§!指定定位坐标以引爆天体."
- z_fw_target_marker_co_ongoing:0 "该星系已存在一个璀璨星图信标或触发效果处于1个月冷却时间内."
- z_fw_target_marker_co_1_placement:0 "必须指定恒星."
- z_fw_target_marker_co_2_placement:0 "必须指定特殊天体，如黑洞，中子星等."
+ z_fw_tips_r_cht_co_executing:0 "星球毁灭正在进行中。"
+ z_fw_target_marker_cht_co_ongoing:0 "该星系已存在一个璀璨星图信标或触发效果处于1个月冷却时间内."
+ z_fw_target_marker_cht_co_1_placement:0 "必须指定恒星."
+ z_fw_target_marker_cht_co_2_placement:0 "必须指定特殊天体，如黑洞，中子星等."
 #_megastructures
  z_fw_mega_r_cht_co_tgt_marker_1:0 "星核爆破定位信标"
  z_fw_mega_r_cht_co_tgt_marker_1_DESC:0 "毁灭你，与你何干? 我们见证了太多文明的灰飞烟灭，无论多么辉煌的文化与成就，在无尽的群星面前也不过只是历史的尘埃."
@@ -389,15 +404,15 @@
  z_fw_mega_r_cht_co_tgt_marker_2_MEGASTRUCTURE_DETAILS:0 "指定一个特殊天体并触发引力冲击，一切都将灰飞烟灭."
 #_relic
  z_fw_r_celestial_orrey:0 "§G无尽群星§!：璀璨星图"
- z_fw_r_celestial_orrey_desc:0 "来自古老死灵王朝Oruscar的神秘设备，展示了一幅覆盖整个银河系的巨大星图网络，点击其中某一个亮点，一颗星球便会瞬间产生超新星爆发.\n§B哦吼，真是哪里不亮点哪里啊.§!"
- z_fw_r_celestial_orrey_effect:0 "开启它将在此后一年内开启全图视野，解锁巨建$z_fw_mega_r_cht_co_tgt_marker_1$和$z_fw_mega_r_cht_co_tgt_marker_2$，可以用于引爆任意的天体."
+ z_fw_r_celestial_orrey_desc:0 "来自古老文明“苍雪山”的强大武器，揭示了一幅覆盖整个银河系的巨大星图网络，点击其中某一个亮点，一颗星球便会瞬间产生超新星爆发。\n§B哦吼，真是哪里不亮点哪里啊.§!"
+ z_fw_r_celestial_orrey_effect:0 "如果$NAME_z_fw_tgt_r_cht_co_ship$不存在，开启它将在此后一年内开启全图视野与全部国界(已建立联系国家)，并获得一个$NAME_z_fw_tgt_r_cht_co_ship$。\n将$NAME_z_fw_tgt_r_cht_co_ship$跃迁到指定星系并选择摧毁星系的方式。"
 #_决策
  z_fw_dec_detonate_star:0 "§G璀璨星图§!: 引爆恒星"
  z_fw_dec_detonate_star_desc:0 "扰动这颗恒星的星核，使它迅速走向生命的终点并最后一次璀璨地绽放."
  z_fw_dec_detonate_star_effect:0 "这颗恒星将会被强制产生超新星爆发，摧毁星系内的一切存在. 根据恒星的质量，它可能会在几个月后坍缩为黑洞，中子星或者白矮星. 无论怎样，一切都将灰飞烟灭."
  
 
-###_永恒星炬
+###_[cht_永恒星炬]
 #_tooltips
  z_fw_r_cheat_quantum_beacon_effect:0 "开启永恒星炬将在10年内使舰队获得无尽的庇护，逃脱几率，宇航速度和跃迁效率大幅度提升，同时所有国家的边境将开放且获得全图视野。"
  z_fw_r_cheat_quantum_beacon_activited:0 "永恒星炬已§G激活§!"
@@ -515,6 +530,16 @@
  z_fw_mod_r_cht_fury_5_desc:0 "$z_fw_mod_r_cht_fury_1_desc$"
 
 
+###_[cht_闪电之球]
+ z_fw_r_cht_emp:0 "§G无尽群星§!：闪电之球"
+ z_fw_r_cht_emp_desc:0 "闪电之球，暗能量魔法球，使用时有一定几率触发净化，瞬间毁灭虚境召唤物...抱歉拿错剧本了。\n充满科技感的奇怪仪器，被噼啪作响的电弧缠绕着，以至于没人敢靠近观察它。不同于其他苍雪山造物，到处都洋溢着一股工业赛博朋克风格，下面可这一行小字，依稀可见：§B暗能量，无所不能！§!另外，还有一段使用说明：§Y当它被投放到目标地点，将会产生一股强烈的电磁脉冲，可以直接摧毁所有人工产物。另外由于能量耦合，对非现实世界的造物具有神奇的杀伤效果。§!"
+ z_fw_r_cht_emp_effect:0 "如果$NAME_z_fw_tgt_r_cht_emp_ship$不存在，开启它将在此后一年内开启全部国界(已建立联系国家)，并获得一个$NAME_z_fw_tgt_r_cht_emp_ship$。\n将$NAME_z_fw_tgt_r_cht_emp_ship$跃迁到指定星系将产生一次覆盖整个星系的磁暴，这将摧毁所有星系内可以产生残骸的船只，并留下残骸以供研究。"
+
+
+
+
+
+
 
 
 ###_[巨建拆解]    ########################################################################################
@@ -550,10 +575,12 @@
  z_fw_evt_mega_dismantle_done_desc:0 "古老而巨大的造物完全崩塌了，只有破碎的框架与星际尘埃诉说着它过去的传奇，而我们也从中回收了足够的合金。"
  z_fw_evt_mega_dismantle_plnt_ongoing:0 "此星系正在进行栖息地拆解"
  z_fw_evt_mega_dismantle_plnt_ongoing_desc:0 "在完成当前栖息地拆解工作之前我们无法拆解第二个栖息地。"
- 
- 
-#_[自我拆解]
+
+
+###_[自我拆解]
 #_evts
+ z_fw1_misc.flt_self_dismantle:0 "§G自我拆解§!\n将这只舰队作为目标摧毁，并回收上面的可逆向科技。\n注意，并不是所有船只的设备都是可以回收的。"
+ z_fw1_misc.flt_self_dismantle_no:0 "§G自我拆解§!\n当前无法使用，请在设置面板中开启。"
  z_fw1_misc.140.title:0 "确实要将这支舰队作为目标摧毁并进行拆解分析么？"
  z_fw1_misc.140.desc:0 "如果决定拆解这支舰队，请准备好军事舰队以便对其进行暴力拆解。拆解目标舰队将被拆除防御系统变得无比脆弱，但是请不要多次攻击，这会触发它的自动防御机制。"
  z_fw1_misc.140.a:0 "没错，让军事舰队做好准备！"
@@ -562,3 +589,25 @@
  z_fw_mod_cntr_self_dismantle:0 "§G拆船者§!"
  z_fw_mod_cntr_self_dismantle_desc:0 "快，拆了它！"
  mod_damage_vs_country_type_z_fw_npc_temp_neutral_self_dismantle_mult:0 "提升对拆解目标的伤害"
+
+
+
+
+###_[tgt_目标定位器] ########################################################################################
+ z_fw_shpsz_target_0:0 "目标定位器"
+ Z_FW_CMPT_DRIVE_MISC_0:0 "超空间定位装置"
+ Z_FW_CMPT_DRIVE_MISC_0_DESC:0 "暗能量科技の产物，通过速子信号瞬间标记一个星系的位置。"
+ 
+ 
+#_[misc_船]
+ z_fw_shpsz_constructor:0 "动态靶舰"
+ Z_FW_SHPSEC_CONSTRUCTION_SECTION:0 "核心"
+ NAME_z_fw_autostation_ship_moving:0 "动态靶舰"
+ Z_FW_CMPT_COMP_MISC_FLEE:0 "测试用逃逸战术"
+ Z_FW_CMPT_COMP_MISC_FLEE_DESC:0 "到处乱窜。"
+ 
+ 
+###_[舰船行为]
+ z_fw_shpbh_test_flee:0 "测试行为(逃逸)"
+ Z_FW_SHPBH_TEST_FLEE:0 "到处乱窜。"
+ 

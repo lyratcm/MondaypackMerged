@@ -22,18 +22,29 @@
  z_modmenu_test_8: "10级科考古学家"
  z_modmenu_test_9: "在母星系恒星基地创建战斗测试靶机"
  z_modmenu_test_10: "在母星系恒星基地创建超级测试靶机"
+ z_modmenu_test_10_flee: "在母星系恒星基地创建动态超级测试靶机"
  z_modmenu_test_11: "event_target"
  z_modmenu_test_species_kayrl_dominantion: "主物种设置/当前主物种为[root.species.GetName]"
  z_test_cntr_var_pass: "传递参数[root.z_fw_core_battle_dd_execute_var]"
  
  z_modmenu_test_enemy_1: "母星-创建敌对测试舰队-肃正协议"
+ z_modmenu.trigger_var: "人口总量"
+ z_modmenu.trigger_var_desc: "[root.z_mm_var_cntr_test_num_pops]"
+ z_modmenu.timing_order: "时序测试"
+ z_modmenu.timing_order_desc: "基数[root.z_mm_var_cntr_timing_base]\n加数[root.z_mm_var_cntr_timing_add]\n\n若为依次进行，结果应为0/+n\n若为同时进行，结果应为10-n/0"
 
 
 
 
 ###_[欢迎致辞]
- z_mm_tips_misc_welcome: "欢迎使用无尽群星！\n全新的§Y无尽整合§!在制作中，将带来全新的玩法和流畅的优化，敬请期待，加群§Y8830598§!参与测试或汇报BUG。\n也可以加群§Y251840474§!交流游戏心得并提出建议。"
- z_ic_tips_main:0 "讨论群§Y251840474§! 畅玩群§Y8830598§! B站搜索§Y小傘のInfini7e§!"
+ z_mm_tips_misc_welcome: "欢迎使用无尽群星！\n新的战斗特效mod与产业革命2正在制作中\n群6909692/251840474"
+ z_ic_tips_main:0 "讨论群§Y251840474§! 粉丝群§Y6909692§! B站搜索§Y小傘の§!"
+ z_ic_tips_subtitle:0 "小傘の无尽群星"
+ 
+ z_mm_tips_intro_welcome: "欢迎使用无尽群星！"
+ z_mm_tips_intro_rate: "想要支持作者请在mod页面点赞收藏，也可作者！"
+ z_mm_tips_intro_wip: "产业革命3.0正在制作中，将带来全新的人力经济体系..."
+ z_mm_tips_intro_chat:0 "讨论群§Y251840474§! 粉丝群§Y6909692§! B站搜索§Y小傘の§!"
 
 ###_[作者]
  z_modmenu.141.name: "§G无尽群星：§!作者信息"
@@ -62,6 +73,7 @@
 
 ###_[框架模式选择]
  z_mm_tip_intro_welcome: "选择模式，开始群星之旅！"
+ z_mm_tip_intro_welcome_debug: "请注意，§G无尽群星§!开局设置执行期间禁止开启星球或舰队界面，否则设置无法继续进行，如果开启请关闭。强行设置可能会出现初始参数错误。"
  
  z_modmenu_start_mode_choose: "§G无尽群星§!模式选择"
  z_mm_tips_framework_modmenu: "\n\n此模式将不会开启§B无尽群星框架§!，仅将本mod作为联动mod的快捷设置面板，除了新增地图模式外不启用任何§B无尽群星框架§!的功能。如果你要在游戏过程中重新开启框架自带功能，请在设置面板点击LOGO进入§B框架设置§!，并开启框架。\n\n如果选择此模式，请在接下来的开局设置中仔细查看各个选项。"
@@ -198,7 +210,7 @@
  z_modmenu.13.c2:0 "无尽群星框架§H已禁用§!"
  z_modmenu.13.c2.tooltip:0 "$z_modmenu.13.c1.tooltip$"
  z_modmenu.13.c3:0 "获取初始科技"
- z_modmenu.13.c3.tooltip:0 "无尽群星的体系会将一些非初始科技设定为开场获取，如自动探索."
+ z_modmenu.13.c3.tooltip:0 "$z_fw_tech_core_start_boost$"
  z_modmenu.13.c4:0 "刷新无尽群星彩蛋遗珍"
  z_modmenu.13.c4.tooltip:0 "无尽群星的原创遗珍将初始化并散布于星系中，这个功能只能使用一次."
  z_fw_evt_r_koh_plague_enabled:0 "猎头鼬自发性传染§G已启用§!"
@@ -245,9 +257,9 @@
  z_modmenu.133.a2: "沉浸战场：战术机动 §G已启用§!"
  z_modmenu.133.a2.tooltip: "启用战速调整，进入战斗状态后舰船移速减半，与巡航速度拉开差距。"
  z_modmenu.133.b1: "舰船配件科技联动 §H已关闭§!"
- z_modmenu.133.b1.tooltip: "关闭科技联动。\n\n§Y注意：如果你不清楚这项功能意味着什么，请启用科技联动。"
+ z_modmenu.133.b1.tooltip: "关闭科技联动。\n\n§Y注意：如果你不清楚这项功能意味着什么，请启用科技联动。§!"
  z_modmenu.133.b2: "舰船配件科技联动 §G已启用§!"
- z_modmenu.133.b2.tooltip: "启用科技联动，部分武器配件科技解锁后将自动解锁同科技等级的同类型武器配件科技，如果你已经解锁当前科技的必要前置条件。比如当你获得了ACOT的α激光武器，那么ESC3.0的高级激光武器将自动解锁。\n\n§Y当前支持ESC3.0与ACOT。"
+ z_modmenu.133.b2.tooltip: "启用科技联动，部分武器配件科技解锁后将自动解锁同科技等级的同类型武器配件科技，如果你已经解锁当前科技的必要前置条件。比如当你获得了ACOT的α激光武器，那么ESC3.0的高级激光武器将自动解锁。\n\n§Y当前支持ESC3.0与ACOT。§!"
  
  z_modmenu.133.c1: "溢出清理器 §H已关闭§!"
  z_modmenu.133.c1.tooltip: "不清理数据溢出单位。"
@@ -304,7 +316,7 @@
  
 #_evts z modmenu misc
  z_modmenu.130.name:0 "获得究极遗珍"
- z_modmenu.130.desc:0 "获得$z_fw_r_celestial_orrey$，$z_fw_r_cheat_quantum_beacon$，$z_fw_r_cheat_hyper_blade$，$z_fw_r_cheat_mega_sword$和$z_fw_r_cheat_fury$。"
+ z_modmenu.130.desc:0 "获得$z_fw_r_celestial_orrey$，$z_fw_r_cheat_quantum_beacon$，$z_fw_r_cheat_hyper_blade$，$z_fw_r_cheat_mega_sword$，$z_fw_r_cheat_fury$和$z_fw_r_cht_emp$。"
  z_modmenu.not_host:0 "你不是主机"
  z_modmenu.not_host.desc:0 "只有主机才能被允许使用这个选项。"
  z_modmenu.131.name:0 "作弊者出现"
@@ -320,8 +332,8 @@
  z_mm_tips_autostation_desc: "§Y能量币§!收入>§G5§!"
  z_mm_full_sensor_desc: "§B全图视野开关§!：\n\n可选择开启或者关闭全图视野，当然只在你拥有类似§Y哨兵阵列§!这样可以开启全图传感器的条件下才能生效。\n\n注意：全图视野会导致处在银河地图模式下的严重丢帧，因为系统要计算的UI对象太多。" 
  z_mm_full_sensor_desc: "§B护国神盾-网道开关§!：\n\n可选择开启或者关闭网道系统，在恒星基地建造§Y$sm_warp_fluctuator$§!将允许舰队进入网道系统，快速穿梭于你的领地。\n\n注意：每次有舰队通过网道都会消耗能量。"
- z_mm_pf_manual_job_check_button: "$edict_z_performance_manual_edt$\n$edict_z_performance_manual_edt_desc$\n\n对所有国家进行§B产业革命§!检测\n将会统计§B产业参数§!，并进行§H人口/人力转化§!。"
- z_mm_pf_manual_job_own_button: "$edict_z_pf_edt_manual_own$\n$edict_z_pf_edt_manual_own_desc$\n\n对自己进行§B产业革命§!检测\n将会统计§B产业参数§!，并进行§H人口/人力转化§!。"
+ z_mm_pf_manual_job_check_button: "对所有国家进行一次手动人口迁移，将失业人口输送到有空岗位的世界。每颗星球最多迁移25人口，星球人口迁移设定会影响结果。\n注意，这是全局行为，可能会卡一段时间。\n\n对所有国家进行§B产业革命§!检测\n将会统计§B产业参数§!，并进行§H人口/人力转化§!。"
+ z_mm_pf_manual_job_own_button: "进行一次手动人口迁移，将失业人口输送到有空岗位的世界。每颗星球最多迁移25人口，星球人口迁移设定会影响结果。\n\n对自己进行§B产业革命§!检测\n将会统计§B产业参数§!，并进行§H人口/人力转化§!。\n国家手动迁移每人口消耗§G25§!£energy£§Y$energy$§!，§Y$energy$§!不足的情况下不会执行迁移命令。"
  z_mm_pf_manual_job_checking: "当前手动工作检测中."
  z_mm_pf2_merge_ai_species_button: "$z_performance_misc.11.f1$\n$z_performance_misc.11.f1.tooltip$"
  z_mm_pf2_ai_species_merging: "当前物种合并中."
@@ -335,7 +347,7 @@
 
 ###_SUB MODULES
  z_mm_performance_desc: "§G无尽群星§!: 人口检测优化\n一个优化人口检测模式的mod，提升后期游戏速度，无尽群星子mod."
- z_mm_pf2_desc: "§G无尽群星§!: 额外优化\n一个对游戏进行全方位优化的mod，提升后期游戏速度，无尽群星子mod."
+ z_mm_pf2_desc: "§G伞の优化§!\n一个对游戏进行全方位优化的mod，提升后期游戏速度，提供多种便利功能."
  z_mm_statistic_desc: "§G无尽群星§!: 数据统计\n一个对游戏关键数据进行统计的mod，为优化和debug提供参考，无尽群星子mod."
  z_mm_cm_desc: "§G无尽群星§!: 天灾之主\n一个强大的天灾管理器和天灾拓展mod，让天灾与天堂之战更具挑战性和趣味性，无尽群星子mod."
  z_mm_lctr_desc: "§G无尽群星：§!高级定位器\n一个强大的星系定位系统，可以将含有特定目标的星系以兴趣点的方式显示在银河系地图上，这将使你很方便的寻找一些特殊的星系，请在开启子模块菜单后按照介绍操作。"
@@ -381,6 +393,7 @@
  z_mm_tips_sp_wsg_shimakaze: "只有拥有岛风以后才能使用。"
  
  z_mm_sp_uap_desc: "§B独特飞升天赋§!设置\n增加了一些很有特点的新飞升，想获取此mod在steam搜索Unique Ascension Perks。"
+ z_mm_sp_iisc_desc: "§BInterstellar Incorporated: Space Corp§! 设置\n创造了一个生动的太空经济系统，包括可视的贸易舰队。"
  z_mm_sp_complex_potv_desc: "§BPantheons of the Void§! 宗教树\n在此mod中，您将能够在帝国创建屏幕中选择您的宗教系统，此选择将确定您的帝国支持的信仰。信仰或宗教系统从无神论到泛灵论。"
  z_mm_sp_bcm_desc: "§BBetterCheats§! 更好的作弊菜单\n你将会拥有多种新的作弊选项，几乎涵盖任意一个资源种类和游戏范畴。"
  z_mm_sp_ace_desc: "§BAggressive Crisis Engine§! \n提升天灾的攻击性，可能与天灾之主冲突。"
@@ -395,7 +408,7 @@
  
  z_mm_tips_csp_misc_fleet_dismantle_on: "舰队自沉：§G已启用§!"
  z_mm_tips_csp_misc_fleet_dismantle_off: "舰队自沉：§H已关闭§!"
- z_mm_tips_csp_misc_fleet_dismantle: "舰队自沉功能：启用以后选中任意舰队命令其移动到母星轨道（移动命令点击母星），在弹出事件中选择设置为目标。设置完成后舰队将成为中立目标并添加脆弱buff，使用任意己方舰队摧毁这支舰队将产生残骸并允许逆向工程。"
+ z_mm_tips_csp_misc_fleet_dismantle: "舰队自沉功能：启用以后选中任意舰队命令其移动到母星轨道（移动命令点击母星），在弹出事件中选择设置为目标。\n如果你安装了§B暗蓝科技UI§!，那么选中舰队后在舰队面板中将添加一个自沉按钮。\n设置完成后舰队将成为中立目标并添加脆弱buff，使用任意己方舰队摧毁这支舰队将产生残骸并允许逆向工程。"
  
  z_mm_tips_csp_misc_edt_show: "联动mod菜单法令：已设为§G显示§!"
  z_mm_tips_csp_misc_edt_hide: "联动mod菜单法令：已设为§H隐藏§!\n\n部分mod的设置菜单法令被隐藏，以保持法令列表的整洁。"

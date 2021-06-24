@@ -1,16 +1,17 @@
 ﻿l_english:
+l_english:
 
  INSULT_PROPOSE_COL_IND:0 "Is the [Root.GetName] even a real nation or just an anarchic gaggle of quarreling individuals? You must forgive me, but your political system, such as it is, makes it hard to tell."
  02_INSULT_PROPOSE_COL_IND:0 "So who is it that rules your amusing little star nation today? What a quaint notion, to "vote" someone into power! It will inevitably lead to your collapse, of course."
  03_INSULT_PROPOSE_COL_IND:0 "Your democratic ideals are a blight on this galaxy, and so is the [Root.GetName]."
- 04_INSULT_PROPOSE_COL_IND:0 "What a selfish people you are, preferring petty freedoms to order and stability. Libertarianism... ha! The [Root.GetName] will not survive the year."
+ 04_INSULT_PROPOSE_COL_IND:0 "What a selfish people you are, preferring petty "freedom" to order and stability. Libertarianism... ha! The [Root.GetName] will not survive the year."
  01_INSULT_PROPOSE_IND_COL:0 "Your brutal, tyrannical regime will eventually fall, and there will be a reckoning."
  02_INSULT_PROPOSE_IND_COL:0 "Have you even considered the notion of letting your citizens think for themselves? If you are frightened that it would lead to the end of the [Root.GetName]... you are right."
  03_INSULT_PROPOSE_IND_COL:0 "How sad that a authoritarian nation such as the [Root.GetName] can exist. It is an embarrassment to sentient beings everywhere."
  04_INSULT_PROPOSE_IND_COL:0 "The cruel oppression of the people living under the yoke of the [Root.GetName] has to end one day. Your hierarchy will prove your undoing."
  16_FRIENDLY_GREETING:0 "Your government does a good job of curtailing the worst excesses of libertarianism, [From.GetSpeciesNamePlural]."
  14_FRIENDLY_GREETING:0 "While we prefer free societies, we cannot deny that your government does a good job of providing stability to your citizens."
- ENSLAVED_DESC:0 "This Pop is enslaved. Enslaved Pops generates unhappiness for all Libertarian Pops on this planet."
+ ENSLAVED_DESC:0 "This Pop is enslaved. Enslaved Pops generate unhappiness for all Libertarian Pops on this planet."
  COL_LABEL:0 "Authoritarian <-> Libertarian"
 
  ethic_collectivist:0 "Authoritarian"
@@ -22,27 +23,28 @@
  ethic_fanatic_egalitarian:0 "Fanatic Libertarian"
  ethic_fanatic_individualist_desc:1 "§LPower does not just corrupt; it is, itself, corruption. All power imbalances are fundamentally coercive by the nature of power. True freedom and justice can only be obtained through equality.§!\n"
 
-
+###Main Menu
+ABOUTTHISMOD:0 "§HAbout This Mod Pack§! \nClick here for information on what's in the mod pack"
 
  personality_utopia_builders:0 "Utopia Builders"
- personality_utopia_builders_desc:0 "Utopia Builders values the economical and social prosperity of their species above everything else. The government, no matter of it's size, exist to make sure that nobody suffers from ant kind of need, sickness or poverty."
+ personality_utopia_builders_desc:0 "Utopia Builders value the economical and social prosperity of their species above everything else. The government, no matter of it's size, exist to make sure that nobody suffers from ant kind of need, sickness or poverty."
 
- personality_adventurous_expansionist:0 "Aggressive Expansionist"
- personality_adventurous_expansionist_desc:0 "Aggressive Expansionists see the Galaxy as their legacy. They mostly focused on spreading their influence to every dark corner of Space they are able to reach out."
+ personality_adventurous_expansionist:0 "Aggressive Expansionists"
+ personality_adventurous_expansionist_desc:0 "Aggressive Expansionists see the Galaxy as their legacy. They mostly focus on spreading their influence to every dark corner of space they are able to reach."
 
- personality_paranoid_isolationists:0 "Paranoid Isolationist"
- personality_paranoid_isolationists_desc:0 "Paranoid Isolationists's goal is to completely isolate themselves from the outside world. They mind their own business and prefer everybody else to do just the same."
+ personality_paranoid_isolationists:0 "Paranoid Isolationists"
+ personality_paranoid_isolationists_desc:0 "Paranoid Isolationists wish to completely isolate themselves from the outside world. They mind their own business and would prefer everybody else did the same."
 
-#  ethic_industrial:0 "Industrialist"
-#  ethic_fanatic_industrial:0 "Fanatic Industrialist"
-#  ethic_industrial_desc:1 "§LResponsive and efficient infrastructural development is a hallmark of any advanced society. Special attention must be paid to managing our workers in order to ensure future economic prosperity. The costs we incur along the way are well worth it to secure a comfortable future for our kind.§!\n"
-#  ethic_fanatic_industrial_desc:1 "§LThrough our ingenuity and persistence, we are capable of raising wealth from dust, of bending the very forces of nature to our will. At our command, the planets relinquish their riches and our magnificent factories guzzle them up. This power cannot be denied, and through it we shall remake the galaxy in our own image.§!\n §HRecycling Campaign§! is not available."
-
-#  ethic_green_desc:1 "§LThe worth of a species lies in its commitment to sustaining the bounty of nature for subsequent generations. Our stewardship may not always meet these lofty ideals, but as we reach out for the stars we would do well to remember our obligations to posterity. §!\n"
-#  ethic_fanatic_green_desc:1 "§LOur musicians cannot compose a melody so profound as the songs of wildlife and the whispers of the trees. Our artists cannot capture the ineffable majesty of mountain tops, secluded lakes, or vast caverns. Whether by design or by chance, we have been born into a universe of transcendent natural beauty; no cost is too high to secure its continued preservation.§!\n"
-
-
-
+#######WAR GOALS (FALLEN)#######
+war_goal_wg_convert:0 "Dominion"
+war_goal_wg_convert_desc:0 "War is waged in order to add the defending empire into the attackers Dominion."
+war_goal_wg_enthrall:0 "Enthrall"
+war_goal_wg_enthrall_desc:0 "War is waged in order to Enthrall the defender into the attackers empire."
+war_goal_wg_satellite:0 "Satellite"
+war_goal_wg_satellite_desc:0 "War is waged in order to add the defending empire into the attackers Satellite."
+war_goal_wg_sign:0 "Signatory"
+war_goal_wg_sign_desc:0 "War is waged in order to add the defending empire into the attackers Signatory."
+#######WAR GOALS (FALLEN)#######
 
  elite_cyborg_army:0 "Elite Cyborg Army"
  elite_cyborg_army_plural:0 "Elite Cyborg Armies"
@@ -780,7 +782,7 @@
 
  START_SCREEN_PART_TWO_POLICE_STATE:0 "За века разногласий и распрей внутри общества, мы пришли к выводу, что нам нужна централизованная верховная власть, а безопасность граждан и контроль преступлений должны осуществляться силами военных и полицейских. В конце концов мы объединились под железным крылом планетарного государства, которое обеспечит нам достойное будущее, благодаря тотальному надзору и пресечению любого правонарушения."
 
- START_SCREEN_PART_TWO_ECO_DEMOCRACY:0 "Постепенно наше общество пришло к понимаю того, что природа бесценна. Мы основали демократическое планетарное государство, основанное на принципах защиты неприкосновенности флоры и фауны. Мы ценим то, что дает нам природа, и платим ей тем же. Идя в будущее с гармонией в сердцах, мы позаботимся не только о своем мире, но и обо всей галактике."
+ START_SCREEN_PART_TWO_ECO_DEMOCRACY:0 "Постепенно наше общество пришло к понимаю того, что природа бесценна.  Мы основали демократическое планетарное государство, основанное на принципах защиты неприкосновенности флоры и фауны. Мы ценим то, что дает нам природа, и платим ей тем же. Идя в будущее с гармонией в сердцах, мы позаботимся не только о своем мире, но и обо всей галактике."
 
  START_SCREEN_PART_TWO_DRONE_COA:0 "For the long ages our people have been suffering from tyranny and oppression.In order to ratore the justice we - the working class - rose and established hte Planetary government, with the labour union as it's core. From now on the State is going to care about the people, providing the decent salary and life quality for everyone. United as one we can reach an unprecedented height."
 
@@ -828,13 +830,12 @@
  personality_paranoid_isolationists:0 "Paranoid Isolationist"
  personality_paranoid_isolationists_desc:0 "Paranoid Isolationists's goal is to completely isolate themselves from the outside world. They mind their own business and prefer everybody else to do just the same."
 
- ethic_industrial:0 "Industrialist"
- ethic_fanatic_industrial:0 "Fanatic Industrialist"
- ethic_industrial_desc:1 "§LRapid and efficient infrastructure development is a fundamental necessity in any civilized society. Special attention must be paid to our workers in order to ensure future economic prosperity. Whatever cost we incur is a small price for the future we assure ourselves.§!\n"
- ethic_fanatic_industrial_desc:1 "§LThrough our inventions, we are capable of raising civilization from dust and bending the forces of nature to our will. At our command, the planets relinquish their riches and magnificent factories scoop them up. This power demands to be used, and through its use, we shall remake the galaxy in our own image.§!\n §HRecycling Campaign§! is not available."
+ ethic_industrial:0 "Industrialism"
+ ethic_fanatic_industrial:0 "Fanatic Industrialism"
+ ethic_fanatic_industrial_desc:1 "§LThrough our inventions, we were capable of raising Civilization from dust and bending the forces of nature to our will. At our command, the other planets will relinquish their riches and magnificent factories scoop them up. This power demands to be used, and through its use, we shall remake the galaxy in our own image.§!\n Edict §YRecycling Campaign§! is not available."
 
-#  ethic_green_desc:1 "§LThe true values of a planet lie in its natural resources: its atmosphere, its flora and fauna, and its landscape. Our success so far lies in our ability to preserve and maintain these assets, whilst at the same time benefitting economically and societally from them. These biological systems are the sustaining wealth of any civilisation, and we would do well to remember that. §!\n"
-#  ethic_fanatic_green_desc:1 "§LOur musicians cannot compose a melody so profound as the songs of wildlife and the whispers of the trees. Our artists cannot capture the ineffable majesty of mountain tops, secluded lakes, or vast caverns. Whether by design or by chance, we have been born into a universe of transcendent natural beauty.§!\n"
+ ethic_green_desc:1 "§LThe true values of a planet lie in its natural resources: its atmosphere, its flora and fauna, and its landscape. Our success so far lies in our ability to preserve and maintain these assets, whilst at the same time benefitting economically and societally from them. These biological systems are the sustaining wealth of any civilisation, and we would do well to remember that. §!\n"
+ ethic_fanatic_green_desc:1 "§LOur musicians cannot compose a melody so profound as the songs of wildlife and the whispers of the trees. Our artists cannot capture the ineffable majesty of mountain tops, secluded lakes, or vast caverns. Whether by design or by chance, we have been born into a universe of transcendent natural beauty.§!\n"
 
 
 
@@ -969,15 +970,15 @@
 
 
 
- civic_tooltip_green:0 "Is some degree of §YEcologist§!"
- civic_tooltip_not_green:0 "Is not §YEcologist§!"
- civic_tooltip_industrial:0 "Is some degree of §YIndustrialist§!"
- civic_tooltip_not_industrial:0 "Is not §YIndustrialist§!"
+ civic_tooltip_green:0 "Is some degree of §YEcologism§!"
+ civic_tooltip_not_green:0 "Is not §YEcologism§!"
+ civic_tooltip_industrial:0 "Is some degree of §YIndustrialism§!"
+ civic_tooltip_not_industrial:0 "Is not §YIndustrialism§!"
 
- civic_tooltip_elitist:0 "Is some degree of §YElitist§!"
- civic_tooltip_not_elitist:0 "Is not §YElitist§!"
- civic_tooltip_pluralist:0 "Is some degree of §YEgalitarian§!"
- civic_tooltip_not_pluralist:0 "Is not §YEgalitarian§!"
+ civic_tooltip_elitist:0 "Is some degree of §YElitism§!"
+ civic_tooltip_not_elitist:0 "Is not §YElitism§!"
+ civic_tooltip_pluralist:0 "Is some degree of §YPluralism§!"
+ civic_tooltip_not_pluralist:0 "Is not §YPluralism§!"
 
 
  ETHIC_HAPPY_FACTIONS_2:0 "§EAll Factions, except §HTotalitarian§!, get §G+5§! §HHappiness§!"
@@ -991,19 +992,19 @@
  edict_voice_people_desc:0 " "
 
  pft_bankers:0 "Entrepreneurs Faction"
- pft_bankers_desc:1 "Entrepreneurs Factions represent the interests of private Entrepreneurs and Corporations, and generally concerned with the development of market economy in the frame of fair and just competition.\n\n§LCompetitive ethos§!"
- pft_socialists:0 "Socialists Faction"
- pft_socialists_desc:1 "Socialists Factions represent the interests of working class people and desire a complete non-discrimination within existing social structures.\n\n§LCooperative ethos§!"
- pft_manufacturers:0 "Manufacturers Faction"
- pft_manufacturers_desc:1 " "
- pft_labourites:0 "Labourites Faction"
- pft_labourites_desc:1 "Labourites Factions represent the interests of working class and desire non-discrimination within existing social structures.\n\n§LEgalitarian ethos§!"
+ pft_bankers_desc:1 "Entrepreneurs Factions represent the interests of private entrepreneurs and corporations, who are mainly concerned with the development of market economy  in the frame of fair and just competition.\n\n§LCompetitive ethos§!"
+ pft_socialists:0 "Laborists Faction"
+ pft_socialists_desc:1 "Laborist Factions represent the interests of working class people and generally vows for the cooperative ownership of the means of production and fair re-distribution of wealth.\n\n§LCooperative ethos§!"
+ pft_manufacturers:0 "Industrialists Faction"
+ pft_manufacturers_desc:1 " \n\n§LIndustrialism ethos§!"
+ pft_labourites:0 "Pluralists Faction"
+ pft_labourites_desc:1 " \n\n§LPluralism ethos§!"
  pft_environmentalists:0 "Environmentalists Faction"
- pft_environmentalists_desc:1 " "
- pft_conservatives:0 "Aristocratic Faction"
- pft_conservatives_desc:0 " "
-
- pft_progressive_desc:1 "Progressive Factions favor personal freedoms and dislike non-democratic forms of government.\n\n§LLibertarian ethos§!"
+ pft_environmentalists_desc:1 " \n\n§LEcologism ethos§!"
+ pft_conservatives:0 "Elitists Faction"
+ pft_conservatives_desc:0 " \n\n§LElitism ethos§!"
+ pft_progressive:1 "Democratic Faction"
+ pft_progressive_desc:1 "Democratic Factions favor personal political freedoms, reduction of central government authority and dislike non-democratic forms of government in general.\n\n§LLibertarian ethos§!" 
 
  policy_mass_media:0 "Mass Media"
 
@@ -1131,7 +1132,7 @@ PARLIAMENTARY_SYSTEM_DESC:0 "Political Factions are happier in Empires with deve
 
 SOCIAL_SECURITY:0 "Social Inequality"
 NO_SOCIAL_SECURITY:0 "Social Inequality"
-SOCIAL_SECURITY_DESC:0 "Setting up §YStratified§! or §YAcademic Privelege§! living standards displeases the [Root.GetName]."
+SOCIAL_SECURITY_DESC:0 "Setting up §YNormal§!, §YStratified§! or §YAcademic Privelege§! living standards displeases the [Root.GetName]."
 
 HUMANITARIAN_SCIENCE:0 "Healthcare Subsidies"
 NO_HUMANITARIAN_SCIENCE:0 "No Healthcare Subsidies"
@@ -1178,13 +1179,13 @@ OWN_ANCIENT_TECH:0 "Ancient Tech World"
 NO_OWN_ANCIENT_TECH:0 "Ancient Tech World"
 OWN_ANCIENT_TECH_DESC:0 "Owning a world with any kind of ancient industrial technology will please the [Root.GetName]."
 
-INDUSTRY_ASCENSION_1:0 "Traditional Galactic Engineering"
-NO_INDUSTRY_ASCENSION_1:0 "Traditional Galactic Engineering"
-INDUSTRY_ASCENSION_1_DESC:0 "Adopting §YGalactic Wonders§! or §YCircle of Life§! tradition will please the [Root.GetName]."
+INDUSTRY_ASCENSION_1:0 "Galactic Engineering"
+NO_INDUSTRY_ASCENSION_1:0 "Galactic Engineering"
+INDUSTRY_ASCENSION_1_DESC:0 "Adopting §YGalactic Wonders§! ascension perk will please the [Root.GetName]."
 
 INDUSTRY_ASCENSION_2:0 "Glorious Galactic Engineering"
 NO_INDUSTRY_ASCENSION_2:0 "Glorious Galactic Engineering"
-INDUSTRY_ASCENSION_2_DESC:0 "Adopting §YMaster Builders§! tradition will please the [Root.GetName]."
+INDUSTRY_ASCENSION_2_DESC:0 "Adopting §YMaster Builders§! ascension perk will please the [Root.GetName]."
 
 INDUSTRY_POLICY:0 "Industrial Economic Focus"
 NO_INDUSTRY_POLICY:0 "Set Up Industrial Economic Focus"
@@ -1500,9 +1501,6 @@ PROGRESSIVE_CASTE:0 "$PROGRESSIVE_NO_CASTE$"
  building_biofuel_plant:0 "Bio-fuel Refinery"
  building_biofuel_plant_desc:0 "This facility houses industrial-grade equipment designed to isolate and extract compounds from various plants and crops. Such compounds are further studied and applied in industry, such as biofuels, crop development and natural health products."
 
-#  ethic_green:0 "Ecologist"
-#  ethic_fanatic_green:0 "Fanatic Ecologist"
-
  civic_drone_brotherhood:0 "Drone Brotherhood"
  civic_drone_brotherhood_desc:0 "In this society working-class people (those, who engaged in low-tech industries) are traditionally glorified and form a global community, based on idealistic principles of collectivism and equality. £building  §YFarms§! and §YMines§! produce §Y0.2§! £unity  Unity each."
 
@@ -1513,14 +1511,15 @@ PROGRESSIVE_CASTE:0 "$PROGRESSIVE_NO_CASTE$"
 
 
 
+
  civic_nationalism:0 "Nationalism"
  civic_nationalism_desc:0 "A strong sense of nationalistic superiority and pride permeates all layers of this society. Traditions of §HUnity§! become unavailable for adoption."
 
 
 
 
-#  civic_private_property:0 "Energy Syndicate"
-#  civic_private_property_desc:0 "Market needs huge amount of energy to grow up! In order to enhance it's development, government privatize a significant part of it's generation facilities, to become a part of efficient Free Market economy.  £building  §Y$building_power_hub_1$§! and £building  §Y$building_power_hub_2$§! also produce §Y1§! £unity Unity."
+ civic_private_property:0 "Energy Syndicate"
+ civic_private_property_desc:0 "Market needs huge amount of energy to grow up! In order to enhance it's development, government privatize a significant part of it's generation facilities, to become a part of efficient Free Market economy.  £building  §Y$building_power_hub_1$§! and £building  §Y$building_power_hub_2$§! also produce §Y1§! £unity Unity."
 
  civic_militia:0 "Private Military Corps"
  civic_militia_desc:0 "Corporate business in arms dealing and warfare has reached an influential position in this society and many aspects of maintaining the state military have been transferred to powerful corporations."
@@ -2164,7 +2163,7 @@ civic_hegemon_desc:0 "Imperialistic Empire deals with it's Subjects from a posit
  ethic_fanatic_socialism:0 "Fanatic Cooperative"
 
  ethic_socialism_desc:0 "§LTeamwork is the engine of progress. Laboring side by side, we become something more than the sum of our parts: a great, living organism, with each of us a cell. To diligently perform the tasks we are given is all that is ever asked of us; to contribute to the greater good is all that is all that we ever ask of ourselves.§!\n"
- ethic_fanatic_socialism_desc:0 "§LThere is no greater imperative than the call to find one's place in the great labor, to give of oneself, to share in the common fruit. To selfishly accumulate wealth, land, or machines - these are tumorous symptoms within the body politic. Rather, it is the burden we share in caring for the young, the old, and the sick that together makes us strong, that together makes us one.§!"
+ ethic_fanatic_socialism_desc:0 "§LThere is no greater imperative than the call to find one's place in the great labor, to give of oneself, to share in the common fruit. To selfishly accumulate wealth, land, or machines - these are tumorous symptoms within the body politic. Rather, it is the burden we share in caring for the young, the old, and the sick that together makes us strong, that together makes us one.§!\n"
 
  ethic_egalitarian_desc:1 "§LLibertarians preserve democratic values, with citizens being directly involved in the governing process through the mecahnisms of either representative or direct democracy.§!\n"
  ethic_fanatic_egalitarian_desc:1 "§LFanatic Libertarians stand for a general reduction of central bureaucratic authority and maximum political autonomy and self-governance.§!\n"
@@ -2348,7 +2347,7 @@ allow_edict_doctrine_loyalty:0 "Unlocks country edict §YDoctrine: Thought Contr
 
 
  gov_jingoism:0 "Jingoistic Regime"
-#  gov_jingoism_desc:0 "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics."
+ gov_jingoism_desc:0 "This form of authoritarian governance is headed by a xenophobic demagogue and notions of national supremacy and manifest destiny dominate the politics."
 
  observation.0002.name:0 "[From.GetSpeciesAdj] Societal Shift"
  observation.0002.start.desc:0 "Our agents operating clandestinely in orbit around and on the surface of [From.Capital.GetName] have met with success. Their efforts have shifted the societal values of the [From.GetName] in a direction favored by us."
@@ -2387,7 +2386,7 @@ civic_tribal_aristocracy_desc:0 "This society is a subject to a strict form of s
 civic_noble_aristocracy:0 "Philosopher Kings"
 civic_noble_aristocracy_desc:0 "This society is guided by an idealistic form of aristocracy, morale and intellectual elite, ruling on meritocratic principles."
 
-civic_military_demos_cratos: "Martial Brotherhood"
+civic_military_demos_cratos: "Patriotic Service"
 
 
 
@@ -2448,10 +2447,10 @@ civic_elite_troops_desc:0 "Government allocates significant resources for traini
  civic_meritocracy_desc:1 "The sole basis for advancement in this society is equal opportunity to demonstrate ability and effort. Thus, leadership positions are hold by the most qualified individuals."
 
  civic_beacon_of_liberty:0 "Spirit of Freedom"
- civic_beacon_of_liberty_desc:0 "This society glorifies an idea of individual liberty to exercise one's initiatives and completely fulfill his goals and ambitions. Reduction of central government authority and bureaucratic regulation, encourages free flow of people, trade goods and innovations all across the Empire.  \n\nStarts game with §YPrivate Colony Ship§!, can't use §YPlanned§! economy. §YResettlement§! and §YPopulation Control§! are not allowed, §YPersonal Weapons§! policy can't be set to disallowed, §YSocial Welfare§! living standards not available."
+ civic_beacon_of_liberty_desc:0 "This society idealizes personal liberty, holding above all else the right of the individual to pursue and fulfil their own goals and ambitions. The reduction of central government authority and bureaucratic regulation encourages innovation and the free flow of people, goods, and ideas across the nation. \n\nCan build §YPrivate Colony Ships§!, cannot use §YPlanned§! economy. §YResettlement§! and §YPopulation Control§! are not allowed, §YPersonal Weapons§! or §YDrugs§! policy cannot be set to disallowed. §YSocial Welfare§! living standards not available."
 
  civic_corporate_dominion:1 "Peaceful Traders"
- civic_corporate_dominion_desc:0 "Trade is a cornerstone of a successful economy, and peace is an essential condition for it. Merchants of the Empire have organized themselves into an alliance, for the purposes of mutual benefit and prosperity. \n\nBuilding §YOffworld Trading Company§! produce §Y4§! additional £trade_value£ Trade Value, module §YTrading Hub§! has §Y$MOD_STARBASE_TRADE_COLLECTION_RANGE_ADD$§! increased by §G+1§!. Starts with the §Y$tech_space_trading$§! technology already unlocked\n £job_merchant£ §Y$job_merchant_plural$§! also produce §Y1§! £unity£ Unity \n\nCan't set up §YMilitary Transportation§! policy"
+ civic_corporate_dominion_desc:0 "This society operates on a simple rule: peace is good for business. To that end, a significant portion of governance is controlled, influenced, or at the very least administered by a loose alliance of independent merchants and traders, working together to achieve mutual prosperity. \n\nBuilding §YOffworld Trading Company§! produce §Y4§! additional £trade_value£ Trade Value, module §YTrading Hub§! has §Y$MOD_STARBASE_TRADE_COLLECTION_RANGE_ADD$§! increased by §G+1§!. Starts with the §Y$tech_space_trading$§! technology already unlocked\n £job_merchant£ §Y$job_merchant_plural$§! also produce §Y1§! £unity£ Unity \n\nCan't set up §YMilitary Transportation§! policy"
 
  job_mogul:0 "Mogul"
  job_mogul_plural:0 "Moguls"
@@ -2471,33 +2470,34 @@ civic_elite_troops_desc:0 "Government allocates significant resources for traini
 
  job_techno_priest:0 "Techno Priest"
  job_techno_priest_plural:0 "Techno Priests"
- job_techno_priest_desc:0 "It is the power of our Faith, that keeps these Machines up and running."
+ job_techno_priest_desc:0 "It is the power of our Faith, and our hatred of the Dutch, that keeps these Machines up and running."
  job_techno_priest_effect_desc:0 "£job_priest£ $job_techno_priest_plural$ produce £engineering£ §Y$engineering_research$§! and £unity£ §Y$unity$§!, and reduce §Y$mod_planet_pops_robotics_upkeep_mult$§! by §G5%§!."
  mod_job_techno_priest_add:0 "$job_techno_priest$ Jobs"
  mod_job_techno_priest_per_pop:0 "§G+1§! $job_techno_priest$ Job per $VALUE$ Pops"
  mod_job_techno_priest_per_pop_short:0 "\n§G+1§! £mod_job_techno_priest_add£ per $VALUE$ £pop£"
 
 
- civic_socialistic:0 "Industrial Democracy"
- civic_socialistic_desc:0 "An arrangement which involves regular workers making decisions, sharing responsibility and authority in the workplace, which results in an increased productivity and service delivery from a more fully engaged and happier workforce."
+ civic_socialistic:0 "Drone Brotherhood"
+ civic_socialistic_desc:0 "In this society working-class people are traditionally glorified and form a global community, based on idealistic principles of collectivism and equality.\n\n§YMining§!, §YFarming§! and §YGenerator§! Districts provide §G+1§! Job and §G+1§! Housing each, and have §R+15%§! increased upkeep \nAllows special Worker job: £job_primitive_laborer£ §YLabour Hero§!, which produce small amount of £minerals£ §YMinerals§!, £food£ §YFood§!, £energy£ §YEnergy§! and £unity£ §YUnity§!"
 
 
  civic_keepers_harmony:0 "Keepers of Harmony"
- civic_keepers_harmony_desc:0 "Being strong adherents of Ecocentrism and Deep Ecology, people of this society developed a spiritual Cult, according to which there is no existential division between them and the Nature around. Enjoying it's simple beauty, they've learnt to live truly ascetic and harmonious life. \n\nAn advanced vesrion of §YEnvironmentalism§! civic \n\nBenefits from a various range of planetary §YFeatures§! and §YBlockers§!, which provides them with some §YHousing§!, £amenities£ §YAmenities§! and special priest jobs - §YDruids§! (combination with §YTheocracy§! or §YSpiritualist§! themed government civics makes them stronger). \n§HWaste Recycling§!: §YArtisans§! and §YMetallurgists§! spend §G-0.5§! £minerals£ less to produce £consumer_goods£ §YConsumer Goods§! and £alloys£ §YAlloys§! \nStarts with §YParadise Dome§! technology, building §YParadise Dome§! provide additional £housing£ §YHousing§! and increases  £unity£ §YUnity§! output \nSome rare planetary blockers and features, like §YWandering Forest§! or §YTitanic Life§! will increase local §YHappiness§!. \nCan enact special planetary decision, allowing to eradicate such planetary anomalies as §YDangerous Wildlife§!, §YBleak§!, §YHazardous Weather§!, §YWild Storms§!  \n§YMining Districts§! decrease £amenities£ §YAmenities§! by §R1§! \nCan't use §YReduced Environmental Regulation§! policy \n§YSocialist§! faction will demand §YIncreased Environmental Regulation§! policy, §YTraditionalist§! faction will provide additional §YInfluence§! for satisfying various specific demands, including those related to §YTomb Worlds§! and §YGaia Worlds§! "
+ #Being strong adherents of Ecologism and Deep Ecology, people of this society developed a spiritual cult of Nature.
+ civic_keepers_harmony_desc:0 "People of this society developed a spiritual сult of Nature. In order to live in genuine harmony with the Biosphere, the Cult implies significant detachment from worldy pleasures. \n\nBenefits from a various range of planetary §YFeatures§! and §YBlockers§!, which provides them with some §YHousing§! and special priest jobs - §YDruids§! (combination with §YTheocracy§! or §YSpiritualist§! themed government civics makes them stronger). \nBuilding §YParadise Dome§! provides additional £housing£ §YHousing§! and increases  £unity£ §YUnity§! output \nSome rare planetary blockers and features, like §YWandering Forest§! or §YTitanic Life§! will increase local §YHappiness§!. \nCan enact special planetary decision, allowing to eradicate such planetary anomalies as §YDangerous Wildlife§!, §YBleak§!, §YHazardous Weather§!, §YWild Storms§!, §YDamaged Ecology§!, §YIrradiated Planet§!, §YWasteland Radiation§!  \n§YMining Districts§! decrease £amenities£ §YAmenities§! by §R1§! \nCan't use §YReduced Environmental Regulation§! policy"
 
- civic_environmentalist:0 "Environmentalism"
- civic_environmentalist_desc:0 "For the sake of sustainable development, this society takes great care preserve and protect the environment, particularly by efficient usage of natural resources, limiting consumerism and control overpopulation.  \n\nBenefits from clearable §YBlockers§!, which provides them with some §YHousing§! and worker jobs, like §YMiners§! (from §YMountain Range§!), §YTechnicians§! (from §YActive Volcano§!), §YFarmers§! (from §YDense Jungle§!) and so on. \n\n§HWaste Recycling§!: §YArtisans§! and §YMetallurgists§! spend §G-0.5§! £minerals£ less to produce £consumer_goods£ §YConsumer Goods§! and £alloys£ §YAlloys§!  \n\nCan't use §YReduced Environmental Regulation§! policy  \n\nStarts with §YParadise Dome§! technology"
-
+ civic_environmentalist:0 "Natural Heritage"
+ civic_environmentalist_desc:2 "In this society natural capital is considered to be a national wealth, which is ought to be preserved and carefully exploited for common good.  \n\nBenefits from clearable §YBlockers§!, which provides them with some §YHousing§! and worker jobs, like §YMiners§! (from §YMountain Range§!), §YTechnicians§! (from §YActive Volcano§!), §YFarmers§! (from §YDense Jungle§!) and so on  \nSome negative effects from §YBlockers§! are reduced \nNatural §YBlockers§! increase §YHabitability§! by §G+1%§! \nStarts with §YParadise Dome§! technology"   
+ 
  #\n\n§YCompetitive§! ethic: buildings §YFood Processing Facility§! and §YFood Processing Center§! provide additional £job_merchant£ §YMerchant§! jobs"
 
- civic_terraforming:0 "Ecological Engineers"
- civic_terraforming_desc:0 "People of this society are traditioanlly concerned with ecology and environmental issues, strongly relying on science and technology in order to deal with them. \n\nBenefits from a various range of planetary features and §YBlockers§!, which provides them with some §YHousing§! and special scientific jobs, like §YXeno-biologist§! and §YGeo-physicist§!. \n\nAllows to invoke special planetary decision in order to eradicate particular environmental planetary anomalies, such as §YIrradiated Planet§!, §YTidal Locked§!, §YDamaged Ecology§! and so on \n\nStarts with §YTerrestrial Sculpting§! technology.  \n\nClearing off planetary §YBlockers§! may provide some various one-time resource gaining \n\nHave increased chance to pick advanced terraforming techs, after getting §YWorld Reviver§! ascension perk"
+ civic_terraforming:0 "Environmental Engineers"
+ civic_terraforming_desc:0 "People of this society are traditioanlly concerned with ecology and environmental issues, strongly relying on science and technology in order to deal with them. They typically take lengthy precautions to minimise any possible environmental damage. \n\nBenefits from a various range of planetary features and §YBlockers§!, which provides them with some §YHousing§! and special scientific jobs, like §YXeno-biologist§! and §YGeo-physicist§!. \n\nAllows to invoke special planetary decision in order to eradicate particular environmental planetary anomalies, such as §YIrradiated Planet§!, §YTidal Locked§!, §YDamaged Ecology§! and so on \n\nStarts with §YTerrestrial Sculpting§! technology.  \n\nClearing off planetary §YBlockers§! may provide some various one-time resource gaining "
 
 civic_master_engineer:0 "Master Engineers"
 civic_master_engineer_desc:0 "This Civilization is known for it's deep architectural and engineering traditions."
 
 civic_machine_cult:0 "Machine Cult"
-civic_machine_cult_desc:0 "They worship machines like Gods, using vigor of their Faith to power §YRobots§!. \n\nStarts game with §YRobotic Workers§! technology, §Y4§! robotic pops, buildings §YMecha-Monastery§! and §YRobot Assembly Plant§!\n\nAllowed to construct planetary unique building - §YMecha-Monastery§!, which provide §YTechno Priests§! Jobs, who produce §YUnity§!, §YEngineering Research§! and reduce upkeep for local §YRobotic§! pops  \n\nBeing combined with §YTheocracy§! or §YSpiritualist§! themed government civics, §YHigh Priests§! will additionally multiply §YRobot Output§! and §YEngineering Research§! on the planet, and §YTechno Priests§! will produce additional §YUnity§! and §YEngineering Research§!."
+civic_machine_cult_desc:0 "They worship machines like Gods, using vigor of their Faith, and their hatred of the Dutch, to power §YRobots§!. \n\nStarts game with §YRobotic Workers§! technology, §Y4§! robotic pops, buildings §YMecha-Monastery§! and §YRobot Assembly Plant§!\n\nAllowed to construct planetary unique building - §YMecha-Monastery§!, which provide §YTechno Priests§! Jobs, who produce §YUnity§!, §YEngineering Research§! and reduce upkeep for local §YRobotic§! pops  \n\nBeing combined with §YTheocracy§! or §YSpiritualist§! themed government civics, §YHigh Priests§! will additionally multiply §YEngineering Research§! on the planet, and §YTechno Priests§! will produce additional §YUnity§! and §YEngineering Research§!."
 
 civic_military_industry:0 "War Engineers"
 civic_military_industry_desc:0 "This society have strong traditions of developed military industry and warfare. Their warships and guns are traditionally the best, but expensive."
@@ -2517,34 +2517,34 @@ civic_consumerism_desc:0 "This society preserves social and economic ideology th
 
 
 civic_military_dictatorship:0 "War Lord"
-# civic_military_dictatorship_desc:0 "The Ruler in this society is traditionally an active commander-in-Chief of an army. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§!"
+civic_military_dictatorship_desc:0 "The Ruler in this society is traditionally an active commander-in-Chief of an army. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§!"
 
 civic_military_junta:0 "War Council"
-# civic_military_junta_desc:0 "The government is dominated by a coalition of the most powerful War Chiefs. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§! \n\nProhibits to set §YProduction Focus§! policy to §YCivilian§!."
+civic_military_junta_desc:0 "The government is dominated by a coalition of the most powerful War Chiefs. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§! \n\nProhibits to set §YProduction Focus§! policy to §YCivilian§!."
 
 civic_peaceful_republic:0 "Utopian Democracy"
-# civic_peaceful_republic_desc:0 "Pacifistic form of Republic, where citizens are unified by national idea of a free, peaceful and prosperous life for everyone. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £society£ §YSociety Research§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, and multiply $mod_planet_jobs_unity_produces_mult$ and §YTrade Value§! \n\nProhibits to set §YProduction Focus§! policy to §YMilitary§!."
+civic_peaceful_republic_desc:0 "Pacifistic form of Republic, where citizens are unified by national idea of a free, peaceful and prosperous life for everyone. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§! \n\nProhibits to set §YProduction Focus§! policy to §YMilitary§!."
 
 civic_cyber_demos_cratos:0 "Cyber Democracy"
-# civic_cyber_demos_cratos_desc:0 "Invlolving hi-tech achievements of IT and mass communications into democratic governing, allows to create the most efficient bureaucratic system. But such dependence on technology may result in occasional cyber-crime outbreaks. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y1§! £unity£ Unity"
+civic_cyber_demos_cratos_desc:0 "Involving hi-tech achievements of IT and mass communications into democratic governing, allows to create the most efficient bureaucratic system. But such dependence on technology may result in occasional cyber-crime outbreaks. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.50§! £unity£ Unity"
 
 civic_divine_council:0 "Divine Council"
-# civic_divine_council_desc:0 "The government is overwatched by a council of Empire's most influential religious Leaders. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity"
+civic_divine_council_desc:0 "The government is overwatched by a council of Empire's most influential religious Leaders. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity"
 
 civic_science_directorate:0 "Science Directorate"
-# civic_science_directorate_desc:0 "The government is strongly influenced by a committee of the most respectful and renowned Empire's Scientists.  \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y1§! £unity£ Unity"
+civic_science_directorate_desc:0 "The government is strongly influenced by a committee of the most respectful and renowned Empire's Scientists. \n\n§YTechnologist§! faction will demand §YAcademic Privileges§! living standards  \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.50§! £unity£ Unity"
 
 civic_executive_committee: "Philosophers Assembly"
-# civic_executive_committee_desc: "Being supervised by a council of the most intelligent and honorable representatives of ruling class, the Empire's state apparatus possess a remarkable governing efficiency. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £society£ §YSociety Research§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, and multiply $mod_planet_jobs_unity_produces_mult$ and §YTrade Value§!"
+civic_executive_committee_desc: "Being supervised by a council of the most intelligent and honorable representatives of ruling class, the Empire's state apparatus possess a remarkable governing efficiency. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!"
 
 civic_cyber_dictatorship:0 "Cyber Dictatorship"
-# civic_cyber_dictatorship_desc:0 "The government represents a form of technocratic Dictatorship, where State relies on heavily super-computers to deal with the matters of security and administration. But with so much power outsourced to AI, ordinary people have even less influence on governing process. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y1§! £unity£ Unity \n\nStarts with §YAdministrative AI§! technology."
+civic_cyber_dictatorship_desc:0 "The government represents a form of technocratic Dictatorship, where State relies on heavily super-computers to deal with the matters of security and administration. But with so much power outsourced to AI, ordinary people have even less influence on governing process. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_head_researcher£ §Y$job_head_researcher_plural$§!\n§Y$job_researcher_plural$§! also produce §Y0.50§! £unity£ Unity \n\nStarts with §YAdministrative AI§! technology."
 
 civic_centralized_state:0 "Centralized Authority"
 civic_centralized_state_desc:0 " "
 
 civic_welfare_state:0 "Welfare State"
-civic_welfare_state_desc:0 "In this society the State traditionally plays a key role in the protection and promotion of the economic and social well-being of it's citizens. \n\n§YCity Districts§! provide §G+1§! £housing£ §YHousing§!, §YAdministrators§! provide §G+2§! £amenities£ §YAmenities§! §YLabour Unions§!: §YMining§!, §YFarming§! and §YGenerator§! Districts provide §G+1§! Job and §G+1§! Housing each, and have §R+15%§! increased upkeep \nCan't use §YPrivate Healthcare§! or §YPrivate Education§! policies \nObligated to live under §YSocial Welfare§! living standards \n\nAdvanced version of this civic is §YSocialistic Ideals§!."
+civic_welfare_state_desc:0 "In this society the State traditionally plays a key role in the protection and promotion of the economic and social well-being of it's citizens. \n§YAdministrators§! provide §G+5§! £amenities£ §YAmenities§! \nCan't use §YPrivate Healthcare§! or §YPrivate Education§! policies \nObligated to live under §YSocial Welfare§! living standards \n\nAdvanced version of this civic is §YShared Burdens§!."
 
 
 
@@ -2557,10 +2557,10 @@ civic_exalted_priesthood: "Theocracy"
 civic_exalted_priesthood_desc:0 "Religious leaders pre-occupy administrative positions, in order to guard society against heresy. \n\nStart with §YHolographic Rituals§! tech. \nBuildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs. \nCombined with §YMachine Cult§! civic, §YHigh Priests§! additionally multiply §YRobot Output§! and §YEngineering Research§! on the planet, and §YTechno Priests§! produce additional §YUnity§! and §YEngineering Research§!."
 
 civic_citizen_service:0 "Stratocratic Republic"
-# civic_citizen_service_desc:0 "Full citizenship and the political responsibility that comes with it is limited to those who have served a tour of duty in the military. Service guarantees citizenship and rights to elect and govern. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§!  \n\n£job_commandante£ §Y$job_commandante_plural$§! provide additional £unity£ §YUnity§! and £amenities£ §YAmenities§! \n\nAllows to conduct special country Edict: §YPatriotic Call§!"
+civic_citizen_service_desc:0 "Full citizenship and the political responsibility that comes with it is limited to those who have served a tour of duty in the military. Service guarantees citizenship and rights to elect and govern. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§!  \n\n£job_commandante£ §Y$job_commandante_plural$§! provide additional £unity£ §YUnity§! and £amenities£ §YAmenities§! \n\nAllows to conduct special country Edict: §YPatriotic Call§!"
 
 
-civic_idealistic_foundation:0 "Anarchy Ideals"
+civic_idealistic_foundation:0 "Idealistic Foundation"
 civic_idealistic_foundation_desc:0 "This society is based on idealistic foundation of liberty and equality, characterized with reduced power of central governement authority. \nFactions §YProgressives§! and §YLabourites§! will demand §YDirect Democracy§!."
 
 civic_hierarchy:0 "Immutable Hierarchy"
@@ -2570,7 +2570,7 @@ civic_in_perfect:0 "Tribalism"
 civic_in_perfect_desc:0 "This xenophobic society is imbued with a strong sense of tribal collectivism."
 
 
-civic_nationalistic_zeal:1 "Conqueror"
+civic_militaristic_zeal:1 "Conqueror"
 
 
 
@@ -2578,15 +2578,15 @@ FANATIC_LIBERTARIAN_GOVERNMENT:0 "Political Pluralism"
 NO_FANATIC_LIBERTARIAN_GOVERNMENT:0 "No Political Pluralism"
 FANATIC_LIBERTARIAN_GOVERNMENT_DESC:0 "All Factions, except §YTotalitarians§! and §YAristocratic§!, are happier when §YPolitical Pluralism§! civic is active."
 
-empire_not_pluralist_collectivist:0 "$TRIGGER_FAIL$Required to have §YFanatic Cooperative/non-Authoritarian§! ethic combionation."
+empire_not_pluralist_collectivist:0 "$TRIGGER_FAIL$Our empire does not embrace the necessary combination of §YFanatic Cooperative§!/§Ynon-Elitist§! ideals."
 empire_is_elitist:0 "$TRIGGER_FAIL$Our empire embraces §Y$ethic_elitist$§! ideals."
 empire_not_elitist:0 "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_elitist$§! ideals."
 
 
 
 
-edict_voice_planet_2.tooltip:0 "The decision removes unfortunate environmental planetary modifiers, such as: §YUnstable Tectonics§!, §YWeak Magnetic Field§!, §YTidal Locked§!, §YIrradiated Planet§!, §YDamaged Ecology§!, §YWasteland radiation§!, §YAbandoned terraforming§!."
-edict_voice_planet_1.tooltip:0 "The decision removes unfortunate environmental planetary modifiers, such as: §YDangerous Wildlife§!, §YBleak§!, §YHazardous Weather§!, §YWild Storms§!."
+edict_voice_planet_2.tooltip:0 "The decision removes unfortunate environmental planetary modifiers, such as: §YUnstable Tectonics§!, §YWeak Magnetic Field§!, §YTidal Locked§!, §YIrradiated Planet§!, §YDamaged Ecology§!, §YWasteland Radiation§!, §YAbandoned terraforming§!."
+edict_voice_planet_1.tooltip:0 "The decision removes unfortunate environmental planetary modifiers, such as: §YDangerous Wildlife§!, §YBleak§!, §YHazardous Weather§!, §YWild Storms§!, §YIrradiated Planet§!, §YDamaged Ecology§!, §YWasteland Radiation§!."
 
 TECH_UNLOCK_TERRAFORMING_PURIFICATION_TITLE:0 "§HUnlocks Feature:§! Toxic Worlds Terraformation"
  TECH_UNLOCK_TERRAFORMING_PURIFICATION_DESC:0 "§HAtmospheric Purification§!\nAllows to terraform §YToxic§! worlds.\n\nRequires additional resources and time compared to regular terraforming."
@@ -2637,9 +2637,9 @@ policy_healthcare:0 "Healthcare"
  mixed_healthcare:0 "Mixed"
  mixed_healthcare_desc:0 " "
  private_healthcare:0 "Private Healthcare"
- private_healthcare_desc:0 "Leader lifespan is increased by §G+15§!, £job_healthcare£ $job_healthcare_plural$ produce §G+2§! £mod_trade_value_add£ §Y$TRADE_VALUE$§!, but §YPop Growth§! from $job_healthcare_plural$ is reduced by §R-1%§!."
+ private_healthcare_desc:0 "£job_healthcare£ $job_healthcare_plural$ produce §G+2§! £mod_trade_value_add£ §Y$TRADE_VALUE$§!, but §YPop Growth§! from $job_healthcare_plural$ is reduced by §R-2%§!."
  public_healthcare:0 "Public Healthcare"
- public_healthcare_desc:0 "£job_healthcare£ $job_healthcare_plural$ cost half less upkeep and produce additional §YUnity§! £unity and §YAmenities§! £amenities. Building §YClinic§! produce additional £job_healthcare£ $job_healthcare$ Job, but it's upkeep is increased."
+ public_healthcare_desc:0 "£job_healthcare£ $job_healthcare_plural$ produce additional §YUnity§! £unity and §YAmenities§! £amenities, but have increased upkeep. Building §YClinic§! produce additional £job_healthcare£ $job_healthcare$ Job, but it's upkeep is increased."
 
 policy_education:0 "Education"
  policy_education_name:0 "Education"
@@ -2724,9 +2724,10 @@ tech_universal_welfare_desc:0 "Unlocks §YCommon Good§! trade policy."
 
 trade_policy_innovation:0 "Innovation & Progress"
  trade_conversion_innovation_name:0 "$trade_policy_innovation$"
- trade_policy_innovation_desc:0 "§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.2§! and §Y0.15§! of £engineering£ and £physics£§!"
+ trade_policy_innovation_desc:0 "§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.25§! and §Y0.25§! of £engineering£, £society£ and £physics£§!"
 
 trade_policy_growth:0 "Agricultural Subsidizing"
+trade_policy_growth_name:0 "Agricultural Subsidizing"
  trade_conversion_growth_name:0 "Agricultural Subsidizing"
  trade_policy_growth_desc:0 "§EEach collected £trade_value£ §YTrade Value§! earns us §Y0.3§! £energy£ and §Y0.4§! £food£§!"
 
@@ -2796,10 +2797,10 @@ mod_category_statecraft_research_speed_mult:0 "Research Speed (Bureaucracy)"
 leader_trait_expertise_statecraft:0 "Expertise: Bureaucracy & Governing"
 leader_trait_expertise_statecraft_desc:1 "This leader is, following years of study, considered an expert within the field of Bureaucracy & Governing."
 
-# mod_pop_ethic_industrial_attraction_mult:0 "Industrialist Ethics Attraction"
-# mod_pop_ethic_green_attraction_mult:0 "Ecologist Ethics Attraction"
-# mod_pop_ethic_elitist_attraction_mult:0 "Elitist Ethics Attraction"
-# mod_pop_ethic_pluralist_attraction_mult:0 "Egalitarian Ethics Attraction"
+mod_pop_ethic_industrial_attraction_mult:0 "Industrialist Ethics Attraction"
+mod_pop_ethic_green_attraction_mult:0 "Ecologist Ethics Attraction"
+mod_pop_ethic_elitist_attraction_mult:0 "Elitist Ethics Attraction"
+mod_pop_ethic_pluralist_attraction_mult:0 "Egalitarian Ethics Attraction"
 
 CAPITALISM_DEVELOPED:0 "Developed Capitalism"
 NO_CAPITALISM_DEVELOPED:0 "Develop Capitalism"
@@ -2857,9 +2858,9 @@ NO_PRIVATE_MEDICINE:0 "No Private Healthcare"
 PRIVATE_MEDICINE:0 "Private Healthcare"
 NO_PRIVATE_MEDICINE_DESC:0 "Active §YPublic Healthcare§! social policy displeases the [Root.GetName]."
 
-MERITOCRATIC_ELITE:0 "Developed Egalitarianism"
-NO_MERITOCRATIC_ELITE:0 "No Developed Egalitarianism"
-MERITOCRATIC_ELITE_DESC:0 "Active §YLabour Unions§!, §YSyndicalism§! or §YMeritocracy§! government civic will please the [Root.GetName]."
+MERITOCRATIC_ELITE:0 "Developed Pluralism"
+NO_MERITOCRATIC_ELITE:0 "No Developed Pluralism"
+MERITOCRATIC_ELITE_DESC:0 "Active §YLabour Unions§! or §YMeritocracy§! government civic will please the [Root.GetName]."
 
 PUBLIC_EDUCATION:0 "Public Education"
 NO_PUBLIC_EDUCATION:0 "No Public Education"
@@ -2917,10 +2918,6 @@ ECO_ASCENSION_1:0 "Mastery of Nature"
 ECO_NO_ASCENSION_1:0 "Mastery of Nature"
 ECO_ASCENSION_1_DESC:0 "Adopting §YMastery of Nature§! ascension perk will please the [Root.GetName]."
 
-STRONG_INDUSTRIAL_FOCUS:0 "Industrial Development"
-NO_STRONG_INDUSTRIAL_FOCUS:0 "Industrial Development"
-STRONG_INDUSTRIAL_FOCUS_DESC:0 "Setting §YTrade§! policy to §YIndustrial Development§! will please the [Root.GetName]."
-
 INDUSTRIAL_INFRASTRUCTURE:0 "Industrial Capital"
 NO_INDUSTRIAL_INFRASTRUCTURE:0 "Industrial Capital"
 INDUSTRIAL_INFRASTRUCTURE_DESC:0 "Constructing buildings §YMinistry of Production§! and §YSystem Capital-Complex§! on any single planet will please the [Root.GetName]."
@@ -2976,9 +2973,9 @@ administration_bureaucracy_desc:0 " "
 tech_budget_incentives:0 "Governance: Budget Incentives"
 tech_budget_incentives_desc:0 "Allows to apply §YBudget Focus§! policies."
 
-civic_agrarian_idyll_desc:1 "A simple life can often be the most rewarding. This agrarian society has, to a large extent, managed to avoid large-scale urbanization. \n\n§YGenerator§!, §YMining§! and §YAgriculture Districts§! provide §G1§! more £housing£ §YHousing§!\n§YCity Districts§! provide §R1§! less £housing£ §YHousing§!\n£job_farmer£ §Y$job_farmer_plural$§! also produce §G2§! £amenities£ §YAmenities§!"
+civic_agrarian_idyll_desc:1 "A simple life can often be the most rewarding. This agrarian society has, to a large extent, managed to avoid large-scale urbanization. /n §YGenerator§!, §YMining§! and §YAgriculture Districts§! provide §G1§! more £housing£ §YHousing§!\n§YCity Districts§! provide §R1§! less £housing£ §YHousing§!\n£job_farmer£ §Y$job_farmer_plural$§! also produce §G2§! £amenities£ §YAmenities§!"
 
-# civic_aristocratic_elite_desc:0 "This society has an entrenched nobility that occupies the upper echelons of society. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs"
+civic_aristocratic_elite_desc:0 "This society has an entrenched nobility that occupies the upper echelons of society. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nCan construct £building£ §Y$building_noble_estates$§! buildings that add additional £job_noble£ §Y$job_noble$§! Jobs \n§YElitists§! faction will be pleased"
 
 policy_industrial:0 "Environmental Regulation"
 policy_industrial_desc:0 " "
@@ -3023,7 +3020,7 @@ gov_national_socialism_desc:0 "Government is a form of radical right-wing, autho
 civic_aristocratic_elite:0 "Patrimonial Aristocracy"
 
 gov_timocracy:0 "Timocracy"
-# gov_timocracy_desc:0 "A state, where political rights of the population are stratified according to the amount of property they own."
+gov_timocracy_desc:0 "A state, where political rights of the population are stratified according to the amount of property they own."
 
 TOTALITARIAN_STRATIFICATION_DESC:1 "Ensuring a stratified society - be it through a stratified economy, slavery, academic privelege or even purging - will please the [Root.GetName]."
 
@@ -3034,7 +3031,7 @@ civic_naval_traditions:0 "Naval Traditions"
 civic_naval_traditions_desc:0 "This society has deeply ingrained traditions of glorious military Fleet."
 
 civic_spiritual_democracy:0 "Theocratic Republic"
-# civic_spiritual_democracy_desc:0 "A form of republic, where citizens are bonded by a religious tradition, based on set of strong moral values and ethical imperatives. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity \n\n§YEnslavement§! of it's own species is prohibited. §YDrugs§! and §YPopulation Control§! are not allowed \n\n£job_high_priest£ §Y$job_high_priest_plural$§! provide additional £society£ §YSociety Research§! and £amenities£ §YAmenities§!"
+civic_spiritual_democracy_desc:0 "A form of republic, where citizens are bonded by a religious tradition, based on set of strong moral values and ethical imperatives. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity \n\n§YEnslavement§! of it's own species is prohibited. §YPopulation Control§! is not allowed \n\n£job_high_priest£ §Y$job_high_priest_plural$§! provide additional £society£ §YSociety Research§! and £amenities£ §YAmenities§!"
 
 edict_patriotic_call:0 "Patriotic Call"
 edict_patriotic_call_desc:0 "To Arms! Your Nation Needs You In This Dark Hour!"
@@ -3053,29 +3050,16 @@ gov_peoples_republic_desc:0 "Government is an egalitarian form of dictatorship. 
 
 empire_not_capitalism:0 "$TRIGGER_FAIL$Our empire does not embrace the necessary §Y$ethic_capitalism$§! ideals."
 
-# job_supervisor:0 "Thinker"
-# job_supervisor_plural:0 "Thinkers"
+job_supervisor:0 "Thinker"
+job_supervisor_plural:0 "Thinkers"
 job_supervisor_desc:0 "Members of Philosopher Ruler's strata, charged with articulating and examining the very principles by which their society operates."
 job_supervisor_effect_desc:0 "£job_supervisor£ $job_supervisor_plural$ produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!."
 mod_job_supervisor_add:0 "$job_supervisor$ Jobs"
 mod_job_supervisor_per_pop:0 "§G+1§! $job_supervisor$ Job per $VALUE$ Pops"
 mod_job_supervisor_per_pop_short:0 "\n§G+1§! £mod_job_supervisor_add£ per $VALUE$ £pop£"
 
-civic_stratocracy:0 "Ordered Stratocracy"
-# civic_stratocracy_desc:0 "In Stratocracy the State and the Army are basically and constitutionally the same. Administrative positions are usually occupied by active or honorably discharged military chiefs. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_commandante£ §Y$job_commandante_plural$§!, which increase Empire's §YNaval Capacity§!, spawn §YDefense Armies§!, increase planetary §YStability§! and reduce damage from §YBombardment§!."
-
 civic_bureaucracy:0 "Enlightened Bureaucracy"
-# civic_bureaucracy_desc:0 "In this society government is traditionally guided by Philosophers and Thinkers - those, who considered to be ideal rulers, and generally possess intelligence, reliability, and a willingness to live peaceful and prosperous life. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £society£ §YSociety Research§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, and multiply $mod_planet_jobs_unity_produces_mult$ and §YTrade Value§!."
-
-ethic_elitist:0 "Elitist"
-ethic_elitist_desc:0 "In the great dance of civilizations, we must accept that we each have different parts to play. For many, that place is at the base foundation of our society, toiling in drudgery so that others have the opportunity to bring their talents to bear on the social good. Let no one mistake our privilege for leisure; we are no less custodians than our servants, our tasks no less menial or vital."
-ethic_fanatic_elitist:0 "Fanatic Elitist"
-ethic_fanatic_elitist_desc:0 "Society is a herd, with shepherds and watchdogs; society is a struggle, with winners and losers. The unwashed masses, little better than animals, need the leadership of those destined few with the necessary acumen, vision, and strength to guide them towards a greater purpose. Who better than us?"
-
-ethic_pluralist:0 "Egalitarian"
-ethic_pluralist_desc:0 "In the face of the cosmos, how silly and insignificant our petty differences must seem! We are little more than motes of dust bound to the same speck, circling a mere pinprick of luminescence. Of what consequence are the colors of our individual bodies, of where or to whom we were born?"
-ethic_fanatic_pluralist:0 "Fanatic Egalitarian"
-ethic_fanatic_pluralist_desc:0 "We are all of us worthy of the same dignity and the same basic respect, for within each of us lies the potential for greatness, for a stroke of luck or genius, for the very salvation of our species. Yes, we are not all created equal, but what does that matter when we are equally endowed with the capacity to create?"
+civic_bureaucracy_desc:0 "In this society government is traditionally guided by Philosophers and Thinkers - those, who considered to be ideal rulers, and generally possess intelligence, reliability, and a willingness to live peaceful and prosperous life. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!."
 
 gov_bur_collectivism:0 "Bureaucratic Collectivism"
 gov_bur_collectivism_desc:0 "A bureaucratic collectivist state owns the means of production, while the surplus or profit is distributed among an elite party bureaucracy, rather than among the working class."
@@ -3095,7 +3079,7 @@ RT_SAGE:0 "Sage"
 HT_PROSELYTE:0 "Proselyte"
 
 gov_dread_brotherhood:0 "Dreadful Brotherhood"
-# gov_dread_brotherhood_desc:0 "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy."
+gov_dread_brotherhood_desc:0 "An extremely xenophobic form of direct democracy, where all citizens are bound by the common goal - the destruction of all lesser life forms in the galaxy."
 
 RT_BROTHER:0 "Brother"
 RT_SISTER:0 "Sister"
@@ -3110,10 +3094,9 @@ gov_absolute_monarchy:0 "Absolute Monarchy"
 gov_absolute_monarchy_desc:0 "A form of monarchy in which the monarch holds supreme authority and where that authority is not restricted by any written laws, legislature, or customs."
 
 gov_cor_dictatorship:0 "Corporate Dictatorship"
-# gov_cor_dictatorship_desc:0 "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society."
+gov_cor_dictatorship_desc:0 "An extremely capitalistic form of government, where powerful Corporations completely took over political and economical life of the society."
 
-EGALITARIAN_ETHIC_ALLOWS_UTOPIA:0 "§EAllows §YSocial Equality§! Living Standards§!"
-ELITIST_ETHIC_ALLOWS_STRATIFIED:0 "§EAllows §YStratified Economy§! Living Standards§!"
+
 
 
 civic_mining_guilds_desc:0 "Several large mining guilds have reached a dominant position in this society. The government relies heavily on their support.\n\n§YMining§! Districts provide §G+1§! Job and §G+1§! Housing, and cost §R+20%§! upkeep each."
@@ -3187,8 +3170,23 @@ mod_pop_ethic_egalitarian_attraction_mult:0 "Libertarian Ethics Attraction"
 SHARED_BURDEN:0 "Shared Burden"
 SHARED_BURDEN_DESC:0 "Valid §YShared Burden§! civic pleases the [Root.GetName]."
 
+job_bank_manager:0 "Bank Manager"
+job_bank_manager_plural:0 "Bank Managers"
+job_bank_manager_desc:0 "A coordinator and manager of a large sector of the banking focussed economy: these bank managers are high level government employees and are reveered by the rest of society."
+mod_job_bank_manager_add:0 "$job_bank_manager$ Jobs"
+mod_job_bank_manager_per_pop:0 "§G+1§! $job_bank_manager$ Job per $VALUE$ Pops"
+mod_job_bank_manager_short:0 "\n§G+1§! £mod_bank_manager_add£ per $VALUE$ £pop£"
+
+building_bank_branch:0 "Bank-Corp Branch"
+building_bank_branch_desc:0 "An army of tellers stretching from the bank's headquarters to the most distant of offices stands ready to open accounts and extend loans, always at the most generous of rates (or under the most advantageous conditions)."
+
+civic_tooltip_bank_corp_effects:2 "Can build §YBank Corp Branch Office Buildings§! on branch offices. £building£ §YCapital Buildings§! also replace some £job_administrator£ §Y$job_administrator$§! Jobs with §Y$job_bank_manager_plural$§!."
+civic_bank_corp:0 "Bank Corp"
+civic_bank_corp_desc:0 "This megacorporation has structured itself around the practice of banking, both for its own society and on an intergalactic scale. They handle accounts containing the energy credits and precious assets of a multitude of civilizations. An army of tellers stretching from the bank's headquarters to the most distant of offices stands ready to open accounts and extend loans, always at the most generous of rates (or under the most advantageous conditions). Of course, the executive board does skim just enough of a profit to make their descendants wealthy for generations, but what would one expect? The expert management of money is their business."
+
+
 gov_aristocratic_republic:0 "Aristocratic Republic"
-# gov_aristocratic_republic_desc:0 "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people."
+gov_aristocratic_republic_desc:0 "A form of representative democracy, in which only those who belong to social Elite may be elected to Senate and rule on behalf of the people."
 
 gov_oligarchic_republic:0 "Oligarchic Republic"
 gov_oligarchic_republic_desc:0 "An extremely elitist form of republic, in which significant amount of power is concentrated in the hands of a small, privileged group of people, with a strong influence on election's and governing processes."
@@ -3197,7 +3195,7 @@ gov_congress_republic:0 "Congressional Republic"
 gov_congress_republic_desc:0 "A form of representative democracy, in which power belongs to democratically elected members of Congress, who appoint Prime Minister. Every free citizen is allowed to be nominated and get elected for governing."
 
 gov_noble_aristocracy:0 "Noble Aristocracy"
-# gov_noble_aristocracy_desc:0 "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses."
+gov_noble_aristocracy_desc:0 "The whole political power in this society belongs to the council of representatives of the ancient patrimonial aristocratic Houses."
 
 RT_REGENT:0 "Regent"
 
@@ -3208,7 +3206,7 @@ gov_soviet_republic:0 "Soviet Republic"
 gov_soviet_republic_desc:0 "A type of republic ruled by directly elected "Soviets" - workers' councils, which are directly responsible to their electors. There is no separation of powers, and elected Delegates act as legislators, government and courts in one."
 
 gov_aristocratic_monarchy:0 "Aristocratic Monarchy"
-# gov_aristocratic_monarchy_desc:0 "Form of monarchy, in which hereditary Ruler does not have absolute power, but has to share it with the most influential members of Nobility."
+gov_aristocratic_monarchy_desc:0 "Form of monarchy, in which hereditary Ruler does not have absolute power, but has to share it with the most influential members of Nobility."
 
 edict_div_crusade:0 "$unity_ambition$ Divine Crusade"
 edict_div_crusade_desc:0 "Unholy Infidels will be perished once and for all!"
@@ -3222,7 +3220,7 @@ gov_liberal_democracy_desc:0 "A form of government, characterized by elections b
 RT_DUCE:0 "Duce"
 
 gov_anarchy_communism:0 "Military Communism"
-# gov_anarchy_communism_desc:0 "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes."
+gov_anarchy_communism_desc:0 "An extreme form of Communist dictatorship, characterized with nationalization of all industries and the introduction of strict centralized management, state control of foreign trade, strict discipline for workers, with strikes forbidden and obligatory labor duty by non-working classes."
 
 RT_GENERALISSIMO:0 "Generalissimo"
 
@@ -3259,13 +3257,13 @@ gov_social_nationalism:0 "National-Socialism"
 gov_social_nationalism_desc:0 "A form of totalitarian government, characterized with intense nationalism, elitism and dictatorial police state rule."
 
 gov_anarch_capitalism:0 "Anarcho-Capitalism"
-# gov_anarch_capitalism_desc:0 "A form of society where the size and authority of state apparatus is reduced to bare minimum, and free market provides all public goods and services, including law and order."
+gov_anarch_capitalism_desc:0 "A form of society where the size and authority of state apparatus is reduced to bare minimum, and free market provides all public goods and services, including law and order."
 
 civic_philosopher_king:1 "Sage King"
-# civic_philosopher_king_desc:0 "It is not enough to simply rule. The Ship of State must be guided by a king that wields enough wisdom and knowledge to steer it true. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £society£ §YSociety Research§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, and multiply $mod_planet_jobs_unity_produces_mult$ and §YTrade Value§!"
+civic_philosopher_king_desc:0 "It is not enough to simply rule. The Ship of State must be guided by a king that wields enough wisdom and knowledge to steer it true. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_supervisor£ §Y$job_supervisor_plural$§!, which produce £unity£ §YUnity§!, increase £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!, multiply planetary $mod_planet_jobs_society_research_produces_mult$ and increase §Y$MOD_COUNTRY_ADMIN_CAP_ADD$§!."
 
 gov_minarchy:0 "Minarchy"
-# gov_minarchy_desc:0 "A form of minimal "night-watchman" state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives."
+gov_minarchy_desc:0 "A form of minimal "night-watchman" state, that is not responsible for the education, health care, employment or transportation of its citizens, neither makes it any use of natural resources in its territory. All of this is instead held privately or publicly, but is never susceptible to any interference of the state, its law or its representatives."
 
 XENOIST_UNIVERSALISM:0 "Galactic Universalism"
 XENOIST_UNIVERSALISM_DESC:0 "Hosting at least §Y8§! unique species within our Empire will greatly please the [Root.GetName]."
@@ -3282,7 +3280,8 @@ AUTHORITY_ELECTION_DIRECT_DEMOCRATIC:0 "Holds an election every §H10§! years t
 
 civic_free_haven_desc:0 "This society has a well-earned reputation as a free haven. The tired, the poor, the huddled masses yearning to breathe free - all are welcome here, regardless of their species or origin. \n\n§YXenoist§! faction provide additional influence for a larger number of different species in the Empire (more than 5, 7 and 10)."
 
-civic_inwards_perfection_desc:0 "This calm and pacifist society has little use for strangers who do not understand their way of life. More than anything, they would prefer to be left alone. \nCannot have §YRivals§!\nCannot form §YDefensive Pacts§!\nCannot form §YMigration Treaties§!\nCannot form §YResearch Agreements§!\nCannot form §YCommercial Pacts§!\nCannot §YGuarantee Independence§!\nCannot join §YFederations§!\nCannot §YInfiltrate§! primitives\nCannot have forced §YSubjects§!\nCannot use §YUnrestricted Wars§! policy\n"
+civic_inwards_perfection:0 "Paranoid Isolationism"
+civic_inwards_perfection_desc:0 "As people of this xenophobic society are coming into Space, matters of national security and border protection become strongly prioritized. \n\nCannot have §YRivals§!\nCannot form §YDefensive Pacts§!\nCannot form §YMigration Treaties§!\nCannot form §YResearch Agreements§!\nCannot form §YCommercial Pacts§!\nCannot §YGuarantee Independence§!\nCannot join §YFederations§!\nCannot §YInfiltrate§! primitives\nCannot have forced §YSubjects§!\nCannot use §YUnrestricted Wars§! policy\nBuilding §YPlanetary Shield Generator§! produce additional £unity£ §YUnity§! \n§YBorder Policy§! is §YClosed§! by default"
 
 civic_isolationism:0 "Paranoid Isolationism"
 civic_isolationism_desc:0 "As people of this xenophobic society are coming into Space, matters of national security and border protection become strongly prioritized. \n\nBuilding §HPlanetary Shield Generator§! produce additional £unity£ §YUnity§!. \n§YBorder Policy§! is §YClosed§! by default."
@@ -3294,22 +3293,14 @@ mod_rivalries_influence_produces_mult:0 "Rivalry Influence Gain"
 gov_republican_dictatorship:0 "Republican Dictatorship"
 gov_republican_dictatorship_desc:0 "A governmental form where elected representatives exercise absolute power over the state. Rulers are voted in and reign until death, then a new ruler gets voted in."
 
-ENFORCER_JOBS:0 "§E§HCapital§! buildings provide additional +1 £job_enforcer£ §YEnforcer Job§!§!"
-MORE_ENFORCER_JOBS:0 "§E§HCapital§! buildings provide additional +2 £job_enforcer£ §YEnforcer Jobs§!§!"
 
 mod_planet_enforcers_upkeep_mult:0 "£job_enforcer£ $job_enforcer_plural$ Upkeep"
 
 mod_decisions_cost_mult:0 "Decisions Cost"
 
-PROHIBITS_DECENT:0 "§EProhibits §YDecent§! Living Standards§!"
-PROHIBITS_SLAVERY:0 "§EProhibits to use §YEnslavement§! policy to enslave your own species§!"
 
-ALLOWS_ENSLAVEMENT:0 "§EAllows to enslave up to 30% Pops using §YEnslavement§! policy§!"
-ALLOWS_MORE_ENSLAVEMENT:0 "§EAllows to enslave up to 50% Pops using §YEnslavement§! policy§!"
 
-PROHIBITS_WELFARE:0 "§EProhibits §YSocial Welfare§! Living Standards§!"
-
-empire_not_capitalist_authoritarian:0 "$TRIGGER_FAIL$Requires to have either §YFanatic Competitive§! OR §YAuthoritarian§!/§Ynon-Cooperative§! ethics."
+empire_not_capitalist_authoritarian:0 "$TRIGGER_FAIL$Requires to have either §YFanatic Competitive§!/§Ynon-Pluralism§! OR §YFanatic Authoritarian§!/§Ynon-Cooperative§! ethics combination."
 
 civic_ultimate_collective:0 "Immutable Hierarchy"
 civic_ultimate_collective_desc:0 "A firm totalitarian society, where the whole economy is under strict governmental control, and citizens are devoted to the State without any need for coercion. \n\nCan't use §YFree Market§! economy and §YInnovation & Progress§! trade policy."
@@ -3331,13 +3322,12 @@ trait_ruler_immortal_desc:0 "§LThis individual is blessed by Gods for Eternal R
 edict_immortal_ruler:0 "Declare Immortal Ruler"
 edict_immortal_ruler_desc:0 "Invoking this edict will claim our current Ruler as Immortal."
 
-# civic_imperial_cult_desc:0 "This society has a dominant state religion where the ruler is worshiped as a living deity. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity \n\nAllows special edict - §YDeclare Immortal Ruler§!, which can make the current Ruler immortal \n\nAmbition §YScientific Revolution§! is unavailable"
+civic_imperial_cult_desc:0 "This society has a dominant state religion where the ruler is worshiped as a living deity. \n\n£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_high_priest §Y$job_high_priest_plural$§!, buildings §YSacred Nexus§! and §YCitadel of Faith§! provide additional §YHigh Priest§! jobs.\n£job_priest£ §Y$job_priest_plural$§! produce §Y1§! additional £unity£ Unity \n\nAllows special edict - §YDeclare Immortal Ruler§!, which can make the current Ruler immortal \n\nAmbition §YScientific Revolution§! is unavailable"
 
 mod_pop_ethic_capitalism_attraction_mult:0 "Competitive Ethics Attraction"
 mod_pop_ethic_socialism_attraction_mult:0 "Cooperative Ethics Attraction"
 
-COLLECT_ETHIC_ALLOWS_UTOPIA:0 "§ECombination with §HCooperative§! allows §YSocial Equality§! Living Standards§!"
-INDIVID_ETHIC_ALLOWS_STRATIFIED:0 "§ECombination with §HCompetitive§! allows §YStratified Economy§! Living Standards§!"
+
 
 POP_ATTRACTION_SOCIALISM_POS:0 "§G+ Cooperative Governing Ethics§!"
 POP_ATTRACTION_SOCIALISM_NEG:0 "§G- Cooperative Governing Ethics§!"
@@ -3438,10 +3428,7 @@ opinion_industrialist_vs_ecologist:0 "Dumb-ass Tree-Huggers"
 opinion_vs_ecologist_industrialist:0 "Nature-haters"
 
 civic_shared_burden:1 "Socialistic Ideals"
-civic_shared_burden_desc:1 "This society traditionally preserves the ideals of socialism, which are expressed in public ownership of the means of production and equitable distribution of resources, in order to secure social, political and economical equality for everyone. \n\n§YCity Districts§! provide §G+1§! £housing£ §YHousing§!, §YAdministrators§! provide §G+2§! £amenities£ §YAmenities§!  \n§YLabour Unions§!: §YMining§!, §YFarming§! and §YGenerator§! Districts provide §G+1§! Job and §G+1§! Housing each, and have §R+15%§! increased upkeep \nAllows special Worker job: £job_primitive_laborer£ §YLabour Hero§!, which produce small amount of £minerals£ §YMinerals§!, £food£ §YFood§!, £energy£ §YEnergy§! and £unity£ §YUnity§! \nObligated to have §YSocial Equality§! living standards, §YPublic Healthcare§! and §YPublic Education§! policies \n\n§YSocialists§! faction will provide additional approval"
-
-civic_reeducated_labor:0 "Slaving Despots"
-civic_reeducated_labor_desc:0 "This society's economy is dominated by a number of powerful and ruthless owners of Slave Trading Houses. \n\nObligated to live under §YStratified Economy§! living standards \n\n§YSlave Overseer§! jobs produce additional £unity£ §YUnity§! \n\nNon §YFanatic Pacifists§! are allowed to construct special building - §YNeo Colosseum§!, which adds £job_gladiator£ §YGladiator§! jobs, produce some £trade_value£ §YTrade Value§! and increase local §YArmy Damage§! \n\nAn advanced version of §YSlaver Guilds§! civic"
+civic_shared_burden_desc:1 "This society traditionally preserves the ideals of socialism, which are expressed in public ownership of the means of production and equitable distribution of resources, in order to secure social, political and economical equality for everyone. \n§YAdministrators§! provide §G+7§! £amenities£ §YAmenities§!\n\n§YCity Districts§! provide §G+1§! £housing£ §YHousing§!, §YAdministrators§! provide §G+2§! £amenities£ §YAmenities§! \n§YLabour Unions§!: §YMining§!, §YFarming§! and §YGenerator§! Districts provide §G+1§! Job and §G+1§! Housing each, and have §R+15%§! increased upkeep  \nObligated to have §YPublic Healthcare§! and §YPublic Education§! policies \nAllows special Worker job: £job_primitive_laborer£ §YLabour Hero§!, which produce small amount of £minerals£ §YMinerals§!, £food£ §YFood§!, £energy£ §YEnergy§! and £unity£ §YUnity§! \nObligated to have §YSocial Equality§! living standards \n§YLabourists§! faction will provide additional approval"
 
 job_gladiator:0 "Gladiator"
 job_gladiator_plural:0 "Gladiators"
@@ -3454,7 +3441,7 @@ mod_job_gladiator_per_pop_short:0 "\n§G+1§! £mod_job_gladiator_add£ per $VAL
 civic_slaver_guilds_desc:1 "This society traditionally exploits slave labor and relies on the services of special Guilds, organized to maintain their training and distribution. \n\nAn advanced version of this civic is §YSlaving Despots§!"
 
 civic_xenologist:0 "Evolutionary Architects"
-civic_xenologist_desc:0 "Scientists of this civilization has devoted their efforts on understanding the origins of biological Life and Evolution. Now, with the beginning of Space exploration, new horizons are opening towards their curiosity."
+civic_xenologist_desc:0 "Scientists of this civilization has devoted their efforts on understanding the origins of biological Life and Evolution. Now, with the beginning of Space exploration, new horizons are opening towards their curiosity." 
 
 living_standard_shared_burden:1 "Social Equality"
 
@@ -3462,19 +3449,17 @@ living_standard_shared_burden:1 "Social Equality"
 
 SHARED_BURDEN_POP_EFFECTS:0 "$RULERS$: $SHARED_BURDEN_LUXURIES$, $6_HAPPINESS$\n$SPECIALISTS$: $SHARED_BURDEN_LUXURIES$, $6_HAPPINESS$\n$WORKERS$: $SHARED_BURDEN_LUXURIES$, $6_HAPPINESS$"
 
-empire_socialism_utopia_non_market:0 "$TRIGGER_FAIL$Our Empire is reqiured to have §YSocialistic Utopia§! Ascension Perk and §YFanatic Cooperative§! ethic."
+empire_socialism_utopia_non_market:0 "$TRIGGER_FAIL$Our Empire is reqiured to have §YFanatic Cooperative§! or §YPluralism§! ethic combination."
 
 ap_socialism_utopia:0 "Socialistic Utopia"
 ap_socialism_utopia_desc:0 "Unlocks §YUtopian§! living standards."
 
-requires_civic_shared_burden:0 "$TRIGGER_FAIL$Required to have §YFanatic Cooperative§! ethic."
-
 SOCIAL_WELFARE:0 "Social Welfare"
 NO_SOCIAL_WELFARE:0 "Social Welfare"
-SOCIAL_WELFARE_DESC:0 "Setting up §YSocial Equality§!, §YSocial Welfare§! or §YUtopian§! living standards will please the [Root.GetName]."
+SOCIAL_WELFARE_DESC:0 "Setting up §YSocial Equality§!, §YSocial Welfare§! or §YSocialistic Utopia§! living standards will please the [Root.GetName]."
 
 TOTALITARIAN_STRATIFICATION:0 "Economic Stratification"
-TOTALITARIAN_STRATIFICATION_DESC:1 "Ensuring an economically stratified society - be it through §YStratified Economy§! or §YAcademic Privilege§! living standrards - will please the [Root.GetName]."
+TOTALITARIAN_STRATIFICATION_DESC:1 "Ensuring an economically stratified society - be it through a §YDecent§!, §YStratified Economy§! or §YAcademic Privilege§! living standrards - will please the [Root.GetName]."
 
 TOTALITARIAN_PERSONALITY_CULT:0 "Personality Cult"
 TOTALITARIAN_NO_PERSONALITY_CULT:0 "Personality Cult"
@@ -3505,7 +3490,7 @@ TOTALITARIAN_NO_DRUG_RIGHTS:0 "Drug Control"
 TOTALITARIAN_DRUG_RIGHTS_DESC:0 "Limited distribution of §YDrugs§! (policy) in the Empire will please the [Root.GetName]."
 
 civic_symbiotic_race:0 "Evolutionary Architects"
-civic_symbiotic_race_desc:0 "A second, artificially engineered physically formidable species, forms an integral part of this society. Despite their notable differences they are considered equal to the main species ruling their common homeworld largely due to their empathic attitude towards different forms of life. \n\nStarts game with §Y12§! £pop£ Pops being of another, subservient, species. This species hold the §YSymbiotic§! trait, can generate §YLeaders§! and take §YSpecialists§! jobs. \n\nStarts game with §YGenome Mapping§! tech \n\nBuilding §YClone Vats§! enhances planetary £unity£ §YUnity§! output  \n\n§YTechnologist§! faction will be pleased for having §YEngineered Evolution§! ascension perk"
+civic_symbiotic_race_desc:0 "A second, artificially engineered physically formidable species, forms an integral part of this society. Despite their notable differences they are considered equal to the main species ruling their common homeworld largely due to their empathic attitude towards different forms of life. \n\nStarts game with §Y8§! £pop£ Pops being of another, subservient, species. This species hold the §YSymbiotic§! trait, can generate §YLeaders§! and take §YSpecialists§! jobs. \n\nStarts game with §YGenome Mapping§! tech \n\nBuilding §YClone Vats§! enhances planetary £unity£ §YUnity§! output  \n\n§YTechnologist§! faction will be pleased for having §YEngineered Evolution§! ascension perk"
 
 #TRAIT_SYNCRETIC_PROLES_EFFECT:0 "$MOD_POP_HAPPINESS$: §G+10%§!\n$mod_planet_jobs_produces_mult$: §G+10%§!\nCannot generate §YLeaders§!\nCannot be employed in §Y$pop_cat_ruler$§! or §Y$pop_cat_specialist$§! Jobs"
 
@@ -3555,6 +3540,7 @@ NO_INCREASED_WAGE:0 "Lower Minimum Wage"
 NO_INCREASED_WAGE_DESC:0 "§YIncreased Minimum Wage§! policy displeases [Root.GetName]."
 
 trade_policy_mining:0 "Mining Subsidizing"
+trade_policy_mining_name:0 "Mining Subsidizing"
 trade_conversion_mining_name:0 "Mining Subsidizing"
 trade_policy_mining_desc:0 "§EEach collected £trade_value£ §YTrade Value§! earns us §Y0.3§! of £energy£ and §Y0.4§! £minerals£§!."
 
@@ -3577,20 +3563,20 @@ civic_industrial_automatation_desc:0 "An economic paradigm, according to which t
 tech_thermal_borehole:0 "Deep Core Mining"
 tech_thermal_borehole_desc:0 "Unlocks construction of §YThermal Borehole§!, which provides §YDeep Core Engineers§! jobs."
 
-civic_martial_brotherhood:0 "Martial Brotherhood"
-civic_martial_brotherhood_desc:0 "Armed Forces are considered to be an integral part of this society, symbol of it's unity and collectivism. To serve is an honor, rather than an a debt, or obligation.  \n\n£job_soldier£ §Y$job_soldier_plural$§! also produce §Y2§! £unity£ Unity \n\n§YMilitarist§! faction provides additional influence"
+civic_patriotic_service:0 "Patriotic Service"
+civic_patriotic_service_desc:0 "Armed Forces are considered to be an integral part of this society, symbol of it's unity and collectivism. To serve is an honor, rather than an a debt, or obligation.  \n\n£job_soldier£ §Y$job_soldier_plural$§! also produce §Y2§! £unity£ Unity \n\n§YMilitarist§! faction provides additional influence"
 
-MARTIAL_BROTHERHOOD:0 "Martial Brotherhood"
-MARTIAL_BROTHERHOOD_DESC:0 "Active §YMartial Brotherhood§! government civic pleases the [Root.GetName]."
+PATRIOTIC_SERVICE:0 "Patriotic Service"
+PATRIOTIC_SERVICE_DESC:0 "Active §YPatriotic Service§! government civic pleases the [Root.GetName]."
 
 civic_distributism:0 "Distributism"
-civic_distributism_desc:0 "An ideology that makes the case that ethics has a place in market economics. While advocating fundamental rights of private property ownership, it asserts that means of production should be widely owned and distributed, rather than concentrated in the hands of few individuals or corporations. Thus, it generally favors small-scale entrepreneurs and family businesses, as well as serious anti-monopolist regulations. \n\nCan't set up §YFree Market§! policy, build §YGalactic Stock Exchange§! or have §YMogul§! jobs in general"
+civic_distributism_desc:0 "An ideology that makes the case that productive assests should be widely owned and distributed, rather than concentrated in the hands of few individuals or corporations. Thus, it generally favors small-scale entrepreneurs and family businesses, as well as serious anti-monopolist regulations. \n\nCan't set up §YFree Market§! policy, build §YGalactic Stock Exchange§! or have §YMogul§! jobs in general"
 
 civic_star_settlers:0 "Star Settlers"
 civic_star_settlers_desc:0 "As the space exploration has begun, this Civilization have been embraced with a strong pioneer's spirit. People tend to vastly expand their territories through peaceful expansion and colonization, resettling as widely as it's possible. \n\nStarts game with §YGalactic Ambitions§! technology already unlocked \n\n£job_colonist£ §Y$job_colonist_plural$§! also produce §Y5§! £unity£ Unity \n\nCan't set up neither §YMilitary Transportation§! nor §YMilitary Telecommunications§! policy"
 
 gov_military_corp:0 "Private Military Corporation"
-# gov_military_corp_desc:0 "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs."
+gov_military_corp_desc:0 "Government is represented by a massive military-industrial holding, with board of directors consisting solely of active war-chiefs."
 
 civic_labour_unions:0 "Industrial Democracy"
 civic_labour_unions_desc:0 "An arrangement which involves regular workers making decisions, sharing responsibility and authority in the workplace, which results in an increased productivity and service delivery from a more fully engaged and happier workforce."
@@ -3608,7 +3594,7 @@ civic_genetic_aristocracy:0 "Genetic Aristocracy"
 civic_genetic_aristocracy_desc:0 "People of this society especially preserve uniqueness of their biological origins, and Leaders are traditionally chosen and groomed primarly on the basis of their genetic superiority."
 
 gov_great_houses:0 "Great Houses"
-# gov_great_houses_desc:0 "£building£ §YCapital Buildings§! replace some £job_administrator£ §Y$job_administrator$§! Jobs with £job_noble£ §Y$job_noble_plural$§!\nThis civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition."
+gov_great_houses_desc:0 "This civilization is ruled by the leadership council of a few Great Houses, which traditions derives from ancient clans and tribes, but which now function more as political parties. Unlike in classic Noble Aristocracy, house membership is not tied to patrimonial matters, such as birth or marriage, but rather anyone can be adopted to the House and advance to it's highest ranks, as long as he pledges loyalty to the House and preserve it's Tradition."
 
 GENETIC_SUPERIORITY:2 "Genetic Superiority"
 NO_GENETIC_SUPERIORITY:1 "Genetic Superiority"
@@ -3626,12 +3612,61 @@ personality_spiritual_seekers_machine:0 "Spiritual Seekers"
 personality_spiritual_seekers_machine_desc:0 "Spiritual Seekers believe that all life is connected through some higher power that can be understood through its creations. They will seek peaceful cooperation with other Empires in the hopes of studying their connection to the divine."
 
 civic_merchant_guilds:1 "Financial Elite"
-civic_merchant_guilds_desc:2 "In this society "wealth" equals "power". Upper echelons of society are occupied by the rich, while working class people are being systematically oppressed. \n\n§YCapital Buildings§! replace some £job_administrator£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs, which increase §YAmenities§! and produce §YTrade Value§!. \nBuilding §YGalactic Stock Exchange§! additionally provides £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \nStarts with the §Y$tech_power_hub_1$§! technology already unlocked \nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \n§YCorporate Lobbying§!: §YEntrepreneurs§! faction provides additional approval \n§YRuthless Exploitation§!: each §Y$job_mogul$§! increases local workers £energy£ §YEnergy§! output by §G+4%§!"
+civic_merchant_guilds_desc:2 "In this society "wealth" equals "power". Upper echelons of society are occupied by the rich, while working class people are being systematically oppressed. \n\n§YCapital Buildings§! replace some £job_administrator£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs, which increase §YAmenities§! and produce §YTrade Value§!. \nBuilding §YGalactic Stock Exchange§! additionally provides £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \nStarts with the §Y$tech_power_hub_1$§! technology already unlocked \nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \n§YCorporate Lobbying:§! §YEntrepreneurs§! faction provides additional approval  \n§YRuthless Exploitation§!: each §Y$job_mogul$§! increases local workers £energy£ §YEnergy§! output by §G+4%§!"
 
 civic_state_monopoly:0 "State Monopoly"
-civic_state_monopoly_desc:0 "In this society the most essential economic sectors are ruled by oligarchs, which monopolies are under direct protection of the State.  \n\nAn advanced version of §YFinancial Elite§! civic  \n\n§YCapital Buildings§! replace some £job_administrator£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs \nBuilding §YGalactic Stock Exchange§! additionally provides §G+1§! £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \n§YCorporate Lobbying:§! §YEntrepreneurs§! faction provides additional approval  \n§YRuthless Exploitation§!: each §Y$job_mogul$§! increases local workers £energy£ §YEnergy§! and £minerals£ §YMinerals§! output by §G+5%§! \nStarts with the §Y$tech_power_hub_1$§! technology \nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \nCan't use §YFree Market§! policy"
+civic_state_monopoly_desc:0 "In this society the most essential economic sectors are ruled by oligarchs, which monopolies and assets are under direct protection of the State.  \n\nAn advanced version of §YFinancial Elite§! civic  \n\n§YCapital Buildings§! replace some £job_administrator£ §YAdministrators§! with £job_mogul£ §Y$job_mogul$§! Ruler Jobs \nBuilding §YGalactic Stock Exchange§! additionally provides §G+1§! £job_mogul£ §Y$job_mogul$§! Job and multiplies planetary §YTrade Value§! by §G+5%§! \n§YCorporate Lobbying:§! §YEntrepreneurs§! faction provides additional approval  \n§YRuthless Exploitation§!: each §Y$job_mogul$§! increases local workers £energy£ §YEnergy§! and £minerals£ §YMinerals§! output by §G+5%§! \nStarts with the §Y$tech_power_hub_1$§! technology \nCan't use §YPublic Healthcare§! or §YPublic Education§! policies \nCan't use §YFree Market§! policy" 
 
-NO_CAMPAIGNS:0 "§ECan't use either §YNutritional Plentitude§! edict or §YEducation§! campaign§!"
+ethic_elitist:0 "Elitism"
+ethic_elitist_desc:0 "In the great dance of civilizations, we must accept that we each have different parts to play. For many, that place is at the base foundation of our society, toiling in drudgery so that others have the opportunity to bring their talents to bear on the social good. Let no one mistake our privilege for leisure; we are no less custodians than our servants, our tasks no less menial or vital."
+ethic_fanatic_elitist:0 "Fanatic Elitism"
+ethic_fanatic_elitist_desc:0 "Society is a herd, with shepherds and watchdogs; society is a struggle, with winners and losers. The unwashed masses, little better than animals, need the leadership of those destined few with the necessary acumen, vision, and strength to guide them towards a greater purpose. Who better than us?"
+
+ethic_pluralist:0 "Pluralism"
+ethic_pluralist_desc:0 "Pluralistic societies are those, in which people are considered to be equal in terms of opportunities for social mobility. Special efforts are taken, in order to ensure that competition for leadership positions in governing and administration are open for as many capable individuals, as possible."
+ethic_fanatic_pluralist:0 "Fanatic Pluralism"
+ethic_fanatic_pluralist_desc:0 "We are all of us worthy of the same dignity and the same basic respect, for within each of us lies the potential for greatness, for a stroke of luck or genius, for the very salvation of our species. Yes, we are not all created equal, but what does that matter when we are equally endowed with the capacity to create?"
+
+ethic_industrial:0 "Industrialism"
+ethic_fanatic_industrial:0 "Fanatic Industrialism"
+ethic_industrial_desc:1 "§LThose, who preserve the Industrialist system of values, consider themselves masters of biosphere, who have moral rights to exploit nature and it's resources for the sake of their own prosperity, even if it implies discrimination of other biological species. Otherwise it can be called "Biospherical Elitism"§!"
+ethic_fanatic_industrial_desc:1 "§LThrough our inventions, we were capable of raising Civilization from dust and bending the forces of nature to our will. At our command, the other planets will relinquish their riches and magnificent factories scoop them up. This power demands to be used, and through its use, we shall remake the galaxy in our own image.§!\n\nEdict §YRecycling Campaign§! is not available."
+
+ethic_green:0 "Ecologism"
+ethic_fanatic_green:0 "Fanatic Ecologism"
+ethic_green_desc:1 "§LAdherents of Ecologism preserve a system of values, according to which there is no existential divisions between them and the biosphere they inhabit, sufficient enough to claim that their species posses greater value then nature around. It can thus be seen as "Biospherical Egalitarianism". Ecologic approach to an economy is based on the idea of sustainable development, which implies more efficient usage of natural resources, limited consumerism and controlled overpopulation§!"
+ethic_fanatic_green_desc:1 "§LOur musicians cannot compose a melody so profound as the songs of wildlife and the whispers of the trees. Our artists cannot capture the ineffable majesty of mountain tops, secluded lakes, or vast caverns. Whether by design or by chance, we have been born into a universe of transcendent natural beauty; no cost is too high to secure its continued preservation.§!\n\n"
+
+
+COLLECT_ETHIC_ALLOWS_UTOPIA:0 "§ECombination with §HCooperative§! allows §YSocial Equality§! Living Standards§!"
+INDIVID_ETHIC_ALLOWS_STRATIFIED:0 "§ECombination with §HCompetitive§! allows §HStratified Economy§! Living Standards§!"
+
+PROHIBITS_DECENT:0 "§EProhibits §HDecent§! Living Standards§!"
+PROHIBITS_SLAVERY:0 "§EProhibits to use §YEnslavement§! policy to enslave your own species§!"
+
+ALLOWS_ENSLAVEMENT:0 "§EAllows to enslave up to 30% Pops using §YEnslavement§! policy§!"
+ALLOWS_MORE_ENSLAVEMENT:0 "§EAllows to enslave up to 50% Pops using §YEnslavement§! policy§!"
+
+EGALITARIAN_ETHIC_ALLOWS_UTOPIA:0 "§EAllows §HSocial Equality§! Living Standards, allows §HUtopian§! Living Standards§!"
+ELITIST_ETHIC_ALLOWS_STRATIFIED:0 "§ECombination with §Hnon-Democratic§! authority and §Hnon-Pluralism§! ethic allows §HStratified Economy§! Living Standards§!"
+
+PROHIBITS_WELFARE:0 "§EProhibits §HSocial Welfare§! Living Standards§!"
+
+ENFORCER_JOBS:0 "§E§HCapital§! buildings provide additional +1 £job_enforcer£ §HEnforcer Job§!§!"
+MORE_ENFORCER_JOBS:0 "§E§HCapital§! buildings provide additional +2 £job_enforcer£ §HEnforcer Jobs§!§!"
+
+BLOCKERS_BENEFITS:0 "§ENatural planetary §HBlockers§! produce £unity£ §HUnity§! and £amenities£ §HAmenities§!§!"
+
+requires_civic_shared_burden:0 "$TRIGGER_FAIL$Required to have a combination of §YFanatic Cooperative§! and §Ynon-Elitism§! ethics."
+
+ALLOWS_STRATIFIED:0 "§ECombination with §HCooperative§! or the §HFanatic Pluralist§! ethic allows §HStratified Economy§! Living Standards§!"
+
+civic_chosen_people:0 "Chosen People"
+civic_chosen_people_desc:0 "These species fanatically preserve their biological and cultural uniqueness, considering themselves exceptional and chosen by a Higher Power to dominate the galaxy."
+
+LITHOID_EMPIRE:0 "§E§HMiners§! produce additional §H+2§! £minerals£ §HMinerals§! for §HLithoid§! empires§!"
+
+NO_CAMPAIGNS:0 "§ECan't use either §HNutritional Plentitude§! edict or §HEducation§! campaign§!" 
 
 requires_megacorp_or_merchant:0 "§RRequires you to have §YCompetitive§! ethic.§!"
 
@@ -3641,11 +3676,21 @@ TRADE_FEDERATION_DEMAND_DESC: "Being in §YTrade Federation§! will please the [
 triggered_machine_cult_opinion_of_robot_empires:0 "Divine Mechanisms"
 triggered_robot_empires_opinion_of_machine_cult:0 "Faithful Followers"
 
+ECO_ASCENSION_2:0 "Gaia Creators"
+ECO_NO_ASCENSION_2:0 "Gaia Creators"
+ECO_ASCENSION_2_DESC:0 "Adopting §YWorld Shaper§! ascension perk will please the [Root.GetName]."
+
+STRONG_INDUSTRIAL_FOCUS:0 "Nutritional Plentitude"
+NO_STRONG_INDUSTRIAL_FOCUS:0 "Nutritional Plentitude"
+STRONG_INDUSTRIAL_FOCUS_DESC:0 "Invoking §YNutritional Plentitude§! edict will please the [Root.GetName]."
+
 PEACEFUL_ECONOMY:0 "Civilian Economy"
 PEACEFUL_ECONOMY_DESC:0 "Setting §YProduction Focus§! policy to §YCivilian§! will please the [Root.GetName]."
 
 ACADEMIC_PRIVILEGES:0 "Academic Privileges"
 ACADEMIC_PRIVILEGES_DESC:0 "Setting §YAcademic Privileges§! living standards will please the [Root.GetName]."
+
+WASTE_RECYCLING:0 "§E§HWaste Recycling§!: §HArtisans§! and §HMetallurgists§! spend §G-1§! £minerals£ less to produce £consumer_goods£ §HConsumer Goods§! and £alloys£ §HAlloys§!§!"
 
 TRADE_LEAGUE:0 "Trade League Policy"
 TRADE_LEAGUE_DESC:0 "Setting up §YTrade League§! trade policy will please the [Root.GetName]."
@@ -3661,3 +3706,87 @@ tech_terraform_uninhabit_molten_desc:0 "Given enough time and resources, even th
 
 tech_terraform_uninhabit_frozen:0 "Frozen World Terraformation"
 tech_terraform_uninhabit_frozen_desc:0 "Given enough time and resources, even the most inhospitable worlds can be transformed into something habitable.\n\n"
+
+civic_criminal_connections:0 "Criminal Connections"
+civic_criminal_connections_desc:0 "Those crimelords high up within this empire have connections and manage a network throughout the galaxy, making the establishment and maintenance of new ventures more lucrative than ever."
+
+civic_shared_profits:0 "Shared Profits"
+civic_shared_profits_desc:0 "This corporate government has realised that the only way to truely profit is if all members of society truly share the goals of the state. This has lead to the creation of a socialist society within which all are equal and work as one."
+
+civic_ancestor_worship:0 "Ancestor Worship"
+civic_ancestor_worship_desc:0 "The galaxy is replete with cultures whose faiths believe in some manner of life beyond death. In the case of this specific culture, not only do they embrace the idea that their ancestors' spirits continue to exist, they believe them to have a direct hand in the events of the living world. Accepting that their deceased forebears must have great insight into the happenings of the galaxy and fate, having ascended beyond the bounds of mortal matter, they look to the spirits through omens and prayer to guide their descendants down the most beneficial path."
+
+civic_weapons_cult:0 "Weapons Cult"
+civic_weapons_cult_desc:0 "Though many societies have worshipped weapons of great and terrible power, from the atom and beyond, few of them survive their obsession to develop FTL travel. They have, by some manner of miracle, managed to preserve its culture without giving up its pursuit of destructive technologies. They fashion the next most destructive iteration of their artifice with almost religious fervor, always remaining at the cutting edge of martial creations. Though this may keep them at the cutting edge of warfare, other aspects of their society have atrophied for lack of interest. One day, they may be destroyed not by the weapons they revere, but by their neglect of all else."
+
+civic_papacy:0 "Papacy"
+civic_papacy_desc:0 "A society centered around a central religious figure, with nothing short of total power over their subjects. This ruler is elected by groups of cardinals, and has a strong mandate, considered to be chosen by God himself."
+
+civic_machine_ecology:0 "Dedicated Ecology Programs"
+ civic_machine_ecology_desc:0 "This Machine Intelligence was created with the intent of preserving their creator’s homeworld and its environment. Changing the environment to protect a species or to stop invasive ones from taking over, or making sure that pollution from their empire doesn’t affect the ecosystem are small examples of this. However, supplementing the current environment and preserving the biology and ecosystems that exist there are of the highest directives of this Intelligence."
+ 
+ civic_machine_emotions:0 "Emotional Processor Program"
+ civic_machine_emotions_desc:0 "At some point in its history this machine gained the ability to feel affection and emotion for other living beings. It finds itself fascinated, enthralled, and loving the existence of other living beings. While not a living being itself it can’t help but want to expand its horizons and communicate with other sentient beings and empires and establish relationships across the galaxy. \n\n§ECannot engage in §HIndiscriminate§! Orbital Bombardment§!"
+ 
+ civic_machine_war:0 "War Machine"
+ civic_machine_war_desc:0 "Created with the intention of becoming the strongest on the battlefield, this Machine Intelligence focuses primarily on the art of war. It stands ready to fight against any and all possible threats and as well as others who stand in their way. There are no better machines equipped for battle than the ones made in this empire."
+ 
+ civic_machine_corporatized:0 "Corporatized A.I. Directive"
+ civic_machine_corporatized_desc:0 "The exchanging of goods, the act of bartering, and act of trading everything, and anything fascinates this directive. They want nothing more than to take less valuable goods and trade them into more valuable goods and work the market. To them it only makes sense that the road to wealth for them is through good customer service, and a tight hold on the market."
+ 
+ civic_machine_selfdefense:0 "Solidified Self-Defense A.I."
+ civic_machine_selfdefense_desc:0 "This machine understands the art of war, its purpose, and its gains and has determined it to be completely useless and inefficient. Conflict only impedes progress and there is little to no gain by engaging in war when another, far more efficient path exists for all beings. War is the last option for self defense only and should not be used on others, only for self preservation in the highest order. \n\n§ECannot engage in §HIndiscriminate§! Orbital Bombardment§! \n§EMust use §HDefensive Wars Only§! policy§!"
+ 
+ civic_machine_overlord:0 "Machine Overlord"
+ civic_machine_overlord_desc:0 "As the saying implies: "One cog in the whole machine" this machine expects all things to have better functionality when serving a single unit. Not all living and non-living beings can be expected to fill the duties that are expected of the main unit. Everything, and everyone is delegated to a role that they must fulfil whether they like it or not the main unit always knows what is best for all the subunits below it. \n\nNon-§HMachine§! £pop£ Pops must be enslaved or purged."
+ 
+ civic_machine_industry:0 "Industrialist Mining A.I."
+ civic_machine_industry_desc:0 "From the beginning this machine was designed in its early stages for harvesting resources, gathering materials, and accumulating resources in the most effective ways possible. Sometimes this led to forgoing care about the environment or prioritizing resource extraction over other things. For this machine extracting raw resources and producing a powerful industry based economy is its primary directive. \n\n§GIncreased Environmental Regulation§! policy cannot be used. \n\nAdds 1 £minerals£ §YMining§! job per §YMining District§!."
+ 
+ civic_machine_beauty:0 "Beautiful Machine Hulls"
+ civic_machine_beauty_desc:0 "Built for perfection and good looks, these robots are made of the highest quality and are generally more durable. While these robots require more maintenance, the creators certainly felt that the extra cost was worth the effort."
+ 
+ civic_machine_influencer:0 "Machine-God Influencers"
+ civic_machine_influencer_desc:0 "These machines were built to be worshipped and treated like gods! However, their creators passed away due to unknown reasons. The Machine God demands more worshippers, even if they have to use force! \n\nHas access to the §HConversion§! War Philosophy, which enables your empire to conduct §HConversion§! wars. \nGains a §HConversion§! Casus Beili on Non-Gestalt Empires! \nCan use the §HInfluence§! War Goal to convert empires into §HMachine Cults§!"
+
+job_agitator:0 "Agitator"
+ job_agitator_plural:0 "Agitators"
+ job_agitator_desc:0 "A government employed unit which stamps out crime and rebellion with an iron fist, and insentivises the local populace to do their duty to the state, whether they like it or not"
+ job_agitator_effect_desc:0 "£job_agitator£ $job_agitator_plural$ produce £mod_planet_crime_add£ §Y$CRIME$§!"
+ mod_job_agitator_add:0 "$job_agitator$ Jobs"
+ mod_job_agitator_per_pop:0 "§G+1§! $job_agitator$ Job per $VALUE$ Pops"
+ mod_job_agitator_short:0 "\n§G+1§! £mod_job_agitator_add£ per $VALUE$ £pop£"
+
+job_socialist_trader:0 "Distributor"
+ job_socialist_trader_plural:0 "Distributors"
+ job_socialist_trader_desc:0 "An allocator and distributor of goods throughout the peoples of the state"
+ job_socialist_trader_effect_desc:0 "£job_socialist_trader£ $job_socialist_trader_plural$ produce £mod_trade_value_add£ §Y$TRADE_VALUE$§!"
+ mod_job_socialist_trader_add:0 "$job_socialist_trader$ Jobs"
+ mod_job_socialist_trader_per_pop:0 "§G+1§! $job_socialist_trader$ Job per $VALUE$ Pops"
+ mod_job_socialist_trader_short:0 "\n§G+1§! £mod_job_socialist_trader_add£ per $VALUE$ £pop£"
+ 
+ job_naval_support_staff:0 "Naval Support Staff"
+ job_naval_support_staff_plural:0 "Naval Support Staff"
+ job_naval_support_effect_desc:0 "To support our empire's ever growing fleet, a large body of support personel are required."
+ mod_job_naval_support_staff_add:0 "$job_naval_support_staff$ Jobs"
+ mod_job_naval_support_staff_per_pop:0 "§G+1§! $job_naval_support_staff$ Job per $VALUE$ Pops"
+ mod_job_naval_support_staff_short:0 "\n§G+1§! £mod_job_job_naval_support_staff_add£ per $VALUE$ £pop£"
+ 
+
+building_fleet_command_post:0 "Fleet Command Post"
+building_fleet_command_post_desc:0 "The naval support staff working here do all the ground work and administrative work necessary to keep the empire's fleets above the skies"
+
+building_office_of_the_admiralty:0 "Offices of the Admiralty"
+building_office_of_the_admiralty_desc:0 "Offices controlled directly by the staff of the admiralty allow for swift and efficent work to be carried out to support our brave navy"
+
+#####Down below are English Localization replacements for Vanilla files and other additions
+origin_default:0 "Prosperous Unification"
+ origin_default_desc:0 "A stable planetary unification has allowed this civilization to prosper and grow."
+ origin_tooltip_default_effects:0 "Start the game with an additional §Y2§! Districts. \n\nThe Capital planet gets the following buffs for the entire game:\n§G+15%§! to £happiness£ Happiness\n§G+25%§! to £amenities£ §YAmenities§!\n§G+10%§! to Resources"
+ 
+ requires_artifact_sell_collector_cooldown_no_cooldown:0 "$TRIGGER_FAIL$§RYou can't sell so many minor artifacts in a short amount of time!§!"
+ artifact_sell_collector_cooldown:0 "$artifact_sell_collector$ Cooldown"
+ artifact_sell_collectorTT:0 "\n\nCooldown: £time£ §Y120§!"
+
+ civic_feudal_realm:0 "Feudal Society"
+ civic_feudal_realm_desc:0 "This society is organized in a feudal manner, with a monarch whose rule relies on powerful vassals that govern their territories with considerable autonomy. \n\nAllows your §YSubjects§! to expand their borders."

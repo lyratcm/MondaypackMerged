@@ -1,5 +1,5 @@
 ﻿l_french:
-name_list_Lunari:0 "Elves: Moon Elf"
+name_list_eos_namelist_elf_lunari:0 "Elves: Moon Elf"
 
 ####################################
 # Civics and traits
@@ -25,6 +25,7 @@ pc_lunari_shielded:0 "Shielded Moon"
 pc_lunari_shielded_desc:0 "This moon is encased in some kind of impenetrable energy barrier. It provides the only significant source of light in the system as well as radiating an enormous amount of psionic energy. All scans of the surface, if one exists, are reflected back by means unknown."
 
 pc_lunari_arctic:0 "Permafrost World"
+pc_lunari_arctic_adj:0 "permafrost"
 pc_lunari_arctic_desc:0 "Glacial rocky world with a moderate nitrogen-oxygen atmosphere. Extreme weather conditions prevent all but the most robust forms of life."
 
 pc_lunari_arctic_tile:0 "Permafrost Terrain"

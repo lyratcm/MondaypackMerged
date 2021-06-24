@@ -1,5 +1,8 @@
 ﻿l_english:
 #_[UI Overhaul Dynamic - Extended Topbar & Modbuttons]
+#_[刷新领袖]
+#_[快速联系]
+#_[伞の优化]
 
 
 
@@ -9,16 +12,65 @@
  mb_galactic_nations_assembly_tooltip:0 "§HGalactic Nations Assembly§! mod not found!"
  mb_quibble_propaganda_tooltip:0 "§HPropaganda and Espionage§! mod not found!"
  mb_ruler_hobby_button_tooltip:0 "§HRuler Level System§! mod not found!"
+ 
+ z_ic_tips_main:0 "Welcome to §HDark Blue UI Overhaul§!"
+ z_ic_tips_subtitle:0 ""
+ 
+ z_mui_text_privacy:0 "Privacy"
+ z_mui_text_homepage:0 "Homepage"
+ z_mui_text_forum:0 "Forum"
+ z_mui_text_facebook:0 "Facebook"
+ z_mui_text_twitter:0 "Twitter"
 
 
-#_FTA
- FIRE:0 "Fire them all!"
- CASHOUT:0 "Hiring and firing is tedious. Just pay them off."
- INFOUT:0 "Pull some strings, suggest they look elsewhere. Just get rid of them."
- fta.1.name:0 "Fire them ALL!"
- fta.1.desc:0 "Disappointed with your current leader options? Fire them ALL! A new pool will be available the next day."
- fta.2.name:0 "Fire Governor Candidates"
- fta.2.desc:0 "How should we get rid of all these employment hopefuls?"
- fta.3.name:0 "Fire Scientist Candidates"
- fta.4.name:0 "Fire Admiral Candidates"
- fta.5.name:0 "Fire General Candidates"
+###_[刷新领袖]
+ REROLL:0 "Careers"
+ FIRE:0 "Dismiss all!"
+ use_credits:0 "Use energy coins to give liquidated damages/each person §G25§! Credits"
+ use_influence:0 "Rely on influence to suppress public opinion/each person §B3§! Point"
+ z_mui_reroll.1.name:0 "Dismiss them!"
+ z_mui_reroll.1.desc:0 "The new leader candidate list will be presented in your office the next day."
+ z_mui_reroll.2.name:0 "Recruit a new batch of candidates for the governorship"
+ z_mui_reroll.2.desc:0 "The endless stars are full of unknowns, for a better future for the empire! We are in urgent need of a new group of talents!"
+ z_mui_reroll.3.name:0 "Recruit a group of new scientist candidates"
+ z_mui_reroll.4.name:0 "Recruit a new batch of candidates for fleet commander"
+ z_mui_reroll.5.name:0 "Recruit a batch of new army commander candidates"
+ 
+
+
+
+###_[快速联系] 
+ z_mui_ec:0 "§B Dark Blue UI: Express Contact§!"
+ z_mui_btn_ec_folded:0 "$z_mui_ec$\n is currently in the §Hcollapse§! state, click to expand the communication tab."
+ z_mui_btn_ec_unfolded:0 "$z_mui_ec$\n is currently in the §GExpand§! state, click to collapse the communication tab."
+ 
+ z_mui_btn_ec_switch:0 "§BSwitch Contact§!\nSwitch to the next available contact in the current category."
+ 
+ z_mui_tips_ec_disabled:0 "Cannot contact the current faction"
+ z_mui_tips_ec_disabled_attacked:0 "We attacked and are hostile to this faction."
+ z_mui_tips_ec_disabled_engaged:0 "We are currently communicating with a faction of the current category."
+ 
+ z_mui_btn_ec_marauder:0 "§BExpress contact:§! $NUM_MARAUDER_EMPIRES$\nThey can provide us with powerful fleet commander and mercenary services."
+ 
+ z_mui_btn_ec_trader_1:0 "§BExpress contact:§! $guardian.100.name$\nThey can provide us with £exotic_gases£§G$exotic_gases$§!."
+ z_mui_btn_ec_trader_2:0 "§BExpress Contact:§! $guardian.103.name$\nThey can provide us with £volatile_motes£§R$volatile_motes$§!."
+ z_mui_btn_ec_trader_3:0 "§BExpress Contact:§! $guardian.104.name$\nThey can provide us with £rare_crystals£§Y$rare_crystals$§!."
+ 
+ z_mui_btn_ec_curator:0 "§BExpress contact:§! $gov_curator_enclave$\nThey can provide us with scientific research assistance and can act as consultants."
+ 
+ z_mui_btn_ec_artist:0 "§BExpress contact:§! $gov_artist_enclave$\nThey can provide us with cultural support and hold art festivals."
+ z_mui_tips_ec_disabled_artist_ignore:0 "They are currently busy with other things and they have no time to talk to us."
+ 
+ #_[Drow's Roulette]
+ z_mui_btn_ec_caravaneer_base:0 "§BExpress contact:§! $NAME_Caravaneer_Home$\nThey will sell us some special products and provide lucky draws."
+ #_[Fangoli Group]
+ z_mui_btn_ec_caravaneer_fleet_1:0 "§BExpress contact:§! $NAME_Caravaneer_Fleet1$\nThey will sell randomly selected items at the price of random options, and the transactions they encounter with this trader are completely dependent on their faces."
+ #_[Numa Order]
+ z_mui_btn_ec_caravaneer_fleet_2:0 "§BExpress contact:§! $NAME_Caravaneer_Fleet2$\nThe Numa Order is an idealist business group that believes in Numa, the goddess of wealth. They have the unique technology to drill holes on any livable planet to obtain huge wealth (Add special mineral vein "Numa's Breath"), and can provide a special temple "Numa Shrine"."
+ #_[Rachi Industrial Group]
+ z_mui_btn_ec_caravaneer_fleet_3:0 "§BExpress Contact:§! $NAME_Caravaneer_Fleet3$\nCaravaneer_Fleet3$\n Caravaneer is a compatriot of the Caravaneer clan. They don’t sell garbage-spread orbital bombing auxiliary components (by reducing planetary defense to increase bombing damage), garbage Processing center (building), rachi population, mechanical population (mechanical empire only), some leaders, etc."
+ 
+ z_mui_btn_ec_shroud:0 "§BExpress Contact:§! Shroud\nThis is a sea of ​​psychic energy independent of the physical universe."
+ z_mui_tips_ec_disabled_shroud:0 "Shroud Communication is currently cooling down."
+ z_mui_tips_shroud_cd:0 "We must wait §H[This.z_mui_tips_shroud_cd] months§! to enter §M$utopia.3000.name$§!."
+

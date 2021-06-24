@@ -5,8 +5,9 @@ FLAG_CATEGORY_drow:0 "Drow"
 # Name Lists
 ####################################
 
-name_list_DROW1:0 "Drow: Dunmer"
-name_list_DROW2:0 "Drow: Ilythiiri"
+name_list_eos_namelist_drow_dunmer:0 "Drow: Dunmer"
+name_list_eos_namelist_drow_ilythiiri:0 "Drow: Ilythiiri"
+name_list_eos_namelist_drow_darkelf:0 "Drow: Dark Elf"
 
 ####################################
 # System Initializers
@@ -55,6 +56,12 @@ DROW_desc:1 "Species Class has no effect on your Empire, but Drow species may co
 DROW_plural:0 "Ilythiiri"
 DROW_insult_01:0 "demon"
 DROW_insult_plural_01:0 "demons"
+DROW_insult_02:0 "charred skinned freak"
+DROW_insult_plural_02:0 "charred skinned freaks"
+DROW_insult_03:0 "burned gremlin"
+DROW_insult_plural_03:0 "burned gremlins"
+DROW_insult_04:0 "scorched bag of mostly water"
+DROW_insult_plural_04:0 "scorched bags of mostly water"
 DROW_compliment_01:0 "angel"
 DROW_compliment_plural_01:0 "angels"
 DROW_spawn:0 "child"
@@ -65,7 +72,14 @@ DROW_sound_03:0 "yapping"
 DROW_sound_04:0 "yowling"
 DROW_sound_05:0 "mewling"
 DROW_organ:0 "stomach"
+DROW_organ_plural:0 "stomachs"
 DROW_mouth:0 "mouth"
+DROW_ear:0 "ear"
+DROW_ear_plural:0 "ears"
+DROW_hand:0 "hand"
+DROW_hand_plural:0 "hands"
+DROW_tooth:0 "tooth"
+DROW_tooth_plural:0 "teeth"
 
 RT_VALSHARESS:0 "Valsharess"
 
@@ -74,6 +88,12 @@ ILYTHIIRI_desc:0 "Species Class has no effect on your Empire, but Drow species m
 ILYTHIIRI_plural:0 "Ilythiiri"
 ILYTHIIRI_insult_01:0 "demon"
 ILYTHIIRI_insult_plural_01:0 "demons"
+ILYTHIIRI_insult_02:0 "ash skinned freak"
+ILYTHIIRI_insult_plural_02:0 "ash skinned freaks"
+ILYTHIIRI_insult_03:0 "burned gremlin"
+ILYTHIIRI_insult_plural_03:0 "burned gremlins"
+ILYTHIIRI_insult_04:0 "scorched bag of mostly water"
+ILYTHIIRI_insult_plural_04:0 "scorched bags of mostly water"
 ILYTHIIRI_compliment_01:0 "angel"
 ILYTHIIRI_compliment_plural_01:0 "angels"
 ILYTHIIRI_spawn:0 "child"
@@ -84,7 +104,14 @@ ILYTHIIRI_sound_03:0 "yapping"
 ILYTHIIRI_sound_04:0 "yowling"
 ILYTHIIRI_sound_05:0 "mewling"
 ILYTHIIRI_organ:0 "stomach"
+ILYTHIIRI_organ_plural:0 "stomachs"
 ILYTHIIRI_mouth:0 "mouth"
+ILYTHIIRI_ear:0 "ear"
+ILYTHIIRI_ear_plural:0 "ears"
+ILYTHIIRI_hand:0 "hand"
+ILYTHIIRI_hand_plural:0 "hands"
+ILYTHIIRI_tooth:0 "tooth"
+ILYTHIIRI_tooth_plural:0 "teeth"
 
 ####################################
 # Traits
@@ -133,18 +160,21 @@ gov_drow_matriarchal_council_desc:0 "This government is a spiritualistic form of
 
 ## VALSHAQUELLAR ##
 pc_drow_valshaquellar:0 "Valshaquellar"
+pc_drow_valshaquellar_adj:0 "artificial"
 pc_drow_valshaquellar_desc:0 "A colossal artificial world that appears to be designed to support only specific forms of life."
 mod_pc_drow_valshaquellar_habitability:0 "Valshaquellar Habitability"
 trait_pc_drow_valshaquellar_preference:0 "Valshaquellar Preference"
 trait_pc_drow_valshaquellar_preference_desc:0 "§LClimate preference is determined at the genetic level, by Creation or skillful manipulation.§!"
 
 pc_drow_valshaquellar_dead:0 "Valshaquellar"
+pc_drow_valshaquellar_dead_adj:0 "ruined"
 pc_drow_valshaquellar_dead_desc:0 "A colossal artificial world that appears to be designed to support only specific forms of life."
 mod_pc_drow_valshaquellar_dead_habitability:0 "Valshaquellar Habitability"
 trait_pc_drow_valshaquellar_dead_preference:0 "Valshaquellar Preference"
 trait_pc_drow_valshaquellar_dead_preference_desc:0 "§LClimate preference is determined at the genetic level, by Creation or skillful manipulation.§!"
 
 pc_drow_speleoterrestrial:0 "Speleoterrestrial World"
+pc_drow_speleoterrestrial_adj:0 "speleoterrestrial"
 pc_drow_speleoterrestrial_desc:0 "Rocky world that formed with expansive subterranean caverns. The light nitrogen-oxygen atmosphere is suitable for some forms of life."
 pc_drow_speleoterrestrial_habitability:0 "Subterranean Preference"
 mod_pc_drow_speleoterrestrial_habitability:0 "Subterranean Habitability"

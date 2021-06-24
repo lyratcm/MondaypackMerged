@@ -85,7 +85,7 @@
  z_lctr_r_adv_sensor_desc:0 "从宇宙诞生之时起，$z_name_graysnow$便一直致力于对抗$z_name_entropius$。为了探知那些被$z_name_entropy_mist$掩盖的世界，$z_lctr_r_adv_sensor$被设计了出来。这种神奇的传感器矩阵可以精确地捕捉星系中溢出的§B暗能量§!信号，无论是处于宇宙风暴中的信息，还是因为其他种种原因被封印的星系都无所遁形。因为§B暗能量，无所不能！§!\n\n拥有此遗珍，使用高级定位器可定位宇宙中任意角落的目标，即便它处在黑暗中未知世界的星系里。\n此外，激活此遗珍后，你的传感器可以探知所有被隐藏的星系，只要你拥有那里的视野。"
  
 #_war
- z_cltr_cb_plunder_relic: "持有$z_lctr_r_adv_sensor$"
+ casus_belli_z_lctr_cb_plunder_relic: "持有$z_lctr_r_adv_sensor$"
  war_goal_z_lctr_wg_plunder_relic: "夺取$z_lctr_r_adv_sensor$"
  war_goal_z_lctr_wg_plunder_relic_desc: "发动战争夺取$z_lctr_r_adv_sensor$，如果获胜，传感器和高级定位器的功能就会被强化。"
  z_lctr_tips_good: "真是太棒了"
@@ -143,7 +143,7 @@
  z_lctr_relic.core.name:0 "寂静之雾"
  z_lctr_relic.core.desc:0 "混乱过后，解读工作继续进行。\n\n$z_name_entropius$最恐怖的武器不是能瞬间熄灭星系的恐怖能量，显然战争的双方都在释放着我们所无法理解的强大力量，这种程度的火力对他们来说并不算什么。$z_name_entropius$最重要的武器是一种被称作$z_name_entropy_mist$神秘能量，这种能量稀薄而致命，当它弥漫在空间中时会瓦解所有有形的存在，让一切变得均衡而死寂。\n\n$z_name_graysnow$似乎非常恐惧这种武器，他们的所有策略都围绕着$z_name_entropy_mist$，阻止它扩散和蔓延。但是在最初的战斗中$z_name_graysnow$总是处于下风，他们对$z_name_entropy_mist$毫无办法，为此他们失去了一个又一个星系，并被驱赶到星系的核心，围绕着巨大黑洞以光速环行尝试避开$z_name_entropy_mist$的侵蚀。直到最近几亿年，因为一种全新设备的发明战况才有了转机。\n\n解读仍然在继续，但是一股强大的能量再次从核心爆发，并横扫了整个星球。一片混乱之后，我们的数据库中突然出现了无数新的星系坐标。(打开项目日志查看§G$z_lctr_chain_story_title$§!)"
  z_lctr_relic.matrix.name:0 "传感器矩阵"
- z_lctr_relic.matrix.desc:0 "$z_name_entropy_mist$会阻碍所有已知的通信方式并隐藏$z_name_entropius$舰队的位置，$z_name_graysnow$因此总是处于被动的位置，唯一阻止$z_name_entropius$的手段就是预测它们的计划，并在$z_name_entropy_mist$被投放扩散前消灭它们。很明显，$z_name_entropius$只需要一次机会，$z_name_graysnow$却不能失误一次。\n\n直到有一天，$z_name_graysnow$的科研部门发现暗能量信号可以穿越厚重的$z_name_entropy_mist$，他们开发了一种全新的传感器矩阵，战争的天平也开始扭转。$z_name_graysnow$开始反攻并收复每一块失地，$z_name_entropius$则变得更加疯狂，不顾一切地散布$z_name_entropy_mist$，并引爆星系核心的巨大黑洞群。\n\n记录到了这里嘎然而止，我们不知道银河系中时候还有$z_name_graysnow$与$z_name_entropius$，也不清楚他们的战争进行到了何种程度，但是我们很清楚，一切争斗都失去了意义，最恐怖的危机一直伴随在我们身边。\n\n一股强大的能量再次从星球的核心爆发，每次能量冲击都会激活这个星球沉睡的部分，现在，它似乎彻底激活了。"
+ z_lctr_relic.matrix.desc:0 "$z_name_entropy_mist$会阻碍所有已知的通信方式并隐藏$z_name_entropius$舰队的位置，$z_name_graysnow$因此总是处于被动的位置，唯一阻止$z_name_entropius$的手段就是预测它们的计划，并在$z_name_entropy_mist$被投放扩散前消灭它们。很明显，$z_name_entropius$只需要一次机会，$z_name_graysnow$却不能失误一次。\n\n直到有一天，$z_name_graysnow$的科研部门发现暗能量信号可以穿越厚重的$z_name_entropy_mist$，他们开发了一种全新的传感器矩阵，战争的天平也开始扭转。$z_name_graysnow$开始反攻并收复每一块失地，$z_name_entropius$则变得更加疯狂，不顾一切地散布$z_name_entropy_mist$，并引爆星系核心的巨大黑洞群。\n\n记录到了这里嘎然而止，我们不知道银河系中是否还有$z_name_graysnow$与$z_name_entropius$，也不清楚他们的战争进行到了何种程度，但是我们很清楚，一切争斗都失去了意义，最恐怖的危机一直伴随在我们身边。\n\n一股强大的能量再次从星球的核心爆发，每次能量冲击都会激活这个星球沉睡的部分，现在，它似乎彻底激活了。"
  z_lctr_relic.matrix.a: "无比震撼，顺便把遗珍带回首都吧！"
 
  z_lctr_relic.epilogue.name:0 "尾声-风暴将至"

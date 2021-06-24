@@ -10,6 +10,7 @@ storms_gasgiant_category = {
 			is_planet_class = pc_gas_giant
 		}
 	}
+
 	on_success = anomaly.330
 }
 
@@ -48,7 +49,6 @@ space_storm_2
 # Create Storm
 country_event = {
 	id = galactic_features.401
-}
 psi_storm_1
 turbulent_nebula_2
 turbulent_nebula_1

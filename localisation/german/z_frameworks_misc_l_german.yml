@@ -53,6 +53,8 @@
 #_modifiers
  z_fw_temp_function:0 "§BFunctional Modifier§!"
  z_fw_temp_function_desc:0 "A modifier for a temporary function."
+ z_fw_mod_cntr_default:0 "§GInfinite Stellaris:§! Default Buff"
+ z_fw_mod_cntr_default_desc:0 "Shipbreaker/"
 
 #_mian event chain SP用Root EC用This,EC等同country本身
  z_chain_main_title: "§GInfinite Collection: Core System§!"
@@ -72,13 +74,18 @@
 
 ###_Eager for stars
 #_evts
- z_fw_start_setting:0 "§GIfinite Stellaris§! Start Setting"
- z_fw_start_setting_desc:0 "You have activated the Infinite Stellaris framework and decided to use the new contents that comes with the framework. \nHere you will pre-set the core contents of Infinite Stellaris and its sub-mods. Please move the cursor to each option to stay, and carefully read the introduction shows afterwards. If you want to change the setting, click the option directly, and it will switch to another option. \nAfter finishing the setting, please click §G$z_fw1_misc.1.c$§! at the bottom, otherwise you will not be able to exit this menu. If you cannot find §G$z_fw1_misc.1.c$§!, use the §Bslider on the right§!."
+ z_fw_start_setting_0:0 "Start Setting: War and Economy"
+ z_fw_start_setting_0_desc:0 "You have activated the Infinite Stellaris framework and decided to use the new contents that comes with the framework. \nHere you will pre-set the core contents of Infinite Stellaris and its sub-mods. Please move the cursor to each option to stay, and carefully read the introduction shows afterwards. If you want to change the setting, click the option directly, and it will switch to another option. \nNote: use the §Bslider on the right§!.\nAll settings related to war, economy, crisiss and technology."
+ z_fw_start_setting_1:0 "Start Setting: Perforamance and Utility"
+ z_fw_start_setting_1_desc:0 "You have activated the Infinite Stellaris framework and decided to use the new contents that comes with the framework. \nHere you will pre-set the core contents of Infinite Stellaris and its sub-mods. Please move the cursor to each option to stay, and carefully read the introduction shows afterwards. If you want to change the setting, click the option directly, and it will switch to another option. \nNote: use the §Bslider on the right§!.\nAll settings related to optimization and special utilities."
+ z_fw_start_setting_2:0 "Start Setting: Extra Content"
+ z_fw_start_setting_2_desc:0 "You have activated the Infinite Stellaris framework and decided to use the new contents that comes with the framework. \nHere you will pre-set the core contents of Infinite Stellaris and its sub-mods. Please move the cursor to each option to stay, and carefully read the introduction shows afterwards. If you want to change the setting, click the option directly, and it will switch to another option. \nNote: use the §Bslider on the right§!.\nEaster eggs, independent content, etc. Most settings in this category cannot be changed in the game."
  z_fw_start_setting_done:0 "Start Setting Completed"
  z_fw_tips_start_setting_done:0 "After finishing the settings, click ESC to exit this menu and initialize. You can also open the settings panel at any time in the game to adjust the settings."
+ z_fw_start_setting_next:0 "Next Setting Category"
  
  z_fw_start_title:0 "Welcome to §GIfinite Stellaris§!"
- z_fw_start_desc:0 "§GInfinite Stellaris§! is devoted to collect numorous §Yhigh-quality mods§!. Under the premise of making each mod §Ycompatible§!, their functions will be effective. This will build a totallly new game system while Infinite Stellaris and its sub modules are the foundation. No doubt, this will start a new journey for you.\n\nThe current contents are §YBasic Compatible Patches/ Planet Capacity/ New War Types/ New Map Modes/ Advanced Weapon Technology Linkage System/ Dynamic Difficulty System/ Automatic Constructor Ship/ Sentinel Array Switcher/ Advanced Cheating System/ New Relics and Events, etc.§! Click on LOGO in the settings panel to open the framework settings, and turn off or turn the functions you need.\n\nYou support is my motivation, this is §H小伞INFINI7E§!.\n\nPlease place the cursor on each of the start setting option buttons for a detailed introduction."
+ z_fw_start_desc:0 "§GInfinite Stellaris§! Committed to building a complete new game system, improving performance efficiency, new game content, and providing basic compatibility with some major mods. \n\nCurrently this framework comes with §Y Modmenu/ basic compatibility patch/ planet population limit/ new war types/ new map mode/a dvanced weapon technology linkage system/ dynamic difficulty system/ automatic engineering ship/ sentinel array switch/ advanced cheating System/ new relics and events, etc.§!, click LOGO in the settings panel to enable the frame settings to turn off or turn on these functions. \n\nYour support is the driving force for me to move forward. Please like and favorite, this is the greatest inspiration to the author. \n\nPlease place the cursor on the option button of each deployment setting for a detailed introduction."
  
  z_fw1_misc.1.a1: "Desire for stars §GOn§!"
  z_fw1_misc.1.a1.tooltip: "This species is eager to expand territory, you will obtain $z_fw_r_monument$. Will make the game difficult and adapt to the mod environment with high-intensity enemies. Desire points §G+6§! and capital planet get initial pop growth buff.\n\nDesire points can be used to trigger planet decision $z_fw_dec_desire_for_stars$ or start a Great Crusade by toggling $z_fw_r_monument$."
@@ -354,12 +361,17 @@
 
 ###_璀璨星图
 #_evts
- z_fw_r_co_choice_power.name:0 "§GCelestial Orrey§!: Fire Mode"
- z_fw_r_co_choice_power.desc:0 "Feel the wrath of God. We should choose a way to detonate the star. Immediately, everything will be quiet. Order will return to the galaxy with the bright light from the exploding star."
- z_fw1_misc.31.a1:0 "Detonate the star core"
- z_fw1_misc.31.a2:0 "Detonate all stars in this system"
- z_fw1_misc.31.a3:0 "Detonate all stars in this system and nearby systems"
- z_fw1_misc.31.a4:0 "Detonate the stars to destroy this empire"
+ z_fw_r_cht_co_choice_power.name:0 "§GBright Star Map§!: Fire Mode"
+ z_fw_r_cht_co_choice_power.desc:0 "Feel the wrath of God, we must choose a way to detonate this star. Immediately, everything will be silent. Order will return to this galaxy with the bright light of the sun extinguishing."
+ 
+ z_fw1_misc.31.exp_executing:0 "The current system is being blasted"
+ z_fw1_misc.31.plnt_random:0 "detonate random celestial bodies"
+ z_fw1_misc.31.plnt_random_bh:0 "Detonate random celestial bodies and collapse them into black holes"
+ z_fw1_misc.31.sstm:0 "Detonate all celestial bodies in the system"
+ z_fw1_misc.31.sstm_bh:0 "Detonate all celestial bodies in the system and collapse them into black holes"
+ z_fw1_misc.31.sstm_near:0 "Detonate all celestial bodies in the current system and nearby galaxies"
+ z_fw1_misc.31.cntr:0 "Directly destroy the civilization that the current system belongs to"
+ 
  z_fw1_misc.313.name:0 "[LastKilledCountryName] has been completely destroyed"
  z_fw1_misc.313.desc:0 "We learned that [LastKilledCountryName] has been completely destroyed by some mysterious power. Within less than a month, the stars in their territory have erupted one after another, making their territory extremely bright, but unfortunately they have become light as well. Their precious fleets, the megastructures which is covering the sky dome, their prosperous and glorious planets, now has become nothing left except wreckage. The twinkling supernova and the fragments of the celestial body are intertwined to form an extremely magnificent picture, which is intoxicating."
  z_fw1_misc.314.name:0 "[LastKilledCountryName] has been completely destroyed"
@@ -370,11 +382,12 @@
  z_fw1_misc.316.desc:0 "We learned that an unknown interstellar civilization has been completely destroyed by some mysterious terrible power. Within a month, the stars in their territory have erupted one after another, making their territory extremely shining, but unfortunately they have become light as well. We do not know what kind of history they have, and the communication with them is only some short conversation, just as they never existed for us. Today, only the twinkling supernova and the fragments of the celestial body are intertwined in the systems that originally belonged to them, forming a very magnificent picture, which is intoxicating."
  
 #_tooltips
- z_fw_r_celestial_orrey_not_activited:0 "Celestial Orrey is §Hnot activited.§!"
- z_fw_r_celestial_orrey_activited:0 "Celestial Orrey is §Gactivited§!. Specify the positioning coordinates in §Ymegastructure construction panel§! of the engineering ship to detonate a celestial body."
- z_fw_target_marker_co_ongoing:0 "A Celestial Orrey Target Marker is existed."
- z_fw_target_marker_co_1_placement:0 "Must be set on stars."
- z_fw_target_marker_co_2_placement:0 "Must be set on special celestial bodies, such as black holes, neutron stars, etc."
+ z_fw_r_celestial_orrey_not_activited:0 "Bright Star Map is §Hnot activited.§!"
+ z_fw_r_celestial_orrey_activited:0 "Bright Star Map is §Gactivited§!. Specify the positioning coordinates in §Ymegastructure construction panel§! of the engineering ship to detonate a celestial body."
+ z_fw_tips_r_cht_co_executing:0 "Star destruction executing."
+ z_fw_target_marker_cht_co_ongoing:0 "A Bright Star Map Target Marker is existed."
+ z_fw_target_marker_cht_co_1_placement:0 "Must be set on stars."
+ z_fw_target_marker_cht_co_2_placement:0 "Must be set on special celestial bodies, such as black holes, neutron stars, etc."
 #_megastructures
  z_fw_mega_r_cht_co_tgt_marker_1:0 "Star Core Detonator Target Marker"
  z_fw_mega_r_cht_co_tgt_marker_1_DESC:0 "It has nothing to do with you if we want to destroy you. We have witnessed the ashes of too many civilizations. No matter how brilliant the culture and achievements are, they are only the dust of history in front of the Infinite Stellaris."
@@ -383,9 +396,9 @@
  z_fw_mega_r_cht_co_tgt_marker_2_DESC:0 "$z_fw_mega_r_cht_co_tgt_marker_1_desc$"
  z_fw_mega_r_cht_co_tgt_marker_2_MEGASTRUCTURE_DETAILS:0  "Mark a special celestial body and trigger gravity burst, everything will be destroyed."
 #_relic
- z_fw_r_celestial_orrey:0 "§GInfinite Stellaris§!: Celestial Orrey"
- z_fw_r_celestial_orrey_desc:0 "Mysterious equipment from the ancient Necron Dynasty of the Oruscar, it shows a huge star map network covering the whole galaxy. Click on one of the highlights, and a star will become a supernova in an instant.\n§BWow, shinny bright spot everywhere.§!"
- z_fw_r_celestial_orrey_effect:0 "Toggling it on will allow you to have full sensor range and unlock megastructures $z_fw_mega_r_cht_co_tgt_marker_1$ and $z_fw_mega_r_cht_co_tgt_marker_2$ in the next year. These are used to detonate any celestial bodies."
+ z_fw_r_celestial_orrey:0 "§GInfinite Stellaris§!: Bright Star Map"
+ z_fw_r_celestial_orrey_desc:0 "Mysterious equipment from the ancient civilization of the Gray Snow Mountain, it shows a huge star map network covering the whole galaxy. Click on one of the highlights, and a star will explode and become a blackhole.\n§BWow, shinny bright spot everywhere.§!"
+ z_fw_r_celestial_orrey_effect:0 "If $NAME_z_fw_tgt_r_cht_co_ship$ does not exist, turning it on will open the full map view and all borders (connected countries) within one year, and get a $NAME_z_fw_tgt_r_cht_co_ship$. \n Jump $NAME_z_fw_tgt_r_cht_co_ship$ to the specified system and choose the way to destroy the system."
 #_决策
  z_fw_dec_detonate_star:0 "§GCelestial Orrery§!: Detonate the Star"
  z_fw_dec_detonate_star_desc:0 "Perturbing the star's core to it come to the end of its life. It will be the last time to blossom for it."
@@ -511,6 +524,16 @@
  z_fw_mod_r_cht_fury_5_desc:0 "$z_fw_mod_r_cht_fury_1_desc$"
 
 
+###_[cht_闪电之球]
+ z_fw_r_cht_emp:0 "§GInfinite§!: Lightning Orb"
+ z_fw_r_cht_emp_desc:0 "Lightning orb, dark energy magic orb, when used, there is a certain chance to trigger purification, instantly destroying the Void Summon...Sorry for taking the wrong script. \nThe strange instrument full of technological sense, entangled by the crackling electric arc, so that no one dared to observe it closely. Different from other Cangxue Mountain creations, there is an industrial cyberpunk style everywhere. The following line of small characters can be seen faintly: §B Dark energy, omnipotent! §! In addition, there is an instruction for use: §Y When it is dropped to the target location, it will generate a strong electromagnetic pulse, which can directly destroy all artificial products. In addition, due to energy coupling, it has a magical killing effect on non-real world creations.§!"
+ z_fw_r_cht_emp_effect:0 "If $NAME_z_fw_tgt_r_cht_emp_ship$ does not exist, turning it on will open all borders (connected countries) within one year and get a $NAME_z_fw_tgt_r_cht_emp_ship$. \n Jumping $NAME_z_fw_tgt_r_cht_emp_ship$ to the specified galaxy will generate a magnetic storm covering the entire galaxy, which will destroy all ships in the galaxy that can produce wreckage, and leave the wreckage for research."
+
+
+
+
+
+
 
 
 ###_[巨建拆解]    ########################################################################################
@@ -550,6 +573,9 @@
  
 #_[自我拆解]
 #_evts
+ z_fw1_misc.flt_self_dismantle:0 "§GSelf-dismantling§! \nDestroy this fleet as a target and recover the reversible technology on it. \nNote that not all ships’ equipment is recyclable."
+ z_fw1_misc.flt_self_dismantle_no:0 "§GSelf-dismantling§! \nCurrently unavailable, please enable it in the settings panel."
+ z_fw1_misc.flt_self_dismantle_no:0 "Self-dismantling: currently unavailable, please enable it in the settings panel."
  z_fw1_misc.140.title:0 "Do you really want to destroy this fleet for reverse analysis?"
  z_fw1_misc.140.desc:0 "If you decide to dismantle this fleet, please prepare the military fleet for violent dismantling. Dismantling the target fleet shall be dismantled and the defense system becomes extremely fragile, but please do not attack repeatedly, which will trigger its automatic defense mechanism."
  z_fw1_misc.140.a:0 "That's right, prepare the military fleet!"

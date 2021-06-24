@@ -1,7 +1,27 @@
 ﻿l_english:
+#_[misc]
+#_[开局科技]
+#_[通用高级舰船配件]
 
-###_z fw 舰船配件  ################################################################################
 
+
+
+###_[misc]  ################################################################################
+#_[飞升]
+ tech_ascensions_perks:0 "Experience Extraordinary"
+ tech_ascensions_perks_desc:0 "Each level adds an AP slot."
+
+
+
+
+###_[开局科技]  ################################################################################
+ z_fw_tech_core_start_boost:0 "Starting Technology"
+ z_fw_tech_core_start_boost:0 "Allows the use of §YAutomatic Exploration Protocol§! and §YAutomatic Research Protocol§!."
+
+
+
+
+###_[通用高级舰船配件]  ################################################################################
 #_basic
  z_fw_tech_weap_universial:0 "§YSearching the extraordinary things, this path shall never end. We will continue to touch our limit, cross the bottleneck and strengthen our military force!§!"
 #_e_laser
