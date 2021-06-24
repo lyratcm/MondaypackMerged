@@ -17,9 +17,12 @@
 		
 		HIDE_ORBITS_ZOOM 				= 1500	#_0	no orbital line in 这个范围
 		
-		LEAVE_SYSTEM_ZOOM_STEP 			= 2		#_1 缩放几次出星系
-		ENTER_SYSTEM_ZOOM_STEP 			= 10	#_6 缩放几次入星系
+		LEAVE_SYSTEM_ZOOM_STEP 			= 3		#_1 出星系的缩放等级
+		ENTER_SYSTEM_ZOOM_STEP 			= 10	#_6 进入星系的缩放等级
 		SYSTEM_FOCUS_PLANET_STEP 		= 4		# Controls which zoom step to planet zoom to in a system
+		
+		#_星系图标选择
+		SYSTEM_HOVER_RANGE				= 0.012	#_0.005
 		
 		#_反转幅度
 		SYSTEM_MIN_PITCH				= 0.0	#_20
@@ -42,7 +45,7 @@
 	}
 
 	NGraphics = {
-		###_[Z_GRAPHIC_2]
+		###_[Z_GRAPHIC_2]	#####################
 		RELATION_COLOR_PLAYER_HSV			= { 0.62 0.9 0.44 }		#_{ 0.67 0.8 0.35 }
 		RELATION_COLOR_ALLIED_HSV			= { 0.78 0.85 0.55 }	#_{ 0.8 0.35 0.4 }
 		RELATION_COLOR_NEUTRAL_HSV			= { 0.0 0.0 0.16 }		#_{ 0.0 0.0 0.22 }
@@ -56,6 +59,7 @@
 	#	SYSTEM_OUTER_BORDER_HSV				= { 0.1 0.8 0.9 }
 	#	SYSTEM_LINE_ALPHA_FADE_STEP			= { 1 5 }			#_{ 1 6 }
 	#	SYSTEM_LINE_ALPHA_FADE_VALUE		= { 0.1 0.04 }		#_{ 0.1 0.05 }
+		##########################################
 		
 		###_smaller_names_defines
 		MAPNAME_BORDER_SCALE				= 0.55		#_1.0

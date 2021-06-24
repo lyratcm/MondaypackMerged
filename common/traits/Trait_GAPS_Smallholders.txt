@@ -1,0 +1,12 @@
+Trait_GAPS_Smallholders = { 
+	icon = "gfx/interface/icons/traits/Trait_GAPS_Smallholders.dds"
+	cost = 2
+	initial = yes
+	randomized = yes
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID ROBOT MACHINE }
+	custom_tooltip = Trait_GAPS_Smallholders_Effect
+	modifier = {
+		#Effect: On Non-Artificial Planets: Produces +2% minerals food energy unity for every planet size below 20 a planet is and -2% minerals food energy unity for every planet size above 20.
+	}
+}

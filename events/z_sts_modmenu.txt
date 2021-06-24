@@ -3,7 +3,7 @@ namespace = z_sts_modmenu
 
 
 
-#_z_modmenu
+#_[z_modmenu]	总括/星系/帝国/军队/星球/殖民地/总舰船/普通舰船/堕落舰船/天灾/威胁
 country_event = {
 	id = z_sts_modmenu.11
 	title = z_modmenu_statistic
@@ -17,47 +17,62 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			###_初始化
-			#_星系
+			#_[总括]	红
+			set_variable = { which = z_route_system_owned_var value = 0 }				#_自己的[复杂统计星系]
+		#	set_variable = { which = z_routes_owned_var value = 0 }						#_自己的[贸易路线数]
+			set_variable = { which = z_species_owned_var value = 0 }					#_自己的[物种数]
+			set_variable = { which = z_galaxy_speices_var value = 0 }					#_银河系[总物种数]
+		#	set_variable = { which = z_galaxy_speices_original_var value = 0 }			#_银河系[原物种数]
+		#	set_variable = { which = z_galaxy_speices_sub_var value = 0 }				#_银河系[子物种数]
+		#	set_variable = { which = z_galaxy_speices_hybrid_var value = 0 }			#_银河系[混血种数]
+			
+			#_[星系]
 			set_variable = { which = z_system_var value = 0 }							#_system
 			set_variable = { which = z_route_system_var value = 0 }						#_trade routes passed
 
-			#_帝国---蓝
+			#_[帝国]	蓝
 			set_variable = { which = z_primitive_var value = 0 }						#_primitive
 			set_variable = { which = z_fallen_empire_var value = 0 }					#_fe
 			set_variable = { which = z_playable_country_var value = 0 }					#_country
 			
-			set_variable = { which = z_routes_25_country_var value = 0 }				#_counry trade routes >= 25
-			set_variable = { which = z_routes_50_country_var value = 0 }				#_counry trade routes >= 50
-			set_variable = { which = z_routes_100_country_var value = 0 }				#_counry trade routes >= 100
-			set_variable = { which = z_species_25_country_var value = 0 }				#_counry species >= 25
-			set_variable = { which = z_species_50_country_var value = 0 }				#_counry species >= 50
+			set_variable = { which = z_routes_25_country_var value = 0 }				#_country trade routes >= 25
+			set_variable = { which = z_routes_50_country_var value = 0 }				#_country trade routes >= 50
+			set_variable = { which = z_routes_100_country_var value = 0 }				#_country trade routes >= 100
+			
+			set_variable = { which = z_species_25_country_var value = 0 }				#_country species >= 25
+			set_variable = { which = z_species_50_country_var value = 0 }				#_country species >= 50
 			set_variable = { which = z_species_sub_country_var value = 0 }				#_too sub 25
 			set_variable = { which = z_species_hybrid_country_var value = 0 }			#_too hybrid 25
 			set_variable = { which = z_species_biological_country_var value = 0 }		#_too many biological species
 			set_variable = { which = z_species_robotic_country_var value = 0 }			#_too many robotic species
 			
-			#_军队---绿
+			#_[军队]	绿
 			set_variable = { which = z_playable_army_var value = 0 }					#_armies of playable countries
 			set_variable = { which = z_non_playable_army_var value = 0 }				#_armies of none playable countries
 			
-			#_星球
+			#_[星球]
 			set_variable = { which = z_habitable_var value = 0 }						#_h planet
 			set_variable = { which = z_habitats_var value = 0 }							#_habitats
 			
-			#_殖民地---蓝
+			#_[殖民地]	蓝
 			set_variable = { which = z_colony_var value = 0 }							#_colony
 			set_variable = { which = z_colonized_planet_var value = 0 }					#_colony
 			set_variable = { which = z_colonized_habitat_var value = 0 }				#_habitat
 			set_variable = { which = z_colonized_ringworld_var value = 0 }				#_habitat
 
-			#_人口--橙
+			#_[人口]	橙
 			set_variable = { which = z_total_pop_var value = 0 }						#_pop
 			set_variable = { which = z_total_pop_unemployed_var value = 0 }				#_unemployed
 			set_variable = { which = z_total_pop_shunks value = 0 }						#_臭鼬
 
-			#_普通舰船
-			set_variable = { which = z_combatant_ships_var value = 0 }					#_ships in combat
+			#_[总舰船]
+			set_variable = { which = z_global_fleets_var value = 0 }					#_舰队
 			set_variable = { which = z_global_ships_var value = 0 }						#_ships
+			set_variable = { which = z_combatant_fleets_var value = 0 }					#_战斗中舰队
+			set_variable = { which = z_combatant_ships_var value = 0 }					#_ships in combat
+			
+			#_[普通舰船]
+			set_variable = { which = z_default_fleets_var value = 0 }					#_default 全部舰队
 			set_variable = { which = z_default_ships_var value = 0 }					#_default 全部船只
 			set_variable = { which = z_default_ships_civilian_var value = 0 }			#_default 民船
 			set_variable = { which = z_default_ships_defence_var value = 0 }			#_default 防御平台
@@ -65,24 +80,52 @@ country_event = {
 			#set_variable = { which = z_default_ships_transport_var value = 0 }			#_default country transports
 			set_variable = { which = z_default_ships_military_var value = 0 }			#_default country military ships
 			
-			#_堕落舰船---蓝
+			#_[堕落舰船]	蓝
+			set_variable = { which = z_fallen_fleets_var value = 0 }					#_堕落舰队
 			set_variable = { which = z_fallen_ships_var value = 0 }						#_fallen ships
 			set_variable = { which = z_fallen_defence_var value = 0 }					#_fallen 防御与星基
 			
-			#_天灾---橙
-			set_variable = { which = z_crisis_ships_var value = 0 }						#_end crisis ships
+			#_[天灾]	橙
 			set_variable = { which = z_crisis_fleets_var value = 0 }					#_end crisis fleets
+			set_variable = { which = z_crisis_ships_var value = 0 }						#_end crisis ships
 			
-			#_威胁---绿
-			set_variable = { which = z_threat_ships_var value = 0 }					#_中期威胁 ships
+			#_[威胁]	绿
 			set_variable = { which = z_threat_fleets_var value = 0 }					#_中期威胁 fleets
+			set_variable = { which = z_threat_ships_var value = 0 }						#_中期威胁 ships
+			
+			#_[其他]
+			set_variable = { which = z_other_fleets_var value = 0 }						#_其他舰队
 			set_variable = { which = z_other_ships_var value = 0 }						#_other ships
 
 
-			###_system
+
+
+			###_[总括]	自己的/银河系
+			every_system_within_border = {#_自己的[复杂统计星系]
+				limit = {
+					has_trade_route = yes
+					OR = {
+						has_megastructure = gateway_final
+						has_megastructure = gateway_restored
+						has_natural_wormhole = yes
+						has_megastructure = lgate_base
+					}
+				}
+				root = { change_variable = { which = z_route_system_owned_var value = 1 } }		#_[普通]
+			}
+			root = {
+			#	export_trigger_value_to_variable = { trigger = num_trade_routes variable = z_routes_owned_var }				#_自己的[贸易路线]
+				every_owned_pop_species = { prev = { change_variable = { which = z_species_owned_var value = 1 } } }		#_自己的[物种数]
+				every_galaxy_species = { prev = { change_variable = { which = z_galaxy_speices_var value = 1 } } }
+			#	export_trigger_value_to_variable = { trigger = count_galaxy_species variable = z_galaxy_speices_original_var }	#_银河系[原物种数]
+			#	export_trigger_value_to_variable = { trigger = count_galaxy_species variable = z_galaxy_speices_sub_var }				#_银河系[子物种数]
+			#	export_trigger_value_to_variable = { trigger = count_galaxy_species variable = z_galaxy_speices_hybrid_var }		#_银河系[混血种数]
+			}
+
+			###_[星系]	普通/复杂
 			every_system = {
-				root = { change_variable = { which = z_system_var value = 1 } }
-				if = {
+				root = { change_variable = { which = z_system_var value = 1 } }		#_[普通]
+				if = {#_[复杂]
 					limit = {
 						has_trade_route = yes
 						OR = {
@@ -95,11 +138,12 @@ country_event = {
 					root = { change_variable = { which = z_route_system_var value = 1 } }		#_trade routes passed
 				}
 			}
-			#_country
+			#_[帝国]	普通/堕落/贸易路线/物种/亚种/有机
 			every_country = {
 				limit = {
 					OR = {
 						is_country_type = default
+						is_country_type = default_ev
 						is_country_type = fallen_empire
 						is_country_type = awakened_fallen_empire
 						is_country_type = prikki
@@ -107,10 +151,10 @@ country_event = {
 						is_country_type = lost_empire			#_ZOFE
 					}
 				}
-				root = {
+				root = {#_[普通]
 					change_variable = { which = z_playable_country_var value = 1 }			#_country
 				}
-				if = {
+				if = {#_[堕落]
 					limit = {
 						OR = {
 							is_country_type = fallen_empire
@@ -120,7 +164,7 @@ country_event = {
 					root = { change_variable = { which = z_fallen_empire_var value = 1 } }
 				}
 				
-				###_trade routes
+				###_[贸易路线]
 				if = {
 					limit = { num_trade_routes >= 25 }
 					root = { change_variable = { which = z_routes_25_country_var value = 1 } }
@@ -133,20 +177,20 @@ country_event = {
 					limit = { num_trade_routes >= 100 }
 					root = { change_variable = { which = z_routes_100_country_var value = 1 } }
 				}
-				###_all species
+				###_[物种]
 				if = {
 					limit = { count_owned_pop_species = { count >= 50 } }
 					root = {
-						change_variable = { which = z_species_50_country_var value = 1 }				#_counry species >= 25
+						change_variable = { which = z_species_50_country_var value = 1 }				#_country species >= 25
 					}
 				}
 				else_if = {
 					limit = { count_owned_pop_species = { count >= 25 } }
 					root = {
-						change_variable = { which = z_species_25_country_var value = 1 }				#_counry species >= 25
+						change_variable = { which = z_species_25_country_var value = 1 }				#_country species >= 25
 					}
 				}
-				###_hybrid and sub species
+				###_[亚种]
 				if = {
 					limit = { count_exact_species = { count >= 25 limit = { is_subspecies = prev } } }
 					root = { change_variable = { which = z_species_sub_country_var value = 1 } }		#_too sub 15
@@ -155,7 +199,7 @@ country_event = {
 					limit = { count_exact_species = { count >= 25 limit = { is_half_species = any } } }
 					root = { change_variable = { which = z_species_hybrid_country_var value = 1 } }		#_too hybrid 15
 				}
-				###_biology
+				###_[有机]
 				if = {
 					limit = {
 						count_exact_species = {
@@ -199,6 +243,7 @@ country_event = {
 				limit = {
 					OR = {
 						is_country_type = default
+						is_country_type = default_ev
 						is_country_type = prikki
 						is_country_type = ascended_empire		#_ZOFE
 						is_country_type = lost_empire			#_ZOFE
@@ -212,6 +257,7 @@ country_event = {
 				limit = {
 					NOR = {
 						is_country_type = default
+						is_country_type = default_ev
 						is_country_type = prikki
 						is_country_type = ascended_empire		#_ZOFE
 						is_country_type = lost_empire			#_ZOFE
@@ -224,13 +270,13 @@ country_event = {
 
 
 			#_planet
-			every_planet = {
+			every_galaxy_planet = {
 				limit = { habitable_planet = yes }
 				root = {
 					change_variable = { which = z_habitable_var value = 1 }
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = { is_planet_class = pc_habitat }
 				root = {
 					change_variable = { which = z_habitats_var value = 1 }
@@ -238,7 +284,7 @@ country_event = {
 			}
 				
 			#_colony
-			every_planet = {
+			every_galaxy_planet = {
 				limit = { is_colony = yes }
 				root = {
 					change_variable = { which = z_colony_var value = 1 }
@@ -286,25 +332,30 @@ country_event = {
 				}
 			}
 
-			#_ships
-			every_ship = {
-				root = { change_variable = { which = z_global_ships_var value = 1 } }
+			###_[ships]	总括/普通/堕落/天灾/威胁/其他
+			every_galaxy_fleet = {
+				#_[总括]
+				root = { change_variable = { which = z_global_fleets_var value = 1 } }	#_[舰队]
+				every_owned_ship = { root = { change_variable = { which = z_global_ships_var value = 1 } } }	#_[舰船]
 				if = {
 					limit = { is_in_combat = yes }
-					root = { change_variable = { which = z_combatant_ships_var value = 1 } }	#_ships in combat
+					root = { change_variable = { which = z_combatant_fleets_var value = 1 } }	#_[战斗中舰队]
+					every_owned_ship = { root = { change_variable = { which = z_combatant_ships_var value = 1 } } }	#_ships in combat
 				}
+				##_[普通]
 				if = {
 					limit = {
 						owner = {
 							OR = {
 								is_country_type = default
+								is_country_type = default_ev
 								is_country_type = prikki
 								is_country_type = ascended_empire		#_ZOFE
 								is_country_type = lost_empire			#_ZOFE
 							}
 						}
 					}
-					root = { change_variable = { which = z_default_ships_var value = 1 } }		#_总舰船数
+					root = { change_variable = { which = z_default_fleets_var value = 1 } }	#_普通舰队数量
 					#_民船
 					if = {
 						limit = {
@@ -316,26 +367,26 @@ country_event = {
 						}
 						root = { change_variable = { which = z_default_ships_civilian_var value = 1 } }
 					}
-					#_防御塔
-					else_if = {
-						limit = { is_ship_class = shipclass_military_station }
-						root = { change_variable = { which = z_default_ships_defence_var value = 1 } }
-					}
-					#_星基
-					else_if = {
-						limit = { is_ship_class = shipclass_starbase }
-						root = { change_variable = { which = z_default_starbase_var value = 1 } }
-					}
-				#	else_if = {
-				#		limit = { is_ship_class = shipclass_transport }
-				#		root = { change_variable = { which = z_default_ships_transport_var value = 1 } }
-				#	}
-				#	#_军舰
-					else_if = {
-						limit = { NOT = { is_ship_class = shipclass_transport } }
-						root = { change_variable = { which = z_default_ships_military_var value = 1 } }
+					every_owned_ship = {
+						root = { change_variable = { which = z_default_ships_var value = 1 } }		#_总舰船数
+						#_防御塔
+						if = {
+							limit = { is_ship_class = shipclass_military_station }
+							root = { change_variable = { which = z_default_ships_defence_var value = 1 } }
+						}
+						#_星基
+						else_if = {
+							limit = { is_ship_class = shipclass_starbase }
+							root = { change_variable = { which = z_default_starbase_var value = 1 } }
+						}
+						#_军舰
+						else_if = {
+							limit = { NOT = { is_ship_class = shipclass_transport } }
+							root = { change_variable = { which = z_default_ships_military_var value = 1 } }
+						}
 					}
 				}
+				##_[堕落]
 				else_if = {
 					limit = {
 						owner = {
@@ -344,28 +395,30 @@ country_event = {
 								is_country_type = awakened_fallen_empire
 							}
 						}
-						NOR = {
-							is_ship_class = shipclass_military_station
-							is_ship_class = shipclass_starbase
-						}
 					}
-					root = { change_variable = { which = z_fallen_ships_var value = 1 } }		#_堕落舰船
-				}
-				else_if = {
-					limit = {
-						owner = {
-							OR = {
-								is_country_type = fallen_empire
-								is_country_type = awakened_fallen_empire
+					root = { change_variable = { which = z_fallen_fleets_var value = 1 } }
+					every_owned_ship = {
+						if = {#_堕落舰船
+							limit = {
+								NOR = {
+									is_ship_class = shipclass_military_station
+									is_ship_class = shipclass_starbase
+								}
 							}
+							root = { change_variable = { which = z_fallen_ships_var value = 1 } }
 						}
-						OR = {
-							is_ship_class = shipclass_military_station
-							is_ship_class = shipclass_starbase
+						else_if = {
+							limit = {
+								OR = {
+									is_ship_class = shipclass_military_station
+									is_ship_class = shipclass_starbase
+								}
+							}
+							root = { change_variable = { which = z_fallen_defence_var value = 1 } }		#_堕落防御
 						}
-					}
-					root = { change_variable = { which = z_fallen_defence_var value = 1 } }		#_堕落防御
+					}		
 				}
+				##_[天灾]
 				else_if = {
 					limit = {
 						owner = {
@@ -381,8 +434,10 @@ country_event = {
 							}
 						}
 					}
-					root = { change_variable = { which = z_crisis_ships_var value = 1 } }		#_end crisis ships
+					root = { change_variable = { which = z_crisis_fleets_var value = 1 } }		#_end crisis fleets
+					every_owned_ship = { root = { change_variable = { which = z_crisis_ships_var value = 1 } } }		#_end crisis ships
 				}
+				##_[威胁]
 				else_if = {
 					limit = {
 						owner = {
@@ -395,44 +450,13 @@ country_event = {
 							}
 						}
 					}
-					root = { change_variable = { which = z_threat_ships_var value = 1 } }		#_mid threat ships
-				}
-				else = {
-					root = { change_variable = { which = z_other_ships_var value = 1 } }		#_other ships
-				}
-			}
-
-			#_fleets-crisis
-			every_country = {
-				limit = {
-					OR = {
-						is_country_type = swarm
-						is_country_type = sentinels
-						is_country_type = extradimensional
-						is_country_type = extradimensional_2
-						is_country_type = extradimensional_3
-						is_country_type = gate_builders
-						is_country_type = ai_empire
-						is_country_type = cybrex_empire
-					}
-				}
-				every_owned_fleet = {
-					root = { change_variable = { which = z_crisis_fleets_var value = 1 } }		#_end crisis fleets
-				}
-			}
-			#_fleets-threat
-			every_country = {
-				limit = {
-					OR = {
-						is_country_type = dormant_marauders
-						is_country_type = ruined_marauders
-						is_country_type = awakened_marauders
-						is_country_type = marauder_raiders
-						is_country_type = gray_goo
-					}
-				}
-				every_owned_fleet = {
 					root = { change_variable = { which = z_threat_fleets_var value = 1 } }		#_mid threat fleets
+					every_owned_ship = { root = { change_variable = { which = z_threat_ships_var value = 1 } } }		#_mid threat ships
+				}
+				##_[其他]
+				else = {
+					root = { change_variable = { which = z_other_fleets_var value = 1 } }		#_其他舰队
+					every_owned_ship = { root = { change_variable = { which = z_other_ships_var value = 1 } } }		#_其他船只
 				}
 			}
 		}
@@ -447,68 +471,116 @@ country_event = {
 		hidden_effect = {
 			z_mm_unlock_setting_panel = yes
 			#_参数归零
-			set_variable = { which = z_system_var value = 0 }							#_system
-			set_variable = { which = z_route_system_var value = 0 }						#_trade routes passed
-
-			set_variable = { which = z_playable_country_var value = 0 }					#_country
-			set_variable = { which = z_fallen_empire_var value = 0 }					#_fe
-			set_variable = { which = z_playable_army_var value = 0 }					#_armies of playable countries
-			set_variable = { which = z_routes_25_country_var value = 0 }				#_counry trade routes >= 25
-			set_variable = { which = z_routes_50_country_var value = 0 }				#_counry trade routes >= 50
-			set_variable = { which = z_routes_100_country_var value = 0 }				#_counry trade routes >= 100
-			set_variable = { which = z_species_25_country_var value = 0 }				#_counry species >= 25
-			set_variable = { which = z_species_50_country_var value = 0 }				#_counry species >= 50
-			set_variable = { which = z_species_sub_country_var value = 0 }				#_too sub 15
-			set_variable = { which = z_species_hybrid_country_var value = 0 }			#_too hybrid 15
-			set_variable = { which = z_species_biological_country_var value = 0 }		#_too many biological species
-			set_variable = { which = z_species_robotic_country_var value = 0 }			#_too many robotic species
+			clear_variable = z_route_system_owned_var				#_自己的[复杂统计星系]
+		#	clear_variable = z_routes_owned_var						#_自己的[贸易路线]
+			clear_variable = z_species_owned_var					#_自己的[物种数]
+			clear_variable = z_galaxy_speices_var					#_银河系[总物种数]
+		#	clear_variable = z_galaxy_speices_original_var			#_银河系[原物种数]
+		#	clear_variable = z_galaxy_speices_sub_var				#_银河系[子物种数]
+		#	clear_variable = z_galaxy_speices_hybrid_var			#_银河系[混血种数]
 			
-			set_variable = { which = z_primitive_var value = 0 }						#_primitive
-			set_variable = { which = z_non_playable_army_var value = 0 }				#_armies of none playable countries
 			
-			set_variable = { which = z_habitable_var value = 0 }						#_h planet
-			set_variable = { which = z_habitats_var value = 0 }							#_habitats
+			clear_variable = z_system_var							#_system
+			clear_variable = z_route_system_var						#_trade routes passed
+
+			clear_variable = z_playable_country_var					#_country
+			clear_variable = z_fallen_empire_var					#_fe
+			clear_variable = z_playable_army_var					#_armies of playable countries
+			clear_variable = z_routes_25_country_var				#_country trade routes >= 25
+			clear_variable = z_routes_50_country_var				#_country trade routes >= 50
+			clear_variable = z_routes_100_country_var				#_country trade routes >= 100
+			clear_variable = z_species_25_country_var				#_country species >= 25
+			clear_variable = z_species_50_country_var				#_country species >= 50
+			clear_variable = z_species_sub_country_var				#_too sub 15
+			clear_variable = z_species_hybrid_country_var			#_too hybrid 15
+			clear_variable = z_species_biological_country_var		#_too many biological species
+			clear_variable = z_species_robotic_country_var			#_too many robotic species
 			
-			set_variable = { which = z_colony_var value = 0 }							#_colony
-			set_variable = { which = z_colonized_planet_var value = 0 }					#_colony
-			set_variable = { which = z_colonized_habitat_var value = 0 }				#_habitat
-			set_variable = { which = z_colonized_ringworld_var value = 0 }				#_habitat
+			clear_variable = z_primitive_var						#_primitive
+			clear_variable = z_non_playable_army_var				#_armies of none playable countries
+			
+			clear_variable = z_habitable_var						#_h planet
+			clear_variable = z_habitats_var							#_habitats
+			
+			clear_variable = z_colony_var							#_colony
+			clear_variable = z_colonized_planet_var					#_colony
+			clear_variable = z_colonized_habitat_var				#_habitat
+			clear_variable = z_colonized_ringworld_var				#_habitat
 
-			set_variable = { which = z_total_pop_var value = 0 }						#_pop
-			set_variable = { which = z_total_pop_unemployed_var value = 0 }				#_unemployed
-			set_variable = { which = z_total_pop_shunks value = 0 }						#_臭鼬
+			clear_variable = z_total_pop_var						#_pop
+			clear_variable = z_total_pop_unemployed_var				#_unemployed
+			clear_variable = z_total_pop_shunks						#_臭鼬
 
-			set_variable = { which = z_combatant_ships_var value = 0 }					#_ships in combat
-			set_variable = { which = z_global_ships_var value = 0 }						#_ships
-			set_variable = { which = z_default_ships_var value = 0 }					#_default 全部船只
-			set_variable = { which = z_default_ships_civilian_var value = 0 }			#_default 民船
-			set_variable = { which = z_default_ships_defence_var value = 0 }			#_default 防御平台
-			set_variable = { which = z_default_starbase_var value = 0 }					#_default 星基
-			#set_variable = { which = z_default_ships_transport_var value = 0 }			#_default country transports
-			set_variable = { which = z_default_ships_military_var value = 0 }			#_default country military ships
-			set_variable = { which = z_fallen_ships_var value = 0 }						#_fallen ships
-			set_variable = { which = z_fallen_defence_var value = 0 }					#_fallen 防御与星基
-			set_variable = { which = z_crisis_ships_var value = 0 }						#_end crisis ships
-			set_variable = { which = z_crisis_fleets_var value = 0 }					#_end crisis fleets
-			set_variable = { which = z_threat_ships_var value = 0 }					#_中期威胁 ships
-			set_variable = { which = z_threat_fleets_var value = 0 }					#_中期威胁 fleets
-			set_variable = { which = z_other_ships_var value = 0 }						#_other ships
+			clear_variable = z_global_fleets_var					#_舰队
+			clear_variable = z_global_ships_var						#_ships
+			clear_variable = z_combatant_fleets_var					#_战斗中舰队
+			clear_variable = z_combatant_ships_var					#_ships in combat
+			
+			clear_variable = z_default_fleets_var					#_普通舰队数量
+			clear_variable = z_default_ships_var					#_default 全部船只
+			clear_variable = z_default_ships_civilian_var			#_default 民船
+			clear_variable = z_default_ships_defence_var			#_default 防御平台
+			clear_variable = z_default_starbase_var					#_default 星基
+		#	clear_variable = z_default_ships_transport_var			#_default country transports
+			clear_variable = z_default_ships_military_var			#_default country military ships
+			
+			clear_variable = z_fallen_fleets_var					#_堕落舰队
+			clear_variable = z_fallen_ships_var						#_fallen ships
+			clear_variable = z_fallen_defence_var					#_fallen 防御与星基
+			
+			clear_variable = z_crisis_fleets_var					#_end crisis fleets
+			clear_variable = z_crisis_ships_var						#_end crisis ships
+			
+			clear_variable = z_threat_fleets_var					#_中期威胁 fleets
+			clear_variable = z_threat_ships_var						#_中期威胁 ships
+			
+			clear_variable = z_other_fleets_var						#_其他舰队
+			clear_variable = z_other_ships_var						#_other ships
 		}
 	}
 	
 	
 	
 	
+	#_星系-自己的[复杂统计星系]
+	option = {
+		name = z_sts_route_system_owned_var
+		allow = { hidden_trigger = { always = no } }
+        custom_tooltip = z_sts_route_system_var_desc
+        custom_gui = "z_sts_button_evt_option_red"
+		trigger = { is_gestalt = no }
+	}
+	#_国家-自己的[贸易路线]
+#	option = {
+#		name = z_sts_routes_owned_var
+#		allow = { hidden_trigger = { always = no } }
+#        custom_gui = "z_sts_button_evt_option_red"
+#		trigger = { is_gestalt = no }
+#	}
+#	#_国家-自己的[物种数]
+#	option = {
+#		name = z_sts_species_owned_var
+#		allow = { hidden_trigger = { always = no } }
+#        custom_gui = "z_sts_button_evt_option_red"
+#	}
+#	#_银河系[总物种数]
+#	option = {
+#		name = z_sts_galaxy_speices_var
+#		allow = { hidden_trigger = { always = no } }
+#        custom_gui = "z_sts_button_evt_option_red"
+#	}
+	
 	#_星系-
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_system_var value = 0 } }
-			text = z_sts_system_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_system_var value > 0 } }
-			text = z_sts_system_var
-		}
+	#	name = {
+	#		trigger = { check_variable = { which = z_system_var value = 0 } }
+	#		text = z_sts_system_var_0
+	#	}
+	#	name = {
+	#		trigger = { check_variable = { which = z_system_var value > 0 } }
+	#		text = z_sts_system_var
+	#	}
+		name = z_sts_system_var
         custom_gui = "z_sts_button_evt_option_hide"
 		trigger = {
 			has_country_flag = z_sts_flg_system_hide
@@ -520,14 +592,7 @@ country_event = {
 	}
 	#_星系+
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_system_var value = 0 } }
-			text = z_sts_system_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_system_var value > 0 } }
-			text = z_sts_system_var
-		}
+		name = z_sts_system_var
         custom_gui = "z_sts_button_evt_option_expand"
 		trigger = {
 			NOT = { has_country_flag = z_sts_flg_system_hide }
@@ -539,14 +604,7 @@ country_event = {
 	}
 	#_星系-复杂贸易路线
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_route_system_var value = 0 } }
-			text = z_sts_route_system_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_route_system_var value > 0 } }
-			text = z_sts_route_system_var
-		}
+		name = z_sts_route_system_var
 		allow = { hidden_trigger = { always = no } }
         custom_tooltip = z_sts_route_system_var_desc
         custom_gui = "z_sts_button_evt_sub"
@@ -555,43 +613,21 @@ country_event = {
 		}
 	}
 	
-	
 	#_国家-原始人
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_primitive_var value = 0 } }
-			text = z_sts_primitive_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_primitive_var value > 0 } }
-			text = z_sts_primitive_var
-		}
+		name = z_sts_primitive_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_option_blue"
 	}
 	#_国家-堕落帝国
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_fallen_empire_var value = 0 } }
-			text = z_sts_fallen_empire_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_fallen_empire_var value > 0 } }
-			text = z_sts_fallen_empire_var
-		}
+		name = z_sts_fallen_empire_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_option_blue"
 	}
 	#_国家-hide
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_playable_country_var value = 0 } }
-			text = z_sts_country_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_playable_country_var value > 0 } }
-			text = z_sts_country_var
-		}
+		name = z_sts_country_var
         custom_tooltip = z_sts_country_var_desc
         custom_gui = "z_sts_button_evt_option_hide_blue"
 		trigger = {
@@ -604,14 +640,7 @@ country_event = {
 	}
 	#_国家-expand
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_playable_country_var value = 0 } }
-			text = z_sts_country_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_playable_country_var value > 0 } }
-			text = z_sts_country_var
-		}
+		name = z_sts_country_var
         custom_tooltip = z_sts_country_var_desc
         custom_gui = "z_sts_button_evt_option_expand_blue"
 		trigger = {
@@ -622,9 +651,10 @@ country_event = {
 			country_event = { id = z_sts_modmenu.11 }
 		}
 	}
+
 	#_国家-贸易路线25
 	option = {
-		name = zsts_routes_25_country_var
+		name = z_sts_routes_25_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_sub_blue"
 		trigger = {
@@ -634,7 +664,7 @@ country_event = {
 	}
 	#_国家-贸易路线50
 	option = {
-		name = zsts_routes_50_country_var
+		name = z_sts_routes_50_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_sub_blue"
 		trigger = {
@@ -644,7 +674,7 @@ country_event = {
 	}
 	#_国家-贸易路线100
 	option = {
-		name = zsts_routes_100_country_var
+		name = z_sts_routes_100_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_sub_blue"
 		trigger = {
@@ -652,16 +682,10 @@ country_event = {
 			NOT = { has_country_flag = z_sts_flg_country_hide }
 		}
 	}
+	
 	#_国家-多余25个物种
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_species_25_country_var value = 0 } }
-			text = z_sts_species_25_country_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_species_25_country_var value > 0 } }
-			text = z_sts_species_25_country_var
-		}
+		name = z_sts_species_25_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_gui = "z_sts_button_evt_sub_blue"
 		trigger = {
@@ -680,14 +704,7 @@ country_event = {
 	}
 	#_国家-子物种过多
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_species_sub_country_var value = 0 } }
-			text = z_sts_species_sub_country_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_species_sub_country_var value > 0 } }
-			text = z_sts_species_sub_country_var
-		}
+		name = z_sts_species_sub_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_tooltip = z_sts_species_25
         custom_gui = "z_sts_button_evt_sub_blue"
@@ -697,14 +714,7 @@ country_event = {
 	}
 	#_国家-杂交种过多
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_species_hybrid_country_var value = 0 } }
-			text = z_sts_species_hybrid_country_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_species_hybrid_country_var value > 0 } }
-			text = z_sts_species_hybrid_country_var
-		}
+		name = z_sts_species_hybrid_country_var
 		allow = { hidden_trigger = { always = no } }
         custom_tooltip = z_sts_species_25
         custom_gui = "z_sts_button_evt_sub_blue"
@@ -738,14 +748,7 @@ country_event = {
 	
 	#_军队-普通
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_playable_army_var value = 0 } }
-			text = z_sts_army_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_playable_army_var value > 0 } }
-			text = z_sts_army_var
-		}
+		name = z_sts_army_var
 		allow = { hidden_trigger = { always = no } }
         custom_tooltip = z_sts_country_var_desc
         custom_gui = "z_sts_button_evt_option_green"
@@ -763,27 +766,13 @@ country_event = {
 	
 	#_宜居星球
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_habitable_var value = 0 } }
-			text = z_sts_habitable_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_habitable_var value > 0 } }
-			text = z_sts_habitable_var
-		}
+		name = z_sts_habitable_var
         custom_gui = "z_sts_button_evt_option"
 		allow = { hidden_trigger = { always = no } }
 	}
 	#_轨道栖息地
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_habitats_var value = 0 } }
-			text = z_sts_habitats_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_habitats_var value > 0 } }
-			text = z_sts_habitats_var
-		}
+		name = z_sts_habitats_var
         custom_gui = "z_sts_button_evt_option"
 		allow = { hidden_trigger = { always = no } }
 	}
@@ -791,14 +780,7 @@ country_event = {
 	
 	#_殖民地-hide
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_colony_var value = 0 } }
-			text = z_sts_colony_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_colony_var value > 0 } }
-			text = z_sts_colony_var
-		}
+		name = z_sts_colony_var
         custom_gui = "z_sts_button_evt_option_hide_yellow"
 		trigger = {
 			has_country_flag = z_sts_flg_colony_hide
@@ -810,14 +792,7 @@ country_event = {
 	}
 	#_殖民地-expand
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_colony_var value = 0 } }
-			text = z_sts_colony_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_colony_var value > 0 } }
-			text = z_sts_colony_var
-		}
+		name = z_sts_colony_var
         custom_gui = "z_sts_button_evt_option_expand_yellow"
 		trigger = {
 			NOT = { has_country_flag = z_sts_flg_colony_hide }
@@ -829,14 +804,7 @@ country_event = {
 	}
 	#_殖民地-行星
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_colonized_planet_var value = 0 } }
-			text = z_sts_colony_planet_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_colonized_planet_var value > 0 } }
-			text = z_sts_colony_planet_var
-		}
+		name = z_sts_colony_planet_var
         custom_gui = "z_sts_button_evt_sub_yellow"
 		allow = { hidden_trigger = { always = no } }
 		trigger = {
@@ -845,14 +813,7 @@ country_event = {
 	}
 	#_殖民地-轨道站
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_colonized_habitat_var value = 0 } }
-			text = z_sts_colony_habitats_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_colonized_habitat_var value > 0 } }
-			text = z_sts_colony_habitats_var
-		}
+		name = z_sts_colony_habitats_var
         custom_gui = "z_sts_button_evt_sub_yellow"
 		allow = { hidden_trigger = { always = no } }
 		trigger = {
@@ -873,14 +834,7 @@ country_event = {
 	
 	#_人口-hide
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_total_pop_var value = 0 } }
-			text = z_sts_pop_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_total_pop_var value > 0 } }
-			text = z_sts_pop_var
-		}
+		name = z_sts_pop_var
         custom_gui = "z_sts_button_evt_option_hide_orange"
 		trigger = {
 			has_country_flag = z_sts_flg_pop_hide
@@ -892,14 +846,7 @@ country_event = {
 	}
 	#_人口-expand
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_total_pop_var value = 0 } }
-			text = z_sts_pop_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_total_pop_var value > 0 } }
-			text = z_sts_pop_var
-		}
+		name = z_sts_pop_var
         custom_gui = "z_sts_button_evt_option_expand_orange"
 		trigger = {
 			NOT = { has_country_flag = z_sts_flg_pop_hide }
@@ -911,14 +858,7 @@ country_event = {
 	}
 	#_人口-失业
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_total_pop_unemployed_var value = 0 } }
-			text = z_sts_pop_unemployed_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_total_pop_unemployed_var value > 0 } }
-			text = z_sts_pop_unemployed_var
-		}
+		name = z_sts_pop_unemployed_var
         custom_gui = "z_sts_button_evt_sub_orange"
 		allow = { hidden_trigger = { always = no } }
 		trigger = {
@@ -940,40 +880,32 @@ country_event = {
 	
 	#_船只-总数
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_global_ships_var value = 0 } }
-			text = z_sts_ships_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_global_ships_var value > 0 } }
-			text = z_sts_ships_var
-		}
+		name = z_sts_ships_var
+        custom_gui = "z_sts_button_evt_option"
+		allow = { hidden_trigger = { always = no } }
+	}
+	#_舰队-总数
+	option = {
+		name = z_sts_fleets_var
         custom_gui = "z_sts_button_evt_option"
 		allow = { hidden_trigger = { always = no } }
 	}
 	#_船只-交战
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_combatant_ships_var value = 0 } }
-			text = z_sts_ships_combatant_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_combatant_ships_var value > 0 } }
-			text = z_sts_ships_combatant_var
-		}
+		name = z_sts_ships_combatant_var
         custom_gui = "z_sts_button_evt_option"
 		allow = { hidden_trigger = { always = no } }
 	}
+	#_舰队-交战
+	option = {
+		name = z_sts_fleets_combatant_var
+        custom_gui = "z_sts_button_evt_option"
+		allow = { hidden_trigger = { always = no } }
+	}
+	
 	#_普通帝国船只-hide
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_ships_var value = 0 } }
-			text = z_sts_ships_default_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_default_ships_var value > 0 } }
-			text = z_sts_ships_default_var
-		}
+		name = z_sts_ships_default_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_option_hide_blue"
 		trigger = {
@@ -986,14 +918,7 @@ country_event = {
 	}
 	#_普通帝国船只-expand
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_ships_var value = 0 } }
-			text = z_sts_ships_default_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_default_ships_var value > 0 } }
-			text = z_sts_ships_default_var
-		}
+		name = z_sts_ships_default_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_option_expand_blue"
 		trigger = {
@@ -1004,16 +929,18 @@ country_event = {
 			country_event = { id = z_sts_modmenu.11 }
 		}
 	}
-	#_船只-星际帝国军舰
+	#_舰队-普通帝国
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_ships_military_var value = 0 } }
-			text = z_sts_ships_default_military_var_0
+		name = z_sts_fleets_default_var
+        custom_gui = "z_sts_button_evt_sub_blue"
+		allow = { hidden_trigger = { always = no } }
+		trigger = {
+			NOT = { has_country_flag = z_sts_flg_ships_hide }
 		}
-		name = {
-			trigger = { check_variable = { which = z_default_ships_military_var value > 0 } }
-			text = z_sts_ships_default_military_var
-		}
+	}
+	#_船只-普通帝国军舰
+	option = {
+		name = z_sts_ships_default_military_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_sub_blue"
 		allow = { hidden_trigger = { always = no } }
@@ -1021,16 +948,9 @@ country_event = {
 			NOT = { has_country_flag = z_sts_flg_ships_hide }
 		}
 	}
-	#_船只-星际帝国防御平台
+	#_船只-普通帝国防御平台
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_ships_defence_var value = 0 } }
-			text = z_sts_ships_default_defence_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_default_ships_defence_var value > 0 } }
-			text = z_sts_ships_default_defence_var
-		}
+		name = z_sts_ships_default_defence_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_sub_blue"
 		allow = { hidden_trigger = { always = no } }
@@ -1038,16 +958,9 @@ country_event = {
 			NOT = { has_country_flag = z_sts_flg_ships_hide }
 		}
 	}
-	#_船只-星际帝国星基
+	#_船只-普通帝国星基
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_starbase_var value = 0 } }
-			text = z_sts_ships_default_sb_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_default_starbase_var value > 0 } }
-			text = z_sts_ships_default_sb_var
-		}
+		name = z_sts_ships_default_sb_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_sub_blue"
 		allow = { hidden_trigger = { always = no } }
@@ -1055,16 +968,9 @@ country_event = {
 			NOT = { has_country_flag = z_sts_flg_ships_hide }
 		}
 	}
-	#_船只-星际帝国民船
+	#_船只-普通帝国民船
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_default_ships_civilian_var value = 0 } }
-			text = z_sts_ships_default_civilian_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_default_ships_civilian_var value > 0 } }
-			text = z_sts_ships_default_civilian_var
-		}
+		name = z_sts_ships_default_civilian_var
         custom_tooltip = z_sts_ships_default_desc
         custom_gui = "z_sts_button_evt_sub_blue"
 		allow = { hidden_trigger = { always = no } }
@@ -1074,33 +980,26 @@ country_event = {
 	}
 	
 	
-	#_船只-堕落舰船
+	#_船只-堕落
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_fallen_ships_var value = 0 } }
-			text = z_sts_ships_fallen_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_fallen_ships_var value > 0 } }
-			text = z_sts_ships_fallen_var
-		}
+		name = z_sts_ships_fallen_var
+        custom_gui = "z_sts_button_evt_option_yellow"
+		allow = { hidden_trigger = { always = no } }
+	}
+	#_舰队-堕落
+	option = {
+		name = z_sts_fleets_fallen_var
         custom_gui = "z_sts_button_evt_option_yellow"
 		allow = { hidden_trigger = { always = no } }
 	}
 	#_船只-堕落防御
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_fallen_defence_var value = 0 } }
-			text = z_sts_ships_fallen_def_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_fallen_defence_var value > 0 } }
-			text = z_sts_ships_fallen_def_var
-		}
+		name = z_sts_ships_fallen_def_var
         custom_tooltip = z_sts_ships_fallen_def_var_desc
         custom_gui = "z_sts_button_evt_option_yellow"
 		allow = { hidden_trigger = { always = no } }
 	}
+	
 	#_船只-威胁
 	option = {
 		name = z_sts_ships_threat_var
@@ -1120,15 +1019,7 @@ country_event = {
 			check_variable = { which = z_threat_fleets_var value > 0 }
 		}
 	}
-	#_船只-天灾
-	option = {
-		name = z_sts_ships_crisis_var
-		allow = { hidden_trigger = { always = no } }
-        custom_gui = "z_sts_button_evt_option_red"
-		trigger = {
-			check_variable = { which = z_crisis_ships_var value > 0 }
-		}
-	}
+	
 	#_船只-天灾舰队
 	option = {
 		name = z_sts_ships_crisis_flt_var
@@ -1138,16 +1029,26 @@ country_event = {
 			check_variable = { which = z_crisis_fleets_var value > 0 }
 		}
 	}
+	#_船只-天灾
+	option = {
+		name = z_sts_ships_crisis_var
+		allow = { hidden_trigger = { always = no } }
+        custom_gui = "z_sts_button_evt_option_red"
+		trigger = {
+			check_variable = { which = z_crisis_ships_var value > 0 }
+		}
+	}
+	
 	#_船只-其他
 	option = {
-		name = {
-			trigger = { check_variable = { which = z_other_ships_var value = 0 } }
-			text = z_sts_ships_other_var_0
-		}
-		name = {
-			trigger = { check_variable = { which = z_other_ships_var value > 0 } }
-			text = z_sts_ships_other_var
-		}
+		name = z_sts_ships_other_var
+        custom_tooltip = z_sts_ships_other_var_desc
+        custom_gui = "z_sts_button_evt_option_green"
+		allow = { hidden_trigger = { always = no } }
+	}
+	#_舰队-其他
+	option = {
+		name = z_sts_fleets_other_var
         custom_tooltip = z_sts_ships_other_var_desc
         custom_gui = "z_sts_button_evt_option_green"
 		allow = { hidden_trigger = { always = no } }

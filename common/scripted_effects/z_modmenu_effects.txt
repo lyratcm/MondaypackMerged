@@ -53,54 +53,33 @@ z_mm_unlock_menu = {
 ###_[子模块功能快捷按钮effect]	####################################################################################
 
 #_[country] z_pf
-z_mm_eft_pf_manual_check = {
-	set_timed_global_flag = { flag = z_pf_manual_checking_cd days = 10 }
-	#_[默认]
-	if = {
-		limit = { has_global_flag = z_performance_installed }
-		z_pf_eft_global_cd = yes	#_设置pf CD
-		every_country = {
-			limit = { z_pf_trgr_cntr_valid = yes }
-			country_event = { id = z_performance.6 days = 2 random = 1 }
-		}
-		random_country = {
-			limit = {
-				is_ai = no
-				z_pf_trgr_cntr_valid = yes	#_[产业革命]non
-			}
-			country_event = { id = z_pf_heup.1 }
-		}
-	}
+z_mm_eft_cntr_pf_manual_check_glbl = {
+	set_timed_global_flag = { flag = z_pf_flg_glbl_manual_checking_cd days = 7 }
 	#_[产业革命]
 	every_country = {
-		limit = { has_country_flag = z_pr_flg_cntr_1 }
+		limit = { has_country_flag = z_pr_flg_cntr_reg }
 		z_pr_eft_cntr_mannual_check = yes
 	}
-	
-}
-#_[country] z_pf_own
-z_mm_eft_pf_manual_check_own = {
-	set_timed_global_flag = { flag = z_pf_manual_checking_cd days = 10 }
 	#_[默认]
 	if = {
-		limit = { has_global_flag = z_performance_installed }
-		if = {
-			limit = { z_pf_trgr_cntr_valid = yes }	#_[产业革命]non
-			country_event = { id = z_performance.6 }
-		}
+		limit = { has_global_flag = z_pf2_installed }
 		every_country = {
-			limit = { NOT = { is_same_value = root } }
-			set_timed_country_flag = { flag = z_pf_flg_cntr_heup_on days = 1 }
-		}
-		if = {
-			limit = { z_pf_trgr_cntr_valid = yes }	#_[产业革命]non
-			country_event = { id = z_pf_heup.1 }
+			limit = { z_fw_trgr_cntr_core_playable_mod = yes }
+			z_pf_eft_cntr_heup_manual = yes	#_[国内迁移]pf2
 		}
 	}
+}
+#_[country] z_pf_own
+z_mm_eft_cntr_pf_manual_check_own = {
 	#_[产业革命]
 	if = {
-		limit = { has_country_flag = z_pr_flg_cntr_1 }
+		limit = { has_country_flag = z_pr_flg_cntr_reg }
 		z_pr_eft_cntr_mannual_check = yes
+	}
+	#_[默认]
+	if = {
+		limit = { has_global_flag = z_pf2_installed }
+		z_pf_eft_cntr_heup_manual = yes	#_[国内迁移]pf2
 	}
 }
 
@@ -116,7 +95,7 @@ z_mm_eft_pf2_merge_ai_species = {
 			}
 		}
 		#_z pf2
-		z_merge_common_species = yes
+		z_pf_eft_cntr_merge_spcs_common = yes
 	}
 }
 

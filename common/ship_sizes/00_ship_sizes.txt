@@ -99,7 +99,9 @@ corvette = {
 	
 	is_space_station = no
 	can_have_federation_design = yes
-	enable_default_design = yes	
+	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = swarm
 	
 	prerequisites = { "tech_corvettes" }	
@@ -148,6 +150,8 @@ destroyer = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = picket
 	
 	prerequisites = { "tech_destroyers" }	
@@ -196,6 +200,8 @@ cruiser = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = line
 	
 	prerequisites = { "tech_cruisers" }	
@@ -245,6 +251,8 @@ StrikeCruiser = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = swarm
 	
 	prerequisites = { "tech_StrikeCruiser_1" }	
@@ -294,6 +302,8 @@ escortcarrier = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = artillery
 
 	prerequisites = { "tech_escortcarrier_1" }	
@@ -342,6 +352,8 @@ Battlecruiser = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = line
 
 	prerequisites = { "tech_Battlecruiser_1" }	
@@ -390,6 +402,8 @@ battleship = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = artillery
 	
 	prerequisites = { "tech_battleships" }	
@@ -439,6 +453,8 @@ Carrier = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = artillery
 
 	prerequisites = { "tech_Carrier_1" }	
@@ -488,6 +504,8 @@ Dreadnought = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = line
 
 	prerequisites = { "tech_Dreadnought_1" }	
@@ -537,6 +555,8 @@ titan = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = artillery
 	
 	potential_construction = {
@@ -641,6 +661,8 @@ Flagship = {
 	is_space_station = no
 	can_have_federation_design = yes
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
+
 	default_behavior = artillery
 	components_add_to_cost = no
 
@@ -664,8 +686,8 @@ Flagship = {
 	resources = {
 		category = ships
 		cost = {
-			alloys = 10200
-			influence = 600
+			alloys = @nsc_flagship_alloys_cost
+			influence = @nsc_flagship_influence_cost
 		}
 		upkeep = {
 			energy = 12
@@ -700,7 +722,7 @@ science = {
 	rotation_speed = @rotation5
 	
 	modifier = { ship_evasion_add = @science_evasion }
-	ship_modifier = { ship_hyperlane_range_add = 3 }
+	ship_modifier = { ship_hyperlane_range_add = 1 }
 	
 	max_hitpoints = @science_hp
 	size_multiplier = 1
@@ -713,6 +735,7 @@ science = {
 	
 	is_space_station = no
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	is_designable = no
 	is_civilian = yes
 	components_add_to_cost = no
@@ -759,6 +782,7 @@ explorationship = {
 	
 	is_space_station = no
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	is_designable = yes
 	is_civilian = yes
 	
@@ -813,6 +837,7 @@ constructor = {
 
 	is_space_station = no
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	is_designable = no
 	is_civilian = yes
 	components_add_to_cost = no
@@ -856,6 +881,7 @@ colonizer = {
 
 	is_space_station = no
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	is_designable = no
 	is_civilian = yes
 	components_add_to_cost = no
@@ -1067,6 +1093,7 @@ transport = {
 
 	is_space_station = no
 	enable_default_design = yes
+	enable_3dview_in_ship_browser = yes #if yes, ship design will have a 3d view in the ship browser
 	is_designable = no
 	components_add_to_cost = no
 	auto_upgrade = yes

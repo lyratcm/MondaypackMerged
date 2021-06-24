@@ -1,10 +1,10 @@
 ###_z modmenu 支持 mods	##################################################################################
 ###_[button effects 只读 root的东西]
 
-#_[line_1]	wsg
+#_[line_1]	ISR/wsg
 #_[line_2]	nhsc/ACOT/SOFE
 #_[line_3]	天灾管理器/GIGA
-#_[line_4]	ACE
+#_[line_4]	IISC/ACE
 
 
 
@@ -47,7 +47,15 @@ z_mm_sp_mods_isr_2 = {
 		NOT = { has_global_flag = ig_menu_opened_first_time }
 	}
 	effect = {
-		hidden_effect = { country_event = { id = ig_menu.0 } }
+		hidden_effect = {
+			if = {#_繁星=dummy事件737
+				limit = { has_global_flag = linkage_support }
+				country_event = { id = ig_menu.737 }
+			}
+			else = {#_非繁星=事件0
+				country_event = { id = ig_menu.0 }
+			}
+		}
 		custom_tooltip = z_mm_sp_ig_desc
 	}
 }
@@ -231,7 +239,7 @@ z_mm_sp_mods_kuat_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -265,7 +273,7 @@ z_mm_sp_mods_wsg_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -358,7 +366,7 @@ z_mm_mem_button_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -389,7 +397,7 @@ z_mm_esc_button_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -420,7 +428,7 @@ z_mm_dduc_button_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -554,7 +562,7 @@ z_mm_acot_button_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -585,7 +593,7 @@ z_mm_sofe_button_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -750,7 +758,7 @@ z_mm_sp_mods_giga_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -778,30 +786,29 @@ z_mm_sp_mods_giga_2 = {
 
 
 ###_[line_4]	#######################################
-#_UAP
-z_mm_sp_mods_uap_1 = {
+#_[IISC]
+z_mm_sp_mods_iisc_1 = {
 	potential = {
 		exists = from
 		z_mm_setting_panel_locked = no
 		z_mm_trgr_expanded_sub_ui = no
-		NOT = { has_global_flag = z_mm_flg_sp_mods_uap_non }
+		has_global_flag = iisc_initialized
 	}
 	effect = {
-		hidden_effect = { country_event = { id = UniqueAscensionPerksMenuEvents.1 } }
-		custom_tooltip = UniqueAscensionPerksEvents.1.Name
-		custom_tooltip = UniqueAscensionPerksEvents.1.Desc
+		custom_tooltip = z_mm_sp_iisc_desc
+		hidden_effect = { country_event = { id = iisc_modmenu.0 } }
 	}
 }
-z_mm_sp_mods_uap_2 = {
+z_mm_sp_mods_iisc_2 = {
 	potential = {
 		exists = from
 		z_mm_setting_panel_locked = no
 		z_mm_trgr_expanded_sub_ui = no
-		has_global_flag = z_mm_flg_sp_mods_uap_non
+		NOT = { has_global_flag = iisc_initialized }
 	}
 	effect = {
-		hidden_effect = { country_event = { id = UniqueAscensionPerksMenuEvents.7777 } }
-		custom_tooltip = z_mm_sp_uap_desc
+		custom_tooltip = z_mm_sp_iisc_desc
+		hidden_effect = { country_event = { id = iisc_modmenu.0 } }
 	}
 }
 #_complex-potv	按钮
@@ -883,7 +890,7 @@ z_mm_sp_mods_ace_1 = {
 	}
 	allow = {
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}

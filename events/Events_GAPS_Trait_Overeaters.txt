@@ -1,0 +1,146 @@
+namespace = Events_GAPS_Traits_Overeaters
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Overeaters.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		save_event_target_as = Target_Planet_GAPS_Overeater_Planet
+		Scripted_Planet_Effect_Apply_Overeater_Modifiers = yes
+		set_variable = { which = "Planet_Variable_GAPS_Num_Overeater_Pops" value = 0 }
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Overeaters
+			set_variable = { which = "Pop_Variable_GAPS_Num_Overeater_Pops" value = 0 }
+		}
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Overeaters }
+			root = {
+				change_variable = { which = "Planet_Variable_GAPS_Num_Overeater_Pops" value = 1 }
+			}
+		}
+		while = {
+			count = Planet_Variable_GAPS_Num_Overeater_Pops
+			every_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Overeaters }
+				change_variable = { which = "Pop_Variable_GAPS_Num_Overeater_Pops" value = 1 }
+			}
+		}
+		every_owned_pop = { 
+			limit = { pop_has_trait = Trait_GAPS_Overeaters } 
+			add_modifier = { 
+				modifier = Pop_Modifier_GAPS_Overeaters 
+				days = -1
+				multiplier = Pop_Variable_GAPS_Num_Overeater_Pops
+			}
+		}
+	}
+}
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+#on_pop_added
+pop_event = {
+	id = Events_GAPS_Traits_Overeaters.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		Root = { pop_has_trait = Trait_GAPS_Overeaters }
+	}
+	immediate = {
+		From = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+pop_event = {
+	id = Events_GAPS_Traits_Overeaters.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { pop_has_trait = Trait_GAPS_Overeaters }
+	}
+	immediate = {
+		From = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Overeaters.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Overeaters }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Overeaters.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Overeaters }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Overeaters.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Overeaters }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}
+
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
+planet_event = {
+	id = Events_GAPS_Traits_Overeaters.25
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = { any_owned_species = { has_trait = Trait_GAPS_Overeaters } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+		}
+	}
+}

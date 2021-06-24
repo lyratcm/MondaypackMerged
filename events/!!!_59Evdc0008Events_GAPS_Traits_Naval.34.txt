@@ -1,0 +1,40 @@
+namespace = Events_GAPS_Traits_Naval
+planet_event = {
+    id = Events_GAPS_Traits_Naval.34
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        FromFrom = {
+            has_trait = Trait_GAPS_Naval
+        }
+    }
+    immediate = {
+        This = {
+            set_variable = {
+                which = "Planet_Variable_GAPS_Num_Naval_Pops"
+                value = 0
+            }
+            every_deposit = {
+                limit = {
+                    is_deposit_type = Deposits_GAPS_Navals
+                }
+                remove_deposit = yes
+            }
+            every_owned_pop = {
+                limit = {
+                    has_trait = Trait_GAPS_Naval
+                }
+                planet = {
+                    change_variable = {
+                        which = "Planet_Variable_GAPS_Num_Naval_Pops"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                count = Planet_Variable_GAPS_Num_Naval_Pops
+                add_deposit = Deposits_GAPS_Navals
+            }
+        }
+    }
+}

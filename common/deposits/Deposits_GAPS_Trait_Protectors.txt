@@ -1,0 +1,18 @@
+Deposits_GAPS_Num_Protectors_Armies = {
+    is_for_colonizeable = yes
+    icon = Deposits_GAPS_Num_Protectors_Armies
+	
+	potential = { always = no }
+	
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        Deposits_GAPS_Num_Protectors_Armies
+    }
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.01
+	}
+	drop_weight = {
+		weight = 0
+	}
+}

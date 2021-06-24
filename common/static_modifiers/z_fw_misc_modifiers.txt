@@ -1,5 +1,6 @@
 ###_z fw modifiers misc	######################################################################################
 
+#_[测试]
 #_[自动矿站]
 #_[自我拆解]
 #_[资源上限]
@@ -11,10 +12,13 @@
 
 
 
-###_[test]
+###_[测试]	###############################################################
 #_[cntr]
-z_fw_mod_test_0 = {
+z_fw_mod_cntr_test_0 = {
 	icon = GFX_z_fw_mod_normal
+	country_base_physics_research_produces_add = 5000
+	country_base_society_research_produces_add = 10000
+	country_base_engineering_research_produces_add = 5000
 	starbase_shipyard_build_cost_mult = -1.0
 	starbase_shipyard_build_speed_mult = 100.0
 	planet_building_build_speed_mult = 100.0
@@ -25,20 +29,43 @@ z_fw_mod_test_0 = {
 	starbase_upgrade_speed_mult = 100.0
 	megastructure_build_speed_mult = 7777777
 }
+z_fw_mod_cntr_test_mig = {
+	icon = GFX_z_fw_mod_normal
+	planet_resettlement_unemployed_mult = 5.0
+}
+z_mm_mod_cntr_test_speed_buff = {#_速度优势
+	icon = GFX_z_fw_mod_normal
+	ship_speed_mult = 500
+}
+z_mm_mod_cntr_test_range = {#_+200%
+	icon = GFX_z_fw_mod_normal
+	ship_weapon_range_mult = 2.0
+}
+
 #_[plnt]
-z_fw_mod_test_1 = {
+z_fw_mod_plnt_test_1 = {
 #	icon = GFX_z_fw_mod_normal
 	icon = "gfx/interface/icons/planet_modifiers/z_fw_mod_plnt_normal.dds"
 	icon_frame = 2
 	planet_structures_produces_mult = 1.0
 	planet_structures_energy_produces_mult = -1.0
 }
+z_fw_mod_plnt_test_job_30 = {
+	icon = "gfx/interface/icons/planet_modifiers/z_fw_mod_plnt_normal.dds"
+	pop_environment_tolerance = 0.5
+	icon_frame = 2
+	job_administrator_add = 5
+	job_executive_add = 5
+	job_merchant_add = 5
+	job_clerk_add = 15
+}
 #	z_fw_mod_test_2 = {
 #		icon = "gfx/interface/icons/planet_modifiers/z_fw_mod_plnt_normal.dds"
 #		icon_frame = 1
 #	}
-#_[ship]
-z_mm_mod_test_ship_1 = {
+
+##_[ship]
+z_mm_mod_ship_test_1 = {
 	ship_shield_add = 5000
 	ship_armor_add = 5000
 	ship_hull_add = 5000
@@ -46,13 +73,44 @@ z_mm_mod_test_ship_1 = {
 	ship_armor_regen_add_perc = 1
 	ship_hull_regen_add_perc = 1
 }
-z_mm_mod_test_ship_2 = {
+z_mm_mod_ship_test_2 = {
 	ship_shield_add = 50000
 	ship_armor_add = 50000
 	ship_hull_add = 50000
 	ship_shield_regen_add_perc = 1
 	ship_armor_regen_add_perc = 1
 	ship_hull_regen_add_perc = 1
+}
+z_mm_mod_ship_test_speed = {#_速度1%
+	ship_speed_mult = 0.01
+}
+z_mm_mod_ship_test_fire_rate_all = {#_射速1%
+	ship_fire_rate_mult = 0.01
+}
+z_mm_mod_ship_test_fire_rate_e = {
+	weapon_type_energy_weapon_fire_rate_mult = 0.01
+}
+z_mm_mod_ship_test_fire_rate_k = {
+	weapon_type_kinetic_weapon_fire_rate_mult = 0.01
+}
+z_mm_mod_ship_test_fire_rate_g = {
+	weapon_type_explosive_weapon_fire_rate_mult = 0.01
+}
+z_mm_mod_ship_test_fire_rate_h = {
+	weapon_type_strike_craft_weapon_fire_rate_mult = 0.01
+}
+
+#_[造船]
+z_mm_mod_cntr_test_sb_ship_cost_0 = {#_免费造船
+	icon = GFX_z_fw_mod_normal
+	starbase_shipyard_build_cost_mult = -1
+}
+z_mm_mod_cntr_test_sb_ship_cost = {
+	icon = GFX_z_fw_mod_normal
+	starbase_shipyard_build_cost_mult = 1
+}
+z_mm_mod_ship_test_sb_ship_cost = {
+	starbase_shipyard_build_cost_mult = 1
 }
 
 

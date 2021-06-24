@@ -13,7 +13,7 @@ nsc_flagship_shipyard = {
 		category = megastructures
 		cost = {
 			alloys = 1500
-			influence = 600
+			influence = @nsc_flagship_influence_cost
 		}
 		produces = {
 			influence = 3
@@ -115,7 +115,7 @@ nsc_flagship_bow = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -148,7 +148,7 @@ nsc_flagship_mid_1 = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -178,7 +178,7 @@ nsc_flagship_mid_2 = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -210,7 +210,7 @@ nsc_flagship_mid_3 = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -240,7 +240,7 @@ nsc_flagship_mid_4 = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -270,7 +270,7 @@ nsc_flagship_stern = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {
@@ -304,7 +304,7 @@ nsc_flagship_complete = {
 	entity = "flagship_construction_yard_entity"
 	construction_entity = "flagship_construction_yard_entity"
 	portrait = GFX_megastructure_construction_background
-	place_entity_on_planet_plane = yes
+	place_entity_on_planet_plane = no
 	entity_offset = { x = @nsc_flagship_entity_offset_x y = @nsc_flagship_entity_offset_y }
 	build_time = 250
 	resources = {

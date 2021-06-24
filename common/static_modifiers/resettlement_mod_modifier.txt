@@ -1,9 +1,0 @@
-planet_resettle_to = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_resettle_to.dds"
-	icon_frame = 1
-}
-
-planet_resettle_from = {
-	icon = "gfx/interface/icons/planet_modifiers/pm_resettle_from.dds"
-	icon_frame = 1
-}

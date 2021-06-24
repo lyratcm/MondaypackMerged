@@ -1,0 +1,49 @@
+###_z frameworks core战争 triggers	############################################################################
+
+#_[vl_基础trgr/vl_进阶trgr/vl_完全trgr]
+#_[vl_接战舰队]
+
+
+
+
+###_[vl_基础trgr]	########################################
+z_fw_trgr_glbl_battle_vl_basic = {
+	OR = {
+		has_global_flag = z_fw_flg_glbl_battle_vl_0
+		has_global_flag = z_fw_flg_glbl_battle_vl_1
+		has_global_flag = z_fw_flg_glbl_battle_vl_2
+	}
+}
+#_[vl_进阶trgr]
+z_fw_trgr_glbl_battle_vl_more = {
+	OR = {
+		has_global_flag = z_fw_flg_glbl_battle_vl_1
+		has_global_flag = z_fw_flg_glbl_battle_vl_2
+	}
+}
+#_[vl_完全trgr]
+z_fw_trgr_glbl_battle_vl_all = {
+	has_global_flag = z_fw_flg_glbl_battle_vl_2
+}
+
+
+
+
+###_[vl_接战舰队]
+z_fw_trgr_flt_battle_vl_battle = {
+	always = yes
+#	OR = {
+#		#_military
+#		is_ship_class = shipclass_science_ship
+#		is_ship_class = shipclass_military_special	#_巨像
+#		is_ship_class = shipclass_transport
+#		is_ship_class = shipclass_probe				#_舰妈
+#		#_defence
+#		is_ship_class = shipclass_starbase
+#		is_ship_class = shipclass_military_station
+#		#_civilian
+#		is_ship_class = shipclass_colonizer
+#		is_ship_class = shipclass_science_ship
+#		is_ship_class = shipclass_constructor
+#	}
+}

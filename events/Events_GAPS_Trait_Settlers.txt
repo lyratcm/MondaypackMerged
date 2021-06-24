@@ -1,20 +1,32 @@
 namespace = Events_GAPS_Traits_Settlers
 
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
+
 # A planet has been colonized.
 # Scope = Planet
 planet_event = {
-	id = Events_GAPS_Traits_Settlers.3
+	id = Events_GAPS_Traits_Settlers.10
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Settlers }
+		owner = { any_owned_species = { has_trait = Trait_GAPS_Settlers } }
+	}
+	immediate = {
+		planet_event = { id = Events_GAPS_Traits_Settlers.11 days = 1 }
+	}
+}
+
+planet_event = {
+	id = Events_GAPS_Traits_Settlers.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		
 	}
 	immediate = {
 		random_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Settlers }
 			species = { save_event_target_as = Target_Species_GAPS_Settlers }
 		}
 		create_pop = {

@@ -1,7 +1,6 @@
 elven_check_for_incompatible_deposits = {
 	OR = {
 		has_deposit = d_drow_planetary_feral_fairies
-		has_deposit = d_drow_planetary_feral_fairies_blocker
 		has_deposit = d_drow_planetary_murrpau_sanguine
 		has_deposit = d_drow_planetary_murrpau_sanguine_blocker
 		has_deposit = d_elven_planetary_sentient_dragons

@@ -1,0 +1,21 @@
+trait_analytical = {
+    cost = 3
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    potential_crossbreeding_chance = 1
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_theoretical"
+        "trait_practical"
+    }
+    modifier = {
+        planet_jobs_physics_research_produces_mult = 0.45
+        planet_jobs_society_research_produces_mult = -0.15
+        planet_jobs_engineering_research_produces_mult = -0.15
+    }
+}

@@ -227,8 +227,6 @@ country_event = {
 ### Triggered by on_action: on_monthly_pulse_country
 ### Pop Resettlement process at high "Drained Planet" levels.
 
-
-
 country_event = {
 	id = events_am_civics_locust_capitalism.7
 	hide_window = yes

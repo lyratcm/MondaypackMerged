@@ -1,0 +1,50 @@
+namespace = Events_GAPS_Traits_Travelers
+		
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_Travelers.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Travelers }
+	}
+	immediate = {
+		random_owned_planet = { 
+			limit = { is_colony = yes }
+			save_event_target_as = Target_Planet_GAPS_Travelers
+		}
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Travelers } }
+			random_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Travelers }
+				save_event_target_as = Target_Pop_GAPS_Travelers
+			}
+			resettle_pop = { pop = event_target:Target_Pop_GAPS_Travelers planet = event_target:Target_Planet_GAPS_Travelers }
+		}
+	}
+}
+#On yearly pulse country
+country_event = {
+	id = Events_GAPS_Traits_Travelers.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Travelers }
+	}
+	immediate = {
+		random_owned_planet = { 
+			limit = { is_colony = yes }
+			save_event_target_as = Target_Planet_GAPS_Travelers
+		}
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Travelers } }
+			random_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Travelers }
+				save_event_target_as = Target_Pop_GAPS_Travelers
+			}
+			resettle_pop = { pop = event_target:Target_Pop_GAPS_Travelers planet = event_target:Target_Planet_GAPS_Travelers }
+		}
+	}
+}

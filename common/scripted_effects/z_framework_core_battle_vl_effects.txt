@@ -1,0 +1,346 @@
+###_[z_fw_core] 战争 数值限制	###########################################################
+
+#_[vl_设置完成debug]
+#_[vl_舰船初始化]
+#_[vl_国家基础修正_归零]
+#_[vl_船只修正_debug]
+
+
+
+
+###_[vl_设置完成debug]
+z_fw_eft_glbl_vl_setting_debug = {
+	#_[vl_国家基础修正_init]
+	every_country = { limit = { z_fw_trgr_cntr_core_battle_eft_valid = yes }	country_event = { id = z_fw_core_battle_vl.1 } }
+	#_[vl_舰队修正_init]
+	every_galaxy_fleet = { fleet_event = { id = z_fw_core_battle_vl.2 } }
+}
+
+
+
+
+###_[vl_舰船初始化]	清理mod
+z_fw_eft_flt_vl_init = {
+	##_[清理mod]	移速/射程/射速
+	remove_modifier = z_fw_mod_flt_vl_speed_reduc		#_[移速]
+	remove_modifier = z_fw_mod_flt_vl_speed_common
+	remove_modifier = z_fw_mod_flt_vl_speed_base
+	remove_modifier = z_fw_mod_flt_vl_range				#_[射程]
+	remove_modifier = z_fw_mod_flt_vl_fire_disp			#_[射速]
+}
+
+
+
+
+###_[vl_国家基础修正_归零]	造船/
+z_fw_eft_cntr_vl_clear = {
+	#_[造船]
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_1
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_2
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_3
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_4
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_5
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_6
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_7
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_8
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_16
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_32
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_64
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_128
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_256
+	remove_modifier = z_fw_mod_cntr_vl_navy_cost_sb_512
+}
+
+
+
+
+###_[vl_船只修正_debug]	<ship/flt通用>	vl属性修正
+z_fw_eft_flt_vl_debug = {
+	#_[乘数设置]
+	set_variable = { which = z_fw_var_set_vl_range_mult value = { scope = event_target:z_fw_tgt_global_event variable = z_fw_var_set_vl_range_mult } }
+	set_variable = { which = z_fw_var_set_vl_speed_mult value = { scope = event_target:z_fw_tgt_global_event variable = z_fw_var_set_vl_speed_mult } }
+
+	#_[基础修正]
+	if = {
+	
+	}
+	
+	
+	#_[进阶修正]	移速/射程/射速
+	if = { limit = { z_fw_trgr_glbl_battle_vl_more = yes }	#_|vl_进阶trgr|
+		###_[移速]	减少/移速buff/引擎	####################################################################################
+		if = {
+			limit = {
+				is_in_combat = yes	#_|战斗中|
+				NOR = {#_|可移动舰队|
+					AND = { is_ship_class = shipclass_starbase NOT = { is_ship_size = juggernaut } }
+					is_ship_class = shipclass_military_station
+				}
+			}
+			
+			##_[减少]	|---30~100+++|=|15~50|	mod值/减数/参量修正/乘数修正/特殊修正基值/mod添加/clear
+			if = { limit = { always = yes }
+				##_[mod值]
+				export_modifier_to_variable = { modifier = ship_speed_reduction variable = z_fw_var_flt_vl_speed_reduc }	#_[mod值]
+				multiply_variable = { which = z_fw_var_flt_vl_speed_reduc value = 100 }	#_百分比化
+				multiply_variable = { which = z_fw_var_flt_vl_speed_reduc value = -1 }	#_正负转换 n=[-mod值]
+				change_variable = { which = z_fw_var_flt_vl_speed_reduc value = 100 }	#_n+100
+				##_[参量修正]	最小值/最大值/普通值
+				if = {#_[最小值]
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_reduc value < 30 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = 30 }	#_[指定参量] f=30
+				}
+				else_if = {#_[最大值]
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_reduc value > 100 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = 100 }	#_[指定参量] f=100
+				}
+				else_if = {#_[普通值]
+					limit = { always = yes }
+					set_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = z_fw_var_flt_vl_speed_reduc }	#_[指定参量 f=n
+				}
+				##_[乘数修正]
+				multiply_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = z_fw_var_set_vl_speed_mult }	#_f*set
+				##_[特殊修正基值]
+				if = { limit = { is_scope_type = ship }
+					set_variable = { which = z_fw_var_flt_vl_speed_reduc_sp_base value = z_fw_var_flt_vl_speed_reduc_factor }	#_f
+				}
+				##_[mod添加]
+				subtract_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = z_fw_var_flt_vl_speed_reduc }		#_f-n
+				multiply_variable = { which = z_fw_var_flt_vl_speed_reduc_factor value = -1 }		#_正负转换 新mod值=-f
+				round_variable = z_fw_var_flt_vl_speed_reduc_factor	#_四舍五入
+				add_modifier = { modifier = z_fw_mod_flt_vl_speed_reduc days = -1 multiplier = z_fw_var_flt_vl_speed_reduc_factor }
+				##_[clear]
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_reduc }			clear_variable = z_fw_var_flt_vl_speed_reduc }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_reduc_factor }		clear_variable = z_fw_var_flt_vl_speed_reduc_factor }
+			}
+			
+			##_[移速buff]	|75~150|	mod值/减数/参量修正/特殊修正基值/mod添加/clear
+			if = { limit = { always = yes }
+				##_[mod值]
+				export_modifier_to_variable = { modifier = ship_speed_mult variable = z_fw_var_flt_vl_speed_common }
+				multiply_variable = { which = z_fw_var_flt_vl_speed_common value = 100 }	#_百分比化
+				##_[减数]
+				set_variable = { which = z_fw_var_flt_vl_speed_common_minus value = z_fw_var_flt_vl_speed_common }	#_n%
+				change_variable = { which = z_fw_var_flt_vl_speed_common_minus value = 100 }				#_(100+n)%
+				##_[参量修正]	最大值/大于零/小于零
+				#_[最大值]
+				if = {
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_common value > 100 } }		#_[max]
+					set_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 50 }
+					change_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 100 }			#_(100+n)%
+				}
+				#_[大于零]
+				else_if = {
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_common value > 0 }		check_variable = { which = z_fw_var_flt_vl_speed_common value <= 100 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_common_mult value = 1 }
+					set_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 0 }
+					while = {#_[参量debug循环]
+						limit = {
+							check_variable = { which = z_fw_var_flt_vl_speed_common_mult value > 0 }		#_[衰减mult]
+							check_variable = { which = z_fw_var_flt_vl_speed_common value > 0 }				#_[mod余量]
+						}
+						set_variable = { which = z_fw_var_flt_vl_speed_common_cal value = 5 }				#_[累计基数]	100/20=5
+						multiply_variable = { which = z_fw_var_flt_vl_speed_common_cal value = z_fw_var_flt_vl_speed_common_mult }	#_[累计值=累计基数*衰减mult]
+						change_variable = { which = z_fw_var_flt_vl_speed_common_factor value = z_fw_var_flt_vl_speed_common_cal }	#_[参量累积]
+						
+						subtract_variable = { which = z_fw_var_flt_vl_speed_common_mult value = 0.05 }		#_[衰减mult_debug]
+						subtract_variable = { which = z_fw_var_flt_vl_speed_common value = 5 }				#_[mod余量debug]
+					}
+					change_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 100 }			#_(100+n)%
+				}
+				#_[小于零]
+				else_if = {
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_common value <= 0 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_common_mult value = 1 }
+					set_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 0 }
+					while = {#_[参量debug循环]
+						limit = {
+							check_variable = { which = z_fw_var_flt_vl_speed_common_mult value > 0 }		#_[衰减mult]
+							check_variable = { which = z_fw_var_flt_vl_speed_common value < 0 }				#_[mod余量]
+						}
+						set_variable = { which = z_fw_var_flt_vl_speed_common_cal value = 2.5 }				#_[累计基数]	50/20=2.5(表示最多统计50以内的负修正,超过的算作50)
+						multiply_variable = { which = z_fw_var_flt_vl_speed_common_cal value = z_fw_var_flt_vl_speed_common_mult }		#_[累计值=累计基数*衰减mult]
+						subtract_variable = { which = z_fw_var_flt_vl_speed_common_factor value = z_fw_var_flt_vl_speed_common_cal }	#_[参量累积]
+						
+						subtract_variable = { which = z_fw_var_flt_vl_speed_common_mult value = 0.05 }		#_[衰减mult_debug]
+						change_variable = { which = z_fw_var_flt_vl_speed_common value = 2.5 }				#_[mod余量debug]
+					}
+					change_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 100 }			#_(100+n)%
+				}
+				##_[特殊修正基值]
+				if = { limit = { is_scope_type = ship }
+					set_variable = { which = z_fw_var_flt_vl_speed_common_sp_base value = z_fw_var_flt_vl_speed_common_factor }	#_f
+				}
+				##_[mod添加]
+				subtract_variable = { which = z_fw_var_flt_vl_speed_common_factor value = z_fw_var_flt_vl_speed_common_minus }	#_[参量-减数]
+				round_variable = z_fw_var_flt_vl_speed_common_factor	#_四舍五入
+				if = {
+					limit = { NOT = { check_variable = { which = z_fw_var_flt_vl_speed_common_factor value = 0 } } }
+					add_modifier = { modifier = z_fw_mod_flt_vl_speed_common days = -1 multiplier = z_fw_var_flt_vl_speed_common_factor }
+				}
+				##_[clear]
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_common }			clear_variable = z_fw_var_flt_vl_speed_common }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_common_minus }	clear_variable = z_fw_var_flt_vl_speed_common_minus }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_common_factor }	clear_variable = z_fw_var_flt_vl_speed_common_factor }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_common_mult }	clear_variable = z_fw_var_flt_vl_speed_common_mult }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_common_cal }		clear_variable = z_fw_var_flt_vl_speed_common_cal }
+			}
+			
+			##_[引擎]	|75~150/f+0.25|	mod值/减数/参量修正/mod添加/clear	无法从配件获取基础速度mod
+			if = { limit = { always = no }
+				##_[mod值]
+				export_modifier_to_variable = { modifier = ship_base_speed_mult variable = z_fw_var_flt_vl_speed_base }
+				multiply_variable = { which = z_fw_var_flt_vl_speed_base value = 100 }	#_百分比化
+				##_[减数]
+				set_variable = { which = z_fw_var_flt_vl_speed_base_minus value = z_fw_var_flt_vl_speed_base }	#_n%
+				change_variable = { which = z_fw_var_flt_vl_speed_base_minus value = 100 }					#_(100+n)%
+				##_[参量修正]	大于零/小于零
+				#_[大于零]
+				if = {
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_base value > 0 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_base_mult value = 1 }
+					set_variable = { which = z_fw_var_flt_vl_speed_base_factor value = 0 }
+					while = {#_[参量debug循环]
+						limit = { check_variable = { which = z_fw_var_flt_vl_speed_base value > 0 } }		#_[mod余量]
+						set_variable = { which = z_fw_var_flt_vl_speed_base_cal value = 5 }					#_[累计基数]	100/20=5
+						multiply_variable = { which = z_fw_var_flt_vl_speed_base_cal value = z_fw_var_flt_vl_speed_base_mult }	#_[累计值=累计基数*衰减mult]
+						change_variable = { which = z_fw_var_flt_vl_speed_base_factor value = z_fw_var_flt_vl_speed_base_cal }	#_[参量累积]
+						if = {
+							limit = { check_variable = { which = z_fw_var_flt_vl_speed_base_mult value > 0.05 } }	#_[衰减mult]
+							subtract_variable = { which = z_fw_var_flt_vl_speed_base_mult value = 0.05 }			#_[衰减mult_debug]
+						}
+						subtract_variable = { which = z_fw_var_flt_vl_speed_base value = 5 }				#_[mod余量debug]
+					}
+					change_variable = { which = z_fw_var_flt_vl_speed_base_factor value = 100 }				#_(100+n)%
+				}
+				#_[小于零]
+				else_if = {
+					limit = { check_variable = { which = z_fw_var_flt_vl_speed_base value <= 0 } }
+					set_variable = { which = z_fw_var_flt_vl_speed_base_mult value = 1 }
+					set_variable = { which = z_fw_var_flt_vl_speed_base_factor value = 0 }
+					while = {#_[参量debug循环]
+						limit = {
+							check_variable = { which = z_fw_var_flt_vl_speed_base_mult value > 0 }			#_[衰减mult]
+							check_variable = { which = z_fw_var_flt_vl_speed_base value < 0 }				#_[mod余量]
+						}
+						set_variable = { which = z_fw_var_flt_vl_speed_base_cal value = 2.5 }				#_[累计基数]	50/20=2.5
+						multiply_variable = { which = z_fw_var_flt_vl_speed_base_cal value = z_fw_var_flt_vl_speed_base_mult }		#_[累计值=累计基数*衰减mult]
+						subtract_variable = { which = z_fw_var_flt_vl_speed_base_factor value = z_fw_var_flt_vl_speed_base_cal }	#_[参量累积]
+						
+						subtract_variable = { which = z_fw_var_flt_vl_speed_base_mult value = 0.05 }		#_[衰减mult_debug]
+						change_variable = { which = z_fw_var_flt_vl_speed_base value = 2.5 }				#_[mod余量debug]
+					}
+					change_variable = { which = z_fw_var_flt_vl_speed_base_factor value = 100 }				#_(100+n)%
+				}
+				##_[mod添加]
+				subtract_variable = { which = z_fw_var_flt_vl_speed_base_factor value = z_fw_var_flt_vl_speed_base_minus }	#_[参量-减数]
+				round_variable = z_fw_var_flt_vl_speed_base_factor	#_四舍五入
+				if = {
+					limit = { NOT = { check_variable = { which = z_fw_var_flt_vl_speed_base_factor value = 0 } } }	#_|非0|
+					add_modifier = { modifier = z_fw_mod_flt_vl_speed_base days = -1 multiplier = z_fw_var_flt_vl_speed_base_factor }
+				}
+				##_[clear]
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_base }			clear_variable = z_fw_var_flt_vl_speed_base }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_base_minus }	clear_variable = z_fw_var_flt_vl_speed_base_minus }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_base_factor }	clear_variable = z_fw_var_flt_vl_speed_base_factor }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_base_mult }	clear_variable = z_fw_var_flt_vl_speed_base_mult }
+				if = { limit = { is_variable_set = z_fw_var_flt_vl_speed_base_cal }		clear_variable = z_fw_var_flt_vl_speed_base_cal }
+			}
+		}
+
+
+
+
+		###_[射程]	|75-150|	mod值/减数/参量修正/乘数修正/特殊修正基值/mod添加/clear	####################################################################################
+		if = { limit = { always = yes }
+			#_[mod值]
+			export_modifier_to_variable = { modifier = ship_weapon_range_mult variable = z_fw_var_flt_vl_range }
+			multiply_variable = { which = z_fw_var_flt_vl_range value = 100 }	#_百分比化
+			#_[减数]
+			set_variable = { which = z_fw_var_flt_vl_range_minus value = z_fw_var_flt_vl_range }	#_n%
+			change_variable = { which = z_fw_var_flt_vl_range_minus value = 100 }					#_(100+n)%
+			##_[参量修正]	最大值/大于零/小于零
+			if = {#_[最大值]
+				limit = { check_variable = { which = z_fw_var_flt_vl_range value > 100 } }		#_[max]
+				set_variable = { which = z_fw_var_flt_vl_range_factor value = 50 }
+				change_variable = { which = z_fw_var_flt_vl_range_factor value = 100 }			#_(100+n)%
+			}
+			else_if = {#_[大于零]
+				limit = { check_variable = { which = z_fw_var_flt_vl_range value > 0 }	check_variable = { which = z_fw_var_flt_vl_range value <= 100 } }
+				set_variable = { which = z_fw_var_flt_vl_range_mult value = 1 }
+				set_variable = { which = z_fw_var_flt_vl_range_factor value = 0 }
+				while = {#_[参量debug循环]
+					limit = {
+						check_variable = { which = z_fw_var_flt_vl_range_mult value > 0 }		#_[衰减mult]
+						check_variable = { which = z_fw_var_flt_vl_range value > 0 }			#_[mod余量]正值减少
+					}
+					set_variable = { which = z_fw_var_flt_vl_range_cal value = 5 }				#_[累计基数]		100/20=5
+					multiply_variable = { which = z_fw_var_flt_vl_range_cal value = z_fw_var_flt_vl_range_mult }	#_[累计值=累计基数*衰减mult]
+					change_variable = { which = z_fw_var_flt_vl_range_factor value = z_fw_var_flt_vl_range_cal }	#_[参量累积]
+					
+					subtract_variable = { which = z_fw_var_flt_vl_range_mult value = 0.05 }		#_[衰减mult_debug]
+					subtract_variable = { which = z_fw_var_flt_vl_range value = 5 }				#_[mod余量debug]
+				}
+				change_variable = { which = z_fw_var_flt_vl_range_factor value = 100 }			#_(100+n)%
+			}
+			else_if = {#_[小于零]
+				limit = { check_variable = { which = z_fw_var_flt_vl_range value <= 0 } }
+				set_variable = { which = z_fw_var_flt_vl_range_mult value = 1 }
+				set_variable = { which = z_fw_var_flt_vl_range_factor value = 0 }
+				while = {#_[参量debug循环]
+					limit = {
+						check_variable = { which = z_fw_var_flt_vl_range_mult value > 0 }		#_[衰减mult]
+						check_variable = { which = z_fw_var_flt_vl_range value < 0 }			#_[mod余量]负值增加
+					}
+					set_variable = { which = z_fw_var_flt_vl_range_cal value = 2.5 }			#_[累计基数]		50/20=2.5(表示最多统计50以内的负修正,超过的算作50)
+					multiply_variable = { which = z_fw_var_flt_vl_range_cal value = z_fw_var_flt_vl_range_mult }	#_[累计值=累计基数*衰减mult]
+					subtract_variable = { which = z_fw_var_flt_vl_range_factor value = z_fw_var_flt_vl_range_cal }	#_[参量累积]
+					
+					subtract_variable = { which = z_fw_var_flt_vl_range_mult value = 0.05 }		#_[衰减mult_debug]
+					change_variable = { which = z_fw_var_flt_vl_range value = 2.5 }				#_[mod余量debug]
+				}
+				change_variable = { which = z_fw_var_flt_vl_range_factor value = 100 }			#_(100+n)%
+			}
+			##_[乘数修正]	射程乘数
+			multiply_variable = { which = z_fw_var_flt_vl_range_factor value = z_fw_var_set_vl_range_mult }
+			##_[特殊修正基值]
+			if = { limit = { is_scope_type = ship }
+				set_variable = { which = z_fw_var_flt_vl_range_sp_base value = z_fw_var_flt_vl_range_factor }	#_f
+			}
+			##_[mod添加]
+			subtract_variable = { which = z_fw_var_flt_vl_range_factor value = z_fw_var_flt_vl_range_minus }	#_[参量-减数]
+			round_variable = z_fw_var_flt_vl_range_factor	#_四舍五入
+			if = {
+				limit = { NOT = { check_variable = { which = z_fw_var_flt_vl_range_factor value = 0 } } }		#_|非0|
+				add_modifier = { modifier = z_fw_mod_flt_vl_range days = -1 multiplier = z_fw_var_flt_vl_range_factor }
+			}
+			##_[clear]
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_range }			clear_variable = z_fw_var_flt_vl_range }
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_range_minus }	clear_variable = z_fw_var_flt_vl_range_minus }
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_range_factor }	clear_variable = z_fw_var_flt_vl_range_factor }
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_range_mult }		clear_variable = z_fw_var_flt_vl_range_mult }
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_range_cal }		clear_variable = z_fw_var_flt_vl_range_cal }
+		}
+
+
+
+
+		###_[射速]	绝望射速/	####################################################################################
+		##_[绝望射速]	mod值/mod添加/clear
+		if = { limit = { always = yes }
+			#_[mod值]
+			export_modifier_to_variable = { modifier = force_disparity_fire_rate_mult variable = z_fw_var_flt_vl_fire_disp }
+			multiply_variable = { which = z_fw_var_flt_vl_fire_disp value = 100 }	#_百分比化
+			subtract_variable = { which = z_fw_var_flt_vl_fire_disp value = 50 }	#_过量值
+			#_[mod添加]
+			if = { limit = { check_variable = { which = z_fw_var_flt_vl_fire_disp value > 0 } }		add_modifier = { modifier = z_fw_mod_flt_vl_fire_disp days = -1 multiplier = z_fw_var_flt_vl_fire_disp } }
+			##_[clear]
+			if = { limit = { is_variable_set = z_fw_var_flt_vl_fire_disp }			clear_variable = z_fw_var_flt_vl_fire_disp }
+		}
+	}
+	
+	
+	#_[完全修正]
+	if = { limit = { z_fw_trgr_glbl_battle_vl_all = yes }	#_|vl_完全trgr|
+	}
+}

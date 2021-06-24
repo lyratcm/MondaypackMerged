@@ -1,0 +1,40 @@
+namespace = Events_GAPS_Traits_Quitters
+		
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_Quitters.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Quitters }
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Quitters } }
+			random_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Quitters is_unemployed = no }
+				unemploy_pop = yes
+			}
+		}
+	}
+}
+#On yearly pulse country
+country_event = {
+	id = Events_GAPS_Traits_Quitters.12
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Quitters }
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Quitters } }
+			random_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Quitters is_unemployed = no }
+				unemploy_pop = yes
+			}
+		}
+	}
+}

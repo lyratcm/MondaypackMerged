@@ -1,0 +1,39 @@
+civic_beacon_of_liberty = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_fiefdom
+                value = auth_cooperative
+            }
+        }
+    }
+    possible = {
+        ethics = {
+            OR = {
+                text = civic_tooltip_egalitarian
+                value = ethic_egalitarian
+                value = ethic_fanatic_egalitarian
+            }
+            NOR = {
+                text = civic_tooltip_not_xenophobe
+                value = ethic_xenophobe
+                value = ethic_fanatic_xenophobe
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        trade_value_mult = 0.15
+        planet_immigration_pull_mult = 0.15
+        pop_government_ethic_attraction = 0.1
+        planet_amenities_mult = 0.05
+    }
+}

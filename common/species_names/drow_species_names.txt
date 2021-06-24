@@ -4,7 +4,7 @@ DROW = {
 		plural = "Kivviiri"
 		home_planet = "Ishmanti Delmah"
 		home_system = "Ishmanti"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 	
 	drow_name_2 = {
@@ -12,7 +12,7 @@ DROW = {
 		plural = "Silinrai"
 		home_planet = "Kashagon Delmah"
 		home_system = "Kashagon"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_dunmer"
 	}
 	
 	drow_name_3 = {
@@ -20,7 +20,7 @@ DROW = {
 		plural = "Drothiiri"
 		home_planet = "Sisaroth Delmah"
 		home_system = "Sisaroth"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_ilythiiri"
 	}
 	
 	drow_name_4 = {
@@ -28,7 +28,7 @@ DROW = {
 		plural = "Talyarii"
 		home_planet = "Armon Lyr"
 		home_system = "Xeleron"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 	
 	drow_name_5 = {
@@ -36,7 +36,7 @@ DROW = {
 		plural = "Qunnessaari"
 		home_planet = "Zhennu Delmah"
 		home_system = "Kyorl'urn"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_dunmer"
 	}
 	
 	drow_name_6 = {
@@ -44,7 +44,7 @@ DROW = {
 		plural = "Suriliiri"
 		home_planet = "Drala Sol"
 		home_system = "Drala"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_ilythiiri"
 	}
 	
 	drow_name_7 = {
@@ -52,7 +52,7 @@ DROW = {
 		plural = "Malari"
 		home_planet = "Vharrus"
 		home_system = "Malar Tor"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 	
 	drow_name_8 = {
@@ -60,7 +60,7 @@ DROW = {
 		plural = "Fashkaari"
 		home_planet = "Toryll"
 		home_system = "Itami"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_dunmer"
 	}
 
 	drow_name_9 = {
@@ -68,7 +68,7 @@ DROW = {
 		plural = "Duergani"
 		home_planet = "Kry'stona"
 		home_system = "Har'olen"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_ilythiiri"
 	}
 	
 	drow_name_10 = {
@@ -76,7 +76,7 @@ DROW = {
 		plural = "Vlorissi"
 		home_planet = "Zer'tath"
 		home_system = "Kelliat"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 	
 	drow_name_11 = {
@@ -84,7 +84,7 @@ DROW = {
 		plural = "Conamori"
 		home_planet = "Serisonor"
 		home_system = "Seriso"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_dunmer"
 	}
 	
 	drow_name_12 = {
@@ -92,7 +92,7 @@ DROW = {
 		plural = "Jubassi"
 		home_planet = "Bel'lator"
 		home_system = "Khluryar"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_ilythiiri"
 	}
 	
 	drow_name_13 = {
@@ -100,7 +100,7 @@ DROW = {
 		plural = "Kerathiiri"
 		home_planet = "Linth'el"
 		home_system = "Caghresst"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 	
 	drow_name_14 = {
@@ -108,7 +108,7 @@ DROW = {
 		plural = "Faeriiri"
 		home_planet = "Faellarin"
 		home_system = "Faelaria"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_dunmer"
 	}
 	
 	drow_name_15 = {
@@ -116,7 +116,7 @@ DROW = {
 		plural = "Kyorias"
 		home_planet = "Maelthra"
 		home_system = "Tagnik'zur"
-		name_list = "DROW1"
+		name_list = "eos_namelist_drow_ilythiiri"
 	}
 	
 	drow_name_16 = {
@@ -124,6 +124,6 @@ DROW = {
 		plural = "Kalxi"
 		home_planet = "Lisse'lea"
 		home_system = "Ilhar"
-		name_list = "DROW2"
+		name_list = "eos_namelist_drow_darkelf"
 	}
 }

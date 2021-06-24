@@ -1,107 +1,47 @@
 ###_infinite stellaris core-接战	####################################################################
 namespace = z_fw_core_battle
 
-
-#_[接战_脱战]
+#_[核心_接战框架]
+#_[核心_星系战斗循环]
+#_[核心_舰队自检]
+#_[脱战]
 #_[动态难度_all]
 
 
 
 
-###_外部联动	######################################
-#_<z_modmenu>
-	#_[z_fw_core_battle.20]=计算强化参数添加dd_buff
-	
-
-###_引用
-##_misc
-	#_global_flag	[z_isb_flg_glbl_battle_maneuver_on]			z_fw_core_battle 战速
-##_动态难度
-	#_var			[z_fw_core_battle_dd_execute_var]		各AI战力加成参数
-	#_global_flag	[z_fw_core_battle_dd_fp_adpt_hard][z_fw_core_battle_dd_fp_adpt_standard][z_fw_core_battle_dd_fp_adpt_easy]	
-
-###_原生
-##_misc
-	#_fleet_flag	[z_fw_flg_fleet_combat_state]				战斗中
-	#_global_flag	[z_fw_core_battle_fp_debug_on]			z_fw_core_battle 溢出清理
-##_动态难度
-	#_global_tgt	[z_fw_tgt_global_event]					执行npc---z全局事件
-	#_var			[z_fw_core_battle_dd_var]				全局战力加成参数
-	#_eft			[z_fw_eft_core_battle_dd_ai_effect]		执行upgrade
-	#_country_flag	[z_fw_core_battle_dd_fp_cd]				战争-dd-战力强化-自适应CD
-
-
-
-
-
-
-
-
-###_[接战_脱战]	[id=1]	###############################################################################
-
-
-#_[on_entering_battle]接战框架	[id=1]	#########################################
-#_触发1			[fw清除修正]	[fw战斗flg添加]=触发接战循环
-#_触发2舰队		[沉浸战场_战术机动]=[z_isb_eft_cntr_battle_buff_add]
+###_[核心_接战框架]	[id=1]	############################################################################
+#_fromfrom		接战初始化/战斗状态init/数值限制/vl_舰队CD清除
+#_<on_entering_battle>
 #_触发3sp		[sp修正]
 country_event = {
 	id = z_fw_core_battle.1
 	hide_window = yes
 	is_triggered_only = yes
-	trigger = {
-		exists = fromfrom
-		fromfrom = {
-			OR = {
-				#_military
-				is_ship_class = shipclass_science_ship
-				is_ship_class = shipclass_military_special	#_巨像
-				is_ship_class = shipclass_transport
-				is_ship_class = shipclass_probe				#_舰妈
-				#_defence
-				is_ship_class = shipclass_starbase
-				is_ship_class = shipclass_military_station
-				#_civilian
-				is_ship_class = shipclass_colonizer
-				is_ship_class = shipclass_science_ship
-				is_ship_class = shipclass_constructor
-			}
-		}
-	}
+	trigger = { exists = fromfrom	fromfrom = { z_fw_trgr_flt_battle_vl_battle = yes } }
 	
 	immediate = {
-		###_INIT
 		fromfrom = {
-			#_接战修正初始化
-			z_fw_eft_flt_core_battle_buff_clean = yes
-			#_[接战]默认-[debug循环]-舰队
-			if = {
-				limit = { NOT = { has_fleet_flag = z_fw_flg_fleet_combat_state } }	#_非战斗状态
-				#_添加[战斗状态]
-				set_fleet_flag = z_fw_flg_fleet_combat_state
-			}
+			###_[接战初始化]
+			z_fw_eft_flt_core_battle_mod_init = yes
+			
+			###_[战斗状态init]
+			set_fleet_flag = z_fw_flg_fleet_combat_state	#_|添加战斗状态flg|
+			
+			###_[数值限制]
+			#_[vl_精确修正_init]
+			fleet_event = { id = z_fw_core_battle_vl.3 }
+			#_[vl_舰队CD清除]
+			fleet_event = { id = z_fw_core_battle_vl.30 days = 1 }
+			every_combatant_fleet = { fleet_event = { id = z_fw_core_battle_vl.30 days = 1 } }
 		}
-		###_[接战]舰队---添加buff
-		if = {
-			limit = {
-				fromfrom = {
-					NOR = {
-						AND = {
-							is_ship_class = shipclass_starbase
-							NOT = { is_ship_size = juggernaut }	#_主宰
-						}
-						is_ship_class = shipclass_military_station
-					}
-				}
-			}
-			###_[沉浸战场]
-			z_isb_eft_cntr_battle_buff_add = yes
-		}
+		
 		###_[接战]---特殊敌人
 		if = {
 			limit = {
 				has_global_flag = z_framework_activated		#_框架启用
 				NOR = {
-					z_is_vanilla_country = yes
+					z_fw_trgr_cntr_core_vanilla = yes
 					is_country_type = ascended_empire	#_ZOFE
 					is_country_type = lost_empire
 					is_country_type = default_ev	#_肾虚
@@ -124,33 +64,86 @@ country_event = {
 
 
 
-##_[脱战]	[id=11]	#########################################
-#_flt_eft	[z_fw_eft_flt_core_battle_buff_clean]
-#_接战循环/脱战		[fw战斗flg检测]=debug
-
-#_[mtth]		自循环接战debug
-#_fleet_flag	[z_fw_flg_fleet_combat_state]
-fleet_event = {
-	id = z_fw_core_battle.11
+###_[核心_星系战斗循环]	########################################	z禁用
+#_|战斗状态|	自循环
+#_|战斗结束|	vl_舰队debug
+system_event = {
+	id = z_fw_core_battle.10
 	hide_window = yes
-	mean_time_to_happen = { days = 29 }
-	trigger = { has_fleet_flag = z_fw_flg_fleet_combat_state }
+	is_triggered_only = yes
 	immediate = {
-		#_战斗状态循环
+		##_|战斗状态|	自循环
 		if = {
-			limit = { is_in_combat = yes }
+			limit = {
+				has_star_flag = z_fw_flg_star_core_battle_ongoing		#_|战斗进行中|
+				any_fleet_in_system = { is_in_combat = yes }		#_|存在战斗|
+			}
+			#_[自循环]
+			system_event = { id = z_fw_core_battle.10 days = 5 }
 		}
+		
+		##_|战斗结束|	clear/vl_舰队debug
 		else = {
-			#_清理[接战修正]
-			z_fw_eft_flt_core_battle_buff_clean = yes
-			#_脱离[战斗状态]
-			remove_fleet_flag = z_fw_flg_fleet_combat_state
+			#_[clear]
+			remove_star_flag = z_fw_flg_star_core_battle_ongoing
+			
+			#_[vl_舰队debug]
+			if = {
+				limit = { NOT = { has_fleet_flag = z_fw_flg_flt_battle_vl_counted }		z_fw_trgr_glbl_battle_vl_more = yes }	#_|vl_进阶trgr|
+				fleet_event = { id = z_fw_core_battle_vl.2 }
+			}
+			
+			
 		}
 	}
 }
 
-#_[on_entering_system_fleet][其他事件触发]
-#_[脱战]	检测状态---清理修正
+
+
+
+###_[核心_舰队自检]	[id=11]	#########################################
+#_|vl自检debug|
+#_|战斗状态|		?
+#_|战斗结束|		脱离战斗状态/vl_舰队修正预备
+fleet_event = {
+	id = z_fw_core_battle.11
+	hide_window = yes
+	mean_time_to_happen = {
+		days = 15
+		modifier = { factor = 0.2	is_in_combat = yes }
+	}
+	immediate = {
+		#_[vl自检debug]
+		if = {
+			limit = { NOT = { has_fleet_flag = z_fw_flg_fleet_debug_cd } }		#_无|vl_舰队CD|
+			if = { limit = { is_in_combat = yes }	fleet_event = { id = z_fw_core_battle_vl.3 } }	#_[vl_精确修正_init]
+			else = { fleet_event = { id = z_fw_core_battle_vl.2 } }	#_[vl_舰队修正_init]
+		}
+	
+		#_[战斗状态debug]	战斗状态/战斗结束
+		if = {
+			limit = { has_fleet_flag = z_fw_flg_fleet_combat_state }
+			#_|战斗状态|
+			if = {
+				limit = { is_in_combat = yes }
+			}
+			#_|战斗结束|	脱离战斗状态/去除vl_舰队CD
+			else = {
+				#_[脱离战斗状态]
+				remove_fleet_flag = z_fw_flg_fleet_combat_state
+				#_[去除vl_舰队CD]
+				remove_fleet_flag = z_fw_flg_fleet_debug_cd
+				
+				#_清理[接战修正]
+				z_fw_eft_flt_core_battle_mod_init = yes
+			}
+		}
+	}
+}
+
+
+###_[脱战]	检测状态---清理修正		########################################	z禁用
+#_<on_entering_system_fleet>[其他事件触发]
 fleet_event = {
 	id = z_fw_core_battle.110
 	hide_window = yes
@@ -158,13 +151,12 @@ fleet_event = {
 	trigger = { is_in_combat = no }		#_确保脱战
 	immediate = {
 		#_清理[接战修正]
-		z_fw_eft_flt_core_battle_buff_clean = yes
+		z_fw_eft_flt_core_battle_mod_init = yes
 		#_脱离[战斗状态]
 		remove_fleet_flag = z_fw_flg_fleet_combat_state
 	}
 }
-
-#_[on_space_battle_lost]	战败-立刻执行
+#_<on_space_battle_lost>	战败-立刻执行				z禁用
 country_event = {
 	id = z_fw_core_battle.111
 	hide_window = yes
@@ -172,13 +164,13 @@ country_event = {
 	immediate = {
 		fromfrom = {
 			#_清理[接战修正]
-			z_fw_eft_flt_core_battle_buff_clean = yes
+			z_fw_eft_flt_core_battle_mod_init = yes
 			#_脱离[战斗状态]
 			remove_fleet_flag = z_fw_flg_fleet_combat_state
 		}
 	}
 }
-#_[on_space_battle_won]		胜利---延后1日执行
+#_<on_space_battle_won>		胜利---延后1日执行			z禁用
 country_event = {
 	id = z_fw_core_battle.112
 	hide_window = yes
@@ -187,14 +179,14 @@ country_event = {
 		fromfrom = { fleet_event = { id = z_fw_core_battle.110 days = 1 } }
 	}
 }
-#_[on_ship_disabled]		失效---舰队延后1日执行
+#_<on_ship_disabled>		失效---舰队延后1日执行		z禁用
 ship_event = {
 	id = z_fw_core_battle.113
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		#_清理本体[接战修正]
-		z_fw_eft_flt_core_battle_buff_clean = yes
+		z_fw_eft_flt_core_battle_mod_init = yes
 		fleet = {
 			#_所在舰队检测
 			fleet_event = { id = z_fw_core_battle.110 days = 1 }
@@ -218,8 +210,8 @@ country_event = {
 	trigger = {
 		has_global_flag = z_fw_core_battle_fp_debug_on
 		OR = {
-			z_fw_trgr_cntr_core_is_pc = yes
-			z_is_vanilla_country = no
+			z_fw_trgr_cntr_core_pc_current = yes
+			z_fw_trgr_cntr_core_vanilla = no
 		}
 		exists = fromfrom
 		fromfrom = {
@@ -259,7 +251,7 @@ country_event = {
 
 ###_[动态难度-Fleet Power Level]	####################################
 
-#_triggers		[z_fw_is_common_country]			普通AI<file=z_fw1_triggers>
+#_triggers		[z_fw_trgr_cntr_core_normal_no_afe]			普通AI<file=z_fw1_triggers>
 #_global_tgt	[z_fw_tgt_global_event]				执行npc---z全局事件
 #_eft			[z_fw_eft_core_battle_dd_ai_effect]	执行upgrade
 #_var			[z_fw_core_battle_dd_execute_var]	各AI强化参数
@@ -297,7 +289,12 @@ country_event = {
 	#	set_variable = { which = z_fw_core_dd_ai_decline_var value = 0 }	#_强AI衰落 var归零
 		#_全局强化参数 debug
 		if = {
-			limit = { check_variable = { which = z_fw_core_battle_dd_var value < 0 } }
+			limit = {
+				OR = {
+					NOT = { is_variable_set = z_fw_core_battle_dd_var }
+					check_variable = { which = z_fw_core_battle_dd_var value < 0 }
+				}
+			}
 			set_variable = { which = z_fw_core_battle_dd_var value = 0 }
 		}
 		
@@ -1148,7 +1145,7 @@ country_event = {
 				set_variable = { which = z_fw_core_battle_dd_execute_var value = 0 }	#_归零
 			}
 			else_if = {
-				limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
+				limit = { is_variable_set = z_fw_core_battle_dd_execute_var		check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
 				#_625+
 				if = {
 					limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value >= 1875 } }
@@ -1320,7 +1317,7 @@ country_event = {
 				set_variable = { which = z_fw_core_battle_dd_execute_var value = 0 }	#_归零
 			}
 			else_if = {
-				limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
+				limit = { is_variable_set = z_fw_core_battle_dd_execute_var		 check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
 				#_625+
 				if = {
 					limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value >= 1875 } }
@@ -1453,7 +1450,7 @@ country_event = {
 				set_variable = { which = z_fw_core_battle_dd_execute_var value = 0 }	#_归零
 			}
 			else_if = {
-				limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
+				limit = { is_variable_set = z_fw_core_battle_dd_execute_var		 check_variable = { which = z_fw_core_battle_dd_execute_var value > 0 } }
 				#_125+
 				if = {
 					limit = { check_variable = { which = z_fw_core_battle_dd_execute_var value >= 1875 } }
@@ -1573,7 +1570,7 @@ country_event = {
 		NAND = {
 			is_subject = yes
 			any_country = {
-				z_fw_trgr_cntr_core_is_pc = yes
+				z_fw_trgr_cntr_core_pc_current = yes
 				is_overlord_to = root
 			}
 		}
@@ -1622,7 +1619,7 @@ country_event = {
 		NAND = {
 			is_subject = yes
 			any_country = {
-				z_fw_trgr_cntr_core_is_pc = yes
+				z_fw_trgr_cntr_core_pc_current = yes
 				is_overlord_to = root
 			}
 		}

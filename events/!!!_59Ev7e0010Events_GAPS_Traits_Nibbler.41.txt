@@ -1,0 +1,8 @@
+namespace = Events_GAPS_Traits_Nibbler
+planet_event = {
+    id = Events_GAPS_Traits_Nibbler.41
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+    }
+}

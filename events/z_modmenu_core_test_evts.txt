@@ -1,6 +1,8 @@
 namespace = z_modmenu
 
 #_[wip测试]
+#_[已验证]
+#_[测试弹窗]
 
 ###_原生	##############################
 	#_fleet_flag	[z_mm_test_fleet]						测试舰队flag
@@ -11,11 +13,19 @@ namespace = z_modmenu
 ###_[wip测试]	[id=11]	##############################
 
 ###_list
-#_debug		test_debug/拓展次级UI框架/
-#_			giga_menu/giga_tech
-#_			科技与资源/产业革命/destroy_constructor/凯露物种
-#_星球		母星系随机星球添加暗物质矿/
+#_debug		test_debug/拓展次级UI框架
+#_cntr		科技与资源/产业革命/destroy_constructor/trigger_var/时序测试
+#_ambt		创建test物体/星球毁灭测试
+#_spcs		凯露物种/pf2_trait
+#_星球		母星系随机星球添加暗物质矿/母星创建人口
+#_shp/flt	扎克兰舰队
 #_			test_relic/test_mega
+#_[非常用]	giga/添加暗物质/job操作/高级科学家/动态难度/舰队mod
+
+#_[已验证]	use_ship_kill_target(武器属性)	[yes]=可在战斗中更改目标,伤害更高,火力分配更好	[no]=打死目标才会攻击别的目标,效率低下
+#_[已验证]	带有xxx.xxx的独立scope写法算作一个scope,在进行prev引用的时候不需要写prevprev,直接prev即可
+#_[已验证]	导出mod无法检测[舰船配件的]和[舰船自身固有的mod]
+#_[已验证]	国家mod数据刷新会有1day延时
 
 
 country_event = {
@@ -47,6 +57,140 @@ country_event = {
 		}
 	}
 	
+	
+	option = {#_增加射程
+		name = z_mm_test_weap_range_200
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_modifier = z_mm_mod_cntr_test_range } }
+				add_modifier = { modifier = z_mm_mod_cntr_test_range days = -1 }
+			}
+			else = { remove_modifier = z_mm_mod_cntr_test_range }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_免费造船
+		name = z_mm_test_build_cntr_0
+		custom_gui = "z_mm_button_evt_option_green"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			if = {
+				limit = { NOT = { has_modifier = z_mm_mod_cntr_test_sb_ship_cost_0 } }
+				add_modifier = { modifier = z_mm_mod_cntr_test_sb_ship_cost_0 days = -1 }
+			}
+			else = { remove_modifier = z_mm_mod_cntr_test_sb_ship_cost_0 }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_创建舰队:gh
+		name = z_mm_test_flt_own_carrier
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_z_fw_flt_test"
+				settings = {
+				#	garrison = yes
+					can_upgrade = yes
+					can_change_composition = no
+					can_change_leader = yes
+					uses_naval_capacity = no
+					spawn_debris = no
+				#	is_boss = yes
+				}
+				effect = {
+					set_owner = root				#_[temp_npc]
+					set_location = {
+						target = root.capital_scope.solar_system.starbase
+						distance = 7
+						angle = random
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = "NAME_z_fw_ship_test_carrier"
+							design = "NAME_z_fw_ship_test_carrier"
+							graphical_culture = root	#_玩家
+						}
+					}
+					create_ship = {
+						name = "NAME_z_fw_ship_test_titan_common"
+						design = "NAME_z_fw_ship_test_titan_common"
+						graphical_culture = root	#_玩家
+					}
+					set_fleet_flag = z_fw_flg_flt_weapon_mod_test_carrier
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_敌对战斗舰队
+		name = z_mm_test_flt_enemy_artillery
+        custom_gui = "z_mm_button_evt_option_pink"
+		hidden_effect = {
+			event_target:z_fw_tgt_global_enemy_test = {#_创建ldr
+				create_leader = {
+					class = admiral
+					species = root.owner_species
+					name = random
+					skill = 10
+					effect = {
+						set_age = 0
+						save_event_target_as = z_mm_enemy_test_admiral
+					}
+				}
+			}
+			root.capital_scope.solar_system = {#_设置地点
+				closest_system = {
+					min_steps = 1
+					max_steps = 5
+					random_system_planet = {
+						limit = { is_star = yes }
+						save_event_target_as = z_mm_tgt_plnt_closest_system_star
+					}
+				}
+			}
+			create_fleet = {
+				name = "NAME_z_fw_flt_test"
+				settings = {
+				#	garrison = yes
+					can_upgrade = yes
+					can_change_composition = no
+					can_change_leader = yes
+					uses_naval_capacity = no
+					spawn_debris = no
+				#	is_boss = yes
+				}
+				effect = {
+					set_owner = event_target:z_fw_tgt_global_enemy_test
+					assign_leader = event_target:z_mm_enemy_test_admiral	#_安置ldr
+					set_location = {
+						target = event_target:z_mm_tgt_plnt_closest_system_star
+						distance = 7
+						angle = random
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = "NAME_z_fw_ship_test_bb"
+							design = "NAME_z_fw_ship_test_bb"
+							graphical_culture = root	#_玩家
+						}
+					}
+					create_ship = {
+						name = "NAME_z_fw_ship_test_titan_common"
+						design = "NAME_z_fw_ship_test_titan_common"
+						graphical_culture = root	#_玩家
+					}
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	
 	#_[test_debug]
 	option = {
 		name = mem_star_resize
@@ -62,7 +206,7 @@ country_event = {
 		custom_gui = "z_mm_button_evt_option_red"
 		trigger = { z_mm_trgr_expanded_sub_ui = no }
 		hidden_effect = {
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					is_star = yes
 					planet_size > 30
@@ -82,6 +226,7 @@ country_event = {
 			country_event = { id = z_modmenu.11 }
 		}
 	}
+
 	
 	#_[拓展次级UI框架]
 	option = {
@@ -103,35 +248,6 @@ country_event = {
 		}
 		hidden_effect = {
 			z_mm_eft_expanded_sub_ui_exit = yes
-			country_event = { id = z_modmenu.11 }
-		}
-	}
-	#_[giga_menu]
-	option = {
-		name = giga_ehof_var
-        custom_gui = "z_mm_button_evt_option_normal"
-		hidden_effect = {
-			change_variable = { which = ehof_phase value = 1 }
-			country_event = { id = z_modmenu.11 }
-		}
-	}
-	#_[giga_tech]
-	option = {
-		name = giga_tech
-        custom_gui = "z_mm_button_evt_option_normal"
-		hidden_effect = {
-			give_technology = { tech = giga_tech_alderson_disk					message = no }	#_披萨
-			give_technology = { tech = giga_tech_tetradimensional_engineering	message = no }
-			give_technology = { tech = giga_tech_asteroid_manufactory			message = no }	#_小行星挖掘
-			give_technology = { tech = giga_tech_terraform_toxic				message = no }	#_空气清新器
-			give_technology = { tech = giga_tech_automated_stripmine_2			message = no }	#_自动露天矿
-		#	give_technology = { tech = giga_tech_crystal_megabore				message = no }	#_水晶巨孔
-			give_technology = { tech = giga_tech_terraform_barren				message = no }	#_整地神器
-			give_technology = { tech = giga_tech_equatorial_shipyard			message = no }	#_行星船坞
-			give_technology = { tech = giga_tech_hrae_mc						message = no }	#_
-			give_technology = { tech = giga_tech_penrose_sphere_1				message = no }	#_彭罗斯
-			give_technology = { tech = giga_tech_penrose_sphere_2				message = no }
-			give_technology = { tech = giga_tech_penrose_sphere_3				message = no }
 			country_event = { id = z_modmenu.11 }
 		}
 	}
@@ -165,8 +281,8 @@ country_event = {
 				minor_artifacts = 5000
 			}
 			if = {
-				limit = { NOT = { has_modifier = z_fw_mod_test_0 } }
-				add_modifier = { modifier = z_fw_mod_test_0 days = -1 }
+				limit = { NOT = { has_modifier = z_fw_mod_cntr_test_0 } }
+				add_modifier = { modifier = z_fw_mod_cntr_test_0 days = -1 }
 			}
 			country_event = { id = z_modmenu.11 }
 		}
@@ -176,7 +292,7 @@ country_event = {
 		name = z_pr
         custom_gui = "z_mm_button_evt_option_blue"
 		hidden_effect = {
-			every_country = { set_country_flag = z_pr_flg_cntr_1 }
+			every_country = { set_country_flag = z_pr_flg_cntr_reg }
 			country_event = { id = z_modmenu.11 }
 		}
 	}
@@ -210,87 +326,168 @@ country_event = {
 			country_event = { id = z_modmenu.11 }
 		}
 	}
-	
-	#_[母星系随机星球添加暗物质矿]
+	#_[trigger_var]		<export_trigger_value_to_variable>当前无法使用
 	option = {
-		name = capital_dark_matter
-        custom_gui = "z_mm_button_evt_option_green"
+		name = z_modmenu.trigger_var
+        custom_gui = "z_mm_button_evt_option_pink"
 		hidden_effect = {
-			capital_scope.solar_system = {
-				random_system_planet = {
-					limit = {
-						is_colony = no
-						is_star = no
-						is_asteroid = no
-					}
-					add_deposit = z_fw_d_obtl_test_dark_matter
-				}
+			#_[人口]
+			set_variable = { which = z_mm_var_cntr_test_num_pops		value = 0 }
+			every_owned_planet = {
+				limit = ( is_colony = yes )
+				set_variable = { which = z_mm_var_plnt_test_num_pops		value = 0 }
+				export_trigger_value_to_variable = { trigger = num_pops		variable = z_mm_var_plnt_test_num_pops		rounded = no }	#_[国家人口统计]
+				prev = { change_variable = { which = z_mm_var_cntr_test_num_pops	value = { scope = prev		variable = z_mm_var_plnt_test_num_pops } } }
+				clear_variable = z_mm_var_plnt_test_num_pops
 			}
+			export_trigger_value_to_variable = { trigger = num_pops		variable = z_mm_var_cntr_test_num_pops		rounded = no }	#_[国家人口统计]
+			country_event = { id = z_modmenu.1102 }
 			country_event = { id = z_modmenu.11 }
 		}
 	}
-	#_unemploy
+	#_[时序测试]
 	option = {
-		name = z_modmenu_test_1
-        custom_gui = "z_mm_button_evt_option_green"
-		trigger = {
-			any_owned_pop = { is_unemployed = yes }
-		}
+		name = z_modmenu.timing_order
+        custom_gui = "z_mm_button_evt_option_pink"
 		hidden_effect = {
-			every_owned_pop = { limit = { is_unemployed = yes } unemploy_pop = yes }
-			country_event = { id = z_modmenu.11 }
-		}
-	}
-	#_去掉分类
-	option = {
-		name = z_modmenu_test_2
-        custom_gui = "z_mm_button_evt_option_green"
-		trigger = {
-			any_owned_pop = { is_unemployed = yes }
-		}
-		hidden_effect = {
-			every_owned_pop = { limit = { is_unemployed = yes } clear_pop_category = yes }
-			country_event = { id = z_modmenu.11 }
-		}
-	}
-	#_改物种
-	option = {
-		name = z_modmenu_test_3
-        custom_gui = "z_mm_button_evt_option_green"
-		trigger = {
-			any_owned_pop = { is_unemployed = yes }
-		}
-		hidden_effect = {
+			set_variable = { which = z_mm_var_cntr_timing_base	value = 10 }
+			set_variable = { which = z_mm_var_cntr_timing_add	value = 0 }
 			every_owned_pop = {
-				limit = { is_unemployed = yes }
-				modify_species = {
-					species = this
-					add_trait = trait_cybernetic
-					add_traits_at_start_of_list = yes
-					remove_trait = trait_cybernetic
-					change_scoped_species = yes # change only this pop's species
+				if = {
+					limit = { prev = { check_variable = { which = z_mm_var_cntr_timing_base	value > 0 } } }
+					prev = { subtract_variable = { which = z_mm_var_cntr_timing_base		value = 1 } }
+				}
+				else = { prev = { change_variable = { which = z_mm_var_cntr_timing_add		value = 1 } } }
+			}
+			country_event = { id = z_modmenu.11 }
+			country_event = { id = z_modmenu.1103 }
+		}
+	}
+	
+	
+	###_[母星创建人口]	50
+	option = {
+		name = z_modmenu_test_capital_create_pop_50
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			while = {
+				count = 50
+				capital_scope = {
+					create_pop = {
+						species = owner_species
+						ethos = random
+					}
 				}
 			}
 			country_event = { id = z_modmenu.11 }
 		}
 	}
-	#_强制检测阵营
+	###_[母星创建机器人]	50
 	option = {
-		name = z_modmenu_test_4
+		name = z_modmenu_test_capital_create_robot_50
         custom_gui = "z_mm_button_evt_option_green"
-		trigger = {
-			any_owned_pop = { is_unemployed = yes }
-		}
+		trigger = { any_owned_pop_species = { is_robotic_species = yes } }
 		hidden_effect = {
-			every_owned_pop = { limit = { is_unemployed = yes } force_faction_evaluation = yes }
+			while = {
+				count = 10
+				random_owned_pop_species = {
+					limit = { is_robotic_species = yes }
+					prev.capital_scope = {
+						create_pop = {
+							species = prev
+							ethos = random
+						}
+					}
+				}
+				last_created_pop = {
+					modify_species = {
+						species = this
+						base = auto
+						add_trait = trait_robot_harvesters
+						change_scoped_species = yes
+					}
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	###_[母星清理人口]	50
+	option = {
+		name = z_modmenu_test_capital_kill_pop_50
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			while = {
+				count = 50
+				capital_scope = {
+					random_owned_pop = {
+						weights = {
+							base = 1
+							modifier = { mult = 7777	is_unemployed = yes }
+						}
+						kill_pop = yes
+					}
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	###_[添加国家自动迁移]
+	option = {
+		name = z_modmenu_test_cntr_auto_mig_mod
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			if = {
+				limit = { has_modifier = z_fw_mod_cntr_test_mig }
+				remove_modifier = z_fw_mod_cntr_test_mig
+			}
+			else = { add_modifier = { modifier = z_fw_mod_cntr_test_mig	days = -1 } }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	###_[其他星球添加职位]	30
+	option = {
+		name = z_modmenu_test_colony_add_jobs_30
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			random_owned_planet = {#_存在含有mod星球,清除mod,添加隔离
+				limit = { NOR = { is_same_value = prev.capital_scope	has_modifier = z_fw_mod_plnt_test_job_30 } }
+				add_modifier = { modifier = z_fw_mod_plnt_test_job_30	days = -1 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_[其他星球清除职位]
+	option = {
+		name = z_modmenu_test_colony_remove_jobs_30
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			random_owned_planet = {#_存在含有mod星球,清除mod,添加隔离
+				limit = { NOT = { is_same_value = prev.capital_scope }	has_modifier = z_fw_mod_plnt_test_job_30 }
+				remove_modifier = z_fw_mod_plnt_test_job_30
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_[母星职位debug]
+	option = {
+		name = z_modmenu_test_capital_add_jobs_30
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			capital_scope = {
+				if = {
+					limit = { has_modifier = z_fw_mod_plnt_test_job_30 }
+					remove_modifier = z_fw_mod_plnt_test_job_30
+				}
+				else = { add_modifier = { modifier = z_fw_mod_plnt_test_job_30	days = -1 } }
+			}
 			country_event = { id = z_modmenu.11 }
 		}
 	}
 	
-	#_创建test物体
+	#_[创建test物体]
 	option = {
 		name = z_modmenu_test_6
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_red"
 		hidden_effect = {
 			capital_scope = {
 				create_ambient_object = {
@@ -327,10 +524,46 @@ country_event = {
 			country_event = { id = z_modmenu.11 }
 		}
 	}
+	#_[星球毁灭测试]定位器
+	option = {
+		name = z_modmenu_test_star_exp
+        custom_gui = "z_mm_button_evt_option_red"
+		hidden_effect = {
+			capital_scope = {
+				create_fleet = {
+					name = "NAME_z_fw_tgt_r_cht_co_flt"
+					settings = {
+						can_upgrade = no
+						can_change_composition = no
+						can_change_leader = no
+						uses_naval_capacity = no
+						spawn_debris = no
+						is_boss = yes
+					}
+					effect = {
+						set_owner = prev.owner				#_[temp_npc]
+						set_location = {
+							target = prev
+							distance = 7
+							angle = random
+						}
+						create_ship = {
+							name = "NAME_z_fw_tgt_r_cht_co_ship"
+							design = "NAME_z_fw_tgt_r_cht_co_ship"
+							graphical_culture = root	#_玩家
+						}
+						set_fleet_flag = z_fw_flg_flt_tgt_r_cht_co
+					}
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
 	#_改变物种
 	option = {
 		name = z_modmenu_test_species_create_kayrl
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			create_species = {
 			#	is_mod = yes	#_将作为主物种的子物种存在
@@ -361,7 +594,7 @@ country_event = {
 	#_[凯露物种]id合并
 	option = {
 		name = z_modmenu_test_species_kayrl_merge
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			if = {
 				limit = { any_owned_species = { is_species_class = Z_KARYL } }
@@ -393,7 +626,7 @@ country_event = {
 	#_凯露物种特性改良
 	option = {
 		name = z_modmenu_test_species_kayrl_trait_fix
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			random_owned_pop = {
 				limit = { has_trait = z_fw_trait_r_hok_kayrl_negative }
@@ -411,7 +644,7 @@ country_event = {
 	#_凯露物种设为主物种
 	option = {
 		name = z_modmenu_test_species_kayrl_dominantion
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			if = {
 				limit = { NOT = { owner_species = { is_species_class = Z_KARYL } } }
@@ -433,10 +666,10 @@ country_event = {
 	#_改变物种-一个裂化臭鼬
 	option = {
 		name = z_modmenu_test_species_modify_karyl_neg
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			capital_scope = {
-				random_pop = {
+				random_owned_pop = {
 					limit = { NOT = { has_trait = z_fw_trait_r_hok_kayrl_negative } }
 					root = {
 						random_owned_species = {
@@ -470,7 +703,7 @@ country_event = {
 	#_karyl sp 头像检测
 	option = {
 		name = z_modmenu_test_species_karyl_portrait
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			every_owned_species = {
 				limit = { z_fw_r_koh_is_species_karyl = yes }
@@ -482,7 +715,7 @@ country_event = {
 	#_karyl sp 特性检测
 	option = {
 		name = z_modmenu_test_species_karyl_sp_traits
-        custom_gui = "z_mm_button_evt_option_pink"
+        custom_gui = "z_mm_button_evt_option_green"
 		hidden_effect = {
 			every_owned_species = {
 				limit = { z_fw_r_koh_is_species_karyl = yes }
@@ -491,6 +724,21 @@ country_event = {
 			country_event = { id = z_modmenu.11 }
 		}
 	}
+	#_[pf2_trait]主物种添加pf2_trait
+	option = {
+		name = z_modmenu_test_owner_speces_add_pf2_trait
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			modify_species = {
+				species = owner_species
+				add_trait = z_pf2_trait_core_species
+				change_scoped_species = yes
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+
+	
 	#_[test_relic]
 	#_获取relic臭鼬头
 	option = {
@@ -595,8 +843,8 @@ country_event = {
 							entity = "habitat_phase_01_entity"
 							graphical_culture = root
 						}
-						surveyed = {
-							set_surveyed = yes
+						set_surveyed = {
+							surveyed = yes
 							surveyor = root
 						}
 						set_all_comms_surveyed = yes
@@ -616,30 +864,13 @@ country_event = {
         custom_gui = "z_mm_button_evt_option_blue"
 		hidden_effect = {
 			capital_scope = {
-				add_modifier = { modifier = z_fw_mod_test_1 days = -1 }
+				add_modifier = { modifier = z_fw_mod_plnt_test_1 days = -1 }
 			}
 			country_event = { id = z_modmenu.11 }
 		}
 	}
-	#_获得10级科学家
-	option = {
-		name = z_modmenu_test_8
-        custom_gui = "z_mm_button_evt_option_green"
-		hidden_effect = {
-			create_leader = {
-				name = random
-				species = root.owner_species
-				class = scientist
-				skill = 10
-				immortal = yes
-				traits = {
-					trait = z_fw_trait_leader_test_ancrel
-				}
-				
-			}
-			country_event = { id = z_modmenu.11 }
-		}
-	}
+	
+	
 	#_测试用肉盾工程船
 	option = {
 		name = z_modmenu_test_9
@@ -695,7 +926,7 @@ country_event = {
 						graphical_culture = root	#_玩家
 					}
 					set_fleet_flag = z_mm_test_fleet			#_靶机舰队
-					add_modifier = { modifier = z_mm_mod_test_ship_1 days = -1 }
+					add_modifier = { modifier = z_mm_mod_ship_test_1 days = -1 }
 				}
 			}
 			country_event = { id = z_modmenu.11 }
@@ -756,13 +987,74 @@ country_event = {
 						graphical_culture = root	#_玩家
 					}
 					set_fleet_flag = z_mm_test_fleet			#_靶机舰队
-					add_modifier = { modifier = z_mm_mod_test_ship_2 days = -1 }
+					add_modifier = { modifier = z_mm_mod_ship_test_2 days = -1 }
 				}
 			}
 			country_event = { id = z_modmenu.11 }
 		}
 	}
-	#_获得扎克蓝舰队
+	#_测试用肉盾工程船-超级/动态
+	option = {
+		name = z_modmenu_test_10_flee
+        custom_gui = "z_mm_button_evt_option_orange"
+		hidden_effect = {
+			###_创建靶机工程船
+			#_暂时NPC<每艘船重新建立npc,防止被攻击变成敌对以后新的自动工程船也处于敌对状态>
+			create_country = {
+				name = "NAME_z_fw_npc_1"
+				type = z_fw_npc_temp_neutral
+				flag = {
+					icon = {
+						category = "z_fw"
+						file = "infinite_stellaris_0.dds"
+					}
+					background= {
+						category = "backgrounds"
+						file = "00_solid.dds"
+					}
+					colors={
+						"black"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				effect = {
+					#_添加基础舰船设计
+					create_ship_design = { design = "NAME_z_fw_autostation_ship_moving" }
+					add_ship_design = last_created_design
+					every_country = {
+						limit = { is_ai = no }
+						establish_communications_no_message = prev
+						prev = { set_faction_hostility = { target = prev set_friendly = yes } }
+					}
+				}
+			}
+			create_fleet = {
+				name = "NAME_z_mm_test_fleet_2"
+				settings = {
+					spawn_debris = no
+				}
+				effect = {
+					set_owner = last_created_country				#_[temp_npc]
+					set_location = {
+						target = root.capital_scope.solar_system.starbase
+						distance = 7
+						angle = random
+					}
+					create_ship = {
+						name = random
+						design = "NAME_z_fw_autostation_ship_moving"
+						graphical_culture = root	#_玩家
+					}
+					set_fleet_flag = z_mm_test_fleet			#_靶机舰队
+					add_modifier = { modifier = z_mm_mod_ship_test_2 days = -1 }
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_[扎克兰舰队]
 	option = {
 		name = ancrel.6132.a
         custom_gui = "z_mm_button_evt_option_orange"
@@ -788,6 +1080,7 @@ country_event = {
 					}
 				}
 			}
+			country_event = { id = z_modmenu.11 }
 		}
 	}
 	#_舰队优化
@@ -819,16 +1112,6 @@ country_event = {
 				limit = { fleet_size > 8 }
 				fleet_event = { id = z_modmenu.1122 }
 			}
-			country_event = { id = z_modmenu.11 }
-		}
-	}
-	#_cntr_参数传递
-	option = {
-		name = z_test_cntr_var_pass
-        custom_gui = "z_mm_button_evt_option_pink"
-		hidden_effect = {
-			set_variable = { which = z_fw_core_battle_dd_var value = 7777 }
-			z_fw_eft_core_battle_dd_ai_effect = yes
 			country_event = { id = z_modmenu.11 }
 		}
 	}
@@ -896,8 +1179,442 @@ country_event = {
 			country_event = { id = z_modmenu.11 }
 		}
 	}
+	
+	
+	###_[非常用]	############################################################################
+	#_[giga_menu]
+	option = {
+		name = giga_ehof_var
+        custom_gui = "z_mm_button_evt_option_normal"
+		hidden_effect = {
+			change_variable = { which = ehof_phase value = 1 }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_[giga_tech]	没有这些tech会导致跳出
+	option = {
+		name = giga_tech
+        custom_gui = "z_mm_button_evt_option_normal"
+		hidden_effect = {
+			give_technology = { tech = giga_tech_alderson_disk					message = no }	#_披萨
+			give_technology = { tech = giga_tech_tetradimensional_engineering	message = no }
+			give_technology = { tech = giga_tech_asteroid_manufactory			message = no }	#_小行星挖掘
+			give_technology = { tech = giga_tech_terraform_toxic				message = no }	#_空气清新器
+			give_technology = { tech = giga_tech_automated_stripmine_2			message = no }	#_自动露天矿
+		#	give_technology = { tech = giga_tech_crystal_megabore				message = no }	#_水晶巨孔
+			give_technology = { tech = giga_tech_terraform_barren				message = no }	#_整地神器
+			give_technology = { tech = giga_tech_equatorial_shipyard			message = no }	#_行星船坞
+			give_technology = { tech = giga_tech_hrae_mc						message = no }	#_
+			give_technology = { tech = giga_tech_penrose_sphere_1				message = no }	#_彭罗斯
+			give_technology = { tech = giga_tech_penrose_sphere_2				message = no }
+			give_technology = { tech = giga_tech_penrose_sphere_3				message = no }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	###_[添加暗物质]母星系随机星球
+	option = {
+		name = capital_dark_matter
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			capital_scope.solar_system = {
+				random_system_planet = {
+					limit = {
+						is_colony = no
+						is_star = no
+						is_asteroid = no
+					}
+					add_deposit = z_fw_d_obtl_test_dark_matter
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	###_[job操作]
+	#_unemploy
+	option = {
+		name = z_modmenu_test_1
+        custom_gui = "z_mm_button_evt_option_green"
+		trigger = {
+			any_owned_pop = { is_unemployed = yes }
+		}
+		hidden_effect = {
+			every_owned_pop = { limit = { is_unemployed = yes } unemploy_pop = yes }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_去掉分类
+	option = {
+		name = z_modmenu_test_2
+        custom_gui = "z_mm_button_evt_option_green"
+		trigger = {
+			any_owned_pop = { is_unemployed = yes }
+		}
+		hidden_effect = {
+			every_owned_pop = { limit = { is_unemployed = yes } clear_pop_category = yes }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_改物种
+	option = {
+		name = z_modmenu_test_3
+        custom_gui = "z_mm_button_evt_option_green"
+		trigger = {
+			any_owned_pop = { is_unemployed = yes }
+		}
+		hidden_effect = {
+			every_owned_pop = {
+				limit = { is_unemployed = yes }
+				modify_species = {
+					species = this
+					add_trait = trait_cybernetic
+					add_traits_at_start_of_list = yes
+					remove_trait = trait_cybernetic
+					change_scoped_species = yes # change only this pop's species
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	#_强制检测阵营
+	option = {
+		name = z_modmenu_test_4
+        custom_gui = "z_mm_button_evt_option_green"
+		trigger = {
+			any_owned_pop = { is_unemployed = yes }
+		}
+		hidden_effect = {
+			every_owned_pop = { limit = { is_unemployed = yes } force_faction_evaluation = yes }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	
+	###_[高级科学家]
+	option = {
+		name = z_modmenu_test_8
+        custom_gui = "z_mm_button_evt_option_green"
+		hidden_effect = {
+			create_leader = {
+				name = random
+				species = root.owner_species
+				class = scientist
+				skill = 10
+				immortal = yes
+				traits = {
+					trait = z_fw_trait_leader_test_ancrel
+				}
+				
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	###_[动态难度]
+	#_[cntr_参数传递]
+	option = {
+		name = z_test_cntr_var_pass
+        custom_gui = "z_mm_button_evt_option_pink"
+		hidden_effect = {
+			set_variable = { which = z_fw_core_battle_dd_var value = 7777 }
+			z_fw_eft_core_battle_dd_ai_effect = yes
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	
+	
+	###_[舰队mod]
+	#_[已验证]fleet_scope相当于ship_scope集合. fleet添加mod等同于当前其所有owned_ship添加mod. 这个mod不是添加在fleet上,而是ship上.
+	#_[已验证]ship_speed_mult和base_ship_speed_mult是乘法关系. 无论[ship_speed_mult]多低,它的最小有效值为[-90%],也就是最低速度为[10%]
+	#_[已验证]飞机不受射速影响,只受飞机射速影响. 导弹受射速影响,但不会实时debug射速mod,旧射速mod产生的cd会持续到下次发射为止. 动能/能量武器发射时会实时debug射速mod.
+	#_[基本验证]单武器射速与全武器射速是加法关系,且有一个最低值,可能是0.1
+	#_[已验证]舰船modifer的更新是绝对实时的,只要有修正变化,就会立刻更新,不像星球延时1天.即便同一个effect内出现修正变动,也会立刻检测修正变化,并导出修正值.
+	
+	option = {#_mod添加:国家舰速
+		name = z_mm_test_cntr_speed_mod
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			if = { limit = { has_modifier = z_mm_mod_cntr_test_speed_buff }		remove_modifier = z_mm_mod_cntr_test_speed_buff }
+			else = { add_modifier = { modifier = z_mm_mod_cntr_test_speed_buff days = -1 } }
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_随机军事舰队添加ek战舰/清理speed_buff/并debug speed_buff
+		name = z_mm_test_cntr_flt_add_ship_mod_debug
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { is_ship_class = shipclass_military }
+				if = {
+					limit = { NOT = { any_owned_ship = { is_ship_size = battleship } } }
+					create_ship = {
+						name = "NAME_z_fw_ship_weapon_mod_test_ek"
+						design = "NAME_z_fw_ship_weapon_mod_test_ek"
+						graphical_culture = root	#_玩家
+					}
+				}
+				remove_modifier = z_mm_mod_ship_test_speed	#_清理speed_buff
+				export_modifier_to_variable = { modifier = ship_speed_mult variable = z_mm_var_ship_test_speed_buff }	#_总增长
+				if = {#_直接检测,检测新增ek船只是否及时更新mod
+					limit = { check_variable = { which = z_mm_var_ship_test_speed_buff value > 0 } }
+					multiply_variable = { which = z_mm_var_ship_test_speed_buff value = -100 }
+					add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = z_mm_var_ship_test_speed_buff }
+					clear_variable = z_mm_var_ship_test_speed_buff
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_mod添加:测试添加的flt_mod是否作用于新增船只
+		name = z_mm_test_flt_mod_add
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { is_ship_class = shipclass_military }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = 500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_mod添加:加船测试
+		name = z_mm_test_flt_mod_add_ship
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { is_ship_class = shipclass_military }
+				create_ship = {
+					name = "NAME_z_fw_ship_weapon_mod_test_gh"
+					design = "NAME_z_fw_ship_weapon_mod_test_gh"
+					graphical_culture = root	#_玩家
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_创建舰队:gh
+		name = z_mm_test_flt_mod_gh
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_z_fw_flt_test"
+				settings = {
+				#	garrison = yes
+					can_upgrade = yes
+					can_change_composition = no
+					can_change_leader = yes
+					uses_naval_capacity = no
+					spawn_debris = no
+				#	is_boss = yes
+				}
+				effect = {
+					set_owner = root				#_[temp_npc]
+					set_location = {
+						target = root.capital_scope.solar_system.starbase
+						distance = 7
+						angle = random
+					}
+					create_ship = {
+						name = "NAME_z_fw_ship_weapon_mod_test_gh"
+						design = "NAME_z_fw_ship_weapon_mod_test_gh"
+						graphical_culture = root	#_玩家
+					}
+					set_fleet_flag = z_fw_flg_flt_weapon_mod_test_gh
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_gh舰队:负射速
+		name = z_mm_test_flt_mod_gh_fire_rate
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_gh }
+				remove_modifier = z_mm_mod_ship_test_fire_rate_all
+				remove_modifier = z_mm_mod_ship_test_fire_rate_g
+				remove_modifier = z_mm_mod_ship_test_fire_rate_h
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_all days = -1 multiplier = -500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_gh舰队:爆炸射速
+		name = z_mm_test_flt_mod_gh_g
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_gh }
+				remove_modifier = z_mm_mod_ship_test_fire_rate_all
+				remove_modifier = z_mm_mod_ship_test_fire_rate_g
+				remove_modifier = z_mm_mod_ship_test_fire_rate_h
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_all days = -1 multiplier = -500 }
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_g days = -1 multiplier = 500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_gh舰队:飞机射速
+		name = z_mm_test_flt_mod_gh_h
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_gh }
+				remove_modifier = z_mm_mod_ship_test_fire_rate_all
+				remove_modifier = z_mm_mod_ship_test_fire_rate_g
+				remove_modifier = z_mm_mod_ship_test_fire_rate_h
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_all days = -1 multiplier = -500 }
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_h days = -1 multiplier = 500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_创建舰队:ek
+		name = z_mm_test_flt_mod_ek
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			create_fleet = {
+				name = "NAME_z_fw_flt_test"
+				settings = {
+				#	garrison = yes
+					can_upgrade = yes
+					can_change_composition = no
+					can_change_leader = yes
+					uses_naval_capacity = no
+					spawn_debris = no
+				#	is_boss = yes
+				}
+				effect = {
+					set_owner = root				#_[temp_npc]
+					set_location = {
+						target = root.capital_scope.solar_system.starbase
+						distance = 7
+						angle = random
+					}
+					create_ship = {
+						name = "NAME_z_fw_ship_weapon_mod_test_ek"
+						design = "NAME_z_fw_ship_weapon_mod_test_ek"
+						graphical_culture = root	#_玩家
+					}
+					set_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek
+				}
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:能量射速
+		name = z_mm_test_flt_mod_ek_e
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_fire_rate_all
+				remove_modifier = z_mm_mod_ship_test_fire_rate_e
+				remove_modifier = z_mm_mod_ship_test_fire_rate_k
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_all days = -1 multiplier = -500 }
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_e days = -1 multiplier = 500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:动能射速
+		name = z_mm_test_flt_mod_ek_k
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_fire_rate_all
+				remove_modifier = z_mm_mod_ship_test_fire_rate_e
+				remove_modifier = z_mm_mod_ship_test_fire_rate_k
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_all days = -1 multiplier = -500 }
+				add_modifier = { modifier = z_mm_mod_ship_test_fire_rate_k days = -1 multiplier = 500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:减速50
+		name = z_mm_test_flt_mod_ek_speed_m50
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = -50 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:减速90
+		name = z_mm_test_flt_mod_ek_speed_m90
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = -90 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:减速100
+		name = z_mm_test_flt_mod_ek_speed_m100
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = -100 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:减速200
+		name = z_mm_test_flt_mod_ek_speed_m200
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = -200 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
+	option = {#_ek舰队:减速500
+		name = z_mm_test_flt_mod_ek_speed_m500
+        custom_gui = "z_mm_button_evt_option_blue"
+		trigger = { z_mm_trgr_expanded_sub_ui = no }
+		hidden_effect = {
+			random_owned_fleet = {
+				limit = { has_fleet_flag = z_fw_flg_flt_weapon_mod_test_ek }
+				remove_modifier = z_mm_mod_ship_test_speed
+				add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = -500 }
+			}
+			country_event = { id = z_modmenu.11 }
+		}
+	}
 }
-#_测试
+
+
+
+
+####_测试
 country_event = {
 	id = z_modmenu.110
 	hide_window = yes
@@ -915,8 +1632,37 @@ country_event = {
 	id = z_modmenu.1101
 	hide_window = yes
 	is_triggered_only = yes
-	immediate = { set_global_flag = z_framework_overwrite }
+	immediate = { set_global_flag = linkage_support }
 }
+#_[trigger_var]
+country_event = {
+	id = z_modmenu.1102
+	title = z_modmenu.trigger_var
+	desc = z_modmenu.trigger_var_desc
+	picture = GFX_evt_z_modmenu
+	is_triggered_only = yes
+	option = {
+		name = OK
+		hidden_effect = { clear_variable = z_mm_var_cntr_test_num_pops }
+	}
+}
+#_[测试弹窗]	时序测试
+country_event = {
+	id = z_modmenu.1103
+	title = z_modmenu.timing_order
+	desc = z_modmenu.timing_order_desc
+	picture = GFX_evt_z_modmenu
+	is_triggered_only = yes
+	option = {
+		name = OK
+		hidden_effect = {
+			clear_variable = z_mm_var_cntr_timing_base
+			clear_variable = z_mm_var_cntr_timing_add
+		}
+	}
+}
+
+
 #_靶机被毁-清理flag刷新国家
 country_event = {
 	id = z_modmenu.111
@@ -965,3 +1711,22 @@ fleet_event = {
 	}
 }
 
+
+###_<on_ship_built>
+#_[已验证]	刚造出的船刷新buff在[on_ship_built]事件之前
+#_[已验证]	有速度上限,无论加速多快,最大速度都不会超过这个上限. 同时影响巡航和战速
+ship_event = {
+	id = z_modmenu.1130
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		export_modifier_to_variable = { modifier = ship_speed_mult variable = z_mm_var_ship_test_speed_buff }	#_总增长
+		remove_modifier = z_mm_mod_ship_test_speed
+		if = {
+			limit = { check_variable = { which = z_mm_var_ship_test_speed_buff value > 0 } }
+			multiply_variable = { which = z_mm_var_ship_test_speed_buff value = -100 }
+			add_modifier = { modifier = z_mm_mod_ship_test_speed days = -1 multiplier = z_mm_var_ship_test_speed_buff }
+			clear_variable = z_mm_var_ship_test_speed_buff
+		}
+	}
+}

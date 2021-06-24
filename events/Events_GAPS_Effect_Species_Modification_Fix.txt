@@ -1,0 +1,54 @@
+namespace = Events_GAPS_Effect_Species_Modification_Fix
+
+
+#modification complete
+country_event = {
+	id = Events_GAPS_Effect_Species_Modification_Fix.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		planet_event = { id = Events_GAPS_Traits_Inspired.10 days = 1 }
+		every_owned_planet = {
+			limit = { is_colony = yes }
+			planet_event = { id = Events_GAPS_Traits_Builder.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Campers.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Capital.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Lunar.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Naval.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Nibbler.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Overeaters.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Patriotic.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Protectors.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Pushers.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Rowdy.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Sightseers.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Smallholders.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Taskmasters.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Vanilla.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_War.10 days = 1 }
+			planet_event = { id = Events_GAPS_Traits_Zeal.10 days = 1 }
+		}
+	}
+}
+
+#monthly_pulse_country
+country_event = {
+	id = Events_GAPS_Effect_Species_Modification_Fix.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_country_flag = synthetic_empire
+		not = { has_country_flag = Country_Flag_GAPS_Trait_Fix_Synthetic2 }
+	}
+	immediate = {
+		set_country_flag = Country_Flag_GAPS_Trait_Fix_Synthetic2
+		country_event = { id = Events_GAPS_Effect_Species_Modification_Fix.10 days = 1 }
+	}
+}

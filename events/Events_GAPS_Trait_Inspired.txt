@@ -1,0 +1,82 @@
+namespace = Events_GAPS_Traits_Inspired
+
+
+#CORE EVENT
+country_event = {
+	id = Events_GAPS_Traits_Inspired.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_variable = { which = "Country_Variable_GAPS_Num_Inspired_Scientists" value = 0 }
+		every_owned_leader = {
+			limit = {
+				leader_class = scientist
+				species = { has_trait = Trait_GAPS_Inspired }
+				OR = {
+					is_researching_area = society
+					is_researching_area = physics
+					is_researching_area = engineering
+				}
+			}
+			root = { change_variable = { which = "Country_Variable_GAPS_Num_Inspired_Scientists" value = 1 } }
+		}
+		remove_modifier = Country_Modifier_GAPS_Trait_Inspired_Scientist
+		if = { 
+			limit = { check_variable = { which = "Country_Variable_GAPS_Num_Inspired_Scientists" value = 1 } }
+			add_modifier = { modifier = Country_Modifier_GAPS_Trait_Inspired_Scientist_1 days = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { which = "Country_Variable_GAPS_Num_Inspired_Scientists" value = 2 } }
+			add_modifier = { modifier = Country_Modifier_GAPS_Trait_Inspired_Scientist_2 days = -1 }
+		}
+		else_if = {
+			limit = { check_variable = { which = "Country_Variable_GAPS_Num_Inspired_Scientists" value >= 3 } }
+			add_modifier = { modifier = Country_Modifier_GAPS_Trait_Inspired_Scientist_3 days = -1 }
+		}
+		#add_modifier = {
+		#	modifier = Country_Modifier_GAPS_Trait_Inspired_Scientist
+		#	days = -1
+		#	multiplier = Country_Variable_GAPS_Num_Inspired_Scientists
+		#}
+		remove_modifier = Country_Modifier_GAPS_Trait_Inspired_Leader
+		if = {
+			limit = {
+				any_owned_leader = {
+					leader_class = ruler
+					species = { has_trait = Trait_GAPS_Inspired }
+				}
+			}
+			add_modifier = { modifier = Country_Modifier_GAPS_Trait_Inspired_Leader days = -1 }
+		}
+	}
+}
+
+#monthly pulse
+country_event = {
+	id = Events_GAPS_Traits_Inspired.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Inspired }
+	}
+	immediate = {
+		country_event = { id = Events_GAPS_Traits_Inspired.10 days = 1 }
+	}
+}
+
+#game start
+country_event = {
+	id = Events_GAPS_Traits_Inspired.30
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Inspired }
+	}
+	immediate = {
+		country_event = { id = Events_GAPS_Traits_Inspired.10 days = 1 }
+	}
+}
+

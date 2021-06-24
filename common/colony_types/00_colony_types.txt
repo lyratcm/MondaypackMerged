@@ -1,7 +1,3 @@
-
-#Galactic Community Expanded:
-#edited to include greatergood_6 and industry_6 in the active-resolution lists for colony type bonuses from those categories
-
 #root = planet
 
 @small_planet_threshold = 18
@@ -19,14 +15,15 @@ col_default = {
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes}
+		owner = { is_regular_empire = yes }
 		has_upgraded_capital = no
 		is_special_colony_type = no
 		num_pops < 5
 	}
 
 	planet_modifier = {
-		pop_growth_speed = 0.20
+		planet_stability_add = 5
+		planet_amenities_add = 10
 		pop_happiness = 0.10
 	}
 
@@ -48,9 +45,9 @@ col_default_machine = {
 	}
 
 	planet_modifier = {
-		planet_pop_assembly_mult = 0.20
 		planet_stability_add = 5
-	}
+		planet_amenities_no_happiness_add = 10
+		}
 
 	weight_modifier = {
 		base = 10
@@ -64,13 +61,32 @@ col_city = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		uses_district_set = standard
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
+		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_districts_cities_cost_mult = -0.10
+		planet_districts_industrial_cost_mult = -0.10
 		planet_district_city_build_speed_mult = 0.25
+		trade_value_mult = 0.20
 	}
 
 	weight_modifier = {
@@ -110,20 +126,33 @@ col_city = {
 # Mining Planet
 col_mining = {
 	icon = 2
-
+	
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_district_mining_build_speed_mult = 0.25
-		planet_miners_produces_mult = 0.20
+		planet_miners_produces_mult = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -137,11 +166,10 @@ col_mining = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_worker_produces_mult = 0.05
+			planet_jobs_worker_produces_mult = 0.1
 		}
 	}
 	triggered_planet_modifier = {
@@ -156,11 +184,10 @@ col_mining = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_simple_drone_produces_mult = 0.05
+			planet_jobs_simple_drone_produces_mult = 0.1
 		}
 	}
 
@@ -170,22 +197,18 @@ col_mining = {
 			num_free_districts = { type = district_mining value > @free_districts_low_threshold }
 			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
 			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 3
 			num_free_districts = { type = district_mining value > @free_districts_medium_threshold }
 			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
 			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 2
@@ -219,16 +242,31 @@ col_farming = {
 	potential = {
 		exists = owner
 		owner = { country_uses_food = yes }
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_district_farming_build_speed_mult = 0.25
-		planet_farmers_produces_mult = 0.20
+		planet_farmers_produces_mult = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -243,11 +281,10 @@ col_farming = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_worker_produces_mult = 0.05
+			planet_jobs_worker_produces_mult = 0.1
 		}
 	}
 	triggered_planet_modifier = {
@@ -262,11 +299,10 @@ col_farming = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_simple_drone_produces_mult = 0.05
+			planet_jobs_simple_drone_produces_mult = 0.1
 		}
 	}
 
@@ -276,22 +312,18 @@ col_farming = {
 			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
 			num_free_districts = { type = district_farming value > @free_districts_low_threshold }
 			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 3
-			num_free_districts = { type = district_mining value < @free_districts_medium_threshold }
-			num_free_districts = { type = district_farming value > @free_districts_low_threshold }
+			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
+			num_free_districts = { type = district_farming value > @free_districts_medium_threshold }
 			num_free_districts = { type = district_generator value < @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 2
@@ -322,17 +354,30 @@ col_generator = {
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_district_generator_build_speed_mult = 0.25
-		planet_technician_produces_mult = 0.20
+		planet_technician_produces_mult = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -347,11 +392,10 @@ col_generator = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_worker_produces_mult = 0.05
+			planet_jobs_worker_produces_mult = 0.1
 		}
 	}
 	triggered_planet_modifier = {
@@ -366,11 +410,10 @@ col_generator = {
 				is_active_resolution = "resolution_greatergood_greater_than_ourselves"
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-				is_active_resolution = "resolution_greatergood_6"
 			}
 		}
 		modifier = {
-			planet_jobs_simple_drone_produces_mult = 0.05
+			planet_jobs_simple_drone_produces_mult = 0.1
 		}
 	}
 
@@ -380,22 +423,18 @@ col_generator = {
 			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
 			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
 			num_free_districts = { type = district_generator value > @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 3
-			num_free_districts = { type = district_mining value < @free_districts_medium_threshold }
+			num_free_districts = { type = district_mining value < @free_districts_low_threshold }
 			num_free_districts = { type = district_farming value < @free_districts_low_threshold }
-			num_free_districts = { type = district_generator value > @free_districts_low_threshold }
-			OR = {
-					num_free_districts = { type = district_city value < @small_planet_threshold }
-					num_free_districts = { type = district_nexus value < @small_planet_threshold }
-					num_free_districts = { type = district_hive value < @small_planet_threshold }
-			}
+			num_free_districts = { type = district_generator value > @free_districts_medium_threshold }
+			num_free_districts = { type = district_city value <= @small_planet_threshold }
+			num_free_districts = { type = district_nexus value <= @small_planet_threshold }
+			num_free_districts = { type = district_hive value <= @small_planet_threshold }
 		}
 		modifier = {
 			add = 2
@@ -424,15 +463,28 @@ col_hive = {
 	icon = 1
 
 	potential = {
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
+		NOR = {
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		exists = owner
 		owner = { is_hive_empire = yes }
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_districts_cities_cost_mult = -0.10
 		planet_jobs_complex_drone_produces_mult = 0.05
@@ -475,15 +527,29 @@ col_nexus = {
 	icon = 1
 
 	potential = {
-		OR = {
-			uses_district_set = standard
+		NOR = {
 			uses_district_set = machine_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		exists = owner
 		owner = { is_machine_empire = yes }
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_districts_cities_cost_mult = -0.10
 		planet_jobs_complex_drone_produces_mult = 0.05
@@ -526,17 +592,34 @@ col_foundry = {
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			#uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			#uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			#uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
 
 	planet_modifier = {
-		planet_building_foundry_1_build_speed_mult = 0.25
+		custom_tooltip = col_foundry_custom
+		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.20
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -546,7 +629,6 @@ col_foundry = {
 			OR = {
 				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
 				is_active_resolution = "resolution_industry_project_cornucopia"
-				is_active_resolution = "resolution_industry_6"
 			}
 		}
 		modifier = {
@@ -597,38 +679,25 @@ col_foundry = {
 			has_designation = col_foundry
 		}
 		modifier = {
+			add = 5
+			num_districts = { type = district_industrial value >= @built_districts_medium_threshold }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_industrial value = 0 }
+		}
+		modifier = {
 			add = 2
-			num_buildings = { type = building_foundry_1 value >= 2 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_foundry_1 value >= 3 }
+			has_building = building_foundry_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_foundry_1 value >= 4 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_1 value >= 5 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_foundry_2 value >= 1 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_2 value >= 2 }
-		}
-		modifier = {
-			add = 10
-			num_buildings = { type = building_foundry_3 value >= 1 }
+			has_building = building_foundry_2
 		}
 		modifier = {
 			factor = 0
 			num_buildings = { type = building_foundry_1 value = 0 }
 			num_buildings = { type = building_foundry_2 value = 0 }
-			num_buildings = { type = building_foundry_3 value = 0 }
 		}
 	}
 }
@@ -643,12 +712,32 @@ col_factory = {
 			owner = { is_regular_empire = yes }
 			owner = { has_civic = civic_machine_servitor }
 		}
-		uses_district_set = standard
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+			uses_district_set = hive_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
+		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
-		planet_building_factory_1_build_speed_mult = 0.25
+		custom_tooltip = col_factory_custom
+		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.20
 	}
 	triggered_planet_modifier = {
@@ -660,7 +749,6 @@ col_factory = {
 			OR = {
 				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
 				is_active_resolution = "resolution_industry_project_cornucopia"
-				is_active_resolution = "resolution_industry_6"
 			}
 		}
 		modifier = {
@@ -683,28 +771,20 @@ col_factory = {
 			has_designation = col_factory
 		}
 		modifier = {
-			add = 1
-			num_buildings = { type = building_factory_1 value >= 2 }
+			add = 5
+			num_districts = { type = district_industrial value >= @built_districts_medium_threshold }
+		}
+		modifier = {
+			factor = 0
+			num_districts = { type = district_industrial value = 0 }
 		}
 		modifier = {
 			add = 2
-			num_buildings = { type = building_factory_1 value >= 3 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_factory_1 value >= 4 }
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_factory_2 value >= 1 }
+			has_building = building_factory_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_factory_2 value >= 2 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_factory_3 value >= 1 }
+			has_building = building_factory_2
 		}
 		modifier = {
 			factor = 0
@@ -721,14 +801,27 @@ col_refinery = {
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			#uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_refiners_upkeep_mult = -0.1
 		planet_translucers_upkeep_mult = -0.1
@@ -746,7 +839,6 @@ col_refinery = {
 			OR = {
 				is_active_resolution = "resolution_industry_environmental_ordinance_waivers"
 				is_active_resolution = "resolution_industry_project_cornucopia"
-				is_active_resolution = "resolution_industry_6"
 			}
 		}
 		modifier = {
@@ -763,9 +855,27 @@ col_refinery = {
 			num_free_districts = { type = district_farming value <= @free_districts_low_threshold }
 			num_free_districts = { type = district_generator value <= @free_districts_low_threshold }
 			OR = {
-				num_free_districts = { type = district_city value <= @free_districts_medium_threshold }
-				num_free_districts = { type = district_nexus value <= @free_districts_medium_threshold }
-				num_free_districts = { type = district_hive value <= @free_districts_medium_threshold }
+				AND = {
+					num_districts = {
+						type = district_city
+						value >= 1
+					}
+					num_free_districts = { type = district_city value <= @free_districts_medium_threshold }
+				}
+				AND = {
+					num_districts = {
+						type = district_nexus
+						value >= 1
+					}
+					num_free_districts = { type = district_nexus value <= @free_districts_medium_threshold }
+				}
+				AND = {
+					num_districts = {
+						type = district_hive
+						value >= 1
+					}
+					num_free_districts = { type = district_hive value <= @free_districts_medium_threshold }
+				}
 			}
 			OR = {
 				owner = { has_monthly_income = { resource = volatile_motes value < 0 } }
@@ -831,14 +941,27 @@ col_research = {
 
 	potential = {
 		exists = owner
-		OR = {
-			uses_district_set = standard
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			#uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			#uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			#uses_district_set = pdbiofort
+			#uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
 		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_building_research_lab_1_build_speed_mult = 0.25
 		planet_researchers_upkeep_mult = -0.2
@@ -922,10 +1045,28 @@ col_fortress = {
 
 	potential = {
 		exists = owner
-		uses_district_set = standard
+		NOR = {
+			uses_district_set = city_world
+			uses_district_set = ring_world
+			uses_district_set = habitat
+			uses_district_set = machine_world
+			uses_district_set = hive_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			#uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
+		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_buildings_strongholds_cost_mult = -0.20
 		planet_orbital_bombardment_damage = -0.10
@@ -968,15 +1109,15 @@ col_capital = {
 		is_capital = yes
 		NAND = {
 			exists = owner
-			owner = {
+			owner = { 
 				OR = {
 					NOT = { is_country_type = default }
 					is_gestalt = yes
-				}
+				}	
 			}
 		}
 	}
-
+	
 	planet_modifier = {
 		planet_stability_add = 5
 		planet_amenities_add = 10
@@ -984,7 +1125,7 @@ col_capital = {
 	}
 
 	weight_modifier = {
-		base = 1500
+		base = 15000
 	}
 }
 
@@ -995,12 +1136,12 @@ col_capital_hive = {
 	potential = {
 		is_capital = yes
 		exists = owner
-		owner = {
+		owner = { 
 			is_country_type = default
-			is_hive_empire = yes
+			is_hive_empire = yes 
 		}
 	}
-
+	
 	planet_modifier = {
 		planet_stability_add = 5
 		planet_amenities_no_happiness_add = 10
@@ -1008,7 +1149,7 @@ col_capital_hive = {
 	}
 
 	weight_modifier = {
-		base = 1500
+		base = 15000
 	}
 }
 
@@ -1019,12 +1160,12 @@ col_capital_machine = {
 	potential = {
 		is_capital = yes
 		exists = owner
-		owner = {
+		owner = { 
 			is_country_type = default
-			is_machine_empire = yes
+			is_machine_empire = yes 
 		}
 	}
-
+	
 	planet_modifier = {
 		planet_stability_add = 5
 		planet_amenities_no_happiness_add = 10
@@ -1034,7 +1175,7 @@ col_capital_machine = {
 	}
 
 	weight_modifier = {
-		base = 1500
+		base = 15000
 	}
 }
 
@@ -1043,8 +1184,10 @@ col_habitat = {
 	icon = 12
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
-		is_capital = no
+		uses_district_set = pdarchive
+		}
 	}
 
 	weight_modifier = {
@@ -1057,9 +1200,11 @@ col_habitat_energy = {
 	icon = 19
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
+		uses_district_set = pdarchive
+		}
 		exists = owner
-		is_capital = no		 
 		OR = {
 			owner = { is_gestalt = yes }
 			has_planet_flag = energy_habitat
@@ -1083,6 +1228,10 @@ col_habitat_energy = {
 			factor = 3
 			num_districts = { type = district_hab_energy value >= 3 }
 		}
+		modifier = {
+			factor = 5
+			has_planet_flag = energy_habitat
+		}
 	}
 }
 
@@ -1091,12 +1240,14 @@ col_habitat_leisure = {
 	icon = 20
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
+		uses_district_set = pdarchive
+		}
 		exists = owner
-		is_capital = no 
-		owner = {
+		owner = { 
 			OR = {
-				is_gestalt = no
+				is_gestalt = no 
 				has_valid_civic = civic_machine_servitor
 			}
 		}
@@ -1123,10 +1274,12 @@ col_habitat_trade = {
 	icon = 21
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
+		uses_district_set = pdarchive
+		}
 		exists = owner
 		owner = { is_gestalt = no }
-		is_capital = no
 	}
 	planet_modifier = {
 		planet_districts_hab_trade_cost_mult = -0.1
@@ -1158,8 +1311,10 @@ col_habitat_research = {
 	icon = 22
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
-		is_capital = no
+		uses_district_set = pdarchive
+		}
 	}
 	planet_modifier = {
 		planet_districts_hab_research_cost_mult = -0.1
@@ -1203,9 +1358,11 @@ col_habitat_mining = {
 	icon = 23
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
+		uses_district_set = pdarchive
+		}
 		has_planet_flag = mining_habitat
-		is_capital = no
 	}
 	planet_modifier = {
 		planet_districts_hab_mining_cost_mult = -0.10
@@ -1213,7 +1370,7 @@ col_habitat_mining = {
 	}
 
 	weight_modifier = {
-		base = 5000
+		base = 1000 
 		modifier = {
 			factor = 2
 			owner = { has_monthly_income = { resource = minerals value < 0 } }
@@ -1234,8 +1391,10 @@ col_habitat_fortress = {
 	icon = 24
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
-		is_capital = no
+		uses_district_set = pdarchive
+		}
 	}
 	planet_modifier = {
 		planet_buildings_strongholds_cost_mult = -0.30
@@ -1272,11 +1431,14 @@ col_habitat_foundry = {
 	icon = 25
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
-		is_capital = no
+		uses_district_set = pdarchive
+		}
 	}
 	planet_modifier = {
-		planet_building_foundry_1_build_speed_mult = 0.25
+		custom_tooltip = col_habitat_foundry_custom
+		planet_districts_hab_industrial_cost_mult = -0.1
 		planet_metallurgists_upkeep_mult = -0.2
 	}
 	weight_modifier = {
@@ -1290,24 +1452,22 @@ col_habitat_foundry = {
 			has_designation = col_habitat_foundry
 		}
 		modifier = {
-			factor = 2
-			num_buildings = { type = building_foundry_1 value >= 2 }
+			add = 2
+			has_building = building_foundry_1
+		}
+		modifier = {
+			add = 4
+			has_building = building_foundry_2
+		}
+		modifier = {
+			factor = 0
+			num_buildings = { type = building_foundry_1 value = 0 }
+			num_buildings = { type = building_foundry_2 value = 0 }
+			NOT = { num_districts = { type = district_hab_industrial value >= 3 } }
 		}
 		modifier = {
 			factor = 3
-			num_buildings = { type = building_foundry_1 value >= 3 }
-		}
-		modifier = {
-			factor = 4
-			num_buildings = { type = building_foundry_1 value >= 4 }
-		}
-		modifier = {
-			factor = 3
-			num_buildings = { type = building_foundry_2 value >= 1 }
-		}
-		modifier = {
-			factor = 3
-			num_buildings = { type = building_foundry_3 value >= 1 }
+			num_districts = { type = district_hab_industrial value >= 3 }
 		}
 	}
 }
@@ -1317,16 +1477,21 @@ col_habitat_factory = {
 	icon = 26
 
 	potential = {
-		uses_district_set = habitat
-		exists = owner
-		is_capital = no
 		OR = {
-			owner = { is_regular_empire = yes }
-			owner = { has_civic = civic_machine_servitor }
+		uses_district_set = habitat
+		uses_district_set = pdarchive
+		}
+		exists = owner
+		owner = {
+			OR = {
+				is_regular_empire = yes
+				has_civic = civic_machine_servitor
+			}
 		}
 	}
 	planet_modifier = {
-		planet_building_factory_1_build_speed_mult = 0.25
+		custom_tooltip = col_habitat_factory_custom
+		planet_districts_hab_industrial_cost_mult = -0.1
 		planet_artisans_upkeep_mult = -0.2
 	}
 	weight_modifier = {
@@ -1340,24 +1505,22 @@ col_habitat_factory = {
 			has_designation = col_habitat_factory
 		}
 		modifier = {
-			factor = 2
-			num_buildings = { type = building_factory_1 value >= 2 }
+			add = 2
+			has_building = building_factory_1
+		}
+		modifier = {
+			add = 4
+			has_building = building_factory_2
+		}
+		modifier = {
+			factor = 0
+			num_buildings = { type = building_factory_1 value = 0 }
+			num_buildings = { type = building_factory_2 value = 0 }
+			NOT = { num_districts = { type = district_hab_industrial value >= 3 } }
 		}
 		modifier = {
 			factor = 3
-			num_buildings = { type = building_factory_1 value >= 3 }
-		}
-		modifier = {
-			factor = 4
-			num_buildings = { type = building_factory_1 value >= 4 }
-		}
-		modifier = {
-			factor = 3
-			num_buildings = { type = building_factory_2 value >= 1 }
-		}
-		modifier = {
-			factor = 3
-			num_buildings = { type = building_factory_3 value >= 1 }
+			num_districts = { type = district_hab_industrial value >= 3 }
 		}
 	}
 }
@@ -1367,8 +1530,10 @@ col_habitat_refinery = {
 	icon = 27
 
 	potential = {
+		OR = {
 		uses_district_set = habitat
-		is_capital = no
+		uses_district_set = pdarchive
+		}
 	}
 	planet_modifier = {
 		planet_building_refinery_build_speed_mult = 0.25
@@ -1383,10 +1548,12 @@ col_habitat_refinery = {
 		base = 500
 		modifier = {
 			factor = 2
-			OR = {
-				owner = { has_monthly_income = { resource = volatile_motes value < 0 } }
-				owner = { has_monthly_income = { resource = exotic_gases value < 0 } }
-				owner = { has_monthly_income = { resource = rare_crystals value < 0 } }
+			owner = {
+				OR = {
+					has_monthly_income = { resource = volatile_motes value < 0 }
+					has_monthly_income = { resource = exotic_gases value < 0 }
+					has_monthly_income = { resource = rare_crystals value < 0 }
+				}
 			}
 		}
 		modifier = {
@@ -1437,17 +1604,34 @@ col_rural_gestalt = {
 	icon = 13
 
 	potential = {
-		uses_district_set = standard
+		NOR = { 
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			uses_district_set = machine_world
+			uses_district_set = hive_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
+		}
 		exists = owner
 		owner = { is_gestalt = yes }
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_district_farming_build_speed_mult = 0.25
 		planet_district_mining_build_speed_mult = 0.25
 		planet_district_generator_build_speed_mult = 0.25
-		planet_jobs_simple_drone_produces_mult = 0.05
+		planet_jobs_simple_drone_produces_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -1506,15 +1690,32 @@ col_rural = {
 	potential = {
 		exists = owner
 		owner = { is_gestalt = no }
-		uses_district_set = standard
+		NOR = {
+			uses_district_set = habitat
+			uses_district_set = ring_world
+			uses_district_set = city_world
+			uses_district_set = pdarchive
+			uses_district_set = pdecocity
+			uses_district_set = pdpalacearc
+			uses_district_set = pdplanethab	
+			uses_district_set = pdbioforge
+			uses_district_set = pdbiocapital
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinecapital
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiofort
+			uses_district_set = pdmachinefort
+			uses_district_set = pdcorpoarc
+		}
 		is_special_colony_type = no
 	}
-
+	
 	planet_modifier = {
 		planet_district_farming_build_speed_mult = 0.25
 		planet_district_generator_build_speed_mult = 0.25
 		planet_district_mining_build_speed_mult = 0.25
-		planet_jobs_worker_produces_mult = 0.05
+		planet_jobs_worker_produces_mult = 0.10
 	}
 
 	weight_modifier = {
@@ -1574,7 +1775,7 @@ col_fe_capital = {
 		exists = owner
 		owner = { is_fallen_empire = yes }
 	}
-
+	
 	planet_modifier = {
 		planet_stability_add = 10
 	}
@@ -1594,7 +1795,7 @@ col_fe_colony = {
 		exists = owner
 		owner = { is_fallen_empire = yes }
 	}
-
+	
 	planet_modifier = {
 		planet_stability_add = 5
 	}
@@ -1610,6 +1811,10 @@ col_resort = {
 
 	potential = {
 		has_modifier = resort_colony
+	}
+
+	planet_modifier = {
+		planet_housing_add = 10
 	}
 
 	weight_modifier = {
@@ -1635,7 +1840,7 @@ col_primitive = {
 	icon = 16
 
 	potential = {
-		exists = owner
+		exists = owner 
 		owner = { is_country_type = primitive }
 	}
 
@@ -1649,7 +1854,7 @@ col_infested = {
 	icon = 17
 
 	potential = {
-		exists = owner
+		exists = owner 
 		owner = { is_country_type = swarm }
 	}
 
@@ -1664,7 +1869,7 @@ col_contingency = {
 	icon = 17
 
 	potential = {
-		exists = owner
+		exists = owner 
 		owner = { is_country_type = ai_empire }
 	}
 
@@ -1692,10 +1897,7 @@ col_ring_mix = {
 	icon = 18
 
 	potential = {
-		OR = {
-			uses_district_set = ring_world
-			is_planet_class = pc_cybrex
-		}
+		uses_district_set = ring_world
 	}
 
 	planet_modifier = {
@@ -1712,10 +1914,7 @@ col_ring_research = {
 	icon = 8
 
 	potential = {
-		OR = {
-			uses_district_set = ring_world
-			is_planet_class = pc_cybrex
-		}
+		uses_district_set = ring_world
 	}
 
 	planet_modifier = {
@@ -1747,12 +1946,9 @@ col_ring_farming = {
 	icon = 3
 
 	potential = {
-		OR = {
-			uses_district_set = ring_world
-			is_planet_class = pc_cybrex
-		}
+		uses_district_set = ring_world
 	}
-
+	
 	planet_modifier = {
 		planet_farmers_food_produces_mult = 0.25
 	}
@@ -1774,14 +1970,11 @@ col_ring_trade = {
 	icon = 1
 
 	potential = {
-		OR = {
-			uses_district_set = ring_world
-			is_planet_class = pc_cybrex
-		}
+		uses_district_set = ring_world
 		exists = owner
 		owner = { is_gestalt = no }
 	}
-
+	
 	planet_modifier = {
 		trade_value_mult = 0.2
 	}
@@ -1803,14 +1996,11 @@ col_ring_generator = {
 	icon = 4
 
 	potential = {
-		OR = {
-			uses_district_set = ring_world
-			is_planet_class = pc_cybrex
-		}
+		uses_district_set = ring_world
 		exists = owner
 		owner = { is_gestalt = yes }
 	}
-
+	
 	planet_modifier = {
 		planet_technician_energy_produces_mult = 0.25
 	}
@@ -1833,7 +2023,18 @@ col_ecu_mix = {
 	icon = 1
 
 	potential = {
+		OR = {
 		uses_district_set = city_world
+		uses_district_set = pdecocity
+		uses_district_set = pdpalacearc
+		#uses_district_set = pdbioforge
+		#uses_district_set = pdfloraforge
+		#uses_district_set = pdmachinefactory
+		uses_district_set = pdmachinecapital
+		uses_district_set = pdmilarc
+		uses_district_set = pdmachinecapital
+		uses_district_set = pdcorpoarc
+		}
 	}
 
 
@@ -1851,7 +2052,13 @@ col_ecu_foundry = {
 	icon = 5
 
 	potential = {
-		uses_district_set = city_world
+		OR = {
+			uses_district_set = city_world
+			#uses_district_set = pdbioforge
+			#uses_district_set = pdfloraforge
+			#uses_district_set = pdmachinefactory
+			uses_district_set = pdcorpoarc
+		}
 	}
 
 
@@ -1881,42 +2088,16 @@ col_ecu_foundry = {
 		}
 		modifier = {
 			add = 2
-			num_buildings = { type = building_foundry_1 value >= 2 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_foundry_1 value >= 3 }
+			has_building = building_foundry_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_foundry_1 value >= 4 }
+			has_building = building_foundry_2
 		}
 		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_1 value >= 5 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_foundry_2 value >= 1 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_2 value >= 2 }
-		}
-		modifier = {
-			add = 10
-			num_buildings = { type = building_foundry_3 value >= 1 }
-		}
-		modifier = {
-			add = 10
-			OR = {
-				num_districts = { type = district_arcology_arms_industry value >= 4 }
-				OR = {
-					num_buildings = { type = building_foundry_1 value >= 5 }
-					num_buildings = { type = building_foundry_2 value >= 5 }
-					num_buildings = { type = building_foundry_2 value >= 5 }
-				}
-			}
+			factor = 0
+			num_buildings = { type = building_foundry_1 value = 0 }
+			num_buildings = { type = building_foundry_2 value = 0 }
 		}
 	}
 }
@@ -1926,7 +2107,10 @@ col_ecu_factory = {
 	icon = 6
 
 	potential = {
+		OR = {
 		uses_district_set = city_world
+		uses_district_set = pdcorpoarc
+		}
 		exists = owner
 		OR = {
 			owner = { is_regular_empire = yes }
@@ -1936,8 +2120,8 @@ col_ecu_factory = {
 
 
 	planet_modifier = {
-		planet_district_arcology_civilian_industry_build_speed_mult = 0.25
 		planet_building_factory_1_build_speed_mult = 0.25
+		planet_district_arcology_civilian_industry_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.2
 	}
 
@@ -1960,39 +2144,17 @@ col_ecu_factory = {
 			num_districts = { type = district_arcology_civilian_industry value >= 3 }
 		}
 		modifier = {
-			add = 1
-			num_buildings = { type = building_factory_1 value >= 2 }
-		}
-		modifier = {
 			add = 2
-			num_buildings = { type = building_factory_1 value >= 3 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_factory_1 value >= 4 }
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_factory_2 value >= 1 }
+			has_building = building_factory_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_factory_2 value >= 2 }
+			has_building = building_factory_2
 		}
 		modifier = {
-			add = 5
-			num_buildings = { type = building_factory_3 value >= 1 }
-		}
-		modifier = {
-			add = 6
-			OR = {
-				num_districts = { type = district_arcology_civilian_industry value >= 4 }
-				OR = {
-					num_buildings = { type = building_factory_1 value >= 5 }
-					num_buildings = { type = building_factory_2 value >= 5 }
-					num_buildings = { type = building_factory_3 value >= 5 }
-				}
-			}
+			factor = 0
+			num_buildings = { type = building_factory_1 value = 0 }
+			num_buildings = { type = building_factory_2 value = 0 }
 		}
 	}
 }
@@ -2002,7 +2164,13 @@ col_ecu_research = {
 	icon = 8
 
 	potential = {
+		OR = {
 		uses_district_set = city_world
+		uses_district_set = pdecocity
+		uses_district_set = pdpalacearc
+		uses_district_set = pdmilarc
+		uses_district_set = pdcorpoarc
+		}
 	}
 
 
@@ -2054,6 +2222,29 @@ col_ecu_research = {
 	}
 }
 
+# Ecumenpolis Trade
+col_ecu_trade = {
+	icon = 1
+
+	potential = {
+		OR = {
+		uses_district_set = pdecocity
+		uses_district_set = pdcorpoarc
+		}
+	}
+	
+	planet_modifier = {
+		trade_value_mult = 0.25
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 2
+			has_designation = col_ecu_research
+		}
+	}
+}
+
 # Machine World
 col_mac = {
 	icon = 1
@@ -2085,8 +2276,8 @@ col_mac_foundry = {
 
 
 	planet_modifier = {
-		planet_district_mining_uncapped_build_speed_mult = 0.25
-		planet_district_generator_uncapped_build_speed_mult = 0.25
+		custom_tooltip = col_foundry_custom
+		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.2
 	}
 
@@ -2102,37 +2293,21 @@ col_mac_foundry = {
 		}
 		modifier = {
 			add = 2
-			num_buildings = { type = building_foundry_1 value >= 2 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_foundry_1 value >= 3 }
+			has_building = building_foundry_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_foundry_1 value >= 4 }
+			has_building = building_foundry_2
 		}
 		modifier = {
 			add = 5
-			num_buildings = { type = building_foundry_1 value >= 5 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_foundry_2 value >= 1 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_2 value >= 2 }
-		}
-		modifier = {
-			add = 10
-			num_buildings = { type = building_foundry_3 value >= 1 }
+			num_districts = { type = district_industrial value >= @built_districts_medium_threshold }
 		}
 		modifier = {
 			factor = 0
+			NOT = { num_districts = { type = district_industrial value >= @built_districts_medium_threshold } }
 			num_buildings = { type = building_foundry_1 value = 0 }
 			num_buildings = { type = building_foundry_2 value = 0 }
-			num_buildings = { type = building_foundry_3 value = 0 }
 		}
 	}
 }
@@ -2142,14 +2317,17 @@ col_mac_factory = {
 	icon = 6
 
 	potential = {
-		uses_district_set = machine_world
+		OR = {
+			uses_district_set = machine_world
+			uses_district_set = pdmachinefactory
+		}
 		owner = { has_civic = civic_machine_servitor }
 	}
 
 
 	planet_modifier = {
-		planet_district_mining_uncapped_build_speed_mult = 0.25
-		planet_district_generator_uncapped_build_speed_mult = 0.25
+		custom_tooltip = col_factory_custom
+		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.2
 	}
 
@@ -2164,34 +2342,22 @@ col_mac_factory = {
 			has_designation = col_mac_factory
 		}
 		modifier = {
-			add = 1
-			num_buildings = { type = building_factory_1 value >= 2 }
-		}
-		modifier = {
 			add = 2
-			num_buildings = { type = building_factory_1 value >= 3 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_factory_1 value >= 4 }
-		}
-		modifier = {
-			add = 2
-			num_buildings = { type = building_factory_2 value >= 1 }
+			has_building = building_factory_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_factory_2 value >= 2 }
+			has_building = building_factory_2
 		}
 		modifier = {
 			add = 5
-			num_buildings = { type = building_factory_3 value >= 1 }
+			num_districts = { type = district_industrial value >= @built_districts_medium_threshold }
 		}
 		modifier = {
 			factor = 0
+			NOT = { num_districts = { type = district_industrial value >= @built_districts_medium_threshold } }
 			num_buildings = { type = building_factory_1 value = 0 }
 			num_buildings = { type = building_factory_2 value = 0 }
-			num_buildings = { type = building_factory_3 value = 0 }
 		}
 	}
 }
@@ -2201,7 +2367,11 @@ col_hiv = {
 	icon = 1
 
 	potential = {
-		uses_district_set = hive_world
+		OR = {
+			uses_district_set = hive_world
+			#uses_district_set = pdbioforge
+			#uses_district_set = pdfloraforge
+		}
 	}
 
 	planet_modifier = {
@@ -2221,14 +2391,16 @@ col_hiv_foundry = {
 	icon = 5
 
 	potential = {
-		uses_district_set = hive_world
+		OR = {
+			uses_district_set = hive_world
+			#uses_district_set = pdbioforge
+			#uses_district_set = pdfloraforge
+		}
 	}
 
 	planet_modifier = {
-		planet_district_mining_uncapped_build_speed_mult = 0.25
-		planet_district_farming_uncapped_build_speed_mult = 0.25
-		planet_district_generator_uncapped_build_speed_mult = 0.25
-		planet_metallurgists_upkeep_mult = -0.2
+		planet_district_industrial_build_speed_mult = 0.25
+		planet_metallurgists_upkeep_mult = -0.20
 	}
 
 	weight_modifier = {
@@ -2243,37 +2415,21 @@ col_hiv_foundry = {
 		}
 		modifier = {
 			add = 2
-			num_buildings = { type = building_foundry_1 value >= 2 }
-		}
-		modifier = {
-			add = 3
-			num_buildings = { type = building_foundry_1 value >= 3 }
+			has_building = building_foundry_1
 		}
 		modifier = {
 			add = 4
-			num_buildings = { type = building_foundry_1 value >= 4 }
+			has_building = building_foundry_2
 		}
 		modifier = {
 			add = 5
-			num_buildings = { type = building_foundry_1 value >= 5 }
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_foundry_2 value >= 1 }
-		}
-		modifier = {
-			add = 5
-			num_buildings = { type = building_foundry_2 value >= 2 }
-		}
-		modifier = {
-			add = 10
-			num_buildings = { type = building_foundry_3 value >= 1 }
+			num_districts = { type = district_industrial value >= @built_districts_medium_threshold }
 		}
 		modifier = {
 			factor = 0
+			NOT = { num_districts = { type = district_industrial value >= @built_districts_medium_threshold } }
 			num_buildings = { type = building_foundry_1 value = 0 }
 			num_buildings = { type = building_foundry_2 value = 0 }
-			num_buildings = { type = building_foundry_3 value = 0 }
 		}
 	}
 }
@@ -2286,8 +2442,12 @@ col_bureau = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOT = {
+		NOR = {
 			uses_district_set = hive_world
+			uses_district_set = pdbioforge
+			uses_district_set = pdfloraforge
+			uses_district_set = pdmilarc
+			uses_district_set = pdbiocapital
 		}
 		is_special_colony_type = no
 	}
@@ -2332,14 +2492,149 @@ col_bureau = {
 			num_buildings = { type = building_bureaucratic_2 value >= 2 }
 		}
 		modifier = {
-		add = 12
-			num_buildings = { type = building_bureaucratic_3 value >= 1 }
-		}
-		modifier = {
 			factor = 0
 			num_buildings = { type = building_bureaucratic_1 value = 0 }
 			num_buildings = { type = building_bureaucratic_2 value = 0 }
-			num_buildings = { type = building_bureaucratic_3 value = 0 }
+		}
+	}
+}
+
+# PD Complex Hive Planets
+col_pd_hive = {
+	icon = 1
+
+	potential = {
+		OR = {
+			is_planet_class = pc_bioforge
+			is_planet_class = pc_megafloraforge
+			is_planet_class = pc_biofort
+			is_planet_class = pc_megaflorafort
+			uses_district_set = pdbiocapital
+			uses_district_set = pdfloracapital
+		}
+		exists = owner
+		owner = { is_hive_empire = yes }
+		is_special_colony_type = no
+	}
+	
+	planet_modifier = {
+		planet_districts_cost_mult = -0.10
+		planet_jobs_complex_drone_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 1
+			num_free_districts = { type = district_bioforge_maintenance value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdhivefort_synapse value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdhive value >= @free_districts_medium_threshold }
+		}
+		modifier = {
+			add = 3
+			num_free_districts = { type = district_bioforge_maintenance value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdhivefort_synapse value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdhive value >= @free_districts_high_threshold }
+		}
+		modifier = {
+			add = 5
+			has_modifier = natural_beauty
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_hive value >= @built_districts_high_threshold }
+		}
+	}
+}
+
+# PD Special Nexus Planet
+col_pd_nexus = {
+	icon = 1
+
+	potential = {
+		OR = {
+			uses_district_set = pdmachinefactory
+			uses_district_set = pdmachinefort
+			uses_district_set = pdmachinecapital
+		}
+		exists = owner
+		owner = { is_machine_empire = yes }
+		is_special_colony_type = no
+	}
+	
+	planet_modifier = {
+		planet_districts_cost_mult = -0.10
+		planet_jobs_complex_drone_produces_mult = 0.05
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 1
+			num_free_districts = { type = district_mf_replicator value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdmachinefort_naval value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdmachinefort_synapse value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdnexus value >= @free_districts_medium_threshold }
+		}
+		modifier = {
+			add = 3
+			num_free_districts = { type = district_mf_replicator value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdmachinefort_naval value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdmachinefort_synapse value < @free_districts_low_threshold }
+			num_free_districts = { type = district_pdnexus value >= @free_districts_high_threshold }
+		}
+		modifier = {
+			add = 5
+			has_modifier = natural_beauty
+		}
+		modifier = {
+			add = 5
+			num_districts = { type = district_pdnexus value >= @built_districts_high_threshold }
+		}
+	}
+}
+
+# PD Fortress Planet
+col_pd_fortress = {
+	icon = 9
+
+	potential = {
+		is_planet_class = pc_milarc
+		exists = owner
+		is_special_colony_type = no
+	}
+	
+	planet_modifier = {
+		planet_jobs_upkeep_mult = -0.05
+		planet_districts_cost_mult = -0.1
+	}
+
+	weight_modifier = {
+		modifier = {
+			add = 5
+			has_designation = col_pd_fortress
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_stronghold value >= 2 }
+		}
+		modifier = {
+			add = 4
+			num_buildings = { type = building_stronghold value >= 3 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_stronghold value >= 4 }
+		}
+		modifier = {
+			add = 3
+			num_buildings = { type = building_fortress value >= 1 }
+		}
+		modifier = {
+			add = 5
+			num_buildings = { type = building_fortress value >= 2 }
+		}
+		modifier = {
+			add = 10
+			is_planet_class = pc_milarc
 		}
 	}
 }

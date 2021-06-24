@@ -1,0 +1,163 @@
+tradition_est_academy = {
+	adoption_bonus = "tr_est_academy_adopt"
+	finish_bonus = "tr_est_academy_finish"
+	traditions = {
+		"tr_est_academy_1"
+		"tr_est_academy_2"
+		"tr_est_academy_3"
+		"tr_est_academy_4"
+		"tr_est_academy_5"
+	}
+	tradition_swap = {
+		name = tradition_est_shroudborn
+		trigger = {
+			is_hive_empire = yes
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+	tradition_swap = {
+		name = tradition_est_hacking
+		trigger = {
+			is_machine_empire = yes
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+
+tradition_est_aesthetics = {
+	adoption_bonus = "tr_est_aesthetics_adopt"
+	finish_bonus = "tr_est_aesthetics_finish"
+	traditions = {
+		"tr_est_aesthetics_1"
+		"tr_est_aesthetics_2"
+		"tr_est_aesthetics_3"
+		"tr_est_aesthetics_4"
+		"tr_est_aesthetics_5"
+	}
+	tradition_swap = {
+		name = tradition_est_age
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+tradition_est_commerce = {
+	adoption_bonus = "tr_est_commerce_adopt"
+	finish_bonus = "tr_est_commerce_finish"
+	traditions = {
+		"tr_est_commerce_1"
+		"tr_est_commerce_2"
+		"tr_est_commerce_3"
+		"tr_est_commerce_4"
+		"tr_est_commerce_5"
+	}
+	tradition_swap = {
+		name = tradition_est_benevolence
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+tradition_est_faith = {
+	adoption_bonus = "tr_est_faith_adopt"
+	finish_bonus = "tr_est_faith_finish"
+	traditions = {
+		"tr_est_faith_1"
+		"tr_est_faith_2"
+		"tr_est_faith_3"
+		"tr_est_faith_4"
+		"tr_est_faith_5"
+	}
+	tradition_swap = {
+		name = tradition_est_purposefullness
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+
+tradition_est_industry = {
+	adoption_bonus = "tr_est_industry_adopt"
+	finish_bonus = "tr_est_industry_finish"
+	traditions = {
+		"tr_est_industry_1"
+		"tr_est_industry_2"
+		"tr_est_industry_3"
+		"tr_est_industry_4"
+		"tr_est_industry_5"
+	}
+}
+
+tradition_est_militarism = {
+	adoption_bonus = "tr_est_militarism_adopt"
+	finish_bonus = "tr_est_militarism_finish"
+	traditions = {
+		"tr_est_militarism_1"
+		"tr_est_militarism_2"
+		"tr_est_militarism_3"
+		"tr_est_militarism_4"
+		"tr_est_militarism_5"
+	}
+	tradition_swap = {
+		name = tradition_est_might
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+tradition_est_natural = {
+	adoption_bonus = "tr_est_natural_adopt"
+	finish_bonus = "tr_est_natural_finish"
+	traditions = {
+		"tr_est_natural_1"
+		"tr_est_natural_2"
+		"tr_est_natural_3"
+		"tr_est_natural_4"
+		"tr_est_natural_5"
+	}
+	tradition_swap = {
+		name = tradition_est_natural_hive
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			Not = {
+				has_authority = auth_machine_intelligence
+			}
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+	tradition_swap = {
+		name = tradition_est_natural_machines
+		trigger = {
+			has_authority = auth_machine_intelligence
+		}
+		weight = {
+			factor = 1
+		}		
+	}
+}
+
+
+

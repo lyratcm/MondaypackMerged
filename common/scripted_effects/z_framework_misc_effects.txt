@@ -1,40 +1,73 @@
 ###_z modmenu-framework-misc effects	###############################################################
 
-#_[开局科技]
-#_[彩蛋遗珍_pc数目检测]
+#_[框架模式初始化/开局科技/挖掘地设置隔离debug]
 #_[资源储存buff]
 #_[自动工程船]
+#_[自我拆解]
 #_[cht_物质湮灭剑]
-#_[巨建_dismantle]
+#_[巨建拆除]
 
 
 
 
-###_[misc]	########################################################################################
+###_[框架模式初始化]	遗珍/战争misc/动态难度/数值限制	####################################################
+z_fw_eft_glbl_framework_mode_flg_init = {
+	##_[遗珍]
+	set_global_flag = z_fw_flg_glbl_start_monument
+	set_global_flag = z_fw_flg_glbl_start_relic
 
-#_[开局科技]
-#_[country]	[start tech]
-z_fw_eft_start_tech = {
+	##_[战争misc]
+	remove_global_flag = z_fw_flg_glbl_wg_cb_disabled	#_[战争类型]
+	set_global_flag = z_fw_core_weap_tech_linkage		#_[科技联动]
+	
+	##_[动态难度]
+	set_global_flag = z_fw_core_battle_dd_common
+	remove_global_flag = z_fw_core_battle_dd_ptw
+	set_global_flag = z_fw_core_battle_dd_fleet_power
+	remove_global_flag = z_fw_core_battle_dd_fp_adpt_easy
+	set_global_flag = z_fw_core_battle_dd_fp_adpt_standard
+	remove_global_flag = z_fw_core_battle_dd_fp_adpt_hard
+	
+	##_[数值限制]
+	remove_global_flag = z_fw_flg_glbl_battle_vl_0
+	remove_global_flag = z_fw_flg_glbl_battle_vl_1
+	remove_global_flag = z_fw_flg_glbl_battle_vl_2
 	if = {
-		limit = { NOT = { has_technology = tech_automated_exploration } }
-		give_technology = { tech = tech_automated_exploration message = no }
-	}	
-}
-
-
-#_[彩蛋遗珍_pc数目检测]		pc>1,设定隔离flg,随机分配遗珍位置
-z_fw_eft_cntr_misc_relic_init_flg_cntr = {
-	if = {
-		limit = {
-			exists = event_target:z_fw_tgt_global_event
-			event_target:z_fw_tgt_global_event = { check_variable = { which = z_fw_var_glbl_num_pc value > 1 } }
-		}
-		set_timed_country_flag = { flag = z_fw_flg_cntr_r days = 1 }
+		limit = { has_global_flag = has_system_scale_mod }	#_<rss/isbs>
+		set_global_flag = z_fw_flg_glbl_battle_vl_1
+	}
+	else_if = {
+		limit = { always = yes }
+		set_global_flag = z_fw_flg_glbl_battle_vl_0
 	}
 }
 
 
-#_[资源储存buff]]
+
+
+###_[开局科技]
+#_[country]	[start tech]
+z_fw_eft_start_tech = {
+	if = {
+		limit = { NOT = { has_technology = z_fw_tech_core_start_boost } }
+		give_technology = { tech = z_fw_tech_core_start_boost message = no }
+	}	
+}
+
+
+###_[挖掘地设置隔离debug]		①|单人模式|=去掉国家隔离flg	②放在设置[挖掘地的事件]中,只有[挖掘地正确设置了]才会执行
+z_fw_eft_cntr_misc_relic_site_counted = {
+	if = {
+		limit = {
+			exists = event_target:z_fw_tgt_global_event
+			event_target:z_fw_tgt_global_event = { check_variable = { which = z_fw_var_glbl_num_pc value = 1 } }	#_|单人模式|
+		}
+		remove_country_flag = z_fw_flg_cntr_relic_site_set
+	}
+}
+
+
+###_[资源储存buff]]
 z_fw_eft_all_res_stock_debug = {
 	if = {#_50000
 		limit = {
@@ -186,12 +219,13 @@ z_fw_eft_flt_autostation_tgt_clean = {
 	}
 }
 
-#_[fleet]	到达目的地	<z_fw1_misc.124>
+#_<z_fw1_misc.124>		到达目的地=采矿建造/科研建造/星系内循环debug/自动工程船debug
 #_from = planet
 #_FromFrom = ?
 #_tgt继承	[z_fw_tgt_plnt_autostation]
+#_核心		z_fw_flg_plnt_autostation=任意plnt含有则事件持续
 z_fw_eft_flt_autostation_executing = {
-	#_采矿建造
+	###_[采矿建造]
 	if = {
 		limit = {
 			from = {
@@ -216,8 +250,8 @@ z_fw_eft_flt_autostation_executing = {
 				}
 			}
 		}
-		from = { create_mining_station = { owner = solar_system.space_owner } }
-		solar_system = {
+		from = { create_mining_station = { owner = solar_system.space_owner } }	#_[创建站点]
+		solar_system = {#_[花费_联动建造]
 			if = {
 				limit = {
 					NOR = {#_太空工程师
@@ -230,10 +264,22 @@ z_fw_eft_flt_autostation_executing = {
 				}
 				space_owner = { add_resource = { minerals = -100 } }
 			}
-			space_owner = { set_timed_country_flag = { flag = z_fw_autostation_debug_cd days = @z_fw_autostation_cd } }
+			space_owner = {
+				set_timed_country_flag = { flag = z_fw_autostation_debug_cd days = @z_fw_autostation_cd }
+				#_[联动建造]
+				if = { limit = { count_system_within_border = { count > 140 }		set_variable = { which = z_fw_var_cntr_autostation_linkage value = 7 } } }
+				else_if = { limit = { count_system_within_border = { count > 120 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 6 } } }
+				else_if = { limit = { count_system_within_border = { count > 100 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 5 } } }
+				else_if = { limit = { count_system_within_border = { count > 80 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 4 } } }
+				else_if = { limit = { count_system_within_border = { count > 60 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 3 } } }
+				else_if = { limit = { count_system_within_border = { count > 40 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 2 } } }
+				else_if = { limit = { count_system_within_border = { count > 20 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 1 } } }
+				set_country_flag = z_fw_flg_cntr_autostation_linkage	#_[联动启动]
+				country_event = { id = z_fw1_misc.126 days = 1 }
+			}
 		}
 	}
-	#_科研建造
+	###_[科研建造]
 	else_if = {
 		limit = {
 			from = {
@@ -258,8 +304,8 @@ z_fw_eft_flt_autostation_executing = {
 				}
 			}
 		}
-		from = { create_research_station = { owner = solar_system.space_owner } }
-		solar_system = {
+		from = { create_research_station = { owner = solar_system.space_owner } }	#_[创建站点]
+		solar_system = {#_[花费_联动建造]
 			if = {
 				limit = {
 					NOR = {#_太空工程师
@@ -272,63 +318,74 @@ z_fw_eft_flt_autostation_executing = {
 				}
 				space_owner = { add_resource = { minerals = -100 } }
 			}
-			space_owner = { set_timed_country_flag = { flag = z_fw_autostation_debug_cd days = @z_fw_autostation_cd } }
-		}
-	}
-	#_检测星系内其他符合条件星球
-	solar_system = {#_solar_system
-		random_system_planet = {
-			limit = {#_[探索过/非殖民地/可建造矿站/资源科技满足/禁用条件/无建设冲突]
-				#_[探索过]
-				is_surveyed = { who = solar_system.space_owner status = yes }
-				#_[非殖民地]
-				is_colony = no
-				has_orbital_station = no
-				#has_mining_station = no
-				#has_research_station = no
-				#_[可建造矿站]
-				OR = {
-					has_deposit_for = shipclass_mining_station
-					has_deposit_for = shipclass_research_station
-				}
-				#_[资源科技满足]无法生效
-			#	z_fw_trgr_plnt_autostation_res_tech_flt = yes
-				#_[禁用条件]
-				NOR = {
-					has_deposit = d_trade_value_1
-					has_deposit = d_trade_value_2
-					has_deposit = d_trade_value_3
-					has_deposit = d_trade_value_4
-					has_deposit = d_trade_value_5
-					has_deposit = d_trade_value_6
-					has_deposit = d_trade_value_7
-					has_deposit = d_trade_value_8
-					has_deposit = d_trade_value_9
-					has_deposit = d_trade_value_10
-					#_巨建相关
-					has_planet_flag = megastructure		#_不是居住站/环之类伪星球
-					has_planet_flag = has_megastructure
-					has_any_megastructure = yes
-				}
-				#_[无建设冲突]
-				NOT = {
-					prev = {
-						any_fleet_in_system = {
-							OR = {
-								is_constructing = megastructure
-								is_constructing = mining_station
-								is_constructing = research_station
-							#	is_constructing = observation_post
-							}
-						}
-					}
-				}
+			space_owner = {
+				set_timed_country_flag = { flag = z_fw_autostation_debug_cd days = @z_fw_autostation_cd }
+				#_[联动建造]
+				if = { limit = { count_system_within_border = { count > 140 }		set_variable = { which = z_fw_var_cntr_autostation_linkage value = 7 } } }
+				else_if = { limit = { count_system_within_border = { count > 120 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 6 } } }
+				else_if = { limit = { count_system_within_border = { count > 100 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 5 } } }
+				else_if = { limit = { count_system_within_border = { count > 80 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 4 } } }
+				else_if = { limit = { count_system_within_border = { count > 60 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 3 } } }
+				else_if = { limit = { count_system_within_border = { count > 40 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 2 } } }
+				else_if = { limit = { count_system_within_border = { count > 20 }	set_variable = { which = z_fw_var_cntr_autostation_linkage value = 1 } } }
+				set_country_flag = z_fw_flg_cntr_autostation_linkage	#_[联动启动]
+				country_event = { id = z_fw1_misc.126 days = 1 }
 			}
-			set_planet_flag = z_fw_flg_plnt_autostation		#_星球标记
 		}
 	}
-	#_自循环
+	
+	###_[星系内循环debug]		[已验证]直接在这个eft中执行循环,[资源科技满足]无效,原因不明
+	solar_system = { system_event = { id = z_fw1_misc.1241 } }
+	###_[自动工程船debug]
 	fleet_event = { id = z_fw1_misc.124 days = @z_fw_autostation_cd random = 7 }
+}
+
+
+
+
+
+
+
+
+###_[自我拆解]	########################################################################################
+#_|create_ship里的design只能是某个design,即便作为target也是某个design作为target|
+z_fw_eft_flt_misc_dismantle = {
+	fleet_event = { id = z_fw1_misc.142 }
+}
+old_eft_flt_misc_dismantle = {
+	#_暂时NPC<每艘船重新建立npc,防止被攻击变成敌对以后新的自动工程船也处于敌对状态>
+	create_country = {
+		name = "NAME_z_fw_npc_1"
+		type = z_fw_npc_temp_neutral_self_dismantle
+		flag = {
+			icon = {
+				category = "z_fw"
+				file = "infinite_stellaris_0.dds"
+			}
+			background= {
+				category = "backgrounds"
+				file = "00_solid.dds"
+			}
+			colors={
+				"black"
+				"black"
+				"null"
+				"null"
+			}
+		}
+		effect = {
+			#_建立联系防止问号国家
+			every_country = {
+				limit = { is_ai = no }
+				establish_communications_no_message = prev
+				prev = { set_faction_hostility = { target = prev set_friendly = yes } }
+			}
+		}
+	}
+	if = { limit = { exists = leader }	unassign_leader = root }	#_[ldr]
+	set_owner = last_created_country				#_[temp_npc]
+	set_fleet_flag = z_fw_flg_flt_self_dismantle	#_[自我拆解]
+	add_modifier = { modifier = z_fw_mod_ship_self_dismantle days = -1 } 	#_极致弱化
 }
 
 
@@ -345,7 +402,7 @@ z_fw_eft_flt_autostation_executing = {
 z_fw_eft_sys_add_ambt_marker = {
 	random_system_megastructure = {
 		limit = {
-			z_fw_trgr_mega_demolish_ignore = no
+			z_fw_trgr_mega_dismantle_ignore = no
 			z_fw_trgr_mega_r_cht_mega_counted = no
 		}
 		prev = {
@@ -569,9 +626,9 @@ z_fw_eft_r_cht_mega_demolish = {
 
 
 
-###_[巨建_dismantle]	####################################################################################
+###_[巨建拆除]	####################################################################################
 #_r_cht_mega的镜像事件
-#_mega_trgr		[z_fw_trgr_mega_demolish_ignore]	唯一共用
+#_mega_trgr		[z_fw_trgr_mega_dismantle_ignore]	唯一共用
 
 #_[sys]			添加ambt_marker
 #_parameter		NUM
@@ -585,7 +642,7 @@ z_fw_eft_sys_mega_dismantle_marker = {
 		}
 		random_system_megastructure = {
 			limit = {
-				z_fw_trgr_mega_demolish_ignore = no		#_可摧毁
+				z_fw_trgr_mega_dismantle_ignore = no		#_可摧毁
 				z_fw_trgr_mega_dismantle_counted = no	#_已统计
 			}
 			prev = {

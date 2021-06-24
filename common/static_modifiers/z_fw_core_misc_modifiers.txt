@@ -1,6 +1,21 @@
 ###_z fw core modifiers misc	#########################################################################
 
+#_[固有默认buff]
 #_[战争随机buff]
+
+
+
+
+###_[固有默认buff]	#############################################
+z_fw_mod_cntr_default = {
+	icon = GFX_z_fw_mod_normal
+	damage_vs_country_type_z_fw_npc_temp_neutral_self_dismantle_mult = 77	#_自我拆解
+}
+
+
+
+
+###_[战争随机buff]	#############################################
 z_fw_mod_cntr_ai_war_1 = {
 	icon = GFX_z_fw_mod_fury
 	#_国家

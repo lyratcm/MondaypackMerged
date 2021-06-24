@@ -58,7 +58,7 @@ eac_aw_dpl_options = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -81,7 +81,7 @@ nhsc_mod_control_edict2 = {
 		is_ai = no
 		NOT = { has_global_flag = ESC_MENU_ACTIVE }
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -100,7 +100,7 @@ acot_mod_menu_edict = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -120,7 +120,7 @@ origin_mod_menu_edict = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -138,7 +138,7 @@ terraforming_candidates_menu = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -163,7 +163,7 @@ mem_options_menu = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -194,7 +194,7 @@ giga_custom_menu = {
 	allow = {
 		is_ai = no
 		custom_tooltip = {#_主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}

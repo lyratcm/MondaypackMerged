@@ -4,7 +4,7 @@
 
 
 #_[«¿∂· •“≈ŒÔ]
-z_cltr_cb_plunder_relic = {
+z_lctr_cb_plunder_relic = {
     show_in_diplomacy = yes
     show_notification = no
     potential = {

@@ -1,0 +1,28 @@
+namespace = Events_GAPS_Traits_Self_Reanimation
+		
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+#on_army_killed_in_combat = {
+country_event = {
+	id = Events_GAPS_Traits_Self_Reanimation.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = { species = { has_trait = Trait_GAPS_Self_Reanimation }  }
+	}
+
+	immediate = {
+		from.species = { save_event_target_as = Target_Species_GAPS_Self_Reanimation }
+		FromFromFrom = {
+			create_army = {
+				owner = This
+				species = From.species
+				type = army_GAPS_self_renaimated
+			}
+		} 
+	}
+}

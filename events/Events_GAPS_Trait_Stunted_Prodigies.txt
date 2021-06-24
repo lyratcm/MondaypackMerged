@@ -9,7 +9,7 @@ namespace = Events_GAPS_Trait_Stunted_Prodigies
 # a new leader is generated for an empire, to be available for recruitment
 # scope: country, from: leader
 country_event = {
-	id = Events_GAPS_Trait_Stunted_Prodigies.1
+	id = Events_GAPS_Trait_Stunted_Prodigies.10
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -29,7 +29,7 @@ country_event = {
 # This = Country
 #on_ruler_set
 country_event = {
-	id = Events_GAPS_Trait_Stunted_Prodigies.2
+	id = Events_GAPS_Trait_Stunted_Prodigies.20
 	is_triggered_only = yes
 	hide_window = yes
 

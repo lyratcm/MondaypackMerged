@@ -40,7 +40,7 @@ cb_megacorp_subjugate = {
 	show_notification = yes
 	potential = {
 		is_country_type = default
-		is_megacorp = yes
+		has_authority = auth_corporate
 		is_subject = no
 	}
 	is_valid = { 
@@ -53,12 +53,12 @@ cb_hostile_takeover = {
 	show_notification = yes
 	potential = {
 		is_country_type = default
-		is_megacorp = yes
+		has_authority = auth_corporate
 		NOT = { has_valid_civic = civic_criminal_heritage }
 		is_subject = no
 	}
 	is_valid = { 
-		from = { is_megacorp = yes }
+		from = { has_authority = auth_corporate }
 		NOT = { is_in_federation_with = from }
 		any_country = {
 			OR = {
@@ -77,11 +77,34 @@ cb_expel_corp = {
 	show_notification = yes
 	potential = {
 		is_country_type = default
-		NOT = { is_megacorp = yes }
+		NOT = { has_authority = auth_corporate }
 		is_subject = no
 	}
 	is_valid = { 
+		from = {
+			NOT = { has_valid_civic = civic_machine_aperature_science }
+			}
 		NOT = { has_commercial_pact = from }
+		NOT = { is_in_federation_with = from }
+		any_owned_planet = {
+			has_branch_office = from
+		}
+	}	
+}
+
+cb_expel_labs = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_country_type = default
+		NOT = { has_authority = auth_corporate }
+		is_subject = no
+	}
+	is_valid = { 
+		from = {
+			AND = { has_valid_civic = civic_machine_aperature_science }
+		}
+		NOT = { has_research_agreement = from }
 		NOT = { is_in_federation_with = from }
 		any_owned_planet = {
 			has_branch_office = from

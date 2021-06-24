@@ -1,4 +1,0 @@
-# The number of repeatables in every category
-@AR_count_repeatables_physics = 5
-@AR_count_repeatables_society = 9
-@AR_count_repeatables_engineering = 11

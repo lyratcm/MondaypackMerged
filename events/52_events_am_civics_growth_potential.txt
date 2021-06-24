@@ -19,6 +19,6 @@ planet_event = {
 
 	immediate = {
 		add_district = district_city
-		add_modifier = { modifier = "static_modifier_am_civics_corporate_growth" years = 10 }
+		add_modifier = { modifier = "static_modifier_am_civics_corporate_growth" years = 20 }
 	}
 }

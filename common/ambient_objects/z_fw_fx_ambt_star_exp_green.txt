@@ -1,0 +1,75 @@
+###_爆炸fx	############################################################################
+#_[璀璨星图]
+#_[emp冲击]
+
+
+
+
+###_[璀璨星图]
+ambient_object = {#_[100]	0/+3	3~7		4+1=5日
+	name = "z_fw_ambt_fx_star_exp_green_charge"
+	entity = "z_fw_entity_ambt_star_exp_green_charge_0"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_[101]	+1/+4	4-6		3+1=4日
+	name = "z_fw_ambt_fx_star_exp_green_trigger"
+	entity = "z_fw_entity_ambt_star_exp_green_trigger_0"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_[102]	+1/+4	4.3-6.6		3+2=5日
+	name = "z_fw_fx_ambt_star_exp_green_flare"
+	entity = "z_fw_entity_ambt_star_exp_green_flare_0"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {#_	0	6+6+6+3=21日
+	name = "z_fw_ambt_fx_star_exp_green_phase_1"
+	entity = "z_fw_entity_ambt_star_exp_green_phase_1"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_	0	6+6+3=15日
+	name = "z_fw_ambt_fx_star_exp_green_phase_2"
+	entity = "z_fw_entity_ambt_star_exp_green_phase_2"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_	0	6+3=9日
+	name = "z_fw_ambt_fx_star_exp_green_phase_3"
+	entity = "z_fw_entity_ambt_star_exp_green_phase_3"
+	selectable = no
+	show_name = no
+}
+
+ambient_object = {#_	0	30日
+	name = "z_fw_ambt_fx_star_exp_green_final"
+	entity = "z_fw_entity_ambt_star_exp_green_core_0"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_	0	15日	scale*40
+	name = "z_fw_ambt_fx_star_exp_green_final_fx"
+	entity = "z_fw_entity_fx_star_exp_green_skw_1"
+	selectable = no
+	show_name = no
+}
+
+
+
+
+#_[emp冲击]
+ambient_object = {#_	0	15日	scale*40
+	name = "z_fw_ambt_fx_star_emp_green_charge"
+	entity = "z_fw_entity_ambt_star_emp_green_charge"
+	selectable = no
+	show_name = no
+}
+ambient_object = {#_	0	15日	scale*40
+	name = "z_fw_ambt_fx_star_emp_green_exp"
+	entity = "z_fw_entity_ambt_star_emp_green_exp"
+	selectable = no
+	show_name = no
+}

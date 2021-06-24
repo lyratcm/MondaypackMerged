@@ -1,0 +1,8 @@
+namespace = Events_GAPS_Traits_Immersers
+planet_event = {
+    id = Events_GAPS_Traits_Immersers.41
+    is_triggered_only = yes
+    hide_window = yes
+    immediate = {
+    }
+}

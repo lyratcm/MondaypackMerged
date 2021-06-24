@@ -8,6 +8,13 @@ sshipyard = {
 		OR = {
 			count_starbase_modules = { type = shipyard count > 0 }
 			has_starbase_building = drydock
+		owner = {
+				NOT = { 
+					any_owned_starbase = { 
+						has_starbase_module = shipyard 
+					}
+				}
+			}
 		}
 	}
 
@@ -37,6 +44,16 @@ sshipyard = {
 			add = 100
 			count_starbase_modules = { type = shipyard count > 5 }
 		}
+		modifier = {
+			add = 1000
+			owner = {
+				NOT = { 
+					any_owned_starbase = { 
+						has_starbase_module = shipyard 
+					}
+				}
+			}
+		}
 	}
 	
 	ai_design = {
@@ -58,44 +75,44 @@ sshipyard = {
 			}
 		}
 		buildings = {
-			crew_quarters = { base = 4.0 }
-			drydock = { base = 5.0 }
-			fleet_academy = { base = 4.0 }
-			naval_logistics_office = { base = 4.0 }
-			listening_post = { base = 4.0 }
-			sensor_station = { base = 3.0 }
-			titan_yards = { base = 1.0 }
-			colossus_yards = { base = 1.0 }
-			reinforced_defenses = { base = 2.0 }
-			strategic_defenses = { base = 2.0 }
-			emergency_portal = { base = 1.0 }
-			orbital_assembly = { base = 2.0 }
-			chain_manufacturing = { base = 2.0 }
-			construction_planificator = { base = 2.0 }
-			offworld_trading_company = { base = 2.0 }
-			nebula_refinery = { base = 3.0 }
-			resource_silo = { base = 3.0 }
-			mining_base = { base = 3.0 }
-			power_station = { base = 3.0 }
-			farming_base = { base = 3.0 }
-			solar_panel_01 = { base = 1.0 }
-			solar_panel_02 = { base = 1.0 }
-			solar_panel_03 = { base = 1.0 }
-			solar_panel_04 = { base = 1.0 }
-			hydroponics_bay = { base = 3.0 }
+			crew_quarters = { base = 0.8 }
+			drydock = { base = 1.0 }
+			fleet_academy = { base = 0.8 }
+			naval_logistics_office = { base = 0.8 }
+			listening_post = { base = 0.8 }
+			sensor_station = { base = 0.6 }
+			titan_yards = { base = 0.2 }
+			colossus_yards = { base = 0.2 }
+			reinforced_defenses = { base = 0.4 }
+			strategic_defenses = { base = 0.4 }
+			emergency_portal = { base = 0.2 }
+			orbital_assembly = { base = 0.4 }
+			chain_manufacturing = { base = 0.4 }
+			construction_planificator = { base = 0.4 }
+			offworld_trading_company = { base = 0.4 }
+			nebula_refinery = { base = 0.6 }
+			resource_silo = { base = 0.6 }
+			mining_base = { base = 0.6 }
+			power_station = { base = 0.6 }
+			farming_base = { base = 0.6 }
+			solar_panel_01 = { base = 0.2 }
+			solar_panel_02 = { base = 0.2 }
+			solar_panel_03 = { base = 0.2 }
+			solar_panel_04 = { base = 0.2 }
+			hydroponics_bay = { base = 0.6 }
 		}		
 		modules = {
-			shipyard = { base = 5.0 }
-			anchorage = { base = 4.0 }
-			hangar_bay = { base = 2.0 }
-			gun_battery = { base = 3.0 }
-			missile_battery = { base = 3.0 }
-			large_battery = { base = 3.0 }
-			pd_battery = { base = 3.0 }
-			xl_battery = { base = 3.0 }
-			titanic_battery = { base = 3.0 }
-			shield_module = { base = 4.0 }
-			armor_module = { base = 4.0 }
+			shipyard = { base = 1.0 }
+			anchorage = { base = 0.8 }
+			hangar_bay = { base = 0.4 }
+			gun_battery = { base = 0.6 }
+			missile_battery = { base = 0.6 }
+			large_battery = { base = 0.6 }
+			pd_battery = { base = 0.6 }
+			xl_battery = { base = 0.6 }
+			titanic_battery = { base = 0.6 }
+			shield_module = { base = 0.8 }
+			armor_module = { base = 0.8 }
 		}
 	}
 }
@@ -176,49 +193,48 @@ sanchorage = {
 
 		# token followed by priority
 		buildings = {
-			crew_quarters = { base = 5.0 }
-			fleet_academy = { base = 5.0 }
-			naval_logistics_office = { base = 4.0 }
-			listening_post = { base = 4.0 }
-			sensor_station = { base = 3.0 }
-			reinforced_defenses = { base = 2.0 }
-			strategic_defenses = { base = 2.0 }
-			emergency_portal = { base = 1.0 }
-			adv_space_engineers = { base = 3.0 }
-			adv_starbase = { base = 3.0 }
-			administration_office = { base = 3.0 }
-			starbase_optimal_systems = { base = 3.0 }
-			administration_computers = { base = 3.0 }
-			market_computers = { base = 2.0 }
-			research_computers = { base = 2.0 }
-			orbital_assembly = { base = 3.0 }
-			chain_manufacturing = { base = 3.0 }
-			construction_planificator = { base = 3.0 }
-			offworld_trading_company = { base = 3.0 }
-			nebula_refinery = { base = 3.0 }
-			resource_silo = { base = 4.0 }
-			mining_base = { base = 4.0 }
-			power_station = { base = 4.0 }
-			farming_base = { base = 4.0 }
-			solar_panel_01 = { base = 2.0 }
-			solar_panel_02 = { base = 2.0 }
-			solar_panel_03 = { base = 2.0 }
-			solar_panel_04 = { base = 2.0 }
-			hydroponics_bay = { base = 2.0 }
+			crew_quarters = { base = 1.0 }
+			fleet_academy = { base = 1.0 }
+			naval_logistics_office = { base = 0.8 }
+			listening_post = { base = 0.8 }
+			sensor_station = { base = 0.6 }
+			reinforced_defenses = { base = 0.4 }
+			strategic_defenses = { base = 0.4 }
+			emergency_portal = { base = 0.2 }
+			adv_space_engineers = { base = 0.6 }
+			adv_starbase = { base = 0.6 }
+			administration_office = { base = 0.6 }
+			starbase_optimal_systems = { base = 0.6 }
+			administration_computers = { base = 0.6 }
+			market_computers = { base = 0.4 }
+			research_computers = { base = 0.4 }
+			orbital_assembly = { base = 0.6 }
+			chain_manufacturing = { base = 0.6 }
+			construction_planificator = { base = 0.6 }
+			offworld_trading_company = { base = 0.6 }
+			nebula_refinery = { base = 0.6 }
+			resource_silo = { base = 0.8 }
+			mining_base = { base = 0.8 }
+			power_station = { base = 0.8 }
+			farming_base = { base = 0.8 }
+			solar_panel_01 = { base = 0.4 }
+			solar_panel_02 = { base = 0.4 }
+			solar_panel_03 = { base = 0.4 }
+			solar_panel_04 = { base = 0.4 }
+			hydroponics_bay = { base = 0.4 }
 		}
 		
 		modules = {
-			anchorage = { base = 5.0 }
-			hangar_bay = { base = 3.0 }
-			gun_battery = { base = 4.0 }
-			missile_battery = { base = 4.0 }
-			large_battery = { base = 4.0 }
-			pd_battery = { base = 4.0 }
-			xl_battery = { base = 4.0 }
-			titanic_battery = { base = 4.0 }
-			shield_module = { base = 5.0 }
-			armor_module = { base = 5.0 }
-			security_branch_office = { base = 2.0 }
+			anchorage = { base = 1.0 }
+			hangar_bay = { base = 0.6 }
+			gun_battery = { base = 0.8 }
+			missile_battery = { base = 0.8 }
+			large_battery = { base = 0.8 }
+			pd_battery = { base = 0.8 }
+			xl_battery = { base = 0.8 }
+			titanic_battery = { base = 0.8 }
+			shield_module = { base = 1.0 }
+			armor_module = { base = 1.0 }
 		}
 	}
 }
@@ -301,52 +317,52 @@ strading_hub = {
 
 		# token followed by priority
 		buildings = {
-			crew_quarters = { base = 5.0 }
-			listening_post = { base = 5.0 }
-			sensor_station = { base = 4.0 }
-			reinforced_defenses = { base = 4.0 }
-			strategic_defenses = { base = 4.0 }
-			adv_space_engineers = { base = 2.0 }
-			adv_starbase = { base = 2.0 }
-			administration_office = { base = 2.0 }
-			starbase_optimal_systems = { base = 2.0 }
-			administration_computers = { base = 3.0 }
-			market_computers = { base = 3.0 }
-			research_computers = { base = 3.0 }
-			tile_blocker_cleaner = { base = 3.0 }
-			customs_office = { base = 3.0 }
-			curator_think_tank = { base = 3.0 }
-			art_college = { base = 3.0 }
-			trader_proxy_office = { base = 4.0 }
-			orbital_assembly = { base = 2.0 }
-			chain_manufacturing = { base = 2.0 }
-			construction_planificator = { base = 2.0 }
-			offworld_trading_company = { base = 4.0 }
-			nebula_refinery = { base = 4.0 }
-			resource_silo = { base = 4.0 }
-			mining_base = { base = 4.0 }
-			power_station = { base = 4.0 }
-			farming_base = { base = 4.0 }
-			solar_panel_01 = { base = 3.0 }
-			solar_panel_02 = { base = 3.0 }
-			solar_panel_03 = { base = 3.0 }
-			solar_panel_04 = { base = 3.0 }
-			hydroponics_bay = { base = 1.0 }
+			crew_quarters = { base = 1.0 }
+			listening_post = { base = 1.0 }
+			sensor_station = { base = 0.8 }
+			reinforced_defenses = { base = 0.8 }
+			strategic_defenses = { base = 0.8 }
+			adv_space_engineers = { base = 0.4 }
+			adv_starbase = { base = 0.4 }
+			administration_office = { base = 0.4 }
+			starbase_optimal_systems = { base = 0.4 }
+			administration_computers = { base = 0.6 }
+			market_computers = { base = 0.6 }
+			research_computers = { base = 0.6 }
+			tile_blocker_cleaner = { base = 0.6 }
+			customs_office = { base = 0.6 }
+			curator_think_tank = { base = 0.6 }
+			art_college = { base = 0.6 }
+			trader_proxy_office = { base = 0.8 }
+			orbital_assembly = { base = 0.4 }
+			chain_manufacturing = { base = 0.4 }
+			construction_planificator = { base = 0.4 }
+			offworld_trading_company = { base = 0.8 }
+			nebula_refinery = { base = 0.8 }
+			resource_silo = { base = 0.8 }
+			mining_base = { base = 0.8 }
+			power_station = { base = 0.8 }
+			farming_base = { base = 0.8 }
+			solar_panel_01 = { base = 0.6 }
+			solar_panel_02 = { base = 0.6 }
+			solar_panel_03 = { base = 0.6 }
+			solar_panel_04 = { base = 0.6 }
+			hydroponics_bay = { base = 0.2 }
 		}
 		modules = {
-			trading_hub = { base = 5.0 }
-			space_power_plant = { base = 4.0 }
-			space_foundry = { base = 5.0 }
-			space_factory = { base = 5.0 }
-			hangar_bay = { base = 3.0 }
-			gun_battery = { base = 4.0 }
-			missile_battery = { base = 4.0 }
-			large_battery = { base = 4.0 }
-			pd_battery = { base = 4.0 }
-			xl_battery = { base = 4.0 }
-			titanic_battery = { base = 4.0 }
-			shield_module = { base = 4.0 }
-			armor_module = { base = 4.0 }
+			trading_hub = { base = 1.0 }
+			space_power_plant = { base = 0.8 }
+			space_foundry = { base = 1.0 }
+			space_factory = { base = 1.0 }
+			hangar_bay = { base = 0.6 }
+			gun_battery = { base = 0.8 }
+			missile_battery = { base = 0.8 }
+			large_battery = { base = 0.8 }
+			pd_battery = { base = 0.8 }
+			xl_battery = { base = 0.8 }
+			titanic_battery = { base = 0.8 }
+			shield_module = { base = 0.8 }
+			armor_module = { base = 0.8 }
 		}
 	}
 }
@@ -521,41 +537,41 @@ sfortress = {
 
 		# token followed by priority
 		buildings = {
-			crew_quarters = { base = 5.0 }
-			drydock = { base = 3.0 }
-			fleet_academy = { base = 3.0 }
-			naval_logistics_office = { base = 3.0 }
-			titan_yards = { base = 3.0 }
-			colossus_yards = { base = 3.0 }
-			listening_post = { base = 5.0 }
-			sensor_station = { base = 4.0 }
-			reinforced_defenses = { base = 4.0 }
-			strategic_defenses = { base = 4.0 }
-			emergency_portal = { base = 1.0 }
-			target_uplink_computer = { base = 5.0 }
-			command_center = { base = 5.0 }
-			defense_grid = { base = 5.0 }
-			communications_jammer = { base = 5.0 }
-			disruption_field = { base = 5.0 }
-			warp_fluctuator = { base = 5.0 }
-			deep_space_black_site = { base = 5.0 }
-			orbital_assembly = { base = 3.0 }
-			chain_manufacturing = { base = 3.0 }
-			construction_planificator = { base = 3.0 }
-			mining_base = { base = 3.0 }
-			power_station = { base = 3.0 }
-			farming_base = { base = 3.0 }
+			crew_quarters = { base = 1.0 }
+			drydock = { base = 0.6 }
+			fleet_academy = { base = 0.6 }
+			naval_logistics_office = { base = 0.6 }
+			titan_yards = { base = 0.6 }
+			colossus_yards = { base = 0.6 }
+			listening_post = { base = 1.0 }
+			sensor_station = { base = 0.8 }
+			reinforced_defenses = { base = 0.8 }
+			strategic_defenses = { base = 0.8 }
+			emergency_portal = { base = 0.2 }
+			target_uplink_computer = { base = 1.0 }
+			command_center = { base = 1.0 }
+			defense_grid = { base = 1.0 }
+			communications_jammer = { base = 1.0 }
+			disruption_field = { base = 1.0 }
+			warp_fluctuator = { base = 1.0 }
+			deep_space_black_site = { base = 1.0 }
+			orbital_assembly = { base = 0.6 }
+			chain_manufacturing = { base = 0.6 }
+			construction_planificator = { base = 0.6 }
+			mining_base = { base = 0.6 }
+			power_station = { base = 0.6 }
+			farming_base = { base = 0.6 }
 		}
 		modules = {
-			hangar_bay = { base = 1.0 }
-			gun_battery = { base = 4.0 }
-			missile_battery = { base = 4.0 }
-			large_battery = { base = 4.0 }
-			pd_battery = { base = 3.0 }
-			xl_battery = { base = 5.0 }
-			titanic_battery = { base = 5.0 }
-			shield_module = { base = 5.0 }
-			armor_module = { base = 5.0 }
+			hangar_bay = { base = 0.2 }
+			gun_battery = { base = 0.8 }
+			missile_battery = { base = 0.8 }
+			large_battery = { base = 0.8 }
+			pd_battery = { base = 0.6 }
+			xl_battery = { base = 1.0 }
+			titanic_battery = { base = 1.0 }
+			shield_module = { base = 1.0 }
+			armor_module = { base = 1.0 }
 		}
 	}
 }

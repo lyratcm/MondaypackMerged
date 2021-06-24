@@ -1,0 +1,18 @@
+
+Trait_GAPS_Taskmasters = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/Trait_GAPS_Taskmasters.dds"
+	initial = yes
+	randomized = yes
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
+	opposites = { "trait_hive_mind" }
+	custom_tooltip = Trait_GAPS_Taskmasters_Effect
+	sorting_priority = 30
+	modifier = {
+		#Effect: Ruler jobs this species occupies provide +1% worker production to the planet.
+	}
+	ai_weight = {
+		weight = 1
+	}
+}

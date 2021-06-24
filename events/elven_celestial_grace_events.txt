@@ -1,0 +1,249 @@
+namespace = elven_celestial_grace_events
+
+# Maintenance for Celestial Favor score
+country_event = {
+	id = elven_celestial_grace_events.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		elven_evaluate_celestial_favor = yes
+	}
+}
+
+# Ruler levelled up
+country_event = {
+	id = elven_celestial_grace_events.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		from = {
+			if =  {
+				limit = {
+					leader_class = ruler
+				}
+				prev = {
+					remove_modifier = elven_celestial_favor_factor_ruler_ding
+					add_modifier = {
+						modifier = elven_celestial_favor_factor_ruler_ding
+						years = 5
+					}
+					elven_evaluate_celestial_favor = yes
+				}
+			}
+		}
+	}
+}
+
+# New Colony
+planet_event = {
+	id = elven_celestial_grace_events.102
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = { has_valid_civic = civic_elven_celestial_grace }
+	}
+
+	immediate = {
+		owner = {
+			remove_modifier = elven_celestial_favor_factor_new_colony
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_new_colony
+				years = 5
+			}
+			elven_evaluate_celestial_favor = yes
+		}
+	}
+}
+
+# Megastructure Built
+country_event = {
+	id = elven_celestial_grace_events.103
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		remove_modifier = elven_celestial_favor_factor_mega_built
+		add_modifier = {
+			modifier = elven_celestial_favor_factor_mega_built
+			years = 20
+		}
+		elven_evaluate_celestial_favor = yes
+	}
+}
+
+# Megastructure Upgraded
+country_event = {
+	id = elven_celestial_grace_events.104
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		remove_modifier = elven_celestial_favor_factor_mega_upgraded
+		add_modifier = {
+			modifier = elven_celestial_favor_factor_mega_upgraded
+			years = 10
+		}
+		elven_evaluate_celestial_favor = yes
+	}
+}
+
+# War Won
+country_event = {
+	id = elven_celestial_grace_events.105
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				fromfrom = {
+					any_defender = { is_same_value = root }
+				}
+			}
+			remove_modifier = elven_celestial_favor_factor_won_def
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_won_def
+				years = 5
+			}
+			elven_evaluate_celestial_favor = yes
+		}
+		else = {
+			remove_modifier = elven_celestial_favor_factor_won_war
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_won_war
+				years = 10
+			}
+			elven_evaluate_celestial_favor = yes
+		}
+	}
+}
+
+# War Status Quo
+country_event = {
+	id = elven_celestial_grace_events.106
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		remove_modifier = elven_celestial_favor_factor_quo_war
+		add_modifier = {
+			modifier = elven_celestial_favor_factor_quo_war
+			years = 10
+		}
+		elven_evaluate_celestial_favor = yes
+	}
+}
+
+# War Lost
+country_event = {
+	id = elven_celestial_grace_events.107
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		remove_modifier = elven_celestial_favor_factor_lost_war
+		add_modifier = {
+			modifier = elven_celestial_favor_factor_lost_war
+			years = 20
+		}
+		elven_evaluate_celestial_favor = yes
+	}
+}
+
+# Colony Destroyed
+planet_event = {
+	id = elven_celestial_grace_events.108
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = { has_valid_civic = civic_elven_celestial_grace }
+	}
+
+	immediate = {
+		owner = {
+			remove_modifier = elven_celestial_favor_factor_lost_planet
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_lost_planet
+				years = 10
+			}
+			elven_evaluate_celestial_favor = yes
+		}
+	}
+}
+
+# Colony Lost
+planet_event = {
+	id = elven_celestial_grace_events.109
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		owner = {
+			NOT = { is_same_value = from }
+		}
+		owner = { has_valid_civic = civic_elven_celestial_grace }
+	}
+
+	immediate = {
+		owner = {
+			remove_modifier = elven_celestial_favor_factor_lost_planet
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_lost_planet
+				years = 10
+			}
+			elven_evaluate_celestial_favor = yes
+		}
+	}
+}
+
+# War Lost
+country_event = {
+	id = elven_celestial_grace_events.110
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_valid_civic = civic_elven_celestial_grace
+	}
+
+	immediate = {
+		remove_modifier = elven_celestial_favor_factor_lost_system
+		add_modifier = {
+			modifier = elven_celestial_favor_factor_lost_system
+			years = 5
+		}
+		elven_evaluate_celestial_favor = yes
+	}
+}

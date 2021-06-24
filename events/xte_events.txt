@@ -1,0 +1,1585 @@
+namespace = xte_traits_ev
+
+country_event = {
+	id = xte_traits_ev.1
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_sluggish }
+			}
+			NOR = {
+				has_trait = trait_admiral_inert
+				has_trait = trait_scientist_fastidious
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_inert
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_fastidious
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_sluggish  }
+				Not = {
+					has_trait = trait_admiral_inert
+					has_trait = trait_scientist_fastidious
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_inert
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_fastidious
+				break = yes
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.3
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_prideful }
+			}
+			NOR = {
+				has_trait = trait_admiral_arrogant
+				has_trait = trait_general_cavalier
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_arrogant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_cavalier
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_prideful }
+				Not = {
+					has_trait = trait_admiral_arrogant
+					has_trait = trait_general_cavalier
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_arrogant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_cavalier
+				break = yes
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.5
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_avant_garde }
+			}
+			NOR = {
+				has_trait = trait_ruler_enlightened
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_enlightened
+				add_ruler_trait = trait_ruler_enlightened
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_enlightened
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_enlightened
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_enlightened
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_enlightened
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.6
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_natural_chemists }
+			}
+			NOR = {
+				has_trait = trait_admiral_gunnery_expert
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_gunnery_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_natural_chemists }
+				Not = {
+					has_trait = trait_admiral_gunnery_expert
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_gunnery_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.8
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_natural_refiners }
+			}
+			NOR = {
+				has_trait = trait_admiral_propulsion_expert
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_propulsion_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.9
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_natural_refiners }
+				Not = {
+					has_trait = trait_admiral_propulsion_expert
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_propulsion_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_natural_translucers }
+			}
+			NOR = {
+				has_trait = trait_admiral_computing_expert
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_computing_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_natural_translucers }
+				Not = {
+					has_trait = trait_admiral_computing_expert
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_computing_expert
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.12
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_inquisitive }
+			}
+			NOR = {
+				has_trait = trait_scientist_pathfinder
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_pathfinder
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.13
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_inquisitive}
+				Not = {
+					has_trait = trait_scientist_pathfinder
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_pathfinder
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.14
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_creative }
+			}
+			NOR = {
+				has_trait = trait_governor_patron_of_the_arts
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_patron_of_the_arts
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.15
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_creative}
+				Not = {
+					has_trait = trait_governor_patron_of_the_arts
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_patron_of_the_arts
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.16
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_crafty }
+			}
+			NOR = {
+				has_trait = trait_governor_forge_master
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_forge_master
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.17
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_crafty}
+				Not = {
+					has_trait = trait_governor_forge_master
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_forge_master
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.18
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_humble }
+			}
+			NOR = {
+				has_trait = trait_governor_diligent
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_diligent
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.19
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_humble}
+				Not = {
+					has_trait = trait_governor_diligent
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_diligent
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_illustrious }
+			}
+			NOR = {
+				has_trait = trait_ruler_regal
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_regal
+				add_ruler_trait = trait_ruler_regal
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_regal
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_regal
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_regal
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_regal
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_gifted_pilots }
+			}
+			NOR = {
+				has_trait = trait_admiral_carrier_commander
+				has_trait = trait_general_battle_mounts
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_carrier_commander
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_battle_mounts
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.22
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_gifted_pilots }
+				Not = {
+					has_trait = trait_admiral_carrier_commander
+					has_trait = trait_general_battle_mounts
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_carrier_commander
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_battle_mounts
+				break = yes
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_flexible }
+			}
+			NOR = {
+				has_trait = trait_ruler_polymath
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_polymath
+				add_ruler_trait = trait_ruler_polymath
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_polymath
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_polymath
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_polymath
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_polymath
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_urban }
+			}
+			NOR = {
+				has_trait = trait_governor_efficient
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_efficient
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.25
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_urban }
+				Not = {
+					has_trait = trait_governor_efficient
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_efficient
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.26
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_intrepid }
+			}
+			NOR = {
+				has_trait = trait_admiral_underdog
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_underdog
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.27
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_intrepid  }
+				Not = {
+					has_trait = trait_admiral_underdog
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_underdog
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.28
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_lawful }
+			}
+			NOR = {
+				has_trait = trait_ruler_lawbringer
+				has_trait = trait_governor_sheriff
+				has_trait = trait_admiral_gendarme
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_lawbringer
+				add_ruler_trait = trait_ruler_lawbringer
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_sheriff
+				add_ruler_trait = trait_ruler_lawbringer
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_gendarme
+				add_ruler_trait = trait_ruler_lawbringer
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_lawbringer
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_lawbringer
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.29
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_lawful  }
+				Not = {
+					has_trait = trait_ruler_lawbringer
+					has_trait = trait_governor_sheriff
+					has_trait = trait_admiral_gendarme
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_lawbringer
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_sheriff
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_gendarme
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.30
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_practical }
+			}
+			NOR = {
+				has_trait = trait_ruler_life_crafter
+				has_trait = trait_governor_machinist
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_life_crafter
+				add_ruler_trait = trait_ruler_life_crafter
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_machinist
+				add_ruler_trait = trait_ruler_life_crafter
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_life_crafter
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_life_crafter
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_life_crafter
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.31
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_practical }
+				Not = {
+					has_trait = trait_ruler_life_crafter
+					has_trait = trait_governor_machinist
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_life_crafter
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_machinist
+				break = yes
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.32
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_theoretical }
+			}
+			NOR = {
+				has_trait = trait_ruler_life_weaver
+				has_trait = trait_governor_naturalist
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_life_weaver
+				add_ruler_trait = trait_ruler_life_weaver
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_naturalist
+				add_ruler_trait = trait_ruler_life_weaver
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_life_weaver
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_life_weaver
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_life_weaver
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.33
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_theoretical }
+				Not = {
+					has_trait = trait_ruler_life_weaver
+					has_trait = trait_governor_naturalist
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_life_weaver
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_naturalist
+				break = yes
+				
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.34
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_oligotrophs }
+			}
+			NOR = {
+				has_trait = trait_governor_reliable
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_oligotrophs }
+				Not = {
+					has_trait = trait_governor_reliable
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.34
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_oligotrophs }
+			}
+			NOR = {
+				has_trait = trait_governor_reliable
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.35
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_oligotrophs }
+				Not = {
+					has_trait = trait_governor_reliable
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.36
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_oligotrophs_lithoid }
+			}
+			NOR = {
+				has_trait = trait_governor_reliable
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.37
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_oligotrophs_lithoid }
+				Not = {
+					has_trait = trait_governor_reliable
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_reliable
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.38
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_analytical }
+			}
+			NOR = {
+				has_trait = trait_ruler_arcanist
+				has_trait = trait_general_forecaster
+				has_trait = trait_scientist_pioneer
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_arcanist
+				add_ruler_trait = trait_ruler_arcanist
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_forecaster
+				add_ruler_trait = trait_ruler_arcanist
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_pioneer
+				add_ruler_trait = trait_ruler_arcanist
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_arcanist
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_arcanist
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.39
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_analytical  }
+				Not = {
+					has_trait = trait_ruler_arcanist
+					has_trait = trait_general_forecaster
+					has_trait = trait_scientist_pioneer
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_arcanist
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_forecaster
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_pioneer
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.40
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_stalwart }
+			}
+			NOR = {
+				has_trait = trait_ruler_valiant
+				has_trait = trait_admiral_paladin
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_valiant
+				add_ruler_trait = trait_ruler_valiant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_paladin
+				add_ruler_trait = trait_ruler_valiant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general}
+				add_ruler_trait = trait_ruler_valiant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_valiant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_valiant
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.41
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_stalwart  }
+				Not = {
+					has_trait = trait_ruler_valiant
+					has_trait = trait_admiral_paladin
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_valiant
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_paladin
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.42
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_genetic_memory }
+			}
+			NOR = {
+				has_trait = trait_ruler_ancestral_knowledge
+				has_trait = trait_governor_ancestral_knowledge
+				has_trait = trait_scientist_ancestral_knowledge
+				has_trait = trait_admiral_ancestral_knowledge
+				has_trait = trait_general_ancestral_knowledge
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_ancestral_knowledge
+				add_ruler_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_ancestral_knowledge
+				add_ruler_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_ancestral_knowledge
+				add_ruler_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_ancestral_knowledge
+				add_ruler_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_ancestral_knowledge
+				add_ruler_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.43
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_genetic_memory  }
+				Not = {
+				has_trait = trait_ruler_ancestral_knowledge
+				has_trait = trait_governor_ancestral_knowledge
+				has_trait = trait_scientist_ancestral_knowledge
+				has_trait = trait_admiral_ancestral_knowledge
+				has_trait = trait_general_ancestral_knowledge
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_trait = trait_governor_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = trait_scientist_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = admiral }
+				add_trait = trait_admiral_ancestral_knowledge
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_trait = trait_general_ancestral_knowledge
+				
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.44
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { has_trait = trait_megalomaniacs }
+			}
+			NOR = {
+				has_trait = trait_ruler_skyborne_architect
+			}
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = admiral }
+				add_ruler_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+			if = {
+				limit = { leader_class = general }
+				add_ruler_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+			if = {
+				limit = { leader_class = governor }
+				add_ruler_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+			if = {
+				limit = { leader_class = scientist }
+				add_ruler_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_skyborne_architect
+				add_ruler_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = xte_traits_ev.45
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		from = { 
+			species = { has_trait = trait_megalomaniacs  }
+				Not = {
+					has_trait = trait_ruler_skyborne_architect
+				
+			}		
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = ruler }
+				add_trait = trait_ruler_skyborne_architect
+				break = yes
+			}
+		}
+	}
+}

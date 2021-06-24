@@ -1,0 +1,48 @@
+namespace = xvcv_mdlc_test
+
+country_event = {
+	id = xvcv_mdlc_test.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {}
+}
+
+
+
+#remove on 06-23
+#remove the 'will_be_removed_from_xvcv_mdlc_traits' and 'will_be_removed_from_xvcv_mdlc_l_english' files too!
+country_event = {
+	id = xvcv_mdlc_test.10
+	hide_window = yes
+	fire_only_once = yes #failsafe
+
+	trigger = {
+		is_ai = no
+		NOT = { has_global_flag = xvcv_mdlc_test_10_happened }
+		any_galaxy_species = {
+			OR = {
+				has_trait = xvcv_mdlc_traits_high_solidity_org
+				has_trait = xvcv_mdlc_traits_engineered_speciality
+			}
+		}
+	}
+
+	immediate = {
+		set_global_flag = xvcv_mdlc_test_10_happened
+		every_galaxy_species = {
+			limit = { has_trait = xvcv_mdlc_traits_high_solidity_org }
+			modify_species = {
+				remove_trait = xvcv_mdlc_traits_high_solidity_org
+				add_trait = xvcv_mdlc_trait_high_solidity_org
+			}
+		}
+		every_galaxy_species = {
+			limit = { has_trait = xvcv_mdlc_traits_engineered_speciality }
+			modify_species = {
+				remove_trait = xvcv_mdlc_traits_engineered_speciality
+				add_trait = xvcv_mdlc_trait_engineered_speciality
+			}
+		}
+	}
+}

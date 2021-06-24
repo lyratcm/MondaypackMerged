@@ -3,9 +3,10 @@
 #_[game_start]
 #_[global_pulse]
 #_[battle]
+#_[fleet_ship]		建造升级/过门
 #_[tech]
 #_[country_pulse]
-#_[country_misc]
+#_[country_misc]	初体验
 #_[planet_misc]
 
 
@@ -88,7 +89,7 @@ on_late_game_pulse = {
 # FromFromFrom = fleet 2
 on_entering_battle = {
 	events = {
-		z_fw_core_battle.1			#_接战框架
+		z_fw_core_battle.1			#_[核心_接战框架]
 		z_fw_core_battle.12			#_接战misc	清理溢出
 		z_fw1_relic_koh.4			#_hok接触	ai感染国家/pc感染光线
 	}
@@ -122,11 +123,39 @@ on_ship_disabled = {
 	}
 }
 
+
+
+
+
+
+
+
+###_[fleet_ship]	#####################################################
+
+##_[建造升级]
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+		z_fw_core_battle_flt.10			#_[核心_ship建造]
+	}
+}
+# A ship has been upgraded
+#  Root = Ship
+on_ship_upgraded = {
+	events = {
+		z_fw_core_battle_flt.11			#_[核心_ship升级]
+	}
+}
+
+##_[过门]
 # A fleet has entered a system
 # Scope = Fleet
 # From = System
 on_entering_system_fleet = {
 	events = {
+		z_fw_core_battle_flt.20			#_[核心_过门debug]
 	#	z_fw_core_battle.110			#_接战框架	检测状态---清理修正
 	}
 }
@@ -171,7 +200,7 @@ on_tech_increased = {
 
 
 
-###_[country_pulse]	#####################################################
+###_[country_pulse]	仅支持普通国家	#####################################################
 # this = country
 on_monthly_pulse_country = {
 	events = {
@@ -203,7 +232,7 @@ on_five_year_pulse_country = {
 
 
 
-###_[country_misc]	[id=4]	#####################################################
+###_[country_misc]	[id=4]	初体验	#####################################################
 
 #This = destroyed country
 #From = optional, destroyer (country)
@@ -213,6 +242,16 @@ on_country_destroyed = {
 	}
 }
 
+#_[初体验]
+# Triggered when two empires discover each other
+# This = Empire 1
+# From = Empire 2
+# Fromfromfrom = System where contact occurred
+on_first_contact = {
+	events = {
+		z_fw_core.42				#_[初体验_基础npc]
+	}
+}
 
 
 
@@ -220,12 +259,15 @@ on_country_destroyed = {
 
 
 
-###_[planet_misc]	[id=5]	#####################################################
+
+###_[planet_misc]	#####################################################
 
 # A colony has been destroyed. Called just before owner and controller is cleared
 # Scope = Planet
 on_colony_destroyed = {
 	events = {
-		z_fw_core.51				#_星球debug[毁灭][殖民地毁灭]
+		z_fw_core_planet.20				#_星球debug[毁灭][殖民地毁灭]
 	}
 }
+
+

@@ -6,12 +6,12 @@ namespace = Events_GAPS_Ground_Bursters
 # FromFrom = Pop
 #on_pop_grown = {
 planet_event = {
-	id = Events_GAPS_Ground_Bursters.1
+	id = Events_GAPS_Ground_Bursters.10
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Ground_Bursters }
+		FromFrom = { pop_has_trait = Trait_GAPS_Ground_Bursters }
 	}
 	immediate = {
 		add_planet_devastation = 10

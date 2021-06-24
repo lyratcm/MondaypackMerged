@@ -1,0 +1,25 @@
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+		Events_GAPS_Traits_Campers.20
+	}
+}
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		Events_GAPS_Traits_Campers.30
+	}
+}
+
+# A building construction has demolished.
+# This = Planet
+on_building_demolished = {
+	events = {
+		Events_GAPS_Traits_Campers.31
+	}
+}

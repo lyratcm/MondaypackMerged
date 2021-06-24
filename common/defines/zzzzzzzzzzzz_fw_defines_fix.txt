@@ -3,32 +3,6 @@
 	NGameplay = {
 		SPAWN_SYSTEM_BUFFER_DISTANCE		= 10.0		# Systems created via spawn_system will not spawn within this distance to another system unless there really is no space for them to not do so
 		SPAWN_SYSTEM_ATTEMPTS				= 15		# Number of times the game will try and find a location for a system created via spawn_system before it defaults to the center of the galaxy. Note: The last two tries ignore SPAWN_SYSTEM_BUFFER_DISTANCE
-		ETHOS_MAX_POINTS = 5
-		GOVERNMENT_CIVIC_POINTS_BASE = 3
-		POP_ETHOS_LOWER_ETHIC_THRESHOLD = 0.9
-		POP_ETHOS_UPPER_ETHIC_THRESHOLD = 1.1
-		POP_MIN_ETHIC_RELATIVE_ATTRACTION = 0.1
-		POP_ETHOS_DIVERGENCE_INTERVAL = 360
-		POP_ETHOS_DIVERGENCE_RATE_MULT = 0.25
-		POP_CHANGE_FACTION_CHANCE = 0.25
-		POP_CURRENT_FACTION_WEIGHT = 1.25
-		NAVAL_CAPACITY_MAX = 99999
-		COMMAND_LIMIT_MAX = 5000
-		EXPERIMENTAL_SUBSPACE_NAVIGATION_TIME_MULT = 3.0
-		FEDERATION_BASE_ETHICS = 5
-		JUMP_DRIVE_COOLDOWN = 100
-		GUARANTEED_COLONIES_MAX = 3
-		MID_GAME_START_DEFAULT = 50
-		MID_GAME_START_MAX = 400
-		MID_GAME_START_MIN = 5
-		END_GAME_START_DEFAULT = 100
-		END_GAME_START_MAX = 800
-		END_GAME_START_MIN = 25
-		START_YEAR_SLIDER_INTERVAL = 25
-		VICTORY_YEAR_DEFAULT = 200
-		VICTORY_YEAR_MAX = 1050
-		VICTORY_YEAR_MIN = 100
-		VICTORY_YEAR_SLIDER_INTERVAL = 50
 	}
 
 	NPop = {
@@ -36,11 +10,7 @@
 		OVERCROWDING_NO_GROWTH_THRESHOLD				= 1.15	# At this amount of overcrowding (required housing / actual housing), growth stops entirely
 		OVERCROWDING_DECLINE_THRESHOLD					= 1.25	# At this amount of overcrowding (required housing / actual housing), pops start declining
 		OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH	= 5		# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in
-		MAX_EMIGRATION_PUSH					= 200
-		MAX_GROWTH_FROM_IMMIGRATION			= 50
-		MAX_GROWTH_PENALTY_FROM_EMIGRATION	= 0.95
-		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 1000
-        FORCED_SPECIES_GROWTH_PENALTY = 0.3
+		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH				= 10 	# No more than this amount of pops can grow, assemble or decline in the same month
 	}
 
 	NAI = {

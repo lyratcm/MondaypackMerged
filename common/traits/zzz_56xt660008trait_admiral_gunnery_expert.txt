@@ -1,0 +1,21 @@
+trait_admiral_gunnery_expert = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_gunnery_expert.dds"
+    modifier = {
+        ship_weapon_damage = 0.05
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_natural_chemists
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

@@ -11,13 +11,14 @@ prosperity = {
 	
 	is_potential = {
 		years_passed > 10
+		has_encountered_other_species = yes
 		NOT = { has_ethic = ethic_gestalt_consciousness }
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_pacifist
 			}
-		}
+		}		
 	}
 	
 	parameters = {
@@ -96,18 +97,9 @@ prosperity = {
 		}
 		
 		modifier = {
-			factor = 0
-			exists = owner
-			owner = { is_govenor_election = yes }
-			NOR = {
-				leader_class = governor
-			}
-		}
-		
-		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}
+		}		
 	}
 	
 	demand = {
@@ -130,91 +122,13 @@ prosperity = {
 				has_country_flag = faction_pacifist_outraged_gc
 			}
 		}
-	}
-	
-	demand = {
-		title = "PROSPERITY_PROFIT"
-		unfulfilled_title = "PROSPERITY_NO_PROFIT"
-		desc = "PROSPERITY_PROFIT_DESC"
+	}	
 
-		fulfilled_effect = 5
-		unfulfilled_effect = -10
 
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_megacorp = yes
-					has_civic = civic_corporate_dominion
-					has_civic = civic_merchant_guilds
-					has_civic = eco_civic_consumerist
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_monthly_income = { resource = energy value > 0 }
-			}
-		}
-	}
-	
-	demand = {
-		title = "PROSPERITY_NO_UNIONS"
-		unfulfilled_title = "PROSPERITY_UNIONS"
-		desc = "PROSPERITY_NO_UNIONS"
-
-		fulfilled_effect = 0.001
-		unfulfilled_effect = -10
-
-		potential = {
-			exists = owner
-			owner = {
-				OR = {
-					is_megacorp = yes
-					has_civic = civic_corporate_dominion
-					has_civic = civic_merchant_guilds
-					has_civic = eco_civic_consumerist
-				}
-				NOR = {
-					has_authority = auth_democratic
-					has_authority = auth_cooperative
-				}
-			}
-		}
-
-		trigger = {
-			NOR = {
-				owner = { has_policy_flag = full_union_rights }
-				owner = { has_policy_flag = normal_union_rights }
-			}
-		}
-	}
-	
 	demand = {
 		title = "PROSPERITY_LIQUIDITY"
 		unfulfilled_title = "PROSPERITY_NO_LIQUIDITY"
 		desc = "PROSPERITY_LIQUIDITY_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				num_owned_planets > 2
-			}
-		}
-
-		trigger = {
-			owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_WANTS_STRATEGIC_RESOURCE1"
-		unfulfilled_title = "PROSPERITY_NO_STRATEGIC_RESOURCE1"
-		desc = "PROSPERITY_WANTS_STRATEGIC_RESOURCE_POP_DESC"
 
 		fulfilled_effect = 10
 		unfulfilled_effect = -0.001
@@ -239,11 +153,7 @@ prosperity = {
 		}
 
 		trigger = {
-			owner = {
-				has_monthly_income = { resource = rare_crystals value > 0.1 }
-				has_monthly_income = { resource = volatile_motes value > 0.1 }
-				has_monthly_income = { resource = exotic_gases value > 0.1 }
-			}
+			owner = { resource_stockpile_compare = { resource = energy value >= 5000 } }
 		}
 	}
 
@@ -260,11 +170,7 @@ prosperity = {
 			owner = {
 				any_relation = {
 					has_communications = root.owner
-					OR = {
-						is_country_type = default
-						is_country_type = ascended_empire
-						is_country_type = lost_empire
-					}
+					is_country_type = default
 					NOT = { exists = overlord }
 				}
 			}
@@ -321,151 +227,6 @@ prosperity = {
 		}
 	}
 	
-	demand = { 
-		title = "PROSPERITY_PEACE_FESTIVALS"
-		unfulfilled_title = "PROSPERITY_NO_PEACE_FESTIVALS"
-		desc = "PROSPERITY_PEACE_FESTIVALS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_pacifist = yes
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_edict = peace_festivals
-			}
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_ENCOURAGE_GROWTH"
-		unfulfilled_title = "PROSPERITY_NO_ENCOURAGE_GROWTH"
-		desc = "PROSPERITY_ENCOURAGE_GROWTH_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-		}
-
-		trigger = {
-			owner = {
-				has_edict = nutritional_plenitude
-			}
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_INDUSTRIAL_SUBSIDIES"
-		unfulfilled_title = "PROSPERITY_NO_INDUSTRIAL_SUBSIDIES"
-		desc = "PROSPERITY_INDUSTRIAL_SUBSIDIES_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_global_production_strategy }
-		}
-
-		trigger = {
-			owner = {
-				has_edict = industrial_subsidies
-			}
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_EXTENDED_SHIFTS"
-		unfulfilled_title = "PROSPERITY_NO_EXTENDED_SHIFTS"
-		desc = "PROSPERITY_EXTENDED_SHIFTS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_non_swapped_tradition = tr_domination_workplace_motivators
-				OR = {
-					is_authoritarian = yes
-					has_authority = auth_imperial
-					has_authority = auth_dictatorial
-					AND = {
-						is_egalitarian = no
-						OR = {
-							is_megacorp = yes
-							has_civic = civic_corporate_dominion
-							has_civic = civic_merchant_guilds
-							has_civic = eco_civic_consumerist
-						}
-					}
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_edict = extended_shifts
-			}
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_NO_FLEET_SUPREMACY"
-		unfulfilled_title = "PROSPERITY_FLEET_SUPREMACY"
-		desc = "PROSPERITY_NO_FLEET_SUPREMACY_DESC"
-
-		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_doctrine_fleet_size_1 }
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					NOT = { has_edict = fleet_supremacy }
-					any_war = { is_war_participant = { who = root side = defenders } }
-					has_crisis = yes
-				}
-			}
-		}
-	}
-	
-	demand = { 
-		title = "PROSPERITY_NO_FORGE_SUBSIDIES"
-		unfulfilled_title = "PROSPERITY_FORGE_SUBSIDIES"
-		desc = "PROSPERITY_NO_FORGE_SUBSIDIES_DESC"
-
-		unfulfilled_effect = -5
-		fulfilled_effect = 0.001
-
-		potential = {
-			exists = owner
-			owner = { has_technology = tech_global_production_strategy }
-		}
-
-		trigger = {
-			owner = {
-				OR = {
-					NOT = { has_edict = forge_subsidies }
-					any_war = { is_war_participant = { who = root side = defenders } }
-					has_crisis = yes
-				}
-			}
-		}
-	}
-	
 	demand = {
 		title = "PROSPERITY_PEACEFUL_APPLICATIONS"
 		unfulfilled_title = "PROSPERITY_NO_PEACEFUL_APPLICATIONS_APPLICATIONS"
@@ -507,7 +268,7 @@ prosperity = {
 
 		unfulfilled_effect = -5
 		fulfilled_effect = +0.001
-		
+
 		potential = {
 			exists = owner
 			owner = {
@@ -515,8 +276,8 @@ prosperity = {
 				has_technology = tech_arcane_deciphering
 				OR = {
 					has_modifier = artifact_find_military_application_army
-					has_modifier = artifact_find_military_application_shield_damage 
-					has_modifier = artifact_find_military_application_armor_damage 
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
 				}
 			}
 		}
@@ -525,38 +286,9 @@ prosperity = {
 			owner = {
 				NOR = {
 					has_modifier = artifact_find_military_application_army
-					has_modifier = artifact_find_military_application_shield_damage 
-					has_modifier = artifact_find_military_application_armor_damage 
+					has_modifier = artifact_find_military_application_shield_damage
+					has_modifier = artifact_find_military_application_armor_damage
 				}
-			}
-		}
-	}
-	
-	demand = {
-		title = "MERCANTILE_DIPLO_STANCE"
-		unfulfilled_title = "MERCANTILE_DIPLO_STANCE"
-		desc = "MERCANTILE_DIPLO_STANCE_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				is_homicidal = no
-				OR = {
-					is_country_type = default
-					is_country_type = ascended_empire
-					is_country_type = lost_empire
-				}
-
-				has_policy_flag = diplo_stance_mercantile
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_policy_flag = diplo_stance_mercantile
 			}
 		}
 	}
@@ -573,12 +305,7 @@ prosperity = {
 			exists = owner
 			owner = {
 				is_homicidal = no
-				OR = {
-					is_country_type = default
-					is_country_type = ascended_empire
-					is_country_type = lost_empire
-				}
-
+				is_country_type = default
 				OR = {
 					has_policy_flag = diplo_stance_belligerent
 					has_policy_flag = diplo_stance_supremacist
@@ -595,6 +322,29 @@ prosperity = {
 			}
 		}
 	}
+	
+	demand = {
+		title = "PEACEFUL_ECONOMY"
+		unfulfilled_title = "PEACEFUL_ECONOMY"
+		desc = "PEACEFUL_ECONOMY_DESC"
+
+		fulfilled_effect = 10
+
+		potential = { 
+			exists = owner
+		}
+
+		trigger = {
+			owner = { 			  			
+				has_policy_flag = economic_policy_civilian		
+			}
+				
+		}
+	}		
+
+	on_create = {
+		pop_faction_event = { id = factions.1 }
+	}	
 
 	on_destroy = {
 		if = {
@@ -661,11 +411,7 @@ prosperity = {
 						every_relation = {
 							limit = {
 								is_ai = no
-								OR = {
-									is_country_type = default
-									is_country_type = ascended_empire
-									is_country_type = lost_empire
-								}			
+								is_country_type = default			
 								has_communications = prev
 							}
 							country_event = { id = factions.2000 }
@@ -684,10 +430,6 @@ prosperity = {
 					}
 				}
 				modifier = {
-					factor = 0.25
-					support < 0.50
-				}
-				modifier = {
 					factor = 0
 					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}				
@@ -703,13 +445,13 @@ prosperity = {
 					}
 				}
 				modifier = {
-					factor = 0.1
-					owner = { has_ethic = ethic_militarist }
-				}
-				modifier = {
 					factor = 0
-					owner = { has_ethic = ethic_fanatic_militarist }
-				}
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}					
+					}
+				}				
 			}
 		}
 		promote_faction = {
@@ -719,7 +461,10 @@ prosperity = {
 			potential = {
 				exists = owner
 				parameter:empire = {
-					NOT = { has_ethic = ethic_fanatic_pacifist }
+					NOR = {
+						has_ethic = ethic_pacifist
+						has_ethic = ethic_fanatic_pacifist
+					}
 				}
 			}
 

@@ -39,6 +39,7 @@ starbase_building_am_civics_tourist_quarters = {
 
 	system_modifier = {
 		trade_value_mult = 0.25
+		planet_resettlement_unemployed_mult = 0.25
 	}	
 
 	custom_tooltip = starbase_building_am_civics_tourist_quarters_desc_modifier

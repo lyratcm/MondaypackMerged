@@ -4,7 +4,7 @@ ELVEN = {
 		plural = "Moriches"
 		home_planet = "Garlas Agea"
 		home_system = "Garlas Agea"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_ayleid"
 	}
 	
 	elven_name_2 = {
@@ -12,7 +12,7 @@ ELVEN = {
 		plural = "Altmeri"
 		home_planet = "Alinor"
 		home_system = "Eton Nir"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_altmer"
 	}
 	
 	elven_name_3 = {
@@ -20,7 +20,7 @@ ELVEN = {
 		plural = "Brannili"
 		home_planet = "Areth"
 		home_system = "Arethor"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_hidden"
 	}
 	
 	elven_name_4 = {
@@ -28,7 +28,7 @@ ELVEN = {
 		plural = "Ianis"
 		home_planet = "Inwen Aloria"
 		home_system = "Inwen"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_eldali"
 	}
 	
 	elven_name_5 = {
@@ -36,7 +36,7 @@ ELVEN = {
 		plural = "Boiches"
 		home_planet = "Arenthia"
 		home_system = "Y'ffre"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_altmer"
 	}
 	
 	elven_name_6 = {
@@ -44,7 +44,7 @@ ELVEN = {
 		plural = "Salaches"
 		home_planet = "Artaeum"
 		home_system = "Ceporah"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_altmer"
 	}
 
 	elven_name_7 = {
@@ -52,7 +52,7 @@ ELVEN = {
 		plural = "Lomelassi"
 		home_planet = "Celania"
 		home_system = "Tiorith"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_eldali"
 	}
 	
 	elven_name_8 = {
@@ -60,7 +60,7 @@ ELVEN = {
 		plural = "Sithrandiri"
 		home_planet = "Eldridia"
 		home_system = "Anil Gal"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_aenari"
 	}
 	
 	elven_name_9 = {
@@ -68,7 +68,7 @@ ELVEN = {
 		plural = "Sarand"
 		home_planet = "Saras Lir"
 		home_system = "Tor Galinde"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_ayleid"
 	}
 	
 	elven_name_10 = {
@@ -76,7 +76,7 @@ ELVEN = {
 		plural = "Gaerathen"
 		home_planet = "Faladris"
 		home_system = "Elindor"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_hidden"
 	}
 	
 	elven_name_11 = {
@@ -84,16 +84,15 @@ ELVEN = {
 		plural = "Thoronaith"
 		home_planet = "Esgadris"
 		home_system = "Imrathas"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_wild"
 	}
 	
-	## NOTE: Switch to ELVEN5 when possible!
 	elven_name_12 = {
 		name = "Noldor"
 		plural = "Noldor"
 		home_planet = "Imladris"
 		home_system = "Eriador"
-		name_list = "ELVEN4"
+		name_list = "eos_namelist_elf_wild"
 	}
 
 	elven_name_13 = {
@@ -101,7 +100,7 @@ ELVEN = {
 		plural = "Seirií"
 		home_planet = "Venaesia"
 		home_system = "Verubri"
-		name_list = "ELVEN4"
+		name_list = "eos_namelist_elf_eldali"
 	}
 
 	elven_name_14 = {
@@ -109,7 +108,7 @@ ELVEN = {
 		plural = "Cetarií"
 		home_planet = "Carantiana"
 		home_system = "Cistonia"
-		name_list = "ELVEN3"
+		name_list = "eos_namelist_elf_wild"
 	}
 
 	elven_name_15 = {
@@ -117,7 +116,7 @@ ELVEN = {
 		plural = "Andorií"
 		home_planet = "Atreba"
 		home_system = "Navia"
-		name_list = "ELVEN2"
+		name_list = "eos_namelist_elf_wild"
 	}
 
 	elven_name_16 = {
@@ -125,6 +124,6 @@ ELVEN = {
 		plural = "Ellirií"
 		home_planet = "Danissa"
 		home_system = "Iria"
-		name_list = "ELVEN1"
+		name_list = "eos_namelist_elf_hidden"
 	}
 }

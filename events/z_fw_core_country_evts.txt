@@ -1,6 +1,7 @@
-###_infinite stellaris core-国家事件	####################################################################
-#_与国家有关的核心功能
+###_infinite stellaris core_国家	####################################################################
 namespace = z_fw_core_country
+
+#_[旧_星球人口限制]
 
 
 ###_外部联动	######################################
@@ -8,25 +9,16 @@ namespace = z_fw_core_country
 	#_[z_fw_core_country.20]=debug			初始化和清理额外modifier
 	#_[z_fw_core_country.2]=添加deposit		根据var添加deposit
 
-
-
-
-###_引用
 #_global_flag	[z_fw_plnt_capacity_disabled]				星球人口限制
 
 
 
 
-###_xxxxx	[id=1]	###############################################################################
 
 
 
 
-
-
-
-
-###_星球人口限制	[id=2]	######################################################################
+###_[z禁用:星球人口限制]	[id=2]	######################################################################
 
 #_CORE	星球人口限制	[debug]	[id=20]
 #_global_flag	[z_fw_plnt_capacity_disabled]禁用人口上限	等同[z_pr_installed]
@@ -35,6 +27,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		always = no	#_[z禁用]
 		OR = {#_存在[产业革命],禁用[星球人口限制]
 			has_global_flag = z_fw_plnt_capacity_disabled
 			has_global_flag = z_pr_installed
@@ -68,6 +61,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
+		always = no	#_[z禁用]
 		NOR = {#_存在[产业革命],禁用[星球人口限制]
 			has_global_flag = z_fw_plnt_capacity_disabled
 			has_global_flag = z_pr_installed

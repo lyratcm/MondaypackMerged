@@ -1,30 +1,55 @@
 
 civic_am_civics_off_world_investors = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_off_world_investors_effects"
 }
 
 civic_am_civics_stellar_travel_agency = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_stellar_travel_agency_effects"
 }
 
 civic_am_civics_social_media_giant = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_social_media_giant_effects"
 }
 
 civic_am_civics_knowledge_is_profit = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_knowledge_merchants_effects"
 }
 
 civic_am_civics_urban_parcification_tools = {
-	potential = { authority = { value = auth_corporate } }	
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	possible = { civics = { NOT = {	value = civic_criminal_heritage } } }
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_urban_parcification_tools_effects"
@@ -34,13 +59,23 @@ civic_am_civics_urban_parcification_tools = {
 }
 
 civic_am_civics_corporate_growth = {
-	potential = { authority = { value = auth_corporate } }	
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_corporate_growth_effects"
 }
 
 civic_am_civics_charitable_efforts = {
-	potential = { authority = { value = auth_corporate } }	
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	possible = { 
 		civics = { 
 			NOT = {	value = civic_criminal_heritage } 
@@ -55,11 +90,16 @@ civic_am_civics_charitable_efforts = {
 	}
 	random_weight = { base = 2 }
 	description = "tooltip_civic_am_civics_charitable_efforts_effects"
-	modification = no
+	# modification = no
 }
 
 civic_am_civics_locust_capitalism = {
-	potential = { authority = { value = auth_corporate } }	
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 0 }
 	description = "tooltip_civic_am_civics_locust_capitalism_effects"
 	modification = no
@@ -82,7 +122,12 @@ civic_am_civics_locust_capitalism = {
 }
 
 civic_am_civics_military_industrial_complex = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	possible = { 
 		ethics = {
 			NOR = {
@@ -98,7 +143,12 @@ civic_am_civics_military_industrial_complex = {
 }
 
 civic_am_civics_banking_giant = {
-	potential = { authority = { value = auth_corporate } }
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
 	random_weight = { base = 5 }
 	description = "tooltip_civic_am_civics_banking_giant_effects"
 }

@@ -1,0 +1,15 @@
+
+# This = Country
+# From = Species ( Post Modification )
+on_modification_complete = {
+	events = {
+		Events_GAPS_Effect_Species_Modification_Fix.10
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		Events_GAPS_Effect_Species_Modification_Fix.11
+	}
+}

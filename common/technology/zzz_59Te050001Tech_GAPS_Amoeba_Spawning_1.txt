@@ -1,0 +1,36 @@
+Tech_GAPS_Amoeba_Spawning_1 = {
+    icon = "Tech_GAPS_Amoeba_Spawning_1"
+    is_reverse_engineerable = no
+    area = society
+    category = {
+        biology
+    }
+    is_rare = yes
+    is_dangerous = yes
+    tier = 1
+    cost = 2000
+    cost_per_level = 2000
+    levels = 2
+    weight = 100
+    prerequisites = {
+        "Tech_GAPS_Amoeba_Spawning_1"
+    }
+    potential = {
+        has_origin = Origin_GAPS_Amoeba_Spawners
+        not = {
+            has_technology = Tech_GAPS_Amoeba_Spawning_1
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "Tech_GAPS_Amoeba_Spawning_1_desc"
+            desc = "Tech_GAPS_Amoeba_Spawning_1_desc"
+        }
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

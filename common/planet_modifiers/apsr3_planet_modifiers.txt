@@ -1,8 +1,0 @@
-
-apsr3_planet = {
-	spawn_chance = {
-		#None - From Event Generation
-	}
-	
-	modifier = "apsr3_planet_modifier"
-}

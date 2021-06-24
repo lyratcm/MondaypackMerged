@@ -3,6 +3,6 @@
 # Scope = Planet
 on_colonized = {
 	events = {
-		Events_GAPS_Traits_Settlers.3
+		Events_GAPS_Traits_Settlers.10
 	}
 }

@@ -1,0 +1,20 @@
+trait_gluttonous = {
+    cost = -3
+    initial = yes
+    randomized = yes
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_oligotrophs"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_pops_food_upkeep_mult = 0.3
+    }
+    slave_cost = {
+        energy = -100
+    }
+}

@@ -1,0 +1,3 @@
+Planet_Modifier_GAPS_Trait_Zeal = {
+	planet_jobs_unity_produces_mult = 0.01
+}

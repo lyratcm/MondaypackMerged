@@ -25,7 +25,7 @@ decision_nhsc_mod_menu = {
 	allow = {
 		owner = { is_ai = no }
 		custom_tooltip = {#_主机
-			hidden_trigger = { owner = { z_fw_trgr_cntr_host_mp = yes } }
+			hidden_trigger = { owner = { z_fw_trgr_cntr_core_mp_host = yes } }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}

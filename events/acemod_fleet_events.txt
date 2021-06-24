@@ -147,44 +147,46 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		set_global_flag = acemod_global_flag_akeean_shield_active_hotfix
-		every_planet = {
-			limit = {
-				OR = {
-					has_planet_flag = akeean_shield_active
-					# has_planet_flag = akeean_planetary_shielding_device	# Moon with shielding device is not shielded itself.
-					has_planet_flag = akeean_shielded_homeworld
-					has_planet_flag = corrona					# Gigastructural Engineering & More Corrona Primitive world
-				}
-			}
-			random_list = {
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 30
+		every_system = {
+			every_system_planet = {
+				limit = {
+					OR = {
+						has_planet_flag = akeean_shield_active
+						# has_planet_flag = akeean_planetary_shielding_device	# Moon with shielding device is not shielded itself.
+						has_planet_flag = akeean_shielded_homeworld
+						has_planet_flag = corrona						# Gigastructural Engineering & More Corrona Primitive world
 					}
 				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 35
+				random_list = {
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 30
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 40
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 35
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 45
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 40
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 50
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 45
+						}
+					}
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 50
+						}
 					}
 				}
 			}
@@ -207,39 +209,41 @@ event = {
 	}
 	immediate = {
 		set_global_flag = acemod_global_flag_gigas_corrona_active_hotfix
-		every_planet = {
-			limit = {
-				has_planet_flag = corrona				# Gigastructural Engineering & More Corrona Primitive world
-			}
-			random_list = {
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 30
-					}
+		every_system = {
+			every_system_planet = {
+				limit = {
+					has_planet_flag = corrona					# Gigastructural Engineering & More Corrona Primitive world
 				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 35
+				random_list = {
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 30
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 40
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 35
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 45
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 40
+						}
 					}
-				}
-				20 = {
-					set_timed_planet_flag = {
-						flag = acemod_planet_flag_bombardment_target_ignore
-						years = 50
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 45
+						}
+					}
+					20 = {
+						set_timed_planet_flag = {
+							flag = acemod_planet_flag_bombardment_target_ignore
+							years = 50
+						}
 					}
 				}
 			}
@@ -680,6 +684,7 @@ fleet_event = {
 			closest_system = {
 				min_steps = 1
 				max_steps = 20
+				use_bypasses = no
 				limit = {
 					exists = owner
 					has_access_fleet = root.owner
@@ -728,8 +733,7 @@ fleet_event = {
 		}
 		save_event_target_as = acemod_event_target_invader_fleet
 		set_fleet_stance = aggressive
-		set_fleet_bombardment_stance = indiscriminate		# For backwards compatibility with pre 2.8
-		set_fleet_bombardment_stance = armageddon		# Vanilla has selective on default
+		set_fleet_bombardment_stance = armageddon		# Bombardment fix for for mods overwriting vanilla with outdated code.
 		set_aggro_range_measure_from = self
 		set_aggro_range = 800		# Longer aggro range, same as for pirate systems (default 500)
 		queue_actions = {
@@ -788,6 +792,7 @@ fleet_event = {
 			closest_system = {
 				min_steps = 1
 				max_steps = 40				#	Increased search range.
+				use_bypasses = yes
 				limit = {
 					exists = owner
 					has_access_fleet = root.owner
@@ -811,8 +816,7 @@ fleet_event = {
 		}
 		save_event_target_as = acemod_event_target_invader_fleet
 		set_fleet_stance = aggressive
-		set_fleet_bombardment_stance = indiscriminate		# For backwards compatibility with pre 2.8
-		set_fleet_bombardment_stance = armageddon		# Vanilla has selective on default
+		set_fleet_bombardment_stance = armageddon		# Bombardment fix for for mods overwriting vanilla with outdated code.
 		set_aggro_range_measure_from = self
 		set_aggro_range = 800		# Longer aggro range, same as for pirate systems (default 500)
 		queue_actions = {
@@ -987,62 +991,97 @@ country_event = {
 		if = {
 			limit = {
 				has_global_flag = acemod_activated
-				NOT = {
-					has_country_flag = acemod_country_flag_starbase_defensive_protocol_disabled					# Response mechanism is now a core fleet AI functionality and is enabled on default.
-				}
-				FROMFROM = {
-					OR = {
-						is_ship_size = starbase_exd
-						is_ship_size = starbase_exd_0
-						is_ship_size = starbase_ai
-						is_ship_size = starbase_swarm
-						has_fleet_flag = acemod_fleet_flag_starbase_defensive_protocol						# Only fleets marked with this flag or ship sizes listed above will trigger response if defeated.
-					}
-				}
 			}
-			fromfrom = {
-				solar_system = {
-					set_timed_star_flag = {
-						flag = acemod_star_flag_response_trigger						# Marking system where incident happened for debugging purposes.
-						days = 540
+			if = {
+				limit = {
+					NOT = {
+						has_country_flag = acemod_country_flag_starbase_defensive_protocol_disabled						# Response mechanism is now a core fleet AI functionality and is enabled on default.
 					}
-					every_fleet_in_system = {
-						limit = {
-							is_ship_class = shipclass_military
-							owner = {
-								is_hostile = root.owner								# Marking all enemy fleets in the system as perpetrators.
-							}
+					FROMFROM = {
+						OR = {
+							is_ship_size = starbase_exd
+							is_ship_size = starbase_exd_0
+							is_ship_size = starbase_ai
+							is_ship_size = starbase_swarm
+							has_fleet_flag = acemod_fleet_flag_starbase_defensive_protocol							# Only fleets marked with this flag or ship sizes listed above will trigger response if defeated.
 						}
-						if = {
+					}
+				}
+				fromfrom = {
+					solar_system = {
+						set_timed_star_flag = {
+							flag = acemod_star_flag_response_trigger							# Marking system where incident happened for debugging purposes.
+							days = 540
+						}
+						every_fleet_in_system = {
 							limit = {
-								NOT = {
-									has_fleet_flag = acemod_fleet_flag_response_target_candidate@root									# Fleet is marked with defeated fleet's owner's ID.
+								is_ship_class = shipclass_military
+								owner = {
+									is_hostile = root.owner									# Marking all enemy fleets in the system as perpetrators.
 								}
 							}
-							set_timed_fleet_flag = {
-								flag = acemod_fleet_flag_response_target_candidate@root
-								days = 540
+							if = {
+								limit = {
+									NOT = {
+										has_fleet_flag = acemod_fleet_flag_response_target_candidate@root										# Fleet is marked with defeated fleet's owner's ID.
+									}
+								}
+								set_timed_fleet_flag = {
+									flag = acemod_fleet_flag_response_target_candidate@root
+									days = 540
+								}
+							}
+							else = {
+								set_timed_fleet_flag = {
+									flag = acemod_fleet_flag_response_target_candidate@root									# Account for possibly already dispatched response.
+									days = 540
+								}
+							}
+							change_variable = {
+								which = acemod_var_fleet_defensive_protocol_kill_count								# Keeping kill count on fleets, possibly for future features.
+								value = 1
 							}
 						}
-						else = {
-							set_timed_fleet_flag = {
-								flag = acemod_fleet_flag_response_target_candidate@root								# Account for possibly already dispatched response.
-								days = 540
-							}
-						}
-						change_variable = {
-							which = acemod_var_fleet_defensive_protocol_kill_count							# Keeping kill count on fleets, possibly for future features.
-							value = 1
+					}
+				}
+				# from = {
+				# 	change_variable = {
+				# 		which = acemod_var_country_defensive_protocol_kill_count	# Need to account for multiple owners' fleets. Will allow to evaluate how dangerous specific galactic empires are.
+				# 		value = 1
+				# 	}
+				# }
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = acemod_fleet_mergers_disabled
+					}
+					FROMFROM = {
+						is_ship_class = shipclass_military
+					}
+				}
+				if = {
+					limit = {
+						always = yes						# WIP
+					}
+					# Original scopes:
+					# This = owner of fleet 1 (loser - crisis fleet)
+					# From = owner of fleet 2 (winner - anti-crisis fleet)
+					# FromFrom = fleet 1
+					# FromFromFrom = fleet 2
+					# WIP, scopes work
+					fire_on_action = {
+						on_action = acemod_custom_on_action_merge_fleets
+						scopes = {
+							# root/this = owner of fleet 1 (loser - crisis fleet 1)
+							from = root.from							# owner of fleet 2 (winner - anti-crisis fleet 2)
+							fromfrom = root.fromfrom.solar_system							# solar_system of engagement
+							fromfromfrom = root.FromFromFrom							# fleet 2 (winner - anti-crisis fleet 2)
+							# fromfromfromfrom = fromfrom.solar_system	# (Optional) Rendezvous system for fleet merger. NOTE: Defaults to one of fleets even if not defined so it doesn't work.
 						}
 					}
 				}
 			}
-			# from = {
-			# 	change_variable = {
-			# 		which = acemod_var_country_defensive_protocol_kill_count	# Need to account for multiple owners' fleets. Will allow to evaluate how dangerous specific galactic empires are.
-			# 		value = 1
-			# 	}
-			# }
 		}
 	}
 }
@@ -1164,6 +1203,7 @@ fleet_event = {
 			solar_system = {
 				every_fleet_in_system = {
 					limit = {
+						is_ship_class = shipclass_military
 						owner = {
 							NOT = {
 								is_same_value = root.owner
@@ -1171,7 +1211,6 @@ fleet_event = {
 							has_country_flag = acemod_assisted_ai
 							is_hostile = root.owner
 						}
-						is_ship_class = shipclass_military
 						NOT = {
 							has_fleet_flag = acemod_fleet_flag_solar_response_team
 						}
@@ -1269,7 +1308,7 @@ fleet_event = {
 									# min_distance = 0
 									# max_distance = 3
 									# type = hyperlane
-									use_bypasses = yes
+									use_bypasses = no
 									bypass_empire = owner
 									min_jumps = 0
 									max_jumps = 1
@@ -1301,7 +1340,7 @@ fleet_event = {
 										# min_distance = 0
 										# max_distance = 3
 										# type = hyperlane
-										use_bypasses = yes
+										use_bypasses = no
 										bypass_empire = owner
 										min_jumps = 0
 										max_jumps = 2
@@ -1335,7 +1374,7 @@ fleet_event = {
 										# min_distance = 0
 										# max_distance = 3
 										# type = hyperlane
-										use_bypasses = yes
+										use_bypasses = no
 										bypass_empire = owner
 										min_jumps = 0
 										max_jumps = 3
@@ -1369,7 +1408,7 @@ fleet_event = {
 										# min_distance = 0
 										# max_distance = 3
 										# type = hyperlane
-										use_bypasses = yes
+										use_bypasses = no
 										bypass_empire = owner
 										min_jumps = 0
 										max_jumps = 4
@@ -1403,7 +1442,7 @@ fleet_event = {
 										# min_distance = 0
 										# max_distance = 3
 										# type = hyperlane
-										use_bypasses = yes
+										use_bypasses = no
 										bypass_empire = owner
 										min_jumps = 0
 										max_jumps = 5
@@ -1513,7 +1552,7 @@ fleet_event = {
 										# min_distance = 0
 										# max_distance = 3
 										# type = hyperlane
-										use_bypasses = yes
+										use_bypasses = no
 										bypass_empire = owner
 										min_jumps = 0
 										max_jumps = 1
@@ -1545,7 +1584,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 2
@@ -1579,7 +1618,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 3
@@ -1613,7 +1652,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 4
@@ -1647,7 +1686,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 5
@@ -1681,7 +1720,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 6
@@ -1715,7 +1754,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 7
@@ -1749,7 +1788,7 @@ fleet_event = {
 											# min_distance = 0
 											# max_distance = 3
 											# type = hyperlane
-											use_bypasses = yes
+											use_bypasses = no
 											bypass_empire = owner
 											min_jumps = 0
 											max_jumps = 8
@@ -1767,6 +1806,63 @@ fleet_event = {
 									acemod_response_effect = yes
 									break = yes
 								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Recalculate targets for inbound fleets if system is taken.
+# on_system_gained
+# From = system
+# FromFrom = country (previous owner)
+# This = country (new owner)
+country_event = {
+	id = acemod_fleet.140
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = acemod_assisted_ai
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_global_flag = acemod_activated
+			}
+			every_owned_fleet = {
+				limit = {
+					root.from = {
+						has_star_flag = acemod_star_flag_solar_system_target@prev
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							check_variable = {
+								which = acemod_var_fleet_piloted_exclusion
+								value = 1
+							}
+						}
+					}
+					root.from = {
+						remove_star_flag = acemod_star_flag_solar_system_target@prev
+					}
+					locked_random_list = {
+						80 = {
+							fleet_event = {
+								id = acemod_fleet.105
+								days = 3
+								random = 10
+							}
+						}
+						20 = {
+							fleet_event = {
+								id = acemod_fleet.150								# Pinging systems to indicate potential high value targets.
+								days = 3
+								random = 10
 							}
 						}
 					}
@@ -2375,6 +2471,7 @@ fleet_event = {
 			closest_system = {
 				min_steps = 1
 				max_steps = 20
+				use_bypasses = no
 				limit = {
 					has_access_fleet = root.owner
 					NOR = {
@@ -2386,7 +2483,7 @@ fleet_event = {
 					}
 					NOR = {
 						any_fleet_in_system = {
-							# exists = this		# Oops.
+							exists = owner
 							OR = {
 								AND = {
 									owner = {
@@ -2918,12 +3015,21 @@ fleet_event = {
 							effect = {
 								id = "acemod.405.e2"
 								root = {
-									# fleet = {
-									# 	leader = {
-									# 		save_event_target_as = acemod_event_target_invader_army_leader
-									# 		unassign_leader = this
-									# 	}
-									# }
+									fleet = {
+										if = {
+											limit = {
+												exists = leader
+											}
+											leader = {
+												save_event_target_as = acemod_event_target_invader_army_leader
+												set_timed_leader_flag = {
+													flag = acemod_leader_flag_invader_army_leader_free
+													days = 5
+												}
+												unassign_leader = this
+											}
+										}
+									}
 									if = {
 										limit = {
 											owner = {
@@ -2944,17 +3050,27 @@ fleet_event = {
 													type = "swarm_army"
 													species = event_target:prethoryn_species
 												}
+												# Ground combat remains leaderless even when leader is assigned to the first created army, this is beyond fixing until fleet queue to land armies exists.
+												# if = {
+												# 	limit = {
+												# 		exists = event_target:acemod_event_target_invader_army_leader
+												# 	}
+												# 	if = {
+												# 		limit = {
+												# 			event_target:acemod_event_target_invader_army_leader = {
+												# 				has_leader_flag = acemod_leader_flag_invader_army_leader_free
+												# 			}
+												# 		}
+												# 		last_created_army = {
+												# 			assign_leader = event_target:acemod_event_target_invader_army_leader
+												# 		}
+												# 		event_target:acemod_event_target_invader_army_leader = {
+												# 			remove_leader_flag = acemod_leader_flag_invader_army_leader_free
+												# 		}
+												# 	}
+												# }
 											}
 										}
-										# Does not work.
-										# prev = {
-										# 	random_planet_army = {
-										# 		limit = {
-										# 			is_owned_by = event_target:invader_owner
-										# 		}
-										# 		assign_leader = event_target:acemod_event_target_invader_army_leader
-										# 	}
-										# }
 										delete_fleet = {
 											target = this
 											kill_leader = no
@@ -3002,15 +3118,6 @@ fleet_event = {
 												}
 											}
 										}
-										# Does not work.
-										# prev = {
-										# 	random_planet_army = {
-										# 		limit = {
-										# 			is_owned_by = event_target:invader_owner
-										# 		}
-										# 		assign_leader = event_target:acemod_event_target_invader_army_leader
-										# 	}
-										# }
 										delete_fleet = {
 											target = this
 											kill_leader = no
@@ -3034,15 +3141,6 @@ fleet_event = {
 												}
 											}
 										}
-										# Does not work.
-										# prev = {
-										# 	random_planet_army = {
-										# 		limit = {
-										# 			is_owned_by = event_target:invader_owner
-										# 		}
-										# 		assign_leader = event_target:acemod_event_target_invader_army_leader
-										# 	}
-										# }
 										delete_fleet = {
 											target = this
 											kill_leader = no
@@ -3206,6 +3304,7 @@ fleet_event = {
 			closest_system = {
 				min_steps = 1
 				max_steps = 20
+				use_bypasses = no
 				limit = {
 					has_access_fleet = root.owner
 					NOT = {
@@ -3346,12 +3445,6 @@ country_event = {
 					species = event_target:prethoryn_species
 				}
 			}
-			fromfrom = {
-				planet_event = {
-					id = acemod_fleet.506					# Fix for start_colony effect which broke in 2.8
-					days = 1080
-				}
-			}
 		}
 	}
 }
@@ -3460,11 +3553,8 @@ fleet_event = {
 				find_closest_planet = {
 					trigger = {
 						id = "acemod.505.t1"
-						distance = {
-							source = THIS
-							type = hyperlane
-							max_jumps = 1
-							use_bypasses = yes
+						solar_system = {
+							is_same_value = prev.solar_system
 						}
 						habitable_planet = yes
 						is_colony = no
@@ -3525,10 +3615,6 @@ fleet_event = {
 								root = {
 									delete_fleet = this
 								}
-								planet_event = {
-									id = acemod_fleet.506									# Fix for start_colony effect which broke in 2.8
-									days = 1080
-								}
 							}
 							else = {
 								root.owner = {
@@ -3542,10 +3628,6 @@ fleet_event = {
 								}
 								root = {
 									delete_fleet = this
-								}
-								planet_event = {
-									id = acemod_fleet.506									# Fix for start_colony effect which broke in 2.8
-									days = 1080
 								}
 							}
 						}
@@ -3576,66 +3658,6 @@ fleet_event = {
 	}
 }
 
-# # Fix for start_colony effect which broke in 2.8 but was working just fine in 2.7... (ceaseless colonisation bug).
-planet_event = {
-	id = acemod_fleet.506
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = {
-				has_colony_progress >= 1				# Failsafe if planet was reclaimed by normal empire.
-			}
-			set_planet_flag = acemod_planet_flag_start_colony_effect_fix
-			create_colony = {
-				owner = solar_system.owner
-				species = solar_system.owner
-				# ethos = solar_system.owner
-			}
-		}
-	}
-}
-
-# # Hotfix for start_colony effect for ongoing games. Needs commenting out when Stellaris 2.9 patch comes out and people drop their current saves. on_yearly_pulse
-event = {
-	id = acemod_fleet.507
-	hide_window = yes
-	is_triggered_only = yes
-	trigger = {
-		NOT = {
-			has_global_flag = acemod_global_flag_start_colony_effect_fix_disabled
-		}
-	}
-	immediate = {
-		event_target:global_event_country = {
-			country_event = {
-				id = acemod_fleet.508				#	Delay for performance.
-				days = 35
-				random = 20
-			}
-		}
-	}
-}
-
-# # Fix event delayed for game start performance and possibility for other mods to disable this without overwrites.
-country_event = {
-	id = acemod_fleet.508
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		every_planet = {
-			limit = {
-				has_colony_progress >= 1
-			}
-			set_planet_flag = acemod_planet_flag_start_colony_effect_fix
-			create_colony = {
-				owner = solar_system.owner
-				species = solar_system.owner
-			}
-		}
-	}
-}
-
 # Finds connected and accessible bypass system. Skipping for now to see if it is needed at all.
 fleet_event = {
 	id = acemod_fleet.510
@@ -3658,6 +3680,7 @@ fleet_event = {
 			closest_system = {
 				min_steps = 1
 				max_steps = 20
+				use_bypasses = no
 				limit = {
 					has_access_fleet = root.owner
 					NOT = {
@@ -3746,6 +3769,7 @@ fleet_event = {
 			direction = in_system
 		}
 		clear_orders = yes
+		clear_fleet_actions = this
 	}
 }
 
@@ -3798,7 +3822,7 @@ event = {
 							limit = {
 								check_variable = {
 									which = acemod_var_num_wormhole_station_spawned
-									value >= 4
+									value >= 5
 								}
 							}
 							set_global_flag = acemod_all_wormhole_station_spawned
@@ -3896,6 +3920,7 @@ fleet_event = {
 										# 	closest_system = {
 										# 		min_steps = 1
 										# 		max_steps = 20
+										#		use_bypasses = no
 										#		has_star_flag = AI_lair
 										# 		has_star_flag = AI_hub
 										# 	}
@@ -3973,6 +3998,721 @@ fleet_event = {
 	}
 }
 
+# Fleet merge chain.
+# Fired from acemod_custom_on_action_merge_fleets custom on_action.
+#
+# scopes = {
+# 	# root/this = owner of fleet 1 (loser - crisis fleet 1)
+# 	from = From	# owner of fleet 2 (winner - anti-crisis fleet 2)
+# 	fromfrom = FromFrom.solar_system # solar_system of engagement
+# 	fromfromfrom = FromFromFrom # fleet 2 (winner - anti-crisis fleet 2)
+# 	fromfromfromfrom = root	# (Optional) Rendezvous system for fleet merger
+# }
+#
+# Original scopes:
+# This = owner of fleet 1 (loser - crisis fleet)
+# From = owner of fleet 2 (winner - anti-crisis fleet)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+country_event = {
+	id = acemod_fleet.650
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		from = {
+			set_timed_country_flag = {
+				flag = acemod_country_flag_fleet_merger_engagement_perpetrator_country
+				days = 100
+			}
+			save_event_target_as = acemod_event_target_fleet_merger_engagement_perpetrator_country
+		}
+		fromfrom = {
+			set_timed_star_flag = {
+				flag = acemod_star_flag_fleet_merger_engagement_system
+				days = 100
+			}
+			save_event_target_as = acemod_event_target_fleet_merger_engagement_system
+		}
+		fromfromfrom = {
+			set_timed_fleet_flag = {
+				flag = acemod_fleet_flag_fleet_merger_engagement_perpetrator_fleet
+				days = 100
+			}
+			save_event_target_as = acemod_event_target_fleet_merger_engagement_perpetrator_fleet
+		}
+		# Will exist even if not defined in fire_on_action and point to one of fleets in the system, therefore does not work.
+		# if = {
+		# 	limit = {
+		# 		exists = fromfromfromfrom
+		# 	}
+		# 	fromfromfromfrom = {
+		# 		set_timed_star_flag = {
+		# 			flag = acemod_star_flag_fleet_merger_rendezvous_system
+		# 			days = 100
+		# 		}
+		# 		save_event_target_as = acemod_event_target_fleet_merger_rendezvous_system
+		# 	}
+		# }
+		random_owned_fleet = {
+			limit = {
+				distance = {
+					source = event_target:acemod_event_target_fleet_merger_engagement_system
+					max_jumps = 1
+					use_bypasses = no
+				}
+				is_ship_class = shipclass_military
+				is_in_combat = no
+			}
+			save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+				}
+			}
+			random_owned_fleet = {
+				limit = {
+					distance = {
+						source = event_target:acemod_event_target_fleet_merger_engagement_system
+						max_jumps = 2
+						use_bypasses = no
+					}
+					is_ship_class = shipclass_military
+					is_in_combat = no
+				}
+				save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+					}
+				}
+				random_owned_fleet = {
+					limit = {
+						distance = {
+							source = event_target:acemod_event_target_fleet_merger_engagement_system
+							max_jumps = 3
+							use_bypasses = no
+						}
+						is_ship_class = shipclass_military
+						is_in_combat = no
+					}
+					save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+						}
+					}
+					random_owned_fleet = {
+						limit = {
+							distance = {
+								source = event_target:acemod_event_target_fleet_merger_engagement_system
+								max_jumps = 4
+								use_bypasses = no
+							}
+							is_ship_class = shipclass_military
+							is_in_combat = no
+						}
+						save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+					}
+					if = {
+						limit = {
+							NOT = {
+								exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+							}
+						}
+						random_owned_fleet = {
+							limit = {
+								distance = {
+									source = event_target:acemod_event_target_fleet_merger_engagement_system
+									max_jumps = 5
+									use_bypasses = no
+								}
+								is_ship_class = shipclass_military
+								is_in_combat = no
+							}
+							save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+						}
+						if = {
+							limit = {
+								NOT = {
+									exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+								}
+							}
+							random_owned_fleet = {
+								limit = {
+									distance = {
+										source = event_target:acemod_event_target_fleet_merger_engagement_system
+										max_jumps = 6
+										use_bypasses = no
+									}
+									is_ship_class = shipclass_military
+									is_in_combat = no
+								}
+								save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+							}
+							if = {
+								limit = {
+									NOT = {
+										exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+									}
+								}
+								random_owned_fleet = {
+									limit = {
+										distance = {
+											source = event_target:acemod_event_target_fleet_merger_engagement_system
+											max_jumps = 7
+											use_bypasses = no
+										}
+										is_ship_class = shipclass_military
+										is_in_combat = no
+									}
+									save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+								}
+								if = {
+									limit = {
+										NOT = {
+											exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+										}
+									}
+									random_owned_fleet = {
+										limit = {
+											distance = {
+												source = event_target:acemod_event_target_fleet_merger_engagement_system
+												max_jumps = 8
+												use_bypasses = no
+											}
+											is_ship_class = shipclass_military
+											is_in_combat = no
+										}
+										save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+									}
+									if = {
+										limit = {
+											NOT = {
+												exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+											}
+										}
+										random_owned_fleet = {
+											limit = {
+												distance = {
+													source = event_target:acemod_event_target_fleet_merger_engagement_system
+													max_jumps = 9
+													use_bypasses = no
+												}
+												is_ship_class = shipclass_military
+												is_in_combat = no
+											}
+											save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+										}
+										if = {
+											limit = {
+												NOT = {
+													exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+												}
+											}
+											random_owned_fleet = {
+												limit = {
+													distance = {
+														source = event_target:acemod_event_target_fleet_merger_engagement_system
+														max_jumps = 10
+														use_bypasses = no
+													}
+													is_ship_class = shipclass_military
+													is_in_combat = no
+												}
+												save_event_target_as = acemod_acemod_event_target_fleet_merger_fleet
+											}
+											break = yes											# Enough for now.
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+			}
+			random_owned_fleet = {
+				limit = {
+					NOT = {
+						is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+					}
+					distance = {
+						source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+						max_jumps = 1
+						use_bypasses = no
+					}
+					is_ship_class = shipclass_military
+					is_in_combat = no
+				}
+				save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+				event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+					clear_orders = yes
+					clear_fleet_actions = this
+					queue_actions = {
+						merge_fleet = {
+							target = prev
+						}
+					}
+					set_timed_fleet_flag = {
+						flag = acemod_fleet_flag_response_team						# Make sure it is not getting snatched for other order.
+						days = 100
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						exists = event_target:acemod_acemod_event_target_fleet_merger_target
+					}
+				}
+				random_owned_fleet = {
+					limit = {
+						NOT = {
+							is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+						}
+						distance = {
+							source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+							max_jumps = 2
+							use_bypasses = no
+						}
+						is_ship_class = shipclass_military
+						is_in_combat = no
+					}
+					save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+					event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+						clear_orders = yes
+						clear_fleet_actions = this
+						queue_actions = {
+							merge_fleet = {
+								target = prev
+							}
+						}
+						set_timed_fleet_flag = {
+							flag = acemod_fleet_flag_response_team							# Make sure it is not getting snatched for other order.
+							days = 100
+						}
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							exists = event_target:acemod_acemod_event_target_fleet_merger_target
+						}
+					}
+					random_owned_fleet = {
+						limit = {
+							NOT = {
+								is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+							}
+							distance = {
+								source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+								max_jumps = 3
+								use_bypasses = no
+							}
+							is_ship_class = shipclass_military
+							is_in_combat = no
+						}
+						save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+						event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+							clear_orders = yes
+							clear_fleet_actions = this
+							queue_actions = {
+								merge_fleet = {
+									target = prev
+								}
+							}
+							set_timed_fleet_flag = {
+								flag = acemod_fleet_flag_response_team								# Make sure it is not getting snatched for other order.
+								days = 100
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								exists = event_target:acemod_acemod_event_target_fleet_merger_target
+							}
+						}
+						random_owned_fleet = {
+							limit = {
+								NOT = {
+									is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+								}
+								distance = {
+									source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+									max_jumps = 4
+									use_bypasses = no
+								}
+								is_ship_class = shipclass_military
+								is_in_combat = no
+							}
+							save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+							event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+								clear_orders = yes
+								clear_fleet_actions = this
+								queue_actions = {
+									merge_fleet = {
+										target = prev
+									}
+								}
+								set_timed_fleet_flag = {
+									flag = acemod_fleet_flag_response_team									# Make sure it is not getting snatched for other order.
+									days = 100
+								}
+							}
+						}
+						if = {
+							limit = {
+								NOT = {
+									exists = event_target:acemod_acemod_event_target_fleet_merger_target
+								}
+							}
+							random_owned_fleet = {
+								limit = {
+									NOT = {
+										is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+									}
+									distance = {
+										source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+										max_jumps = 5
+										use_bypasses = no
+									}
+									is_ship_class = shipclass_military
+									is_in_combat = no
+								}
+								save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+								event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+									clear_orders = yes
+									clear_fleet_actions = this
+									queue_actions = {
+										merge_fleet = {
+											target = prev
+										}
+									}
+									set_timed_fleet_flag = {
+										flag = acemod_fleet_flag_response_team										# Make sure it is not getting snatched for other order.
+										days = 100
+									}
+								}
+							}
+							if = {
+								limit = {
+									NOT = {
+										exists = event_target:acemod_acemod_event_target_fleet_merger_target
+									}
+								}
+								random_owned_fleet = {
+									limit = {
+										NOT = {
+											is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+										}
+										distance = {
+											source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+											max_jumps = 6
+											use_bypasses = no
+										}
+										is_ship_class = shipclass_military
+										is_in_combat = no
+									}
+									save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+									event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+										clear_orders = yes
+										clear_fleet_actions = this
+										queue_actions = {
+											merge_fleet = {
+												target = prev
+											}
+										}
+										set_timed_fleet_flag = {
+											flag = acemod_fleet_flag_response_team											# Make sure it is not getting snatched for other order.
+											days = 100
+										}
+									}
+								}
+								if = {
+									limit = {
+										NOT = {
+											exists = event_target:acemod_acemod_event_target_fleet_merger_target
+										}
+									}
+									random_owned_fleet = {
+										limit = {
+											NOT = {
+												is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+											}
+											distance = {
+												source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+												max_jumps = 7
+												use_bypasses = no
+											}
+											is_ship_class = shipclass_military
+											is_in_combat = no
+										}
+										save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+										event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+											clear_orders = yes
+											clear_fleet_actions = this
+											queue_actions = {
+												merge_fleet = {
+													target = prev
+												}
+											}
+											set_timed_fleet_flag = {
+												flag = acemod_fleet_flag_response_team												# Make sure it is not getting snatched for other order.
+												days = 100
+											}
+										}
+									}
+									if = {
+										limit = {
+											NOT = {
+												exists = event_target:acemod_acemod_event_target_fleet_merger_target
+											}
+										}
+										random_owned_fleet = {
+											limit = {
+												NOT = {
+													is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+												}
+												distance = {
+													source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+													max_jumps = 8
+													use_bypasses = no
+												}
+												is_ship_class = shipclass_military
+												is_in_combat = no
+											}
+											save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+											event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+												clear_orders = yes
+												clear_fleet_actions = this
+												queue_actions = {
+													merge_fleet = {
+														target = prev
+													}
+												}
+												set_timed_fleet_flag = {
+													flag = acemod_fleet_flag_response_team													# Make sure it is not getting snatched for other order.
+													days = 100
+												}
+											}
+										}
+										if = {
+											limit = {
+												NOT = {
+													exists = event_target:acemod_acemod_event_target_fleet_merger_target
+												}
+											}
+											random_owned_fleet = {
+												limit = {
+													NOT = {
+														is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+													}
+													distance = {
+														source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+														max_jumps = 9
+														use_bypasses = no
+													}
+													is_ship_class = shipclass_military
+													is_in_combat = no
+												}
+												save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+												event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+													clear_orders = yes
+													clear_fleet_actions = this
+													queue_actions = {
+														merge_fleet = {
+															target = prev
+														}
+													}
+													set_timed_fleet_flag = {
+														flag = acemod_fleet_flag_response_team														# Make sure it is not getting snatched for other order.
+														days = 100
+													}
+												}
+											}
+											if = {
+												limit = {
+													NOT = {
+														exists = event_target:acemod_acemod_event_target_fleet_merger_target
+													}
+												}
+												random_owned_fleet = {
+													limit = {
+														NOT = {
+															is_same_value = event_target:acemod_acemod_event_target_fleet_merger_fleet
+														}
+														distance = {
+															source = event_target:acemod_acemod_event_target_fleet_merger_fleet
+															max_jumps = 10
+															use_bypasses = no
+														}
+														is_ship_class = shipclass_military
+														is_in_combat = no
+													}
+													save_event_target_as = acemod_acemod_event_target_fleet_merger_target
+													event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+														clear_orders = yes
+														clear_fleet_actions = this
+														queue_actions = {
+															merge_fleet = {
+																target = prev
+															}
+														}
+														set_timed_fleet_flag = {
+															flag = acemod_fleet_flag_response_team															# Make sure it is not getting snatched for other order.
+															days = 100
+														}
+													}
+												}
+												break = yes												# Enough for now.
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+				exists = event_target:acemod_acemod_event_target_fleet_merger_target
+			}
+			set_variable = {
+				which = acemod_var_fleet_power_for_last_merger
+				value = 0
+			}
+			event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+				export_trigger_value_to_variable = {
+					trigger = fleet_power
+					variable = acemod_var_fleet_power_for_last_merger
+				}
+				root = {
+					change_variable = {
+						which = acemod_var_fleet_power_for_last_merger
+						value = prev
+					}
+				}
+			}
+			event_target:acemod_acemod_event_target_fleet_merger_target = {
+				export_trigger_value_to_variable = {
+					trigger = fleet_power
+					variable = acemod_var_fleet_power_for_last_merger
+				}
+				root = {
+					change_variable = {
+						which = acemod_var_fleet_power_for_last_merger
+						value = prev
+					}
+				}
+			}
+			event_target:acemod_acemod_event_target_fleet_merger_target = {
+				solar_system = {
+					every_neighbor_system = {
+						every_fleet_in_system = {
+							limit = {
+								exists = owner
+								owner = {
+									is_hostile = root
+								}
+								is_ship_class = shipclass_military
+							}
+							export_trigger_value_to_variable = {
+								trigger = fleet_power
+								variable = acemod_var_fleet_power_for_last_merger_perpetrator
+							}
+							event_target:acemod_acemod_event_target_fleet_merger_target = {
+								change_variable = {
+									which = acemod_var_fleet_power_for_last_merger_perpetrator
+									value = prev
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						is_variable_set = acemod_var_fleet_power_for_last_merger_perpetrator
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_variable_set = acemod_var_fleet_power_desired_engagement_ratio
+							}
+						}
+						set_variable = {
+							which = acemod_var_fleet_power_desired_engagement_ratio
+							value = 1.5
+						}
+					}
+					if = {
+						limit = {
+							check_variable_arithmetic = {
+								which = acemod_var_fleet_power_for_last_merger
+								by = acemod_var_fleet_power_for_last_merger_perpetrator
+								value < acemod_var_fleet_power_desired_engagement_ratio
+								mode = divide
+							}
+						}
+						event_target:acemod_acemod_event_target_fleet_merger_fleet = {
+							solar_system = {
+								save_event_target_as = event_target:acemod_event_target_fleet_merger_rendezvous_system
+								set_timed_star_flag = {
+									flag = acemod_star_flag_fleet_merger_rendezvous_system
+									days = 100
+								}
+								event_target:acemod_acemod_event_target_fleet_merger_target = {
+									clear_orders = yes
+									clear_fleet_actions = this
+									queue_actions = {
+										move_to = prev
+									}
+									set_timed_fleet_flag = {
+										flag = acemod_fleet_flag_response_team										# Make sure it is not getting snatched for other order.
+										days = 100
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		# Is not getting called for whatever reason, moved up.
+		# if = {
+		# 	limit = {
+		# 		exists = event_target:acemod_event_target_fleet_merger_rendezvous_system				# Note: If for whatever reason using global_event_target make sure to erase it a day after script is called. Defining fromfromfromfrom scope in acemod_custom_on_action_merge_fleets is safer.
+		# 	}
+		# 	if = {
+		# 		limit = {
+		# 			exists = event_target:acemod_acemod_event_target_fleet_merger_fleet
+		# 			exists = event_target:acemod_acemod_event_target_fleet_merger_target
+		# 		}
+		# 		event_target:acemod_acemod_event_target_fleet_merger_target = {
+		# 			clear_orders = yes
+		# 			clear_fleet_actions = this
+		# 			queue_actions = {
+		# 				move_to = event_target:acemod_event_target_fleet_merger_rendezvous_system
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+}
+
 # Disables crisis colossi by default to avoid player meltdown.
 country_event = {
 	id = acemod_fleet.799
@@ -3985,3 +4725,69 @@ country_event = {
 		set_global_flag = acemod_crisis_colossus_disabled
 	}
 }
+
+########
+# Obsolete events to be deleteted. Keeping for the time being to assure players won't CTD if game tries to fire non-existent delayed event.
+# # Fix for start_colony effect which broke in 2.8 but was working just fine in 2.7... (ceaseless colonisation bug).
+planet_event = {
+	id = acemod_fleet.506
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_colony_progress >= 1				# Failsafe if planet was reclaimed by normal empire.
+			}
+			set_planet_flag = acemod_planet_flag_start_colony_effect_fix
+			create_colony = {
+				owner = solar_system.owner
+				species = solar_system.owner
+				# ethos = solar_system.owner
+			}
+		}
+	}
+}
+
+# # Hotfix for start_colony effect for ongoing games. Needs commenting out when Stellaris 2.9 patch comes out and people drop their current saves. on_yearly_pulse
+event = {
+	id = acemod_fleet.507
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_global_flag = acemod_global_flag_start_colony_effect_fix_disabled
+		}
+	}
+	immediate = {
+		event_target:global_event_country = {
+			country_event = {
+				id = acemod_fleet.508				#	Delay for performance.
+				days = 35
+				random = 20
+			}
+		}
+	}
+}
+
+# # Fix event delayed for game start performance and possibility for other mods to disable this without overwrites.
+country_event = {
+	id = acemod_fleet.508
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_system = {
+			every_system_planet = {
+				limit = {
+					has_colony_progress >= 1
+				}
+				set_planet_flag = acemod_planet_flag_start_colony_effect_fix
+				create_colony = {
+					owner = solar_system.owner
+					species = solar_system.owner
+				}
+			}
+		}
+	}
+}
+
+########

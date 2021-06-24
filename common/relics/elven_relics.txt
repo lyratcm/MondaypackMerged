@@ -46,6 +46,12 @@ r_elven_flaming_pearl = {
 				days = @triumph_duration
 			}
 			country_event = { id = elven_relic_events.0100 }
+			remove_modifier = elven_celestial_favor_factor_used_pearl
+			add_modifier = {
+				modifier = elven_celestial_favor_factor_used_pearl
+				years = 10
+			}
+			elven_evaluate_celestial_favor = yes
 		}
 	}
 

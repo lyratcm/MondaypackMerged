@@ -1,150 +1,147 @@
 namespace = Events_GAPS_Traits_Vampire
 
-#ongame start
-country_event = {
-	id = Events_GAPS_Traits_Vampire.1
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Vampire }
-	}
-	immediate = {
-		every_owned_planet = { 
-			limit = { is_colony = yes }
-			set_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 0 }
-			set_variable = { which = GAPS_Number_Of_Blood_Vessels value = 0 }
-			every_owned_pop = {
-				remove_pop_flag = Pop_Flag_GAPS_VampireCount
-			}
-			#Count Number OF Vampires
-			while = {
-				limit = { any_owned_pop = { has_trait = Trait_GAPS_Vampire NOT = { has_pop_flag = Pop_Flag_GAPS_VampireCount } } }
-				random_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Vampire NOT = { has_pop_flag = Pop_Flag_GAPS_VampireCount } }
-					set_pop_flag = Pop_Flag_GAPS_VampireCount
-					prev = { change_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 1 } }
-				}
-			}
-			#Count Number OF Non Vampires
-			while = {
-				count = GAPS_Number_OF_VAmpires_To_Feed
-				random_owned_pop = {
-					limit = { NOT = { has_trait = Trait_GAPS_Vampire } NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Food } }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Food days = -1 }
-					prev = { change_variable = { which = GAPS_Number_Of_Blood_Vessels value = 1 } }
-				}
-			}
-			#Apply Effects
-			while = {
-				count = GAPS_Number_Of_Blood_Vessels
-				random_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Vampire NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed } }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Fed days = -1 }
-				}
-			}
-		}
-	}
-}
-
-
-# A pop has been added to the planet
-# Root = pop
-# From = planet
-#on_pop_added
-pop_event = {
-	id = Events_GAPS_Traits_Vampire.2
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		from = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
-	}
-	immediate = {
-		from = {	
-			set_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 0 }
-			set_variable = { which = GAPS_Number_Of_Blood_Vessels value = 0 }
-			every_owned_pop = {
-				remove_pop_flag = Pop_Flag_GAPS_VampireCount
-				remove_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed
-				remove_modifier = Pop_Modifier_GAPS_Vampire_Species_Food
-			}
-			#Count Number OF Vampires
-			while = {
-				limit = { any_owned_pop = { has_trait = Trait_GAPS_Vampire not = { has_pop_flag = Pop_Flag_GAPS_VampireCount } } }
-				random_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Vampire NOT = { has_pop_flag = Pop_Flag_GAPS_VampireCount } }
-					set_pop_flag = Pop_Flag_GAPS_VampireCount
-					prev = { change_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 1 } }
-				}
-			}
-			#Count Number OF Non Vampires
-			while = {
-				count = GAPS_Number_OF_VAmpires_To_Feed
-				random_owned_pop = {
-					limit = { NOT = { has_trait = Trait_GAPS_Vampire } NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Food } }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Food days = -1 }
-					prev = { change_variable = { which = GAPS_Number_Of_Blood_Vessels value = 1 } }
-				}
-			}
-			#Apply Effects
-			while = {
-				count = GAPS_Number_Of_Blood_Vessels
-				random_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Vampire NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed } }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Fed days = -1 }
-				}
-			}
-		}
-	}
-}
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-#on_pop_declined
-#on_pop_purged
-#on_pop_displaced
+#CORE EVENT
 planet_event = {
-	id = Events_GAPS_Traits_Vampire.3
+	id = Events_GAPS_Traits_Vampire.10
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Vampire }
-	}
 	immediate = {
-		set_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 0 }
-		set_variable = { which = GAPS_Number_Of_Blood_Vessels value = 0 }
+		set_variable = { which = Planet_Variable_GAPS_Number_Of_Vampires_To_Feed value = 0 }
+		set_variable = { which = Planet_Variable_GAPS_Number_Of_Blood_Vessels value = 0 }
 		every_owned_pop = {
-			remove_pop_flag = Pop_Flag_GAPS_VampireCount
 			remove_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed
 			remove_modifier = Pop_Modifier_GAPS_Vampire_Species_Food
 		}
-		#Count Number OF Vampires
-		while = {
-			limit = { any_owned_pop = { has_trait = Trait_GAPS_Vampire not = { has_pop_flag = Pop_Flag_GAPS_VampireCount } } }
-			random_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Vampire NOT = { has_pop_flag = Pop_Flag_GAPS_VampireCount } }
-				set_pop_flag = Pop_Flag_GAPS_VampireCount
-				prev = { change_variable = { which = GAPS_Number_OF_VAmpires_To_Feed value = 1 } }
-			}
+		#Count Number Of Vampires
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Vampire }
+			Root = { change_variable = { which = Planet_Variable_GAPS_Number_Of_Vampires_To_Feed value = 1 } }
 		}
-		#Count Number OF Non Vampires
+		#Count Number Of Non Vampires
 		while = {
-			count = GAPS_Number_OF_VAmpires_To_Feed
+			count = Planet_Variable_GAPS_Number_Of_Vampires_To_Feed
 			random_owned_pop = {
-				limit = { NOT = { has_trait = Trait_GAPS_Vampire } NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Food } }
+				limit = { NOT = { pop_has_trait = Trait_GAPS_Vampire } NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Food } }
 				add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Food days = -1 }
-				prev = { change_variable = { which = GAPS_Number_Of_Blood_Vessels value = 1 } }
+				Root = { change_variable = { which = Planet_Variable_GAPS_Number_Of_Blood_Vessels value = 1 } }
 			}
 		}
 		#Apply Effects
 		while = {
-			count = GAPS_Number_Of_Blood_Vessels
+			count = Planet_Variable_GAPS_Number_Of_Blood_Vessels
 			random_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Vampire NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed } }
+				limit = { pop_has_trait = Trait_GAPS_Vampire NOT = { has_modifier = Pop_Modifier_GAPS_Vampire_Species_Fed } }
 				add_modifier = { modifier = Pop_Modifier_GAPS_Vampire_Species_Fed days = -1 }
 			}
 		}
 	}
 }
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+#on_pop_added
+pop_event = {
+	id = Events_GAPS_Traits_Vampire.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		From = { any_owned_pop = { pop_has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+planet_event = {
+	id = Events_GAPS_Traits_Vampire.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		From = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Vampire.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		This = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Vampire.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		This = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Vampire.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		This = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
+planet_event = {
+	id = Events_GAPS_Traits_Vampire.25
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { any_owned_pop = { has_trait = Trait_GAPS_Vampire } }
+	}
+	immediate = {
+		This = {	
+			planet_event = { id = Events_GAPS_Traits_Vampire.10 days = 1 }
+		}
+	}
+}
+

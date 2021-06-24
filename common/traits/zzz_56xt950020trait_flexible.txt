@@ -1,0 +1,18 @@
+trait_flexible = {
+    cost = 1
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_simple"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_specialist_produces_mult = 0.025
+    }
+}

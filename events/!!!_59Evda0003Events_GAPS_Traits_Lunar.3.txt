@@ -1,0 +1,21 @@
+namespace = Events_GAPS_Traits_Lunar
+planet_event = {
+    id = Events_GAPS_Traits_Lunar.3
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        any_owned_pop = {
+            has_trait = Trait_GAPS_Lunar
+        }
+    }
+    immediate = {
+        if = {
+            limit = {
+                is_moon = yes
+            }
+            save_event_target_as = Target_Planet_GAPS_Lunar_Planet
+            Scripted_Planet_Effect_GAPS_Count_Moons = yes
+            Scripted_Planet_Effect_Apply_Lunar_Modifiers = yes
+        }
+    }
+}

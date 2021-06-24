@@ -1,0 +1,35 @@
+namespace = Events_GAPS_Traits_Explosive
+		
+#An army has been killed in ground combat
+# This = owner
+# From = army
+# FromFrom = opponent
+# FromFromFrom = planet
+#on_army_killed_in_combat = {
+country_event = {
+	id = Events_GAPS_Traits_Explosive.10
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		From = { species = { OR = { has_trait = Trait_GAPS_Volatile_Bricks has_trait = Trait_GAPS_Defensive_Symbiosis has_trait = Trait_GAPS_Contingency_Programming } } }
+	}
+
+	immediate = {
+		random_list = { 
+			80 = { } 
+			20 = { 
+				FromFromFrom = {
+					if = { 
+						limit = { from = { is_defensive_army = yes } }
+						add_planet_devastation = -5
+					}
+					else_if = { 
+						limit = { from = { is_defensive_army = no } }
+						add_planet_devastation = 1
+					}
+				} 
+			}  
+		}
+	}
+}

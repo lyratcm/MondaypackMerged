@@ -36,8 +36,8 @@ civic_elven_arcane_minded = {
 	}
 	
 	modifier = {
-		country_base_sr_zro_produces_add = 0.5
 		ship_anomaly_generation_chance_mult = 0.15
+		country_base_sr_zro_produces_add = 0.5
 	}
 	
 	description = "civic_tooltip_arcane_minded_effects"
@@ -74,8 +74,41 @@ civic_elven_craft = {
 	#description = "civic_elven_tooltip_craft_effects"
 }
 
-civic_elven_great_firewall = {
-	icon = "gfx/interface/icons/elven/civic_lhuren_great_firewall.dds"
+#civic_elven_great_firewall = {
+#	icon = "gfx/interface/icons/elven/civic_lhuren_great_firewall.dds"
+#	potential = { 
+#		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+#		authority = { NOT = { value = auth_corporate } }
+#	}	
+	
+#	possible = {
+#		ethics = {
+#			NOR = {
+#				text = civic_tooltip_not_egalitarian
+#				value = ethic_egalitarian
+#				value = ethic_fanatic_egalitarian
+#			}
+#		}
+#		civics = {
+#			value = civic_inwards_perfection
+#		}
+#	}
+	
+#	pickable_at_start = yes
+	
+#	random_weight = {
+#		base = 0
+#	}
+	
+#	modifier = {
+#		pop_government_ethic_attraction = 0.25
+#		pop_ethic_egalitarian_attraction_mult = -0.25
+#		planet_stability_add = 5
+#	}
+#}
+
+civic_elven_celestial_grace = {
+	icon = "gfx/interface/icons/elven/civic_lhuren_celestial_grace.dds"
 	potential = { 
 		ethics = { NOT = { value = ethic_gestalt_consciousness } }
 		authority = { NOT = { value = auth_corporate } }
@@ -88,9 +121,14 @@ civic_elven_great_firewall = {
 				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
+			NOR = {
+				text = civic_elven_tooltip_not_materialistic
+				value = ethic_materialist
+				value = ethic_fanatic_materialist
+			}
 		}
-		civics = {
-			value = civic_inwards_perfection
+		authority = {
+			value = auth_imperial
 		}
 	}
 	
@@ -101,9 +139,9 @@ civic_elven_great_firewall = {
 	}
 	
 	modifier = {
-		pop_government_ethic_attraction = 0.25
-		pop_ethic_egalitarian_attraction_mult = -0.25
-		planet_stability_add = 5
+		
 	}
+	
+	description = "civic_tooltip_celestial_grace_effects"
 }
 	

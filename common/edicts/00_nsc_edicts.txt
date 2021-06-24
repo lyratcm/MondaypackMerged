@@ -2,7 +2,7 @@
 ### EDICTS ###
 ##############
 nsc_doctrine_ai = {
-    length = 3600000
+    length = -1
 	icon = "GFX_edict_type_policy"
 
     resources = {
@@ -31,11 +31,7 @@ nsc_doctrine_ai = {
         ship_disengage_chance_mult = 0.05
         ship_piracy_suppression_mult = 0.05
         ship_evasion_mult = 0.05
-	mod_shipsize_Flagship_upkeep_mult = -0.9
-	country_energy_produces_mult = 0.7
-	country_minerals_produces_mult = 0.7
-	country_alloys_produces_mult = 0.7
-	country_starbase_capacity_mult = 3
+	    country_starbase_capacity_mult = 2
     }
 
     potential = { is_ai = yes }
@@ -53,8 +49,8 @@ nsc_flagship_repair = {
     resources = {
         category = campaigns
         cost = {
-            alloys = 10200
-            influence = 600
+            alloys = @nsc_flagship_alloys_cost
+            influence = @nsc_flagship_influence_cost
         }
     }
 
@@ -90,15 +86,36 @@ nsc_emergency_defenses = {
     }
 
     modifier = {
-	country_energy_produces_mult = -0.4
-        shipsize_military_station_small_build_speed_mult = 3.0
-	shipsize_military_station_medium_build_speed_mult = 3.0
-	shipsize_military_station_large_build_speed_mult = 3.0
-	starbase_module_build_speed_mult = 3.0
-	starbase_building_build_speed_mult = 3.0
+	    country_energy_produces_mult = -0.4
+	    shipsize_military_station_small_build_speed_mult = 3.0
+	    shipsize_military_station_medium_build_speed_mult = 3.0
+	    shipsize_military_station_large_build_speed_mult = 3.0
+	    starbase_module_build_speed_mult = 3.0
+	    starbase_building_build_speed_mult = 3.0
     }
 
     ai_weight = {
         weight = 0
     }
+}
+
+nsc_modmenu = {
+    length = 0
+	icon = "GFX_edict_type_policy"
+	resources = {
+		category = campaigns
+	}
+
+    effect = {
+		custom_tooltip = edict_nsc_modmenu_tooltip
+		hidden_effect = { country_event = { id = nsc_modmenu_events.1 } }
+	}
+
+	allow = {
+		is_ai = no
+	}
+
+	ai_weight = {
+		weight = 0
+	}
 }

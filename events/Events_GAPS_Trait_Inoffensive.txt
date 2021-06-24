@@ -1,58 +1,41 @@
 namespace = Events_GAPS_Traits_Inoffensive
 
-#ongame start
-country_event = {
-	id = Events_GAPS_Traits_Inoffensive.1
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Inoffensive.10
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Inoffensive }
-	}
 	immediate = {
-		every_owned_planet = { 
-			limit = { is_colony = yes }
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+		set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
+		every_deposit = {
+			limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
+			remove_deposit = yes
 		}
-	}
-}
-#modification copmlete
-country_event = {
-	id = Events_GAPS_Traits_Inoffensive.12
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		from = { has_trait = Trait_GAPS_Inoffensive }
-	}
-	immediate = {
-		every_owned_planet = { 
-			limit = { is_colony = yes }
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Inoffensive }
+			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
+		}
+		#owner = {
+		#	set_variable = { which = "Country_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
+		#	every_owned_planet = {
+		#		limit = { is_colony = yes }
+		#		while = {
+		#			count = Planet_Variable_GAPS_Num_Inoffensive_Pops
+		#			owner = { change_variable = { which = "Country_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
+		#		}
+		#	}
+		#	remove_modifier = Country_Modifier_GAPS_Trait_Inoffensive
+		#	add_modifier = {
+		#		modifier = Country_Modifier_GAPS_Trait_Inoffensive
+		#		days = -1
+		#		multiplier = Country_Variable_GAPS_Num_Inoffensive_Pops
+		#	}
+		#}
+		while = {
+			count = Planet_Variable_GAPS_Num_Inoffensive_Pops
+			add_deposit = Deposits_GAPS_Inoffensives
 		}
 	}
 }
@@ -61,54 +44,16 @@ country_event = {
 # From = planet
 #on_pop_added
 pop_event = {
-	id = Events_GAPS_Traits_Inoffensive.21
+	id = Events_GAPS_Traits_Inoffensive.20
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		Root = { has_trait = Trait_GAPS_Inoffensive }
+		Root = { pop_has_trait = Trait_GAPS_Inoffensive }
 	}
 	immediate = {
-		planet = {	
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
-		}
-	}
-}
-# A planet has been colonized.
-# Scope = Planet
-planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.22
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Inoffensive }
-	}
-	immediate = {
-		set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-		every_deposit = {
-			limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-			remove_deposit = yes
-		}
-		every_owned_pop = {
-			limit = { has_trait = Trait_GAPS_Inoffensive }
-			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-		}
-		while = {
-			count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-			add_deposit = Deposits_GAPS_Inoffensives
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
@@ -116,28 +61,16 @@ planet_event = {
 # This = Pop scope
 # From = planet abducted from
 planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.31
+	id = Events_GAPS_Traits_Inoffensive.21
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		This = { has_trait = Trait_GAPS_Inoffensive }
+		This = { pop_has_trait = Trait_GAPS_Inoffensive }
 	}
 	immediate = {
-		from = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
@@ -146,28 +79,16 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.32
+	id = Events_GAPS_Traits_Inoffensive.22
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Inoffensive }
+		FromFrom = { pop_has_trait = Trait_GAPS_Inoffensive }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
@@ -176,28 +97,16 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.33
+	id = Events_GAPS_Traits_Inoffensive.23
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Inoffensive }
+		FromFrom = { pop_has_trait = Trait_GAPS_Inoffensive }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
@@ -206,65 +115,35 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.34
+	id = Events_GAPS_Traits_Inoffensive.24
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Inoffensive }
+		FromFrom = { pop_has_trait = Trait_GAPS_Inoffensive }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Inoffensive }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-				add_deposit = Deposits_GAPS_Inoffensives
-			}
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
-# A pop has been displaced
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
+
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
 planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.4
+	id = Events_GAPS_Traits_Inoffensive.25
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		This = { any_owned_species = { has_trait = Trait_GAPS_Inoffensive } }
+	}
 	immediate = {
-		set_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 0 }
-		every_deposit = {
-			limit = { is_deposit_type = Deposits_GAPS_Inoffensives }
-			remove_deposit = yes
-		}
-		every_owned_pop = {
-			limit = { has_trait = Trait_GAPS_Inoffensive }
-			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Inoffensive_Pops" value = 1 } }
-		}
-		while = {
-			count = Planet_Variable_GAPS_Num_Inoffensive_Pops
-			add_deposit = Deposits_GAPS_Inoffensives
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Inoffensive.10 days = 1 }
 		}
 	}
 }
-# A pop has been displaced
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-planet_event = {
-	id = Events_GAPS_Traits_Inoffensive.41
-	is_triggered_only = yes
-	hide_window = yes
 
-	immediate = {
-	}
-}

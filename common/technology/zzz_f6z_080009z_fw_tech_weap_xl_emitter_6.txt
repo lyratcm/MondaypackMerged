@@ -1,0 +1,16 @@
+z_fw_tech_weap_xl_emitter_6 = {
+    area = physics
+    category = {
+        particles
+    }
+    tier = 5
+    cost = @tier5cost2
+    weight = 0
+    ai_update_type = military
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

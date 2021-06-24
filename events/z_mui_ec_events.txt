@@ -1,0 +1,169 @@
+namespace = z_mui_ec
+#_快速通信[跳转事件],必须通过跳转事件为[玩家]正确指定[通信阵营]
+#_[通信阵营]={ 跳转事件= { from_玩家= {vanilla通信事件} } }
+
+#_[掠夺者]
+#_[贸易商/策展人/艺术家]
+#_[行商舰队]
+#_[虚境/mod虚境]
+	#_	modifier = "shroud_cooldown"			5年/2.5年
+	#_	modifier = "shroud_precog_cooldown"     10年/5年
+
+
+
+
+#_[掠夺者]
+country_event = {
+    id = z_mui_ec.20
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = {
+			#_[灭绝]
+            if = {
+                limit = {
+                    OR = {
+                        has_valid_civic = civic_hive_devouring_swarm 
+                        has_valid_civic = civic_fanatic_purifiers 
+                        has_valid_civic = civic_machine_terminator 
+                    }
+                }
+                country_event = { id = marauder.19 }
+            }
+			#_[普通]
+            else = {  country_event = { id = marauder.20 } }
+        }
+    }    
+}
+
+
+#_[贸易商]
+country_event = {
+    id = z_mui_ec.31
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = leviathans.100 } }
+    }    
+}
+country_event = {
+    id = z_mui_ec.32
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = leviathans.103 } }
+    }    
+}
+country_event = {
+    id = z_mui_ec.33
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = leviathans.104 } }
+    }    
+}
+#_[策展人]
+country_event = {
+    id = z_mui_ec.34
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = leviathans.500 } }
+    }    
+}
+#_[艺术家]
+country_event = {
+    id = z_mui_ec.35
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = leviathans.300 } }
+    }    
+}
+
+
+#_[行商舰队]
+country_event = {#_大本营
+    id = z_mui_ec.40
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = cara.100 } }
+    }    
+}
+country_event = {#_舰队1:似乎不需要跳转
+    id = z_mui_ec.41
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = cara.1100 } }
+    }    
+}
+country_event = {#_舰队2:似乎不需要跳转
+    id = z_mui_ec.42
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = cara.2100 } }
+    }    
+}
+country_event = {#_舰队3:似乎不需要跳转
+    id = z_mui_ec.43
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+        from = { country_event = { id = cara.3100 } }
+    }    
+}
+
+
+
+
+#_[虚境]
+country_event = {#_vanilla
+    id = z_mui_ec.50
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        from = { country_event = { id = utopia.3000 } }
+    }
+}
+#_[mod虚境]
+country_event = {#_智械
+    id = z_mui_ec.51
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        from = { country_event = { id = endim.3000 } }
+    }
+}
+country_event = {#_[hiveDLC]
+    id = z_mui_ec.52
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        from = { country_event = { id = psionic_shroud.3000 } }
+    }
+}
+country_event = {#_[psionic hive minds]
+    id = z_mui_ec.53
+    is_triggered_only = yes
+    hide_window = yes
+
+    immediate = {
+        from = { country_event = { id = hiveutopia.3000 } }
+    }
+}

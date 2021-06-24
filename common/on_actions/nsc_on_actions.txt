@@ -22,13 +22,6 @@ on_game_start_country = {
 	}
 }
 
-
-on_planet_bombarded = {
-	events = {
-		pas.1
-	}
-}
-
 on_ship_built = {
 	events = {
 		nsc_events.2
@@ -58,24 +51,6 @@ on_fleet_disbanded = {
 	events = {
 		nsc_events.5
 		nsc_events.31
-	}
-}
-
-on_war_ended = {
-	events = {
-		pas.3
-	}
-}
-
-on_planet_occupied = {
-	events = {
-		pas.4
-	}
-}
-
-on_monthly_pulse_country = {
-	events = {
-		pas.0
 	}
 }
 

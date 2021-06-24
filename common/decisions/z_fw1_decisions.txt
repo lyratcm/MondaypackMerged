@@ -1,9 +1,10 @@
 ###_z fw---行星决策	##########################################################################
 
+#_[ui_plnt_星球设置]
 #_[星球人口限制]
 #_[星辰大海的渴望]
 #_[璀璨星图_boom]
-#_[巨建_dismantle]
+#_[巨建拆除]
 
 
 
@@ -17,42 +18,31 @@ z_fw_dec_test = {
 	ai_weight = { weight = 0 }
 }
 
-#	z_fw_dec_test_free_jobs = {
-#		icon = z_fw_dec_test
-#		owned_planets_only = yes
-#		sound = event_administrative_work
-#		potential = {
-#			is_colony = yes
-#			owner = { is_ai = no }
-#		}
-#		allow = {
-#			is_colony = yes
-#			owner = { is_ai = no }
-#		}
-#		ai_weight = { weight = 0 }
-#		
-#		effect = {
-#			switch = {
-#				trigger = free_jobs
-#				0 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 0 } }
-#				1 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 1 } }
-#				2 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 2 } }
-#				3 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 3 } }
-#				4 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 4 } }
-#				5 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 5 } }
-#				6 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 6 } }
-#				7 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 7 } }
-#				8 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 8 } }
-#				9 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 9 } }
-#				10 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 10 } }
-#				11 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 11 } }
-#				12 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 12 } }
-#				13 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 13 } }
-#				14 = { set_variable = { which = z_fw_var_plnt_free_jobs value = 14 } }
-#				14 > { set_variable = { which = z_fw_var_plnt_free_jobs value = 15 } }
-#			}
-#		}
-#	}
+
+
+
+###_[ui_plnt_星球设置]	##################################
+z_fw_dec_plnt_setting = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	potential = {
+		owner = { is_ai = no }
+		NOT = { has_global_flag = z_mui_installed }	#_无暗蓝时可用
+		OR = {
+			has_global_flag = z_pr_installed
+			has_global_flag = z_pf2_installed
+		}
+	}
+	allow = { NOT = { has_planet_flag = z_fw_plnt_ui_setting_open } }
+	ai_weight = { weight = 0 }
+	effect = {
+		custom_tooltip = z_fw_btn_plnt_ui_tb_setting
+		hidden_effect = {
+			set_planet_flag = z_fw_plnt_ui_setting_open
+			planet_event = { id = z_fw_plnt_ui_setting.1 }
+		}
+	}
+}
 
 
 
@@ -66,6 +56,7 @@ z_fw_dec_pop_cap_ignore = {
 	owned_planets_only = yes
 	sound = event_administrative_work
 	potential = {
+		always = no	#_[z禁用]
 		owner = { is_ai = no }
 		has_planet_flag = z_fw_flg_plnt_pop_cap_ignore
 		NOR = {
@@ -89,6 +80,7 @@ z_fw_dec_pop_cap_default = {
 	owned_planets_only = yes
 	sound = event_administrative_work
 	potential = {
+		always = no	#_[z禁用]
 		owner = { is_ai = no }
 		NOT = { has_planet_flag = z_fw_flg_plnt_pop_cap_ignore }
 		NOR = {
@@ -124,6 +116,7 @@ z_fw_dec_desire_for_stars = {
 	potential = {
 		owner = {
 			is_ai = no
+			is_variable_set = z_fw_desire_point_var
 			check_variable = { which = z_fw_desire_point_var value >= 1 }	#_点数足够
 		}
 	}
@@ -175,7 +168,7 @@ z_fw_dec_detonate_star = {
 	potential = {
 		always = no
 		#is_star = yes
-		#z_is_destructible_stars = yes
+		#z_fw_trgr_star_core_destructible = yes
 		#from = { has_relic = z_fw_r_celestial_orrey }
 	}
 	allow = {
@@ -196,8 +189,8 @@ z_fw_dec_detonate_star = {
 				duration = 5
 			}
 			#_z super nova
-			planet_event = { id = z_fw1_planet_destruction.21 days = 4 }	#_nova
-			#planet_event = { id = z_fw1_planet_destruction.22 days = 100 random = 25 }	#_aftermath
+			planet_event = { id = z_fw_star_exp_r_cht_co.21 days = 4 }	#_nova
+			#planet_event = { id = z_fw_star_exp_r_cht_co.22 days = 100 random = 25 }	#_aftermath
 		}
 	}
 	
@@ -209,7 +202,7 @@ z_fw_dec_detonate_star = {
 
 
 
-###_[巨建_dismantle]	###################################
+###_[巨建拆除]	###################################
 #_glbl_flg			[z_fw_flg_glbl_mega_dismantle_ongoing]
 #_plnt_tgt_glbl		[z_fw_tgt_plnt_mega_dismantle]
 z_fw_dec_mega_dismantle = {

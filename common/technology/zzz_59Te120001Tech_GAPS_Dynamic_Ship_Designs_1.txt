@@ -1,0 +1,36 @@
+Tech_GAPS_Dynamic_Ship_Designs_1 = {
+    icon = "Tech_GAPS_dynamic_ship_designs"
+    is_reverse_engineerable = no
+    area = engineering
+    category = {
+        voidcraft
+    }
+    is_rare = yes
+    is_dangerous = yes
+    cost = 2000
+    cost_per_level = 2000
+    tier = 1
+    levels = 5
+    weight = 100
+    prerequisites = {
+        "Tech_GAPS_Dynamic_Ship_Designs_1"
+    }
+    potential = {
+        has_civic = Civic_GAPS_Ancient_Shipwrights
+        not = {
+            has_technology = Tech_GAPS_Dynamic_Ship_Designs_1
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "Tech_GAPS_Dynamic_Design_TECH_UNLOCK_TITLE"
+            desc = "Tech_GAPS_Dynamic_Design_TECH_UNLOCK_DESC"
+        }
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 10
+    }
+}

@@ -1,0 +1,19 @@
+namespace = Events_GAPS_Trait_Mutable
+planet_event = {
+    id = Events_GAPS_Trait_Mutable.1
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        FromFrom = {
+            has_trait = Trait_GAPS_Mutable
+        }
+    }
+    immediate = {
+        FromFrom = {
+            pop_event = {
+                id = Events_GAPS_Trait_Mutable.3
+                days = 0
+            }
+        }
+    }
+}

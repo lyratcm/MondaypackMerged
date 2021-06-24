@@ -107,12 +107,6 @@ component_set = {
 }
 
 component_set = {
-	key = "pasmod_orbital_drop_pod_psionic_force_3"
-	icon = "GFX_ship_part_pasmod_orbital_drop_pod_psionic_force_3"
-	icon_frame = 1
-}
-
-component_set = {
 	key = "pasmod_orbital_drop_pod_battle_frame"
 	icon = "GFX_ship_part_pasmod_orbital_drop_pod_battle_frame"
 	icon_frame = 1
@@ -130,20 +124,20 @@ component_set = {
 	icon_frame = 1
 }
 
-component_set = {
-	key = "pasmod_orbital_drop_pod_bio_mech"
-	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech"
-	icon_frame = 1
-}
+#component_set = {
+#	key = "pasmod_orbital_drop_pod_bio_mech"
+#	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech"
+#	icon_frame = 1
+#}
 
-component_set = {
-	key = "pasmod_orbital_drop_pod_bio_mech_2"
-	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech_2"
-	icon_frame = 1
-}
+#component_set = {
+#	key = "pasmod_orbital_drop_pod_bio_mech_2"
+#	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech_2"
+#	icon_frame = 1
+#}
 
-component_set = {
-	key = "pasmod_orbital_drop_pod_bio_mech_3"
-	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech_3"
-	icon_frame = 1
-}
+#component_set = {
+#	key = "pasmod_orbital_drop_pod_bio_mech_3"
+#	icon = "GFX_ship_part_pasmod_orbital_drop_pod_bio_mech_3"
+#	icon_frame = 1
+#}

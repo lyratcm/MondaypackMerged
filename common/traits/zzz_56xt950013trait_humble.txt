@@ -1,0 +1,25 @@
+trait_humble = {
+    cost = 2
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_prideful"
+        "trait_illustrious"
+        "trait_weak"
+        "trait_hive_mind"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_worker_produces_mult = 0.05
+        pop_cat_worker_happiness = 0.05
+    }
+    slave_cost = {
+        energy = 125
+    }
+}

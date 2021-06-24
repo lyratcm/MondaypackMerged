@@ -13,10 +13,6 @@ on_game_start = {
 		# Rename colonies for advanced empires
 		elven_colony_events.12
 
-		# Spawn neighboring systems
-		# elven_setup.6
-		# NOTE: Deactivated for the moment since the Lhuren cluster is now just one system.
-
 		# Additional consumer goods for elves
 		elven_setup.7
     }
@@ -35,6 +31,9 @@ on_game_start_country = {
 
 		# Give Relics to origins that start with one
 		elven_relic_events.0
+
+		# Recalculates Celestial Favor (Celestial Grace civic)
+		elven_celestial_grace_events.1
 	}
 }
 
@@ -55,6 +54,9 @@ on_monthly_pulse_country = {
 	events = {
 	    # Recalculate treant habitability bonus (Arcadian Symbiosis origin)
 		elven_pop_events.3
+		
+		# Recalculates Celestial Favor (Celestial Grace civic)
+		elven_celestial_grace_events.1
 	}
 }
 
@@ -97,6 +99,9 @@ on_planet_transfer = {
 	events = {
 		# Switch planetary deposits to blockers and back if needed
 		elven_colony_events.2
+
+		# Celestial Factor: Colony Lost
+		elven_celestial_grace_events.109
 	}
 }
 
@@ -104,6 +109,18 @@ on_colonized = {
 	events = {
 		# Switch planetary deposits to blockers and back if needed
 		elven_colony_events.2
+
+		# Celestial Factor: New Colony
+		elven_celestial_grace_events.102
+	}
+}
+
+# A colony has been destroyed. Called just before owner and controller is cleared
+# Scope = Planet
+on_colony_destroyed = {
+	events = {
+		# Celestial Factor: Colony Lost
+		elven_celestial_grace_events.108
 	}
 }
 
@@ -129,5 +146,91 @@ on_entering_wormhole = {
 	events = {
 		# Prismatic refugees establish contact with a FE.
 		elven_misc_events.2
+	}
+}
+
+# A leader leveled up.
+# Scope = Country
+# From = Leader
+on_leader_level_up = {
+	events = {
+		# Celestial Factor: Ruler levelled up
+		elven_celestial_grace_events.101
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		# Celestial Factor: Megastructure Built
+		elven_celestial_grace_events.103
+	}
+}
+
+# A Megastructure has been upgraded
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+on_megastructure_upgraded = {
+	events = {
+		# Celestial Factor: Megastructure Upgraded
+		elven_celestial_grace_events.104
+	}
+}
+
+# A war has been won
+# Root = Winner Warleader
+# From = Loser Warleader
+# FromFrom = War
+on_war_won = {
+	events = {
+		elven_celestial_grace_events.105
+	}
+}
+
+# A war has been lost
+# Root = Loser Warleader
+# From = Winner Warleader
+# FromFrom = War
+on_war_lost = {
+	events = {
+		elven_celestial_grace_events.107
+	}
+}
+
+# A status quo has been signed
+# Root = Actor
+# From = Recipient
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_status_quo = {
+	events = {
+		elven_celestial_grace_events.106
+	}
+}
+
+# A status quo has been signed, by force
+# Root = Recipient
+# From = Actor
+# FromFrom = Main Attacker
+# FromFromFrom = Main Defender
+# FromFromFromFrom = War
+on_status_quo_forced = {
+	events = {
+		elven_celestial_grace_events.106
+	}
+}
+
+# From = system
+# FromFrom = country (new owner)
+# This = country (previous owner)
+on_system_lost = {
+	events = {
+		elven_celestial_grace_events.110
 	}
 }

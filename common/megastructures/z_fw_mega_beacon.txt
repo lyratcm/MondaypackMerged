@@ -152,8 +152,8 @@ z_fw_mega_test = {
 					entity = "construction_platform_entity"
 					graphical_culture = fromfrom
 				}
-				surveyed = {
-					set_surveyed = yes
+				set_surveyed = {
+					surveyed = yes
 					surveyor = FROM
 				}
 				set_all_comms_surveyed = yes
@@ -210,7 +210,8 @@ z_fw_mega_r_cht_co_tgt_marker_1 = {
 	#}
 	
 	potential = {
-		has_relic = z_fw_r_celestial_orrey
+		always = no
+	#	has_relic = z_fw_r_celestial_orrey
 	}
 	
 	possible = {
@@ -224,13 +225,13 @@ z_fw_mega_r_cht_co_tgt_marker_1 = {
 			}
 		}
 		custom_tooltip = {#_每个月同一个星系只能存在唯一的信标
-			fail_text = "z_fw_target_marker_co_ongoing"
+			fail_text = "z_fw_target_marker_cht_co_ongoing"
 			hidden_trigger = {
 				NOR = {
 					has_megastructure = z_fw_mega_r_cht_co_tgt_marker_1
 					has_megastructure = z_fw_mega_r_cht_co_tgt_marker_2
 				}
-				from  = { NOT = { has_country_flag = z_fw_target_marker_co_ongoing } }
+				from  = { NOT = { has_country_flag = z_fw_target_marker_cht_co_ongoing } }
 			}
 		}
 	}
@@ -238,9 +239,9 @@ z_fw_mega_r_cht_co_tgt_marker_1 = {
 	placement_rules = {#_this = planet
 		planet_possible = {
 			custom_tooltip = {
-				fail_text = "z_fw_target_marker_co_1_placement"
+				fail_text = "z_fw_target_marker_cht_co_1_placement"
 				is_star = yes
-				z_is_destructible_stars = yes
+				z_fw_trgr_star_core_destructible = yes
 			}
 		}
 	}
@@ -255,12 +256,12 @@ z_fw_mega_r_cht_co_tgt_marker_1 = {
 	}
 	on_build_complete = {
 		from = {#_建设者国家
-			set_timed_country_flag = { flag = z_fw_target_marker_co_ongoing days = 30 }
-			country_event = { id = z_fw1_misc.31 }	#_选择引爆方式
+			set_timed_country_flag = { flag = z_fw_target_marker_cht_co_ongoing days = 30 }
+		#	country_event = { id = z_fw1_misc.31 }	#_选择引爆方式
 		}
 		fromfrom.planet = {#_planet of this megastructure
-			save_global_event_target_as = z_fw_tgt_plnt_r_co
-			planet_event = { id = z_fw1_misc.317 days = 29 }	#_debug自动清理信标, 星系毁灭也将清理信标
+			save_global_event_target_as = z_fw_tgt_plnt_r_cht_co
+			planet_event = { id = z_fw1_misc.317 days = 29 }	#_debug自动清理信标, sstm毁灭也将清理信标
 		}
 	}
 }
@@ -275,7 +276,8 @@ z_fw_mega_r_cht_co_tgt_marker_2 = {
 	build_time = 0
 	
 	potential = {
-		has_relic = z_fw_r_celestial_orrey
+		always = no
+	#	has_relic = z_fw_r_celestial_orrey
 	}
 	
 	possible = {
@@ -289,13 +291,13 @@ z_fw_mega_r_cht_co_tgt_marker_2 = {
 			}
 		}
 		custom_tooltip = {#_每个月同一个星系只能存在唯一的信标
-			fail_text = "z_fw_target_marker_co_ongoing"
+			fail_text = "z_fw_target_marker_cht_co_ongoing"
 			hidden_trigger = {
 				NOR = {
 					has_megastructure = z_fw_mega_r_cht_co_tgt_marker_1
 					has_megastructure = z_fw_mega_r_cht_co_tgt_marker_2
 				}
-				from  = { NOT = { has_country_flag = z_fw_target_marker_co_ongoing } }
+				from  = { NOT = { has_country_flag = z_fw_target_marker_cht_co_ongoing } }
 			}
 		}
 	}
@@ -303,12 +305,12 @@ z_fw_mega_r_cht_co_tgt_marker_2 = {
 	placement_rules = {#_this = planet
 		planet_possible = {
 			custom_tooltip = {
-				fail_text = "z_fw_target_marker_co_2_placement"
+				fail_text = "z_fw_target_marker_cht_co_2_placement"
 				OR = {
 					is_star = yes
 					is_planet_class = pc_black_hole
 				}
-				z_is_destructible_stars = no
+				z_fw_trgr_star_core_destructible = no
 			}
 		}
 	}
@@ -323,11 +325,11 @@ z_fw_mega_r_cht_co_tgt_marker_2 = {
 	}
 	on_build_complete = {
 		from = {#_建设者国家
-			set_timed_country_flag = { flag = z_fw_target_marker_co_ongoing days = 30 }
-			country_event = { id = z_fw1_misc.31 }	#_选择引爆方式
+			set_timed_country_flag = { flag = z_fw_target_marker_cht_co_ongoing days = 30 }
+		#	country_event = { id = z_fw1_misc.31 }	#_选择引爆方式
 		}
 		fromfrom.planet = {#_planet of this megastructure
-			save_global_event_target_as = z_fw_tgt_plnt_r_co
+			save_global_event_target_as = z_fw_tgt_plnt_r_cht_co
 			planet_event = { id = z_fw1_misc.317 days = 29 }	#_一个月后清理信标
 		}
 	}
@@ -563,10 +565,7 @@ z_fw_mega_target_marker_hok = {
 	}
 	
 	placement_rules = {#_this = planet
-		planet_possible = {
-			is_colony = yes
-			NOT = { has_planet_flag = z_fw_flg_plnt_r_hok_infection }	#_relic同化进行中
-		}
+		planet_possible = { is_star = yes }
 	}
 	
 	ai_weight = {
@@ -579,33 +578,36 @@ z_fw_mega_target_marker_hok = {
 	}
 	on_build_complete = {
 		from = { remove_country_flag = z_fw_r_head_of_karyl_activited }
-		fromfrom.planet = {#_planet of this megastructure
-			owner = {
-				set_country_flag = z_fw_flg_cntr_hok_contacted			#_设为已接触
-				country_event = { id = z_fw1_relic_koh.102 days = 20 }	#_感染开始通知
-			}	#_一个月后通知,下蛊
-			create_ambient_object = {
-				type = z_fw_fx_ambt_tgt_r_hok_execute_1
-				location = this
-				duration = 30
-				use_3d_location = yes
-				entity_offset = { min = 0 max = 0 }
-				entity_offset_height = { min = 0 max = 0 }
-				entity_scale_to_size = yes
-				scale = 1.2
+		fromfrom.planet.solar_system = {#_planet of this megastructure
+			space_owner = {
+				set_country_flag = z_fw_flg_cntr_hok_contacted			#_[设为已接触]
+				country_event = { id = z_fw1_relic_koh.102 random = 7 }	#_[感染开始通知]
 			}
-			create_ambient_object = {
-				type = z_fw_fx_ambt_tgt_r_hok_execute_2
-				location = this
-				duration = 30
-				use_3d_location = yes
-				entity_offset = { min = 0 max = 0 }
-				entity_offset_height = { min = 0 max = 0 }
-				entity_scale_to_size = yes
-				scale = 0.8
+			every_system_planet = {
+				limit = { is_colony = yes	NOT = { has_planet_flag = z_fw_flg_plnt_r_hok_infection } }	#_|殖民地/未在感染中|
+				create_ambient_object = {
+					type = z_fw_fx_ambt_tgt_r_hok_execute_1
+					location = this
+					duration = 30
+					use_3d_location = yes
+					entity_offset = { min = 0 max = 0 }
+					entity_offset_height = { min = 0 max = 0 }
+					entity_scale_to_size = yes
+					scale = 1.2
+				}
+				create_ambient_object = {
+					type = z_fw_fx_ambt_tgt_r_hok_execute_2
+					location = this
+					duration = 30
+					use_3d_location = yes
+					entity_offset = { min = 0 max = 0 }
+					entity_offset_height = { min = 0 max = 0 }
+					entity_scale_to_size = yes
+					scale = 0.8
+				}
+				planet_event = { id = z_fw1_relic_koh.111 }	#_受害者
+				planet_event = { id = z_fw1_relic_koh.121 }	#_持有者
 			}
-			planet_event = { id = z_fw1_relic_koh.111 }	#_受害者
-			planet_event = { id = z_fw1_relic_koh.121 }	#_持有者
 		}
 		remove_megastructure = fromfrom
 	}

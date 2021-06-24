@@ -1,0 +1,16 @@
+z_fw_tech_weap_hanger_7 = {
+    area = engineering
+    category = {
+        voidcraft
+    }
+    tier = 6
+    cost = @z_techTier6cost1
+    weight = 0
+    ai_update_type = military
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

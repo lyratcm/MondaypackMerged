@@ -1,0 +1,59 @@
+namespace = Events_GAPS_Traits_War
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_War.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Peace_Happy
+			remove_modifier = Pop_Modifier_GAPS_War_Happy
+		}
+		if = {
+			limit = { owner = { is_at_war = yes } }
+			every_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_War_Happy }
+				add_modifier = { modifier = Pop_Modifier_GAPS_War_Happy days = -1 }
+			}
+		}
+		else_if = {
+			limit = { owner = { is_at_war = no } }
+			every_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Peace_Happy }
+				add_modifier = { modifier = Pop_Modifier_GAPS_Peace_Happy days = -1 }
+			}
+		}
+	}
+}
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_War.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { OR = { has_trait = Trait_GAPS_War_Happy has_trait = Trait_GAPS_Peace_Happy } }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_War.10 days = 1 }
+		}
+	}
+}
+#On monthly pulse country
+country_event = {
+	id = Events_GAPS_Traits_War.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { OR = { has_trait = Trait_GAPS_War_Happy has_trait = Trait_GAPS_Peace_Happy } }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_War.10 days = 1 }
+		}
+	}
+}

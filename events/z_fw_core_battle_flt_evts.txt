@@ -1,0 +1,63 @@
+###_infinite stellaris core-舰船misc	####################################################################
+namespace = z_fw_core_battle_flt
+
+#_[核心_ship建造/核心_ship升级]
+#_[核心_过门debug]
+
+
+
+
+
+
+
+
+###_[核心_ship建造]	数值限制/	########################################################
+#_<on_ship_built>
+ship_event = {
+	id = z_fw_core_battle_flt.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		##_[数值限制]vl_ship注册
+		if = {
+			limit = { z_fw_trgr_glbl_battle_vl_basic = yes }	#_|vl_基础trgr|
+			ship_event = { id = z_fw_core_battle_vl.31 }		#_[vl_精确修正_debug]
+		}
+	}
+}
+
+
+
+
+###_[核心_ship升级]		######################################
+#_<on_ship_upgraded>
+ship_event = {
+	id = z_fw_core_battle_flt.11
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+	}
+}
+
+
+
+
+
+
+###_[核心_过门debug][id=2]	数值限制	######################################
+fleet_event = {
+	id = z_fw_core_battle_flt.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		##_[数值限制]
+		if = {
+			limit = { z_fw_trgr_glbl_battle_vl_basic = yes }	#_|vl_基础trgr|
+			fleet_event = { id = z_fw_core_battle_vl.2 }		#_[vl_舰队修正_init]
+		}
+		
+		#_清理[接战修正]
+		z_fw_eft_flt_core_battle_mod_init = yes
+	}
+}

@@ -4,20 +4,19 @@ namespace = Events_GAPS_Trait_Great_Leaders
 # scope: country, from: leader
 #on_leader_spawned = {
 country_event = {
-	id = Events_GAPS_Trait_Great_Leaders.1
+	id = Events_GAPS_Trait_Great_Leaders.10
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
 		from = {
 			species = { has_trait = Trait_GAPS_Great_Leaders }
-			num_traits < 2
 		}
 	}
 
 	immediate = {
 		from = {
-			add_random_leader_trait = yes
+			Scripted_Effect_GAPS_add_random_leader_trait = yes
 		}
 	}
 }
@@ -25,17 +24,17 @@ country_event = {
 # This = Country
 #on_ruler_set
 country_event = {
-	id = Events_GAPS_Trait_Great_Leaders.2
+	id = Events_GAPS_Trait_Great_Leaders.20
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		leader = { species = { has_trait = Trait_GAPS_Great_Leaders } num_traits < 3 }
+		leader = { species = { has_trait = Trait_GAPS_Great_Leaders } }
 	}
 
 	immediate = {
 		leader = {
-			add_random_leader_trait = yes
+			Scripted_Effect_GAPS_add_random_leader_trait = yes
 		}
 	}
 }

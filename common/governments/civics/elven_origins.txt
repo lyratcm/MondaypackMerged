@@ -103,8 +103,13 @@ origin_elven_celestial_throne = {
 
 	possible = {
 		authority = { value = auth_imperial }
-		ethics = { value = ethic_spiritualist }
-		civics = { value = civic_inwards_perfection }
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = { value = civic_elven_celestial_grace }
 	}
 
 	description = "origin_tooltip_elven_celestial_throne_effects"

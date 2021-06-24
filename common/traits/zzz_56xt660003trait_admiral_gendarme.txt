@@ -1,0 +1,25 @@
+trait_admiral_gendarme = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_gendarme.dds"
+    modifier = {
+        damage_vs_country_type_pirate_mult = 0.25
+        damage_vs_country_type_dormant_marauders_mult = 0.25
+        damage_vs_country_type_awakened_marauders_mult = 0.25
+        damage_vs_country_type_ruined_marauders_mult = 0.25
+        damage_vs_country_type_marauder_raiders_mult = 0.25
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_lawful
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

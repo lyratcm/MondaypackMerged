@@ -1,7 +1,7 @@
 
 on_game_start_country = {
 	events = {
-		Events_GAPS_Trait_Stunted_Prodigies.2
+		Events_GAPS_Trait_Stunted_Prodigies.20
 	}
 }
 
@@ -9,7 +9,7 @@ on_game_start_country = {
 # scope: country, from: leader
 on_leader_spawned = {
 	events = {
-		Events_GAPS_Trait_Stunted_Prodigies.1
+		Events_GAPS_Trait_Stunted_Prodigies.10
 	}
 }
 # A leader leveled up.
@@ -17,7 +17,7 @@ on_leader_spawned = {
 # From = Leader
 on_leader_level_up = {
 	events = {
-		Events_GAPS_Trait_Stunted_Prodigies.1
+		Events_GAPS_Trait_Stunted_Prodigies.10
 	}
 }
 
@@ -25,7 +25,7 @@ on_leader_level_up = {
 # This = Country
 on_ruler_set = {
 	events = {
-		Events_GAPS_Trait_Stunted_Prodigies.2
+		Events_GAPS_Trait_Stunted_Prodigies.20
 	}
 }
 # Executed when the ruler is ousted and goes back to their pre-ruler class
@@ -33,6 +33,6 @@ on_ruler_set = {
 # This = Country
 on_ruler_back_to_pre_ruler_class = {
 	events = {
-		Events_GAPS_Trait_Stunted_Prodigies.2
+		Events_GAPS_Trait_Stunted_Prodigies.20
 	}
 }

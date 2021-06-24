@@ -1,42 +1,94 @@
 ###_z modmenu intro	#####################################################################
 ###_[button effects 只读 root的东西]
 
-#_global_flag	[z_framework_activated]
+#_[主机欢迎窗口/其他界面debug]
+#_[其他欢迎窗口]
+#_[框架模式选择/模式_modmenu/模式_framework/模式_合集]
+
+#_[重要flg]		z_mm_framework_mode_selected=完成模式选择
 
 
 
 
-###_[完成模式选择]	confirm/设置开局flg
-z_mm_button_intro_confirm = {
-    potential = { has_country_flag = z_mm_framework_mode_selected }
-	#allow = { hidden_trigger = { has_country_flag = z_mm_framework_mode_selected } }
+###_[主机欢迎窗口]	[z_modmenu.1200]	直接开始/模式选择
+#_同步[z_mm_button_intro_confirm-选择框架]
+z_mm_button_intro_welcome = {
+    potential = { is_scope_type = country }	#_当前[国家界面]
 	effect = {
 		hidden_effect = {
-			remove_country_flag = z_mm_framework_mode_selected
-			#_选择框架
+			##_[直接开始]	init/框架模式初始化/开局事件
 			if = {
-				limit = { has_global_flag = z_framework_activated }
-				#_无尽relic
-				set_country_flag = z_fw1_start_monument
-				set_country_flag = z_fw1_start_relic
-				#_框架相关功能
-				remove_global_flag = z_fw_flg_glbl_wg_cb_disabled	#_[新战争类型-启用]
-				set_global_flag = z_fw_core_weap_tech_linkage		#_[战争-武器科技联动]初始化
-				set_global_flag = z_fw_core_battle_dd_common		#_[战争-dd-基础调整]初始化
-				remove_global_flag = z_fw_core_battle_dd_ptw		#_[战争-dd-清除弱者]初始化
-				set_global_flag = z_fw_core_battle_dd_fleet_power	#_[战争-dd-战力强化]初始化
-				#_[战争-dd-战力强化]难度初始化
-				remove_global_flag = z_fw_core_battle_dd_fp_adpt_hard
-				remove_global_flag = z_fw_core_battle_dd_fp_adpt_easy
-				set_global_flag = z_fw_core_battle_dd_fp_adpt_standard
-				#_开局事件
+				limit = { has_global_flag = linkage_support }
+				
+				#_[init]
+				remove_country_flag = z_mm_framework_mode_selected	#_清理模式选择完成flg
+				set_global_flag = z_framework_activated				#_自动选择框架模式
+				
+				#_[框架模式初始化]
+				z_fw_eft_glbl_framework_mode_flg_init = yes
+
+				#_[开局事件]
 				z_mm_lock_menu = yes
 				country_event = { id = z_modmenu.1 }
 				z_mm_lock_setting_panel = yes
-			#	country_event = { id = z_fw1_misc.1 }	#_开局设置
-				country_event = { id = z_fw1_misc.100 }	#_开局指南
+				country_event = { id = z_fw_misc_start.100 }	#_开局指南
 			}
-			#_未选择框架
+			##_[模式选择]
+			else = { country_event = { id = z_modmenu.120 } }
+		}
+		custom_tooltip = z_mm_tip_intro_welcome
+	}
+}
+##_[其他界面debug]
+z_mm_button_intro_welcome_debug = {
+    potential = { NOT = { is_scope_type = country } }	#_当前[其他界面]
+	effect = {
+		custom_tooltip = z_mm_tip_intro_welcome_debug
+	}
+}
+
+
+###_[其他欢迎窗口]
+z_mm_button_intro_confirm_none = {
+    potential = { always = yes }
+	effect = {
+		hidden_effect = {
+			if = {
+				limit = { is_scope_type = country }
+				remove_country_flag = z_mm_framework_mode_selected
+			}
+			else = { owner = { remove_country_flag = z_mm_framework_mode_selected } }	#_[开启非国家界面]
+		}
+		custom_tooltip = z_mm_tip_intro_confirm
+	}
+}
+
+
+
+
+###_[框架模式选择]
+#_[完成选择]=开局flg初始化	init/框架模式/菜单模式
+z_mm_button_intro_confirm = {
+    potential = { has_country_flag = z_mm_framework_mode_selected }
+	effect = {
+		hidden_effect = {
+			##_[init]
+			remove_country_flag = z_mm_framework_mode_selected		#_清理模式选择完成flg
+			
+			##_[框架模式]	框架模式初始化/开局事件
+			if = {
+				limit = { has_global_flag = z_framework_activated }
+				
+				#_[框架模式初始化]
+				z_fw_eft_glbl_framework_mode_flg_init = yes
+
+				#_[开局事件]
+				z_mm_lock_menu = yes
+				country_event = { id = z_modmenu.1 }
+				z_mm_lock_setting_panel = yes
+				country_event = { id = z_fw_misc_start.100 }	#_开局指南
+			}
+			##_[菜单模式]
 			else = {
 				set_global_flag = z_fw_flg_glbl_wg_cb_disabled		#_[新战争类型-禁用]
 				#_[战争-dd-战力强化]难度初始化
@@ -56,34 +108,12 @@ z_mm_button_intro_confirm_bg = {
 }
 
 
-#_其他玩家_欢迎模式 confirm
-z_mm_button_intro_confirm_none = {
-    potential = { always = yes }
-	effect = {
-		hidden_effect = {
-			remove_country_flag = z_mm_framework_mode_selected
-		}
-		custom_tooltip = z_mm_tip_intro_confirm
-	}
-}
-
-
-
-
-###_主机_欢迎模式
-z_mm_button_intro_welcome = {
-    potential = { always = yes }	#_通知未结束
-	effect = {
-		hidden_effect = { country_event = { id = z_modmenu.120 } }
-		custom_tooltip = z_mm_tip_intro_welcome
-	}
-}
-###_模式-modmenu
+##_[模式_modmenu]
 z_mm_button_intro_menu_mode_on = {
 	potential = {
 		has_country_flag = z_mm_framework_mode_selected
 		NOR = {
-			has_global_flag = z_framework_overwrite	#_无尽整合
+			has_global_flag = linkage_support	#_无尽整合
 			has_global_flag = z_framework_activated
 		}
 	}
@@ -102,7 +132,7 @@ z_mm_button_intro_menu_mode_off = {
 			}
 			NOT = { has_country_flag = z_mm_framework_mode_selected }
 		}
-		NOT = { has_global_flag = z_framework_overwrite }	#_无尽整合
+		NOT = { has_global_flag = linkage_support }	#_无尽整合
 	}
 	allow = { always = yes }
 	effect = {
@@ -115,12 +145,12 @@ z_mm_button_intro_menu_mode_off = {
 }
 
 
-###_模式-framework
+##_[模式_framework]
 z_mm_button_intro_fw_mode_on = {
 	potential = {
 		has_country_flag = z_mm_framework_mode_selected
 		has_global_flag = z_framework_activated
-		NOT = { has_global_flag = z_framework_overwrite }	#_无尽整合
+		NOT = { has_global_flag = linkage_support }	#_无尽整合
 	}
 	allow = { always = yes }
 	effect = {
@@ -137,7 +167,7 @@ z_mm_button_intro_fw_mode_off = {
 			}
 			NOT = { has_country_flag = z_mm_framework_mode_selected }
 		}
-		NOT = { has_global_flag = z_framework_overwrite }	#_无尽整合
+		NOT = { has_global_flag = linkage_support }	#_无尽整合
 	}
 	allow = { always = yes }
 	effect = {
@@ -150,9 +180,9 @@ z_mm_button_intro_fw_mode_off = {
 }
 
 
-###_模式-无尽整合-只能选择framework
+##_[模式_合集]	只能选择framework	z禁用
 z_mm_button_intro_fw_mode_ic = {
-	potential = { has_global_flag = z_framework_overwrite }	#_无尽整合
+	potential = { has_global_flag = linkage_support }	#_无尽整合
 	allow = { always = yes }
 	effect = {
 		hidden_effect = {

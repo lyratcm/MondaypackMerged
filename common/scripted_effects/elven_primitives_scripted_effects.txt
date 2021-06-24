@@ -61,7 +61,7 @@ create_early_elven_primitive_empire = {
 			civic = civic_landed_nobility
 			civic = civic_flat_world_theory
 		}
-		species = last_created
+		species = last_created_species
 		ethos = random
 		flag = {
 			icon = {
@@ -215,7 +215,7 @@ create_late_elven_primitive_empire = {
 			civic = civic_increasing_urbanization
 			civic = civic_atmospheric_pollution
 		}
-		species = last_created
+		species = last_created_species
 		ethos = random
 		flag = {
 			icon = {
@@ -400,7 +400,7 @@ create_early_drow_primitive_empire = {
 			civic = civic_landed_nobility
 			civic = civic_flat_world_theory
 		}
-		species = last_created
+		species = last_created_species
 		ethos = random
 		flag = {
 			icon = {
@@ -554,7 +554,7 @@ create_late_drow_primitive_empire = {
 			civic = civic_increasing_urbanization
 			civic = civic_atmospheric_pollution
 		}
-		species = last_created
+		species = last_created_species
 		ethos = random
 		flag = {
 			icon = {

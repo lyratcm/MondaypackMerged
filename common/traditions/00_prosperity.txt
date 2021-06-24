@@ -1,6 +1,6 @@
 tr_prosperity_adopt = {
 	modifier = {
-		station_gatherers_produces_mult = 0.25
+		station_gatherers_produces_mult = 0.05
 	}
 
 	tradition_swap = {
@@ -12,7 +12,7 @@ tr_prosperity_adopt = {
 			is_machine_empire = yes
 		}
 		modifier = {
-			station_gatherers_produces_mult = 0.25
+			station_gatherers_produces_mult = 0.05
 		}
 		weight = {
 			factor = 1
@@ -28,7 +28,7 @@ tr_prosperity_adopt = {
 			is_hive_empire = yes
 		}
 		modifier = {
-			station_gatherers_produces_mult = 0.25
+			station_gatherers_produces_mult = 0.05
 		}
 		weight = {
 			factor = 1
@@ -116,7 +116,7 @@ tr_prosperity_finish = {
 		}
 
 		modifier = {
-			job_synapse_drone_per_pop = 0.05
+			job_synapse_drone_per_pop = 0.0303
 			ascension_perks_add = 1
 		}
 
@@ -128,8 +128,8 @@ tr_prosperity_finish = {
 
 tr_prosperity_sct = {
 	modifier = {
-		planet_structures_cost_mult = -0.10
-		planet_building_build_speed_mult = 0.25
+		planet_structures_cost_mult = -0.15
+		planet_building_build_speed_mult = 0.33
 	}
 
 	tradition_swap = {
@@ -155,8 +155,8 @@ tr_prosperity_sct = {
 
 tr_prosperity_administrative_operations = {
 	modifier = {
-		planet_buildings_upkeep_mult = -0.10
-		planet_districts_upkeep_mult = -0.10
+		planet_buildings_upkeep_mult = -0.15
+		planet_districts_upkeep_mult = -0.15
 	}
 
 	tradition_swap = {
@@ -194,37 +194,6 @@ tr_prosperity_public_works = {
 	possible = {
 		has_tradition = tr_prosperity_sct
 	}
-	
-	tradition_swap = {
-		name = tr_prosperity_arcadian_housing
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			OR = {
-				is_plantoid_empire = yes
-				has_valid_civic = civic_agrarian_idyll
-			}
-			is_lithoid_empire = no
-		}
-		weight = {
-			factor = 1
-		}
-	}
-	
-	tradition_swap = {
-		name = tr_prosperity_arcadian_housing_lithoid
-		inherit_effects = no
-		inherit_icon = no
-		inherit_name = no
-		trigger = {
-			has_valid_civic = civic_agrarian_idyll
-			is_lithoid_empire = yes
-		}
-		weight = {
-			factor = 1
-		}
-	}
 
 	tradition_swap = {
 		name = tr_prosperity_extended_hives
@@ -251,6 +220,19 @@ tr_prosperity_public_works = {
 			factor = 1
 		}
 	}
+	
+	tradition_swap = {
+		name = tr_prosperity_void_works
+		inherit_effects = no # Effects are implemented in 00_capital_buildings.txt
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_origin = origin_void_dwellers
+		}
+		weight = {
+			factor = 1
+		}
+	}
 
 	ai_weight = {
 		factor = 5000
@@ -258,11 +240,16 @@ tr_prosperity_public_works = {
 }
 
 tr_prosperity_interstellar_franchising = {
+	### Changed to "Worker Unions"
 	possible = {
 		has_tradition = tr_prosperity_administrative_operations
 	}
 
-	# implementation done in districts file
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+	}
+
+	# Paradox is poopoo kaka
 
 	tradition_swap = {
 		name = tr_prosperity_efficiency_algorithms
@@ -273,7 +260,7 @@ tr_prosperity_interstellar_franchising = {
 			is_machine_empire = yes
 		}
 		modifier = {
-			country_energy_produces_mult = 0.05
+			planet_jobs_simple_drone_produces_mult = 0.05
 		}
 		weight = {
 			factor = 1
@@ -289,7 +276,7 @@ tr_prosperity_interstellar_franchising = {
 			is_hive_empire = yes
 		}
 		modifier = {
-			country_energy_produces_mult = 0.05
+			planet_jobs_simple_drone_produces_mult = 0.05
 		}
 		weight = {
 			factor = 1

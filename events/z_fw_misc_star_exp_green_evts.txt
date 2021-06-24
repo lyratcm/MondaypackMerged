@@ -1,0 +1,607 @@
+namespace = z_fw_misc_star_exp_green
+
+#_[star引爆_单体]	[z_fw1_misc.31]opt设置[bh_flg]并确定[执行plnt]
+#_[设置ambt_obj]
+#_[star引爆_sstm_其他fx_bh]
+#_[cntr_引爆]
+#_[舰队emp]
+
+
+
+###_flag
+	#_ambt		[z_fw_fx_ambient_ongoing]用于保留fx_ambt
+	#_plnt		[z_fw_flg_plnt_star_exp_executing]plnt当前引爆中
+	#			[z_fw_flg_plnt_star_exp_bh_ready]判定[是否bh化]
+	#_sstm		[z_fw_flg_sstm_star_exp_executing]sstm当前引爆中
+
+
+
+
+
+
+
+	
+###_[star引爆_单体]	[id=1]	start/phase_1/phase_2/phase_3/final	########################################
+
+#_[start]
+planet_event = {
+	id = z_fw_misc_star_exp_green.10
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { NOT = { has_planet_flag = z_fw_flg_plnt_star_exp_executing } }	#_[star引爆flg_检测]
+	
+	immediate = {
+		#_[star引爆flg_设置]
+		set_timed_planet_flag = { flag = z_fw_flg_plnt_star_exp_executing days = 30 }
+		#_[ambt_obj]
+		planet_event = { id = z_fw_misc_star_exp_green.100 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.101 days = 1 }
+		planet_event = { id = z_fw_misc_star_exp_green.102 days = 1 }
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.11 days = 4 }
+	}
+}
+#_[phase_1]
+planet_event = {
+	id = z_fw_misc_star_exp_green.11
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.103 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.100 days = 3 }
+		planet_event = { id = z_fw_misc_star_exp_green.102 days = 4 }
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.12 days = 6 }
+	}
+}
+#_[phase_2]
+planet_event = {
+	id = z_fw_misc_star_exp_green.12
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.104 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.1001 days = 3 }	#_[charge_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1021 days = 4 }	#_[flare_放大]
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.13 days = 6 }
+	}
+}
+#_[phase_3]
+planet_event = {
+	id = z_fw_misc_star_exp_green.13
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.105 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.1001 days = 5 }	#_[charge_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1011 days = 6 }	#_[trigger_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1021 days = 6 }	#_[flare_放大]
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.14 days = 8 }
+	}
+}
+#_[final]
+planet_event = {
+	id = z_fw_misc_star_exp_green.14
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#_[exp_final]
+		planet_event = { id = z_fw_misc_star_exp_green.106 days = 0 }
+		#_[sstm毁灭]
+		solar_system = { z_fw_eft_planet_annihilation = yes }
+		#_[bh化]
+		if = {
+			limit = { has_planet_flag = z_fw_flg_plnt_star_exp_bh_ready }	#_[bh_flg_存在]
+			remove_planet_flag = z_fw_flg_plnt_star_exp_bh_ready
+			if = {
+				limit = {
+					NOT = { is_planet_class = pc_black_hole }
+					z_fw_trgr_star_core_destructible = yes
+				}
+				change_pc = "pc_black_hole"
+				clear_deposits = yes
+				z_fw_eft_deposit_star_bh = yes
+			}
+		}
+	}
+}
+
+
+
+
+###_[设置ambt_obj]	charge/trigger/flare/exp_phase_1/exp_phase_2/exp_phase_3/exp_final	##################################
+#_[charge]			100		[start/phase1]
+planet_event = {
+	id = z_fw_misc_star_exp_green.100
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_charge
+			duration = 5
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[charge_放大]		1001	[phase2/phase3]
+planet_event = {
+	id = z_fw_misc_star_exp_green.1001
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_charge
+			duration = 5
+			entity_scale_to_size = yes
+			scale = 0.12
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[trigger]			101		[start/phase1]
+planet_event = {
+	id = z_fw_misc_star_exp_green.101
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_trigger
+			duration = 4
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[trigger_放大]	1011	[phase2/phase3]
+planet_event = {
+	id = z_fw_misc_star_exp_green.1011
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_trigger
+			duration = 4
+			entity_scale_to_size = yes
+			scale = 0.12
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[flare]			102		[start/phase1]
+planet_event = {
+	id = z_fw_misc_star_exp_green.102
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_fx_ambt_star_exp_green_flare
+			duration = 5
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[flare_放大]		1021	[phase2/phase3]
+planet_event = {
+	id = z_fw_misc_star_exp_green.1021
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_fx_ambt_star_exp_green_flare
+			duration = 5
+			entity_scale_to_size = yes
+			scale = 0.12
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+
+#_[exp_phase_1]	103
+planet_event = {
+	id = z_fw_misc_star_exp_green.103
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_phase_1
+			duration = 21
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[exp_phase_2]	104
+planet_event = {
+	id = z_fw_misc_star_exp_green.104
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_phase_2
+			duration = 15
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[exp_phase_3]	105
+planet_event = {
+	id = z_fw_misc_star_exp_green.105
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_phase_3
+			duration = 9
+			entity_scale_to_size = yes
+			scale = 0.1
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+#_[exp_final]	106
+planet_event = {
+	id = z_fw_misc_star_exp_green.106
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {#_[mod缩放]
+			limit = { has_global_flag = has_system_scale_mod }	#_2.5
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_exp_green_final
+				duration = 30
+				entity_scale_to_size = no
+				scale = 100.0
+				
+				location = this
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}	
+		}
+		else = {
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_exp_green_final
+				duration = 30
+				entity_scale_to_size = no
+				scale = 40.0
+				
+				location = this
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+	}
+}
+
+
+
+	
+###_[star引爆_sstm_其他fx_bh]	[id=1]	start/phase_1/phase_2/phase_3/final_fx/其他_bh	########################################
+#_[start]
+planet_event = {
+	id = z_fw_misc_star_exp_green.20
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.100 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.101 days = 1 }
+		planet_event = { id = z_fw_misc_star_exp_green.102 days = 1 }
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.21 days = 4 }
+	}
+}
+#_[phase_1]
+planet_event = {
+	id = z_fw_misc_star_exp_green.21
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.103 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.100 days = 3 }
+		planet_event = { id = z_fw_misc_star_exp_green.102 days = 4 }
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.22 days = 6 }
+	}
+}
+#_[phase_2]
+planet_event = {
+	id = z_fw_misc_star_exp_green.22
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.104 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.1001 days = 3 }	#_[charge_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1021 days = 4 }	#_[flare_放大]
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.23 days = 6 }
+	}
+}
+#_[phase_3]
+planet_event = {
+	id = z_fw_misc_star_exp_green.23
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		planet_event = { id = z_fw_misc_star_exp_green.105 days = 0 }
+		planet_event = { id = z_fw_misc_star_exp_green.1001 days = 5 }	#_[charge_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1011 days = 6 }	#_[trigger_放大]
+		planet_event = { id = z_fw_misc_star_exp_green.1021 days = 6 }	#_[flare_放大]
+		#_[接续]
+		planet_event = { id = z_fw_misc_star_exp_green.24 days = 8 }
+	}
+}
+#_[final_fx]
+planet_event = {
+	id = z_fw_misc_star_exp_green.24
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#_[ambt_obj]	star_exp_fx
+		create_ambient_object = {
+			type = z_fw_ambt_fx_star_exp_green_final_fx
+			duration = 15
+			entity_scale_to_size = yes
+			scale = 0.11
+			
+			location = this
+			use_3d_location = yes
+			base_angle_towards = from
+			entity_face_object = from
+			entity_offset = { min = 0 max = 0 }
+		}
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }		#_添加[ambt_flag]防止自我清理
+		#_[bh化]
+		if = {
+			limit = { has_planet_flag = z_fw_flg_plnt_star_exp_bh_ready }	#_[bh_flg_存在]
+			remove_planet_flag = z_fw_flg_plnt_star_exp_bh_ready
+			change_pc = "pc_black_hole"
+			clear_deposits = yes
+			z_fw_eft_deposit_star_bh = yes
+		}
+	}
+}
+#_[其他_bh]
+planet_event = {
+	id = z_fw_misc_star_exp_green.25
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#_[bh化]
+		if = {
+			limit = { has_planet_flag = z_fw_flg_plnt_star_exp_bh_ready }	#_[bh_flg_存在]
+			remove_planet_flag = z_fw_flg_plnt_star_exp_bh_ready
+			change_pc = "pc_black_hole"
+			clear_deposits = yes
+			z_fw_eft_deposit_star_bh = yes
+		}
+	}
+}
+
+
+
+
+###_[cntr_引爆]	[id=3]	########################################
+country_event = {
+	id = z_fw_misc_star_exp_green.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { exists = root }
+	
+	immediate = { destroy_country = yes }
+}
+
+
+
+
+
+
+
+	
+###_[舰队emp]	[id=4]	charge/exp	########################################
+
+#_<z_fw1_misc.35>	<from=目标定位器/fromfrom=我cntr>
+#_[charge]	init/ambt_obj/ambt_flag/接续/目标定位器_clear
+system_event = {
+	id = z_fw_misc_star_exp_green.40
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { NOT = { has_star_flag = z_fw_flg_star_emp_executing } }
+	
+	immediate = {
+		#_[init]
+		set_timed_star_flag = { flag = z_fw_flg_star_emp_executing days = 7 }	#_[舰队emp_cd_设置]
+		from.solar_system = {#_[移动到主星附近]
+			random_system_planet = {
+				limit = { is_primary_star = yes }
+				from = { set_location = { target = prev distance = 10 angle = random } }
+			}
+		}
+		
+		#_[ambt_obj]
+		if = {#_[mod缩放]
+			limit = { has_global_flag = has_system_scale_mod }	#_2.5x
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_emp_green_charge
+				duration = 15
+				entity_scale_to_size = no
+				scale = 75.0
+				
+				location = from
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}	
+		}
+		else = {#_原版缩放1x
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_emp_green_charge
+				duration = 15
+				entity_scale_to_size = no
+				scale = 30.0
+				
+				location = from
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+		
+		#_[接续]
+		system_event = { id = z_fw_misc_star_exp_green.41 days = 7 scopes = { from = last_created_ambient_object fromfrom = fromfrom } }	#_#fromfrom无法直接引用fromfrom?#
+		#_[目标定位器_clear]
+		destroy_fleet = { target = from destroy_template = yes }
+	}
+}
+#_<z_fw_misc_star_exp_green.40>	<from=前一个ambt/fromfrom=我cntr>
+#_[exp]	ambt_obj/ambt_flag/创造残骸
+system_event = {
+	id = z_fw_misc_star_exp_green.41
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		#_[ambt_obj]
+		if = {#_[mod缩放]
+			limit = { has_global_flag = has_system_scale_mod }	#_2.5x
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_emp_green_exp
+				duration = 15
+				entity_scale_to_size = no
+				scale = 75.0
+				
+				location = from
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}	
+		}
+		else = {#_原版缩放1x
+			create_ambient_object = {
+				type = z_fw_ambt_fx_star_emp_green_exp
+				duration = 15
+				entity_scale_to_size = no
+				scale = 30.0
+				
+				location = from
+				use_3d_location = yes
+				base_angle_towards = from
+				entity_face_object = from
+				entity_offset = { min = 0 max = 0 }
+			}
+		}
+		#_添加[ambt_flag]防止自我清理
+		last_created_ambient_object = { set_ambient_object_flag = z_fw_fx_ambient_ongoing }
+		#_[创造残骸]
+		every_fleet_in_system = {
+		#	limit = { owner = fromfrom }	#_无论敌我全部毁灭
+			destroy_and_spawn_debris_for = fromfrom
+			destroy_fleet = { target = this  destroy_template = yes }
+		}
+	}
+}
+
+
+

@@ -1,0 +1,22 @@
+trait_inept = {
+    cost = -1
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_natural_chemists"
+        "trait_natural_refiners"
+        "trait_natural_translucers"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_rare_crystals_produces_mult = -0.33
+        planet_jobs_exotic_gases_produces_mult = -0.33
+        planet_jobs_volatile_motes_produces_mult = -0.33
+    }
+}

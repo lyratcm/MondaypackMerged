@@ -1,0 +1,176 @@
+namespace = est_general
+
+#Sets flag that the mod is in use
+country_event = {
+	id = est_general.1
+	hide_window = yes
+	fire_only_once = yes
+	trigger = { 
+		NOT = { 
+			has_global_flag = expanded_stellaris_traditions_mod_in_use 
+		}
+	}
+	immediate = { 
+		set_global_flag = expanded_stellaris_traditions_mod_in_use 
+	}
+}
+
+#Remove planet modifiers from a planet when ownerless or occupation is transfered.
+planet_event = {
+	id = est_general.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {					
+		#Aesthetics
+		if = {
+			limit = { has_modifier = mod_est_aesthetics_adopt }
+			remove_modifier = "mod_est_aesthetics_adopt"
+		}
+		
+		#Commerce
+		if = {
+			limit = { has_modifier = mod_est_commerce_2_energy }
+			remove_modifier = "mod_est_commerce_2_energy"
+		}
+		if = {
+			limit = { has_modifier = mod_est_commerce_2_food }
+			remove_modifier = "mod_est_commerce_2_food"
+		}
+		if = {
+			limit = { has_modifier = mod_est_commerce_2_minerals }
+			remove_modifier = "mod_est_commerce_2_minerals"
+		}
+				
+
+
+		#Industry
+		if = {
+			limit = { has_modifier = mod_est_industry_5 }
+			remove_modifier = "mod_est_industry_5"
+		}
+		if = {
+			limit = { has_modifier = mod_est_industry_5_GC }
+			remove_modifier = "mod_est_industry_5_GC"
+		}
+		if = {
+			limit = { has_modifier = mod_est_industry_5_machines }
+			remove_modifier = "mod_est_industry_5_machines"
+		}
+
+	}
+}
+
+#Checks that the country have built a robot.
+planet_event = {
+	id = est_general.3
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {	
+		owner = {
+			Not = {
+				has_country_flag = est_built_robot
+			}
+		}
+	}
+	
+	immediate = {
+		owner = {
+			set_country_flag = est_built_robot
+		}
+	}
+}
+
+#A war have begun, triggers other events.
+country_event = {
+	id = est_general.4
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = {
+			id = est_general.7
+			days = 1
+		}
+	}
+}
+
+#A war have ended (triggered if one side won), triggers other events.
+country_event = {
+	id = est_general.5
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = {
+			every_war_participant = {
+				country_event = {
+					id = est_general.7
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+#A war have ended (triggered on white peace), triggers other events.
+country_event = {
+	id = est_general.6
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfromfromfrom = {
+			every_war_participant = {
+				country_event = {
+					id = est_general.7
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+#Updates war modifiers
+country_event = {
+	id = est_general.7
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		country_event = {
+			id = est_aesthetics.3
+		}
+	}
+}
+
+country_event = {
+	id = est_general.51
+	hide_window = yes
+	
+	trigger = {
+		has_swapped_tradition = tr_est_ideology_shared_burdens_1
+		is_at_war = yes
+	}
+
+	immediate = {
+		add_modifier = { modifier = "mod_est_shared_burdens_war" }
+	}
+
+}
+
+country_event = {
+	id = est_general.52
+	hide_window = yes
+	
+	trigger = {
+		has_modifier = "mod_est_shared_burdens_war"
+		is_at_war = no
+	}
+
+	immediate = {
+		remove_modifier = "mod_est_shared_burdens_war"
+	}
+}
+

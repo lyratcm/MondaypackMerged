@@ -1,0 +1,125 @@
+z_fw_b_energy_1 = {
+    base_buildtime = @z_fw_sv_b_basic_time_1
+    category = resource
+    base_cap_amount = 3
+    destroy_trigger = {
+        has_modifier = resort_colony
+    }
+    potential = {
+        always = no
+        NOT = {
+            has_modifier = resort_colony
+        }
+        OR = {
+            NOT = {
+                is_planet_class = pc_habitat
+            }
+            AND = {
+                exists = owner
+                owner = {
+                    is_gestalt = yes
+                }
+            }
+            has_planet_flag = energy_habitat
+        }
+    }
+    allow = {
+        always = no
+        buildings_simple_allow = yes
+    }
+    prerequisites = {
+        "tech_power_plant_1"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @z_fw_sv_b_basic_cost_1
+        }
+        upkeep = {
+            minerals = 1
+        }
+        produces = {
+            energy = 6
+        }
+    }
+    upgrades = {
+        z_fw_b_energy_2
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_maintenance_drone_add = 1
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_maintenance_drone_effect_desc
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            weight = 10
+            NOR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+            OR = {
+                districts_good_energy = yes
+                num_districts = {
+                    type = district_generator
+                    value >= 3
+                }
+                num_districts = {
+                    type = district_generator_uncapped
+                    value >= 3
+                }
+                num_districts = {
+                    type = district_hab_energy
+                    value >= 2
+                }
+                num_districts = {
+                    type = district_rw_generator
+                    value >= 1
+                }
+                AND = {
+                    exists = owner
+                    owner = {
+                        has_monthly_income = {
+                            resource = energy
+                            value < 0
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = energy
+                    value < 50
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        energy = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

@@ -48,14 +48,6 @@ on_colonized = {
 	}
 }
 
-# This = Country which established the communications
-# From = Country which communications were established with
-on_post_communications_established = {
-	events = {
-		events_am_civics_charitable_efforts.1 ### Adds opinion modifier for charitable_efforts Civic
-	}
-}
-
 # This = country
 # From = opponent war leader
 on_entering_war = {
@@ -69,5 +61,13 @@ on_entering_war = {
 on_tech_increased = {
 	events = {
 		events_am_civics_locust_capitalism.14 ### Removes all "Drained Planet" modifiers from all planets if we just researched "Sustainability Industries".
+	}
+}
+
+# Executed just as country is changing its government, before the new one is applied
+# THIS = country
+on_post_government_changed = {
+	events = {
+		events_am_civics_banking_giant.1 ### Gives country flag to Banking Giants so they can construct the building
 	}
 }

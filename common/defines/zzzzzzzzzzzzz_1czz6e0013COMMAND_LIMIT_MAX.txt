@@ -1,3 +1,0 @@
-NGameplay = {
-    COMMAND_LIMIT_MAX = 5000
-}

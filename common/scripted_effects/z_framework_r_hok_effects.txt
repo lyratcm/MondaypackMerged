@@ -338,7 +338,7 @@ z_fw_eft_spcs_r_hok_infection_portrait = {
 	#_肉鼬
 	if = {
 		limit = {
-			z_fw_trgr_spcs_regular = yes
+			z_fw_trgr_spcs_core_organic_vanilla = yes
 			NOT = { species_portrait = z_fw_spcs_karyl }
 		}
 		change_species_portrait = z_fw_spcs_karyl

@@ -1,0 +1,18 @@
+trait_gifted_pilots = {
+    cost = 2
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_hive_mind"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_growth_from_immigration = 0.3
+    }
+}

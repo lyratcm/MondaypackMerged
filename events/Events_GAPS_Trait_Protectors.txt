@@ -1,0 +1,59 @@
+namespace = Events_GAPS_Traits_Protectors
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Protectors.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		every_deposit = {
+			limit = { is_deposit_type = Deposits_GAPS_Num_Protectors_Armies }
+			remove_deposit = yes
+		}
+		set_variable = { which = "Planet_Variable_GAPS_Num_Protectors_Armies" value = 0 }
+		every_planet_army = {
+			limit = { is_defensive_army = yes species = { has_trait = Trait_GAPS_Protectors } }
+			root = { change_variable = { which = "Planet_Variable_GAPS_Num_Protectors_Armies" value = 1 } }
+		}
+		remove_modifier = Planet_Modifier_GAPS_Trait_Protectors
+		if = {
+			limit = { any_owned_army = { species = { has_trait = Trait_GAPS_Protectors } } }
+			add_modifier = {
+				modifier = Planet_Modifier_GAPS_Trait_Protectors
+				days = -1
+				multiplier = Planet_Variable_GAPS_Num_Protectors_Armies
+			}
+		}
+	}
+}
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_Protectors.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Protectors }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_Protectors.10 days = 1 }
+		}
+	}
+}
+#On monthly pulse country
+country_event = {
+	id = Events_GAPS_Traits_Protectors.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Protectors }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_Protectors.10 days = 1 }
+		}
+	}
+}

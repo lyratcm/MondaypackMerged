@@ -1,0 +1,59 @@
+namespace = Events_GAPS_Traits_Zeal
+		
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Zeal.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_variable = { which = "Planet_Variable_GAPS_Num_Zeal_Armies" value = 0 }
+		every_deposit = {
+			limit = { is_deposit_type = Deposits_GAPS_Num_Zeal_Armies }
+			remove_deposit = yes
+		}
+		every_planet_army = {
+			limit = { is_defensive_army = yes species = { has_trait = Trait_GAPS_Zeal } }
+			root = { change_variable = { which = "Planet_Variable_GAPS_Num_Zeal_Armies" value = 1 } }
+		}
+		remove_modifier = Planet_Modifier_GAPS_Trait_Zeal
+		if = {
+			limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Zeal_Armies" value > 0 } }
+			add_modifier = {
+				modifier = Planet_Modifier_GAPS_Trait_Zeal
+				days = -1
+				multiplier = Planet_Variable_GAPS_Num_Zeal_Armies
+			}
+		}
+	}
+}
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_Zeal.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Zeal }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_Zeal.10 days = 1 }
+		}
+	}
+}
+#On monthly pulse country
+country_event = {
+	id = Events_GAPS_Traits_Zeal.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Zeal }
+	}
+	immediate = {
+		every_owned_planet = {
+			planet_event = { id = Events_GAPS_Traits_Zeal.10 days = 1 }
+		}
+	}
+}

@@ -1,0 +1,130 @@
+namespace = z_fw_star_exp_r_cht_co
+#_[璀璨星图_清理planet]
+#_ambient_object_flag	[z_fw_fx_ambient_ongoing]
+
+
+
+
+###_[planet] 通用	#######################################################################################
+
+#_[planet.target star]超新星诞生		---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.21
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = { z_fw_trgr_star_core_destructible = yes }	#_仅对可破坏恒星生效
+
+	immediate = {
+		z_fw_eft_star_explosion = yes
+	}
+}
+#_[planet.target star]清理轨道			---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.22
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		z_fw_eft_planet_annihilation = yes
+	}
+}
+#_[planet.target star]超新星冷却		---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.23
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		OR = {
+			has_planet_flag = z_fw_nova_cooldown_bh_30
+			has_planet_flag = z_fw_nova_cooldown_bh_25
+			has_planet_flag = z_fw_nova_cooldown_bh_20
+			has_planet_flag = z_fw_nova_cooldown_bh_15
+			has_planet_flag = z_fw_nova_cooldown_small
+		}
+	}
+
+	immediate = {
+		z_fw_eft_nova_cooldown = yes
+	}
+}
+
+
+
+
+
+
+
+
+###_璀璨星图
+#_[planet.fx_r_co]闪电		---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.311
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_ambient_object = {#_闪电蓄力1.5s
+			type = z_fw_star_explosion_green
+			location = this
+			duration = 3
+			
+			use_3d_location = yes
+			base_angle_towards = star
+			entity_face_object = star
+			entity_offset = { min = 0 max = 0 }
+			entity_scale_to_size = yes
+			scale = 2.0
+		}
+		last_created_ambient_object = {
+			set_ambient_object_flag = z_fw_fx_ambient_ongoing
+		}
+	}
+}
+#_[planet.fx_r_co]闪光		---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.312
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_star_explosion_green
+			location = this
+			duration = 3
+			
+			use_3d_location = yes
+			base_angle_towards = star
+			entity_face_object = star
+			entity_offset = { min = 0 max = 0 }
+			entity_scale_to_size = yes
+			scale = 2.0
+		}
+		last_created_ambient_object = {
+			set_ambient_object_flag = z_fw_fx_ambient_ongoing
+		}
+	}
+}
+#_[planet.fx_r_co]冲击波	---z禁用
+planet_event = {
+	id = z_fw_star_exp_r_cht_co.313
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		create_ambient_object = {
+			type = z_fw_star_explosion_green
+			location = this
+			duration = 3
+			
+			use_3d_location = yes
+			base_angle_towards = star
+			entity_face_object = star
+			entity_offset = { min = 0 max = 0 }
+			entity_scale_to_size = yes
+			scale = 2.0
+		}
+		last_created_ambient_object = {
+			set_ambient_object_flag = z_fw_fx_ambient_ongoing
+		}
+	}
+}

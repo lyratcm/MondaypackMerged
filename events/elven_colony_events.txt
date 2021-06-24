@@ -51,7 +51,7 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			if = {
 				limit = {
 					has_owner = yes
@@ -241,36 +241,5 @@ planet_event = {
 
 	option = {
 		name = elven_colony_events.42.a
-	}
-}
-
-# Baoled Valshaquellar is reverted back in a month (without warning).
-planet_event = {
-	id = elven_colony_events.43
-	hide_window = yes
-
-	trigger = {
-		has_planet_flag = drow_valshaquellar_project
-		NOR = {
-			is_planet_class = pc_drow_valshaquellar_dead
-			is_planet_class = pc_drow_valshaquellar
-		}
-    }
-
-    mean_time_to_happen = {
-        months = 1
-    }
-
-	immediate = {
-		if = {
-			limit = {
-				has_planet_flag = drow_valshaquellar_repaired
-			}
-
-			change_pc = pc_drow_valshaquellar
-		}
-		else = {
-			change_pc = pc_drow_valshaquellar_dead
-		}
 	}
 }

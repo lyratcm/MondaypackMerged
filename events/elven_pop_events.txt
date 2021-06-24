@@ -7,10 +7,10 @@ event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
-				any_pop = { drow_events_is_xenocidal = yes }
-				any_pop = { drow_events_is_xenocidable = yes }
+				any_owned_pop = { drow_events_is_xenocidal = yes }
+				any_owned_pop = { drow_events_is_xenocidable = yes }
 			}
 			
 			random_owned_pop = {
@@ -26,7 +26,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 4
 								}
@@ -35,7 +35,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 10
 								}
@@ -44,7 +44,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 16
 								}
@@ -53,7 +53,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 22
 								}
@@ -62,7 +62,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 28
 								}
@@ -71,7 +71,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 34
 								}
@@ -80,7 +80,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 40
 								}
@@ -89,7 +89,7 @@ event = {
 						modifier = {
 							factor = 1.5
 							planet = { 
-								count_pops = {
+								count_owned_pop = {
 									limit = { drow_events_is_xenocidal = yes }
 									count > 46
 								}
@@ -168,7 +168,7 @@ country_event = {
 	immediate = {
 		every_owned_planet = {
 			limit = {
-				any_pop = {
+				any_owned_pop = {
 					species = { has_species_flag = elven_arcadian_symbiosis_treants }
 				}
 			}

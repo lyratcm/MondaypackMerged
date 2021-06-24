@@ -1,0 +1,86 @@
+namespace = Events_GAPS_Traits_Campers
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Campers.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		Scripted_Planet_Effect_Check_Free_Building_Slots = yes
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Campers_Bonus
+			set_variable = { which = "Pop_Variable_GAPS_Num_Free_Building_Slots" value = 0 }
+		}
+		while = {
+			count = Planet_Variable_GAPS_Num_Free_Building_Slots
+			root = {
+				every_owned_pop = {
+					limit = { pop_has_trait = Trait_GAPS_Campers }
+					change_variable = { which = "Pop_Variable_GAPS_Num_Free_Building_Slots" value = 1 }
+				}
+			}
+		}
+		every_owned_pop = { 
+			limit = { pop_has_trait = Trait_GAPS_Campers } 
+			add_modifier = { 
+				modifier = Pop_Modifier_GAPS_Campers_Bonus 
+				days = -1
+				multiplier = Pop_Variable_GAPS_Num_Free_Building_Slots
+			}
+		}
+	}
+}
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+#on_pop_added
+pop_event = {
+	id = Events_GAPS_Traits_Campers.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		Root = { has_trait = Trait_GAPS_Campers }
+	}
+	immediate = {
+		From = {
+			planet_event = { id = Events_GAPS_Traits_Campers.10 days = 1 }
+		}
+	}
+}
+#on_building_complete
+#A building construction has been completed.
+# This = Planet
+planet_event = {
+	id = Events_GAPS_Traits_Campers.30
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_pop = { species = { has_trait = Trait_GAPS_Campers } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Campers.10 days = 1 }
+		}
+	}
+}
+
+#on_building_demolished
+# A building construction has demolished.
+# This = Planet
+planet_event = {
+	id = Events_GAPS_Traits_Campers.31
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_pop = { species = { has_trait = Trait_GAPS_Campers } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Campers.10 days = 1 }
+		}
+	}
+}

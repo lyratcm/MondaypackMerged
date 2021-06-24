@@ -6,7 +6,7 @@ decision_am_civics_building_social_media_hub_1 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			influence = 25 # Initial Cost
 		}
 		cost = {
 			trigger = { 
@@ -61,7 +61,7 @@ decision_am_civics_building_social_media_hub_2 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			influence = 25 # Initial Cost
 		}
 		cost = {
 			trigger = { 
@@ -116,7 +116,7 @@ decision_am_civics_building_social_media_hub_3 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			influence = 25 # Initial Cost
 		}
 		cost = {
 			trigger = { 
@@ -171,7 +171,7 @@ decision_am_civics_building_social_media_hub_4 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			influence = 25 # Initial Cost
 		}
 		cost = {
 			trigger = { 
@@ -226,7 +226,7 @@ decision_am_civics_building_social_media_hub_5 = {
 	resources = {
 		category = decisions
 		cost = {
-			influence = 50
+			influence = 25 # Initial Cost
 		}
 		cost = {
 			trigger = { 

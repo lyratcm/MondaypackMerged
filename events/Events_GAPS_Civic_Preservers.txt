@@ -57,9 +57,9 @@ country_event = {
 			solar_system = { set_variable = { which = "System_Variable_GAPS_Number_Of_Preservable_Planets" value = 0 } }
 		}
 		every_planet_within_border = {
-			limit = { is_colonizable = yes is_colony = no }
+			limit = { is_colonizable = yes is_colony = no NOR = { is_planet_class = pc_habitat is_planet_class = pc_ringworld_habitable } }
 			if = {
-				limit = { OR = { is_planet_class = pc_gaia is_planet_class = pc_gaia } }
+				limit = { is_planet_class = pc_gaia is_terraformed = no }
 				event_target:Planet_Target_GAPS_Preserver_Homeworld = {
 					add_deposit = d_GAPS_Num_Uncolonized_Gaia_Worlds_In_Borders
 				}

@@ -1,0 +1,148 @@
+namespace = Events_GAPS_Traits_Feral_Tendencies
+
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		set_variable = { which = "Planet_Variable_GAPS_Num_Feral_Tendencies_Pops" value = 0 }
+		every_deposit = {
+			limit = { is_deposit_type = Deposits_GAPS_Feral_Tendencies }
+			remove_deposit = yes
+		}
+		remove_modifier = Planet_Modifier_GAPS_Trait_Feral_Tendencies
+		remove_modifier = Planet_Modifier_GAPS_Trait_Feral_Tendencies_Gestalt
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Feral_Tendencies_Pops" value = 1 } }
+		}
+		if = {
+			limit = { any_owned_pop = { pop_has_trait = Trait_GAPS_Feral_Tendencies } }
+			if = { 
+				limit = { owner = { is_gestalt = no } }
+				add_modifier = { 
+					modifier = Planet_Modifier_GAPS_Trait_Feral_Tendencies
+					days = -1
+					multiplier = Planet_Variable_GAPS_Num_Feral_Tendencies_Pops
+				}
+			}
+			else = {
+				add_modifier = { 
+					modifier = Planet_Modifier_GAPS_Trait_Feral_Tendencies_Gestalt 
+					days = -1
+					multiplier = Planet_Variable_GAPS_Num_Feral_Tendencies_Pops
+				}
+			}
+		}
+	}
+}
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+#on_pop_added
+pop_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		root = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+	}
+	immediate = {
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+pop_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+	}
+	immediate = {
+		from = {
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { pop_has_trait = Trait_GAPS_Feral_Tendencies }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
+planet_event = {
+	id = Events_GAPS_Traits_Feral_Tendencies.25
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		This = { any_owned_species = { has_trait = Trait_GAPS_Feral_Tendencies } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Feral_Tendencies.10 days = 1 }
+		}
+	}
+}
+

@@ -1,0 +1,49 @@
+###_infinite stellaris core-星球	####################################################################
+namespace = z_fw_core_planet
+
+#_[core_星球遍历_季度]
+#_[core_星球毁灭]
+
+
+
+
+###_[core_星球遍历_季度] [id=1]		z_pf2/产业革命	#############################################	z禁用
+#_[z_fw_eft_all_core_plnt_traversal_season]		z统一执行
+planet_event = {
+	id = z_fw_core_planet.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		###_[z_pf2]
+		if = {
+			limit = { has_global_flag = z_pf2_installed }
+			z_pf2_eft_plnt_basic_debug = yes
+		}
+	}
+}
+
+
+
+
+
+
+
+
+###_[core_星球毁灭] [id=20]	#############################################################################
+#_[on_colony_destroyed]
+
+#_[z_fw]plnt_eft			[z_fw_eft_plnt_debug_pop_cap]
+#_[r_hok]plnt_flg			[z_fw_flg_plnt_r_hok_infected]星球已被鼬化	[z_fw_flg_plnt_r_hok_carrier]存在携带者
+planet_event = {
+	id = z_fw_core_planet.20
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#_清除deposit
+		z_fw_eft_plnt_debug_pop_cap = yes						#_星球人口限制
+		#_清除flag
+		remove_planet_flag = z_fw_flg_plnt_r_hok_infected	#_hok	星球已被鼬化
+		remove_planet_flag = z_fw_flg_plnt_r_hok_carrier	#_hok	携带者
+	}
+}

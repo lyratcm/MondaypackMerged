@@ -6,11 +6,15 @@ country_event = {
 	title = "Immortal Ruler"
 	picture = GFX_evt_alien_propaganda
 	show_sound = event_celebration
-	desc = "Our God-like Ruler has achieved immortality."
+	desc = "immortal_ruler.1.desc"
 	is_triggered_only = yes
 
 	trigger = {
 		is_ai = no
+	}
+
+	option = {
+		name = YES
 	}
 
 	immediate = {
@@ -19,7 +23,7 @@ country_event = {
 			solar_system = { save_event_target_as = system }
 			leader = { add_trait = trait_ruler_immortal }
 		}
-
+		
 		set_country_flag = flag_immortal_ruler
 	}
 
@@ -30,27 +34,25 @@ country_event = {
 
 namespace = unity_patrons
 
-planet_event = {
+country_event = {
 	id = unity_patrons.1
 	hide_window = yes
 	is_triggered_only = yes
-	location = ROOT
-
-	pre_triggers = {
-		has_owner = yes
-	}
+	location = ROOT 
+	
 	trigger = {
-		owner = { has_valid_civic = civic_peacekeepers }
-	}
+		has_valid_civic = civic_peacekeepers
+	}	
 
-	immediate = {
-		owner = {
-			add_modifier = {
-				modifier = "unity_patrons"
-				days = 3650
-			}
+	immediate = { 
+	
+		add_modifier = {
+			modifier = "unity_patrons"
+			days = 3650
 		}
+	
 	}
+	
 }
 
 
@@ -65,24 +67,24 @@ country_event = {
 	id = glorious_fleet.0
 	hide_window = yes
 	is_triggered_only = yes
-
+	
 	trigger = {
 		has_valid_civic = civic_naval_traditions
 		not = { has_country_flag = glorious_fleet }
 		not = { has_country_flag = unglorious_fleet }
-	}
+	}	
 
-	immediate = {
+	immediate = { 	
 		add_modifier = {
 			modifier = "glorious_fleet"
 			days = 30
 		}
 		set_timed_country_flag = {
 			flag = glorious_fleet
-			days = 30
-		}
+			days = 30 
+		}		
 	}
-
+	
 }
 
 
@@ -95,24 +97,24 @@ country_event = {
 	id = glorious_fleet.1
 	hide_window = yes
 	is_triggered_only = yes
-
+	
 	trigger = {
 		has_valid_civic = civic_naval_traditions
 		not = { has_country_flag = glorious_fleet }
 		not = { has_country_flag = unglorious_fleet }
-	}
+	}	
 
-	immediate = {
+	immediate = { 	
 		add_modifier = {
 			modifier = "unglorious_fleet"
 			days = 30
 		}
 		set_timed_country_flag = {
 			flag = unglorious_fleet
-			days = 30
-		}
+			days = 30 
+		}		
 	}
-
+	
 }
 
 
@@ -120,56 +122,77 @@ country_event = {
 namespace = voice_planet
 
 planet_event = {
-	id = voice_planet.1
+	id = voice_planet.1	
 	hide_window = yes
 	is_triggered_only = yes
-	location = ROOT
+	location = ROOT 
 
 	immediate = {
-
+			
 			if = {
 				limit = {
 					has_modifier = "dangerous_wildlife"
 				}
 				remove_modifier = "dangerous_wildlife"
-			}
-
+			}				
+					
 			if = {
 				limit = {
 					has_modifier = "bleak_planet"
 				}
 				remove_modifier = "bleak_planet"
-			}
-
+			}	
+			
 			if = {
 				limit = {
 					has_modifier = "hazardous_weather"
 				}
 				remove_modifier = "hazardous_weather"
-			}
+			}	
 
 			if = {
 				limit = {
 					has_modifier = "wild_storms"
 				}
 				remove_modifier = "wild_storms"
-			}
+			}		
 
+			if = {
+				limit = {
+					has_modifier = "damaged_ecology"
+				}
+				remove_modifier = "damaged_ecology"
+			}	
+
+			if = {
+				limit = {
+					has_modifier = "wasteland_radiation"
+				}
+				remove_modifier = "wasteland_radiation"
+			}	
+
+			if = {
+				limit = {
+					has_modifier = "irradiated_planet"
+				}
+				remove_modifier = "irradiated_planet"
+			}				
+	
 	}
-
+	
 }
 
 
 
 planet_event = {
-	id = voice_planet.2
+	id = voice_planet.2	
 	hide_window = yes
 	is_triggered_only = yes
-	location = ROOT
+	location = ROOT 
 
-	immediate = {
-
-
+	immediate = {		
+					
+	
 
 
 			if = {
@@ -201,7 +224,7 @@ planet_event = {
 				}
 				remove_modifier = "irradiated_planet"
 			}
-
+			
 
 
 			if = {
@@ -209,7 +232,7 @@ planet_event = {
 					has_modifier = "damaged_ecology"
 				}
 				remove_modifier = "damaged_ecology"
-			}
+			}			
 
 			if = {
 				limit = {
@@ -217,110 +240,40 @@ planet_event = {
 				}
 				remove_modifier = "wasteland_radiation"
 			}
-
-
+			
+				
 			if = {
 				limit = {
 					has_modifier = "abandoned_terraforming"
 				}
 				remove_modifier = "abandoned_terraforming"
-			}
+			}	
 
-
-
+		
+	
 	}
-
+	
 }
 
 
 
-namespace = ethic_rebuild_clear_blocker
 
-planet_event = {
-	id = ethic_rebuild_clear_blocker.1
-	hide_window = yes
-	is_triggered_only = yes
-
-	trigger = {
-		exists = owner
-		owner = { has_valid_civic = civic_terraforming }
-	}
-
-	immediate = {
-		FROM = {
-			switch = {
-				trigger = is_deposit_type
-				d_mountain_range = {
-					owner = { add_resource = { minerals = 25 engineering_research = 15 } }
-				}
-				d_active_volcano = {
-					owner = { add_resource = { minerals = 25 engineering_research = 25 energy = 20 } }
-				}
-				d_dangerous_wildlife_blocker = {
-					owner = { add_resource = { society_research = 35 } }
-				}
-				d_dense_jungle = {
-					owner = { add_resource = { food = 25 society_research = 20 } }
-				}
-				d_quicksand_basin = {
-					owner = { add_resource = { minerals = 15 engineering_research = 15 } }
-				}
-				d_noxious_swamp = {
-					owner = { add_resource = { food = 20 society_research = 15 } }
-				}
-				d_massive_glacier = {
-					owner = { add_resource = { minerals = 20 engineering_research = 10 } }
-				}
-				d_toxic_kelp = {
-					owner = { add_resource = { food = 15 energy = 15 society_research = 15 } }
-				}
-				d_deep_sinkhole = {
-					owner = { add_resource = { minerals = 15 energy = 10 engineering_research = 10 } }
-				}
-				d_radioactive_wasteland = {
-					owner = { add_resource = { minerals = 15 society_research = 15 } }
-				}
-				d_city_ruins = {
-					owner = { add_resource = { minerals = 50 society_research = 25 engineering_research = 50 } }
-				}
-				d_infestation = {
-					owner = { add_resource = { society_research = 20 } }
-				}
-				d_quarantine_zone = {
-					owner = { add_resource = { society_research = 15 } }
-					}
-				# d_bombarded_land = {
-				# 	owner = { add_resource = { minerals = 10 engineering_research = 25 } }
-				# }
-				# d_ancient_ruins = {
-				# 	owner = { add_resource = { minerals = 20 engineering_research = 30 society_research = 50 } }
-				# }
-				d_bomb_crater = {
-					owner = { add_resource = { minerals = 10 engineering_research = 25 physics_research = 25 } }
-				}
-				d_crater = {
-					owner = { add_resource = { minerals = 30 engineering_research = 20 physics_research = 30 } }
-				}
-			}
-		}
-	}
-}
 
 
 namespace = observation
 
 # Societal Shift towards Individualist
 country_event = {
-	id = observation.0001
+	id = observation.90001
 	hide_window = yes
-
+	
 	trigger = {
 		is_country_type = primitive
 		NOT = { has_ethic = ethic_fanatic_capitalism }
 		capital_scope = {
 			has_observation_outpost = yes
 			observation_outpost = { has_mission = native_indoctrination }
-			observation_outpost_owner = {
+			observation_outpost_owner = { 
 				OR = {
 					has_ethic = ethic_fanatic_capitalism
 					has_ethic = ethic_capitalism
@@ -328,21 +281,21 @@ country_event = {
 			}
 			any_owned_pop = {
 				has_ethic = ethic_capitalism
-			}
+			}		
 			OR = {
 				root = { NOT = { has_ethic = ethic_capitalism } }
-				count_pops = {
+				count_owned_pop = {
 					limit = { has_ethic = ethic_capitalism }
 					count > 1
-				}
-			}
+				}				
+			}				
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 12
 	}
-
+	
 	immediate = {
 		shift_ethic = "ethic_capitalism"
 		capital_scope = {
@@ -352,15 +305,15 @@ country_event = {
 }
 
 country_event = {
-	id = observation.0002
+	id = observation.90002
 	title = "observation.0002.name"
 	desc = "observation.0002.desc"
 	picture = GFX_evt_medieval_alien_civilization
 	show_sound = event_primitive_civilization
 	location = from
-
+	
 	is_triggered_only = yes
-
+	
 	option = {
 		name = "observation.0002.a"
 	}
@@ -370,16 +323,16 @@ country_event = {
 
 # Societal Shift towards Collectivism
 country_event = {
-	id = observation.1001
+	id = observation.91001
 	hide_window = yes
-
+	
 	trigger = {
 		is_country_type = primitive
 		NOT = { has_ethic = ethic_fanatic_socialism }
 		capital_scope = {
 			has_observation_outpost = yes
 			observation_outpost = { has_mission = native_indoctrination }
-			observation_outpost_owner = {
+			observation_outpost_owner = { 
 				OR = {
 					has_ethic = ethic_fanatic_socialism
 					has_ethic = ethic_socialism
@@ -387,39 +340,275 @@ country_event = {
 			}
 			any_owned_pop = {
 				has_ethic = ethic_socialism
-			}
+			}		
 			OR = {
 				root = { NOT = { has_ethic = ethic_socialism } }
-				count_pops = {
+				count_owned_pop = {
 					limit = { has_ethic = ethic_socialism }
 					count > 1
-				}
-			}
+				}				
+			}				
 		}
 	}
-
+	
 	mean_time_to_happen = {
 		months = 12
 	}
-
+	
 	immediate = {
 		shift_ethic = "ethic_socialism"
 		capital_scope = {
-			observation_outpost_owner = { country_event = { id = observation.1002 } }
+			observation_outpost_owner = { country_event = { id = observation.91002 } }
 		}
 	}
 }
 
 country_event = {
-	id = observation.1002
+	id = observation.91002
 	title = "observation.0002.name"
 	desc = "observation.1002.desc"
 	picture = GFX_evt_medieval_alien_civilization
 	show_sound = event_primitive_civilization
 	location = from
-
+	
 	is_triggered_only = yes
+	
+	option = {
+		name = "observation.0002.a"
+	}
+}
 
+
+
+# Societal Shift towards Elitism
+country_event = {
+	id = observation.92001
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = primitive
+		NOT = { has_ethic = ethic_fanatic_elitist }
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = { has_mission = native_indoctrination }
+			observation_outpost_owner = { 
+				OR = {
+					has_ethic = ethic_fanatic_elitist
+					has_ethic = ethic_elitist
+				}
+			}
+			any_owned_pop = {
+				has_ethic = ethic_elitist
+			}		
+			OR = {
+				root = { NOT = { has_ethic = ethic_elitist } }
+				count_owned_pop = {
+					limit = { has_ethic = ethic_elitist }
+					count > 1
+				}				
+			}				
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		shift_ethic = "ethic_elitist"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.92002 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.92002
+	title = "observation.0002.name"
+	desc = "observation.2002.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "observation.0002.a"
+	}
+}
+
+
+# Societal Shift towards Egalitarian
+country_event = {
+	id = observation.93001
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = primitive
+		NOT = { has_ethic = ethic_fanatic_pluralist }
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = { has_mission = native_indoctrination }
+			observation_outpost_owner = { 
+				OR = {
+					has_ethic = ethic_fanatic_pluralist
+					has_ethic = ethic_pluralist
+				}
+			}
+			any_owned_pop = {
+				has_ethic = ethic_pluralist
+			}		
+			OR = {
+				root = { NOT = { has_ethic = ethic_pluralist } }
+				count_owned_pop = {
+					limit = { has_ethic = ethic_pluralist }
+					count > 1
+				}				
+			}				
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		shift_ethic = "ethic_pluralist"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.3002 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.93002
+	title = "observation.0002.name"
+	desc = "observation.3002.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "observation.0002.a"
+	}
+}
+
+
+
+# Societal Shift towards Ecologism
+country_event = {
+	id = observation.4001
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = primitive
+		NOT = { has_ethic = ethic_fanatic_green }
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = { has_mission = native_indoctrination }
+			observation_outpost_owner = { 
+				OR = {
+					has_ethic = ethic_fanatic_green
+					has_ethic = ethic_green
+				}
+			}
+			any_owned_pop = {
+				has_ethic = ethic_green
+			}		
+			OR = {
+				root = { NOT = { has_ethic = ethic_green } }
+				count_owned_pop = {
+					limit = { has_ethic = ethic_green }
+					count > 1
+				}				
+			}				
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		shift_ethic = "ethic_green"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.4002 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.4002
+	title = "observation.0002.name"
+	desc = "observation.4002.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = from
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "observation.0002.a"
+	}
+}
+
+
+
+
+# Societal Shift towards Industrialism
+country_event = {
+	id = observation.5001
+	hide_window = yes
+	
+	trigger = {
+		is_country_type = primitive
+		NOT = { has_ethic = ethic_fanatic_industrial }
+		capital_scope = {
+			has_observation_outpost = yes
+			observation_outpost = { has_mission = native_indoctrination }
+			observation_outpost_owner = { 
+				OR = {
+					has_ethic = ethic_fanatic_industrial
+					has_ethic = ethic_industrial
+				}
+			}
+			any_owned_pop = {
+				has_ethic = ethic_industrial
+			}		
+			OR = {
+				root = { NOT = { has_ethic = ethic_industrial } }
+				count_owned_pop = {
+					limit = { has_ethic = ethic_industrial }
+					count > 1
+				}				
+			}				
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = {
+		shift_ethic = "ethic_industrial"
+		capital_scope = {
+			observation_outpost_owner = { country_event = { id = observation.5002 } }
+		}
+	}
+}
+
+country_event = {
+	id = observation.5002
+	title = "observation.0002.name"
+	desc = "observation.5002.desc"
+	picture = GFX_evt_medieval_alien_civilization
+	show_sound = event_primitive_civilization
+	location = from
+	
+	is_triggered_only = yes
+	
 	option = {
 		name = "observation.0002.a"
 	}

@@ -1,0 +1,281 @@
+namespace = z_mui_reroll
+
+country_event = {
+	id = z_mui_reroll.1
+	title = z_mui_reroll.1.name
+	desc = z_mui_reroll.1.desc
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+
+	option = { name = CANCEL }
+
+	option = {
+		name = z_mui_reroll.2.name
+		hidden_effect = {
+			owner = { country_event = { id = z_mui_reroll.2 } }
+		}
+	}
+	option = {
+		name = z_mui_reroll.3.name
+		hidden_effect = {
+			owner = { country_event = { id = z_mui_reroll.3 } }
+		}
+	}
+	option = {
+		name = z_mui_reroll.4.name
+		hidden_effect = {
+			owner = { country_event = { id = z_mui_reroll.4 } }
+		}
+	}
+	option = {
+		name = z_mui_reroll.5.name
+		hidden_effect = {
+			owner = { country_event = { id = z_mui_reroll.5 } }
+		}
+	}
+}
+
+#_[总督]
+country_event = {
+	id = z_mui_reroll.2
+	title = z_mui_reroll.2.name
+	desc = z_mui_reroll.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = z_mui_var_cntr_cost value = 0 }
+		every_pool_leader = {
+			limit = { leader_class = governor }
+			set_leader_flag = z_mui_flg_ldr_counted
+		}
+		while = {#_数量统计
+			limit = { any_pool_leader = { has_leader_flag = z_mui_flg_ldr_counted } }
+			random_pool_leader = {
+				limit = { has_leader_flag = z_mui_flg_ldr_counted }
+				remove_leader_flag = z_mui_flg_ldr_counted
+				prev = { change_variable = { which = z_mui_var_cntr_cost value = 1} }
+			}
+		}
+	}
+
+	option = { name = CANCEL }
+	#_[能量币]
+	option = {
+		name = use_credits
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 25
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { energy = -25	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }	kill_leader = { show_notification = no } }
+		}
+	}
+	#_[影响力]
+	option = {
+		name = use_influence
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = influence
+				value >= 3
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { influence = -3	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_governer days = 1 }
+			every_pool_leader = { limit = { leader_class = governor }	kill_leader = { show_notification = no } }
+		}
+	}
+}
+
+country_event = {
+	id = z_mui_reroll.3
+	title = z_mui_reroll.3.name
+	desc = z_mui_reroll.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = z_mui_var_cntr_cost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = scientist }
+			set_leader_flag = z_mui_flg_ldr_counted
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = z_mui_flg_ldr_counted } }
+			random_pool_leader = {
+				limit = { has_leader_flag = z_mui_flg_ldr_counted }
+				remove_leader_flag = z_mui_flg_ldr_counted
+			}
+			change_variable = { which = z_mui_var_cntr_cost value = 1}
+		}
+	}
+	
+	option = { name = CANCEL }
+	#_[能量币]
+	option = {
+		name = use_credits
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 25
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { energy = -25	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }	kill_leader = { show_notification = no } }
+		}
+	}
+	#_[影响力]
+	option = {
+		name = use_influence
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = influence
+				value >= 3
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { influence = -3	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_scientist days = 1 }
+			every_pool_leader = { limit = { leader_class = scientist }	kill_leader = { show_notification = no } }
+		}
+	}
+}
+
+country_event = {
+	id = z_mui_reroll.4
+	title = z_mui_reroll.4.name
+	desc = z_mui_reroll.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = z_mui_var_cntr_cost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = admiral }
+			set_leader_flag = z_mui_flg_ldr_counted
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = z_mui_flg_ldr_counted } }
+			random_pool_leader = {
+				limit = { has_leader_flag = z_mui_flg_ldr_counted }
+				remove_leader_flag = z_mui_flg_ldr_counted
+			}
+			change_variable = { which = z_mui_var_cntr_cost value = 1}
+		}
+	}
+	
+	option = { name = CANCEL }
+	#_[能量币]
+	option = {
+		name = use_credits
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 25
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { energy = -25	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }	kill_leader = { show_notification = no } }
+		}
+	}
+	#_[影响力]
+	option = {
+		name = use_influence
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = influence
+				value >= 3
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { influence = -3	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_admiral days = 1 }
+			every_pool_leader = { limit = { leader_class = admiral }	kill_leader = { show_notification = no } }
+		}
+	}
+}
+
+country_event = {
+	id = z_mui_reroll.5
+	title = z_mui_reroll.5.name
+	desc = z_mui_reroll.2.desc
+	is_triggered_only = yes
+	picture = GFX_evt_metropolis
+
+	## Immediately count how many leaders are in the class pool
+	immediate = {
+		set_variable = { which = z_mui_var_cntr_cost value = 0 }
+		every_pool_leader = {#_数量统计
+			limit = { leader_class = general }
+			set_leader_flag = z_mui_flg_ldr_counted
+		}
+		while = {
+			limit = { any_pool_leader = { has_leader_flag = z_mui_flg_ldr_counted } }
+			random_pool_leader = {
+				limit = { has_leader_flag = z_mui_flg_ldr_counted }
+				remove_leader_flag = z_mui_flg_ldr_counted
+			}
+			change_variable = { which = z_mui_var_cntr_cost value = 1}
+		}
+	}
+
+	option = { name = CANCEL }
+	#_[能量币]
+	option = {
+		name = use_credits
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = energy
+				value >= 25
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { energy = -25	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }	kill_leader = { show_notification = no } }
+		}
+	}
+	#_[影响力]
+	option = {
+		name = use_influence
+		trigger = { always = yes }
+		allow = {
+			resource_stockpile_compare = {
+				resource = influence
+				value >= 3
+				mult = z_mui_var_cntr_cost
+			}
+		}
+		owner = { add_resource = { influence = -3	mult = z_mui_var_cntr_cost } }
+		hidden_effect = {
+			set_timed_country_flag = { flag = z_mui_flg_z_mui_reroll_cd_general days = 1 }
+			every_pool_leader = { limit = { leader_class = general }	kill_leader = { show_notification = no } }
+		}
+	}
+}

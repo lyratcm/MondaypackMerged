@@ -1,6 +1,15 @@
 
 
-opinion_am_civics_is_charitable_efforts = {
+triggered_opinion_am_civics_is_charitable_efforts = {
+	trigger = {
+		is_country_type = default
+		is_gestalt = no
+		is_homicidal = no
+		from = { 
+			has_valid_civic = civic_am_civics_charitable_efforts
+		}
+	}
+	
 	opinion = {
 		base = 50
 		modifier = {
@@ -72,7 +81,7 @@ opinion_am_civics_is_charitable_efforts = {
 			has_authority = "auth_corporate" 
 		}	
 		modifier = {
-			add = 20
+			add = 50
 			has_valid_civic = "civic_am_civics_charitable_efforts" 
 		}
 	}

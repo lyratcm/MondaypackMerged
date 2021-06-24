@@ -1,5 +1,0 @@
-# Add global variables here that will be available in all script files.
-# @something = 42
-# They can be overridden in each normal script file.
-
-@assembler_job_weight = 10000 # Assemblers are just as important as spawner drones

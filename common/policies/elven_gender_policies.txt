@@ -44,7 +44,8 @@ elven_gender_policy = {
 		name = "elven_gender_matriarchy_governor"
 
 		valid = {
-			NOT = {
+			NOR = {
+				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
 			}
 		}
@@ -70,6 +71,7 @@ elven_gender_policy = {
 
 		valid = {
 			NOR = {
+				has_ethic = ethic_egalitarian
 				has_ethic = ethic_fanatic_egalitarian
 				has_civic = civic_drow_warriors
 			}

@@ -18,13 +18,14 @@ technologist = {
 
 	is_potential = {
 		years_passed > 10
+		has_encountered_other_species = yes
 		NOT = { has_ethic = ethic_gestalt_consciousness }
-		count_owned_pops = {
+		count_owned_pop = {
 			count >= 5
 			limit = {
 				has_ethic = ethic_materialist
 			}
-		}
+		}		
 	}
 	
 	parameters = {
@@ -54,7 +55,7 @@ technologist = {
 			has_ethic = ethic_fanatic_materialist
 			is_robot_pop = yes
 		}
-	}
+	}	
 	
 	attraction = {
 		base = 150
@@ -86,45 +87,8 @@ technologist = {
 		base = 100
 		
 		modifier = {
-			factor = 0.1
-			NOR = {
-				leader_class = scientist
-			}
-		}
-		modifier = {
-			factor = 0
-			exists = owner
-			owner = { is_science_election = yes }
-			NOR = {
-				leader_class = scientist
-			}
-		}
-		
-		modifier = {
 			factor = 0.0
 			is_event_leader = yes
-		}
-	}
-
-	demand = {
-		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
-		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
-		desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
-
-		fulfilled_effect = 10
-		unfulfilled_effect = -30
-
-		potential = {
-			exists = owner
-		}
-
-		trigger = {
-			owner = {
-				NOR = {
-					has_policy_flag = robots_outlawed
-					has_policy_flag = ai_outlawed
-				}
-			}
 		}
 	}
 	
@@ -148,6 +112,75 @@ technologist = {
 				has_country_flag = faction_materialist_outraged_gc
 			}
 		}
+	}	
+	
+	
+	demand = {
+		title = "ACADEMIC_PRIVILEGES"
+		unfulfilled_title = "ACADEMIC_PRIVILEGES"
+		desc = "ACADEMIC_PRIVILEGES_DESC"
+
+		fulfilled_effect = 10
+
+		potential = { 
+			exists = owner
+			owner = { has_valid_civic = civic_science_directorate }
+		}
+
+		trigger = {
+			owner = {
+				OR = {
+					any_owned_pop = {
+						has_living_standard = { type = living_standard_academic_privilege }
+					}					
+				}
+			}
+		}
+	}	
+	
+	
+	demand = {
+		title = "GENETIC_SUPERIORITY"
+		unfulfilled_title = "NO_GENETIC_SUPERIORITY"
+		desc = "GENETIC_SUPERIORITY_DESC"
+
+		fulfilled_effect = 15
+		unfulfilled_effect = -2
+
+		potential = {
+			exists = owner
+			owner = {  has_valid_civic = civic_symbiotic_race  }
+		}
+
+		trigger = {
+			owner = {
+					has_ascension_perk = ap_engineered_evolution
+			}
+		}
+	}		
+
+	
+
+	demand = {
+		title = "TECHNOLOGIST_ROBOTS_ALLOWED"
+		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
+		desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
+
+		fulfilled_effect = 10
+		unfulfilled_effect = -30
+
+		potential = {
+			exists = owner
+		}
+
+		trigger = {
+			owner = {
+				NOR = {
+					has_policy_flag = robots_outlawed
+					has_policy_flag = ai_outlawed
+				}
+			}
+		}
 	}
 
 	demand = {
@@ -163,11 +196,7 @@ technologist = {
 			owner = {
 				any_relation = {
 					has_communications = root.owner
-					OR = {
-						is_country_type = default
-						is_country_type = ascended_empire
-						is_country_type = lost_empire
-					}
+					is_country_type = default
 					NOT = { has_government = gov_successor_khanate }
 				}
 				NOR = {
@@ -182,11 +211,7 @@ technologist = {
 				NOT = {
 					any_relation = {
 						has_communications = root.owner
-						OR = {
-							is_country_type = default
-							is_country_type = ascended_empire
-							is_country_type = lost_empire
-						}
+						is_country_type = default
 						NOT = { has_government = gov_successor_khanate }
 						relative_power = {
 							who = root.owner
@@ -216,44 +241,25 @@ technologist = {
 
 		trigger = {
 			owner = {
-				count_country = {
-					count > 2
-					limit = {
-						exists = this
-						root.owner = { has_research_agreement = prev }
+				OR = {
+					AND = {
+						has_federation = yes
+						federation = {
+							has_federation_perk = research_federation_passive
+						}
+					}
+					count_country = {
+						count > 2
+						limit = {
+							exists = this
+							root.owner = { has_research_agreement = prev }
+						}
 					}
 				}
 			}
 		}
 	}
 
-	demand = {
-		title = "TECHNOLOGIST_FLESH_IS_WEAK"
-		unfulfilled_title = "TECHNOLOGIST_NO_FLESH_IS_WEAK"
-		desc = "TECHNOLOGIST_FLESH_IS_WEAK_DESC"
-
-		unfulfilled_effect = -0.001
-		fulfilled_effect = 5
-
-		potential = {
-			host_has_dlc = "Utopia"
-			exists = owner
-			owner = {
-				owner = {
-					has_origin = origin_primitive_cyborgs
-					has_technology = tech_droid_workers
-				}
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_origin = origin_primitive_cyborgs
-				has_ascension_perk = ap_the_flesh_is_weak
-			}
-		}
-	}
-	
 	demand = {
 		title = "TECHNOLOGIST_NO_SYNTH_ENVY"
 		unfulfilled_title = "TECHNOLOGIST_SYNTH_ENVY"
@@ -290,48 +296,10 @@ technologist = {
 		}
 	}
 	
-	demand = {
-		title = "TECHNOLOGIST_MAP_THE_STARS"
-		unfulfilled_title = "TECHNOLOGIST_NO_MAP_THE_STARS"
-		desc = "TECHNOLOGIST_MAP_THE_STARS_DESC"
-
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_tradition = tr_discovery_adopt
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_edict = map_the_stars
-			}
-		}
-	}
 	
-	demand = {
-		title = "TECHNOLOGIST_RESEARCH_SUBSIDIES"
-		unfulfilled_title = "TECHNOLOGIST_NO_RESEARCH_SUBSIDIES"
-		desc = "TECHNOLOGIST_RESEARCH_SUBSIDIES_DESC"
 
-		fulfilled_effect = 5
-		unfulfilled_effect = -0.001
-
-		potential = {
-			exists = owner
-			owner = {
-				has_tradition = tr_discovery_databank_uplinks
-			}
-		}
-
-		trigger = {
-			owner = {
-				has_edict = research_subsidies
-			}
-		}
+	on_create = {
+		pop_faction_event = { id = factions.1 }
 	}
 
 	demand = {
@@ -411,7 +379,7 @@ technologist = {
 				}
 			}
 		}
-		
+
 		trigger = {
 			owner = {
 				OR = {
@@ -425,7 +393,7 @@ technologist = {
 			}
 		}
 	}
-	
+
 	demand = {
 		title = "COOPERATIVE_DIPLO_STANCE"
 		unfulfilled_title = "COOPERATIVE_DIPLO_STANCE"
@@ -438,12 +406,7 @@ technologist = {
 			exists = owner
 			owner = {
 				is_homicidal = no
-				OR = {
-					is_country_type = default
-					is_country_type = ascended_empire
-					is_country_type = lost_empire
-				}
-
+				is_country_type = default
 				has_policy_flag = diplo_stance_cooperative
 			}
 		}
@@ -453,11 +416,7 @@ technologist = {
 				has_policy_flag = diplo_stance_cooperative
 			}
 		}
-	}
-
-	on_create = {
-		pop_faction_event = { id = factions.1 }
-	}
+	}	
 
 	on_destroy = {
 		if = {
@@ -524,11 +483,7 @@ technologist = {
 						every_relation = {
 							limit = {
 								is_ai = no
-								OR = {
-									is_country_type = default
-									is_country_type = ascended_empire
-									is_country_type = lost_empire
-								}
+								is_country_type = default			
 								has_communications = prev
 							}
 							country_event = { id = factions.2000 }
@@ -547,10 +502,6 @@ technologist = {
 					}
 				}
 				modifier = {
-					factor = 0.25
-					support < 0.50
-				}
-				modifier = {
 					factor = 0
 					owner = { has_valid_civic = civic_fanatic_purifiers }
 				}				
@@ -566,13 +517,13 @@ technologist = {
 					}
 				}
 				modifier = {
-					factor = 0.1
-					owner = { has_ethic = ethic_spiritualist }
-				}
-				modifier = {
 					factor = 0
-					owner = { has_ethic = ethic_fanatic_spiritualist }
-				}
+					owner = {
+						count_pop_faction = {
+							count < 4
+						}					
+					}
+				}				
 			}
 		}
 		promote_faction = {

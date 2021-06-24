@@ -1,0 +1,18 @@
+Trait_GAPS_Sightseers = {
+    icon = "gfx/interface/icons/traits/Trait_GAPS_Sightseers.dds"
+    cost = 1
+    initial = yes
+    randomized = yes
+    modification = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        PRESAPIENT
+        LITHOID
+    }
+    opposites = {
+        "trait_hive_mind"
+    }
+    custom_tooltip = Trait_GAPS_Sightseers_Effect
+    modifier = {
+    }
+}

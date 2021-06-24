@@ -1,0 +1,51 @@
+namespace = Events_GAPS_Trait_Mutable
+
+# A pop has finished growing
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Trait_Slapdash_Construction.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		FromFrom = { has_trait = Trait_GAPS_Slapdash_Construction }
+	}
+	immediate = {
+		FromFrom = {
+			pop_event = { id = Events_GAPS_Trait_Slapdash_Construction.11 days = 0 }
+		}
+	}
+}
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+pop_event = {
+	id = Events_GAPS_Trait_Slapdash_Construction.11
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		has_trait = Trait_GAPS_Slapdash_Construction
+	}
+	immediate = {
+				species = { save_event_target_as = Target_Species_GAPS_Mutate_1 }
+				root = {
+					modify_species = {
+						species = event_target:Target_Species_GAPS_Mutate_1
+						add_trait = Trait_GAPS_Slapdash_Construction_Empty
+					}
+					species = { save_event_target_as = Target_Species_GAPS_Mutate_2 }
+				}
+				event_target:Target_Species_GAPS_Mutate_2 = {
+					mutate_species = yes
+				}
+				root = {
+					modify_species = {
+						remove_trait = Trait_GAPS_Slapdash_Construction_Empty
+					}
+				}
+	}
+}

@@ -13,19 +13,6 @@ tributary = {
 		energy = 0.25
 	}
 	
-	overlord_resources = {
-		category = subjects
-		produces = {
-			trigger = { 
-				owner = {
-					has_valid_civic = civic_feudal_realm
-					has_valid_civic = civic_inwards_perfection
-				}
-			}
-			influence = 0.25
-		}
-	}
-	
 	potential = {
 		from = { is_country_type = default }
 	}

@@ -10,7 +10,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -31,7 +31,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -51,7 +51,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -71,7 +71,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -91,7 +91,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -111,7 +111,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -135,7 +135,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -156,7 +156,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -176,7 +176,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -196,7 +196,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -216,7 +216,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -236,7 +236,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -260,7 +260,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -281,7 +281,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -301,7 +301,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -321,7 +321,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -341,7 +341,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -361,7 +361,7 @@ terraform_link = {
 	duration = 1800
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {

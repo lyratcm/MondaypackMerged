@@ -176,7 +176,7 @@ z_lctr_eft_cntr_prmt_res_chain = {
 		target = root
 	}
 	#_sr参数
-	every_planet = {
+	every_galaxy_planet = {
 		limit = {
 			has_resource = $RESOURCE$
 			z_lctr_trgr_plnt_res = yes
@@ -212,7 +212,7 @@ z_lctr_eft_cntr_prmt_plnt_chain_class = {
 		target = root
 	}
 	#_class参数
-	every_planet = {
+	every_galaxy_planet = {
 		limit = {
 			is_planet_class = $CLASS$
 			# Must be surveyed or controlled by other empires
@@ -244,7 +244,7 @@ z_lctr_eft_cntr_prmt_plnt_chain_trgr = {
 		target = root
 	}
 	#_星系flg参数
-	every_planet = {
+	every_galaxy_planet = {
 		limit = {
 			$PLNT_TRGR$ = yes
 			z_lctr_trgr_plnt_pc = yes
@@ -449,7 +449,7 @@ z_lctr_eft_flt_story = {
 					target = this
 				}
 				#_class参数
-				every_planet = {
+				every_galaxy_planet = {
 					limit = {
 						is_capital = yes
 						owner = {
@@ -482,7 +482,7 @@ z_lctr_eft_flt_story = {
 					target = this
 				}
 				#_class参数
-				every_planet = {
+				every_galaxy_planet = {
 					limit = {
 						is_capital = yes
 						owner = {
@@ -515,7 +515,7 @@ z_lctr_eft_flt_story = {
 					target = this
 				}
 				#_class参数
-				every_planet = {
+				every_galaxy_planet = {
 					limit = {
 						is_capital = yes
 						owner = {

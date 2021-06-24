@@ -1,0 +1,41 @@
+pop_category_workers = {
+    parent = planet_pops
+    generate_add_modifiers = {
+        produces
+        upkeep
+    }
+    triggered_upkeep_modifier = {
+        key = pop_category_workers_xvcv_bio_robot
+        modifier_types = {
+            add
+        }
+        trigger = {
+            has_trait = xvcv_mdlc_trait_bio_robot
+        }
+    }
+    generate_mult_modifiers = {
+        produces
+        upkeep
+    }
+    triggered_produces_modifier = {
+        key = pop_category_robot_workers
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            is_robot_pop = yes
+        }
+    }
+    triggered_produces_modifier = {
+        key = pop_category_robot_psionic_workers
+        modifier_types = {
+            add
+            mult
+        }
+        trigger = {
+            is_robot_pop = yes
+            has_trait = trait_psionic
+        }
+    }
+}

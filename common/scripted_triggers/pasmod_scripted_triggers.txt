@@ -1,4 +1,6 @@
-pasmod_army_drop_pods_trigger = {
+pasmod_main_trigger = {
+	NOT = { has_ship_flag = pasmod_army_drop_done } #check this first
+	#then these
 	OR = {
 		#tier I
 		has_component = pasmod_orbital_drop_pod_default
@@ -9,7 +11,7 @@ pasmod_army_drop_pods_trigger = {
 		has_component = pasmod_orbital_drop_pod_droid_army
 
 		has_component = pasmod_orbital_drop_pod_battle_frame
-		has_component = pasmod_orbital_drop_pod_bio_mech
+		#has_component = pasmod_orbital_drop_pod_bio_mech
 
 		#tier II
 		has_component = pasmod_orbital_drop_pod_default_2
@@ -20,7 +22,7 @@ pasmod_army_drop_pods_trigger = {
 		has_component = pasmod_orbital_drop_pod_droid_army_2
 
 		has_component = pasmod_orbital_drop_pod_battle_frame_2
-		has_component = pasmod_orbital_drop_pod_bio_mech_2
+		#has_component = pasmod_orbital_drop_pod_bio_mech_2
 
 		#tier III
 		has_component = pasmod_orbital_drop_pod_default_3
@@ -31,6 +33,19 @@ pasmod_army_drop_pods_trigger = {
 		has_component = pasmod_orbital_drop_pod_droid_army_3
 
 		has_component = pasmod_orbital_drop_pod_battle_frame_3
-		has_component = pasmod_orbital_drop_pod_bio_mech_3
+		#has_component = pasmod_orbital_drop_pod_bio_mech_3
+	}
+}
+pasmod_army_types_trigger = {
+	OR = {
+		army_type = pasmod_assault_army_default
+		army_type = pasmod_assault_army_clone
+		army_type = pasmod_assault_army_gene
+		army_type = pasmod_assault_army_psionic_force
+		army_type = pasmod_assault_army_slave_army
+		army_type = pasmod_assault_army_droid_army
+
+		army_type = pasmod_assault_army_battle_frame
+		#army_type = pasmod_assault_army_bio_mech
 	}
 }

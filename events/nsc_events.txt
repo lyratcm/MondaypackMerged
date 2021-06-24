@@ -502,11 +502,7 @@ country_event = {
 		every_rival_country = {
 			limit = {
 				is_ai = yes
-				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
-				}
+				is_country_type = default
 				NOT = { any_owned_ship = { is_ship_size = Flagship } }
 			}
 			nsc_flagship_creation_for_ai_effect = yes
@@ -514,11 +510,7 @@ country_event = {
 		every_neighbor_country = {
 			limit = {
 				is_ai = yes
-				OR = {
-					is_country_type = default
-					is_country_type = fallen_empire
-					is_country_type = awakened_fallen_empire
-				}
+				is_country_type = default
 				NOT = { any_owned_ship = { is_ship_size = Flagship } }
 			}
 			nsc_flagship_creation_for_ai_effect = yes
@@ -527,6 +519,7 @@ country_event = {
 			random_country = {
 				limit = {
 					is_ai = yes
+					is_country_type = default
 					OR = {
 						opinion_level = { who = root level = poor }
 						opinion_level = { who = root level = terrible }
@@ -631,22 +624,8 @@ country_event = {
 	}
 
 	option = {
-		name = nsc_events.31.a #build it again!
-		allow = {
-			has_resource = { type = alloys amount >= 10200 }
-			has_resource = { type = influence amount >= 600 }
-		}
-		add_resource = {
-			alloys = -10200
-			influence = -600
-		}
-		enable_special_project = {
-			name = NSC_FLAGSHIP_REBUILD_PROJECT
-			location = this.capital_scope #damn, this code doesn't support megastructure scope
-		}
-	}
-	option = {
-		name = nsc_events.31.b #no
-		add_resource = { influence = 200 }
+		name = nsc_events.31.a
+		custom_tooltip = nsc_events.16.a.tooltip
+		hidden_effect = { set_country_flag = nsc_flagship_repair_project_possible }
 	}
 }

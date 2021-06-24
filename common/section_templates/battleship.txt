@@ -22,6 +22,8 @@ ship_section_template = {
 	entity = "battleship_bow_L2_entity"
 	icon = "GFX_ship_part_core_bow"
 
+	prerequisites = { tech_energy_lance_1 tech_energy_lance_2 tech_arc_emitter_1 tech_arc_emitter_2 tech_mass_accelerator_1 tech_mass_accelerator_2 }
+
 	component_slot = {
 		name = "EXTRA_LARGE_01"
 		template = "extra_large_turret"
@@ -50,7 +52,7 @@ ship_section_template = {
 	entity = "battleship_bow_XL1_entity"
 	icon = "GFX_ship_part_core_bow"
 
-	prerequisites = { "tech_energy_lance_1" "tech_energy_lance_2" "tech_arc_emitter_1" "tech_arc_emitter_2" "tech_mass_accelerator_1" "tech_mass_accelerator_2" }
+	prerequisites = { tech_energy_lance_1 tech_energy_lance_2 tech_arc_emitter_1 tech_arc_emitter_2 tech_mass_accelerator_1 tech_mass_accelerator_2 }
 
 	component_slot = {
 		name = "EXTRA_LARGE_01"
@@ -653,7 +655,7 @@ ship_section_template = {
 	}
 	component_slot = {
 		name = "LARGE_GUN_03"
-		template = "invisible_large_turret"
+		template = "large_turret"
 		locatorname = "large_gun_03"
 	}	
 	component_slot = {
@@ -1397,6 +1399,48 @@ ship_section_template = {
 ###################
 
 ship_section_template = {
+	key = "BATTLESHIP_BOW_L1M1S2"
+	ship_size = battleship
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "battleship_bow_L1M1S2_entity"
+	icon = "GFX_ship_part_core_bow"
+	icon_frame = 1
+
+	prerequisites = { "tech_nsc_disabled_sections" }
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_01"
+		template = "small_turret"
+		locatorname = "small_gun_01"
+	}
+	
+	component_slot = {
+		name = "SMALL_GUN_02"
+		template = "small_turret"
+		locatorname = "small_gun_02"
+	}
+	
+	large_utility_slots = 3
+
+	resources = {
+		category = ship_sections
+		cost = { alloys = 80 }
+	}
+}
+
+ship_section_template = {
 	key = "BATTLESHIP_BOW_L2"
 	ship_size = battleship
 	fits_on_slot = bow
@@ -1477,6 +1521,42 @@ ship_section_template = {
 	}
 }
 
+ship_section_template = {
+	key = "BATTLESHIP_BOW_M2S4"
+	ship_size = battleship
+	fits_on_slot = bow
+	should_draw_components = yes
+	entity = "battleship_bow_XL1_entity"
+	icon = "GFX_ship_part_core_bow"
+	
+	prerequisites = { "tech_nsc_disabled_sections" }
+	
+	ai_weight = {
+		modifier = {
+			factor = 10.0
+			NOT = { is_preferred_weapons = weapon_type_explosive }
+		}
+		modifier = {
+			factor = 0.1
+			is_preferred_weapons = weapon_type_explosive
+		}		
+	}
+	
+	component_slot = {
+		name = "EXTRA_LARGE_01"
+		template = "invisible_extra_large_fixed"
+		locatorname = "xl_gun_01"
+	}
+
+	large_utility_slots = 3
+	
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @cost1
+		}
+	}
+}
 
 ###################
 ### VANILLA MID ###
@@ -1489,7 +1569,7 @@ ship_section_template = {
 	entity = "battleship_mid_L3_entity"
 	icon = "GFX_ship_part_core_mid"
 
-	prerequisites = { tech_nsc_disabled_sections }
+	prerequisites = { "tech_nsc_disabled_sections" }
 
 	component_slot = {
 		name = "LARGE_GUN_01"

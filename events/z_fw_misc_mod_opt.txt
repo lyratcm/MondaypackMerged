@@ -1,0 +1,33 @@
+###_后期优化 modifier	####################################################################
+namespace = z_fw_misc_mod_opt
+#_[开始更新]
+#_[停止更新]
+
+
+
+
+###_[开始更新]id=1	更新/停止	#############################################################################
+country_event = {
+	id = z_fw_misc_mod_opt.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		##_[更新]
+		set_timed_global_flag = { flag = z_pf2_flg_glbl_full_mod_update days = 1 }
+		set_update_modifiers_batch = end
+		
+		##_[停止]
+		country_event = { id = z_fw_misc_mod_opt.2 days = 1 }
+	}
+}
+
+
+
+
+###_[停止更新]id=2
+country_event = {
+	id = z_fw_misc_mod_opt.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = { set_update_modifiers_batch = begin }
+}

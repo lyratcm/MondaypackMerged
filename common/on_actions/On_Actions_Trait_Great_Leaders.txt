@@ -1,7 +1,7 @@
 
 on_game_start_country = {
 	events = {
-		Events_GAPS_Trait_Great_Leaders.2
+		Events_GAPS_Trait_Great_Leaders.20
 	}
 }
 
@@ -9,7 +9,7 @@ on_game_start_country = {
 # scope: country, from: leader
 on_leader_spawned = {
 	events = {
-		Events_GAPS_Trait_Great_Leaders.1
+		Events_GAPS_Trait_Great_Leaders.10
 	}
 }
 
@@ -17,7 +17,7 @@ on_leader_spawned = {
 # This = Country
 on_ruler_set = {
 	events = {
-		Events_GAPS_Trait_Great_Leaders.2
+		Events_GAPS_Trait_Great_Leaders.20
 	}
 }
 # Executed when the ruler is ousted and goes back to their pre-ruler class
@@ -25,6 +25,6 @@ on_ruler_set = {
 # This = Country
 on_ruler_back_to_pre_ruler_class = {
 	events = {
-		Events_GAPS_Trait_Great_Leaders.2
+		Events_GAPS_Trait_Great_Leaders.20
 	}
 }

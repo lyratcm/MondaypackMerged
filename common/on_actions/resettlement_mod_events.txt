@@ -1,5 +1,0 @@
-on_monthly_pulse = {
-	events = {
-		pop_resettlement.1 #resettle
-	}
-}

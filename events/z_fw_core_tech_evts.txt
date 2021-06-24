@@ -19,7 +19,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -255,7 +255,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -435,7 +435,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -638,7 +638,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -841,7 +841,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1017,7 +1017,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1210,7 +1210,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1389,7 +1389,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1542,7 +1542,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1698,7 +1698,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -1851,7 +1851,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -2014,7 +2014,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -2188,7 +2188,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -2455,7 +2455,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -2755,7 +2755,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -3013,7 +3013,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -3266,7 +3266,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -3490,7 +3490,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT
@@ -3724,7 +3724,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			last_increased_tech = "tech_dark_matter_deflector"
@@ -3958,7 +3958,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
-		z_fw_is_common_country = yes
+		z_fw_trgr_cntr_core_normal_no_afe = yes
 		OR = {
 			###_LV6
 			#_ACOT

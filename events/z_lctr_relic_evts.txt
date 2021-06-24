@@ -4,77 +4,79 @@ namespace = z_lctr_relic
 
 
 
-#_以国家为基础spawn		<初始传感器遗珍挖掘地,产生特殊项目定位>
+#_以国家为基础spawn		挖掘地设置隔离debug/挖掘地sstm隔离debug/挖掘地已设置	###############################
+#_初始传感器遗珍挖掘地,产生特殊项目定位
 #_plnt_flg	[z_lctr_flg_plnt_r]
 country_event = {
 	id = z_lctr_relic.1
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		capital_scope = {
-			solar_system = {
-				closest_system = {
-					limit = {
-						NOT = { has_star_flag = z_fw_flg_sstm_r }	#_禁止同星系生成
+		capital_scope.solar_system = {
+			closest_system = {
+				limit = {
+					NOT = { has_star_flag = z_fw_flg_sstm_relic_site_counted }	#_禁止同星系生成
+					has_owner = no
+					has_access_fleet = root
+					any_system_planet = {
 						has_owner = no
-						has_access_fleet = root
-						any_system_planet = {
-							has_owner = no
-							is_colony = no
-							has_anomaly = no
-							NOR = {
-								exists = archaeological_site
-								has_planet_flag = hatchling_egg
-							}
-							OR = {
-								is_planet_class = pc_molten
-								is_planet_class = pc_barren
-								is_planet_class = pc_barren_cold
-								is_planet_class = pc_toxic
-								is_planet_class = pc_frozen
-								is_planet_class = pc_nuked
-							}
+						is_colony = no
+						has_anomaly = no
+						NOR = {
+							exists = archaeological_site
+							has_planet_flag = hatchling_egg
+						}
+						OR = {
+							is_planet_class = pc_molten
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+							is_planet_class = pc_toxic
+							is_planet_class = pc_frozen
+							is_planet_class = pc_nuked
 						}
 					}
-					set_timed_star_flag = { flag = z_fw_flg_sstm_r days = 1 }
-					min_steps = 2
-					max_steps = 17
-					random_system_planet = {
-						limit = {
-							has_owner = no
-							is_colony = no
-							has_anomaly = no
-							NOR = {
-								exists = archaeological_site
-								has_planet_flag = hatchling_egg
-							}
-							OR = {
-								is_planet_class = pc_molten
-								is_planet_class = pc_barren
-								is_planet_class = pc_barren_cold
-								is_planet_class = pc_toxic
-								is_planet_class = pc_frozen
-								is_planet_class = pc_nuked
-							}
+				}
+				root = { z_fw_eft_cntr_misc_relic_site_counted = yes }	#_[挖掘地设置隔离debug]
+				set_timed_star_flag = { flag = z_fw_flg_sstm_relic_site_counted days = 1 }	#_[挖掘地sstm隔离debug]
+				set_timed_global_flag = { flag = z_lctr_flg_glbl_r days = 1 }	#_[挖掘地已设置]
+				min_steps = 2
+				max_steps = 17
+				use_bypasses = yes
+				random_system_planet = {
+					limit = {
+						has_owner = no
+						is_colony = no
+						has_anomaly = no
+						NOR = {
+							exists = archaeological_site
+							has_planet_flag = hatchling_egg
 						}
-						set_name = "NAME_z_lctr_r_site_planet_0"	#_星球改名
-						clear_deposits = yes
-						set_planet_flag = z_lctr_flg_plnt_r
-						create_archaeological_site = z_lctr_site
-						every_country = {
-							limit = { is_ai = no }
-							begin_event_chain = {
-								event_chain = z_lctr_chain_site
-								target = this
-							}
-							#_通知
-							country_event = { id = z_lctr_relic.10 days = 4 random = 3 }
-							prev = {
-								enable_special_project = {
-									name = Z_LCTR_SP_SITE
-									location = THIS
-									owner = prev
-								}
+						OR = {
+							is_planet_class = pc_molten
+							is_planet_class = pc_barren
+							is_planet_class = pc_barren_cold
+							is_planet_class = pc_toxic
+							is_planet_class = pc_frozen
+							is_planet_class = pc_nuked
+						}
+					}
+					set_name = "NAME_z_lctr_r_site_planet_0"	#_星球改名
+					clear_deposits = yes
+					set_planet_flag = z_lctr_flg_plnt_r
+					create_archaeological_site = z_lctr_site
+					every_country = {
+						limit = { is_ai = no }
+						begin_event_chain = {
+							event_chain = z_lctr_chain_site
+							target = this
+						}
+						#_通知
+						country_event = { id = z_lctr_relic.10 days = 4 random = 3 }
+						prev = {
+							enable_special_project = {
+								name = Z_LCTR_SP_SITE
+								location = THIS
+								owner = prev
 							}
 						}
 					}

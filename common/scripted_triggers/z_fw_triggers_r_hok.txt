@@ -79,25 +79,25 @@ z_fw_r_koh_is_species_karyl_old = {
 z_fw_r_koh_is_spcs_neg_regular = {
 	is_species_class = Z_KARYL
 	has_trait = z_fw_trait_r_hok_kayrl_negative
-	z_is_species_regular_mod = yes
+	z_fw_trgr_spcs_core_organic_mod = yes
 	NOT = { has_trait = trait_hive_mind }
 }
 z_fw_r_koh_is_spcs_pos_regular = {
 	is_species_class = Z_KARYL
 	has_trait = z_fw_trait_r_hok_kayrl_positive
-	z_is_species_regular_mod = yes
+	z_fw_trgr_spcs_core_organic_mod = yes
 	NOT = { has_trait = trait_hive_mind }
 }
 z_fw_r_koh_is_spcs_neg_hive = {
 	is_species_class = Z_KARYL
 	has_trait = z_fw_trait_r_hok_kayrl_negative
-	z_is_species_regular_mod = yes
+	z_fw_trgr_spcs_core_organic_mod = yes
 	has_trait = trait_hive_mind
 }
 z_fw_r_koh_is_spcs_pos_hive = {
 	is_species_class = Z_KARYL
 	has_trait = z_fw_trait_r_hok_kayrl_positive
-	z_is_species_regular_mod = yes
+	z_fw_trgr_spcs_core_organic_mod = yes
 	has_trait = trait_hive_mind
 }
 

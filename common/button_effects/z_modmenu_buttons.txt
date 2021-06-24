@@ -2,9 +2,8 @@
 ###_[button effects 只读 root的东西]
 
 #_[z_mm_core]	pulse占位符/main_bottom_button/退出拓展子菜单
-#_[top_button]	自动空间站/哨兵阵列/pote_网道/pf_手动检测/pf2_合并ai物种/pf2_合并舰队
-#_[test]
-#_[framework_function]
+#_[top_button]	自动空间站/哨兵阵列/pote_网道/pf_手动迁移/pf2_合并ai物种/pf2_合并舰队
+#_[framework_function]	关闭/返回/作者/指南/test/框架/战争
 #_[无尽群星子mod]	pf/pf2/sts/天灾之主/全知之眼/产业革命
 
 
@@ -18,6 +17,7 @@ z_modmenu_button_effect = {
     }
 	allow = {
 		hidden_trigger = {
+			is_scope_type = country
 			z_mm_menu_locked = no
 		#	NOT = { has_active_event = z_modmenu.1 }
 		}
@@ -33,7 +33,9 @@ z_modmenu_button_effect = {
 #_[pulse占位符]
 z_mui_pause_placeholder = {
 	potential = {
+		is_scope_type = country
 		has_country_flag = z_fw_flg_cntr_mui_button_hide
+		is_variable_set = ehof_phase
 		check_variable = { which = ehof_phase value < 1 }	#_GIGA
 	#	NOT = { has_global_flag = giga_game_started }
 	}
@@ -43,7 +45,9 @@ z_mui_pause_placeholder = {
 #_[main_bottom_button]	覆盖z_mui的pause设置面板按钮,存在GIGA隐藏
 z_mui_pause_mm_button = {
 	potential = {
+		is_scope_type = country
 		NOT = { has_country_flag = z_fw_flg_cntr_mui_button_hide }
+		is_variable_set = ehof_phase
 		check_variable = { which = ehof_phase value < 1 }	#_GIGA
 	#	NOT = { has_global_flag = giga_game_started }
 	}
@@ -63,7 +67,7 @@ z_mui_pause_mm_button = {
 #_[退出拓展子菜单]
 z_mm_quit_expanded_sub_ui = {
 	potential = { z_mm_trgr_expanded_sub_ui = yes }
-	allow = { always = yes }
+	allow = { is_scope_type = country }
 	effect = {
 		hidden_effect = {
 			z_mm_eft_expanded_sub_ui_exit = yes
@@ -100,9 +104,10 @@ z_mm_autosatation_button_off = {
 		}
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -122,9 +127,10 @@ z_mm_autosatation_button_100 = {
 		has_country_flag = z_fw_autostation_100
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -145,9 +151,10 @@ z_mm_autosatation_button_600 = {
 		has_country_flag = z_fw_autostation_600
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -168,9 +175,10 @@ z_mm_full_sensor_button_off = {
 		has_country_flag = z_fw_misc_full_sensor_off
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -190,9 +198,10 @@ z_mm_full_sensor_button_on = {
 		NOT = { has_country_flag = z_fw_misc_full_sensor_off }
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -213,9 +222,10 @@ z_pote_webway_button_off = {
 		NOT = { has_country_flag = z_pote_webway_on }
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -241,9 +251,10 @@ z_pote_webway_button_on = {
 		has_country_flag = z_pote_webway_on
 	}
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
+				z_mm_setting_panel_locked = no
 			}
             fail_text = z_mm_tips_esc_to_unlock
 		}
@@ -263,71 +274,47 @@ z_pote_webway_button_on = {
 	}
 }
 
-#_[pf_手动检测]
+#_[pf_手动迁移]
 z_mm_pf_button_manual = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
-		custom_tooltip = {#_子菜单开启
-			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
-			}
-            fail_text = z_mm_tips_esc_to_unlock
-		}
+		is_scope_type = country
+		custom_tooltip = { hidden_trigger = { z_mm_setting_panel_locked = no } fail_text = z_mm_tips_esc_to_unlock }	#_子菜单开启
 		custom_tooltip = {
             hidden_trigger = {
 				OR = {
-					has_country_flag = z_pr_flg_cntr_1
-					has_global_flag = z_performance_installed
+					has_country_flag = z_pr_flg_cntr_reg
+					has_global_flag = z_pf2_installed
 				}
             }
             fail_text = z_mm_tips_sub_no_pf_pr
         }
-		custom_tooltip = {#_手动检测中
-            hidden_trigger = {
-                NOR = {
-					has_global_flag = z_pf_manual_checking_cd
-					has_country_flag = z_pf_flg_cntr_heup_on	#_pf heup cd
-				}
-            }
-            fail_text = z_mm_pf_manual_job_checking
-        }
+		custom_tooltip = { hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes } fail_text = z_mm_tips_mp_not_host }	#_非主机
+		custom_tooltip = { hidden_trigger = { NOT = { has_global_flag = z_pf_flg_glbl_manual_checking_cd } } fail_text = z_mm_pf_manual_job_checking }	#_手动检测中
 	}
 	effect = {
-		hidden_effect = { z_mm_eft_pf_manual_check = yes }
+		hidden_effect = { z_mm_eft_cntr_pf_manual_check_glbl = yes }
 		custom_tooltip = z_mm_pf_manual_job_check_button
 	}
 }
-#_[pf_手动检测]-国内
+#_[pf_手动迁移]-国内
 z_mm_pf_button_manual_own = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
-		custom_tooltip = {#_子菜单开启
-			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
-			}
-            fail_text = z_mm_tips_esc_to_unlock
-		}
+		is_scope_type = country
+		custom_tooltip = { hidden_trigger = { z_mm_setting_panel_locked = no } fail_text = z_mm_tips_esc_to_unlock }	#_子菜单开启
 		custom_tooltip = {
             hidden_trigger = {
 				OR = {
-					has_country_flag = z_pr_flg_cntr_1
-					has_global_flag = z_performance_installed
+					has_country_flag = z_pr_flg_cntr_reg
+					has_global_flag = z_pf2_installed
 				}
             }
             fail_text = z_mm_tips_sub_no_pf_pr
         }
-		custom_tooltip = {#_手动检测中
-            hidden_trigger = {
-                NOR = {
-					has_global_flag = z_pf_manual_checking_cd
-					has_country_flag = z_pf_flg_cntr_heup_on	#_pf heup cd
-				}
-            }
-            fail_text = z_mm_pf_manual_job_checking
-        }
 	}
 	effect = {
-		hidden_effect = { z_mm_eft_pf_manual_check_own = yes }
+		hidden_effect = { z_mm_eft_cntr_pf_manual_check_own = yes }
 		custom_tooltip = z_mm_pf_manual_job_own_button
 	}
 }
@@ -336,6 +323,7 @@ z_mm_pf_button_manual_own = {
 z_mm_pf2_button_merge_ai_species = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
 			   z_mm_setting_panel_locked = no
@@ -344,7 +332,7 @@ z_mm_pf2_button_merge_ai_species = {
 		}
 		custom_tooltip = {
             hidden_trigger = {
-                has_global_flag = z_performance2_installed
+                has_global_flag = z_pf2_installed
             }
             fail_text = z_mm_tips_sub_no_pf2
         }
@@ -367,6 +355,7 @@ z_mm_pf2_button_merge_ai_species = {
 z_mm_pf2_button_merge_fleet = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
 			   z_mm_setting_panel_locked = no
@@ -375,13 +364,13 @@ z_mm_pf2_button_merge_fleet = {
 		}
 		custom_tooltip = {
             hidden_trigger = {
-                has_global_flag = z_performance2_installed
+                has_global_flag = z_pf2_installed
             }
             fail_text = z_mm_tips_sub_no_pf2
         }
 	}
 	effect = {
-		hidden_effect = { z_pf2_eft_cntr_flt_opt_execute = yes }
+		hidden_effect = { z_pf2_eft_all_flt_opt_manual = yes }
 		custom_tooltip = z_mm_pf2_merge_ai_flt_button
 	}
 }
@@ -392,34 +381,59 @@ z_mm_pf2_button_merge_fleet = {
 
 
 
-###_[framework_function]	########################################################
+###_[framework_function]	关闭/返回/作者/指南/test/框架/战争	########################################################
 
-###_[关闭]
+##_[关闭]
 z_modmenu_close_effect = {
     potential = { z_mm_setting_panel_locked = no }
+	allow = { is_scope_type = country }
 	effect = {
 		hidden_effect = {
-			z_mm_unlock_menu = yes
-			z_mm_unlock_setting_panel = yes
-			z_mm_eft_expanded_sub_ui_exit = yes
+			z_fw_eft_all_core_init_debug = yes	#_[初始化_debug]
+			if = {#_[cntr]
+				limit = { is_scope_type = country }
+				z_mm_unlock_menu = yes
+				z_mm_unlock_setting_panel = yes
+				z_mm_eft_expanded_sub_ui_exit = yes
+			}
+			else_if = {#_[plnt/flt]
+				limit = { exists = owner }
+				owner = {
+					z_mm_unlock_menu = yes
+					z_mm_unlock_setting_panel = yes
+					z_mm_eft_expanded_sub_ui_exit = yes
+				}
+			}
 		}
 	}
 }
-###_[返回]
+##_[返回]
 z_modmenu_return_effect = {
     potential = { z_mm_setting_panel_locked = yes }
+	allow = { is_scope_type = country }
 	effect = {
 		hidden_effect = {
-			z_mm_unlock_setting_panel = yes
-			z_mm_eft_expanded_sub_ui_exit = yes
+			if = {
+				limit = { is_scope_type = country }
+				z_mm_unlock_setting_panel = yes
+				z_mm_eft_expanded_sub_ui_exit = yes
+			}
+			else_if = {
+				limit = { exists = owner }
+				owner = {
+					z_mm_unlock_setting_panel = yes
+					z_mm_eft_expanded_sub_ui_exit = yes
+				}
+			}
 		}
 	}
 }
 
-#_作者
+##_[作者]
 z_mm_framework_btn_misc_author = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
 			   z_mm_setting_panel_locked = no
@@ -436,10 +450,11 @@ z_mm_framework_btn_misc_author = {
 		custom_tooltip = z_mm_tips_fw_btn_misc_author
 	}
 }
-#_guide
+##_[指南]
 z_mm_framework_btn_misc_guide = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
 			   z_mm_setting_panel_locked = no
@@ -456,10 +471,11 @@ z_mm_framework_btn_misc_guide = {
 		custom_tooltip = z_mm_tips_fw_btn_misc_guide
 	}
 }
-###_[test]	###
+##_[test]	###
 z_mm_framework_btn_misc_wip = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
+		is_scope_type = country
 		custom_tooltip = {#_子菜单开启
 			hidden_trigger = {
 			   z_mm_setting_panel_locked = no
@@ -482,11 +498,11 @@ z_mm_framework_btn_misc_wip = {
 	}
 }
 
-#_框架
+##_[框架]
 z_mm_framework_button_1 = {
 	potential = {#_无尽群星
 		z_mm_trgr_expanded_sub_ui = no
-		NOT = { has_global_flag = z_framework_overwrite }
+		NOT = { has_global_flag = linkage_support }
 	}
 	allow = {
 		custom_tooltip = {#_子菜单开启
@@ -511,7 +527,7 @@ z_mm_framework_button_1 = {
 				country_event = { id = z_modmenu.13 }
 			}
 			else_if = {#_多人非host
-				limit = { z_fw_trgr_cntr_host_mp = no }
+				limit = { z_fw_trgr_cntr_core_mp_host = no }
 				country_event = { id = z_modmenu.1301 }
 			}
 			else = { country_event = { id = z_modmenu.13 } }	#_多人host
@@ -522,7 +538,7 @@ z_mm_framework_button_1 = {
 z_mm_framework_button_2 = {
 	potential = {#_无尽整合
 		z_mm_trgr_expanded_sub_ui = no
-		has_global_flag = z_framework_overwrite
+		has_global_flag = linkage_support
 	}
 	allow = {
 		custom_tooltip = {#_子菜单开启
@@ -547,7 +563,7 @@ z_mm_framework_button_2 = {
 				country_event = { id = z_modmenu.13 }
 			}
 			else_if = {#_多人非host
-				limit = { z_fw_trgr_cntr_host_mp = no }
+				limit = { z_fw_trgr_cntr_core_mp_host = no }
 				country_event = { id = z_modmenu.1301 }
 			}
 			else = { country_event = { id = z_modmenu.13 } }	#_多人host
@@ -556,7 +572,7 @@ z_mm_framework_button_2 = {
 	}
 }
 
-###_战争	###################################
+##_[战争]	###################################
 z_mm_fw_button_battle_setting = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
@@ -599,7 +615,7 @@ z_mm_fw_button_battle_fp_adpt_on = {#_自适应
             fail_text = z_mm_fw_tips_dd_fp_fail_desc
         }
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -630,7 +646,7 @@ z_mm_fw_button_battle_fp_adpt_periodic = {#_周期性
             fail_text = z_mm_fw_tips_dd_fp_fail_desc
         }
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -661,7 +677,7 @@ z_mm_fw_button_battle_fp_adpt_off = {#_无
             fail_text = z_mm_fw_tips_dd_fp_fail_desc
         }
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -691,7 +707,7 @@ z_mm_fw_button_battle_dd_fp_up = {
             fail_text = z_mm_fw_tips_dd_fp_fail_desc
         }
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -746,7 +762,7 @@ z_mm_fw_button_battle_dd_fp_down = {
             fail_text = z_mm_fw_tips_dd_fp_fail_desc
 		}
 		custom_tooltip = {#_非主机
-			hidden_trigger = { z_fw_trgr_cntr_host_mp = yes }
+			hidden_trigger = { z_fw_trgr_cntr_core_mp_host = yes }
 			fail_text = z_mm_tips_mp_not_host
 		}
 	}
@@ -824,15 +840,11 @@ z_mm_pf2_button = {
 	potential = { z_mm_trgr_expanded_sub_ui = no }
 	allow = {
 		custom_tooltip = {#_子菜单开启
-			hidden_trigger = {
-			   z_mm_setting_panel_locked = no
-			}
+			hidden_trigger = { z_mm_setting_panel_locked = no }
             fail_text = z_mm_tips_esc_to_unlock
 		}
 		custom_tooltip = {
-            hidden_trigger = {
-                has_global_flag = z_performance2_installed
-            }
+            hidden_trigger = { has_global_flag = z_pf2_installed }
             fail_text = z_mm_tips_sub_no_pf2
         }
 	}

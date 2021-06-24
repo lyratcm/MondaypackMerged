@@ -1,0 +1,13 @@
+
+on_press_begin = {
+	events = {
+		Events_GAPS_Traits_War.20
+	}
+}
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		Events_GAPS_Traits_War.21
+	}
+}

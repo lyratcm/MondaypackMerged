@@ -1,4 +1,15 @@
 ###_z fw---relics	##########################################################################
+#_[星辰纪念碑]
+#_[cht_璀璨星图]
+#_[cht_量子星炬]
+#_[cht_维度解构剑]
+#_[cht_物质湮灭剑]
+#_[cht_怒]
+#_[cht_暗能量解药]
+#_[cht_emp]
+
+
+
 
 #_vanila variables
 @activation_cost = 150
@@ -11,7 +22,7 @@
 
 
 
-#_星辰纪念碑
+#_[星辰纪念碑]
 z_fw_r_monument = {
 	activation_duration = 3600
 	portrait = "GFX_z_fw_r_monument"
@@ -80,6 +91,7 @@ z_fw_r_monument = {
 			fail_text = "z_fw_desire_point_required"
 			hidden_trigger = {
 				is_ai = no
+				is_variable_set = z_fw_desire_point_var
 				check_variable = { which = z_fw_desire_point_var value >= 3 }
 			}
 		}
@@ -89,7 +101,7 @@ z_fw_r_monument = {
 
 
 
-#_cheat-璀璨星图
+#_[cht_璀璨星图]	flg/创建定位器
 z_fw_r_celestial_orrey = {
 	activation_duration = 360
 	portrait = "GFX_z_fw_r_celestial_orrey"
@@ -104,30 +116,62 @@ z_fw_r_celestial_orrey = {
 	active_effect = {
 		custom_tooltip = z_fw_r_celestial_orrey_effect
 		hidden_effect = {
-			every_country = {
-				set_closed_borders = {
-					who = root
-					status = no
-					forced = 1
+			if = {
+				limit = { NOT = { any_owned_fleet = { has_fleet_flag = z_fw_flg_flt_tgt_r_cht_co } } }	#_|不存在璀璨星图目标定位器|
+				every_country = {
+					set_closed_borders = {
+						who = root
+						status = no
+						forced = 1
+					}
+				}
+				#_[flg]
+				set_timed_country_flag = { flag = z_fw_r_celestial_orrey_activited days = 360 }
+				#_[创建定位器]
+				capital_scope = {
+					create_fleet = {
+						name = "NAME_z_fw_tgt_r_cht_co_flt"
+						settings = {
+							can_upgrade = no
+							can_change_composition = no
+							can_change_leader = no
+							uses_naval_capacity = no
+							spawn_debris = no
+							is_boss = yes
+						}
+						effect = {
+							set_owner = prev.owner				#_[temp_npc]
+							set_location = {
+								target = prev
+								distance = 7
+								angle = random
+							}
+							create_ship = {
+								name = "NAME_z_fw_tgt_r_cht_co_ship"
+								design = "NAME_z_fw_tgt_r_cht_co_ship"
+								graphical_culture = root	#_玩家
+							}
+							#_[flg]
+							set_fleet_flag = z_fw_flg_flt_tgt	#_[通用目标定位器flg]
+							set_fleet_flag = z_fw_flg_flt_tgt_r_cht_co
+						}
+					}
 				}
 			}
-			set_timed_country_flag = { flag = z_fw_r_celestial_orrey_activited days = 360 }
 		}
 	}
 
 	# Possible check for activation
 	possible = {
 		custom_tooltip = {
-			fail_text = "z_fw_r_celestial_orrey_activited"
-			hidden_trigger = {
-				NOT = { has_country_flag = z_fw_r_celestial_orrey_activited }
-			}
+			fail_text = "z_fw_tips_r_cht_co_executing"
+			hidden_trigger = { NOT = { has_country_flag = z_fw_flg_cntr_r_cht_co_executing } }
 		}
 	}
 }
 
 
-#_cheat-量子星炬
+#_[cht_量子星炬]
 z_fw_r_cheat_quantum_beacon = {
 	activation_duration = 3600
 	portrait = "GFX_z_fw_r_cheat_quantum_beacon"
@@ -179,6 +223,47 @@ z_fw_r_cheat_quantum_beacon = {
 					status = no
 					forced = 10
 				}
+				if = {
+					limit = {
+						NOT = { has_communications = root }
+						OR = {
+							#_[掠夺者]
+							is_country = event_target:marauder_country_1
+							is_country = event_target:marauder_country_2
+							is_country = event_target:marauder_country_3
+							#_[行商舰队]
+							is_country = event_target:caravaneer_home_country
+							is_country = event_target:caravaneer_fleet1_country
+							is_country = event_target:caravaneer_fleet2_country
+							is_country = event_target:caravaneer_fleet3_country
+							#_[飞地]
+							AND = {
+								is_country_type = enclave
+								OR = {
+									has_country_flag = trader_enclave_country_1
+									has_country_flag = trader_enclave_country_2
+									has_country_flag = trader_enclave_country_3
+									has_country_flag = artist_enclave_country
+									has_country_flag = curator_enclave_country
+								}
+							}
+						}
+					}
+					establish_communications_no_message = root
+				}
+				if = {
+					limit = {
+						root = {
+							OR = {
+								has_ethic = ethic_spiritualist
+								has_ethic = ethic_fanatic_spiritualist
+							}
+						}
+						NOT = { has_communications = root }
+						is_country_type = shroud
+					}
+					establish_communications_no_message = root
+				}
 			}
 			set_timed_country_flag = { flag = z_fw_r_cheat_quantum_beacon_activited days = 3600 }
 		}
@@ -196,7 +281,7 @@ z_fw_r_cheat_quantum_beacon = {
 }
 
 
-#_cheat-维度解构剑
+#_[cht_维度解构剑]
 #_global_flag		[z_fw_flg_glo_r_cht_hyper_on]	维度解构剑[glbl已激活]
 #_country_flag		[z_fw_flg_cntr_r_cht_hyper_on]	维度解构剑[激活者]
 z_fw_r_cheat_hyper_blade = {
@@ -229,7 +314,7 @@ z_fw_r_cheat_hyper_blade = {
 }
 
 
-#_cheat-物质湮灭剑
+#_[cht_物质湮灭剑]
 z_fw_r_cheat_mega_sword = {
 	activation_duration = 0
 	portrait = "GFX_z_fw_cheat_mega_sword"
@@ -249,7 +334,7 @@ z_fw_r_cheat_mega_sword = {
 }
 
 
-#_cheat-怒
+#_[cht_怒]
 z_fw_r_cheat_fury = {
 	activation_duration = 0
 	portrait = "GFX_z_fw_r_cheat_fury"
@@ -269,7 +354,7 @@ z_fw_r_cheat_fury = {
 }
 
 
-#_cheat-暗能量解药
+#_[cht_暗能量解药]
 z_fw_r_cheat_cure_hok = {
 	activation_duration = 0
 	portrait = "GFX_z_fw_r_cheat_cure_hok"
@@ -301,7 +386,7 @@ z_fw_r_cheat_cure_hok = {
 					}
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit =  {
 					OR = {
 						has_planet_flag = z_fw_flg_plnt_r_hok_infection
@@ -322,6 +407,66 @@ z_fw_r_cheat_cure_hok = {
 	possible = { always = yes }
 }
 
+
+#_[cht_emp]	flg/创建定位器
+z_fw_r_cht_emp = {
+	activation_duration = 360
+	portrait = "GFX_z_fw_r_cht_emp"
+	sound = "relic_activation_blade_of_the_huntress"
+
+	ai_weight = { weight = 0 }
+	score = 0
+
+	active_effect = {
+		custom_tooltip = z_fw_r_cht_emp_effect
+		hidden_effect = {
+			if = {
+				limit = { NOT = { any_owned_fleet = { has_fleet_flag = z_fw_flg_flt_tgt_r_cht_emp } } }	#_|不存在cht_emp目标定位器|
+				#_[开边]
+				every_country = {
+					set_closed_borders = {
+						who = root
+						status = no
+						forced = 1
+					}
+				}
+				#_[创建定位器]
+				capital_scope = {
+					create_fleet = {
+						name = "NAME_z_fw_tgt_r_cht_emp_flt"
+						settings = {
+							can_upgrade = no
+							can_change_composition = no
+							can_change_leader = no
+							uses_naval_capacity = no
+							spawn_debris = no
+							is_boss = yes
+						}
+						effect = {
+							set_owner = prev.owner				#_[temp_npc]
+							set_location = {
+								target = prev
+								distance = 7
+								angle = random
+							}
+							create_ship = {
+								name = "NAME_z_fw_tgt_r_cht_emp_ship"
+								design = "NAME_z_fw_tgt_r_cht_emp_ship"
+								graphical_culture = root	#_玩家
+							}
+							#_[flg]
+							set_fleet_flag = z_fw_flg_flt_tgt	#_[通用目标定位器flg]
+							set_fleet_flag = z_fw_flg_flt_tgt_r_cht_emp
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = { always = yes }
+}
 
 
 

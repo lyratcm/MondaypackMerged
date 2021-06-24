@@ -1,0 +1,37 @@
+namespace = z_mui_core
+
+
+
+
+#_[game_start]
+country_event = {
+    id = z_mui_core.0
+    is_triggered_only = yes
+    hide_window = yes
+	
+    immediate = {
+		##_[安装检视]
+		if = {
+			limit = { NOT = { has_global_flag = z_mui_installed } }
+			set_global_flag = z_mui_installed
+		}
+    }    
+}
+
+###_[万用初始化]	[id=1]
+country_event = {
+	id = z_mui_core.1
+	hide_window = yes
+	fire_only_once = yes
+	trigger = { is_ai = no }
+	mean_time_to_happen = { days = 23 }
+	
+	immediate = {
+		##_[安装检视]
+		if = {
+			limit = { NOT = { has_global_flag = z_mui_installed } }
+			set_global_flag = z_mui_installed
+		}
+	}
+}
+

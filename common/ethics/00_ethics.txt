@@ -21,15 +21,17 @@ ethic_fanatic_authoritarian = {
 
 	country_modifier = {
 		country_base_influence_produces_add = 1.5
-        job_enforcer_per_pop = 0.02
+        job_enforcer_per_pop = 0.03
 		ruler_skill_levels = 2
 		country_energy_produces_mult = -0.05
 	}
 
 	tags = {
-
+         
         MORE_ENFORCER_JOBS
 		ETHIC_ONLY_AUTOCRACY
+		ETHIC_ALLOWS_SLAVERY
+		ALLOWS_STRATIFIED
 
 	}
 
@@ -47,13 +49,16 @@ ethic_authoritarian = {
 
 	country_modifier = {
 		country_base_influence_produces_add = 0.75
-		job_enforcer_per_pop = 0.01
+		job_enforcer_per_pop = 0.02
 		ruler_skill_levels = 1
+
 	}
 
 	tags = {
         ENFORCER_JOBS
 		ETHIC_NEVER_DEMOCRACY
+		ETHIC_ALLOWS_SLAVERY
+		ALLOWS_STRATIFIED
 	}
 
 	random_weight = {
@@ -234,7 +239,7 @@ ethic_fanatic_egalitarian = {
 
 	country_modifier = {
 		pop_factions_produces_mult = 0.5
-		country_admin_cap_mult = 0.2
+		country_admin_cap_mult = 0.4
 		pop_ethics_shift_speed_mult = 0.2
 		planet_stability_add = -5
 	}
@@ -259,7 +264,7 @@ ethic_egalitarian = {
 
 	country_modifier = {
 		pop_factions_produces_mult = 0.25
-		country_admin_cap_mult = 0.1
+		country_admin_cap_mult = 0.2
 		pop_ethics_shift_speed_mult = 0.1
 	}
 
@@ -519,8 +524,8 @@ ethic_xenophobe = {
 	}
 
 	country_modifier = {
-        tradition_cost_empire_size_mult = -0.1
-		ship_home_territory_fire_rate_mult = 0.1
+        tradition_cost_empire_size_mult = -0.15
+		ship_home_territory_fire_rate_mult = 0.2
 		pop_growth_speed = 0.1
 
 	}
@@ -744,7 +749,6 @@ ethic_xenophobe = {
 			any_relation = {
 				is_subject = no
 				has_migration_access = root
-				NOT = { is_same_species = root }
 			}
 		}
 		modifier = {
@@ -846,7 +850,7 @@ ethic_xenophobe = {
 		modifier = {
 			factor = 1.5
 			from = {
-				any_pop = {
+				any_owned_pop = {
 					NOT = { is_same_species = root }
 					has_trait = "trait_repugnant"
 				}
@@ -1213,13 +1217,12 @@ ethic_fanatic_militarist = {
 
 	tags = {
 		ETHIC_ALLOW_NO_RETREAT
-		ETHIC_MILITARISTIC_ALLOWS_COMMANDERS
 	}
 
 	country_modifier = {
 		country_claim_influence_cost_mult = -0.3
 		ship_fire_rate_mult = 0.2
-		country_trust_growth = -0.5
+		country_energy_produces_mult = -0.05
 	}
 
 	# more common ethic
@@ -1579,7 +1582,6 @@ ethic_fanatic_pacifist = {
 	tags = {
 		ETHIC_DISALLOW_OFFENSIVE_WARS
 		ETHIC_DISALLOW_FULL_BOMBARDMENT
-		ETHIC_PACIFIST_ALLOWS_SUPERVISORS
 	}
 
 	country_modifier = {
@@ -1605,7 +1607,7 @@ ethic_pacifist = {
 
 	country_modifier = {
 		planet_stability_add = 5
-       empire_size_pops_mult = -0.15
+        empire_size_pops_mult = -0.15
 		country_border_friction_mult = -0.2
 	}
 
@@ -1661,17 +1663,6 @@ ethic_pacifist = {
 		desc = POP_ATTRACTION_INWARDS_PERFECTION_POS
 		trigger = {
 			has_valid_civic = civic_inwards_perfection
-		}
-	}
-
-	pop_attraction_tag = {
-		desc = POP_ATTRACTION_WEAK_POS
-		trigger = {
-			any_owned_planet = {
-				any_owned_species = {
-					has_trait = "trait_weak"
-				}
-			}
 		}
 	}
 
@@ -1824,10 +1815,6 @@ ethic_pacifist = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 1.1
-			has_trait = "trait_weak"
-		}
-		modifier = {
 			factor = 0.5
 			OR = {
 				has_citizenship_rights = yes
@@ -1861,13 +1848,12 @@ ethic_fanatic_spiritualist = {
 	tags = {
 		ETHIC_ALLOWS_TEMPLE
 		ETHIC_DISALLOW_AI
-		ETHIC_SPIRITUALIST_ALLOWS_HIGH_PRIESTS
 	}
 
 	country_modifier = {
 		country_unity_produces_mult = 0.2
 		pop_government_ethic_attraction = 0.2
-		pop_amenities_usage_mult = -0.2
+		pop_amenities_usage_mult = -0.2	
 		country_physics_tech_research_speed	= -0.1
 	}
 
@@ -1891,7 +1877,7 @@ ethic_spiritualist = {
 	country_modifier = {
 		country_unity_produces_mult = 0.1
 		pop_government_ethic_attraction = 0.1
-		pop_amenities_usage_mult = -0.1
+		pop_amenities_usage_mult = -0.1			
 
 	}
 
@@ -1932,9 +1918,8 @@ ethic_spiritualist = {
 		desc = POP_ATTRACTION_PSIONICS_POS
 		trigger = {
 			OR = {
+				has_technology = "tech_telepathy"
 				has_technology = "tech_psionic_theory"
-				has_ascension_perk = ap_mind_over_matter
-				has_ascension_perk = ap_transcendence
 			}
 		}
 	}
@@ -2060,7 +2045,7 @@ ethic_spiritualist = {
 			has_ethic = ethic_fanatic_spiritualist
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			is_country_type = default
 			has_technology = "tech_psionic_theory"
 		}
@@ -2125,14 +2110,6 @@ ethic_spiritualist = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 1.1
-			has_trait = trait_latent_psionic
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_psionic
-		}
-		modifier = {
 			factor = 0.25
 			is_robot_pop = yes
 		}
@@ -2154,13 +2131,12 @@ ethic_fanatic_materialist = {
 		ETHIC_ALLOWS_ACADEMIC_PRIVILEGE
 		ETHIC_DISALLOW_BAN_AI
 		ETHIC_DISALLOW_BAN_ROBOTS
-		ETHIC_MATERIALIST_ALLOWS_HEAD_RESEARCHERS
 	}
 
 	country_modifier = {
 		country_physics_tech_research_speed	= 0.15
-		country_engineering_tech_research_speed	= 0.15
-		planet_pops_robotics_upkeep_mult = -0.2
+		country_engineering_tech_research_speed	= 0.15       	
+		planet_pops_robotics_upkeep_mult = -0.2		
 		pop_happiness = -0.05
 	}
 
@@ -2441,6 +2417,7 @@ ethic_gestalt_consciousness = {
 	country_modifier = {
 		country_war_exhaustion_mult = -0.2
 		country_base_influence_produces_add = 1
+		intel_encryption_add = 2
 	}
 
 	tags = {

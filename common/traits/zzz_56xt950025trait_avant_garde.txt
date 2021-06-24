@@ -1,0 +1,19 @@
+trait_avant_garde = {
+    cost = 1
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_obstinate"
+        "trait_hive_mind"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_ethics_shift_speed_mult = 1
+    }
+}

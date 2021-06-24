@@ -13,8 +13,6 @@ tr_diplomacy_adopt = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage
@@ -96,6 +94,7 @@ tr_diplomacy_finish = {
 		ascension_perks_add = 1
 		country_trust_cap_add = 50
 		country_trust_growth = 0.33
+		diplomacy_upkeep_mult = -0.25
 	}
 
 	tradition_swap = {
@@ -107,8 +106,6 @@ tr_diplomacy_finish = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage
@@ -138,14 +135,32 @@ tr_diplomacy_finish = {
 			factor = 1
 		}
 	}
+	
+	tradition_swap = {
+		name = tr_adaptability_void_finish
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_origin = origin_void_dwellers
+			OR = {
+				has_valid_civic = civic_fanatic_purifiers
+				has_valid_civic = civic_inwards_perfection
+				has_valid_civic = civic_barbaric_despoilers
+			}
+		}
+		modifier = {
+			ascension_perks_add = 1
+		}
+		weight = {
+			factor = 1
+		}
+	}
 }
 
 tr_diplomacy_the_federation = {
 
 	#unlocks federation mechanic
-	modifier = {
-		envoys_add = 1
-	}
 
 	tradition_swap = {
 		name = tr_adaptability_dietary_enrichment
@@ -156,8 +171,6 @@ tr_diplomacy_the_federation = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				has_valid_civic = civic_hive_devouring_swarm
 
 				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
@@ -165,6 +178,7 @@ tr_diplomacy_the_federation = {
 					has_valid_civic = civic_barbaric_despoilers
 					has_federations_dlc = no
 				}
+#				has_origin = origin_necrophage #necrophage federations, why not I guess :D
 			}
 			is_lithoid_empire = no
 		}
@@ -185,8 +199,6 @@ tr_diplomacy_the_federation = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				has_valid_civic = civic_closed_network
 				has_valid_civic = civic_hive_devouring_swarm
 
 				# Barbaric Despoilers can create Martial Alliances and Hegemonies if they have the Federations DLC
@@ -194,7 +206,7 @@ tr_diplomacy_the_federation = {
 					has_valid_civic = civic_barbaric_despoilers
 					has_federations_dlc = no
 				}
-
+#				has_origin = origin_necrophage #necrophage federations, why not I guess :D
 			}
 			is_lithoid_empire = yes
 		}
@@ -213,7 +225,6 @@ tr_diplomacy_the_federation = {
 		inherit_name = no
 		trigger = {
 			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_closed_network }
 		}
 		modifier = {
 			country_synthetic_trust_cap_add = 50
@@ -240,14 +251,12 @@ tr_diplomacy_entente_coordination = {
 	tradition_swap = {
 		name = tr_adaptability_survival_fittest
 		inherit_effects = no
-		inherit_icon = no
+		inherit_icon = yes #todo: add new icon
 		inherit_name = no
 		trigger = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage
@@ -269,7 +278,6 @@ tr_diplomacy_entente_coordination = {
 		inherit_name = no
 		trigger = {
 			is_machine_empire = yes
-			NOT = { has_valid_civic = civic_closed_network }
 		}
 		modifier = {
 			country_trade_fee = -0.10
@@ -287,7 +295,7 @@ tr_diplomacy_entente_coordination = {
 tr_diplomacy_open_markets = {
 
 	modifier = {
-		trade_value_mult = 0.1
+		diplo_weight_economy_mult = 0.20
 	}
 
 	tradition_swap = {
@@ -299,8 +307,6 @@ tr_diplomacy_open_markets = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage
@@ -353,8 +359,6 @@ tr_diplomacy_insider_trading = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage
@@ -397,7 +401,7 @@ tr_diplomacy_secure_shipping = {
 	}
 
 	modifier = {
-		local_trade_protection_add = 5
+		envoys_add = 2
 	}
 
 	tradition_swap = {
@@ -409,8 +413,6 @@ tr_diplomacy_secure_shipping = {
 			OR = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_inwards_perfection
-				has_valid_civic = civic_closed_collective
-				#has_valid_civic = civic_closed_network
 				is_hive_empire = yes
 				has_valid_civic = civic_barbaric_despoilers
 				has_origin = origin_necrophage

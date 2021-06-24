@@ -1,0 +1,37 @@
+namespace = Events_GAPS_Trait_Mutable
+pop_event = {
+    id = Events_GAPS_Trait_Mutable.3
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        has_trait = Trait_GAPS_Mutable
+    }
+    immediate = {
+        random_list = {
+            95 = {
+            }
+            5 = {
+                species = {
+                    save_event_target_as = gwen_clone_1
+                }
+                root = {
+                    modify_species = {
+                        species = event_target:gwen_clone_1
+                        add_trait = Trait_GAPS_Mutable_Empty
+                    }
+                    species = {
+                        save_event_target_as = gwen_clone_2
+                    }
+                }
+                event_target:gwen_clone_2 = {
+                    mutate_species = yes
+                }
+                root = {
+                    modify_species = {
+                        remove_trait = Trait_GAPS_Mutable_Empty
+                    }
+                }
+            }
+        }
+    }
+}

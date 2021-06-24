@@ -1,0 +1,23 @@
+trait_general_forecaster = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_general_forecaster.dds"
+    modifier = {
+        army_experience_gain_mult_mult = 0.25
+        army_damage_mult = 0.15
+        army_collateral_damage_mult = -0.15
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    requires_traits = {
+        trait_analytical
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

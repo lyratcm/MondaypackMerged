@@ -1,0 +1,43 @@
+namespace = Events_GAPS_Traits_Inoffensive
+country_event = {
+    id = Events_GAPS_Traits_Inoffensive.12
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        from = {
+            has_trait = Trait_GAPS_Inoffensive
+        }
+    }
+    immediate = {
+        every_owned_planet = {
+            limit = {
+                is_colony = yes
+            }
+            set_variable = {
+                which = "Planet_Variable_GAPS_Num_Inoffensive_Pops"
+                value = 0
+            }
+            every_deposit = {
+                limit = {
+                    is_deposit_type = Deposits_GAPS_Inoffensives
+                }
+                remove_deposit = yes
+            }
+            every_owned_pop = {
+                limit = {
+                    has_trait = Trait_GAPS_Inoffensive
+                }
+                planet = {
+                    change_variable = {
+                        which = "Planet_Variable_GAPS_Num_Inoffensive_Pops"
+                        value = 1
+                    }
+                }
+            }
+            while = {
+                count = Planet_Variable_GAPS_Num_Inoffensive_Pops
+                add_deposit = Deposits_GAPS_Inoffensives
+            }
+        }
+    }
+}

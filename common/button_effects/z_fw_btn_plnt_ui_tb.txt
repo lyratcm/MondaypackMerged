@@ -1,0 +1,87 @@
+#_[z_fw_btn_plnt_ui_tb]	工作检测/设置
+
+
+
+
+###_[z_fw_btn_plnt_ui_tb]	##########################################
+#_[工作检测]
+z_fw_btn_plnt_ui_tb_job_check = {
+	potential = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = { is_ai = no }
+	}
+	allow = { always = yes }
+	effect = {
+		custom_tooltip = z_fw_btn_plnt_ui_tb_job_check
+		hidden_effect = {
+			every_owned_pop = {
+				limit = { is_unemployed = yes }
+				if = {
+					limit = { is_pop_category = ruler }
+					clear_pop_category = yes
+					owner = { add_resource = { energy = -5 } }
+				}
+				else_if = {
+					limit = { is_pop_category = specialist }
+					clear_pop_category = yes
+					owner = { add_resource = { energy = -3 } }
+				}
+			}
+			check_planet_employment = yes
+		}
+	}
+}
+#_[设置]
+z_fw_btn_plnt_ui_tb_setting = {
+	potential = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = { is_ai = no }
+	}
+	allow = { hidden_trigger = { NOT = { has_planet_flag = z_fw_plnt_ui_setting_open } } }
+	effect = {
+		custom_tooltip = z_fw_btn_plnt_ui_tb_setting
+		hidden_effect = {
+			set_planet_flag = z_fw_plnt_ui_setting_open
+			planet_event = { id = z_fw_plnt_ui_setting.1 }
+		}
+	}
+}
+
+
+#_[迁移优先]	z禁用
+z_pf2_btn_plnt_ui_tb_mig_prio = {
+	potential = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = { is_ai = no }
+	}
+	allow = {
+		always = no	#_	z未完成
+		custom_tooltip = {
+			fail_text = z_fw_tips_pf2_needed
+			hidden_trigger = { has_global_flag = z_pf2_installed }
+		}
+	}
+}
+#_[迁移执行]
+z_pf2_btn_plnt_ui_tb_mig = {
+	potential = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = { is_ai = no }
+	}
+	allow = {
+		always = no	#_	z未完成
+		custom_tooltip = {
+			fail_text = z_fw_tips_pf2_needed
+			hidden_trigger = { has_global_flag = z_pf2_installed }
+		}
+	}
+}
+

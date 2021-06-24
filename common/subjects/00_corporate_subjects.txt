@@ -14,17 +14,6 @@ subsidiary = {
 		energy = 0.25
 	}
 	
-	overlord_resources = {
-		category = subjects
-		produces = {
-			trigger = { 
-				owner = { has_valid_civic = civic_franchising } 
-			}
-			energy = 5
-			influence = 0.25
-		}
-	}
-	
 	potential = {
 		is_country_type = default
 		from = { is_megacorp = yes }
@@ -49,16 +38,6 @@ subsidiary = {
 			set_subject_of = {
 				who = from
 				subject_type = tributary
-			}
-			break = yes
-		}
-		if = {
-			limit = {
-				from = { has_valid_civic = civic_feudal_realm }
-			}
-			set_subject_of = {
-				who = from
-				subject_type = duchy
 			}
 			break = yes
 		}
@@ -139,16 +118,13 @@ subsidiary = {
 		}
 		if = {
 			limit = {
-				from = {
-					NOT = { is_megacorp = yes }
-					NOT = { has_valid_civic = civic_feudal_realm }
-				}
+				from = { NOT = { is_megacorp = yes } }
 			}
 			set_subject_of = {
 				who = from
 				subject_type = vassal
 			}
 			break = yes
-		}
+		}			
 	}
 }

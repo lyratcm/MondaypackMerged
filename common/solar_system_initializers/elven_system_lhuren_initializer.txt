@@ -70,8 +70,6 @@ elven_system_lhuren_initializer = {
 		
 		}
 		
-		flags = { starting_mining_target }
-		
 		planet = {
 			class = "pc_toxic"
 			name = "Galas Laer"
@@ -250,7 +248,7 @@ elven_system_lhuren_initializer = {
 			home_planet = yes
 			orbit_angle = 210
 			orbit_distance = 40
-			size = 18
+			size = 21
 			has_ring = no
 			
 			starting_planet = yes

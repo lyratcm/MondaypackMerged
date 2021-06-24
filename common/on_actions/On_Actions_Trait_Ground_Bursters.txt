@@ -4,7 +4,7 @@
 # FromFrom = Pop
 on_pop_grown = {
 	events = {
-		Events_GAPS_Ground_Bursters.1
+		Events_GAPS_Ground_Bursters.10
 	}
 }
 

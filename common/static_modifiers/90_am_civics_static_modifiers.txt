@@ -4,6 +4,7 @@ static_modifier_am_civics_corporate_growth = {
 	planet_jobs_energy_produces_mult = 0.15
 	planet_jobs_minerals_produces_mult = 0.15
 	planet_jobs_food_produces_mult = 0.15
+	pop_growth_from_immigration = 0.15
 	
 	icon = "gfx/interface/icons/planet_modifiers/pm_land_appropriated.dds"
 	icon_frame = 1

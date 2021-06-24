@@ -1,0 +1,31 @@
+Tech_GAPS_Sky_Battle_Starbase_Designs_1 = {
+    icon = "Tech_GAPS_Sky_Battle_Starbase_Designs"
+    is_reverse_engineerable = no
+    area = engineering
+    category = {
+        voidcraft
+    }
+    cost = 0
+    cost_per_level = 0
+    tier = 0
+    levels = -1
+    weight = 0
+    start_tech = no
+    prerequisites = {
+        "Tech_GAPS_Sky_Battle_Starbase_Designs_1"
+    }
+    potential = {
+        has_civic = civic_GAPS_History_of_Sky_Battles
+        NOT = {
+            has_technology = Tech_GAPS_Sky_Battle_Starbase_Designs_1
+        }
+    }
+    weight_modifier = {
+        modifier = {
+            factor = 0
+        }
+    }
+    ai_weight = {
+        factor = 100
+    }
+}

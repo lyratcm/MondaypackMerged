@@ -1,17 +1,38 @@
 namespace = Events_GAPS_Traits_Delightful
 
-#ongame start
-country_event = {
-	id = Events_GAPS_Traits_Delightful.1
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Delightful.10
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Delightful }
-	}
 	immediate = {
-		every_owned_planet = {
-			Apply_Delightful_Modifiers = yes
+		#Remove_Old_Delightful_Modifiers = yes
+		set_variable = { which = "Planet_Variable_GAPS_Num_Delightful_Pops" value = 0 }
+		every_owned_pop = {
+			set_variable = { which = "Pop_Variable_GAPS_Num_Delightful_Pops" value = 0 }
+		}
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Delightful_Bonus
+		}
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Delightful }
+			root = { change_variable = { which = "Planet_Variable_GAPS_Num_Delightful_Pops" value = 1 } }
+		}
+		while = {
+			count = Planet_Variable_GAPS_Num_Delightful_Pops
+			every_owned_pop = { 
+				#limit = { NOT = { pop_has_trait = Trait_GAPS_Delightful } }
+				change_variable = { which = "Pop_Variable_GAPS_Num_Delightful_Pops" value = 1 }
+			}
+		}
+		every_owned_pop = { 
+			limit = { NOT = { pop_has_trait = Trait_GAPS_Delightful } }
+			add_modifier = { 
+				modifier = Pop_Modifier_GAPS_Delightful_Bonus 
+				days = -1
+				multiplier = Pop_Variable_GAPS_Num_Delightful_Pops
+			}
 		}
 	}
 }
@@ -21,29 +42,107 @@ country_event = {
 # From = planet
 #on_pop_added
 pop_event = {
-	id = Events_GAPS_Traits_Delightful.2
+	id = Events_GAPS_Traits_Delightful.20
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		from = { any_owned_pop = { has_trait = Trait_GAPS_Delightful } }
+		from = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
 	}
 	immediate = {
-		from = {
-			Apply_Delightful_Modifiers = yes
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+		}
+	}
+}
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+pop_event = {
+	id = Events_GAPS_Traits_Delightful.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
+	}
+	immediate = {
+		From = {
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+		}
+	}
+}
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Delightful.22
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+		}
+	}
+}
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Delightful.23
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+		}
+	}
+}
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+planet_event = {
+	id = Events_GAPS_Traits_Delightful.24
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
 		}
 	}
 }
 
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
 planet_event = {
-	id = Events_GAPS_Traits_Delightful.3
+	id = Events_GAPS_Traits_Delightful.25
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Delightful }
+		This = { any_owned_pop = { pop_has_trait = Trait_GAPS_Delightful } }
 	}
 	immediate = {
-		Apply_Delightful_Modifiers = yes
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Delightful.10 days = 1 }
+		}
 	}
 }
+
+

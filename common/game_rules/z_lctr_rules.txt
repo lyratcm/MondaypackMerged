@@ -15,6 +15,9 @@ has_full_sensor_range = {
 		has_country_flag = z_fw_r_celestial_orrey_activited			#_[z_fw]è­è²ÐÇÍ¼
 		has_country_flag = z_fw_r_cheat_quantum_beacon_activited	#_[z_fw]ÓÀºãÐÇ¾æ
 		has_country_flag = z_lctr_r_adv_sensor_activated_full		#_[z_lctr]°µÄÜÁ¿´«¸ÐÆ÷
+	#	AND = { is_ai = yes		has_country_flag = nirvana }		#_[Äù˜„]
+		has_country_flag = ai_dragon								#_[Äù˜„]
+		has_country_flag = ai_council								#_[Äù˜„]
 	}
 }
 
@@ -35,11 +38,17 @@ system_blocks_sensors = {
 		has_star_flag = lcluster
 		has_star_flag = sealed_system
 		has_star_flag = wg_sealed_system			#_wsg
+		has_star_flag = wg_psionic_systems			#_wsg
 		has_star_flag = fallen_sol_system			#_teif
 		root = { is_country_type = teif_primitive }	#_teif
 		has_star_flag = ag_no_sensor_system			#_ag
 		has_star_flag = bok_globules					#_smco
 		has_star_flag = star_flag_GAPS_sealed_system	#_smco
 		is_ws_system = yes			#_ws
+		AND = {#_s_tnatc
+			exists = owner
+			owner = { has_relic = r_invisibility_rune }
+			NOT = { root = { is_same_empire = prev.owner } }
+		}
 	}
 }

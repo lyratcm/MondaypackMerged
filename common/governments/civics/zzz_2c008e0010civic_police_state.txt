@@ -1,0 +1,38 @@
+civic_police_state = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_fiefdom
+                value = auth_cooperative
+            }
+        }
+    }
+    modifier = {
+        planet_stability_add = 5
+        local_trade_protection_add = 5
+        ship_piracy_suppression_add = 5
+        planet_enforcers_upkeep_mult = 0.15
+        pop_ethic_egalitarian_attraction_mult = -0.15
+    }
+    possible = {
+        ethics = {
+            NOR = {
+                value = ethic_fanatic_egalitarian
+            }
+        }
+        civics = {
+            NOR = {
+                value = civic_ultimate_collective
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+}

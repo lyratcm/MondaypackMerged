@@ -10,11 +10,12 @@ event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = elven_ring_start
 				owner = {
-					is_species_class = ELVEN
+					#is_species_class = ELVEN
+					# No longer needed to restrict to elfies! :-)
 				}
 			}
 			
@@ -31,12 +32,9 @@ event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = elven_shield_start
-				owner = {
-					is_species_class = ELVEN
-				}
 			}
 			
 			create_avari_shield = yes
@@ -52,11 +50,11 @@ event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = elven_sidh_rings_start
 				owner = {
-					is_species_class = ELVEN
+					#is_species_class = ELVEN
 				}
 			}
 			
@@ -75,6 +73,10 @@ country_event = {
 	id = elven_setup.2
 	hide_window = yes
 	is_triggered_only = yes
+
+	trigger = {
+		is_country_type = default
+	}
 
 	immediate = {
 		capital_scope = {
@@ -123,14 +125,14 @@ country_event = {
 				}
 
 				while = {
-					count = 6
-					random_pop = {
+					count = 8
+					random_owned_pop = {
 						kill_pop = yes
 					}
 				}
 
 				while = {
-					count = 6
+					count = 8
 					create_pop = {
 						species = event_target:elven_treant_species
 					}
@@ -232,97 +234,6 @@ event = {
 	}
 }
 
-########################
-# LHUREN CLUSTER SETUP #
-########################
-
-event = {
-	id = elven_setup.6
-	hide_window = yes
-	is_triggered_only = yes
-	
-	immediate = {
-		set_spawn_system_batch = begin
-		every_system = {
-			limit = {
-				has_star_flag = "lhuren_capital_system"
-			}
-
-			save_event_target_as = lhuren_capital_system
-
-			spawn_system = {
-				min_distance = 12
-				max_distance = 12
-				initializer = elven_system_lhuren_neighbor1_initializer
-			}
-
-			spawn_system = {
-				min_distance = 10
-				max_distance = 10
-				initializer = elven_system_lhuren_neighbor2_initializer
-			}
-
-			random_system = {
-				limit = {
-					has_star_flag = "lhuren_neighbor1_system"
-				}
-
-				remove_star_flag = "lhuren_neighbor1_system"
-
-				add_hyperlane = {
-					from = this
-					to = event_target:lhuren_capital_system
-				}
-
-				save_event_target_as = lhuren_neighbor1_system
-			}
-
-			random_system = {
-				limit = {
-					has_star_flag = "lhuren_neighbor2_system"
-				}
-
-				remove_star_flag = "lhuren_neighbor2_system"
-
-				add_hyperlane = {
-					from = this
-					to = event_target:lhuren_capital_system
-				}
-
-				add_hyperlane = {
-					from = this
-					to = event_target:lhuren_neighbor1_system
-				}
-
-				save_event_target_as = lhuren_neighbor2_system
-			}
-
-			every_neighbor_system = {
-				random_list = {
-					33 = {
-						add_hyperlane = {
-							from = this
-							to = event_target:lhuren_neighbor1_system
-						}
-					}
-					66 = { }
-				}
-
-				random_list = {
-					33 = {
-						add_hyperlane = {
-							from = this
-							to = event_target:lhuren_neighbor2_system
-						}
-					}
-					66 = { }
-				}
-			}
-		}
-		set_spawn_system_batch = end
-	}
-}
-
 ########################################
 # ELVES START WITH MORE CONSUMER GOODS #
 ########################################
@@ -335,14 +246,8 @@ event = {
 	immediate = {
 		every_country = {
 			limit = {
+				is_country_type = default
 				has_trait = trait_elven_true
-				NOR = {
-					has_government = gov_stagnant_ascendancy
-					has_government = gov_awakened_ascendancy
-					has_government = gov_tribal_society
-					has_government = gov_feudal_realms
-					has_government = gov_fragmented_nation_states
-				}
 			}
 			
 			add_resource = { consumer_goods = 150 }

@@ -1,7 +1,0 @@
-tradition_diplomacy = {
-	adoption_bonus = "tr_diplomacy_adopt"
-	finish_bonus = "tr_diplomacy_finish"
-	traditions = {
-		##
-	}
-}

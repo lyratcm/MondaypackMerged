@@ -204,7 +204,7 @@ d_GAPS_Num_Uncolonized_Gaia_Worlds_In_Borders = {
 			owner = { has_civic = Civic_GAPS_Preservers is_gestalt = no }
 			mid_game_years_passed >= 1
 		}
-	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -249,7 +249,7 @@ d_GAPS_Num_Uncolonized_Gaia_Worlds_In_Borders = {
 			owner = { has_civic = Civic_GAPS_Preservers is_gestalt = no }
 			mid_game_years_passed >= 1
 		}
-	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

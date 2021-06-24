@@ -19,7 +19,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -47,7 +47,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -75,7 +75,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -103,7 +103,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -131,7 +131,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -159,7 +159,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -187,7 +187,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -215,7 +215,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -243,7 +243,7 @@ terraform_link = {
 	duration = 7200
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -275,7 +275,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -311,7 +311,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -347,7 +347,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -383,7 +383,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -419,7 +419,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -455,7 +455,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -491,7 +491,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -527,7 +527,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -563,7 +563,7 @@ terraform_link = {
 	duration = @gaiaTime
 	
 	potential = {
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	potential = {
@@ -604,7 +604,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -628,7 +628,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -652,7 +652,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -676,7 +676,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -700,7 +700,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -724,7 +724,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -749,7 +749,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -773,7 +773,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -797,7 +797,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -821,7 +821,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -845,7 +845,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -869,7 +869,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -893,7 +893,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -917,7 +917,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -941,7 +941,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -965,7 +965,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -989,7 +989,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -1013,7 +1013,7 @@ terraform_link = {
 	
 	potential = {
 		from = { has_modifier = terraforming_candidate }
-		NOT = { has_global_flag = has_planetary_diversity_mod }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	condition = {
 		has_technology = "tech_climate_restoration"
@@ -1043,6 +1043,7 @@ terraform_link = {
 	potential = {
 		has_ascension_perk = ap_machine_worlds
 		gpm_has_required_terraform_modifier = yes
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1077,6 +1078,7 @@ terraform_link = {
 	potential = {
 		has_ascension_perk = ap_machine_worlds
 		gpm_has_required_terraform_modifier = yes
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1110,6 +1112,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1143,6 +1146,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = {
@@ -1185,6 +1189,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1212,6 +1217,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1245,6 +1251,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1278,6 +1285,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1311,6 +1319,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1344,6 +1353,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1377,6 +1387,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1410,6 +1421,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1443,6 +1455,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1476,6 +1489,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_machine_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1509,6 +1523,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1536,6 +1551,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1563,6 +1579,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1590,6 +1607,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1617,6 +1635,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1644,6 +1663,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1671,6 +1691,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1698,6 +1719,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1725,6 +1747,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	effect = {
@@ -1757,6 +1780,7 @@ terraform_link = {
 	potential = {
 		has_ascension_perk = ap_hive_worlds
 		from = { has_modifier = terraforming_candidate }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1788,6 +1812,7 @@ terraform_link = {
 	potential = {
 		has_ascension_perk = ap_hive_worlds
 		from = { has_modifier = terraforming_candidate }
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1818,6 +1843,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1848,6 +1874,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	condition = { 
@@ -1887,6 +1914,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 
 	ai_weight = {
@@ -1911,6 +1939,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1941,6 +1970,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -1971,6 +2001,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2001,6 +2032,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2031,6 +2063,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2061,6 +2094,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2091,6 +2125,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2121,6 +2156,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2151,6 +2187,7 @@ terraform_link = {
 	
 	potential = {
 		has_ascension_perk = ap_hive_worlds
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2181,6 +2218,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2201,6 +2239,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2221,6 +2260,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2241,6 +2281,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2261,6 +2302,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2281,6 +2323,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2301,6 +2344,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2321,6 +2365,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {
@@ -2341,6 +2386,7 @@ terraform_link = {
 	
 	potential = {
 		has_technology = tech_climate_restoration
+		NOT = { has_global_flag = planetarydiversity }
 	}
 	
 	ai_weight = {

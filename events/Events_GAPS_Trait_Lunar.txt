@@ -1,68 +1,85 @@
 namespace = Events_GAPS_Traits_Lunar
 
-#ongame start
-country_event = {
-	id = Events_GAPS_Traits_Lunar.1
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Lunar.10
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Lunar }
-	}
 	immediate = {
-		every_owned_planet = {
-			limit = { is_colony = yes has_moon = yes }
-			save_event_target_as = Target_Planet_GAPS_Lunar_Planet
-			Scripted_Planet_Effect_GAPS_Count_Moons = yes
-			Scripted_Planet_Effect_Apply_Lunar_Modifiers = yes
+		set_variable = { which = "Planet_Variable_GAPS_No_Moons" value = 0 }
+		every_moon = { root = { change_variable = { which = "Planet_Variable_GAPS_No_Moons" value = 1 } } }
+		if = { limit = { has_modifier = extensive_moon_system } change_variable = { which = "Planet_Variable_GAPS_No_Moons" value = 4 } }
+		if = { limit = { has_modifier = projecting_moon } change_variable = { which = "Planet_Variable_GAPS_No_Moons" value = 1 } }
+		if = { limit = { has_modifier = precious_moon } change_variable = { which = "Planet_Variable_GAPS_No_Moons" value = 1 } }
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_1
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_2
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_3
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_4
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_5
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_6
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_7
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_8
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_9
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_10
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_11
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_12
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_13
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_14
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_15
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_16
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_17
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_18
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_19
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_20
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_21
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_22
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_23
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_24
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_25
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_26
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_27
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_28
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_29
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost_30
+		}
+		every_owned_pop = {
+			remove_modifier = Pop_Modifier_GAPS_Lunar_Boost
+			set_variable = { which = "Pop_Variable_GAPS_No_Moons" value = 0 }
+		}
+		while = {
+			count = Planet_Variable_GAPS_No_Moons
+			every_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Immersers }
+				change_variable = { which = "Pop_Variable_GAPS_No_Moons" value = 1 }
+			}
+		}
+		every_owned_pop = { 
+			limit = { pop_has_trait = Trait_GAPS_Lunar } 
+			add_modifier = { 
+				modifier = Pop_Modifier_GAPS_Lunar_Boost 
+				days = -1
+				multiplier = Pop_Variable_GAPS_No_Moons
+			}
 		}
 	}
 }
-
-
 # A pop has been added to the planet
 # Root = pop
 # From = planet
 #on_pop_added
 pop_event = {
-	id = Events_GAPS_Traits_Lunar.2
+	id = Events_GAPS_Traits_Lunar.20
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		planet = { any_owned_pop = { has_trait = Trait_GAPS_Lunar } }
+		Root = { pop_has_trait = Trait_GAPS_Lunar }
 	}
 	immediate = {
-		planet = {
-			if = {
-				limit = { is_moon = yes }
-				save_event_target_as = Target_Planet_GAPS_Lunar_Planet
-				Scripted_Planet_Effect_GAPS_Count_Moons = yes
-				Scripted_Planet_Effect_Apply_Lunar_Modifiers = yes
-			}
-		}
-	}
-}
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
-#on_pop_declined
-#on_pop_purged
-#on_pop_displaced
-planet_event = {
-	id = Events_GAPS_Traits_Lunar.3
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Lunar }
-	}
-	immediate = {
-		if = {
-			limit = { is_moon = yes }
-			save_event_target_as = Target_Planet_GAPS_Lunar_Planet
-			Scripted_Planet_Effect_GAPS_Count_Moons = yes
-			Scripted_Planet_Effect_Apply_Lunar_Modifiers = yes
+		From = {
+			planet_event = { id = Events_GAPS_Traits_Lunar.10 days = 1 }
 		}
 	}
 }

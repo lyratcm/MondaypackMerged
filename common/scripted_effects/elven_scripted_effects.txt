@@ -61,11 +61,13 @@ generate_elven_capital_deposits_and_blockers = {
 		add_deposit = d_drow_planetary_buried_sea
 		add_deposit = d_drow_planetary_happy_lizard_farms
 		add_deposit = d_drow_planetary_luminous_lichen
+		add_deposit = d_drow_planetary_shroom_flats
 		add_deposit = d_drow_planetary_sunken_geysers
 		add_deposit = d_drow_planetary_sunken_geysers
 		add_deposit = d_drow_planetary_serpentine_trench
 		add_deposit = d_drow_planetary_serpentine_trench
 		add_deposit = d_drow_planetary_metal_wastefields
+		add_deposit = d_drow_planetary_aurous_fissures
 		add_deposit = d_drow_planetary_aurous_fissures
 		add_deposit = d_drow_planetary_carbon_subterrane
 
@@ -234,146 +236,21 @@ create_sidh_rings = {
 #####################################
 
 recalculate_treant_habitability_bonus = {
-	remove_modifier = elven_treant_harmony_5
-	remove_modifier = elven_treant_harmony_10
-	remove_modifier = elven_treant_harmony_15
-	remove_modifier = elven_treant_harmony_20
-	remove_modifier = elven_treant_harmony_25
-	remove_modifier = elven_treant_harmony_30
-	remove_modifier = elven_treant_harmony_35
-	remove_modifier = elven_treant_harmony_40
-	remove_modifier = elven_treant_harmony_45
-	remove_modifier = elven_treant_harmony_50
+	remove_modifier = elven_treant_harmony
 
-	if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 50
-			}
-		}
+	set_variable = { which = elven_treant_count value = 0 }
+	every_owned_pop = {
+		limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
 
-		add_modifier = {
-			modifier = elven_treant_harmony_50
-			days = -1
+		PREV = {
+			change_variable = { which = elven_treant_count value = 1 }
 		}
 	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 45
-			}
-		}
 
-		add_modifier = {
-			modifier = elven_treant_harmony_45
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 40
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_40
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 35
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_35
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 30
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_30
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 25
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_25
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 20
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_20
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 15
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_15
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 10
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_10
-			days = -1
-		}
-	}
-	else_if = {
-		limit = {
-			count_pops = {
-				limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
-				count >= 5
-			}
-		}
-
-		add_modifier = {
-			modifier = elven_treant_harmony_5
-			days = -1
-		}
+	add_modifier = {
+		modifier = elven_treant_harmony
+		days = -1
+		multiplier = elven_treant_count
 	}
 }
 
@@ -783,17 +660,398 @@ revert_planet_to_permafrost = {
 	}
 }
 
-create_lunari_blue_clouds = {
-	create_ambient_object = {
-		type = "lunari_blue_cloud_ambient_entity"
-		entity_offset_height = -15
-		location = this
-	}
-	last_created_ambient_object = { 
-		set_location = {
-			target = prev
-			distance = 0
-			angle = random
+############################################
+##   LHUREN - CELESTIAL GRACE MECHANICS   ##
+############################################
+
+# Calculate Celestial Favor based on relevant factors and apply modifiers.
+# Use this in both periodic checks and after any new factor is added.
+# Do not adjust elven_celestial_favor_score outside of this effect, it won't be counted. All factors need to be accounted for here.
+# This = Country Scope
+elven_evaluate_celestial_favor = {
+
+	elven_set_celestial_favor_factors = yes
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
 		}
+		
+		# Reset to 0
+		set_variable = { which = elven_celestial_favor_score value = 0 }
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_psi }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_chosen }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_erudite }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_skilled }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_peace }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_safe }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_neg }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_alien }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_threatened }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_threatened_multi }
+			change_variable = { which = elven_celestial_favor_score value = -2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_subject }
+			change_variable = { which = elven_celestial_favor_score value = -3 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_used_pearl }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_ding }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_new_colony }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_mega_built }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_mega_upgraded }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_won_war }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_won_def }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_quo_war }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_war }
+			change_variable = { which = elven_celestial_favor_score value = -2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_planet }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_system }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+	}
+
+	else = {
+		clear_variable = elven_celestial_favor_score
+	}
+
+	elven_set_celestial_favor_modifiers = yes
+
+}
+
+# Apply or remove Celestial Favor modifiers.
+# Should be executed even on empires that don't qualify to purge orphaned modifiers in case a Celestial Grace empire loses the civic.
+# This = Country Scope
+elven_set_celestial_favor_modifiers = {
+	remove_modifier = elven_celestial_favor_0
+	remove_modifier = elven_celestial_favor_1p
+	remove_modifier = elven_celestial_favor_2p
+	remove_modifier = elven_celestial_favor_3p
+	remove_modifier = elven_celestial_favor_4p
+	remove_modifier = elven_celestial_favor_5p
+	remove_modifier = elven_celestial_favor_1n
+	remove_modifier = elven_celestial_favor_2n
+	remove_modifier = elven_celestial_favor_3n
+	remove_modifier = elven_celestial_favor_4n
+	remove_modifier = elven_celestial_favor_5n
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
+		}
+
+		if = {
+			limit = {
+				NOT = { is_variable_set = elven_celestial_favor_score }
+			}
+			set_variable = { which = elven_celestial_favor_score value = 0 }
+		}
+
+		# Neutral Effects
+
+		if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 0 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_0 days = -1 }
+		}
+
+		# Positive Effects
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 1 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_1p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 2 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_2p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 3 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_3p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_4p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value > 4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_5p days = -1 }
+		}
+
+		# Negative Effects
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -1 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_1n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -2 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_2n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -3 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_3n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_4n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value < -4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_5n days = -1 }
+		}
+	}
+}
+
+# Apply Ongoing Celestial Favor factor modifiers.
+# These do nothing by themselves, they are simply used to calculate the total Celestial Favor score
+# Do not include temporary Factors in here. Those don't need maintenance because they can handle expiration on their own.
+elven_set_celestial_favor_factors = {
+	remove_modifier = elven_celestial_favor_factor_ruler_psi
+	remove_modifier = elven_celestial_favor_factor_ruler_chosen
+	remove_modifier = elven_celestial_favor_factor_ruler_erudite
+	remove_modifier = elven_celestial_favor_factor_ruler_skilled
+	remove_modifier = elven_celestial_favor_factor_peace
+	remove_modifier = elven_celestial_favor_factor_safe
+	remove_modifier = elven_celestial_favor_factor_ruler_neg
+	remove_modifier = elven_celestial_favor_factor_ruler_alien
+	remove_modifier = elven_celestial_favor_factor_threatened
+	remove_modifier = elven_celestial_favor_factor_threatened_multi
+	remove_modifier = elven_celestial_favor_factor_subject
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
+		}
+
+		# Positive Factors
+
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_psionic
+					NOT = { has_ruler_trait = leader_trait_ruler_chosen }
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_psi days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_chosen
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_chosen days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_erudite
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_erudite days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_skill >= 10
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_skilled days = -1 }
+		}
+		
+		if = {
+			limit = {
+				years_of_peace = {
+					value >= 50
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_peace days = -1 }
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					count_neighbor_country = { count = 0 }
+					any_neighbor_country = {
+						OR = {
+							relative_power = { who = prev value < equivalent }
+							has_overlord = prev
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_safe days = -1 }
+		}
+
+		# Negative Factors
+		
+		if = {
+			limit = {
+				ruler = {
+					OR = {
+						has_trait = leader_trait_stubborn
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_arrested_development
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_neg days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					NOT = { is_same_species = prev }
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_alien days = -1 }
+		}
+		
+		if = {
+			limit = {
+				count_neighbor_country = {
+					count = 1
+					limit = {
+						relative_power = { who = prev value >= equivalent }
+						NOT = { has_overlord = prev }
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_threatened days = -1 }
+		}
+		
+		if = {
+			limit = {
+				count_neighbor_country = {
+					count > 1
+					limit = {
+						relative_power = { who = prev value >= equivalent }
+						NOT = { has_overlord = prev }
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_threatened_multi days = -1 }
+		}
+		
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_subject days = -1 }
+		}
+		
 	}
 }

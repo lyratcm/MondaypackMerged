@@ -1,0 +1,18 @@
+namespace = Events_GAPS_Trait_Stunted_Prodigies
+country_event = {
+    id = Events_GAPS_Trait_Stunted_Prodigies.2
+    is_triggered_only = yes
+    hide_window = yes
+    trigger = {
+        leader = {
+            species = {
+                has_trait = Trait_GAPS_Stunted_Prodigies
+            }
+        }
+    }
+    immediate = {
+        leader = {
+            set_skill = 5
+        }
+    }
+}

@@ -1,107 +1,62 @@
 namespace = Events_GAPS_Traits_Immersers
 
-#ongame start
-country_event = {
-	id = Events_GAPS_Traits_Immersers.1
+#CORE EVENT
+planet_event = {
+	id = Events_GAPS_Traits_Immersers.10
 	is_triggered_only = yes
 	hide_window = yes
 
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Immersers }
-	}
 	immediate = {
-		every_owned_planet = { 
-			limit = { is_colony = yes  }
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
+		set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
+		every_deposit = {
+			limit = { is_blocker = yes }
+			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
+		}
+		every_owned_pop = {
+			set_variable = { which = "Pop_Variable_GAPS_Num_Blockers" value = 0 }
+			remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
+			remove_modifier = Pop_Modifier_GAPS_Immersers_Penalty
+		}
+		if = { 
+			limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
 			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
+				limit = { pop_has_trait = Trait_GAPS_Immersers }
+				add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
 			}
 		}
-	}
-}
-#modification copmlete
-country_event = {
-	id = Events_GAPS_Traits_Immersers.12
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		from = { has_trait = Trait_GAPS_Immersers }
-	}
-	immediate = {
-		every_owned_planet = { 
-			limit = { is_colony = yes }
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
+		else = { 
 			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
+				count = Planet_Variable_GAPS_Num_Blockers
+				every_owned_pop = {
+					limit = { pop_has_trait = Trait_GAPS_Immersers }
+					change_variable = { which = "Pop_Variable_GAPS_Num_Blockers" value = 1 }
+				}
+			}
+			every_owned_pop = { 
+				limit = { pop_has_trait = Trait_GAPS_Immersers } 
+				add_modifier = { 
+					modifier = Pop_Modifier_GAPS_Immersers_Boost 
+					days = -1
+					multiplier = Pop_Variable_GAPS_Num_Blockers
+				}
+			}
+		}
+		set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
+		every_deposit = {
+			limit = { is_deposit_type = Deposits_GAPS_Immersers }
+			remove_deposit = yes
+		}
+		every_owned_pop = {
+			limit = { pop_has_trait = Trait_GAPS_Immersers }
+			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
+		}
+		remove_modifier = Planet_Modifier_GAPS_Trait_Immersers
+		if = {
+			limit = { any_owned_pop = { pop_has_trait = Trait_GAPS_Immersers } }
+			add_modifier = {
+				modifier = Planet_Modifier_GAPS_Trait_Immersers
+				days = -1
+				multiplier = Planet_Variable_GAPS_Num_Immersers_Pops
 			}
 		}
 	}
@@ -111,158 +66,33 @@ country_event = {
 # From = planet
 #on_pop_added
 pop_event = {
-	id = Events_GAPS_Traits_Immersers.21
+	id = Events_GAPS_Traits_Immersers.20
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		Root = { has_trait = Trait_GAPS_Immersers }
+		Root = { pop_has_trait = Trait_GAPS_Immersers }
 	}
 	immediate = {
-		planet = {	
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
-			}
-		}
-	}
-}
-# A planet has been colonized.
-# Scope = Planet
-planet_event = {
-	id = Events_GAPS_Traits_Immersers.22
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		any_owned_pop = { has_trait = Trait_GAPS_Immersers }
-	}
-	immediate = {
-		set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-		every_deposit = {
-			limit = { is_blocker = yes }
-			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-		}
-		every_owned_pop = {
-			limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-			while = {
-				limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-			}
-		}
-		if = { 
-			limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-			}
-		}
-		else = { 
-			while = {
-				count = Planet_Variable_GAPS_Num_Blockers
-				every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-			}
-		}
-		set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-		every_deposit = {
-			limit = { is_deposit_type = Deposits_GAPS_Immersers }
-			remove_deposit = yes
-		}
-		every_owned_pop = {
-			limit = { has_trait = Trait_GAPS_Immersers }
-			planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-		}
-		while = {
-			count = Planet_Variable_GAPS_Num_Immersers_Pops
-			add_deposit = Deposits_GAPS_Immersers
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
 # Pop is abducted by raiding stance
 # This = Pop scope
 # From = planet abducted from
-planet_event = {
-	id = Events_GAPS_Traits_Immersers.31
+pop_event = {
+	id = Events_GAPS_Traits_Immersers.21
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		This = { has_trait = Trait_GAPS_Immersers }
+		This = { pop_has_trait = Trait_GAPS_Immersers }
 	}
 	immediate = {
-		from = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
-			}
+		From = {	
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
@@ -271,53 +101,16 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Immersers.32
+	id = Events_GAPS_Traits_Immersers.22
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Immersers }
+		FromFrom = { pop_has_trait = Trait_GAPS_Immersers }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
-			}
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
@@ -326,53 +119,16 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Immersers.33
+	id = Events_GAPS_Traits_Immersers.23
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Immersers }
+		FromFrom = { pop_has_trait = Trait_GAPS_Immersers }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
-			}
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
@@ -381,53 +137,34 @@ planet_event = {
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Traits_Immersers.34
+	id = Events_GAPS_Traits_Immersers.24
 	is_triggered_only = yes
 	hide_window = yes
 
 	trigger = {
-		FromFrom = { has_trait = Trait_GAPS_Immersers }
+		FromFrom = { pop_has_trait = Trait_GAPS_Immersers }
 	}
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
-			set_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 0 }
-			every_deposit = {
-				limit = { is_deposit_type = Deposits_GAPS_Immersers }
-				remove_deposit = yes
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Immersers_Pops" value = 1 } }
-			}
-			while = {
-				count = Planet_Variable_GAPS_Num_Immersers_Pops
-				add_deposit = Deposits_GAPS_Immersers
-			}
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
+		}
+	}
+}
+
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+#on_pop_bombed_to_death = {
+planet_event = {
+	id = Events_GAPS_Traits_Immersers.25
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		this = { any_owned_species = { has_trait = Trait_GAPS_Immersers } }
+	}
+	immediate = {
+		This = {
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
@@ -435,49 +172,29 @@ planet_event = {
 # This = Planet
 #on_blocker_cleared = {
 planet_event = {
-	id = Events_GAPS_Traits_Immersers.4
+	id = Events_GAPS_Traits_Immersers.30
 	is_triggered_only = yes
 	hide_window = yes
 
+	trigger = {
+		this = { any_owned_species = { has_trait = Trait_GAPS_Immersers } }
+	}
+	
 	immediate = {
 		This = {
-			set_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 }
-			every_deposit = {
-				limit = { is_blocker = yes }
-				planet = { change_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 1 } }
-			}
-			every_owned_pop = {
-				limit = { has_trait = Trait_GAPS_Immersers has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-				while = {
-					limit = { has_modifier = Pop_Modifier_GAPS_Immersers_Boost }
-					remove_modifier = Pop_Modifier_GAPS_Immersers_Boost
-				}
-			}
-			if = { 
-				limit = { check_variable = { which = "Planet_Variable_GAPS_Num_Blockers" value = 0 } }
-				every_owned_pop = {
-					limit = { has_trait = Trait_GAPS_Immersers }
-					add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Penalty days = -1 }
-				}
-			}
-			else = { 
-				while = {
-					count = Planet_Variable_GAPS_Num_Blockers
-					every_owned_pop = {  limit = { has_trait = Trait_GAPS_Immersers } add_modifier = { modifier = Pop_Modifier_GAPS_Immersers_Boost days = -1 } }
-				}
-			}
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
 		}
 	}
 }
-# A pop has been displaced
-# This = Planet scope
-# From = Country
-# FromFrom = Pop
+#Apply modifiers. on a delay because of how blocker clear works
 planet_event = {
-	id = Events_GAPS_Traits_Immersers.41
+	id = Events_GAPS_Traits_Immersers.31
 	is_triggered_only = yes
 	hide_window = yes
 
 	immediate = {
+		Root = {
+			planet_event = { id = Events_GAPS_Traits_Immersers.10 days = 1 }
+		}
 	}
 }

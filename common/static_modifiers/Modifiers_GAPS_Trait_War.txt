@@ -1,0 +1,7 @@
+Pop_Modifier_GAPS_War_Happy = {
+	pop_happiness = 0.1
+}
+
+Pop_Modifier_GAPS_Peace_Happy = {
+	pop_happiness = 0.1
+}

@@ -5,7 +5,7 @@
 
 #_[«¿∂· •“≈ŒÔ]
 z_lctr_wg_plunder_relic = {
-	casus_belli = z_cltr_cb_plunder_relic
+	casus_belli = z_lctr_cb_plunder_relic
 	hide_if_no_cb = yes
 	release_occupied_systems_on_status_quo = yes
 

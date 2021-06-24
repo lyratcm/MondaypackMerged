@@ -1,3 +1,5 @@
+Pop_Modifier_GAPS_Delightful_Bonus = { pop_happiness = 0.01 }
+
 Pop_Modifier_GAPS_Delightful_Species_Count_1 = { pop_happiness = 0.01 }
 Pop_Modifier_GAPS_Delightful_Species_Count_2 = { pop_happiness = 0.02 }
 Pop_Modifier_GAPS_Delightful_Species_Count_3 = { pop_happiness = 0.03 }

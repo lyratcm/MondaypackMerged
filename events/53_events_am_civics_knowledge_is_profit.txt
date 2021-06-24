@@ -21,8 +21,8 @@ ship_event = {
 	immediate = {
 		owner = {
 			add_resource = { 
-				energy = 50
-				influence = 5
+				energy = 100
+				influence = 20
 			}	
 		}
 	}

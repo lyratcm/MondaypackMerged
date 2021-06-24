@@ -5,7 +5,7 @@ namespace = Events_GAPS_Trait_Mutable
 # From = Country
 # FromFrom = Pop
 planet_event = {
-	id = Events_GAPS_Trait_Mutable.1
+	id = Events_GAPS_Trait_Mutable.10
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -14,34 +14,16 @@ planet_event = {
 	}
 	immediate = {
 		FromFrom = {
-			pop_event = { id = Events_GAPS_Trait_Mutable.3 days = 0 }
+			pop_event = { id = Events_GAPS_Trait_Mutable.11 days = 0 }
 		}
 	}
 }
-
-country_event = {
-	id = Events_GAPS_Trait_Mutable.2
-	is_triggered_only = yes
-	hide_window = yes
-
-	trigger = {
-		has_trait = Trait_GAPS_Mutable
-	}
-	immediate = {
-		every_owned_pop = { 
-			limit = { has_trait = Trait_GAPS_Mutable } 
-			pop_event = { id = Events_GAPS_Trait_Mutable.3 days = 0 }
-		}
-	}
-}
-
-
 
 # A pop has been added to the planet
 # Root = pop
 # From = planet
 pop_event = {
-	id = Events_GAPS_Trait_Mutable.3
+	id = Events_GAPS_Trait_Mutable.11
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -53,15 +35,15 @@ pop_event = {
 			95 = {
 			}
 			5 = {
-				species = { save_event_target_as = gwen_clone_1 }
+				species = { save_event_target_as = Target_Species_GAPS_Mutate_1 }
 				root = {
 					modify_species = {
-						species = event_target:gwen_clone_1
+						species = event_target:Target_Species_GAPS_Mutate_1
 						add_trait = Trait_GAPS_Mutable_Empty
 					}
-					species = { save_event_target_as = gwen_clone_2 }
+					species = { save_event_target_as = Target_Species_GAPS_Mutate_2 }
 				}
-				event_target:gwen_clone_2 = {
+				event_target:Target_Species_GAPS_Mutate_2 = {
 					mutate_species = yes
 				}
 				root = {

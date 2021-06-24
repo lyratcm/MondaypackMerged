@@ -1,0 +1,77 @@
+namespace = Events_GAPS_Traits_Patriotic
+
+planet_event = {
+	id = Events_GAPS_Traits_Patriotic.10
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		
+	}
+	immediate = {
+		owner = { save_event_target_as = Target_Country_GAPS_Patrotic_Owner }
+		set_variable = { which = "Planet_Variable_GAPS_Num_Armies" value = 0 }
+		every_owned_pop = { 
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			remove_modifier = Pop_Modifier_GAPS_Army_Happiness
+			set_variable = { which = "Pop_Variable_GAPS_Num_Armies" value = 0 }
+		}
+		every_planet_army = {
+			limit = { owner = { is_same_value = event_target:Target_Country_GAPS_Patrotic_Owner } }
+			root = { change_variable = { which = "Planet_Variable_GAPS_Num_Armies" value = 1 } }
+		}
+		while = {
+			count = Planet_Variable_GAPS_Num_Armies
+			every_owned_pop = {
+				limit = { pop_has_trait = Trait_GAPS_Patriotic }
+				change_variable = { which = "Pop_Variable_GAPS_Num_Armies" value = 1 }
+			}
+		}
+		every_owned_pop = { 
+			limit = { pop_has_trait = Trait_GAPS_Patriotic } 
+			add_modifier = { 
+				modifier = Pop_Modifier_GAPS_Army_Happiness 
+				days = -1
+				multiplier = Pop_Variable_GAPS_Num_Armies
+			}
+		}
+	}
+}
+#ongame start
+country_event = {
+	id = Events_GAPS_Traits_Patriotic.20
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Patriotic }
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Patriotic } }
+			planet_event = { id = Events_GAPS_Traits_Patriotic.10 days = 1 }
+		}
+	}
+}
+#On monthly pulse country
+country_event = {
+	id = Events_GAPS_Traits_Patriotic.21
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		any_owned_species = { has_trait = Trait_GAPS_Patriotic }
+	}
+	immediate = {
+		every_owned_planet = {
+			limit = { any_owned_species = { has_trait = Trait_GAPS_Patriotic } }
+			planet_event = { id = Events_GAPS_Traits_Patriotic.10 days = 1 }
+		}
+	}
+}

@@ -1,0 +1,21 @@
+trait_intrepid = {
+    cost = 2
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_hive_mind"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        army_morale = 0.5
+    }
+    slave_cost = {
+        energy = 100
+    }
+}
