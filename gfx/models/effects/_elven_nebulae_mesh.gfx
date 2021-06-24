@@ -1,0 +1,85 @@
+###################
+## ELVEN NEBULAE ##
+###################
+
+objectTypes = {
+
+	##################
+	## BOWL NEBULAE ##
+	##################
+
+	## NOTE: Bowl nebulae are the giant ones that cover an entire system.
+
+	pdxmesh = {
+		name = "elven_nebula_red_purple_mesh"
+		file = "gfx/models/effects/nebula_8.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "elven_nebula_lights_red_purple.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+
+	pdxmesh = {
+		name = "elven_nebula_pearl_mesh"
+		file = "gfx/models/effects/nebula_8.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "elven_nebula_lights_pearl.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "elven_nebula_green_mesh"
+		file = "gfx/models/effects/nebula_8.mesh"
+
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "elven_nebula_lights_green.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+	###################
+	## FLAT NEBAULAE ##
+	###################
+
+	## NOTE: Flat nebulae are the subdued sort that hang around the ecliptic.
+
+	pdxmesh = {
+		name = "elven_nebula_flat_red1_mesh"
+		file = "gfx/models/effects/nebula_6.mesh"
+	
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "elven_flat_nebula_red.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+	pdxmesh = {
+		name = "elven_nebula_flat_red2_mesh"
+		file = "gfx/models/effects/nebula_5.mesh"
+	
+		meshsettings = {
+			index = 0
+			shader = "PdxMeshAlphaAdditiveAnimateUV"
+			texture_diffuse = "elven_flat_nebula_red.dds"
+			texture_normal = "nonormal.dds"
+			texture_specular = "nospec.dds"
+		}
+	}
+
+}

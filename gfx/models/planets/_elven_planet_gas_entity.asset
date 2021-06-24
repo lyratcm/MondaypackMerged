@@ -1,0 +1,539 @@
+#######################
+## CUSTOM GAS GIANTS ##
+#######################
+
+## ILALATAS - LHUREN - CARAS VALA
+entity = {
+	name = "elven_01_gas_giant_ilalatas"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_ilalatas.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## HELLADE - LHUREN - CARAS VALA
+entity = {
+	name = "elven_01_gas_giant_hellade"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_hellade.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## ÚFANWEA - LHUREN - BRASSENARI
+entity = {
+	name = "elven_01_gas_giant_ufanwea"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_ufanwea.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## TORNANGA - LHUREN - BRASSENARI
+entity = {
+	name = "elven_01_gas_giant_tornanga"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_tornanga.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## TARYA - LHUREN - BRASSENARI
+entity = {
+	name = "elven_01_gas_giant_tarya"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_tarya.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## NESSIMA - LHUREN - BRASSENARI
+entity = {
+	name = "elven_01_gas_giant_nessima"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_nessima.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## HANACONDIL - LHUREN - BRASSENARI
+entity = {
+	name = "elven_01_gas_giant_hanacondil"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_hanacondil.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## FAEL BARAD - LHUREN - AURLUNOR
+entity = {
+	name = "elven_01_gas_giant_faelbarad"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_faelbarad.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## CALENBAR - LHUREN - AURLUNOR
+entity = {
+	name = "elven_01_gas_giant_calenbar"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_calenbar.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## VORONAR - LHUREN - AURLUNOR
+entity = {
+	name = "elven_01_gas_giant_voronar"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_voronar.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## GADOR BAIN - SIDH - DONDENEL
+## drow_fallen_1_3
+entity = {
+	name = "elven_01_gas_giant_gadorbain"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_gadorbain.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## FAELGONDRA - ELVEN - GORTHANUR
+entity = {
+	name = "elven_01_gas_giant_faelgondra"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_faelgondra.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## GWELENDOR - ELVEN - LODORLAS
+## sc_elven_super_1
+entity = {
+	name = "elven_01_gas_giant_gwelendor"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_gwelendor.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## CORELLON ##
+## sc_elven_super_1
+entity = {
+	name = "drow_01_gas_giant_corellon"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_corellon.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## ILHARFIR ##
+entity = {
+	name = "drow_01_gas_giant_ilharfir"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_ilharfir.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## DWENDELIRAN ##
+entity = {
+	name = "drow_01_gas_giant_dwendeliran"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_dwendeliran.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## YAH D'XUS ##
+entity = {
+	name = "drow_01_gas_giant_yahdexus"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_yahdexus.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## ZHENDALARIL ##
+entity = {
+	name = "drow_01_gas_giant_zhendalaril"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_zhendalaril.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## YAH DE'HOUJ ##
+entity = {
+	name = "drow_01_gas_giant_yahdehouj"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_yahdehouj.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## SZANAS ##
+entity = {
+	name = "drow_01_gas_giant_szanas"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_szanas.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## SSHETHEI ##
+entity = {
+	name = "drow_01_gas_giant_sshethei"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "drow_01_gas_giant_sshethei.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## LAERGONDSEL ##
+entity = {
+	name = "elven_01_gas_giant_laergondsel"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_laergondsel.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## DONDENFANG ## 
+entity = {
+	name = "elven_01_gas_giant_dondenfang"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_red.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## ADARMENEL ##
+entity = {
+	name = "elven_01_gas_giant_adarmenel"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_adarmenel.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## FAELOTH ##
+entity = {
+	name = "elven_01_gas_giant_faeloth"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_faeloth.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## DAERNATH - ELVEN - SAMMARAD
+entity = {
+	name = "elven_01_gas_giant_daernath"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_daernath.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+## LANFEAR ##
+entity = {
+	name = "elven_01_gas_giant_lanfear"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_lanfear.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+
+
+entity = {
+	name = "elven_01_gas_giant_cyan"
+	pdxmesh = "planet_no_pole_no_clouds_mesh"
+	
+	meshsettings = {
+	name = "planet_geosphereShape"
+	texture_diffuse = "elven_gas_giant_cyan.dds"
+	texture_normal = "gas_giant_01_normal.dds"
+	texture_specular = "gas_giant_01_specular.dds"
+	}
+	
+	default_state = "idle"	
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		start_event = { trigger_once = yes sound = { soundeffect = "gas_giant_amb_hum" } }
+	}
+	scale = 1.2
+}
+

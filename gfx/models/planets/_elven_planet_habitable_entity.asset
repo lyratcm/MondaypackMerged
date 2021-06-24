@@ -1,0 +1,358 @@
+####################################
+## CITY PLANET TEMPORARY OVERRIDE ##
+####################################
+
+# Lithoid is the most color neutral.
+entity = {
+	name = "elven_01_city_planet_entity"
+	pdxmesh = "planet_clouded_mesh"
+
+	#planet surface texture override	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "city_planet_lithoid_01_diffuse.dds"
+		texture_normal = "city_planet_lithoid_01_normal.dds"
+		texture_specular = "city_planet_lithoid_01_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_smog_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_smog_shadow_01_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+		
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_tropical_1_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+	}
+	
+}
+
+
+######################
+## CUSTOM HABITABLE ##
+######################
+
+## CELLICA
+entity = {
+	name = "elven_planet_cellica_entity"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "elven_01_cellica_diffuse.dds"
+		texture_normal = "elven_01_cellica_normal.dds"
+		texture_specular = "elven_01_cellica_specular.dds"
+		shader = "PdxMeshPlanetEmissive"
+	}
+	
+	##cloud texture override
+	# meshsettings = {
+	# 	name = "clouds_geosphereShape"
+	# 	texture_diffuse = "clouds_thin_diffuse.dds"
+	# 	texture_normal = "clouds_thin_normal.dds"
+	# 	texture_specular = "clouds_thin_specular.dds"
+	# }
+	
+	##cloud shadow texture override
+	# meshsettings = {
+	# 	name = "clouds_shadow_geosphereShape"
+	# 	texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+	# 	texture_normal = "nonormal.dds"
+	# 	texture_specular = "nospec.dds"
+	# }
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+entity = {
+    name = "elven_great_firewall_entity"
+    #pdxmesh = "shielded_planet_mesh"
+    pdxmesh = "elven_great_firewall_mesh"
+
+    locator = { name = "Center"	position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	attach = { Center = "elven_ocean_2_lhumar" }
+
+    default_state = "idle"
+    state = { name = "idle" animation = "idle" time_offset = { 0 100 } #animation_speed = 0.05
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+        start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+        # event = { time = 0.0 node = "Pole1" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes }
+        # event = { time = 0.0 node = "Pole2" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+    }
+}
+
+## LHÛMAR LHUREN AURLANOR -- USED FOR LASARIE IN CARAS VALA NOW!!!
+entity = {
+	name = "elven_shielded_test"
+	#pdxmesh = "shielded_planet_mesh"
+	pdxmesh = "elven_great_firewall_mesh"
+	
+	locator = { name = "Center"	position = { 0 0 0 } rotation = { 0 0 0 } }
+	
+	attach = { Center = "elven_ocean_2_lhumar" }
+	
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } #animation_speed = 0.05
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+		# event = { time = 0.0 node = "Pole1" particle = "portal_effect_particle" keep_particle = yes trigger_once = yes }
+		# event = { time = 0.0 node = "Pole2" particle = "cloud_entity_center_particle" keep_particle = yes trigger_once = yes }
+	}
+	
+	
+}
+
+## LHÛMAR LHUREN AURLANOR -- USED FOR LASARIE IN CARAS VALA NOW!!!
+entity = {
+	name = "elven_ocean_2_lhumar"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "elven_ocean_2_diffuse.dds"
+		texture_normal = "elven_ocean_2_normal.dds"
+		texture_specular = "elven_ocean_2_specular.dds"
+		#shader = "PdxMeshTerra"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+## XENDLYN ##
+entity = {
+	name = "drow_01_ocean_xendlyn"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "drow_01_ocean_glow1_diffuse.dds"
+		texture_normal = "drow_01_ocean_glow1_normal.dds"
+		texture_specular = "drow_01_ocean_glow1_specular.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+## YATHRIN ##
+entity = {
+	name = "drow_01_nuked_yathrin"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "gaia_01_diffuse.dds"
+		texture_normal = "tropical_03_normal.dds"
+		texture_specular = "tropical_03_spec.dds"
+		shader = "PdxMeshTerra"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "nuked_clouds_medium_diffuse.dds"
+		texture_normal = "nuked_clouds_medium_normal.dds"
+		texture_specular = "nuked_clouds_medium_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_nuke_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+## ELEIA ##
+entity = {
+	name = "elven_01_continental_eleia"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "elven_01_continental_eleia.dds"
+		texture_normal = "continental_01_normals.dds"
+		texture_specular = "continental_01_spec.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_1_diffuse.dds"
+		texture_normal = "poles_1_normal.dds"
+		texture_specular = "poles_1_specular.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+### ENERISIA ###
+entity = {
+	name = "elven_01_tropical_enerisia"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "elven_01_tropical_enerisia.dds"
+		texture_normal = "elven_tropical_01_normal.dds"
+		texture_specular = "elven_tropical_01_specular.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_thin_diffuse.dds"
+		texture_normal = "clouds_thin_normal.dds"
+		texture_specular = "clouds_thin_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_thin_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+
+## ARANOST ##
+entity = {
+	name = "elven_01_gaia_aranost"
+	pdxmesh = "planet_clouded_mesh"
+	
+	meshsettings = {
+		name = "planet_geosphereShape"
+		texture_diffuse = "elven_01_gaia_aranost_diffuse.dds"
+		texture_normal = "elven_01_gaia_aranost_normal.dds"
+		texture_specular = "elven_01_gaia_aranost_specular.dds"
+	}
+	
+	##pole texture override
+	meshsettings = {
+		name = "polesShape"
+		texture_diffuse = "poles_1_diffuse.dds"
+		texture_normal = "poles_1_normal.dds"
+		texture_specular = "poles_1_specular.dds"
+	}
+	
+	##cloud texture override
+	meshsettings = {
+		name = "clouds_geosphereShape"
+		texture_diffuse = "clouds_medium_diffuse.dds"
+		texture_normal = "clouds_medium_normal.dds"
+		texture_specular = "clouds_medium_specular.dds"
+	}
+	
+	##cloud shadow texture override
+	meshsettings = {
+		name = "clouds_shadow_geosphereShape"
+		texture_diffuse = "clouds_medium_shadow_diffuse.dds"
+		texture_normal = "nonormal.dds"
+		texture_specular = "nospec.dds"
+	}
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
+	}
+}
+

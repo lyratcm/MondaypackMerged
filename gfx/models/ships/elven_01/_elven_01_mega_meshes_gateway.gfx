@@ -1,0 +1,42 @@
+####################
+## MEGASTRUCTURES ##
+####################
+
+objectTypes = {
+
+	#############
+	## GATEWAY ##
+	#############
+	
+	##############################
+	## WORMHOLE/GATEWAY STATION ##
+	##############################
+	
+	pdxmesh = {
+		name = "elven_01_wormhole_station_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_wormhole_station.mesh"
+		scale = 8.0
+		
+		animation = { id = "idle" type = "elven_01_wormhole_station_idle_animation" }
+		animation = { id = "death" type = "elven_01_wormhole_station_death_animation" }
+	}
+	
+	# CONSTRUCTION MESH WITH NO ANIMS #
+	pdxmesh = {
+		name = "elven_01_wormhole_station_construction_mesh"
+		file = "gfx/models/ships/elven_01/elven_01_wormhole_station_static.mesh"
+		scale = 8.0
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

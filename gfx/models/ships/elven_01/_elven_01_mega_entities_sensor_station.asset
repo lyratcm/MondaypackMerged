@@ -1,0 +1,250 @@
+##########################
+## ELVEN SENSOR STATION ##
+##########################
+
+@sensor_scale = 0.8
+@animation_speed = 0.06
+
+#######################
+#### STATION PARTS ####
+#######################
+
+#############
+## PHASE 1 ##
+#############
+
+entity = {
+	name = "elven_01_sensor_station_phase1_entity"
+	pdxmesh = "elven_01_sensor_station_phase1_mesh"
+	scale = @sensor_scale
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_dome" } }
+	}
+}
+
+#############
+## PHASE 2 ##
+#############
+
+entity = {
+	name = "elven_01_sensor_station_phase2_entity"
+	pdxmesh = "elven_01_sensor_station_phase2_mesh"
+	scale = @sensor_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_spire" } }
+	}
+}
+
+#############
+## PHASE 3 ##
+#############
+
+entity = {
+	name = "elven_01_sensor_station_phase3_top_entity"
+	pdxmesh = "elven_01_sensor_station_phase3_top_mesh"
+	scale = @sensor_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_antennas" } }
+	}
+}
+
+entity = {
+	name = "elven_01_sensor_station_phase3_bottom_entity"
+	pdxmesh = "elven_01_sensor_station_phase3_bottom_mesh"
+	scale = @sensor_scale
+}
+
+#############
+## PHASE 4 ##
+#############
+
+entity = {
+	name = "elven_01_sensor_station_phase4_glow_entity"
+	pdxmesh = "elven_01_sensor_station_phase4_glow_mesh"
+	scale = @sensor_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "spy_orb_hum_ring" } }
+	}
+}
+
+entity = {
+	name = "elven_01_sensor_station_phase4_top_entity"
+	pdxmesh = "elven_01_sensor_station_phase4_top_mesh"
+	scale = @sensor_scale
+}
+
+entity = {
+	name = "elven_01_sensor_station_phase4_mid_entity"
+	pdxmesh = "elven_01_sensor_station_phase4_mid_mesh"
+	scale = @sensor_scale
+}
+
+entity = {
+	name = "elven_01_sensor_station_phase4_bottom_entity"
+	pdxmesh = "elven_01_sensor_station_phase4_bottom_mesh"
+	scale = @sensor_scale
+}
+
+###############################
+#### CONSTRUCTION ENTITIES ####
+###############################
+
+## PHASE 1 ##
+entity = {
+	name = "elven_01_spyorb_phase_01_construction_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	attach = { "root" = "elven_01_sensor_station_phase1_entity" }
+	
+	cull_radius = 500
+}
+
+## PHASE 2 ##
+entity = {
+	name = "elven_01_spyorb_phase_02_construction_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	attach = { "root" = "elven_01_sensor_station_phase2_entity" }
+
+	cull_radius = 500
+}
+
+## PHASE 3 ##
+entity = {
+	name = "elven_01_spyorb_phase_03_construction_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	attach = { "root" = "elven_01_sensor_station_phase3_top_entity" }
+	attach = { "root" = "elven_01_sensor_station_phase3_bottom_entity" }
+
+	cull_radius = 500
+}
+
+## PHASE 4 ##
+entity = {
+	name = "elven_01_spyorb_phase_04_construction_entity"
+	locator = { name = "root"	position = { 0 	0  0 } }
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	attach = { "root" = "elven_01_sensor_station_phase4_glow_entity" }
+	attach = { "root" = "elven_01_sensor_station_phase4_top_entity" }
+	attach = { "root" = "elven_01_sensor_station_phase4_mid_entity" }
+	attach = { "root" = "elven_01_sensor_station_phase4_bottom_entity" }
+
+	cull_radius = 500
+}
+
+##################################
+### COMPLETED STATION ENTITIES ###
+##################################
+
+entity = {
+	name = "elven_01_spyorb_phase_01_entity"
+	pdxmesh = "elven_01_sensor_station_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = @animation_speed
+	}
+	
+	scale = 1.0
+	
+	attach = { "central" = "elven_01_sensor_station_phase1_entity" }
+}
+
+entity = {
+	name = "elven_01_spyorb_phase_02_entity"
+	pdxmesh = "elven_01_sensor_station_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = @animation_speed
+	}
+	
+	scale = 1.0
+	
+	attach = { "central" = "elven_01_sensor_station_phase1_entity" }
+	attach = { "central" = "elven_01_sensor_station_phase2_entity" }
+}
+
+entity = {
+	name = "elven_01_spyorb_phase_03_entity"
+	pdxmesh = "elven_01_sensor_station_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = @animation_speed
+	}
+	
+	scale = 1.0
+	
+	attach = { "central" = "elven_01_sensor_station_phase1_entity" }
+	attach = { "central" = "elven_01_sensor_station_phase2_entity" }
+	attach = { "top_leaves" = "elven_01_sensor_station_phase3_top_entity" }
+	attach = { "mid_leaves" = "elven_01_sensor_station_phase3_bottom_entity" }
+	
+}
+
+entity = {
+	name = "elven_01_spyorb_phase_04_entity"
+	pdxmesh = "elven_01_sensor_station_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = @animation_speed
+	}
+	
+	scale = 1.0
+	
+	attach = { "central" = "elven_01_sensor_station_phase1_entity" }
+	attach = { "central" = "elven_01_sensor_station_phase2_entity" }
+	attach = { "top_leaves" = "elven_01_sensor_station_phase3_top_entity" }
+	attach = { "mid_leaves" = "elven_01_sensor_station_phase3_bottom_entity" }
+	attach = { "central" = "elven_01_sensor_station_phase4_glow_entity" }
+	attach = { "small_leaves1" = "elven_01_sensor_station_phase4_top_entity" }
+	attach = { "small_leaves2" = "elven_01_sensor_station_phase4_mid_entity" }
+	attach = { "small_leaves3" = "elven_01_sensor_station_phase4_bottom_entity" }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

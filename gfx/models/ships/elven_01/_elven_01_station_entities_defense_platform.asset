@@ -1,0 +1,67 @@
+@defense_platform_scale = 1.2
+@defense_platform_gamescale = 15.0
+
+@defense_platform_weapon_scale = 1.0
+
+######################
+## DEFENSE PLATFORM ##
+######################
+
+entity = {
+	name = "elven_01_military_station_small_entity"
+	pdxmesh = "elven_01_defense_platform_mesh"
+		default_state = "idle"
+		state = { name = "idle" state_time = 5
+			event = { trigger_once = yes sound = { soundeffect = "defense_station_idle_hum" } }
+		}
+		state = { name = "death" state_time = 2 looping = no
+			event = { time = 0.0 node = "explosion_1" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 0.5 node = "explosion_2" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			event = { time = 1.5 node = "explosion_3" particle = "ship_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_small" } }
+			
+			event = { time = 1.9 particle = "medium_station_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = "station_explosion_large" } }
+		}		
+		
+	scale = @defense_platform_scale
+	
+	game_data = {
+		size = @defense_platform_gamescale
+	}
+}
+
+## CONSTRUCTION ##
+
+entity = {
+	name = "elven_01_military_station_small_construction_entity"
+	pdxmesh = "elven_01_defense_platform_mesh"	
+		default_state = "idle"
+		state = { name = "idle" state_time = 5
+			event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+		}
+	
+	scale = @defense_platform_scale
+}
+
+######################
+## DEFENSE SECTIONS ##
+######################
+
+## NOTE: strike craft point to the large_gun_01 locator!!
+
+entity = {
+	name = "elven_01_military_station_section_heavy_entity"
+	pdxmesh = "elven_01_defense_platform_weapons_mesh"	
+	scale = @defense_platform_weapon_scale
+}
+
+entity = {
+	name = "elven_01_military_station_section_medium_entity"
+	pdxmesh = "elven_01_defense_platform_weapons_mesh"	
+	scale = @defense_platform_weapon_scale
+}
+
+entity = {
+	name = "elven_01_military_station_section_light_entity"
+	pdxmesh = "elven_01_defense_platform_weapons_mesh"	
+	scale = @defense_platform_weapon_scale
+}
