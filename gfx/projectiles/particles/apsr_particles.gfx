@@ -1,8 +1,0 @@
-objectTypes = {
-	pdxparticle = {
-		name = "apsr_planet_aura_effect"
-		type = "apsr_planet_aura"
-		
-		scale = 1.0
-	}			
-}
