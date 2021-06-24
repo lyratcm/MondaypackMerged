@@ -107,8 +107,8 @@ spriteTypes = {
 	###_[è­è²ÐÇÍ¼]
 	#_necron
 	spriteType = {
-		name = "GFX_evt_z_fw_r_co_necron_1"
-		texturefile = "gfx/event_pictures/z_fw_r_co_necron_1.dds"
+		name = "GFX_evt_z_fw_r_cht_co_necron_1"
+		texturefile = "gfx/event_pictures/z_fw_r_cht_co_necron_1.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}

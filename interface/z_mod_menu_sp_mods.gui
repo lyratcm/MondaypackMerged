@@ -3,7 +3,7 @@
 #_[第1排]
 #_[第2排]
 #_[第3排]
-#_[第4排]
+#_[第4排]	iisc/ACE
 #_[事件windows]
 
 @sp_mods_hori_1 = 12
@@ -551,7 +551,7 @@ guiTypes = {
 	}
 
 
-	###_[第4排]	################################################
+	###_[第4排]	iisc/ACE	################################################
 	#_	gui_z_mm_sp_option_4
 	containerWindowType = {
 		name = "gui_z_mm_sp_option_4"
@@ -559,23 +559,23 @@ guiTypes = {
 		size = { width = 564 height = 94 }
 		moveable = no
 		
-		#_UAP
+		#_[iisc]
 		effectButtonType = {
-			name = "gui_z_mm_sp_mods_uap_1"
+			name = "gui_z_mm_sp_mods_iisc_1"
 			position = { x = @sp_mods_hori_1 y = 0 }
-			spriteType = "GFX_z_mm_sp_mods_uap_1"
+			spriteType = "GFX_z_mm_sp_mods_iisc_1"
 			scale = 1
-			effect = "z_mm_sp_mods_uap_1"
+			effect = "z_mm_sp_mods_iisc_1"
 			orientation = upper_left
 			clicksound = interface
 			oversound = mouse_over
 		}
 		effectButtonType = {
-			name = "gui_z_mm_sp_mods_uap_2"
+			name = "gui_z_mm_sp_mods_iisc_2"
 			position = { x = @sp_mods_hori_1 y = 0 }
-			spriteType = "GFX_z_mm_sp_mods_uap_2"
+			spriteType = "GFX_z_mm_sp_mods_iisc_2"
 			scale = 1
-			effect = "z_mm_sp_mods_uap_2"
+			effect = "z_mm_sp_mods_iisc_2"
 			orientation = upper_left
 			clicksound = interface
 			oversound = mouse_over
@@ -630,7 +630,7 @@ guiTypes = {
 			clicksound = interface
 			oversound = mouse_over
 		}
-		#_Aggresive Crisis E
+		#_[ACE]
 		effectButtonType = {
 			name = "gui_z_mm_sp_mods_ace_1"
 			position = { x = @sp_mods_hori_4 y = 0 }
@@ -947,24 +947,6 @@ guiTypes = {
 		moveable = no
 		orientation = upper_left
 		position = { x = 50 y = 50 }
-        
-		#_sp_mod按钮slider覆盖
-		containerWindowType = {
-			name = "block"
-			size = { width = 1286 height = 704 }
-			moveable = no
-			orientation = upper_left
-			position = { x = 0 y = 70 }
-			background = { 
-				name = "bg"
-				position = { x = 0 y = 0 }
-				orientation = upper_left
-				spriteType = "GFX_z_modmenu_window_sub_bg_1"
-				alwaystransparent = no
-			}
-		}
-        
-		
 		
 		
 		containerWindowType = {
@@ -1074,7 +1056,7 @@ guiTypes = {
 				name = "option_list"
 				orientation = upper_left
 				position = { x = 31 y = 355 } 
-				size = { x = 540 y = 355 }
+				size = { x = 537 y = 355 }
 				scrollbarType = "z_mm_listbox_slider_sub"
 				background = ""
 			}

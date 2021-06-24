@@ -20,18 +20,23 @@ guiTypes = {
 		### LEAVE SYSTEM WINDOW
 		containerWindowType = {
 			name = "leave_system_window"
-			size = { width = 166 height = 114 }
-			hide_position = { x = 0 y = 0 }
-			show_position = { x = 0 y = -95 }
+			size = { width = 500 height = 60 }
+			hide_position = { x = 0 y = 60 }
+			show_position = { x = 0 y = -8 }
 			animation_type = decelerated
 			animation_time = 500
 			orientation = center_down
-			origo = center_up
+			origo = center_down
+			clipping = no
+			background = {
+				name = "background"
+				spriteType = "GFX_invisible"
+			}
 			###	BACKGROUND FOR AVOIDED SYSTEMS
 			iconType = {
 				name = "starsystem_panel_avoid_bg"
 				spriteType = "GFX_starsystem_panel_avoid"
-				position = { x = 0 y = 62 }
+				position = { x = 0 y = 35 }
 				alwaysTransparent = yes
 				orientation = center_up
 				centerPosition = yes
@@ -39,27 +44,45 @@ guiTypes = {
 			iconType = {
 				name = "starsystem_panel"
 				spriteType = "GFX_starsystem_panel"
-				position = { x = 0 y = 62 }
+				position = { x = 0 y = 35 }
 				alwaysTransparent = yes
 				orientation = center_up
 				centerPosition = yes
+			}
+			iconType = {
+				name = "paused_bar_bg"
+				spriteType = "GFX_ui_system_paused"
+				position = { x = 0 y = 35 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+			instantTextBoxType = {
+				name = "paused"
+				font = "large_title_font"
+				position = { x = 0 y = 0 }
+				text = "GAME_SPEED_0"
+				maxWidth = 1
+				maxHeight = 1
+				fixedSize = yes
+				alwaysTransparent = yes
 			}
 			### BACKGROUND FOR CLAIMS BUTTON VISIBLE WHEN ENABLED
 			iconType = {
 				name = "claims_button_bg"
 				spriteType = "GFX_starsystem_panel_left"
-				position = { x = -205 y = 38 }
+				position = { x = -38 y = 11 }
 			}
 			### BACKGROUND FOR AVOID SYSTEM BUTTON VISIBLE WHEN ENABLED
 			iconType = {
 				name = "restricted_button_bg"
 				spriteType = "GFX_starsystem_panel_right"
-				position = { x = -112 y = 46 }
+				position = { x = 55 y = 19 }
 			}
 			buttonType = {
 				name = "flag_button"
 				quadTextureSprite = "GFX_empire_flag_64"
-				position = { x = -257 y = 27 }
+				position = { x = -257 y = 0 } # 27
 				orientation = center_up
 				clicksound = interface
 				oversound = no_sound
@@ -68,37 +91,17 @@ guiTypes = {
 				name = "button"
 				quadTextureSprite = "GFX_open_galaxy_map"
 				orientation = center_up
-				position = { x = 194 y = 33 }
+				position = { x = 194 y = 6 }
 				pdx_tooltip = "TOOLTIP_LEAVE_SYSTEM"
 				pdx_tooltip_anchor_offset = { x = 0 y = @tt_offset_y }
 				pdx_tooltip_anchor_orientation = lower_left
 				clicksound = ui_galaxy_map_open
 				oversound = mouse_over
 			}
-			iconType = {
-				name = "paused_bar_bg"
-				spriteType = "GFX_paused_bar_bg"
-				position = { x = 0 y = 19 }
-				alwaysTransparent = yes
-				orientation = center_up
-				centerPosition = yes
-			}
-			instantTextBoxType = {
-				name = "paused"
-				font = "large_title_font"
-				position = { x = -200 y = 0 }
-				text = "GAME_SPEED_0"
-				maxWidth = 400
-				maxHeight = 50
-				format = center
-				orientation = center_up
-				alwaysTransparent = yes
-				text_color_code = "H"
-			}
 			instantTextBoxType = {
 				name = "system_name"
 				font = "large_title_font_28"
-				position = { x = -195 y = 38 }
+				position = { x = -195 y = 11 }
 				text = "Systemname"
 				maxWidth = 390
 				maxHeight = 50
@@ -111,7 +114,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "system_type"
 				font = "cg_16b"
-				position = { x = -195 y = 65 }
+				position = { x = -195 y = 37 }
 				text = "Mining System"
 				maxWidth = 390
 				maxHeight = 50
@@ -124,7 +127,7 @@ guiTypes = {
 			buttonType = {
 				name = "system_rename_button"
 				spriteType = "GFX_invisible"
-				position = { x = -163 y = 40 }
+				position = { x = -163 y = 13 }
 				size = { x = 330 y = 45 }
 				orientation = center_up
 				pdx_tooltip = "RENAME_SYSTEM_TOOLTIP"
@@ -133,38 +136,58 @@ guiTypes = {
 			iconType = {
 				name = "environmental_effects_icon"
 				spriteType = "GFX_system_hazards_icon"
-				position = { x = 252 y = 49 }
+				position = { x = 419 y = 22 }
 			}
 			buttonType = {
 				name = "claim_system_button"
 				quadTextureSprite = "GFX_claim_system_icon"
-				position = { x = -204 y = 43 }
+				position = { x = -37 y = 16 }
 			}
 			buttonType = {
 				name = "restricted_system_button"
 				quadTextureSprite = "GFX_restricted_system_icon"
-				position = { x = -112 y = 43 }
+				position = { x = 55 y = 16 }
 			}
 		}
 		### LEAVE GALAXY WINDOW
 		containerWindowType = {
 			name = "leave_galaxy_window"
-			size = { width = 166 height = 114 }
-			hide_position = { x = -73 y = 0 }
-			show_position = { x = -73 y = -85 }
+			size = { width = 370 height = 49 }
+			hide_position = { x = 0 y = 49 }
+			show_position = { x = 0 y = -46 }
 			animation_type = decelerated
 			animation_time = 500
 			orientation = center_down
+			origo = center_down
 			iconType = {
 				name = "system_button_panel"
-				spriteType = "GFX_system_button_panel"
-				position = { x = -130 y = 35 }
+				spriteType = "GFX_ui_galaxy_panel"
+				position = { x = 0 y = 62 }
+				orientation = center_up
+				centerPosition = yes
+			}
+			iconType = {
+				name = "paused_bar_bg"
+				spriteType = "GFX_ui_galaxy_paused"
+				position = { x = 0 y = 62 }
+				alwaysTransparent = yes
+				orientation = center_up
+				centerPosition = yes
+			}
+			instantTextBoxType = {
+				name = "paused"
+				font = "large_title_font"
+				position = { x = 0 y = 0 }
+				text = "GAME_SPEED_0"
+				maxWidth = 1
+				maxHeight = 1
+				fixedSize = yes
 				alwaysTransparent = yes
 			}
 			buttonType = {
 				name = "button"
 				quadTextureSprite = "GFX_button_animated_265_34"
-				position = { x = -70 y = 30 }
+				position = { x = 40 y = 33 }
 				text = "LEAVE_GALAXY"
 				buttonFont = "cg_16b"
 				pdx_tooltip = "TOOLTIP_LEAVE_GALAXY"
@@ -172,23 +195,6 @@ guiTypes = {
 				pdx_tooltip_anchor_orientation = lower_left
 				clicksound = ui_galaxy_map_close
 				oversound = mouse_over
-			}
-			iconType = {
-				name = "paused_bar_bg"
-				spriteType = "GFX_paused_bar_bg"
-				position = { x = -87 y = -1 }
-				alwaysTransparent = yes
-			}
-			instantTextBoxType = {
-				name = "paused"
-				font = "large_title_font"
-				position = { x = -127 y = -3 }
-				text = "GAME_SPEED_0"
-				maxWidth = 400
-				maxHeight = 50
-				format = center
-				alwaysTransparent = yes
-				text_color_code = "H"
 			}
 		}
 		## Claims Management

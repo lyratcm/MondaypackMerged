@@ -267,7 +267,7 @@ guiTypes = {
 			clicksound = interface
 			oversound = mouse_over
 		}
-		#_框架设置_无尽整合
+		#_框架设置_col
 		effectButtonType = {
 			name = "gui_z_mm_framework_button_2"
 			scale = 1
@@ -791,6 +791,17 @@ guiTypes = {
 			quadTextureSprite = "gfx_game_logo"
 			orientation = "UPPER_LEFT"
 		}
+		#_[z_fw]
+		instantTextBoxType = {
+			name = "z_fw_subtitle"
+			font = "large_title_font"
+			text = "z_ic_tips_subtitle"
+			position = { x = 440 y = 246 }		#_	-38
+			maxWidth = 300
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
 		containerWindowType = {
 			id = "press_to_continue"
 			name = "press_to_continue"
@@ -851,7 +862,7 @@ guiTypes = {
 				pdx_tooltip = ""
 				format = left
 				oversound = mouse_over
-				web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2029367962"
+				web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2409618500"
 			}
 			#_版本号
 			buttonType = {

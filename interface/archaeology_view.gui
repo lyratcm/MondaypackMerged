@@ -11,10 +11,12 @@ guiTypes = {
 		origo = center
 		moveable = yes
 		clipping = no
+		click_to_front = yes
 		background = {
 			name = "background"
 			quadTextureSprite = "GFX_tile_large_center_bg"
 		}
+		# Header ----------------------------------------------------------------
 		iconType = {
 			name = "hex_bg_left"
 			position = { x = -79 y = 22 }
@@ -454,7 +456,7 @@ guiTypes = {
 			iconType = {
 				name = "difficulty_type_icon"
 				position = { x = 5 y = 27 }
-				spriteType = "GFX_difficulty_type"
+				spriteType = "GFX_archaeology_difficulty_normal"
 				scale = 0.74
 			}
 			instantTextBoxType = {
@@ -664,7 +666,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "event_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 653 height = 380 }	# might be resized in code
+		size = { width = 653 height = 245 }	# might be resized in code
 		instantTextBoxType = {
 			name = "name"
 			font = "malgun_goth_24"

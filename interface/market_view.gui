@@ -112,9 +112,10 @@ guiTypes = {
 			moveable = no			position = { x = 0 y = 0 }
 			containerWindowType = {
 				name = "trade_fee_box"
-				size = { width = 280 height = 36 }
-				position = { x = -295 y = 24 }
+				size = { width = 300 height = 36 }
+				position = { x = -5 y = 24 }
 				orientation = upper_right
+				origo = upper_right
 				clipping = no
 				background = {
 					name = "background"
@@ -131,7 +132,7 @@ guiTypes = {
 					font = "malgun_goth_24"
 					position = { x = 55 y = 5 }
 					text = "MARKET_TRADE_FEE_HEADER"
-					maxWidth = 170
+					maxWidth = 190
 					maxHeight = 24
 					format = center
 					vertical_alignment = center
@@ -140,7 +141,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "trade_fee_value"
 					font = "malgun_goth_24"
-					position = { x = 230 y = 5 }
+					position = { x = 250 y = 5 }
 					maxWidth = 46
 					maxHeight = 50
 					fixedSize = yes
@@ -324,12 +325,21 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 			containerWindowType = {
-				name = "frame_resources"
+				name = "resources_frame"
 				size = { width = 520 height = 440 }
 				position = { x = 35 y = 425 }
 				background = {
-					name = "frame_resources"
+					name = "resources_frame"
 					quadTextureSprite = "GFX_planet_bg_tile_frame"
+				}
+				containerWindowType = {
+					name = "resources_background"
+					size = { width = -5 height = -5 }
+					position = { x = 5 y = 5 }
+					background = {
+						name = "resources_background"
+						quadTextureSprite = "GFX_dark_area_cut_light"
+					}
 				}
 			}
 			containerWindowType = {

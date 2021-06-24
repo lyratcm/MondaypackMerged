@@ -1,5 +1,6 @@
 #_[wsg/azl]
 #_[giga]
+#_[三蹦]
 
 
 sectors_others_group = {
@@ -28,6 +29,8 @@ sectors_others_group = {
 		sr_psionic_sublimate
 		ehof_sr_negative_mass
 		ehof_sr_sentient_metal
+		#_[三蹦]
+		honkai648_energy
 	}
 	localization = {
 		"RESOURCE_GROUP_BALANCE_ONLY" = default

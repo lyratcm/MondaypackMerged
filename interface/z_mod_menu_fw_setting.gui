@@ -7,22 +7,7 @@ guiTypes = {
 		moveable = no
 		orientation = upper_left
 		position = { x = 50 y = 50 }
-        
-		#_sp_mod按钮slider覆盖
-		containerWindowType = {
-			name = "block"
-			size = { width = 1286 height = 704 }
-			moveable = no
-			orientation = upper_left
-			position = { x = 0 y = 70 }
-			background = { 
-				name = "bg"
-				position = { x = 0 y = 0 }
-				orientation = upper_left
-				spriteType = "GFX_z_modmenu_window_sub_bg_1"
-				alwaystransparent = no
-			}
-		}
+		
         
 		###_top	#########################################################################
 		#_返回
@@ -74,7 +59,7 @@ guiTypes = {
 				name = "option_list"
 				orientation = upper_left
 				position = { x = 32 y = 40 } 
-				size = { x = 540 y = 680 }
+				size = { x = 537 y = 680 }
 				scrollbarType = "z_mm_listbox_slider_sub"
 				background = ""
 			}

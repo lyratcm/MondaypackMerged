@@ -8,39 +8,7 @@ guiTypes = {
 		moveable = no
 		orientation = upper_left
 		position = { x = 45 y = 15 }
-        
-		#_title
-	#	instantTextBoxType = {
-	#		name = "gui_z_mm_1"
-	#		position = { x = 16 y = 48 }
-	#		textureFile = ""
-	#		font = "cg_16b"
-	#		borderSize = {x = 0 y = 0}
-	#		text = "z_mm_evt_guide_name"
-	#		maxWidth = 377
-	#		maxHeight = 17
-	#		fixedSize = yes
-	#		format = left
-	#	}
-        
-		#_sp_mod按钮slider覆盖	<位置与其他略有不同>
-		containerWindowType = {
-			name = "block"
-			size = { width = 1286 height = 704 }
-			moveable = no
-			orientation = upper_left
-			position = { x = 5 y = 105 }
-			background = { 
-				name = "bg"
-				position = { x = 0 y = 0 }
-				orientation = upper_left
-				spriteType = "GFX_z_modmenu_window_sub_bg_1"
-				alwaystransparent = no
-			}
-		}
-	
-	
-	
+		
 	
         background = {
             name = "bg"

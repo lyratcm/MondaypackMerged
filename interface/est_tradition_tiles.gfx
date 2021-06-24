@@ -1,0 +1,158 @@
+####################################################################
+### Tradition Related Graphics Which Is Not The Icons Themselves ###
+####################################################################
+
+### Adopter Tradition Category ###
+spriteTypes = {
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_academy"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_academy.dds"
+	}
+		
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_aesthetics"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_aesthetics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_commerce"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_commerce.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_faith"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_faith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_industry"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_militarism"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_militarism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_adopted_tradition_category_bg_est_natural"
+		textureFile = "gfx/interface/traditions/adopted_tradition_category_bg_est_natural.dds"
+	}
+
+}
+
+### Tradition Hex ###
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_academy"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_academy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_aesthetics"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_aesthetics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_commerce"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_commerce.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_faith"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_faith.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_industry"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_industry.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_militarism"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_militarism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_tradition_hex_bg_est_natural"
+		textureFile = "gfx/interface/traditions/tradition_hex_bg_est_natural.dds"
+	}
+
+}
+
+### Tradition Categroy Tile ###
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_academy"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_academy.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_aesthetics"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_aesthetics.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_commerce"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_commerce.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_faith"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_faith.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_industry"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_industry.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_militarism"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_militarism.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+		
+	corneredTileSpriteType = {
+		name = "GFX_tradition_category_tile_est_natural"
+		textureFile = "gfx/interface/tiles/tradition_category_tile_est_natural.dds"
+		borderSize = { x=140 y=140 }
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+	
+}
+
+### Tradition Arrows ###
+spriteTypes = {
+	spriteType = {
+		name = "GFX_arrow_est_left"
+		textureFile = "gfx/interface/traditions/arrow_est_left.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arrow_est_right"
+		textureFile = "gfx/interface/traditions/arrow_est_right.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arrow_est_right_long"
+		textureFile = "gfx/interface/traditions/arrow_est_right_long.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_arrow_est_split_wide"
+		textureFile = "gfx/interface/traditions/arrow_est_split_wide.dds"
+	}
+}

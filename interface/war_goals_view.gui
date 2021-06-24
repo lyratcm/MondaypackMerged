@@ -295,15 +295,15 @@ guiTypes = {
 					iconType = {
 						name = "icon"
 						spriteType = "GFX_diplomacy_opinion"
-						position = { x = 3 y = 4 }
+						position = { x = 2 y = 2 }
 						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "label"
 						font = "cg_16b"
-						maxWidth = 60
-						position = { x = 25 y = 7 }
-						format = right
+						maxWidth = 94
+						position = { x = 1 y = 7 }
+						format = center
 						alwaysTransparent = yes
 					}
 				}

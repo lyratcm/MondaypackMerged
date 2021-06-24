@@ -76,23 +76,23 @@ spriteTypes = {
 
 
 
-	###_[修正]	####################################################
-	#_通用modifier
+	###_[修正]	通用/资源储存/怒/战争/vl	####################################################
+	#_[通用]
 	spriteType = {
 		name = "GFX_z_fw_mod_normal"
 		texturefile = "gfx/interface/icons/modifiers/z_fw_normal.dds"
 	}
-	#_资源储存
+	#_[资源储存]
 	spriteType = {
 		name = "GFX_z_fw_mod_res_stock"
 		texturefile = "gfx/interface/icons/modifiers/z_fw_mod_res_stock.dds"
 	}
-	#_modifier_怒
+	#_[怒]
 	spriteType = {
 		name = "GFX_z_fw_mod_fury"
 		texturefile = "gfx/interface/icons/modifiers/z_fw_mod_fury.dds"
 	}
-	#_z_fw_core_battle
+	#_[战争]
 	spriteType = {
 		name = "GFX_z_fw_core_battle"
 		texturefile = "gfx/interface/icons/modifiers/z_fw_core_battle.dds"
@@ -104,6 +104,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_z_fw_core_battle_ptw"
 		texturefile = "gfx/interface/icons/modifiers/z_fw_core_battle_ptw.dds"
+	}
+	#_[vl]
+	spriteType = {#_造船
+		name = "GFX_z_fw_mod_cntr_vl_navy_cost"
+		texturefile = "gfx/interface/icons/modifiers/z_fw_mod_cntr_vl_navy_cost.dds"
 	}
 	
 	
@@ -150,7 +155,7 @@ spriteTypes = {
 	
 	
 	
-	###_[z_fw_relic]	##########################################################
+	###_[z_fw_relic]	cht_emp	##########################################################
 	#_cheat-celestial orrey
 	SpriteType = {
 		name = "GFX_z_fw_r_celestial_orrey"
@@ -237,13 +242,13 @@ spriteTypes = {
 	#_evt
 	spriteType = {
 		name = "GFX_evt_z_fw_r_cht_hyper"
-		texturefile = "gfx/event_pictures/z_fw_r_co_necron_1.dds"
+		texturefile = "gfx/event_pictures/z_fw_r_cht_co_necron_1.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
 	spriteType = {
 		name = "GFX_evt_z_fw_r_cht_hyper_doom"
-		texturefile = "gfx/event_pictures/z_fw_r_co_necron_1.dds"
+		texturefile = "gfx/event_pictures/z_fw_r_cht_co_necron_1.dds"
 		masking_texture = "gfx/interface/situation_log/event_mask.dds"
 		alwaystransparent = yes
 	}
@@ -325,6 +330,37 @@ spriteTypes = {
 			animationdelay = 0.5			# in seconds
 			animationblendmode = "add"      #add, multiply, overlay
 			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	###_[cht_emp]	#############################
+	SpriteType = {
+		name = "GFX_z_fw_r_cht_emp"
+		texturefile = "gfx/interface/icons/relics/z_fw_r_cht_emp.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/z_fw_r_cht_emp_fx1_mask.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/z_fw_r_fx_white.dds"
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.2				# in seconds
+			animationdelay = 0.5			# in seconds
+			animationblendmode = "add"      #add, multiply, overlay
+			animationtype = "pulsing"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/z_fw_r_cht_emp_fx2_mask.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/z_fw_r_fx_white.dds"
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 0.2				# in seconds
+			animationdelay = 0.67			# in seconds
+			animationblendmode = "add"      #add, multiply, overlay
+			animationtype = "pulsing"		#scrolling, rotating, pulsing
 			animationrotationoffset = { x = 0.0 y = 0.0 }
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}

@@ -1,9 +1,0 @@
-guiTypes = {
-    positionType = {
-        name = "ap_32"
-        position = {
-            x = 735
-            y = 59
-        }
-    }
-}

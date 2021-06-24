@@ -1,7 +1,13 @@
 ###_z modmenu intro	#########################################################################
 
+#_[框架模式选择]
+#_[主机欢迎窗口/其他欢迎窗口]
+
+
+
+
 guiTypes = {
-	#_主要pc
+	###_[框架模式选择]主机	z_modmenu_intro_window
 	containerWindowType = {
 		name = "z_modmenu_intro_window"
 		size = { width = 670 height = 520 }
@@ -190,46 +196,59 @@ guiTypes = {
 		}
 	}
 
-	#_欢迎窗口_主机
+	###_[主机欢迎窗口]	z_modmenu_intro_window_1
 	containerWindowType = {
 		name = "z_modmenu_intro_window_1"
-		size = { width = 670 height = 520 }
+		size = { width = 1000 height = 800 }
 		moveable = no
+		origo = center
 		orientation = center
 
-		position = { x = -330.5 y = -230 }
+		position = { x = 0 y = 0 }
         
         background = { 
             name = "z_modmenu_intro_bg"
             position = { x = 0 y = 0 }
-			#size = { width = 520 height = 760 }
             orientation = center
-            spriteType = "GFX_z_modmenu_intro_bg"
+            spriteType = "GFX_z_mm_button_evt_option_empty"
             alwaystransparent = no
         }
-		#_退出	######################################
+		#_[退出]	######################################
         effectButtonType = {
 			name = "close"
 			spriteType = "GFX_z_mm_welcome"
 			scale = 1
-			position = { x= -301 y = -230 }
 			Orientation = center
+			position = { x= -500 y = -350 }
 		#	shortcut = "ESCAPE"
 			clicksound = "back_click"
 			effect = "z_mm_button_intro_welcome"
 			format = center
 		}
-		#_欢迎语群介绍
+		#_[欢迎语]
 		instantTextBoxType={
 			name = "tips_z_mm_misc_welcome"
-			maxWidth = 500
-			maxHeight = 40
-			position = { x= 82 y = 312 }
+			maxWidth = 700
+			maxHeight = 250
+			Orientation = center
+			position = { x= -350 y = 80 }
 			borderSize = { x = 2 y = 2 }
-			text = "z_mm_tips_misc_welcome"
+		#	text = "z_mm_tips_misc_welcome"
 			format = center
 			font = "malgun_goth_24"
 			alwaysTransparent = yes
+		}
+		#_debug---开启[其他界面]
+        effectButtonType = {
+			name = "z_mm_welcome_debug"
+			spriteType = "GFX_z_mm_welcome_debug"
+			scale = 1
+			position = { x= -400 y = -230 }
+			Orientation = center
+		#	shortcut = "ESCAPE"
+			clicksound = "back_click"
+			effect = "z_mm_button_intro_welcome_debug"
+			format = center
 		}
 		
 		
@@ -279,12 +298,13 @@ guiTypes = {
 			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
 			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
 		}
-        ### EVENT DIPLO ###
 		
+		### EVENT DIPLO ###
 		containerWindowType = {
 			name = "EVENT_DIPLO"
-			position = { x = -2000 y = -5000 }
-			#size = { width=563 height=220 }
+			orientation = "center"
+			position = { x = 0 y = 0 }
+		#	size = { width=700 height=120 }
 			moveable = no
 			
 			instantTextBoxType={		# Used for GNA_LEADER_NAME because I am stupid and can not find out another way
@@ -310,19 +330,21 @@ guiTypes = {
 			
 			listboxType = {
 				name = "option_list"
-				position = { x = -1200.5 y = 0} 
-				size = { x = 1 y = 1}
-				orientation = "UPPER_LEFT"
+				orientation = "center"
+				position = { x = -705 y = -44 } 
+				size = { x = 800 y = 144 }
+				scrollbarType = "standardlistbox_slider"
 				background = ""
 			}
 		}
 	}
 
-	#_欢迎窗口_其他
+	###_[其他欢迎窗口]	z_modmenu_intro_window_2
 	containerWindowType = {
 		name = "z_modmenu_intro_window_2"
-		size = { width = 670 height = 520 }
+		size = { width = 1000 height = 800 }
 		moveable = no
+		origo = center
 		orientation = center
 
 		position = { x = -330.5 y = -230 }
@@ -336,52 +358,29 @@ guiTypes = {
             alwaystransparent = no
         }
         iconType = {
-			name = "z_mm_welcome"
+			name = "close"
 			spriteType = "GFX_z_mm_welcome"
 			scale = 1
-			position = { x= -301 y = -230 }
 			Orientation = center
-            alwaystransparent = yes
+			position = { x= -500 y = -350 }
+		#	shortcut = "ESCAPE"
+			clicksound = "back_click"
+			effect = "z_mm_button_intro_confirm_none"
+			format = center
 		}
 		#_欢迎语群介绍
 		instantTextBoxType={
 			name = "tips_z_mm_misc_welcome"
-			maxWidth = 500
-			maxHeight = 40
-			position = { x= 82 y = 312 }
+			maxWidth = 700
+			maxHeight = 250
+			Orientation = center
+			position = { x= -350 y = 80 }
 			borderSize = { x = 2 y = 2 }
 			text = "z_mm_tips_misc_welcome"
 			format = center
 			font = "malgun_goth_24"
 			alwaysTransparent = yes
 		}
-		
-		#_退出	######################################
-        iconType = {
-			name = "close_bg"
-			spriteType = "GFX_z_mm_confirm_font_bg"
-			scale = 1
-			position = { x= -140 y = 200 }
-			Orientation = center
-            alwaystransparent = yes
-		}
-        effectButtonType = {
-			name = "close"
-			spriteType = "GFX_z_mm_confirm_font"
-			scale = 1
-			position = { x= -140 y = 200 }
-			Orientation = center
-			shortcut = "ESCAPE"
-			clicksound = "back_click"
-			effect = "z_mm_button_intro_confirm_none"
-			text = "z_modmenu.12.a1"
-			buttonFont = "malgun_goth_24"
-			format = center
-		}
-		
-		
-		
-		
 		
 		
 		
@@ -430,12 +429,13 @@ guiTypes = {
 			iconType = { name = "their_opinion_icon" spriteType = "GFX_diplomacy_opinion" } # hidden
 			instantTextBoxType = { name = "their_opinion" font = "cg_16b" }
 		}
-        ### EVENT DIPLO ###
-		
+
+		### EVENT DIPLO ###
 		containerWindowType = {
 			name = "EVENT_DIPLO"
-			position = { x = -2000 y = -5000 }
-			#size = { width=563 height=220 }
+			orientation = "center"
+			position = { x = 0 y = 0 }
+		#	size = { width=700 height=120 }
 			moveable = no
 			
 			instantTextBoxType={		# Used for GNA_LEADER_NAME because I am stupid and can not find out another way
@@ -461,9 +461,10 @@ guiTypes = {
 			
 			listboxType = {
 				name = "option_list"
-				position = { x = -1200.5 y = 0} 
-				size = { x = 1 y = 1}
-				orientation = "UPPER_LEFT"
+				orientation = "center"
+				position = { x = -705 y = -44 } 
+				size = { x = 800 y = 144 }
+				scrollbarType = "standardlistbox_slider"
 				background = ""
 			}
 		}
@@ -553,7 +554,7 @@ guiTypes = {
 				name = "option_list"
 				orientation = upper_left
 				position = { x = 31 y = 290} 
-				size = { x = 540 y = 400 }
+				size = { x = 537 y = 400 }
 				scrollbarType = "z_mm_listbox_slider_sub"
 				background = ""
 			}

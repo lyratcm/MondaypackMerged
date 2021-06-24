@@ -21,25 +21,25 @@ guiTypes = {
     
 		guiButtonType = {
 			name = "listboxSliderButton"	
-			quadTextureSprite = "GFX_z_sts_scroll_slider"
+			quadTextureSprite = "GFX_ncp_scroll_slider"	#_[z_mm]换为npc
 			position = { x=5 y =0}
 		}
 		guiButtonType = {
 			name = "listboxTrackButton"
-			quadTextureSprite = "GFX_z_mm_scroll_bg"
-			position = { x=12 y =12}	
+			quadTextureSprite = "GFX_ncp_scroll_bg"
+			position = { x=12 y =12}
 		}	
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "upButton"
-			quadTextureSprite = "GFX_z_mm_scroll_down"
-			position = { x=0 y =0}	
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x=0 y =0}
 		}
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "downButton"
-			quadTextureSprite = "GFX_z_mm_scroll_up"
-			position = { x=0 y =120}	
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x=0 y =120}
 		}
 	}
 	
@@ -507,24 +507,6 @@ guiTypes = {
 		orientation = upper_left
 		position = { x = 50 y = 50 }
 		
-		#_sp_mod按钮slider覆盖
-		containerWindowType = {
-			name = "block"
-			size = { width = 1286 height = 704 }
-			moveable = no
-			orientation = upper_left
-			position = { x = 0 y = 70 }
-			background = { 
-				name = "bg"
-				position = { x = 0 y = 0 }
-				orientation = upper_left
-				spriteType = "GFX_z_modmenu_window_sub_bg_1"
-				alwaystransparent = no
-			}
-		}
-        
-		
-		
 		
 		iconType = {
 			name = "z_mm_event_picture"
@@ -594,7 +576,7 @@ guiTypes = {
 				name = "option_list"
 				orientation = upper_left
 				position = { x = 31 y = 165 } 
-				size = { x = 540 y = 560 }
+				size = { x = 537 y = 560 }
 				scrollbarType = "z_statistics_listbox_slider"
 				background = ""
 			}

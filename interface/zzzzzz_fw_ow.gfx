@@ -1,0 +1,30 @@
+###_无尽群星 mm	gfx	###########################################################################
+#_LIOS
+
+#_[core_logo]
+
+
+
+
+spriteTypes = {
+	#_[core_logo]	#########################################################################
+	#_[无尽群星]
+	spriteType = {
+		name = "gfx_game_logo"
+		texturefile = "gfx/interface/z_modmenu/z_fw_logo.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/z_modmenu/z_fw_logo_fx_mask.dds"
+			animationtexturefile = "gfx/interface/z_modmenu/z_fw_logo_fx.dds"
+			animationrotation = -45.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 2.3
+			animationdelay = 1.7
+			animationblendmode = "add"      #add, multiply, overlay
+			animationtype = "scrolling"		#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+}

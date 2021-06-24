@@ -1,0 +1,11 @@
+###_[特殊行星ui]	##############################################################
+
+
+spriteTypes = {
+	###_[行星ui工具栏]	check_exit/设置/工作检测	################################################
+	#_[check_exit]
+	spriteType = {
+		name = "GFX_z_fw_evt_plnt_check_exit"
+		textureFile = "gfx/interface/z_modmenu/z_fw_evt_plnt_check_exit.dds"
+	}
+}

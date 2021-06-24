@@ -14,4 +14,17 @@ spriteTypes = {
 		name = "GFX_ui_mapmode_manage"
 		textureFile = "gfx/ui_overhaul_qhd/bottom_bar/map_manage_mode.dds"
 	}
+	# from Gigastructures
+	spriteType = {
+		name = "GFX_ui_galaxy_panel"
+		texturefile = "gfx/ui_overhaul_qhd/bottom_bar/galaxy_panel.dds"
+	}
+	spriteType = {
+		name = "GFX_ui_system_paused"
+		texturefile = "gfx/ui_overhaul_qhd/bottom_bar/system_paused.dds"
+	}
+	spriteType = {
+		name = "GFX_ui_galaxy_paused"
+		texturefile = "gfx/ui_overhaul_qhd/bottom_bar/galaxy_paused.dds"
+	}
 }

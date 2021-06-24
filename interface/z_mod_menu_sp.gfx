@@ -902,10 +902,10 @@ spriteTypes = {
 	
 	
 	
-	#_UAP
+	#_iisc
 	spriteType = {
-		name = "GFX_z_mm_sp_mods_uap_1"
-		texturefile = "gfx/interface/z_modmenu/z_mm_sp_mods_uap_1.dds"
+		name = "GFX_z_mm_sp_mods_iisc_1"
+		texturefile = "gfx/interface/z_modmenu/z_mm_sp_mods_iisc_1.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 		noOfFrames = 3
 		animation = {
@@ -923,8 +923,8 @@ spriteTypes = {
 		}
 	}
 	spriteType = {
-		name = "GFX_z_mm_sp_mods_uap_2"
-		texturefile = "gfx/interface/z_modmenu/z_mm_sp_mods_uap_2.dds"
+		name = "GFX_z_mm_sp_mods_iisc_2"
+		texturefile = "gfx/interface/z_modmenu/z_mm_sp_mods_iisc_2.dds"
 		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
 		noOfFrames = 3
 		animation = {

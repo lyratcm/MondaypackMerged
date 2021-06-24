@@ -1,10 +1,100 @@
 ###_z modmenu_core	#########################################################################
+#_[事件选项]
 #_[事件window]
 #_[z_mm滑条]
 
 guiTypes = {
 
-	###_事件选项	参考<enclave_caravaneer_option>
+	###_[事件选项]	参考<enclave_caravaneer_option>
+	#_	z_mm_button_evt_option_empty
+	containerWindowType = {
+		name = "z_mm_button_evt_option_empty"
+		position = { x=0 y=0 }
+		size = { width = 480 height = 26 }
+		moveable = no
+		
+		iconType = {
+			name = "z_mm_btn_evt_bg"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "option_button"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			alwaysTransparent = yes
+		}
+	}
+	#_	z_mm_button_evt_option_desc
+	containerWindowType = {
+		name = "z_mm_button_evt_option_desc"
+		position = { x=0 y=0 }
+		size = { width = 480 height = 20 }
+		moveable = no
+		
+		iconType = {
+			name = "z_mm_btn_evt_bg"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "option_button"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=-2 }
+			font = "cg_16b"
+			text = "OPTION_TEXT"
+			alwaysTransparent = yes
+		}
+	}
+	#_	z_mm_button_evt_option_desc_l
+	containerWindowType = {
+		name = "z_mm_button_evt_option_desc_l"
+		position = { x=0 y=0 }
+		size = { width = 600 height = 32 }
+		moveable = no
+		
+		iconType = {
+			name = "z_mm_btn_evt_bg"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "option_button"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			font = "large_title_font_28"
+			text = "OPTION_TEXT"
+			alwaysTransparent = yes
+		}
+	}
+	#_	z_mm_button_evt_option_name
+	containerWindowType = {
+		name = "z_mm_button_evt_option_name"
+		position = { x=0 y=0 }
+		size = { width = 480 height = 24 }
+		moveable = no
+		
+		iconType = {
+			name = "z_mm_btn_evt_bg"
+			spriteType = "GFX_z_mm_button_evt_option_bg"
+			position = { x=0 y=0 }
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "option_button"
+			spriteType = "GFX_z_mm_button_evt_option_empty"
+			position = { x=0 y=0 }
+			font = "malgun_goth_24"
+			text = "OPTION_TEXT"
+			alwaysTransparent = yes
+		}
+	}
+	
 	#_	z_mm_button_evt_option_normal
 	containerWindowType = {
 		name = "z_mm_button_evt_option_normal"
@@ -35,12 +125,12 @@ guiTypes = {
 		iconType = {
 			name = "z_mm_btn_evt_bg"
 			spriteType = "GFX_z_mm_button_evt_sub_bg"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 		}
 		buttonType = {
 			name = "option_button"
 			spriteType = "GFX_z_mm_button_evt_sub_normal" 
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 			font = "cg_16b"
 			text = "OPTION_TEXT"
 		}
@@ -76,12 +166,12 @@ guiTypes = {
 		iconType = {
 			name = "z_mm_btn_evt_bg"
 			spriteType = "GFX_z_mm_button_evt_sub_bg"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 		}
 		buttonType = {
 			name = "option_button"
 			spriteType = "GFX_z_mm_button_evt_sub_red"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 			font = "cg_16b"
 			text = "OPTION_TEXT"
 		}
@@ -117,12 +207,12 @@ guiTypes = {
 		iconType = {
 			name = "z_mm_btn_evt_bg"
 			spriteType = "GFX_z_mm_button_evt_sub_bg"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 		}
 		buttonType = {
 			name = "option_button"
 			spriteType = "GFX_z_mm_button_evt_sub_orange"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 			font = "cg_16b"
 			text = "OPTION_TEXT"
 		}
@@ -158,12 +248,12 @@ guiTypes = {
 		iconType = {
 			name = "z_mm_btn_evt_bg"
 			spriteType = "GFX_z_mm_button_evt_sub_bg"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 		}
 		buttonType = {
 			name = "option_button"
 			spriteType = "GFX_z_mm_button_evt_sub_green"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 			font = "cg_16b"
 			text = "OPTION_TEXT"
 		}
@@ -199,12 +289,12 @@ guiTypes = {
 		iconType = {
 			name = "z_mm_btn_evt_bg"
 			spriteType = "GFX_z_mm_button_evt_sub_bg"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 		}
 		buttonType = {
 			name = "option_button"
 			spriteType = "GFX_z_mm_button_evt_sub_blue"
-			position = { x=21 y=0 }
+			position = { x=0 y=0 }
 			font = "cg_16b"
 			text = "OPTION_TEXT"
 		}
@@ -1512,25 +1602,25 @@ guiTypes = {
     
 		guiButtonType = {
 			name = "listboxSliderButton"	
-			quadTextureSprite = "GFX_z_mm_scroll_slider"
+			quadTextureSprite = "GFX_ncp_scroll_slider"	#_[z_mm]换为npc
 			position = { x=5 y =0}
 		}
 		guiButtonType = {
 			name = "listboxTrackButton"
-			quadTextureSprite = "GFX_z_mm_scroll_bg"
-			position = { x=13 y =12}	
+			quadTextureSprite = "GFX_ncp_scroll_bg"
+			position = { x=13 y =12}
 		}	
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "upButton"
-			quadTextureSprite = "GFX_z_mm_scroll_down"
-			position = { x=0 y =0}	
+			quadTextureSprite = "GFX_ncp_scroll_down"
+			position = { x=0 y =0}
 		}
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "downButton"
-			quadTextureSprite = "GFX_z_mm_scroll_up"
-			position = { x=0 y =120}	
+			quadTextureSprite = "GFX_ncp_scroll_up"
+			position = { x=0 y =120}
 		}
 	}
 	#_标准子窗口事件选项
@@ -1553,24 +1643,24 @@ guiTypes = {
     
 		guiButtonType = {
 			name = "listboxSliderButton"	
-			quadTextureSprite = "GFX_z_mm_scroll_slider_cyan"
+			quadTextureSprite = "GFX_ncp_scroll_slider"
 			position = { x=3 y =0}
 		}
 		guiButtonType = {
 			name = "listboxTrackButton"
-			quadTextureSprite = "GFX_z_mm_scroll_bg"
+			quadTextureSprite = "GFX_ncp_scroll_bg"
 			position = { x=13 y =12}	
 		}	
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "upButton"
-			quadTextureSprite = "GFX_z_mm_scroll_down"
+			quadTextureSprite = "GFX_ncp_scroll_down"
 			position = { x=0 y =0}	
 		}
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "downButton"
-			quadTextureSprite = "GFX_z_mm_scroll_up"
+			quadTextureSprite = "GFX_ncp_scroll_up"
 			position = { x=0 y =120}	
 		}
 	}
@@ -1593,24 +1683,24 @@ guiTypes = {
     
 		guiButtonType = {
 			name = "listboxSliderButton"	
-			quadTextureSprite = "GFX_z_mm_scroll_slider_green"
+			quadTextureSprite = "GFX_ncp_scroll_slider"
 			position = { x=0 y =0}
 		}
 		guiButtonType = {
 			name = "listboxTrackButton"
-			quadTextureSprite = "GFX_z_mm_scroll_bg"
+			quadTextureSprite = "GFX_ncp_scroll_bg"
 			position = { x=13 y =12}	
 		}
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "upButton"
-			quadTextureSprite = "GFX_z_mm_scroll_down"
+			quadTextureSprite = "GFX_ncp_scroll_down"
 			position = { x=0 y =0}	
 		}
 		guiButtonType = {
 			parent = "listboxSliderButton"
 			name = "downButton"
-			quadTextureSprite = "GFX_z_mm_scroll_up"
+			quadTextureSprite = "GFX_ncp_scroll_up"
 			position = { x=0 y =120}	
 		}
 	}

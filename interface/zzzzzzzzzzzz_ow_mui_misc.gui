@@ -1,0 +1,23 @@
+###_[UI Overhaul Dynamic + SpeedDial]	/interface/speeddial_mian_bottom.gui	参考
+###_[UI Overhaul Dynamic]	/interface/mian_bottom.gui							修改
+
+#_[舰船设计]	/ship_designer.gui
+
+
+
+
+guiTypes = {
+	###_[舰船设计]
+	containerWindowType = {
+		name = "slot_indicator"
+		position = { x=0 y=0 }
+		size = { width = 256 height = 256 }	#_[48/48]
+		moveable = no
+
+		iconType = {
+			name ="icon"
+			spriteType = "GFX_ship_designer_slot_indicator"
+			position = { x= -128 y = -128 }	#_[-16/-16]
+		}
+	}
+}

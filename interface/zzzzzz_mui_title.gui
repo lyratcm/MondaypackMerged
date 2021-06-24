@@ -1,0 +1,352 @@
+###_z modmenu	#########################################################################
+#_[主要]
+
+
+guiTypes = {
+	###_[主要]		LOGO/未知/主菜单
+	containerWindowType = {
+		name = "frontendgui"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height = 100% }
+		###_[LOGO]	###############################
+		iconType = {
+			name = "game_logo"
+			position = { x = -450 y = 60 }
+			quadTextureSprite = "gfx_game_logo"
+			orientation = "CENTER_UP"
+		}
+		###_[未知]	###############################
+		containerWindowType = {
+			id = "press_to_continue"
+			name = "press_to_continue"
+			position = { x = 110 y = 0 }
+			size = { width = 1280 height = 720 }
+			orientation = center
+			instantTextBoxType = {
+				name = "press"
+				font = "malgun_goth_24"
+				text = "PRESS"
+				position = { x = -100 y = -9 }
+				maxWidth = 80
+				maxHeight = 35
+				fixedSize = yes
+				format = right
+			}
+			iconType = {
+				name = "button"
+				position = { x = -13 y = -10 }
+				quadTextureSprite = "GFX_controller_icon_a"
+				orientation = "CENTER_CENTER"
+			}
+			instantTextBoxType = {
+				name = "to_continue"
+				font = "malgun_goth_24"
+				text = "TO_CONTINUE"
+				position = { x = 20 y = -9 }
+				maxWidth = 400
+				maxHeight = 35
+				fixedSize = yes
+				format = left
+			}
+		}
+		###_[主菜单]	###############################
+		containerWindowType = {
+			name = "menu"
+			position = { x = 17 y = 0 }
+			size = { width = 1280 height = 720 }
+			orientation = center_down
+			#_[无尽群星]
+			buttonType = {
+				name = "z_version"
+				spriteType = "GFX_z_mui_btn_version"
+				position = { x = -230 y = -44 }
+				buttonFont = "cg_16b"
+				buttonText = "z_ic_tips_main"
+				pdx_tooltip = ""
+				format = center
+				oversound = mouse_over
+				web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2409618500"
+			}
+			#_[版本号]
+			instantTextBoxType = {
+				name = "version"
+				font = "cg_16b"
+				text = "1337"
+				position = { x = -480 y = -44 }	#_-38
+				maxWidth = 300
+				maxHeight = 20
+				fixedSize = yes
+				format = left
+			}
+			buttonType = {
+				name = "version_button"
+				spriteType = "GFX_invisible"
+				size = { x = 300 y = 20 }
+				position = { x = -600 y = -44 }
+				no_clicksound = yes
+			}
+			#_[选项]	开始/多人/载入/制作/设置/退出	###############################
+			containerWindowType = {
+				name = "buttons"
+				buttonType = {#_[开始]
+					id = "start"
+					name = "start"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = -645 y = -147 }	#_[-5/+3]
+					shortcut = "n"
+					oversound = mouse_over
+					navRight = "multiplayer"
+					defaultSelection = yes
+					clicksound = confirm_click
+				}
+				instantTextBoxType ={
+					name = "start_new_game"
+					font = "malgun_goth_24"
+					text = "FRONT_START"
+					position = { x = -640 y = -140 }	#_[-3/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				buttonType = {#_[多人]
+					id = "multiplayer"
+					name = "multiplayer"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = -435 y = -147 }
+					shortcut = "m"
+					oversound = mouse_over
+					navLeft = "start"
+					navRight = "load"
+					clicksound = confirm_click
+				}
+				instantTextBoxType = {
+					name = "multi_player_text"
+					font = "malgun_goth_24"
+					text = "FRONT_MULTIPLAYER"
+					position = { x = -430 y = -140 }	#_[-3/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				buttonType = {#_[载入]
+					id = "load"
+					name = "load"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = -225 y = -147 }
+					shortcut = "l"
+					oversound = mouse_over
+					navLeft = "multiplayer"
+					navRight = "credits"
+					clicksound = confirm_click
+				}
+				instantTextBoxType = {
+					name = "load_game_text"
+					font = "malgun_goth_24"
+					text = "FRONT_LOAD"
+					position = { x = -220 y = -140 }	#_[-4/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				buttonType = {#_[制作]
+					id = "credits"
+					name = "credits"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = -15 y = -147 }
+					shortcut = "c"
+					oversound = mouse_over
+					navLeft = "load"
+					navRight = "settings"
+					clicksound = confirm_click
+				}
+				instantTextBoxType = {
+					name = "credits_text"
+					font = "malgun_goth_24"
+					text = "FRONT_CREDITS"
+					position = { x = -11 y = -140 }	#_[-6/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				buttonType = {#_[设置]
+					id = "settings"
+					name = "settings"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = 195 y = -147 }
+					shortcut = "s"
+					oversound = mouse_over
+					navLeft = "credits"
+					navRight = "quit"
+					clicksound = confirm_click
+				}
+				instantTextBoxType = {
+					name = "settings_text"
+					font = "malgun_goth_24"
+					text = "FRONT_SETTINGS"
+					position = { x = 200 y = -140 }	#_[-6/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				buttonType = {#_[退出]
+					id = "quit"
+					name = "quit"
+					quadTextureSprite = "GFX_z_mui_btn_main_option_vanilla"
+					position = { x = 405 y = -147 }
+					shortcut = "e"
+					oversound = mouse_over
+					navLeft = "settings"
+					actionShortCut = "cancel"
+				}
+				instantTextBoxType = {
+					name = "quit_text"
+					font = "malgun_goth_24"
+					text = "FRONT_QUIT"
+					position = { x = 410 y = -140 }	#_[-6/0]
+					maxWidth = 200	#_400
+					maxHeight = 35
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+			}
+			iconType = {
+				name = "engine_logo"
+				position = { x = 515 y = -110 }
+				quadTextureSprite = "GFX_clausewitz_logo"
+				#orientation = "LOWER_RIGHT"
+				scale = 1.0
+			}
+			iconType = {
+				name = "pi_logo"
+				position = { x = -570 y = -100 }
+				quadTextureSprite = "GFX_pi_logo"
+				#orientation = "LOWER_RIGHT"
+				scale = 0.7
+			}
+			iconType = {
+				name = "pds_logo"
+				position = { x = -641 y = -105 }
+				quadTextureSprite = "GFX_pds_logo"
+				scale = 0.53
+			}
+			### Move buttons over here instead
+			@button_links_y = -55
+			buttonType = {
+				name = "privacy"
+				quadTextureSprite = "GFX_front_menu_privacy"
+				position = { x = 280 y = @button_links_y }
+				pdx_tooltip = "PRIVACY_POLICY"
+			}
+			buttonType = {
+				name = "homepage"
+				quadTextureSprite = "GFX_front_menu_homepage"
+				position = { x = 360 y = @button_links_y }
+				pdx_tooltip = "HOMEPAGE"
+				web_link = "http://www.stellarisgame.com/"
+			}
+			buttonType = {
+				name = "forum"
+				quadTextureSprite = "GFX_front_menu_forum"
+				position = { x = 400 y = @button_links_y }
+				pdx_tooltip = "FORUM"
+				web_link = "https://forum.paradoxplaza.com/forum/index.php?forums/stellaris.900/"
+			}
+			buttonType = {
+				name = "facebook"
+				quadTextureSprite = "GFX_front_menu_facebook"
+				position = { x = 440 y = @button_links_y }
+				pdx_tooltip = "FACEBOOK"
+				web_link = "https://www.facebook.com/StellarisGame"
+			}
+			buttonType = {
+				name = "twitter"
+				quadTextureSprite = "GFX_front_menu_twitter"
+				position = { x = 480 y = @button_links_y }
+				pdx_tooltip = "TWITTER"
+				web_link = "http://twitter.com/StellarisGame"
+			}
+		}
+		### load save
+		containerWindowType = {
+			name = "load_save"
+			position = { x = 0 y = 0 }
+			size = { width = 1024 height = 720 }
+			orientation = upper_left
+			instantTextBoxType = {
+				name = "title"
+				position = { x = 180 y = 40 }
+				font = "cg_16b"
+				borderSize = {x = 4 y = 4 }
+				text = "FRONT_SAVE_GAMES"
+				orientation = "UPPER_LEFT"
+				format = left
+				maxWidth = 200
+				maxHeight = 100
+			}
+			buttonType = {
+				name = "launch"
+				quadTextureSprite = "GFX_button"
+				position = { x = -200 y = -200 }
+				orientation = "LOWER_RIGHT"
+				buttonText = "FRONT_LAUNCH"
+				buttonFont = "cg_16b"
+			}
+			buttonType = {
+				name = "back"
+				quadTextureSprite = "GFX_button"
+				position = { x = -400 y = -200 }
+				orientation = "LOWER_RIGHT"
+				buttonText = "FRONT_BACK"
+				buttonFont = "cg_16b"
+			}
+			listboxType = {
+				name = "list"
+				position = { x = 100 y = 80 }
+				size = { x = 220 y = 260 }
+				horizontal = 0
+				scrollbarType = "standardlistbox_slider"
+				borderSize = {x = 20 y = 20 }
+				orientation = "UPPER_LEFT"
+			}
+		}
+		### DEBUG
+		buttonType = {
+			name = "portrait_room"
+			spriteType = "GFX_portrait_room"
+			orientation = "CENTER"
+			position = { x = -476 y = -10 }
+		}
+		buttonType = {
+			name = "portrait_planet"
+			spriteType = "GFX_portrait_planet_character"
+			orientation = "CENTER"
+			position = { x = -100 y = -320 }
+		}
+		buttonType = {
+			name = "portrait_character"
+			spriteType = "GFX_portrait_character"
+			orientation = "CENTER"
+			position = { x = -500 y = -350 }
+		}
+		containerWindowType = {
+			name = "blocker"
+			position = { x = 0 y = 0 }
+			size = { width = 100% height = 100% }
+			background = {
+				name = "hitbox"
+				spriteType = "GFX_ship_designer_blocker"
+			}
+		}
+	}
+}

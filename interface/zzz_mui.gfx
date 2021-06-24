@@ -1,0 +1,810 @@
+#_[main]
+#_[misc]
+#_[快速联系]	带刺精灵/kuat
+#_[flt_view]	自沉
+#_[星球工具栏]	设置/工作检测/pf2
+
+
+
+
+spriteTypes = {
+	###_[main]	############################################################
+	spriteType = {#_version
+		name = "GFX_z_mui_btn_version"
+		texturefile = "gfx/z_mui/z_mui_btn_version.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui/z_mui_btn_version_fx_mask.dds"
+			animationtexturefile = "gfx/z_mui/z_mui_btn_fx_h_scroll_440.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 6.0
+			animationdelay = 0.0
+			animationblendmode = "add"	#add, multiply, overlay
+			animationtype = "scrolling"	#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {#_option
+		name = "GFX_z_mui_btn_main_option"
+		texturefile = "gfx/z_mui/z_mui_btn_main_option.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui/z_mui_btn_main_option_fx_mask.dds"
+			animationtexturefile = "gfx/z_mui/z_mui_btn_fx_h_scroll_440.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 6.0
+			animationdelay = 0.0
+			animationblendmode = "add"	#add, multiply, overlay
+			animationtype = "scrolling"	#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {#_option_vanilla
+		name = "GFX_z_mui_btn_main_option_vanilla"
+		texturefile = "gfx/z_mui/z_mui_btn_main_option_vanilla.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui/z_mui_btn_main_option_fx_mask.dds"
+			animationtexturefile = "gfx/z_mui/z_mui_btn_fx_h_scroll_220.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0.0
+			animationblendmode = "add"	#add, multiply, overlay
+			animationtype = "scrolling"	#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {#_option_vanilla
+		name = "GFX_z_mui_btn_main_option_left"
+		texturefile = "gfx/z_mui/z_mui_btn_main_option_left.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui/z_mui_btn_main_option_left_fx_mask.dds"
+			animationtexturefile = "gfx/z_mui/z_mui_btn_fx_h_scroll_220.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 5.0
+			animationdelay = 0.0
+			animationblendmode = "add"	#add, multiply, overlay
+			animationtype = "scrolling"	#scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	
+
+
+
+	###_[main]	############################################################
+	spriteType = {
+		name = GFX_z_mui_icon_line_horiz_540
+		texturefile = "gfx/z_mui/z_mui_icon_line_horiz_540.dds"
+	}
+
+	
+	
+	
+	###_[快速联系]	通用/掠夺者/行商舰队/贸易商/策展人/艺术家/虚境/带刺精灵
+	
+	#_[通用]
+	spriteType = {#_收起
+		name = "GFX_z_mui_btn_ec_folded"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_folded.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_folded_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_展开
+		name = "GFX_z_mui_btn_ec_unfolded"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_unfolded.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_folded_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_roll	GFX_z_mui_btn_ec_roll
+		name = "GFX_z_mui_btn_ec_roll"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_roll.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_roll_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_frame	GFX_z_mui_btn_ec_frame
+		name = "GFX_z_mui_btn_ec_frame"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_frame.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[掠夺者]
+	spriteType = {#_1	GFX_z_mui_btn_ec_marauder_1
+		name = "GFX_z_mui_btn_ec_marauder_1"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_marauder_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_2	GFX_z_mui_btn_ec_marauder_2
+		name = "GFX_z_mui_btn_ec_marauder_2"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_marauder_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_3	GFX_z_mui_btn_ec_marauder_3
+		name = "GFX_z_mui_btn_ec_marauder_3"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_marauder_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[行商舰队]
+	spriteType = {#_大本营
+		name = "GFX_z_mui_btn_ec_caravaneer_base"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_caravaneer_base.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_1商人
+		name = "GFX_z_mui_btn_ec_caravaneer_fleet_1"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_caravaneer_fleet_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_2教团
+		name = "GFX_z_mui_btn_ec_caravaneer_fleet_2"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_caravaneer_fleet_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_3鼠人
+		name = "GFX_z_mui_btn_ec_caravaneer_fleet_3"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_caravaneer_fleet_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[贸易商]
+	spriteType = {#_瓦斯
+		name = "GFX_z_mui_btn_ec_trader_1"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_trader_1.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_粉末
+		name = "GFX_z_mui_btn_ec_trader_2"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_trader_2.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	spriteType = {#_水晶
+		name = "GFX_z_mui_btn_ec_trader_3"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_trader_3.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[策展人]
+	spriteType = {
+		name = "GFX_z_mui_btn_ec_curator"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_curator.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+		
+	#_[艺术家]
+	spriteType = {
+		name = "GFX_z_mui_btn_ec_artist"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_artist.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[虚境]
+	spriteType = {
+		name = "GFX_z_mui_btn_ec_shroud"
+		texturefile = "gfx/z_mui_ec/z_mui_btn_ec_shroud.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	
+	#_[带刺精灵]
+	spriteType = {
+		name = "GFX_sting_communication"
+		texturefile = "gfx/z_mui_ec/z_mod_btn_ec.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+	#_[kuat]
+	spriteType = {
+		name = "GFX_z_mod_btn_kuat"
+		texturefile = "gfx/z_mui_ec/z_mod_btn_kuat.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/z_mui_ec/z_mui_btn_ec_fx_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add" #add, multiply, overlay
+			animationtype = "scrolling"    #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+		hitbox_margin = { x=13 y=13 }
+	}
+
+
+
+
+
+
+
+
+	###_[flt_view]	自沉	############################################################
+	spriteType = {#_[自沉]
+		name = "GFX_z_fw_btn_flt_ui_dismantle"
+		texturefile = "gfx/z_mui_eft_btn/z_fw_btn_flt_ui_dismantle.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+
+
+
+	###_[星球工具栏]		#########################################
+	#_[/check_exitbg/工作检测/设置]
+	#_[自动迁入]
+	#_[星球迁出/迁出默认/迁出优先/迁出强制/迁出禁止]
+	#_[星球迁入/迁入默认/迁入优先/迁入强制/迁入禁止]
+	#_[check_exit]
+	spriteType = {
+		name = "GFX_z_mui_evt_check_exit"
+		textureFile = "gfx/interface/z_modmenu/z_mui_evt_check_exit.dds"
+	}
+	#_[bg]
+	corneredTileSpriteType = {
+		name = "GFX_z_fw_ui_plnt_toolbar"
+		texturefile = "gfx/interface/z_modmenu/z_fw_ui_plnt_toolbar.dds"
+		borderSize = { x=35 y=55 }
+	}
+	spriteType = {
+		name = "GFX_z_fw_btn_plnt_ui_tb_bg"
+		textureFile = "gfx/interface/z_modmenu/z_fw_btn_plnt_ui_tb_bg.dds"
+	}
+	#_[设置]
+	spriteType = {
+		name = "GFX_z_fw_btn_plnt_ui_tb_setting"
+		texturefile = "gfx/interface/z_modmenu/z_fw_btn_plnt_ui_tb_setting.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	#_[工作检测]
+	spriteType = {
+		name = "GFX_z_fw_btn_plnt_ui_tb_job_check"
+		texturefile = "gfx/interface/z_modmenu/z_fw_btn_plnt_ui_tb_job_check.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	#_[自动迁入]
+	spriteType = {
+		name = "GFX_z_pf2_btn_plnt_auto_mig_on"
+		texturefile = "gfx/interface/z_modmenu/z_pf2_btn_plnt_auto_mig_on.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf2_btn_plnt_auto_mig_off"
+		texturefile = "gfx/interface/z_modmenu/z_pf2_btn_plnt_auto_mig_off.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	#_[自动迁入]
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_mig"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_mig.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_mig_set_default"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_mig_set_default.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_mig_set_prio"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_mig_set_prio.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_mig_set_forced"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_mig_set_forced.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_mig_set_ignore"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_mig_set_ignore.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_immig"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_immig.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_immig_set_default"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_immig_set_default.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_immig_set_prio"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_immig_set_prio.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_immig_set_forced"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_immig_set_forced.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+	spriteType = {
+		name = "GFX_z_pf_btn_plnt_heup_immig_set_ignore"
+		texturefile = "gfx/interface/z_modmenu/z_pf_btn_plnt_heup_immig_set_ignore.dds"
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+		noOfFrames = 3
+		animation = {
+			animationmaskfile = "gfx/interface/fleet_view/standard_button_mask.dds"
+			animationtexturefile = "gfx/interface/fleet_view/standard_button_texture.dds"
+			animationrotation = 180.0
+			animationlooping = yes
+			animationtime = 12.0
+			animationdelay = 0.0
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+			animationframes = { 1 2 3 }
+		}
+	}
+}

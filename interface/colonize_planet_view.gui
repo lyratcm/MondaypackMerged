@@ -223,43 +223,66 @@ guiTypes = {
 		clipping = yes
 		background = {
 			name = "bg"
-			spriteType = "GFX_ui_tile_large_bg_plain"
+			spriteType = "GFX_tile_large_center_bg"
 		}
 		### WINDOW HEADER ###
 		buttonType = {
 			name = "close"
 			spriteType = "GFX_close_button"
-			position = { x = -45 y = 7 }
+			position = { x = -45 y = 16 }
 			orientation = upper_right
 			shortcut = "ESCAPE"
 			pdx_tooltip = "CLOSE_TITLE"
 			clicksound = "back_click"
 			actionShortcut = "cancel"
 		}
-		iconType = {
-			name = "hex_bg"
-			spriteType = "GFX_hex_center_bg"
-			orientation = center_up
-			position = { x = -273 y = -8 }
-			alwaysTransparent = yes
-		}
-		iconType = {
-			name = "title_line"
-			quadTextureSprite = "GFX_line_center"
-			position = { x = -256 y = 39 }
-			orientation = center_up
-			alwaysTransparent = yes
+		containerWindowType = {
+			name = "header_container"
+			size = { width = 100% height = 40 }
+			position = { x = 0 y = 0 }
+			iconType = {
+				name = "header_hex_bg_1"
+				spriteType = "GFX_hex_center_bg"
+				position = { x = 0 y = 26 }
+				orientation = center_up
+				centerPosition = yes
+				#alwaysTransparent = yes
+			}
+			iconType = {
+				name = "header_hex_bg_2"
+				spriteType = "GFX_hex_center_bg"
+				position = { x = -127 y = 26 }
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "header_hex_bg_3"
+				spriteType = "GFX_hex_center_bg"
+				position = { x = 127 y = 26 }
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "title_line"
+				spriteType = "GFX_line_center"
+				position = { x = 0 y = 50 }
+				orientation = center_up
+				centerPosition = yes
+				alwaysTransparent = yes
+			}
 		}
 		instantTextBoxType = {
 			name = "title"
 			font = "large_title_font"
 			text = "EXPANSION_PLANNER_SURFACE_VIEW"
-			position = { x = -430 y = 5 }
+			position = { x = -400 y = 7 }
 			orientation = center_up
-			maxWidth = 860
-			maxHeight = 20
-			format = center
+			maxWidth = 800
+			maxHeight = 40
 			fixedSize = yes
+			format = center
 			alwaysTransparent = yes
 		}
 		### PLANET INFO ###
@@ -396,7 +419,6 @@ guiTypes = {
 			clipping = yes
 			verticalScrollbar = "right_vertical_slider_thick"
 			background = {
-				position = { x = 0 y = 0 }
 				name = "districts_window_background"
 				spriteType = "GFX_tiled_window_transparent"
 			}
@@ -404,9 +426,9 @@ guiTypes = {
 			gridBoxType = {
 				name = "districts_grid_box"
 				position = { x = 9 y = 45 }
-				size = { width = 265 height = 225 }
-				format = "UPPER_LEFT"
-				slotSize = { width = 265 height = 55 }
+				size = { width = 265 height = 742 }
+				format = UPPER_LEFT
+				slotsize = { width = 265 height = 51 }
 				add_horizontal = yes
 				max_slots_horizontal = 1
 			}
@@ -416,7 +438,7 @@ guiTypes = {
 				size = { width = 267 height = 44 }
 				background = {
 					name = "background"
-					spriteType = "GFX_tiles_frame_notrans"
+					spriteType = "GFX_tiles_dark_area_cut_8"
 				}
 			}
 			containerWindowType = {
@@ -471,7 +493,6 @@ guiTypes = {
 			}
 			clipping = no
 			background = {
-				position = { x = 0 y = 0 }
 				name = "districts_window_background"
 				spriteType = "GFX_tiled_window_transparent"
 			}
@@ -516,6 +537,27 @@ guiTypes = {
 				}
 				scrollbarType = "standardlistbox_slider_thick"
 				borderSize = { x = 0 y = 0 }				spacing = 4
+			}
+		}
+		### CHECKBOX ONLY MAIN SPECIES ###
+		containerWindowType = {
+			name = "main_species_filter"
+			position = { x = 880 y = 370 }
+			checkboxType = {
+				name = "checked"
+				spriteType = "GFX_checkbox_20_20_01"
+				pdx_tooltip = "EXPANSION_PLANNER_ONLY_MAIN_SPECIES_DESC"
+			}
+			instantTextBoxType = {
+				name = "title"
+				font = "cg_16b"
+				maxWidth = 110
+				maxHeight = 16
+				position = { x = 35 y = 7 }
+				vertical_alignment = center
+				text_color_code = "E"
+				text = "EXPANSION_PLANNER_ONLY_MAIN_SPECIES"
+				pdx_tooltip = "EXPANSION_PLANNER_ONLY_MAIN_SPECIES_DESC"
 			}
 		}
 		### LIST COLONY SHIP SOURCES ###
@@ -589,28 +631,22 @@ guiTypes = {
 	containerWindowType = {
 		name = "colonize_district_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 265 height = 60 }
-		moveable = no
-		containerWindowType = {
-			name = "colonize_district_entry_background"
-			position = { x = -1 y = -1 }
-			size = { width = 267 height = 62 }
-			background = {
-				name = "background"
-				spriteType = "GFX_tiles_frame_light"
-			}
+		size = { width = 265 height = 50 }
+		background = {
+			name = "background"
+			spriteType = "GFX_tiles_dark_area_cut_8"
 		}
 		iconType = {
 			name = "district_icon"
 			spriteType = "GFX_district_unknown"
-			position = { x = 5 y = 5 }
+			position = { x = 0 y = 0 }
 			scale = 0.65
 		}
 		instantTextBoxType = {
 			name = "not_surveyed"
 			font = "malgun_goth_24"
 			text = "UNKNOWN_SHORT"
-			position = { x = 20 y = 60 }
+			position = { x = 55 y = 20 }
 			maxWidth = 20
 			maxHeight = 20
 			fixedSize = yes
@@ -619,12 +655,12 @@ guiTypes = {
 		containerWindowType = {
 			name = "district_box"
 			size = { width = 52 height = 82 }
-			position = { x = 54 y = 3 }
+			position = { x = 55 y = 3 }
 			# non-residential districts
 			gridBoxType = {
 				name = "district_box_grid"
 				size = { width = 65 height = 45 }
-				position = { x = 6 y = 5 }
+				position = { x = 0 y = 0 }
 				format = "UPPER_LEFT"
 				slotSize = { width = 15 height = 15 }
 				max_slots_horizontal = 13
@@ -636,7 +672,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_district_cap_container"
 			size = { width = 44 height = 28 }
-			position = { x = 210 y = 16 }
+			position = { x = 210 y = 8 }
 			iconType = {
 				name = "cap_background"
 				spriteType = "GFX_district_any_big"
@@ -646,9 +682,9 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "num_districts_text"
 				font = "cg_16b"
-				position = { x = -2 y = 6 }
+				position = { x = 3 y = 15 }
 				text = "10"
-				maxWidth = 52
+				maxWidth = 46
 				maxHeight = 20
 				fixedSize = yes
 				format = center

@@ -1,7 +1,7 @@
 guiTypes = {
 	containerWindowType = {
 		name = "console_wnd"
-		position = { x = 55 y = 100 }
+		position = { x = 65 y = 100 }
 		size = { width = 700 height = 540 }
 		moveable = yes
 		# Console list of entries
@@ -15,14 +15,15 @@ guiTypes = {
 		}
 		# Text edit box
 		editBoxType = {
-			position = { x = 3 y = 510 }
 			name = "console_edit"
+			position = { x = 3 y = 510 }
 			instantTextBoxType = no
 			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
 			font = "cg_16b"
 			borderSize = { x = 4 y = 4 }
 			size = { x = 700 y = 40 }
-			text = " "		}
+			text = " "
+			cursor = { x = 0 y = 2 }		}
 	}
 	containerWindowType = {
 		name = "console_entry_wnd"

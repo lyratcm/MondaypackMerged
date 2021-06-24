@@ -2,14 +2,14 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_ship_class_small"
-		textureFile = "gfx/interface/icons/z_um_ship_classes.dds"
-		noOfFrames = 40
+		textureFile = "gfx/interface/icons/z_um_ship_classes.dds"	#_"gfx/interface/icons/ship_classes.dds"
+		noOfFrames = 45
 	}
 
 	spriteType = {
 		name = "GFX_ship_class_medium"
-		textureFile = "gfx/interface/icons/z_um_ship_classes_medium.dds"
-		noOfFrames = 40
+		textureFile = "gfx/interface/icons/z_um_ship_classes_medium.dds"	#_"gfx/interface/icons/ship_classes_medium.dds"
+		noOfFrames = 45
 	}
 
 }

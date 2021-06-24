@@ -1,0 +1,19 @@
+###_[清理文件]
+###_[改动文件]
+
+
+
+spriteTypes = {
+
+	###_[清理文件]	在UOD主mod中包含相同文件	########################################################
+	##_[UODTB]	/ui_overhaul_qhd_scrollbar.gui
+	##_[UODTB]	/ui_overhaul_qhd_alerts.gfx
+	##_[UODTB]	/ui_overhaul_qhd_modicons.gfx
+	##_[UODTB]	/ui_overhaul_qhd_scrollbar.gfx
+	##_[UODTB]	/ui_overhaul_qhd_topbar.gfx
+	
+	
+	
+
+	###_[改动文件]	###############################################################
+}

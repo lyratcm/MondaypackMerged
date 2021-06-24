@@ -405,7 +405,7 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "no_constructions"
 					font = "malgun_goth_24"
-					text = "STARBASE_QUEUE"
+					text = "DEFENSE_QUEUE"
 					position = { x = 0 y = 6 }
 					maxWidth = 285
 					maxHeight = 20
@@ -424,11 +424,12 @@ guiTypes = {
 					offset = { x = -1 y = 0 }
 				}
 				buttonType = {
-					name = "build"
+					name = "open_catalog"
 					size = { x = 0 y = 0 }
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_tiled_window_transparent"
 					alwaysTransparent = yes
+					#text = "STARBASE_OPEN_DEFENSE_DESIGNS"
 				}
 			}
 		}
@@ -566,11 +567,12 @@ guiTypes = {
 					offset = { x = -1 y = 0 }
 				}
 				buttonType = {
-					name = "build"
+					name = "open_catalog"
 					size = { x = 0 y = 0 }
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_tiled_window_transparent"
 					alwaysTransparent = yes
+					#text = "STARBASE_OPEN_SHIP_DESIGNS"
 				}
 			}
 		}

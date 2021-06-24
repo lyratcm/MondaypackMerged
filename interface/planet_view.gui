@@ -1,11 +1,8 @@
 # tabs
 @tab_height = -2
-# planet pages
-@page_y = 250
-@page_ps_y = 223
 # sidebar default list
-@sidebar_list_h = 870
-@sidebar_list_h_construction = 830
+@sidebar_list_h = 861
+@sidebar_list_h_construction = 821
 @sidebar_w = 450
 @sidebar_inner_w = 430
 @sidebar_inner_button_w = 432
@@ -23,33 +20,9 @@ guiTypes = {
 		name = "pop_category_job_size"
 		position = { x = @pop_strata y = 82 }
 	}
-	### PLANET MODIFIERS
-	containerWindowType = {
-		name = "planet_view_modifier_item_flag"
-		position = { x = 0 y = 0 }
-		size = { width = 54 height = 57 }
-		moveable = no
-		iconType = {
-			name = "background"
-			spriteType = "GFX_modifier_background"
-			position = { x = 0 y = -10 }
-		}
-		iconType = {
-			name = "icon"
-			spriteType = "GFX_empire_flag_32"
-			position = { x = 14 y = 4 }
-		}
-		iconType = {
-			name = "icon_frame"
-			spriteType = "GFX_modifier_frames"
-			position = { x = 0 y = -10 }
-			frame = 1
-			alwaysTransparent = yes
-		}
-	}
 	containerWindowType = {
 		name = "planet_view"
-		size = { width = 874 height = 940 }
+		size = { width = 1102 height = 940 }
 		position = { x = 35 y = -91 }
 		orientation = lower_left
 		origo = lower_left
@@ -60,36 +33,37 @@ guiTypes = {
 		moveable = yes
 		clipping = no
 		background = {
-			name = "background"
-			quadTextureSprite = "GFX_invisible"
-		}
-		containerWindowType = {
-			name = "planet_view_bg"
-			size = { width = 100% height = 100% }
-			position = { x = 0 y = 0 }
-			background = {
-				name = "planet_bg"
-				spriteType = "GFX_ui_tile_large_bg_plain"
-				alwaysTransparent = yes
-			}
+			name = "planet_bg"
+			spriteType = "GFX_tile_large_center_bg"
 		}
 		# Header Buttons
 		containerWindowType = {
 			name = "header_actions"
-			position = { x = -197 y = 7 }
+			position = { x = -7 y = 16 }
 			size = { width = 190 height = 40 }
 			orientation = upper_right
+			origo = upper_right
 			buttonType = {
 				name = "previous_planet"
 				quadTextureSprite = "GFX_button_left"
 				position = { x = 0 y = 0 }
+				shortcut = "CTRL+TAB"
 				clicksound = "click"
 				pdx_tooltip = "PREV"
+			}
+			buttonType = {
+				name = "previous_planet_extra_shortcut"
+				quadTextureSprite = "GFX_invisible"
+				position = { x = 0 y = 0 }
+				shortcut = "SHIFT+TAB"
+				clicksound = "click"
+				alwaysTransparent = yes
 			}
 			buttonType = {
 				name = "next_planet"
 				quadTextureSprite = "GFX_button_right"
 				position = { x = 36 y = 0 }
+				shortcut = "TAB"
 				clicksound = "click"
 				pdx_tooltip = "NEXT"
 			}
@@ -120,12 +94,13 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_portrait_window"
 			size = { width = 560 height = 280 }
-			position = { x = 14 y = -5 }
+			position = { x = 0 y = -5 }
+			orientation = center_up
+			origo = center_up
 			containerWindowType = {
 				name = "portrait"
 				position = { x = 3 y = 16 }
 				size = { width = 560 height = 280 }
-				moveable = no
 				clipping = yes
 				buttonType = {
 					name = "portrait"
@@ -156,7 +131,7 @@ guiTypes = {
 			buttonType = {
 				name = "flag"
 				quadTextureSprite = "GFX_empire_flag_64"
-				position = { x = -16 y = -4 }
+				position = { x = -25 y = 5 }
 			}
 		}
 		# Header
@@ -165,14 +140,16 @@ guiTypes = {
 			quadTextureSprite = "gfx_transparency_button"
 			# Position set by code
 			size = { x = 330 y = 18 }
-			position = { x = 120 y = 13 }
+			position = { x = -165 y = 13 }
+			orientation = center_up
 			oversound = no_sound
 		}
 		instantTextBoxType = {
 			name = "planet_name"
 			font = "malgun_goth_24"
 			text = ""
-			position = { x = 120 y = 13 }
+			position = { x = -165 y = 13 }
+			orientation = center_up
 			maxWidth = 330
 			maxHeight = 40
 			fixedSize = yes
@@ -182,58 +159,75 @@ guiTypes = {
 		#<-------------------------- GOVERNOR --------------------------->
 		containerWindowType = {
 			name = "no_governor_window"
-			size = { width = 358 height = 40 }
-			position = { x = 106 y = 237 }
+			size = { width = 212 height = 250 }
+			position = { x = 25 y = 20 }
 			clipping = no
 			background = {
 				name = "governor_background"
-				spriteType = "GFX_invisible"
+				spriteType = "GFX_tiles_dark_area_cut_8"
 			}
-			iconType = {
-				name = "trade_value_background"
-				spriteType = "GFX_ui_planet_overlay_governor"
-				position = { x = -1 y = -1 }
+			buttonType = {
+				name = "bg"
+				quadTextureSprite = "GFX_leader_bg_governor"
+				position = { x = 5 y = 6 }
+				scale = 0.63
+				alwaysTransparent = yes
+			}
+			containerWindowType = {
+				name = "text_background"
+				position = { x = 15 y = 65 }
+				size = { width = 182 height = 48 }
+				background = {
+					name = "text_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
 			}
 			instantTextBoxType = {
 				name = "no_governor"
 				font = "malgun_goth_24"
-				position = { x = 10 y = 7 }
+				position = { x = 20 y = 76 }
 				text = "PLANETVIEW_NO_GOVERNOR_TITLE"
-				maxWidth = 338
-				maxHeight = 20
-				fixedSize = yes
-				format = center
+				maxWidth = 172
+				maxHeight = 24
 				text_color_code = "Y"
+				format = center
+				vertical_alignment = center
 				alwaysTransparent = yes
 			}
 			buttonType = {
 				name = "change_governor"
 				quadTextureSprite = "GFX_invisible"
-				size = { x = 358 y = 40 }
+				size = { x = 212 y = 250 }
 				position = { x = 0 y = 0 }
 				shortcut = "G"
 			}
 		}
 		containerWindowType = {
 			name = "governor_window"
-			size = { width = 358 height = 40 }
-			position = { x = 106 y = 237 }
+			size = { width = 212 height = 250 }
+			position = { x = 25 y = 20 }
 			clipping = no
 			background = {
-				name = "governor_background"
-				spriteType = "GFX_invisible"
+				name = "general_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
 			}
-			iconType = {
-				name = "trade_value_background"
-				spriteType = "GFX_ui_planet_overlay_governor"
-				position = { x = -1 y = -1 }
+			#iconType = {
+			#	name = "trade_value_background"
+			#	spriteType = "GFX_ui_planet_overlay_governor"
+			#	position = { x = -1 y = -1 }
+			#}
+			buttonType = {
+				name = "bg"
+				quadTextureSprite = "GFX_leader_bg_governor"
+				position = { x = 5 y = 6 }
+				scale = 0.63
+				alwaysTransparent = yes
 			}
 			containerWindowType = {
 				name = "portrait"
-				size = { width = 197 height = 228 }
-				position = { x = -88 y = 0 }
-				orientation = lower_left
-				origo = lower_left
+				size = { width = 202 height = 240 }
+				position = { x = 5 y = 5 }
 				clipping = yes
 				background = {
 					name = "portrait_background"
@@ -241,54 +235,77 @@ guiTypes = {
 				}
 				iconType = {
 					name = "portrait"
-					quadTextureSprite = "GFX_ui_planet_governor_mask_large"
-					position = { x = -88 y = -228 }
+					quadTextureSprite = "GFX_portrait_character"
+					position = { x = -88 y = -239 }
 					orientation = lower_left
-					scale = 0.60
+					scale = 0.63
 					alwaysTransparent = yes
 				}
 			}
-			buttonType = {
-				name = "change_governor"
-				quadTextureSprite = "GFX_invisible"
-				size = { x = 197 y = 194 }
-				position = { x = -88 y = -160 }
-				shortcut = "G"
+			containerWindowType = {
+				name = "header_background"
+				position = { x = 8 y = 8 }
+				size = { width = 196 height = 46 }
+				background = {
+					name = "header_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
 			}
 			instantTextBoxType = {
 				name = "governor_name"
 				font = "cg_16b"
-				position = { x = 36 y = 12 }
+				position = { x = 5 y = 10 }
 				text = "Bob Bobb"
-				maxWidth = 150
-				maxHeight = 20
+				maxWidth = 202
+				maxHeight = 16
 				fixedSize = yes
-				format = left			}
+				format = center			}
+			buttonType = {
+				name = "change_governor"
+				quadTextureSprite = "GFX_invisible"
+				size = { x = 212 y = 250 }
+				position = { x = 0 y = 0 }
+				shortcut = "G"
+			}
 			iconType = {
 				name = "governor_skill"
 				spriteType = "GFX_leader_skill"
-				position = { x = 5 y = 10 }
-				frame = 5
+				position = { x = 14 y = 28 }
+			}
+			containerWindowType = {
+				name = "footer_background"
+				position = { x = 8 y = -41 }
+				size = { width = 196 height = 33 }
+				orientation = lower_left
+				background = {
+					name = "footer_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					alwaysTransparent = yes
+				}
 			}
 			overlappingElementsBoxType = {
 				name = "traits"
-				position = { x = 200 y = 5 }
-				size = { x = 155 y = 16 }
-				format = right
+				position = { x = 10 y = -39 }
+				size = { x = 192 y = 30 }
+				orientation = lower_left
+				format = left
 			}
 		}
 		# Planet Class
 		containerWindowType = {
 			name = "planet_class"
-			size = { width = 250 height = 35 }
-			position = { x = 296 y = 40 }
+			size = { width = 290 height = 35 }
+			position = { x = 115 y = 40 }
+			orientation = center_up
+			origo = center_up
 			background = {
-				name = "background"
+				name = "planet_class_background"
 				spriteType = "GFX_invisible"
 			}
 			iconType = {
 				name = "planet_class_icon"
-				position = { x = 222 y = 3 }
+				position = { x = 252 y = 3 }
 				spriteType = "GFX_planet_type"
 				frame = 1
 				scale = 0.75
@@ -299,17 +316,17 @@ guiTypes = {
 				font = "cg_16b"
 				text = "planet_class"
 				position = { x = 0 y = 9 }
-				maxWidth = 180
-				maxHeight = 30
-				fixedSize = yes
+				maxWidth = 210
+				maxHeight = 16
 				format = right
-				alwaysTransparent = yes
+				vertical_alignment = center
+				#alwaysTransparent = yes
 			}
 			instantTextBoxType = {
 				name = "habitability"
 				font = "cg_16b"
 				text = "10%"
-				position = { x = 170 y = 9 }
+				position = { x = 200 y = 9 }
 				maxWidth = 48
 				maxHeight = 20
 				fixedSize = yes
@@ -317,39 +334,78 @@ guiTypes = {
 				alwaysTransparent = yes
 			}
 		}
+		# Terraforming
+		containerWindowType = {
+			name = "terraforming_in_progress"
+			size = { width = 140 height = 30 }
+			position = { x = 146 y = 72 }
+			orientation = center_up
+			origo = center_up
+			background = {
+				name = "terraforming_bg"
+				spriteType = "GFX_dark_area_cut"
+			}
+			iconType = {
+				name = "terraform_current_planet"
+				position = { x = 3 y = 2 }
+				spriteType = "GFX_planet_type"
+				frame = 1
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "terraform_finished_planet"
+				position = { x = 112 y = 2 }
+				spriteType = "GFX_planet_type"
+				frame = 1
+				scale = 0.65
+				alwaysTransparent = yes
+			}
+			iconType = {
+				name = "terraform_progress"
+				spriteType = "GFX_terraform_progressbar"
+				position = { x = 34 y = 7 }
+				alwaysTransparent = yes
+			}
+		}
 		# Colony Type
 		containerWindowType = {
 			name = "colony_type"
-			size = { width = 225 height = 35 }
-			position = { x = 57 y = 40 }
+			size = { width = 205 height = 35 }
+			position = { x = -135 y = 40 }
+			orientation = center_up
+			origo = center_up
 			background = {
-				name = "background"
+				name = "colony_type_background"
 				spriteType = "GFX_invisible"
 			}
 			iconType = {
 				name = "colony_type_icon"
 				quadTextureSprite = "GFX_colony_type"
 				position = { x = 6 y = 2 }
+				alwaysTransparent = yes
 			}
 			instantTextBoxType = {
 				name = "colony_type_text"
 				font = "cg_16b"
 				text = "Happy World"
-				position = { x = 39 y = 9 }
-				maxWidth = 180
-				maxHeight = 20
-				fixedSize = yes
+				position = { x = 42 y = 9 }
+				maxWidth = 160
+				maxHeight = 16
 				format = left
-				alwaysTransparent = yes
+				vertical_alignment = center
+				#alwaysTransparent = yes
 			}
 		}
 		# Planet Devastation
 		containerWindowType = {
 			name = "planet_devastation"
 			size = { width = 180 height = 35 }
-			position = { x = 364 y = 196 }
+			position = { x = 161 y = 197 }
+			orientation = center_up
+			origo = center_up
 			background = {
-				name = "background"
+				name = "planet_devastation_background"
 				spriteType = "GFX_tiles_dark_area_cut_8"
 			}
 			iconType = {
@@ -374,9 +430,11 @@ guiTypes = {
 		containerWindowType = {
 			name = "planet_size"
 			size = { width = 86 height = 26 }
-			position = { x = 465 y = 16 }
+			position = { x = 215 y = 16 }
+			orientation = center_up
+			origo = center_up
 			background = {
-				name = "governor_background"
+				name = "planet_size_background"
 				spriteType = "GFX_invisible"
 			}
 			iconType = {
@@ -384,7 +442,7 @@ guiTypes = {
 				spriteType = "GFX_planet_view_planet"
 				position = { x = 52 y = 2 }
 				scale = 0.95
-				tooltip_mode_enabled = yes
+				alwaysTransparent = yes
 			}
 			instantTextBoxType = {
 				name = "planet_size"
@@ -395,25 +453,30 @@ guiTypes = {
 				maxHeight = 20
 				fixedSize = yes
 				format = right
+				alwaysTransparent = yes
 			}
 		}
 		# Modifiers
 		containerWindowType = {
 			name = "modifiers"
-			position = { x = 190 y = 84 }
-			size = { width = 350 height = 34 }
+			position = { x = -13 y = 211 }
+			size = { width = 518 height = 52 }
+			orientation = center_up
+			origo = center_up
 			overlappingElementsBoxType = {
 				name = "modifiers"
-				position = { x = 0 y = 5 }
-				size = { x = 350 y = 34 }
-				format = right			}
+				position = { x = 0 y = 0 }
+				size = { x = 518 y = 52 }
+				format = left			}
 		}
 		#<------------------------------- Planet Info Panel --------------------------->
 		# Actions & Planet Info
 		containerWindowType = {
 			name = "planet_actions_window"
-			position = { x = 582 y = 47 }
+			position = { x = -10 y = 60 }
 			size = { width = 270 height = 170 }
+			orientation = upper_right
+			origo = upper_right
 			iconType = {
 				name = "background"
 				spriteType = "GFX_planetview_topright_frame"
@@ -519,10 +582,9 @@ guiTypes = {
 			### Stability Related Data
 			containerWindowType = {
 				name = "crime_status_window"
-				position = { x = 10 y = 95 }
+				position = { x = 10 y = 90 }
 				size = { width = 250 height = 74 }
 				background = {
-					position = { x = 0 y = -5 }
 					name = "actions_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
 				}
@@ -530,7 +592,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planet_crime"
 					size = { width = 77 height = 34 }
-					position = { x = 10 y = 1 }
+					position = { x = 10 y = 6 }
 					iconType = {
 						name = "planet_crime_icon"
 						spriteType = "GFX_planet_view_crime"
@@ -552,7 +614,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planet_housing"
 					size = { width = 76 height = 34 }
-					position = { x = 93 y = 1 }
+					position = { x = 93 y = 6 }
 					iconType = {
 						name = "planet_housing_icon"
 						spriteType = "GFX_planet_view_planet_housing"
@@ -574,7 +636,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planet_amenities"
 					size = { width = 76 height = 34 }
-					position = { x = 170 y = 1 }
+					position = { x = 170 y = 6 }
 					iconType = {
 						name = "planet_amenities_icon"
 						spriteType = "GFX_planet_view_planet_amenities"
@@ -602,7 +664,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planet_jobs"
 					size = { width = 76 height = 34 }
-					position = { x = 10 y = 31 }
+					position = { x = 10 y = 36 }
 					iconType = {
 						name = "planet_jobs_icon"
 						spriteType = "GFX_pop_job"
@@ -625,7 +687,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planet_unemployed"
 					size = { width = 155 height = 34 }
-					position = { x = 93 y = 31 }
+					position = { x = 93 y = 36 }
 					iconType = {
 						name = "planet_unemployed_icon"
 						spriteType = "GFX_unemployed"
@@ -650,20 +712,45 @@ guiTypes = {
 					}
 				}
 			}
+			containerWindowType = {
+				name = "colonizing_planet_window"
+				size = { width = 250 height = 74 }
+				position = { x = 10 y = 90 }
+				background = {
+					name = "colonizing_planet_background"
+					spriteType = "GFX_invisible"
+				}
+				instantTextBoxType = {
+					name = "colonizing_planet_label"
+					font = "malgun_goth_24"
+					text = "COLONIZING_PLANET"
+					position = { x = 0 y = 12 }
+					maxWidth = 250
+					maxHeight = 20
+					format = center
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "colonization_progress"
+					spriteType = "GFX_colonization_progressbar"
+					position = { x = 12 y = 42 }
+					alwaysTransparent = yes
+				}
+			}
 		}
 		###Planet Summary Content
 		containerWindowType = {
 			name = "summary_window"
+			position = { x = 0 y = 0 }
 			size = { width = 100%% height = 100%% }
-			position = { x = 0 y = @page_ps_y }
 			containerWindowType = {
 				name = "uncolonizable_planet_window"
-				position = { x = 0 y = 71 }
-				size = { width = 600 height = 320 }
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
 				containerWindowType = {
 					name = "planet_desc_window"
-					position = { x = 296 y = 30 }
-					size = { width = 568 height = 240 }
+					position = { x = 296 y = 414 }
+					size = { width = -10 height = -10 }
 					background = {
 						name = "planet_desc_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -671,10 +758,10 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "planet_desc"
 						font = "malgun_goth_24"
-						position = { x = 10 y = 10 }
+						position = { x = 20 y = 20 }
 						text = "blah blah blah"
-						maxWidth = 548
-						maxHeight = 220
+						maxWidth = 756
+						maxHeight = 476
 						format = left
 						text_color_code = "L"
 						scrollbarType = "standardtext_slider_small"					}
@@ -682,7 +769,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "planetary_resources_title"
 					size = { width = 250 height = 50 }
-					position = { x = 0 y = 74 }
+					position = { x = 0 y = 362 }
 					iconType = {
 						name = "title_hex"
 						quadTextureSprite = "GFX_small_hex_bg"
@@ -708,8 +795,8 @@ guiTypes = {
 				# Planetary resources
 				containerWindowType = {
 					name = "planetary_resources"
-					size = { width = 275 height = 145 }
-					position = { x = 10 y = 125 }
+					size = { width = 275 height = 180 }
+					position = { x = 10 y = 414 }
 					background = {
 						name = "resources_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -720,7 +807,7 @@ guiTypes = {
 						position = { x = 20 y = 20 }
 						text = "10"
 						maxWidth = 235
-						maxHeight = 105
+						maxHeight = 140
 						format = left
 						scrollbarType = "standardtext_slider_small"
 					}
@@ -728,45 +815,115 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "colonizable_planet_window"
-				position = { x = 0 y = 27 }
+				position = { x = 0 y = 0 }
+				size = { width = 100%% height = 100%% }
+				#<------------------------ PLANET FEATURES / DEPOSITS --------------------------->
+				# Planet Features
+				containerWindowType = {
+					name = "deposits_summary_window"
+					size = { width = 275 height = 40 }
+					position = { x = 10 y = 364 }
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut"
+					}
+					buttonType = {
+						name = "deposits_button"
+						position = { x = 10 y = -3 }
+						spriteType = "GFX_ui_inspect_planet_features"
+						buttonFont = "cg_16b"
+						# text = "FEATURES"
+						font = "cg_16b"
+						oversound = mouse_over
+						pdx_tooltip = "DEPOSITS_TOOLTIP"
+						navLeft = "change"
+						shortcut = "K"
+					}
+					containerWindowType = {
+						name = "blocker_deposits_window"
+						size = { width = 100 height = 30 }
+						position = { x = 190 y = 10 }
+						iconType = {
+							name = "blocker_deposit_frame"
+							spriteType = "GFX_blocker_icon"
+							position = { x = -7 y = 0 }
+							scale = 1
+						}
+						instantTextBoxType = {
+							name = "blocker_deposit_num"
+							font = "cg_16b"
+							position = { x = 26 y = 1 }
+							text = "x5"
+							maxWidth = 35
+							maxHeight = 50
+							fixedSize = yes
+							format = left
+						}
+					}
+					# Rare Deposits Summary, shown when grid overflows
+					containerWindowType = {
+						name = "rare_deposits_window"
+						size = { width = 90 height = 30 }
+						position = { x = 100 y = 10 }
+						iconType = {
+							name = "blocker_deposit_frame"
+							spriteType = "GFX_resource_strategic_top_bar"
+							position = { x = 6 y = 0 }
+							scale = 1.1
+						}
+						instantTextBoxType = {
+							name = "blocker_deposit_num"
+							font = "cg_16b"
+							position = { x = 32 y = 1 }
+							text = "x5"
+							maxWidth = 35
+							maxHeight = 50
+							fixedSize = yes
+							format = left
+						}
+					}
+				}
 				#<---------------------------- DISTRICTS ----------------------------->
 				### Districts Container Window
 				containerWindowType = {
-					name = "districts_window"
-					size = { width = 275 height = 403 }
-					position = { x = 10 y = 115 }
-					clipping = yes
-					margin = { top = 2 bottom = 2 }
-					verticalScrollbar = "right_vertical_slider_thick"
+					name = "districts_window_background"
+					size = { width = 338 height = -10 }
+					position = { x = 10 y = 414 }
 					background = {
 						name = "districts_window_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
-					# Districts
-					gridBoxType = {
-						name = "districts_grid_box"
-						position = { x = 2 y = 80 }
-						size = { width = 265 height = 742 }
-						format = UPPER_LEFT
-						slotsize = { width = 265 height = 53 }
-						add_horizontal = yes
-						max_slots_horizontal = 1
+				}
+				containerWindowType = {
+					name = "districts_window"
+					size = { width = 342 height = -10 }
+					position = { x = 10 y = 414 }
+					clipping = yes
+					margin = { top = 2 right = 4 bottom = 2 }
+					verticalScrollbar = "right_vertical_slider_s_thick"
+					background = {
+						name = "districts_window_background"
+						spriteType = "GFX_invisible"
 					}
 					# Districts num
 					containerWindowType = {
 						name = "planet_num_districts"
-						size = { width = 70 height = 45 }
-						position = { x = 0 y = 40 }
+						size = { width = 60 height = 28 }
+						position = { x = 10 y = 5 }
+						background = {
+							name = "districts_window_background"
+							spriteType = "GFX_dark_area_cut_light"
+						}
 						iconType = {
 							name = "num_districts_icon"
 							spriteType = "GFX_district_small"
-							position = { x = 10 y = 10 }
+							position = { x = 0 y = 0 }
 							tooltip_mode_enabled = yes
 						}
 						instantTextBoxType = {
 							name = "planet_districts_amount"
 							font = "cg_16b"
-							position = { x = 30 y = 15 }
+							position = { x = 25 y = 5 }
 							text = "10"
 							maxWidth = 30
 							maxHeight = 40
@@ -774,76 +931,19 @@ guiTypes = {
 							format = center
 						}
 					}
-					# Planet Features
-					containerWindowType = {
-						name = "deposits_summary_window"
-						size = { width = 260 height = 40 }
-						position = { x = 5 y = 5 }
-						background = {
-							name = "background"
-							spriteType = "GFX_tiles_dark_area_cut_8"
-						}
-						buttonType = {
-							name = "deposits_button"
-							position = { x = 10 y = 1 }
-							spriteType = "GFX_inspect_planet_features"
-							buttonFont = "cg_16b"
-							font = "cg_16b"							oversound = mouse_over
-							pdx_tooltip = "DEPOSITS_TOOLTIP"
-							navLeft = "change"
-							shortcut = "K"
-						}
-						containerWindowType = {
-							name = "blocker_deposits_window"
-							size = { width = 100 height = 30 }
-							position = { x = 190 y = 10 }
-							iconType = {
-								name = "blocker_deposit_frame"
-								spriteType = "GFX_blocker_icon"
-								position = { x = -7 y = 0 }
-								scale = 1
-							}
-							instantTextBoxType = {
-								name = "blocker_deposit_num"
-								font = "cg_16b"
-								position = { x = 26 y = 1 }
-								text = "x5"
-								maxWidth = 35
-								maxHeight = 50
-								fixedSize = yes
-								format = left							}
-						}
-						# Rare Deposits Summary, shown when grid overflows
-						containerWindowType = {
-							name = "rare_deposits_window"
-							size = { width = 90 height = 30 }
-							position = { x = 100 y = 10 }
-							iconType = {
-								name = "blocker_deposit_frame"
-								spriteType = "GFX_resource_strategic_top_bar"
-								position = { x = 6 y = 0 }
-								scale = 1.1
-							}
-							instantTextBoxType = {
-								name = "blocker_deposit_num"
-								font = "cg_16b"
-								position = { x = 32 y = 1 }
-								text = "x5"
-								maxWidth = 35
-								maxHeight = 50
-								fixedSize = yes
-								format = left							}
-						}
-					}
 					# Available District Cubes Container
 					containerWindowType = {
 						name = "available_districts_window"
-						size = { width = 200 height = 45 }
-						position = { x = 60 y = 40 }
+						size = { width = -10 height = 28 }
+						position = { x = 80 y = 5 }
+						background = {
+							name = "districts_window_background"
+							spriteType = "GFX_dark_area_cut_light"
+						}
 						gridBoxType = {
 							name = "available_districts_grid_box"
 							size = { width = 200 height = 20 }
-							position = { x = 0 y = 15 }
+							position = { x = 5 y = 5 }
 							format = "UPPER_LEFT"
 							slotSize = { width = 10 height = 10 }
 							max_slots_horizontal = 20
@@ -851,11 +951,21 @@ guiTypes = {
 							add_horizontal = no
 						}
 					}
+					# Districts
+					gridBoxType = {
+						name = "districts_grid_box"
+						position = { x = 0 y = 40 }
+						size = { width = 265 height = 680 }
+						format = "UPPER_LEFT"
+						slotsize = { width = 166 height = 85 }
+						add_horizontal = yes
+						max_slots_horizontal = 2
+					}
 				}
 				containerWindowType = {
 					name = "planet_desc_window"
-					position = { x = 296 y = 74 }
-					size = { width = 568 height = 240 }
+					position = { x = 358 y = 414 }
+					size = { width = -10 height = -10 }
 					background = {
 						name = "planet_desc_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -863,41 +973,41 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "planet_desc"
 						font = "malgun_goth_24"
-						position = { x = 10 y = 10 }
+						position = { x = 20 y = 20 }
 						text = "blah blah blah"
-						maxWidth = 548
-						maxHeight = 220
+						maxWidth = 694
+						maxHeight = 476
 						format = left
 						text_color_code = "L"
 						scrollbarType = "standardtext_slider_small"					}
 				}
-				containerWindowType = {
-					name = "colonizing_planet_window"
-					size = { width = 568 height = 44 }
-					position = { x = 296 y = 474 }
-					background = {
-						name = "planet_desc_background"
-						spriteType = "GFX_tiles_dark_area_cut_8"
-					}
-					iconType = {
-						name = "colonization_progress"
-						spriteType = "GFX_ui_progressbar_550"
-						position = { x = 9 y = 4 }
-					}
-					instantTextBoxType = {
-						name = "colonizing_planet_label"
-						font = "malgun_goth_24"
-						text = "COLONIZING_PLANET"
-						position = { x = 10 y = 9 }
-						maxWidth = 548
-						maxHeight = 20						format = center
-					}
-				}
+				#containerWindowType = {
+				#	name = "colonizing_planet_window"
+				#	size = { width = 568 height = 44 }
+				#	position = { x = 296 y = 474 }
+				#	background = {
+				#		name = "planet_desc_background"
+				#		spriteType = "GFX_tiles_dark_area_cut_8"
+				#	}
+				#	iconType = {
+				#		name = "colonization_progress"
+				#		spriteType = "GFX_ui_progressbar_550"
+				#		position = { x = 9 y = 4 }
+				#	}
+				#	instantTextBoxType = {
+				#		name = "colonizing_planet_label"
+				#		font = "malgun_goth_24"
+				#		text = "COLONIZING_PLANET"
+				#		position = { x = 10 y = 9 }
+				#		maxWidth = 548
+				#		maxHeight = 20				#		format = center
+				#	}
+				#}
 			}
 			containerWindowType = {
 				name = "terraforming_panel"
 				size = { width = 270 height = 40 }
-				position = { x = 12 y = 101 }
+				position = { x = 12 y = 323 }
 				clipping = no
 				background = {
 					name = "terraforming_background"
@@ -923,7 +1033,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "title_planetary"
 					size = { width = 250 height = 50 }
-					position = { x = -12 y = -51 }
+					position = { x = -12 y = -52 }
 					iconType = {
 						name = "title_hex"
 						quadTextureSprite = "GFX_small_hex_bg"
@@ -932,8 +1042,9 @@ guiTypes = {
 					}
 					iconType = {
 						name = "title_line"
-						quadTextureSprite = "GFX_line_short"
+						quadTextureSprite = "GFX_line"
 						position = { x = 13 y = 36 }
+						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "title_text"
@@ -945,41 +1056,14 @@ guiTypes = {
 						fixedSize = yes
 						format = left					}
 				}
-				containerWindowType = {
-					name = "terraforming_in_progress"
-					size = { width = 114 height = 30 }
-					position = { x = 151 y = 5 }
-					background = {
-						name = "terraforming_bg"
-						spriteType = "GFX_tiles_dark_area_cut_8"
-					}
-					iconType = {
-						name = "terraform_current_planet"
-						position = { x = 4 y = 2 }
-						spriteType = "GFX_planet_type"
-						frame = 1
-						scale = 0.65
-						alwaysTransparent = yes
-					}
-					iconType = {
-						name = "terraform_finished_planet"
-						position = { x = 85 y = 2 }
-						spriteType = "GFX_planet_type"
-						frame = 1
-						scale = 0.65
-						alwaysTransparent = yes
-					}
-					iconType = {
-						name = "terraform_progress"
-						spriteType = "GFX_building_progressbar"
-						position = { x = 31 y = 9 }
-					}
-				}
 			}
 			containerWindowType = {
 				name = "archaeological_site_window"
-				size = { width = 300 height = 100 }
-				position = { x = 578 y = -4 }
+				size = { width = 330 height = 100 }
+				position = { x = -10 y = 281 }
+				orientation = upper_right
+				origo = upper_right
+				clipping = no
 				background = {
 					name = "archaeological_site_background"
 					spriteType = "GFX_invisible"
@@ -991,18 +1075,18 @@ guiTypes = {
 					iconType = {
 						name = "title_hex"
 						quadTextureSprite = "GFX_small_hex_bg"
-						position = { x = -11 y = 0 }
+						position = { x = -21 y = 0 }
 						alwaysTransparent = yes
 					}
 					iconType = {
 						name = "title_line"
-						quadTextureSprite = "GFX_line_short"
-						position = { x = 13 y = 36 }
+						quadTextureSprite = "GFX_line"
+						position = { x = 3 y = 36 }
 					}
 					instantTextBoxType = {
 						name = "title_text"
 						font = "malgun_goth_24"
-						position = { x = 20 y = 18 }
+						position = { x = 10 y = 18 }
 						text = "ARCHAEOLOGICAL_SITE"
 						maxWidth = 168
 						maxHeight = 20
@@ -1012,8 +1096,8 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "archaeological_site_background"
-					size = { width = 200 height = 50 }
-					position = { x = 12 y = 41 }
+					size = { width = 100% height = 50 }
+					position = { x = 0 y = 42 }
 					background = {
 						name = "archaeological_site_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1021,13 +1105,13 @@ guiTypes = {
 				}
 				iconType = {
 					name = "icon"
-					position = { x = 28 y = 52 }
+					position = { x = 30 y = 53 }
 					quadTextureSprite = "GFX_icon_archaeology"
 				}
 				buttonType = {
 					name = "button"
-					position = { x = 62 y = 37 }
-					spriteType = "GFX_standard_button_116_34"
+					position = { x = 110 y = 38 }
+					spriteType = "GFX_standard_button_180_34_button"
 					buttonFont = "cg_16b"
 					text = "VIEW_SITE"
 					font = "cg_16b"
@@ -1042,8 +1126,8 @@ guiTypes = {
 				# Primitives
 				containerWindowType = {
 					name = "planet_primitives_window"
-					size = { width = 264 height = 444 }
-					position = { x = 295 y = 101 }
+					size = { width = 429 height = 379 }
+					position = { x = 358 y = 323 }
 					clipping = no
 					background = {
 						name = "planet_primitives_background"
@@ -1053,7 +1137,7 @@ guiTypes = {
 					containerWindowType = {
 						name = "title_primitives"
 						size = { width = 180 height = 50 }
-						position = { x = -12 y = -51 }
+						position = { x = -12 y = -52 }
 						iconType = {
 							name = "title_hex"
 							quadTextureSprite = "GFX_small_hex_bg"
@@ -1078,60 +1162,81 @@ guiTypes = {
 					}
 					instantTextBoxType = {
 						name = "planet_primitives"
-						font = "cg_16b"
-						position = { x = 10 y = 10 }
+						font = "malgun_goth_24"
+						position = { x = 15 y = 15 }
 						text = "This society is in a really stupid age"
-						maxWidth = 244
-						maxHeight = 424
-						fixedSize = yes
-						format = left					}
+						maxWidth = 399
+						maxHeight = 349
+						format = left
+						text_color_code = "L"
+						scrollbarType = "standardtext_slider_small"					}
 				}
 				#<---------------------------- RESOURCES -------------------------------->
 				# Planetary Resources
 				containerWindowType = {
 					name = "planetary_resources"
-					size = { width = 549 height = 152 }
-					position = { x = 10 y = 555 }
+					size = { width = 429 height = -10 }
+					position = { x = 358 y = 712 }
 					background = {
 						name = "output_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
 					containerWindowType = {
 						name = "planet_production_bg"
-						size = { width = 260 height = 100 }
+						size = { width = 200 height = -10 }
 						position = { x = 10 y = 42 }
+						clipping = no
 						background = {
 							name = "background"
 							spriteType = "GFX_tiles_dark_area_cut_8"
 						}
+						iconType = {
+							name = "hex_bg"
+							spriteType = "GFX_hex_center_bg"
+							position = { x = 0 y = -18 }
+							orientation = center_up
+							centerPosition = yes
+							alwaysTransparent = yes
+						}
 					}
 					containerWindowType = {
 						name = "planet_deficit_bg"
-						size = { width = 260 height = 100 }
-						position = { x = -270 y = 42 }
+						size = { width = 200 height = -10 }
+						position = { x = -10 y = 42 }
 						orientation = upper_right
+						origo = upper_right
+						clipping = no
 						background = {
 							name = "background"
 							spriteType = "GFX_tiles_dark_area_cut_8"
+						}
+						iconType = {
+							name = "hex_bg"
+							spriteType = "GFX_hex_center_bg"
+							position = { x = 0 y = -18 }
+							orientation = center_up
+							centerPosition = yes
+							alwaysTransparent = yes
 						}
 					}
 					instantTextBoxType = {
 						name = "planetary_production_output_title"
 						font = "malgun_goth_24"
 						text = "PLANETARY_PRODUCTION"
-						position = { x = 15 y = 8 }
-						maxWidth = 250
-						maxHeight = 20
-						fixedSize = yes
-						format = center						alwaysTransparent = yes
+						position = { x = 5 y = 8 }
+						maxWidth = 210
+						maxHeight = 24
+						format = center
+						vertical_alignment = center
+						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "planetary_production_output_amount"
 						font = "cg_16b"
-						position = { x = 15 y = 47 }
+						position = { x = 15 y = 52 }
 						text = "10"
-						maxWidth = 250
-						maxHeight = 90
+						maxWidth = 190
+						maxHeight = 151
 						fixedSize = yes
 						format = center
 					}
@@ -1139,21 +1244,22 @@ guiTypes = {
 						name = "planetary_consumption_output_title"
 						font = "malgun_goth_24"
 						text = "PLANETARY_DEFICIT"
-						position = { x = -265 y = 8 }
+						position = { x = -215 y = 8 }
 						orientation = upper_right
-						maxWidth = 250
-						maxHeight = 20
+						maxWidth = 210
+						maxHeight = 24
 						fixedSize = yes
-						format = center						alwaysTransparent = yes
+						format = center
+						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "planetary_consumption_output_amount"
 						font = "cg_16b"
-						position = { x = -265 y = 47 }
+						position = { x = -205 y = 52 }
 						orientation = upper_right
 						text = "10"
-						maxWidth = 250
-						maxHeight = 90
+						maxWidth = 190
+						maxHeight = 151
 						fixedSize = yes
 						format = center
 					}
@@ -1162,7 +1268,9 @@ guiTypes = {
 				containerWindowType = {
 					name = "trade_value_window"
 					size = { width = 78 height = 32 }
-					position = { x = 468 y = 14 }
+					position = { x = 213 y = 237 }
+					orientation = center_up
+					origo = center_up
 					clipping = no
 					background = {
 						name = "background"
@@ -1182,9 +1290,9 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "trade_value_amount"
 						font = "malgun_goth_24"
-						position = { x = 30 y = 4 }
+						position = { x = 20 y = 4 }
 						text = "5"
-						maxWidth = 50
+						maxWidth = 70
 						maxHeight = 20
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
@@ -1194,19 +1302,23 @@ guiTypes = {
 				# Buildings
 				containerWindowType = {
 					name = "buildings_background"
-					position = { x = 569 y = 47 }
-					size = { width = 295 height = 660 }
+					position = { x = -10 y = 278 }
+					size = { width = 295 height = -10 }
+					orientation = upper_right
+					origo = upper_right
 					background = {
 						name = "buildings_box_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
+						alwaysTransparent = yes
 					}
 				}
 				gridBoxType = {
 					name = "buildings_box"
-					position = { x = 569 y = 47 }
-					size = { width = 292 height = 656 }
+					position = { x = -305 y = 278 }
+					orientation = upper_right
+					size = { width = 292 height = -10 }
 					format = "UPPER_LEFT"
-					slotSize = { width = 73 height = 73 }
+					slotSize = { width = 73 height = 72 }
 					add_horizontal = yes
 					max_slots_horizontal = 4
 					#max_slots_vertical = 9
@@ -1214,18 +1326,21 @@ guiTypes = {
 				containerWindowType = {
 					name = "title_buildings"
 					size = { width = 295 height = 48 }
-					position = { x = 569 y = 6 }
+					position = { x = -10 y = 237 }
+					orientation = upper_right
+					origo = upper_right
 					iconType = {
 						name = "hex_bg"
 						spriteType = "GFX_hex_center_bg"
-						position = { x = -273 y = -11 }
+						position = { x = 0 y = 24 }
 						orientation = center_up
+						centerPosition = yes
 						alwaysTransparent = yes
 					}
 					iconType = {
 						name = "header_line"
 						spriteType = "GFX_ui_line_center_tiny"
-						position = { x = -122 y = 26 }
+						position = { x = -122 y = 25 }
 						orientation = center_up
 					}
 					instantTextBoxType = {
@@ -1243,159 +1358,187 @@ guiTypes = {
 				# designation
 				containerWindowType = {
 					name = "designation_info"
-					size = { width = 264 height = 125 }
-					position = { x = 296 y = 78 }
+					size = { width = 492 height = 81 }
+					position = { x = 295 y = 323 }
 					background = {
 						name = "designation_info_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
+					containerWindowType = {
+						name = "text_background"
+						size = { width = 250 height = 43 }
+						position = { x = 95 y = 10 }
+						background = {
+							name = "text_background"
+							spriteType = "GFX_dark_area_cut_light"
+						}
+					}
 					iconType = {
-						name = "empire_header_line"
-						quadTextureSprite = "GFX_line_short"
-						position = { x = 13 y = 52 }
+						name = "text_hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = -25 y = 32 }
+						orientation = center_up
+						centerPosition = yes
 						alwaysTransparent = yes
 					}
 					containerWindowType = {
 						name = "designation_button_bg"
 						size = { width = 64 height = 53 }
-						position = { x = 19 y = -57 }
-						orientation = lower_left
+						position = { x = -146 y = 5 }
+						orientation = upper_right
 					 	background = {
-							name = "actions_background"
+							name = "designation_button_bg_art"
 							quadTextureSprite = "GFX_planet_bg_tile_frame"
+							alwaysTransparent = yes
 						}
 					}
 					buttonType = {
 						name = "designation_button"
-						position = { x = 30 y = -48 }
+						position = { x = -135 y = 14 }
 						size = { x = 42 y = 35 }
 						quadTextureSprite = "GFX_button_dark"
-						orientation = lower_left
+						orientation = upper_right
 					}
 					iconType = {
 						name = "designation_icon"
 						quadTextureSprite = "GFX_colony_type"
-						position = { x = 36 y = -46 }
+						position = { x = -130 y = 17 }
 						alwaysTransparent = yes
-						orientation = lower_left
+						orientation = upper_right
 					}
 					instantTextBoxType = {
 						name = "designation_name"
 						font = "cg_16b"
 						text = ""
-						position = { x = 0 y = 0 }
-						maxWidth = 0
-						maxHeight = 0
-						fixedSize = yes
-						format = left
-						orientation = lower_left
-						alwaysTransparent = yes
+						position = { x = -215 y = -23 }
+						orientation = lower_right
+						maxWidth = 200
+						maxHeight = 16
+						format = right
 					}
 					containerWindowType = {
 						name = "automation_buttons_bg"
 						size = { width = 90 height = 53 }
-						position = { x = -103 y = -57 }
-						orientation = lower_right
+						position = { x = -93 y = 5 }
+						orientation = upper_right
 						background = {
 							name = "automation_buttons_bg_art"
 							quadTextureSprite = "GFX_planet_bg_tile_frame"
+							alwaysTransparent = yes
 						}
 					}
 					buttonType = {
 						name = "automated_development_button"
-						position = { x = -95 y = -50 }
+						position = { x = -85 y = 12 }
 						quadTextureSprite = "GFX_button_automate"
 						pdx_tooltip = "SELECT_COLONY_AUTOMATIC_DEVELOPMENT"
-						orientation = lower_right
+						orientation = upper_right
 					}
 					iconType = {
 						name = "automated_development_selected"
-						position = { x = -95 y = -50 }
+						position = { x = -85 y = 12 }
 						quadTextureSprite = "GFX_button_automate_selected"
 						pdx_tooltip = "COLONY_AUTOMATIC_DEVELOPMENT_SELECTED"
-						orientation = lower_right
+						orientation = upper_right
 					}
 					buttonType = {
 						name = "manual_development_button"
-						position = { x = -59 y = -50 }
+						position = { x = -49 y = 12 }
 						quadTextureSprite = "GFX_button_manual"
 						pdx_tooltip = "SELECT_COLONY_MANUAL_DEVELOPMENT"
-						orientation = lower_right
+						orientation = upper_right
 					}
 					iconType = {
 						name = "manual_development_selected"
-						position = { x = -59 y = -50 }
+						position = { x = -49 y = 12 }
 						quadTextureSprite = "GFX_button_manual_selected"
 						pdx_tooltip = "COLONY_MANUAL_DEVELOPMENT_SELECTED"
-						orientation = lower_right
+						orientation = upper_right
 					}
 				}
 				#<--------------------- Sector Managment --------------------------->
 				# Sector
 				containerWindowType = {
 					name = "sector_info"
-					size = { width = 264 height = 40 }
-					position = { x = 296 y = 80 }
+					size = { width = 492 height = 81 }
+					position = { x = 295 y = 323 }
+					containerWindowType = {
+						name = "automation_buttons_bg"
+						size = { width = 90 height = 53 }
+						position = { x = 5 y = 5 }
+						background = {
+							name = "automation_buttons_bg_art"
+							quadTextureSprite = "GFX_planet_bg_tile_frame"
+							alwaysTransparent = yes
+						}
+					}
+					buttonType = {
+						name = "open_sector_view"
+						position = { x = 13 y = 12 }
+						quadTextureSprite = "GFX_button_open_sector_view"
+						pdx_tooltip = "PLANET_LIST"
+					}
 					buttonType = {
 						name = "sector_action_button"
-						position = { x = 218 y = 12 }
-						size = { x = 35 y = 35 }
+						position = { x = 49 y = 12 }
 						quadTextureSprite = "GFX_button_sector_new"
 					}
 					instantTextBoxType = {
 						name = "sector_name"
 						font = "malgun_goth_24"
 						text = "SECTOR NAME"
-						position = { x = 50 y = 12 }
-						maxWidth = 165
-						maxHeight = 30
+						position = { x = 105 y = 18 }
+						maxWidth = 230
+						maxHeight = 24
 						fixedSize = yes
-						format = left						alwaysTransparent = yes
+						format = center
 					}
 					instantTextBoxType = {
 						name = "sector_type"
 						font = "cg_16b"
 						text = "SECTOR TYPE"
-						position = { x = 50 y = 34 }
-						maxWidth = 165
-						maxHeight = 30
-						fixedSize = yes
-						format = left						alwaysTransparent = yes
-					}
-					buttonType = {
-						name = "open_sector_view"
-						position = { x = 8 y = 12 }
-						size = { x = 35 y = 35 }
-						quadTextureSprite = "GFX_button_open_sector_view"
-						pdx_tooltip = "PLANET_LIST"
+						position = { x = 15 y = -23 }
+						orientation = lower_left
+						maxWidth = 200
+						maxHeight = 16
+						format = left
 					}
 				}
 				#<--------------------- Build Queue --------------------------->
 				# Build Queue
 				containerWindowType = {
 					name = "build_queue"
-					size = { width = 264 height = 332 }
-					position = { x = 296 y = 213 }
+					size = { width = 429 height = 288 }
+					position = { x = 358 y = 414 }
 					background = {
 						name = "build_queue_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = 0 y = 24 }
+						orientation = center_up
+						centerPosition = yes
+						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "no_constructions"
 						font = "malgun_goth_24"
 						text = "QUEUE"
-						position = { x = 0 y = 10 }
-						maxWidth = 264
+						position = { x = 10 y = 10 }
+						maxWidth = 409
 						maxHeight = 20
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
 					}
 					smoothListBoxType = {
 						name = "build_queue"
-						position = { x = 2 y = 44 }						size = { x = 260 y = 288 }
+						position = { x = 10 y = 44 }						size = { x = 409 y = 235 }
 						borderSize = { x = 0 y = 0 }
 						scrollbarType = "standardlistbox_slider_thick"
 						offset = { x = -3 y = 0 }
+						spacing = 6
 					}
 				}
 			}
@@ -1404,11 +1547,11 @@ guiTypes = {
 		containerWindowType = {
 			name = "population_window"
 			size = { width = 100%% height = 100%% }
-			position = { x = 0 y = @page_y }
+			position = { x = 0 y = 0 }
 			containerWindowType = {
 				name = "jobs_bg_art"
 				size = { width = -5 height = -5 }
-				position = { x = 267 y = 35 }
+				position = { x = 490 y = 318 }
 				background = {
 					name = "jobs_bg_art"
 					quadTextureSprite = "GFX_planet_bg_tile_frame"
@@ -1416,30 +1559,36 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "title"
-				size = { width = 150 height = 50 }
-				position = { x = 560 y = -25 }
+				size = { width = 450 height = 50 }
+				position = { x = 482 y = 271 }
+				clipping = no
+				background = {
+					name = "title_background"
+					quadTextureSprite = "GFX_invisible"
+				}
 				iconType = {
 					name = "title_hex"
 					quadTextureSprite = "GFX_small_hex_bg"
-					position = { x = -10 y = -18 }
+					position = { x = -10 y = 0 }
 					alwaysTransparent = yes
 				}
 				iconType = {
 					name = "title_line"
-					quadTextureSprite = "GFX_line_short"
-					position = { x = 14 y = 18 }
+					quadTextureSprite = "GFX_line"
+					position = { x = 14 y = 36 }
+					alwaysTransparent = yes
 				}
 				iconType = {
 					name = "planet_jobs_icon"
 					spriteType = "GFX_pop_job"
-					position = { x = 16 y = 0 }
+					position = { x = 16 y = 18 }
 					scale = 1
 					tooltip_mode_enabled = yes
 				}
 				instantTextBoxType = {
 					name = "title_text"
 					font = "malgun_goth_24"
-					position = { x = 41 y = 0 }
+					position = { x = 45 y = 18 }
 					text = "JOBS_TITLE"
 					maxWidth = 150
 					maxHeight = 20
@@ -1448,41 +1597,46 @@ guiTypes = {
 				instantTextBoxType = {
 					name = "job_desc_text"
 					font = "cg_16b"
-					position = { x = 170 y = 2 }
+					position = { x = 190 y = 22 }
 					text = "FAVORITE_JOB_DESC"
-					maxWidth = 120
+					maxWidth = 220
 					maxHeight = 16
-					format = right
-					vertical_alignment = center					text_color_code = "E"
+					format = left
+					vertical_alignment = bottom					text_color_code = "E"
 				}
 			}
 			buttonType = {
 				name = "restore_jobs_button"
-				position = { x = 715 y = 9 }
-				size = { x = 150 y = 27 }
-				quadTextureSprite = "GFX_button_light"
-				buttonText = "Restore Jobs ( 10 )"
+				position = { x = -172 y = 277 }
+				spriteType = "GFX_button_150_24"
+				orientation = upper_right
 				buttonFont = "cg_16b"
 				shortcut = "J"
 			}
 			# Strata Scroll List
 			smoothListboxType = {
 				name = "pop_categories_list"
-				position = { x = 280 y = 46 }
-				size = { x = @pop_strata y = 628 }
+				position = { x = 505 y = 330 }
+				size = { x = @pop_strata y = 595 }
 				scrollbarType = "standardlistbox_slider_thick"
 				borderSize = { x = 0 y = 0 }				spacing = 6
 			}
-			#<-------------------------- Demographics Panel ---------------------->
+			#<-------------------------- Demographics Title ---------------------->
 			# Demographics Title Text
 			containerWindowType = {
 				name = "demographics_title"
 				size = { width = 180 height = 50 }
-				position = { x = 0 y = 23 }
+				position = { x = 0 y = 271 }
 				iconType = {
 					name = "title_hex"
 					quadTextureSprite = "GFX_small_hex_bg"
 					position = { x = -11 y = 0 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "title_line"
+					quadTextureSprite = "GFX_line"
+					position = { x = 13 y = 36 }
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1490,136 +1644,78 @@ guiTypes = {
 					font = "malgun_goth_24"
 					position = { x = 20 y = 18 }
 					text = "DEMOGRAPHICS_TITLE"
-					maxWidth = 168
+					maxWidth = 200
 					maxHeight = 20
 					fixedSize = yes
 					format = left				}
 			}
-			# Pop Happiness
+			# Background
 			containerWindowType = {
-				name = "pops_tab_happiness_window"
-				size = { width = 76 height = 34 }
-				position = { x = 184 y = 40 }
+				name = "demographics_background"
+				position = { x = 10 y = 323 }
+				size = { width = 470 height = -10 }
 				background = {
 					name = "background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
-				}
-				iconType = {
-					name = "planet_happiness_icon"
-					spriteType = "GFX_text_happiness"
-					position = { x = 11 y = 8 }
-					tooltip_mode_enabled = yes
-					scale = 1
-				}
-				instantTextBoxType = {
-					name = "planet_happiness_amount"
-					font = "cg_16b"
-					position = { x = 32 y = 9 }
-					text = "10%"
-					maxWidth = 40
-					maxHeight = 20
-					fixedSize = yes
-					format = center
-				}
-			}
-			#<--------------------------- Demographics Panel --------------->
-			containerWindowType = {
-				name = "pops_tab_demographics_window"
-				position = { x = 10 y = 80 }
-				size = { width = 250 height = 600 }
-				background = {
-					name = "background"
-					spriteType = "GFX_tiles_dark_area_cut_8"
-				}
-				containerWindowType = {
-					name = "species_piechart"
-					position = { x = 5 y = 40 }
-					size = { width = 240 height = 160 }
-					moveable = no
-					iconType = {
-						name = "species_piechart"
-						spriteType = "GFX_species_piechart_default"
-						position = { x = 60 y = 15 }
-					}
-					iconType = {
-						name = "species_piechart_overlay"
-						spriteType = "GFX_pie_chart_overlay"
-						position = { x = 9 y = 14 }
-					}
-					smoothListboxType = {
-						name = "species_list"
-						position = { x = 125 y = 10 }
-						size = { x = 110 y = 544 }
-						scrollbarType = "standardlistbox_slider_thick"						offset = { x = -3 y = 0 }
-					}
-				}
-				containerWindowType = {
-					name = "ethics_background"
-					position = { x = 8 y = 5 }
-					size = { width = 234 height = 39 }
-					background = {
-						name = "ethics_background"
-						spriteType = "GFX_tiles_dark_area_cut_8"
-					}
-				}
-				overlappingElementsBoxType = {
-					name = "dominant_ethics"
-					position = { x = 10 y = 10 }
-					size = { x = 230 y = 30 }
-					format = center
+					alwaysTransparent = yes
 				}
 			}
 			#<--------------------------- Growing Assembling Declining --------------->
 			containerWindowType = {
 				name = "growth_and_decline_window"
-				position = { x = 25 y = 245 }
-				size = { width = 100 height = 500 }
+				position = { x = 20 y = 383 }
+				size = { width = 310 height = -20 }
+				background = {
+					name = "background"
+					spriteType = "GFX_dark_area_cut_light"
+				}
 				containerWindowType = {
 					name = "growing_species_window"
-					position = { x = 0 y = 0 }
-					size = { width = 100 height = 140 }
+					position = { x = 10 y = 10 }
+					size = { width = 120 height = 164 }
+					clipping = no
 					background = {
 						name = "background"
-						spriteType = "GFX_tiles_dark_area_cut_8"
+						spriteType = "GFX_dark_area_cut_light"
 					}
 					instantTextBoxType = {
 						name = "label_growing"
-						font = "cg_16b"
+						font = "malgun_goth_24"
 						text = "GROWING_SPECIES"
-						position = { x = 0 y = 7 }
-						maxWidth = 100
+						position = { x = -5 y = 4 }
+						maxWidth = 130
 						maxHeight = 20
 						fixedSize = yes
 						format = center
 					}
 					containerWindowType = {
 						name = "portrait"
-						size = { width = 64 height = 64 }
-						position = { x = 18 y = 25 }
+						size = { width = 100 height = 100 }
+						position = { x = 10 y = 34 }
 						clipping = yes
 						iconType = {
 							name = "growth_background"
 							spriteType = "GFX_planet_background"
-							position = { x = 0 y = 2 }
-							scale = 0.64
+							position = { x = 1 y = 1 }
+							scale = 1
 						}
 						iconType = {
 							name = "species_background_frame"
 							spriteType = "GFX_planet_background_frame"
-							scale = 0.64
+							scale = 1
 							alwaysTransparent = yes
 						}
 						iconType = {
 							name = "portrait"
 							quadTextureSprite = "GFX_portrait_character"
-							position = { x = -23 y = -5 }
-							scale = 0.20
+							position = { x = -35 y = -5 }
+							scale = 0.30
 							alwaysTransparent = yes
 						}
 						buttonType = {
 							name = "portrait_button"
 							position = { x = -1 y = -1 }
-							size = { x = 66 y = 66 }
+							size = { x = 102 y = 101 }
 							quadTextureSprite = "GFX_button_light"
 							clicksound = "menu_slide_open"
 							shortcut = "G"
@@ -1628,19 +1724,24 @@ guiTypes = {
 					iconType = {
 						name = "lock_icon"
 						spriteType = "GFX_lock"
-						position = { x = 49 y = 56 }
+						position = { x = 77 y = 101 }
 						alwaysTransparent = yes
 					}
 					iconType = {
 						name = "growth_progress"
-						spriteType = "GFX_growth_progressbar"
-						position = { x = 12 y = 89 }
+						spriteType = "GFX_ui_progressbar_thick_117"
+						position = { x = 1 y = 137 }
 					}
 					# Migration
 					containerWindowType = {
 						name = "pops_tab_migration_window"
 						size = { width = 76 height = 34 }
-						position = { x = 16 y = 105 }
+						position = { x = 10 y = 0 }
+						orientation = upper_right
+						background = {
+							name = "background"
+							spriteType = "GFX_dark_area_cut_light"
+						}
 						iconType = {
 							name = "migration"
 							spriteType = "GFX_migration_icon"
@@ -1661,50 +1762,51 @@ guiTypes = {
 				# Assembling Panel
 				containerWindowType = {
 					name = "assembling_species_window"
-					position = { x = 0 y = 155 }
-					size = { width = 100 height = 140 }
+					position = { x = 10 y = 184 }
+					size = { width = 120 height = 164 }
+					clipping = no
 					background = {
 						name = "background"
-						spriteType = "GFX_tiles_dark_area_cut_8"
+						spriteType = "GFX_dark_area_cut_light"
 					}
 					instantTextBoxType = {
 						name = "label_assembling"
-						font = "cg_16b"
+						font = "malgun_goth_24"
 						text = "ASSEMBLING_SPECIES"
-						position = { x = 0 y = 7 }
-						maxWidth = 100
+						position = { x = -5 y = 4 }
+						maxWidth = 130
 						maxHeight = 20
 						fixedSize = yes
 						format = center
 					}
 					containerWindowType = {
 						name = "portrait_assembling"
-						size = { width = 64 height = 64 }
-						position = { x = 18 y = 25 }
+						size = { width = 100 height = 100 }
+						position = { x = 10 y = 34 }
 						clipping = yes
 						iconType = {
 							name = "assembling_background"
 							spriteType = "GFX_assembling_bg"
-							position = { x = 0 y = 2 }
-							scale = 0.64
+							position = { x = 1 y = 1 }
+							scale = 1
 						}
 						iconType = {
 							name = "species_background_frame"
 							spriteType = "GFX_planet_background_frame"
-							scale = 0.64
+							scale = 1
 							alwaysTransparent = yes
 						}
 						iconType = {
 							name = "portrait_assembling"
 							quadTextureSprite = "GFX_portrait_character"
-							position = { x = -23 y = -5 }
-							scale = 0.20
+							position = { x = -35 y = -5 }
+							scale = 0.30
 							alwaysTransparent = yes
 						}
 						buttonType = {
 							name = "portrait_button"
 							position = { x = -1 y = -1 }
-							size = { x = 66 y = 66 }
+							size = { x = 102 y = 102 }
 							quadTextureSprite = "GFX_button_light"
 							clicksound = "menu_slide_open"
 							shortcut = "B"
@@ -1713,19 +1815,24 @@ guiTypes = {
 					iconType = {
 						name = "lock_icon"
 						spriteType = "GFX_lock"
-						position = { x = 49 y = 56 }
+						position = { x = 77 y = 101 }
 						alwaysTransparent = yes
 					}
 					iconType = {
 						name = "assembling_progress"
-						spriteType = "GFX_assembly_progressbar"
-						position = { x = 12 y = 89 }
+						spriteType = "GFX_ui_progressbar_thick_117"
+						position = { x = 1 y = 137 }
 					}
 					# Pop Assembly
 					containerWindowType = {
 						name = "pops_tab_pop_assembly_window"
 						size = { width = 76 height = 34 }
-						position = { x = 16 y = 105 }
+						position = { x = 96 y = -174 }
+						orientation = upper_right
+						background = {
+							name = "background"
+							spriteType = "GFX_dark_area_cut_light"
+						}
 						iconType = {
 							name = "pop_assembly"
 							spriteType = "GFX_pop_assembly_icon"
@@ -1746,50 +1853,51 @@ guiTypes = {
 				# Declining Panel
 				containerWindowType = {
 					name = "declining_species_window"
-					position = { x = 0 y = 310 }
-					size = { width = 100 height = 110 }
+					position = { x = 10 y = 358 }
+					size = { width = 120 height = 164 }
+					clipping = no
 					background = {
 						name = "background"
-						spriteType = "GFX_tiles_dark_area_cut_8"
+						spriteType = "GFX_dark_area_cut_light"
 					}
 					instantTextBoxType = {
 						name = "label_decline"
-						font = "cg_16b"
+						font = "malgun_goth_24"
 						text = "DECLINING_SPECIES"
-						position = { x = 0 y = 7 }
-						maxWidth = 100
-						maxHeight = 20
-						fixedSize = yes
+						position = { x = -5 y = 4 }
+						maxWidth = 130
+						maxHeight = 24
 						format = center
+						vertical_alignment = bottom
 					}
 					containerWindowType = {
 						name = "portrait_decline"
-						size = { width = 64 height = 64 }
-						position = { x = 18 y = 25 }
+						size = { width = 100 height = 100 }
+						position = { x = 10 y = 34 }
 						clipping = yes
 						iconType = {
 							name = "decline_background"
 							spriteType = "GFX_declining_bg"
-							position = { x = 0 y = 2 }
-							scale = 0.64
+							position = { x = 1 y = 1 }
+							scale = 1
 						}
 						iconType = {
 							name = "species_background_frame"
 							spriteType = "GFX_planet_background_frame"
-							scale = 0.64
+							scale = 1
 							alwaysTransparent = yes
 						}
 						iconType = {
 							name = "portrait_decline"
 							quadTextureSprite = "GFX_portrait_character"
-							position = { x = -23 y = -5 }
-							scale = 0.20
+							position = { x = -35 y = -5 }
+							scale = 0.30
 							alwaysTransparent = yes
 						}
 						buttonType = {
 							name = "portrait_button"
 							position = { x = -1 y = -1 }
-							size = { x = 66 y = 66 }
+							size = { x = 102 y = 102 }
 							quadTextureSprite = "GFX_button_light"
 							clicksound = "menu_slide_open"
 						}
@@ -1797,31 +1905,127 @@ guiTypes = {
 					iconType = {
 						name = "lock_icon"
 						spriteType = "GFX_lock"
-						position = { x = 49 y = 56 }
+						position = { x = 77 y = 101 }
 						alwaysTransparent = yes
 					}
 					iconType = {
 						name = "decline_progress"
-						spriteType = "GFX_decline_progressbar"
-						position = { x = 12 y = 89 }
+						spriteType = "GFX_ui_progressbar_thick_117"
+						position = { x = 1 y = 137 }
 					}
+				}
+			}
+			#<--------------------------- Demographics Panel --------------->
+			containerWindowType = {
+				name = "pops_tab_demographics_window"
+				position = { x = 10 y = 323 }
+				size = { width = 470 height = -10 }
+				background = {
+					name = "background"
+					spriteType = "GFX_invisible"
+					alwaysTransparent = yes
+				}
+				containerWindowType = {
+					name = "species_piechart"
+					position = { x = -10 y = 60 }
+					size = { width = 130 height = -10 }
+					orientation = upper_right
+					origo = upper_right
+					clipping = no
+					background = {
+						name = "background"
+						spriteType = "GFX_dark_area_cut_light"
+					}
+					iconType = {
+						name = "species_piechart"
+						spriteType = "GFX_species_piechart_default"
+						position = { x = -100 y = 55 }
+					}
+					iconType = {
+						name = "species_piechart_overlay"
+						spriteType = "GFX_pie_chart_overlay"
+						position = { x = -151 y = 54 }
+					}
+					smoothListboxType = {
+						name = "species_list"
+						position = { x = 10 y = 10 }
+						size = { x = 110 y = 517 }
+						scrollbarType = "standardlistbox_slider_thick"						offset = { x = -3 y = 0 }
+					}
+				}
+				containerWindowType = {
+					name = "ethics_background"
+					position = { x = 10 y = 10 }
+					size = { width = 350 height = 40 }
+					background = {
+						name = "ethics_background"
+						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+				}
+				overlappingElementsBoxType = {
+					name = "dominant_ethics"
+					position = { x = 15 y = 15 }
+					size = { x = 320 y = 30 }
+					format = center
+				}
+			}
+			# Pop Happiness
+			containerWindowType = {
+				name = "pops_tab_happiness_window"
+				size = { width = 90 height = 40 }
+				position = { x = 380 y = 333 }
+				background = {
+					name = "background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+				}
+				iconType = {
+					name = "planet_happiness_icon"
+					spriteType = "GFX_text_happiness"
+					position = { x = 11 y = 11 }
+					tooltip_mode_enabled = yes
+					scale = 1
+				}
+				instantTextBoxType = {
+					name = "planet_happiness_amount"
+					font = "malgun_goth_24"
+					position = { x = 30 y = 7 }
+					text = "10%"
+					maxWidth = 56
+					maxHeight = 24
+					fixedSize = yes
+					format = center
 				}
 			}
 		}
 		# Armies -------------------- COMBAT SCREEN ------------------------->
 		containerWindowType = {
 			name = "armies_window"
+			position = { x = 0 y = 0 }
 			size = { width = 100%% height = 100%% }
-			position = { x = 0 y = @page_ps_y }
 			containerWindowType = {
 				name = "ground_combat_window"
 				size = { width = 100%% height = 100%% }
-				position = { x = 0 y = 27 }
+				position = { x = 0 y = 250 }
+				iconType = {
+					name = "hex_bg"
+					spriteType = "GFX_hex_center_bg"
+					position = { x = 0 y = 48 }
+					orientation = center_up
+					centerPosition = yes
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "header_line"
+					spriteType = "GFX_line_center"
+					position = { x = 0 y = 62 }
+					orientation = center_up
+					centerPosition = yes
+				}
 				instantTextBoxType = {
 					name = "combat_width"
 					font = "malgun_goth_24"
 					text = "Combat Width: 16"
-					position = { x = -150 y = 40 }
+					position = { x = -150 y = 34 }
 					orientation = center_up
 					maxWidth = 300
 					maxHeight = 24
@@ -1832,7 +2036,7 @@ guiTypes = {
 					name = "frontline"
 					font = "malgun_goth_24"
 					text = "GROUND_COMBAT_FRONTLINE"
-					position = { x = -150 y = 70 }
+					position = { x = -150 y = 72 }
 					orientation = center_up
 					maxWidth = 300
 					maxHeight = 24
@@ -2138,13 +2342,15 @@ guiTypes = {
 			containerWindowType = {
 				name = "defenses_window"
 				size = { width = 100%% height = 100%% }
-				position = { x = 0 y = 0 }
+				position = { x = 0 y = 223 }
 				clipping = yes
 				#Devastation Box
 				containerWindowType = {
 					name = "defenses_window"
 					size = { width = 240 height = 100 }
-					position = { x = 612 y = 0 }
+					position = { x = -10 y = 100 }
+					orientation = upper_right
+					origo = upper_right
 					background = {
 						name = "devastation_bg"
 						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
@@ -2179,32 +2385,49 @@ guiTypes = {
 				iconType = {
 					name = "planet_devastation"
 					spriteType = "GFX_devastation_bar"
-					position = { x = 648 y = 51 }
+					position = { x = -214 y = 151 }
+					orientation = upper_right
 					frame = 1
 				}
 				containerWindowType = {
 					name = "armies_bg_art"
-					size = { width = 370 height = 640 }
-					position = { x = 5 y = 72 }
+					size = { width = 431 height = -5 }
+					position = { x = 227 y = 95 }
 					background = {
 						name = "armies_bg_art"
 						quadTextureSprite = "GFX_planet_bg_tile_frame"
+					}
+					containerWindowType = {
+						name = "armies_bg_header"
+						size = { width = -16 height = 58 }
+						position = { x = 16 y = 16 }
+						background = {
+							name = "armies_bg_header"
+							quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+						}
 					}
 				}
 				#Armies Title Text
 				containerWindowType = {
 					name = "title_armies"
 					size = { width = 350 height = 220 }
-					position = { x = 0 y = 57 }
+					position = { x = 0 y = 48 }
+					iconType = {
+						name = "title_hex"
+						quadTextureSprite = "GFX_small_hex_bg"
+						position = { x = -11 y = 0 }
+						alwaysTransparent = yes
+					}
 					iconType = {
 						name = "title_line"
-						quadTextureSprite = "GFX_line_short"
-						position = { x = 14 y = 50 }
+						quadTextureSprite = "GFX_line"
+						position = { x = 13 y = 36 }
+						alwaysTransparent = yes
 					}
 					instantTextBoxType = {
 						name = "title_text"
 						font = "malgun_goth_24"
-						position = { x = 21 y = 32 }
+						position = { x = 20 y = 18 }
 						text = "ARMIES"
 						maxWidth = 168
 						maxHeight = 20
@@ -2212,10 +2435,22 @@ guiTypes = {
 						format = left					}
 				}
 				#Armies Buttons
+				containerWindowType = {
+					name = "armies_button_background"
+					size = { width = 179 height = 100 }
+					position = { x = -260 y = 100 }
+					orientation = upper_right
+					origo = upper_right
+					background = {
+						name = "armies_bg_art"
+						quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+					}
+				}
 				buttonType = {
 					name = "recruit_button"
-					position = { x = 232 y = 72 }
-					spriteType = "GFX_standard_button_116_34"
+					position = { x = -432 y = 100 }
+					orientation = upper_right
+					spriteType = "GFX_standard_button_142_34_button"
 					buttonFont = "cg_16b"
 					text = "RECRUIT"
 					pdx_tooltip = "RECRUIT_INFO"
@@ -2225,8 +2460,9 @@ guiTypes = {
 				}
 				buttonType = {
 					name = "embark_all_button"
-					position = { x = 232 y = 112 }
-					spriteType = "GFX_standard_button_116_34"
+					position = { x = -432 y = 142 }
+					orientation = upper_right
+					spriteType = "GFX_standard_button_142_34_button"
 					buttonFont = "cg_16b"
 					text = "PLANET_VIEW_EMBARK_ALL"
 					pdx_tooltip = "PLANET_VIEW_EMBARK_INFO"
@@ -2237,53 +2473,53 @@ guiTypes = {
 				#Armies Strength Garrison & Assault
 				instantTextBoxType = {
 					name = "garrison_header"
-					font = "cg_16b"
+					font = "malgun_goth_24"
 					text = "Garrison"
-					position = { x = 20 y = 127 }
-					maxWidth = 100
+					position = { x = 253 y = 115 }
+					maxWidth = 170
 					maxHeight = 40
 					fixedSize = yes
-					format = left					alwaysTransparent = yes
+					format = left
 					pdx_tooltip = "GARRISON_ARMY"
 				}
 				instantTextBoxType = {
 					name = "garrison_power"
-					font = "cg_16b"
+					font = "malgun_goth_24"
 					text = "15"
-					position = { x = 20 y = 147 }
-					maxWidth = 100
+					position = { x = 253 y = 135 }
+					maxWidth = 170
 					maxHeight = 40
 					fixedSize = yes
-					format = left					alwaysTransparent = yes
+					format = left
 					pdx_tooltip = "GARRISON_ARMY"
 				}
 				instantTextBoxType = {
 					name = "garrison_assault_header"
-					font = "cg_16b"
+					font = "malgun_goth_24"
 					text = "Assault"
-					position = { x = 137 y = 127 }
-					maxWidth = 100
+					position = { x = 461 y = 115 }
+					maxWidth = 170
 					maxHeight = 40
 					fixedSize = yes
-					format = left					alwaysTransparent = yes
-					pdx_tooltip = "GARRISON_ARMY"
+					format = left
+					pdx_tooltip = "ASSAULT_ARMY"
 				}
 				instantTextBoxType = {
 					name = "garrison_assault_power"
-					font = "cg_16b"
+					font = "malgun_goth_24"
 					text = "15"
-					position = { x = 137 y = 147 }
-					maxWidth = 100
+					position = { x = 461 y = 135 }
+					maxWidth = 170
 					maxHeight = 40
 					fixedSize = yes
-					format = left					alwaysTransparent = yes
-					pdx_tooltip = "GARRISON_ARMY"
+					format = left
+					pdx_tooltip = "ASSAULT_ARMY"
 				}
 				#Armies List
 				containerWindowType = {
 					name = "planet_armies"
-					size = { width = 340 height = 530 }
-					position = { x = 20 y = 167 }
+					size = { width = 399 height = -21 }
+					position = { x = 243 y = 179 }
 					background = {
 						name = "build_queue_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -2292,18 +2528,18 @@ guiTypes = {
 						name = "no_armies"
 						font = "malgun_goth_24"
 						text = "NO_ARMIES"
-						position = { x = 0 y = 8 }
-						maxWidth = 340
-						maxHeight = 20
+						position = { x = 0 y = 12 }
+						maxWidth = 399
+						maxHeight = 24
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
 					}
 					smoothListBoxType = {
 						name = "armies_list"
-						position = { x = 4 y = 5 }
-						size = { x = 332 y = 520 }
+						position = { x = 10 y = 10 }
+						size = { x = 379 y = 507 }
 						borderSize = { x = 0 y = 0 }
-						spacing = 2
+						spacing = 3
 						scrollbarType = "standardlistbox_slider_thick"
 						autohide_scrollbar = yes
 					}
@@ -2311,7 +2547,7 @@ guiTypes = {
 				# General
 				containerWindowType = {
 					name = "no_general_window"
-					position = { x = 379 y = 77 }
+					position = { x = 10 y = 100 }
 					size = { width = 212 height = 250 }
 					background = {
 						name = "general_background"
@@ -2341,7 +2577,7 @@ guiTypes = {
 						text = "FLEETVIEW_NO_LEADER"
 						maxWidth = 172
 						maxHeight = 24
-						text_color_code = "R"
+						text_color_code = "Y"
 						format = center
 						vertical_alignment = center
 						alwaysTransparent = yes
@@ -2356,7 +2592,7 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "general_window"
-					position = { x = 379 y = 77 }
+					position = { x = 10 y = 100 }
 					size = { width = 212 height = 250 }
 					clipping = no
 					background = {
@@ -2444,35 +2680,57 @@ guiTypes = {
 				# Army Build Queue
 				containerWindowType = {
 					name = "army_build_queue"
-					size = { width = 264 height = 597 }
-					position = { x = 600 y = 110 }
+					size = { width = 429 height = -10 }
+					position = { x = -10 y = 210 }
+					orientation = upper_right
+					origo = upper_right
 					background = {
 						name = "build_queue_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = 0 y = 24 }
+						orientation = center_up
+						centerPosition = yes
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "build_queue_title"
+						font = "malgun_goth_24"
+						text = "QUEUE"
+						position = { x = 10 y = 10 }
+						maxWidth = 409
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
 					instantTextBoxType = {
 						name = "no_constructions"
 						font = "malgun_goth_24"
-						text = "QUEUE"
-						position = { x = 0 y = 10 }
-						maxWidth = 264
-						maxHeight = 20
+						text = ""
+						position = { x = 10 y = 10 }
+						maxWidth = 0
+						maxHeight = 0
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
 					}
 					smoothListBoxType = {
 						name = "build_queue"
-						position = { x = 2 y = 2 }						size = { x = 260 y = 593 }
+						position = { x = 10 y = 44 }						size = { x = 409 y = 442 }
 						borderSize = { x = 0 y = 0 }
 						scrollbarType = "standardlistbox_slider_thick"
 						offset = { x = -3 y = 0 }
+						spacing = 6
 					}
 				}
 				# Orbiting Army
 				containerWindowType = {
 					name = "orbiting_armies"
 					size = { width = 212 height = 290 }
-					position = { x = 380 y = 417 }
+					position = { x = 10 y = 417 }
 					background = {
 						name = "orbiting_armies_bg"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -2546,14 +2804,42 @@ guiTypes = {
 		containerWindowType = {
 			name = "corporate_window"
 			size = { width = 100%% height = 100%% }
-			position = { x = -10 y = @page_y }
+			position = { x = 0 y = 0 }
+			clipping = yes
+			containerWindowType = {
+				name = "corporate_title"
+				size = { width = 180 height = 50 }
+				position = { x = 0 y = 271 }
+				iconType = {
+					name = "title_hex"
+					quadTextureSprite = "GFX_small_hex_bg"
+					position = { x = -11 y = 0 }
+					alwaysTransparent = yes
+				}
+				iconType = {
+					name = "title_line"
+					quadTextureSprite = "GFX_line"
+					position = { x = 13 y = 36 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "title_text"
+					font = "malgun_goth_24"
+					position = { x = 20 y = 18 }
+					text = "TUTORIAL_PLANETVIEW_CORPORATE_TITLE"
+					maxWidth = 300
+					maxHeight = 20
+					fixedSize = yes
+					format = left
+				}
+			}
 			containerWindowType = {
 				name = "no_office_window"
 				size = { width = 100%% height = 100%% }
 				containerWindowType = {
 					name = "branch_office_flag_window"
-					size = { width = 550 height = 130 }
-					position = { x = 20 y = 50 }
+					size = { width = 777 height = 130 }
+					position = { x = 10 y = 323 }
 					background = {
 						name = "background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -2564,7 +2850,7 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text_color_code = "E"
 					text = "BRANCH_OFFICE"
-					position = { x = 38 y = 60 }
+					position = { x = 28 y = 333 }
 					maxWidth = 511
 					maxHeight = 60
 					fixedSize = yes
@@ -2572,7 +2858,7 @@ guiTypes = {
 				}
 				buttonType = {
 					name = "establish_branch_office"
-					position = { x = 27 y = 124 }
+					position = { x = 17 y = 387 }
 					quadTextureSprite = "GFX_standard_button_200_34_button"
 					buttonFont = "cg_16b"
 					text = "ESTABLISH_BRANCH_OFFICE"
@@ -2589,37 +2875,56 @@ guiTypes = {
 				# Branch office output
 				containerWindowType = {
 					name = "branch_office_resources"
-					size = { width = 549 height = 152 }
-					position = { x = 20 y = 528 }
+					size = { width = 777 height = 152 }
+					position = { x = 10 y = 778 }
 					background = {
 						name = "output_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
 					containerWindowType = {
 						name = "planet_production_bg"
-						size = { width = 260 height = 100 }
-						position = { x = 10 y = 42 }
+						size = { width = 374 height = 100 }
+						position = { x = 10 y = 292 }
+						clipping = no
 						background = {
 							name = "background"
 							spriteType = "GFX_tiles_dark_area_cut_8"
 						}
+						iconType = {
+							name = "header_hex_bg"
+							spriteType = "GFX_hex_center_bg"
+							position = { x = 0 y = -18 }
+							orientation = center_up
+							centerPosition = yes
+							alwaysTransparent = yes
+						}
 					}
 					containerWindowType = {
 						name = "planet_deficit_bg"
-						size = { width = 260 height = 100 }
-						position = { x = -270 y = 42 }
+						size = { width = 374 height = 100 }
+						position = { x = -10 y = 292 }
 						orientation = upper_right
+						origo = upper_right
+						clipping = no
 						background = {
 							name = "background"
 							spriteType = "GFX_tiles_dark_area_cut_8"
+						}
+						iconType = {
+							name = "header_hex_bg"
+							spriteType = "GFX_hex_center_bg"
+							position = { x = 0 y = -18 }
+							orientation = center_up
+							centerPosition = yes
+							alwaysTransparent = yes
 						}
 					}
 					instantTextBoxType = {
 						name = "branch_office_production_output_title"
 						font = "malgun_goth_24"
 						text = "PLANETARY_PRODUCTION"
-						position = { x = 15 y = 8 }
-						maxWidth = 250
+						position = { x = 20 y = 258 }
+						maxWidth = 354
 						maxHeight = 20
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
@@ -2627,9 +2932,9 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "branch_office_production_output_amount"
 						font = "cg_16b"
-						position = { x = 15 y = 47 }
+						position = { x = 20 y = 297 }
 						text = "10"
-						maxWidth = 250
+						maxWidth = 354
 						maxHeight = 90
 						fixedSize = yes
 						format = center
@@ -2638,9 +2943,9 @@ guiTypes = {
 						name = "branch_office_consumption_output_title"
 						font = "malgun_goth_24"
 						text = "PLANETARY_DEFICIT"
-						position = { x = -265 y = 8 }
+						position = { x = -374 y = 258 }
 						orientation = upper_right
-						maxWidth = 250
+						maxWidth = 354
 						maxHeight = 20
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
@@ -2648,10 +2953,10 @@ guiTypes = {
 					instantTextBoxType = {
 						name = "branch_office_consumption_output_amount"
 						font = "cg_16b"
-						position = { x = -265 y = 47 }
+						position = { x = -374 y = 297 }
 						orientation = upper_right
 						text = "10"
-						maxWidth = 250
+						maxWidth = 354
 						maxHeight = 90
 						fixedSize = yes
 						format = center
@@ -2659,11 +2964,17 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "branch_office_flag_window"
-					size = { width = 550 height = 130 }
-					position = { x = 20 y = 50 }
+					size = { width = 777 height = 130 }
+					position = { x = 10 y = 323 }
 					background = {
 						name = "background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
+					}
+					iconType = {
+						name = "title_hex"
+						quadTextureSprite = "GFX_small_hex_bg"
+						position = { x = 61 y = 14 }
+						alwaysTransparent = yes
 					}
 					# Branch office owner flag
 					buttonType = {
@@ -2696,58 +3007,104 @@ guiTypes = {
 				}
 				# Corporate Buildings
 				containerWindowType = {
-					name = "title_buildings"
-					size = { width = 295 height = 630 }
-					position = { x = 577 y = 50 }
+					name = "buildings_background"
+					position = { x = -10 y = 323 }
+					size = { width = 295 height = -10 }
+					orientation = upper_right
+					origo = upper_right
 					background = {
 						name = "buildings_box_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
-					instantTextBoxType = {
-						name = "title_text"
-						font = "malgun_goth_24"
-						position = { x = 0 y = 12 }
-						text = "BRANCH_OFFICE_BUILDINGS_TITLE"
-						maxWidth = 295
-						maxHeight = 20
-						fixedSize = yes
-						format = center					}
 				}
 				gridBoxType = {
 					name = "buildings_box"
-					position = { x = 577 y = 94 }
-					size = { width = 268 height = 630 }
+					position = { x = -305 y = 323 }
+					orientation = upper_right
+					size = { width = 268 height = -15 }
 					format = "UPPER_LEFT"
 					slotSize = { width = 73 height = 73 }
 					add_horizontal = yes
 					max_slots_horizontal = 4
 					max_slots_vertical = 8
 				}
+				containerWindowType = {
+					name = "title_buildings"
+					size = { width = 295 height = 48 }
+					position = { x = -10 y = 282 }
+					orientation = upper_right
+					origo = upper_right
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = 0 y = 24 }
+						orientation = center_up
+						centerPosition = yes
+						alwaysTransparent = yes
+					}
+					iconType = {
+						name = "header_line"
+						spriteType = "GFX_ui_line_center_tiny"
+						position = { x = -122 y = 25 }
+						orientation = center_up
+					}
+					instantTextBoxType = {
+						name = "title_text"
+						font = "malgun_goth_24"
+						position = { x = 0 y = 7 }
+						text = "BRANCH_OFFICE_BUILDINGS_TITLE"
+						maxWidth = 295
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+					}
+				}
 				# Build Queue
 				containerWindowType = {
 					name = "branch_office_build_queue"
-					size = { width = 264 height = 328 }
-					position = { x = 306 y = 190 }
+					size = { width = 429 height = 305 }
+					position = { x = 358 y = 463 }
 					background = {
 						name = "build_queue_background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
 					}
+					iconType = {
+						name = "hex_bg"
+						spriteType = "GFX_hex_center_bg"
+						position = { x = 0 y = 24 }
+						orientation = center_up
+						centerPosition = yes
+						alwaysTransparent = yes
+					}
+					instantTextBoxType = {
+						name = "build_queue_title"
+						font = "malgun_goth_24"
+						text = "QUEUE"
+						position = { x = 10 y = 10 }
+						maxWidth = 409
+						maxHeight = 20
+						fixedSize = yes
+						format = center
+						alwaysTransparent = yes
+					}
 					instantTextBoxType = {
 						name = "no_constructions"
 						font = "malgun_goth_24"
-						text = "QUEUE"
-						position = { x = 0 y = 10 }
-						maxWidth = 264
-						maxHeight = 20
+						text = ""
+						position = { x = 10 y = 10 }
+						maxWidth = 0
+						maxHeight = 0
 						fixedSize = yes
 						format = center						alwaysTransparent = yes
 					}
 					smoothListBoxType = {
 						name = "build_queue"
-						position = { x = 2 y = 2 }						size = { x = 260 y = 327 }
+						position = { x = 10 y = 44 }
+						size = { x = 409 y = 251 }
 						borderSize = { x = 0 y = 0 }
 						scrollbarType = "standardlistbox_slider_thick"
 						offset = { x = -3 y = 0 }
+						spacing = 6
 					}
 				}
 			}
@@ -2755,7 +3112,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "branch_office_trade_value_window"
 				size = { width = 78 height = 48 }
-				position = { x = 482 y = 122 }
+				position = { x = 699 y = 395 }
 				background = {
 					name = "background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -2887,8 +3244,8 @@ guiTypes = {
 		}
 		containerWindowType = {
 			name = "side_bar_window"
-			position = { x = 3 y = 0 }
-			size = { width = @sidebar_w height = 940 }
+			position = { x = 3 y = 9 }
+			size = { width = @sidebar_w height = 931 }
 			orientation = upper_right
 			background = {
 				name = "planet_view_spaceport_construction_panel_background"
@@ -2939,7 +3296,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Deposits
@@ -2954,8 +3311,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "building_details_window"
-				position = { x = 0 y = 0 }
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -2964,7 +3320,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				buttonType = {
@@ -3007,26 +3363,27 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "building_info"
-					size = { width = @sidebar_inner_w height = 100 }
+					size = { width = @sidebar_inner_w height = 128 }
 					position = { x = 10 y = 142 }
 					background = {
 						name = "background"
-						spriteType = "GFX_tiles_frame"
+						spriteType = "GFX_dark_area_cut"
 					}
 					containerWindowType = {
 						name = "building_icon"
-						size = { width = 100 height = 100 }
-						position = { x = 0 y = 1 }
+						size = { width = 100 height = 99 }
+						position = { x = 0 y = 28 }
+						background = {
+							name = "icon_background"
+							spriteType = "GFX_dark_area_cut_light"
+							alwaysTransparent = yes
+						}
 						iconType = {
 							name = "building_bg"
 							position = { x = 1 y = 1 }
 							spriteType = "GFX_building_bg"
 							alwaysTransparent = yes
 							scale = 1.11
-						}
-						background = {
-							name = "icon_background"
-							spriteType = "GFX_tiles_frame"
 						}
 						iconType = {
 							name = "building_icon"
@@ -3043,15 +3400,20 @@ guiTypes = {
 					}
 					containerWindowType = {
 						name = "building_name"
-						size = { width = @sidebar_inner_w height = 22 }
+						size = { width = @sidebar_inner_w height = 28 }
 						position = { x = 0 y = 0 }
+						background = {
+							name = "background"
+							spriteType = "GFX_dark_area_cut"
+							alwaysTransparent = yes
+						}
 						instantTextBoxType = {
 							name = "building_name"
-							font = "cg_16b"
+							font = "malgun_goth_24"
 							text = "Building Name"
-							position = { x = 100 y = 3 }
-							maxWidth = 330
-							maxHeight = 20
+							position = { x = 0 y = 1 }
+							maxWidth = @sidebar_inner_w
+							maxHeight = 24
 							fixedSize = yes
 							format = center
 							alwaysTransparent = yes
@@ -3061,26 +3423,25 @@ guiTypes = {
 						name = "building_effects"
 						font = "cg_16b"
 						text = "Building effects go here"
-						position = { x = 105 y = 25 }
+						position = { x = 105 y = 36 }
 						maxWidth = 320
-						maxHeight = 88
-						fixedSize = yes
+						maxHeight = 90
 						format = left
-						alwaysTransparent = yes
+						scrollbarType = "standardtext_slider_small"
 					}
 				}
 				containerWindowType = {
 					name = "upgrades"
 					size = { width = 291 height = 350 }
-					position = { x = 0 y = 262 }
+					position = { x = 0 y = 280 }
 					instantTextBoxType = {
 						name = "upgrades_to_header"
 						font = "malgun_goth_24"
 						text = "UPGRADES_TO"
-						position = { x = 20 y = 0 }
+						position = { x = 10 y = 0 }
 						maxWidth = @sidebar_inner_w
 						maxHeight = 20
-						fixedSize = yes						format = CENTER
+						fixedSize = yes						format = center
 					}
 					smoothListboxType = {
 						name = "upgrades_list"
@@ -3094,8 +3455,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "district_details_window"
-				position = { x = 0 y = 0 }
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3104,7 +3464,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				buttonType = {
@@ -3150,43 +3510,45 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "district_info"
-					size = { width = @sidebar_inner_w height = 100 }
+					size = { width = @sidebar_inner_w height = 128 }
 					position = { x = 10 y = 142 }
 					background = {
 						name = "background"
-						spriteType = "GFX_tiles_frame"
+						spriteType = "GFX_dark_area_cut"
 						clicksound = "ui_queuing_district"
 					}
 					containerWindowType = {
 						name = "district_icon"
-						size = { width = 77 height = 77 }
-						position = { x = 1 y = 23 }
-						iconType = {
-							name = "district_icon"
-							position = { x = 1 y = -1 }
-							spriteType = "GFX_district_unknown"
-							alwaysTransparent = yes
-						}
+						size = { width = 79 height = 79 }
+						position = { x = 13 y = 38 }
 						background = {
 							name = "icon_background"
-							spriteType = "GFX_tiles_frame"
+							spriteType = "GFX_dark_area_cut_light"
+							alwaysTransparent = yes
+						}
+						iconType = {
+							name = "district_icon"
+							position = { x = 1 y = 1 }
+							spriteType = "GFX_district_unknown"
+							alwaysTransparent = yes
 						}
 					}
 					containerWindowType = {
 						name = "district_name"
-						size = { width = @sidebar_inner_w height = 22 }
+						size = { width = @sidebar_inner_w height = 28 }
 						position = { x = 0 y = 0 }
 						background = {
 							name = "background"
-							spriteType = "GFX_tiles_frame"
+							spriteType = "GFX_dark_area_cut"
+							alwaysTransparent = yes
 						}
 						instantTextBoxType = {
 							name = "district_name"
-							font = "cg_16b"
+							font = "malgun_goth_24"
 							text = "District Name"
-							position = { x = 0 y = 3 }
+							position = { x = 0 y = 1 }
 							maxWidth = @sidebar_inner_w
-							maxHeight = 20
+							maxHeight = 24
 							fixedSize = yes
 							format = center
 							alwaysTransparent = yes
@@ -3196,18 +3558,17 @@ guiTypes = {
 						name = "district_effects"
 						font = "cg_16b"
 						text = "District effects go here"
-						position = { x = 85 y = 25 }
-						maxWidth = 340
-						maxHeight = 80
-						fixedSize = yes
+						position = { x = 105 y = 36 }
+						maxWidth = 320
+						maxHeight = 64
 						format = left
-						alwaysTransparent = yes
+						scrollbarType = "standardtext_slider_small"
 					}
 					instantTextBoxType = {
 						name = "district_cost"
 						font = "cg_16b"
 						text = "50"
-						position = { x = 85 y = 78 }
+						position = { x = 105 y = 100 }
 						maxWidth = 340
 						maxHeight = 80
 						fixedSize = yes
@@ -3217,8 +3578,10 @@ guiTypes = {
 				}
 				containerWindowType = {
 					name = "num_districts"
-					size = { width = 76 height = 34 }
-					position = { x = 88 y = 250 }
+					size = { width = 80 height = 34 }
+					position = { x = -90 y = 280 }
+					orientation = center_up
+					origo = center_up
 					background = {
 						name = "background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -3226,24 +3589,25 @@ guiTypes = {
 					iconType = {
 						name = "num_districts_icon"
 						spriteType = "GFX_district_small"
-						position = { x = 0 y = 3 }
-						tooltip_mode_enabled = yes
+						position = { x = 5 y = 3 }
 					}
 					instantTextBoxType = {
 						name = "num_districts_text"
 						font = "cg_16b"
-						position = { x = 5 y = 8 }
+						position = { x = 30 y = 8 }
 						text = "10/15"
-						maxWidth = 76
-						maxHeight = 20
+						maxWidth = 40
+						maxHeight = 16
 						fixedSize = yes
 						format = center
 					}
 				}
 				containerWindowType = {
 					name = "num_districts_building"
-					size = { width = 76 height = 34 }
-					position = { x = 181 y = 250 }
+					size = { width = 80 height = 34 }
+					position = { x = 0 y = 280 }
+					orientation = center_up
+					origo = center_up
 					background = {
 						name = "background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -3251,25 +3615,26 @@ guiTypes = {
 					iconType = {
 						name = "num_districts_building_icon"
 						spriteType = "GFX_building_build_speed"
-						position = { x = 4 y = 5 }
+						position = { x = 10 y = 6 }
 						scale = 0.8
-						tooltip_mode_enabled = yes
 					}
 					instantTextBoxType = {
 						name = "num_districts_building_text"
 						font = "cg_16b"
-						position = { x = 5 y = 8 }
+						position = { x = 30 y = 8 }
 						text = "2"
-						maxWidth = 76
-						maxHeight = 20
+						maxWidth = 40
+						maxHeight = 16
 						fixedSize = yes
 						format = center
 					}
 				}
 				containerWindowType = {
 					name = "num_blockers"
-					size = { width = 76 height = 34 }
-					position = { x = 274 y = 250 }
+					size = { width = 80 height = 34 }
+					position = { x = 90 y = 280 }
+					orientation = center_up
+					origo = center_up
 					background = {
 						name = "background"
 						spriteType = "GFX_tiles_dark_area_cut_8"
@@ -3277,16 +3642,15 @@ guiTypes = {
 					iconType = {
 						name = "num_blockers_icon"
 						spriteType = "GFX_text_blocker"
-						position = { x = 8 y = 7 }
-						tooltip_mode_enabled = yes
+						position = { x = 10 y = 8 }
 					}
 					instantTextBoxType = {
 						name = "num_blockers_text"
 						font = "cg_16b"
-						position = { x = 5 y = 8 }
+						position = { x = 30 y = 8 }
 						text = "3"
-						maxWidth = 76
-						maxHeight = 20
+						maxWidth = 40
+						maxHeight = 16
 						fixedSize = yes
 						format = center
 					}
@@ -3294,8 +3658,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "pop_details_window"
-				position = { x = 0 y = 0 }
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3304,7 +3667,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				containerWindowType = {
@@ -3398,9 +3761,10 @@ guiTypes = {
 						name = "traits_title"
 						font = "malgun_goth_24"
 						text = "TRAITS_LIST"
-						maxWidth = 70
-						maxHeight = 30
 						position = { x = 20 y = 390 }
+						maxWidth = 70
+						maxHeight = 24
+						vertical_alignment = bottom
 					}
 					overlappingElementsBoxType = {
 						name = "traits"
@@ -3412,9 +3776,9 @@ guiTypes = {
 						name = "ethics_title"
 						font = "malgun_goth_24"
 						text = "ETHICS_LIST"
-						maxWidth = 70
-						maxHeight = 30
 						position = { x = 20 y = 425 }
+						maxWidth = 70
+						maxHeight = 24
 					}
 					overlappingElementsBoxType = {
 						name = "ethics"
@@ -3426,29 +3790,28 @@ guiTypes = {
 						name = "species_rights"
 						font = "cg_16b"
 						text = "species rights go here"
-						position = { x = 20 y = -154 }
-						orientation = lower_left
+						position = { x = 20 y = 712 }
 						maxWidth = 395
-						maxHeight = 96
+						maxHeight = 106
 						format = left
-						scrollbarType = "standardtext_slider"
+						scrollbarType = "standardtext_slider_small"
 					}
 					buttonType = {
 						name = "view_species_button"
-						spriteType = "GFX_button_116_24"
+						spriteType = "GFX_button_150_24"
 						buttonFont = "cg_16b"
 						buttonText = "VIEW_SPECIES"
-						position = { x = 72 y = -48 }
+						position = { x = 33 y = -48 }
 						orientation = lower_left
 						oversound = mouse_over
 						shortcut = "K"
 					}
 					buttonType = {
 						name = "species_rights_button"
-						spriteType = "GFX_button_116_24"
+						spriteType = "GFX_button_150_24"
 						buttonFont = "cg_16b"
 						buttonText = "SET_RIGHTS"
-						position = { x = 218 y = -48 }
+						position = { x = 223 y = -48 }
 						orientation = lower_left
 						oversound = mouse_over
 						shortcut = "T"
@@ -3566,7 +3929,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "terraform_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3575,7 +3938,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Terraform Links
@@ -3590,7 +3953,6 @@ guiTypes = {
 				containerWindowType = {
 					name = "terraforming_ongoing_window"
 					position = { x = 10 y = 50 }
-					moveable = no
 					size = { width = @sidebar_inner_w height = 98 }
 					background = {
 						name = "background"
@@ -3666,7 +4028,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "decisions_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3675,7 +4037,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Decisions
@@ -3691,7 +4053,7 @@ guiTypes = {
 			# Colony Designations Selection Window --------------
 			containerWindowType = {
 				name = "designation_selection_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3700,7 +4062,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Decisions
@@ -3714,7 +4076,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "construction_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3723,7 +4085,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Buildings
@@ -3738,7 +4100,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "district_construction_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3747,7 +4109,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Buildings
@@ -3762,7 +4124,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "species_select_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3771,7 +4133,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				smoothListboxType = {
@@ -3785,7 +4147,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "recruitment_window"
-				size = { width = @sidebar_w height = -5 }
+				size = { width = @sidebar_w height = 100% }
 				instantTextBoxType = {
 					name = "header"
 					font = "malgun_goth_24"
@@ -3794,7 +4156,7 @@ guiTypes = {
 					maxWidth = @sidebar_inner_w
 					maxHeight = 20
 					fixedSize = yes					text_color_code = "E"
-					format = CENTER
+					format = center
 					alwaysTransparent = yes
 				}
 				# Armies
@@ -3846,81 +4208,88 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_district_entry"
 		position = { x = 5 y = 0 }
-		size = { width = 255 height = 50 }
-		moveable = no
+		size = { width = 161 height = 81 }
 		background = {
 			name = "background"
-			spriteType = "GFX_tiles_frame_notrans" # "GFX_tiles_frame_light"
+			spriteType = "GFX_dark_area_cut_light"
 		}
 		iconType = {
 			name = "district_icon"
 			spriteType = "GFX_district_unknown"
 			position = { x = 1 y = 2 }
-			scale = 0.62
+			scale = 1
 		}
 		buttonType = {
 			name = "district_icon_border"
-			position = { x = -1 y = -1 }
-			size = { x = 52 y = 52 }
+			position = { x = 0 y = 1 }
+			size = { x = 79 y = 79 }
 			quadTextureSprite = "GFX_button_light"
 			alwaysTransparent = yes
 		}
 		iconType = {
 			name = "selected_district_icon"
 			spriteType = "GFX_selected_building"
-			position = { x = 0 y = 1 }
-			scale = 0.49
+			position = { x = 1 y = 3 }
+			scale = 0.75
 		}
 		iconType = {
-			name = "progressbar"
-			spriteType = "GFX_building_progressbar"
-			position = { x = -2 y = 39 }
+			name = "progressbar" # Doesn't work?
+			spriteType = "GFX_invisible" # "GFX_ui_progressbar_building_icon"
+			position = { x = 1 y = 0 }
 			alwaysTransparent = yes
 		}
 		instantTextBoxType = {
 			name = "not_surveyed"
-			font = "malgun_goth_24"
+			font = "large_title_font"
 			text = "UNKNOWN_SHORT"
-			position = { x = 62 y = 12 }
+			position = { x = 110 y = 22 }
 			maxWidth = 20
 			maxHeight = 24
 			fixedSize = yes
 			format = left
+			alwaysTransparent = yes
 		}
 		buttonType = {
 			name = "district_button"
 			position = { x = 0 y = 0 }
-			size = { x = 255 y = 50 }
+			size = { x = 161 y = 83 }
 			quadTextureSprite = "GFX_invisible"
 			clicksound = "menu_slide_open"
 		}
 		containerWindowType = {
 			name = "district_box"
-			size = { width = 52 height = 82 }
-			position = { x = 54 y = 4 }
+			size = { width = -2 height = -2 }
+			position = { x = 80 y = 2 }
 			# non-residential districts
+			background = {
+				name = "background"
+				spriteType = "GFX_dark_area_cut_light"
+				alwaysTransparent = yes
+			}
 			gridBoxType = {
 				name = "district_box_grid"
-				position = { x = 0 y = 0 }
+				position = { x = 2 y = 2 }
 				size = { width = 65 height = 45 }
 				slotsize = { width = 15 height = 15 }
 				format = "UPPER_LEFT"
-				max_slots_horizontal = 13
-				max_slots_vertical = 3
+				max_slots_horizontal = 5
+				max_slots_vertical = 5
 				add_horizontal = no
 			}
 		}
 		# Passed 15 Cubes, Number Box is shown. Replaces the bottom 6 cubes.
 		containerWindowType = {
 			name = "planet_district_cap_container"
-			size = { width = 44 height = 28 }
-			position = { x = -5 y = -3 }
+			size = { width = 46 height = 28 }
+			position = { x = -3 y = -4 }
 			orientation = lower_right
 			origo = lower_right
 			iconType = {
 				name = "cap_background"
 				spriteType = "GFX_district_any_big"
-				position = { x = 3 y = 0 }
+				position = { x = 23 y = -19 }
+				centerPosition = yes
+				orientation = lower_left
 				scale = 1
 			}
 			instantTextBoxType = {
@@ -3928,10 +4297,10 @@ guiTypes = {
 				font = "cg_16b"
 				position = { x = -2 y = 6 }
 				text = "10"
-				maxWidth = 52
-				maxHeight = 20
-				fixedSize = yes
+				maxWidth = 50
+				maxHeight = 16
 				format = center
+				vertical_alignment = center
 				alwaysTransparent = yes
 			}
 		}
@@ -3939,7 +4308,6 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_deposit_entry"
 		position = { x = 0 y = 82 }
-		moveable = no
 		size = { width = @sidebar_inner_w height = 58 }
 		background = {
 			name = "background"
@@ -3974,7 +4342,7 @@ guiTypes = {
 			text = "Deposit effects go here"
 			position = { x = 85 y = 25 }
 			maxWidth = 340
-			maxHeight = 32
+			maxHeight = 36
 			fixedSize = yes
 			format = left
 			alwaysTransparent = yes
@@ -4033,7 +4401,6 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_decision_entry"
 		position = { x = 0 y = 82 }
-		moveable = no
 		size = { width = @sidebar_inner_w height = 49 }
 		background = {
 			name = "background"
@@ -4083,7 +4450,6 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_designation_entry"
 		position = { x = 0 y = 82 }
-		moveable = no
 		size = { width = @sidebar_inner_w height = 79 }
 		background = {
 			name = "designation_list_button_background"
@@ -4120,7 +4486,7 @@ guiTypes = {
 				maxHeight = 50
 				format = left
 				alwaysTransparent = yes
-				scrollbarType = "standardtext_slider"
+				scrollbarType = "standardtext_slider_small"
 			}
 		}
 		containerWindowType = {
@@ -4150,7 +4516,6 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_terraforming_entry"
 		position = { x = 0 y = 82 }
-		moveable = no
 		size = { width = @sidebar_inner_w height = 70 }
 		background = {
 			name = "background"
@@ -4912,25 +5277,6 @@ guiTypes = {
 			spriteType = "GFX_building_ruined"
 			alwaysTransparent = yes
 		}
-		instantTextBoxType = {
-			name = "unlock_at_pops"
-			font = "cg_16b"
-			position = { x = -35 y = -20 }
-			orientation = center_down
-			text = "10"
-			maxWidth = @slotSize
-			maxHeight = 20
-			fixedSize = yes
-			format = center
-		}
-		iconType = {
-			name = "disabled_building"
-			spriteType = "GFX_disabled_building"
-			position = { x = -26 y = -25 }
-			orientation = lower_right
-			alwaysTransparent = yes
-			scale = 0.8
-		}
 		iconType = {
 			name = "progressbar"
 			spriteType = "GFX_ui_building_progressbar_68_10"
@@ -4958,6 +5304,14 @@ guiTypes = {
 			position = { x = 4 y = 5 }
 			clicksound = "queuing_building"
 			scale = 0.80
+		}
+		iconType = {
+			name = "disabled_building"
+			spriteType = "GFX_disabled_building"
+			position = { x = -26 y = -25 }
+			orientation = lower_right
+			alwaysTransparent = yes
+			scale = 0.8
 		}
 	}
 	containerWindowType = {
@@ -5132,7 +5486,7 @@ guiTypes = {
 			font = "malgun_goth_24"
 			text = "Army Name"
 			position = { x = 30 y = 0 }
-			maxWidth = 180
+			maxWidth = 240
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5142,7 +5496,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "Army Species"
 			position = { x = 30 y = 20 }
-			maxWidth = 180
+			maxWidth = 240
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5151,14 +5505,13 @@ guiTypes = {
 			name = "army_cost"
 			font = "cg_16b"
 			text = "50"
-			position = { x = -190 y = 5 }
+			position = { x = -160 y = 5 }
 			orientation = upper_right
-			maxWidth = 180
+			maxWidth = 150
 			maxHeight = 80
 			fixedSize = yes
 			text = "1 mineral"
 			format = right
-			alwaysTransparent = yes
 			text_color_code = "Y"
 		}
 		buttonType = {
@@ -5166,17 +5519,16 @@ guiTypes = {
 			position = { x = -1 y = -1 }
 			size = { x = @sidebar_inner_button_w y = 40 }
 			quadTextureSprite = "GFX_button_light"
-			clicksound = "back_click"
+			clicksound = "queuing_army"
 		}
 	}
 	containerWindowType = {
 		name = "planet_army_entry"
 		position = { x = 5 y = 5 }
-		size = { width = 332 height = 40 }
+		size = { width = 379 height = 40 }
 		background = {
 			name = "background"
 			spriteType = "GFX_tiles_dark_area_cut_8"
-			clicksound = "back_click"
 		}
 		iconType = {
 			name = "army_icon"
@@ -5188,7 +5540,7 @@ guiTypes = {
 			font = "malgun_goth_24"
 			text = "Army Name"
 			position = { x = 24 y = 0 }
-			maxWidth = 210
+			maxWidth = 245
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5198,7 +5550,7 @@ guiTypes = {
 			font = "cg_16b"
 			text = "Army Species"
 			position = { x = 24 y = 20 }
-			maxWidth = 210
+			maxWidth = 245
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5207,8 +5559,8 @@ guiTypes = {
 			name = "army_power"
 			font = "cg_16b"
 			text = "power 15"
-			position = { x = -96 y = 2 }
-			maxWidth = 58
+			position = { x = -106 y = 2 }
+			maxWidth = 68
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5219,8 +5571,8 @@ guiTypes = {
 			name = "army_health"
 			font = "cg_16b"
 			text = "H 1800"
-			position = { x = -98 y = 19 }
-			maxWidth = 61
+			position = { x = -108 y = 19 }
+			maxWidth = 71
 			maxHeight = 20
 			fixedSize = yes
 			format = left
@@ -5236,21 +5588,37 @@ guiTypes = {
 			orientation = upper_right
 		}
 	}
+	### PLANET MODIFIERS
 	containerWindowType = {
-		name = "planet_view_modifier_item"
+		name = "planet_view_modifier_item_flag"
 		position = { x = 0 y = 0 }
-		size = { width = 54 height = 57 }
-		moveable = no
+		size = { width = 52 height = 52 }
+		iconType = {
+			name = "background"
+			spriteType = "GFX_modifier_background"
+		}
 		iconType = {
 			name = "icon"
-			spriteType = "GFX_modifier_pm_unknown"
-			position = { x = 0 y = -10 }
+			spriteType = "GFX_empire_flag_32"
+			position = { x = 14 y = 14 }
 		}
 		iconType = {
 			name = "icon_frame"
 			spriteType = "GFX_modifier_frames"
-			position = { x = 0 y = -10 }
-			frame = 1
+			alwaysTransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "planet_view_modifier_item"
+		position = { x = 0 y = 0 }
+		size = { width = 52 height = 52 }
+		iconType = {
+			name = "icon"
+			spriteType = "GFX_modifier_pm_unknown"
+		}
+		iconType = {
+			name = "icon_frame"
+			spriteType = "GFX_modifier_frames"
 			alwaysTransparent = yes
 		}
 	}
@@ -5281,36 +5649,36 @@ guiTypes = {
 	containerWindowType = {
 		name = "planet_build_queue_item_entry"
 		position = { x = 0 y = 0 }
-		size = { width = 260 height = 57 }
+		size = { width = 409 height = 34 }
+		clipping = no
 		background = {
 			name = "background"
-			spriteType = "GFX_tiles_dark_area_cut_8"
+			spriteType = "GFX_dark_area_cut_light"
 		}
 		iconType = {
 			name = "progressbar"
-			spriteType = "GFX_queue_progressbar_236"
-			position = { x = 2 y = 40 }
-			alwaysTransparent = yes
+			spriteType = "GFX_ui_progressbar_345"
+			position = { x = 0 y = -1 }
 		}
 		instantTextBoxType = {
 			name = "title"
-			font = "cg_16b"
+			font = "malgun_goth_24"
 			text = ""
-			position = { x = 4 y = 3 }
-			maxWidth = 239
-			maxHeight = 20
+			position = { x = 5 y = 4 }
+			maxWidth = 270
+			maxHeight = 24
 			fixedSize = yes
 			format = left
 		}
 		instantTextBoxType = {
 			name = "time"
-			font = "cg_16b"
+			font = "malgun_goth_24"
 			text = "Time left: 1 day"
-			position = { x = 5 y = 22 }
+			position = { x = 260 y = 4 }
 			maxWidth = 80
-			maxHeight = 20
+			maxHeight = 24
 			fixedSize = yes
-			format = left
+			format = right
 		}
 		instantTextBoxType = {
 			name = "name"
@@ -5325,30 +5693,36 @@ guiTypes = {
 			text_color_code = "E"
 		}
 		buttonType = {
-			name = "background"
-			quadTextureSprite = "GFX_list_hover"
-			position = { x = -4 y = -4 }
-			clicksound = "click_outliner"
-			oversound = no_sound
-		}
-		buttonType = {
 			name = "cancel_button"
 			position = { x = -1 y = -1 }
-			size = { x = 262 y = 57 }
+			size = { x = 347 y = 36 }
 			quadTextureSprite = "GFX_button_light"
 			clicksound = "back_click"
 		}
+		containerWindowType = {
+			name = "priority_buttons_bg"
+			size = { width = 75 height = 44 }
+			position = { x = -70 y = -5 }
+			orientation = upper_right
+			background = {
+				name = "priority_buttons_bg_art"
+				quadTextureSprite = "GFX_planet_bg_tile_frame"
+				alwaysTransparent = yes
+			}
+		}
 		buttonType = {
 			name = "priority_upwards"
-			quadTextureSprite = "GFX_button_up"
-			position = { x = 233 y = -3 }
+			quadTextureSprite = "GFX_ui_button_up"
+			orientation = upper_right
+			position = { x = -36 y = -2 }
 			buttonFont = "cg_16b"
 			clicksound = "increment_click"
 		}
 		buttonType = {
 			name = "priority_downwards"
-			quadTextureSprite = "GFX_button_down"
-			position = { x = 233 y = 18 }
+			quadTextureSprite = "GFX_ui_button_down"
+			orientation = upper_right
+			position = { x = -67 y = -2 }
 			buttonFont = "cg_16b"
 			clicksound = "decrement_click"
 		}

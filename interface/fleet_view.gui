@@ -1447,13 +1447,13 @@ guiTypes = {
 				offset = { x = -3 y = 0 }
 			}
 			buttonType = {
-				name = "build"
+				name = "open_catalog"
 				size = { x = 290 y = 35 }
 				position = { x = 28 y = -56 }
 				orientation = lower_right
 				spriteType = "GFX_standard_button_240_34_button"
 				buttonFont = "cg_16b"
-				text = "STARBASE_BUILD_SHIPS"
+				text = "STARBASE_OPEN_SHIP_DESIGNS"
 				font = "cg_16b"
 				clicksound = planet_view_menu_click_01
 				shortcut = "b"

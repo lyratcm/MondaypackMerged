@@ -212,8 +212,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "desc"
 				font = "malgun_goth_24"
-				position = { x = -295 y = 256 }
-				orientation = center_up
+				position = { x = 35 y = 256 }
 				maxWidth = 590
 				maxHeight = 96
 				text = ""
@@ -501,11 +500,12 @@ guiTypes = {
 					offset = { x = -1 y = 0 }
 				}
 				buttonType = {
-					name = "build"
+					name = "open_catalog"
 					size = { x = 0 y = 0 }
 					position = { x = 0 y = 0 }
 					spriteType = "GFX_tiled_window_transparent"
 					alwaysTransparent = yes
+					#text = "STARBASE_OPEN_SHIP_DESIGNS"
 				}
 			}
 		}

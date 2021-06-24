@@ -15,6 +15,8 @@ guiTypes = {
 	@row_11 = 410
 	@row_12 = 450
 	@row_13 = 490
+	@row_14 = 530
+	@row_15 = 570
 	@icon_x = 404
 	@amount_c1x = 334
 	@value_c1x = 466
@@ -59,7 +61,7 @@ guiTypes = {
 			font = "large_title_font"
 			text = "GAMESETUP_TAB_DETAILS"
 			position = { x = 26 y = 8 }
-			maxWidth = 300
+			maxWidth = 400
 			maxHeight = 36
 			format = left
 			alwaysTransparent = yes
@@ -153,8 +155,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "GALAXY_SIZE"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -214,8 +217,9 @@ guiTypes = {
 					text = "GALAXY_SHAPE"
 					font = "malgun_goth_24"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -276,8 +280,9 @@ guiTypes = {
 					text = "NUM_HABITABLE_WORLDS"
 					font = "malgun_goth_24"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -351,8 +356,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_GUARANTEED_COLONIES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -426,8 +432,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_CLUSTERED_STARTS"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -488,8 +495,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_PRIMITIVE_WORLDS"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -563,8 +571,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_HYPERLANES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -638,8 +647,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_GATEWAYS"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -713,8 +723,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_WORMHOLES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -788,8 +799,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_TECH_SPEED"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -848,11 +860,165 @@ guiTypes = {
 					navDown = "aggressiveness_spinner"
 				}
 			}
+			### Logistic Ceiling
+			containerWindowType = {
+				name = "logistic_ceiling"
+				size = { width = @row_w height = 36 }
+				position = { x = @column_1 y = @row_11 }
+				background = {
+					name = "option_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					pdx_tooltip = "FE_LOGISTIC_CEILING_TOOLTIP"
+				}
+				instantTextBoxType = {
+					name = "logistic_ceiling_label"
+					font = "malgun_goth_24"
+					text = "FE_LOGISTIC_CEILING"
+					position = { x = 10 y = 5 }
+					maxWidth = 340
+					maxHeight = 24
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "pick_amount_value"
+					font = "malgun_goth_24"
+					text = "100%"
+					position = { x = @amount_c1x y = 5 }
+					maxWidth = 100
+					maxHeight = 24
+					format = right
+					alwaysTransparent = yes
+				}
+				scrollbarType = {
+					id = "logistic_ceiling_slider"
+					name = "amount_slider"
+					slider = "scrollbar_SliderButton"
+					track = "scrollbar_TrackButton"
+					leftbutton = "scrollbar_upButton"
+					rightbutton = "scrollbar_downButton"
+					size = { x = 307 y = 30 }
+					position = { x = @spinner_c1x y = 4 }
+					priority = 100
+					borderSize = { x = 16 y = 16 }
+					maxValue = 100
+					minValue = 0
+					stepSize = 1
+					startValue = 20
+					horizontal = 1
+					guiButtonType = {
+						name = "scrollbar_SliderButton"
+						quadTextureSprite = "GFX_settings_scroll_drager"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "scrollbar_TrackButton"
+						quadTextureSprite = "scrollbar_background"
+						position = { x = 30 y = 20 }
+					}
+					guiButtonType = {
+						name = "scrollbar_upButton"
+						quadTextureSprite = "scrollbar_leftbutton"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "scrollbar_downButton"
+						quadTextureSprite = "scrollbar_rightbutton"
+						position = { x = 30 y = 0 }
+					}
+					overlay = {
+						name = "selected_overlay"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						overSprite = "GFX_glow_tile_line"
+						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
+						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
+					}
+					navUp = "galaxy_xeno_compatibility_spinner"
+					navDown = "growth_scale_slider"
+				}
+			}
+			### Growth Scale
+			containerWindowType = {
+				name = "growth_scale"
+				size = { width = @row_w height = 36 }
+				position = { x = @column_1 y = @row_12 }
+				background = {
+					name = "option_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					pdx_tooltip = "FE_GROWTH_SCALE_TOOLTIP"
+				}
+				instantTextBoxType = {
+					name = "growth_scale_label"
+					font = "malgun_goth_24"
+					text = "FE_GROWTH_SCALE"
+					position = { x = 10 y = 5 }
+					maxWidth = 340
+					maxHeight = 24
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "pick_amount_value"
+					font = "malgun_goth_24"
+					text = "0.25"
+					position = { x = @amount_c1x y = 5 }
+					maxWidth = 100
+					maxHeight = 24
+					format = right
+					alwaysTransparent = yes
+				}
+				scrollbarType = {
+					id = "growth_scale_slider"
+					name = "amount_slider"
+					slider = "scrollbar_SliderButton"
+					track = "scrollbar_TrackButton"
+					leftbutton = "scrollbar_upButton"
+					rightbutton = "scrollbar_downButton"
+					size = { x = 307 y = 30 }
+					position = { x = @spinner_c1x y = 4 }
+					priority = 100
+					borderSize = { x = 16 y = 16 }
+					maxValue = 100
+					minValue = 0
+					stepSize = 1
+					startValue = 20
+					horizontal = 1
+					guiButtonType = {
+						name = "scrollbar_SliderButton"
+						quadTextureSprite = "GFX_settings_scroll_drager"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "scrollbar_TrackButton"
+						quadTextureSprite = "scrollbar_background"
+						position = { x = 30 y = 20 }
+					}
+					guiButtonType = {
+						name = "scrollbar_upButton"
+						quadTextureSprite = "scrollbar_leftbutton"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "scrollbar_downButton"
+						quadTextureSprite = "scrollbar_rightbutton"
+						position = { x = 30 y = 0 }
+					}
+					overlay = {
+						name = "selected_overlay"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						overSprite = "GFX_glow_tile_line"
+						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
+						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
+					}
+					navUp = "logistic_ceiling_slider"
+					navDown = "ironman_spinner"
+				}
+			}
 			# Caravaneers
 			containerWindowType = {
 				name = "caravaneer"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_1 y = @row_11 }
+				position = { x = @column_1 y = @row_13 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -863,8 +1029,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "CARAVANEERS_LABEL"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -914,7 +1081,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "xeno_compatibility"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_1 y = @row_12 }
+				position = { x = @column_1 y = @row_14 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -925,8 +1092,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "XENO_COMPATIBILITY_LABEL"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -968,75 +1136,8 @@ guiTypes = {
 						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
 						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
 					}
-					navUp = "galaxy_caravaneers_up_button"
-					navDown = "galaxy_caravaneers_down_button"
-				}
-			}
-			# Ironman
-			containerWindowType = {
-				name = "ironman"
-				size = { width = @row_w height = 36 }
-				position = { x = @column_1 y = @row_13 }
-				background = {
-					name = "option_background"
-					spriteType = "GFX_tiles_dark_area_cut_8"
-					pdx_tooltip = "FE_IRONMAN_TOOLTIP"
-				}
-				iconType = {
-					name = "ironman_icon"
-					spriteType = "GFX_ironman_icon"
-					position = { x = @icon_x y = 0 }
-					alwaysTransparent = yes
-				}
-				instantTextBoxType = {
-					name = "ironman_label"
-					font = "malgun_goth_24"
-					text = "FE_IRONMAN"
-					position = { x = 10 y = 5 }
-					maxWidth = 300
-					maxHeight = 24
-					alwaysTransparent = yes
-				}
-				instantTextBoxType = {
-					name = "value"
-					font = "malgun_goth_24"
-					text = "SETTINGS_TUTORIAL_ON"
-					position = { x = @value_c1x y = 5 }
-					maxWidth = 253
-					maxHeight = 24
-					fixedSize = yes
-					format = center
-					alwaysTransparent = yes
-				}
-				spinnerType = {
-					name = "ironman_spinner"
-					leftbutton = "spinner_upButton"
-					rightbutton = "spinner_downButton"
-					size = { x = 307 y = 30 }
-					position = { x = @spinner_c1x y = 4 }
-					priority = 100
-					borderSize = { x = 16 y = 16 }
-					horizontal = 1
-					maxValue = 100
-					startValue = 0
-					guiButtonType = {
-						name = "spinner_upButton"
-						quadTextureSprite = "scrollbar_leftbutton"
-						position = { x = 30 y = 0 }
-					}
-					guiButtonType = {
-						name = "spinner_downButton"
-						quadTextureSprite = "scrollbar_rightbutton"
-						position = { x = 30 y = 120 }
-					}
-					overlay = {
-						name = "selected_overlay"
-						spriteType = "GFX_glow_tile_orange_no_padding"
-						overSprite = "GFX_glow_tile_line"
-						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
-						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
-					}
-					navUp = "wormholes_slider"
+					navUp = "galaxy_caravaneers_spinner"
+					navDown = "logistic_ceiling_slider"
 				}
 			}
 			### AI countries
@@ -1054,8 +1155,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_EMPIRES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1135,8 +1237,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_ADVANCED_EMPIRES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1201,11 +1304,74 @@ guiTypes = {
 					navDown = "num_fallen_empires_slider"
 				}
 			}
+			# Advanced Empires Near Player
+			containerWindowType = {
+				name = "advanced_near_player"
+				size = { width = @row_w height = 36 }
+				position = { x = @column_2 y = @row_3 }
+				background = {
+					name = "option_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					pdx_tooltip = "FE_ADVANCED_NEAR_PLAYER_TOOLTIP"
+				}
+				instantTextBoxType = {
+					name = "advanced_near_player"
+					font = "malgun_goth_24"
+					text = "FE_ADVANCED_NEAR_PLAYER"
+					position = { x = 10 y = 5 }
+					maxWidth = 340
+					maxHeight = 24
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "value"
+					font = "malgun_goth_24"
+					text = "ON"
+					position = { x = @value_c2x y = 5 }
+					maxWidth = 253
+					maxHeight = 24
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				spinnerType = {
+					name = "galaxy_advanced_empires_near_player_spinner"
+					leftbutton = "spinner_upButton"
+					rightbutton = "spinner_downButton"
+					size = { x = 307 y = 30 }
+					position = { x = @spinner_c2x y = 4 }
+					priority = 100
+					borderSize = { x = 16 y = 16 }
+					horizontal = 1
+					maxValue = 100
+					startValue = 0
+					guiButtonType = {
+						name = "spinner_upButton"
+						quadTextureSprite = "scrollbar_leftbutton"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "spinner_downButton"
+						quadTextureSprite = "scrollbar_rightbutton"
+						position = { x = 30 y = 120 }
+					}
+					overlay = {
+						name = "selected_overlay"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						overSprite = "GFX_glow_tile_line"
+						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
+						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
+					}
+					navUp = "galaxy_clustered_starts_spinner"
+					navDown = "galaxy_crises_spinner"
+				}
+			}
 			### Fallen Empires
 			containerWindowType = {
 				name = "num_fallen_empires"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_3 }
+				position = { x = @column_2 y = @row_4 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1216,8 +1382,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_FALLEN_EMPIRES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1286,7 +1453,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "num_marauder_empires_fake"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_4 }
+				position = { x = @column_2 y = @row_5 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1296,7 +1463,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "num_marauder_empires"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_4 }
+				position = { x = @column_2 y = @row_5 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_invisible"
@@ -1307,8 +1474,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "NUM_MARAUDER_EMPIRES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1377,7 +1545,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "crises"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_5 }
+				position = { x = @column_2 y = @row_6 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1388,8 +1556,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_CRISES"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1448,29 +1617,30 @@ guiTypes = {
 					navDown = "aggressiveness_spinner"
 				}
 			}
-			# Advanced Empires Near Player
+			# Crisis Types
 			containerWindowType = {
-				name = "advanced_near_player"
+				name = "crisis_type"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_6 }
+				position = { x = @column_2 y = @row_7 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
-					pdx_tooltip = "FE_ADVANCED_NEAR_PLAYER_TOOLTIP"
+					pdx_tooltip = "CRISIS_TYPE_LABEL_TOOLTIP"
 				}
 				instantTextBoxType = {
-					name = "advanced_near_player"
+					name = "crisis_type_label"
 					font = "malgun_goth_24"
-					text = "FE_ADVANCED_NEAR_PLAYER"
+					text = "CRISIS_TYPE_LABEL"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
 					name = "value"
 					font = "malgun_goth_24"
-					text = "ON"
+					text = "CRISIS_TYPE_ANY"
 					position = { x = @value_c2x y = 5 }
 					maxWidth = 253
 					maxHeight = 24
@@ -1479,7 +1649,7 @@ guiTypes = {
 					alwaysTransparent = yes
 				}
 				spinnerType = {
-					name = "galaxy_advanced_empires_near_player_spinner"
+					name = "crisis_type_spinner"
 					leftbutton = "spinner_upButton"
 					rightbutton = "spinner_downButton"
 					size = { x = 307 y = 30 }
@@ -1497,24 +1667,24 @@ guiTypes = {
 					guiButtonType = {
 						name = "spinner_downButton"
 						quadTextureSprite = "scrollbar_rightbutton"
-						position = { x = 30 y = 120 }
+						position = { x = 30 y = 0 }
 					}
 					overlay = {
 						name = "selected_overlay"
 						spriteType = "GFX_glow_tile_orange_no_padding"
-						overSprite = "GFX_glow_tile_line"
+						overSprite = "GFX_glow_tile_line"					
 						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
 						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
 					}
-					navUp = "galaxy_clustered_starts_spinner"
-					navDown = "galaxy_crises_spinner"
+					navUp = "crises_slider"
+					navDown = "mid_game_slider"
 				}
 			}
 			# Difficulty
 			containerWindowType = {
 				name = "difficulty"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_7 }
+				position = { x = @column_2 y = @row_8 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1525,8 +1695,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_DIFFICULTY"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1576,7 +1747,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "scaling_difficulty"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_8 }
+				position = { x = @column_2 y = @row_9 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1587,8 +1758,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_SCALING_DIFFICULTY"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1638,7 +1810,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "aggressiveness"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_9 }
+				position = { x = @column_2 y = @row_10 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1649,8 +1821,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_AGGRESSIVENESS"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1700,7 +1873,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "mid_game"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_10 }
+				position = { x = @column_2 y = @row_11 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1711,8 +1884,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_MID_GAME"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1775,7 +1949,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "end_game"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_11 }
+				position = { x = @column_2 y = @row_12 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1786,8 +1960,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_END_GAME"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1850,7 +2025,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "victory"
 				size = { width = @row_w height = 36 }
-				position = { x = @column_2 y = @row_12 }
+				position = { x = @column_2 y = @row_13 }
 				background = {
 					name = "option_background"
 					spriteType = "GFX_tiles_dark_area_cut_8"
@@ -1861,8 +2036,9 @@ guiTypes = {
 					font = "malgun_goth_24"
 					text = "FE_VICTORY"
 					position = { x = 10 y = 5 }
-					maxWidth = 300
+					maxWidth = 340
 					maxHeight = 24
+					vertical_alignment = center
 					alwaysTransparent = yes
 				}
 				instantTextBoxType = {
@@ -1919,6 +2095,74 @@ guiTypes = {
 					}
 					navUp = "num_fallen_empires_slider"
 					navDown = "aggressiveness_spinner"
+				}
+			}
+			# Ironman
+			containerWindowType = {
+				name = "ironman"
+				size = { width = @row_w height = 36 }
+				position = { x = @column_2 y = @row_14 }
+				background = {
+					name = "option_background"
+					spriteType = "GFX_tiles_dark_area_cut_8"
+					pdx_tooltip = "FE_IRONMAN_TOOLTIP"
+				}
+				iconType = {
+					name = "ironman_icon"
+					spriteType = "GFX_ironman_icon"
+					position = { x = @icon_x y = 0 }
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "ironman_label"
+					font = "malgun_goth_24"
+					text = "FE_IRONMAN"
+					position = { x = 10 y = 5 }
+					maxWidth = 340
+					maxHeight = 24
+					vertical_alignment = center
+					alwaysTransparent = yes
+				}
+				instantTextBoxType = {
+					name = "value"
+					font = "malgun_goth_24"
+					text = "SETTINGS_TUTORIAL_ON"
+					position = { x = @value_c1x y = 5 }
+					maxWidth = 253
+					maxHeight = 24
+					fixedSize = yes
+					format = center
+					alwaysTransparent = yes
+				}
+				spinnerType = {
+					name = "ironman_spinner"
+					leftbutton = "spinner_upButton"
+					rightbutton = "spinner_downButton"
+					size = { x = 307 y = 30 }
+					position = { x = @spinner_c1x y = 4 }
+					priority = 100
+					borderSize = { x = 16 y = 16 }
+					horizontal = 1
+					maxValue = 100
+					startValue = 0
+					guiButtonType = {
+						name = "spinner_upButton"
+						quadTextureSprite = "scrollbar_leftbutton"
+						position = { x = 30 y = 0 }
+					}
+					guiButtonType = {
+						name = "spinner_downButton"
+						quadTextureSprite = "scrollbar_rightbutton"
+						position = { x = 30 y = 120 }
+					}
+					overlay = {
+						name = "selected_overlay"
+						spriteType = "GFX_glow_tile_orange_no_padding"
+						overSprite = "GFX_glow_tile_line"
+						position = { x = @spinnerOverlayPosX y = @spinnerOverlayPosY }
+						size = { x = @spinnerOverlaySizeX y = @spinnerOverlaySizeY }
+					}
+					navUp = "wormholes_slider"
 				}
 			}
 		}

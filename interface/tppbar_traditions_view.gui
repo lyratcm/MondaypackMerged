@@ -49,9 +49,9 @@ guiTypes = {
 	positionType = { name = "tr_prosperity_pursuit_of_profit"         	position = { x = 61 y = 125 } }
 	positionType = { name = "tr_prosperity_interstellar_franchising"	position = { x = 131 y = 125 } }
 	positionType = { name = "tr_prosperity_sct"                       	position = { x = 201 y = 55 } }
-	positionType = { name = "tr_prosperity_public_works"				position = { x = 113 y = 200 } }
+	positionType = { name = "tr_prosperity_public_works"    			position = { x = 201 y = 125 } }
 	
-	positionType = { name = "tr_diplomacy_the_federation"				position = { x = 9 y = 121 } }
+	positionType = { name = "tr_diplomacy_the_federation"			  	position = { x = 61 y = 55 } }
 	positionType = { name = "tr_diplomacy_entente_coordination"		  	position = { x = 61 y = 125 } }
 	positionType = { name = "tr_diplomacy_open_markets"				  	position = { x = 166 y = 55 } }
 	positionType = { name = "tr_diplomacy_insider_trading"			  	position = { x = 131 y = 125 } }

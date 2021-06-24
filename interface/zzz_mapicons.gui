@@ -165,7 +165,7 @@ guiTypes = {
 		}
 		iconType = {
 			name = "type_bg"
-			position = { x = 94 y = 5000 }		#_{ x = 99 y = 2 }
+			position = { x = 94 y = 5000 }		#_{ x = 94 y = 0 }
 			quadTextureSprite = "GFX_type_frame"
 			alwaysTransparent = yes
 		}
@@ -718,6 +718,22 @@ guiTypes = {
 		### OVERLAPPING ELEMENTS ###
 
 		overlappingElementsBoxType = {
+			name = "operations"
+			position = { x = -17 y = -40 }
+			size = { x = 165 y = 55 }
+			spacing = 1.0
+			format = left
+		}
+
+		overlappingElementsBoxType = {
+			name = "contacts"
+			position = { x = 10 y = -31 }
+			size = { x = 176 y = 16 }
+			spacing = 1.0
+			format = left
+		}
+
+		overlappingElementsBoxType = {
 			name = "fleets"
 			position = { x = 10 y = -15 }
 			size = { x = 176 y = 132 }
@@ -791,7 +807,7 @@ guiTypes = {
 		iconType = {
 			name ="type"
 			spriteType = "GFX_ship_class_small"
-			position = { x = 8 y = 4 }					#_{ x = 4 y = 2 }
+			position = { x = 8 y = 4 }					#_{ x = 5 y = 2 }
 			alwaysTransparent = yes
 			#scale = 0.75
 		}
@@ -871,8 +887,30 @@ guiTypes = {
 			position = { x = 20 y = 0 }
 			spriteType = "GFX_fleet_presence_overlay_icons"
 			no_clicksound = yes
-		}		
+		}
 	}
+	
+	containerWindowType = {
+		name = "contact_item"
+		size = { width = 22 height = 22 }
+
+		buttonType = {
+			name = "contact_button"
+			position = { x = -25 y = -10 }
+			spriteType = "GFX_firstcontact_icon"
+			#no_clicksound = yes
+		}
+	}	
+
+	containerWindowType = {
+		name = "operation_item"
+		size = { width = 55 height = 55 }
+
+		buttonType = {
+			name = "operation_button"
+			spriteType = "GFX_espionage_operation_icon"
+		}
+	}		
 
 	positionType = {
 		name = "natural_wormhole_map_icon_bg_size_offset"

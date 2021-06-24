@@ -1,0 +1,10 @@
+guiTypes = {
+	positionType = {
+		name = "fleet_view_max_height_subtraction"
+		position = { x = 0 y = 153 }
+	#	if_resolution = {
+	#		min_height = 1440
+	#		position = { x = 0 y = 90 }
+	#	}
+	}
+}

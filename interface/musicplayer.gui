@@ -1,14 +1,14 @@
 guiTypes = {
 	containerWindowType = {
 		name = "musicplayer_window"
-		size = { width = 600 height = 915 }
+		size = { width = 600 height = 840 }
 		if_resolution = {
 			min_height = 1200
-			size = { width = 600 height = 1035 }
+			size = { width = 600 height = 960 }
 		}
 		if_resolution = {
 			min_height = 1440
-			size = { width = 600 height = 1115 }
+			size = { width = 600 height = 1200 }
 		}
 		orientation = center
 		origo = center
@@ -17,62 +17,80 @@ guiTypes = {
 		#fade_type = linear
 		click_to_front = yes
 		background = {
-			name = "Background"
-			quadTextureSprite = "GFX_tile_outliner_bg"
+			name = "background"
+			quadTextureSprite = "GFX_tile_center_bg"
 		}
 		iconType = {
-			name = "hex_bg"
-			spriteType = "GFX_hex_bg"
-			position = { x = -10 y = -12 }
+			name = "header_hex_bg"
+			spriteType = "GFX_hex_center_bg"
+			position = { x = 0 y = 20 }
+			orientation = center_up
+			centerPosition = yes
 			alwaysTransparent = yes
 		}
 		iconType = {
 			name = "header_line"
-			spriteType = "GFX_line"
-			position = { x = 5 y = 21 }
+			spriteType = "GFX_line_center"
+			position = { x = 0 y = 36 }
+			orientation = center_up
+			centerPosition = yes
+			alwaysTransparent = yes
 		}
 		instantTextBoxType = {
-			name = "hot_join_label"
+			name = "heading"
 			font = "malgun_goth_24"
 			text = "Music Player"
-			position = { x = 25 y = 5 }
-			maxWidth = 170
-			maxHeight = 20
-			orientation = "UPPER_LEFT"
-			format = left
+			position = { x = -200 y = 7 }
+			orientation = center_up
+			maxWidth = 400
+			maxHeight = 40
+			fixedSize = yes
+			format = center
+			alwaysTransparent = yes
+		}
+		containerWindowType = {
+			name = "track_background"
+			position = { x = 10 y = 110 }
+			size = { width = 580 height = 46 }
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiles_dark_area_cut_8"
+			}
 		}
 		instantTextboxType = {
 			name = "track_name"
-			position = { x = 62 y = 90 }
+			position = { x = 30 y = 120 }
 			font = "malgun_goth_24"
 			text = ""
-			maxWidth = 476
-			maxHeight = 25
-			format = center
+			maxWidth = 420
+			maxHeight = 24
+			format = left
 			text_color_code = "H"
+			vertical_alignment = center
 			#fixedSize = yes
 		}
 		instantTextboxType = {
 			name = "track_elapsed"
-			position = { x = 11 y = 94 }
-			font = "cg_16b"
+			position = { x = 461 y = 120 }
+			font = "malgun_goth_24"
 			text = "00:00"
-			maxWidth = 50
-			maxHeight = 25
+			appendText = " / "
+			maxWidth = 63
+			maxHeight = 24
 			format = center
 		}
 		instantTextboxType = {
 			name = "track_duration"
-			position = { x = 538 y = 94 }
-			font = "cg_16b"
+			position = { x = 524 y = 120 }
+			font = "malgun_goth_24"
 			text = "02:58"
 			maxWidth = 50
-			maxHeight = 25
+			maxHeight = 24
 			format = center
 		}
 		containerWindowType = {
 			name = "controll_window"
-			position = { x = 5 y = 55 }
+			position = { x = 5 y = 70 }
 			size = { width = 590 height = 46 }
 			margin = { top = 0 left = 13 bottom = 0 right = 13 }
 			buttonType = {
@@ -80,7 +98,6 @@ guiTypes = {
 				position = { x = 149 y = 0 }
 				quadTextureSprite = "GFX_musicplayer_previous_button"
 				buttonFont = "cg_16b"
-				orientation = "UPPER_LEFT"
 				clicksound = decrement_click
 				pdx_tooltip = "MUSICPLAYER_PREV"
 			}
@@ -89,7 +106,6 @@ guiTypes = {
 				position = { x = 117 y = 0 }
 				quadTextureSprite = "GFX_musicplayer_play_pause_button"
 				buttonFont = "cg_16b"
-				orientation = "UPPER_LEFT"
 				clicksound = confirmation
 			}
 			buttonType = {
@@ -97,7 +113,6 @@ guiTypes = {
 				position = { x = 180 y = 0 }
 				quadTextureSprite = "GFX_musicplayer_next_button"
 				buttonFont = "cg_16b"
-				orientation = "UPPER_LEFT"
 				clicksound = increment_click
 				pdx_tooltip = "MUSICPLAYER_NEXT"
 			}
@@ -129,18 +144,12 @@ guiTypes = {
 				guiButtonType = {
 					name = "scrollbar_SliderButton"
 					quadTextureSprite = "GFX_settings_scroll_drager"
-					tooltip = ""
-					tooltipText = ""
-					delayedTooltipText = ""
 					position = { x = 30 y = 0 }
 				}
 				guiButtonType = {
 					name = "scrollbar_TrackButton"
 					quadTextureSprite = "scrollbar_background"
 					position = { x = 30 y = 50 }
-					tooltip = ""
-					tooltipText = ""
-					delayedTooltipText = ""
 				}
 				#remove#			#Broken, game crashes when this is removed#
 				guiButtonType = {
@@ -165,59 +174,46 @@ guiTypes = {
 				clicksound = tab_click
 			}
 		}
+		#Gradient at the top of the playlist
 		containerWindowType = {
-			name = "default_playlist_window"
-			position = { x = 11 y = 131 }
-			size = { width = 578 height = 770 }
-			if_resolution = {
-				min_height = 1200
-				size = { width = 578 height = 890 }
-			}
-			if_resolution = {
-				min_height = 1440
-				size = { width = 578 height = 970 }
-			}
-			verticalScrollbar = "right_vertical_slider_thick"
-			margin = { top = 15 left = 13 bottom = 13 right = 0 }
+			name = "playlist_top_window_fade"
+			position = { x = -7 y = 186 }
+			size = { width = 540 height = 21 }
+			orientation = center_up
+			origo = center_up
 			background = {
-				name = "Background"
-				quadTextureSprite = "GFX_plain_green_frame_tile"
-			}
-			gridBoxType = {
-				name = "tracks_grid"
-				position = { x = 0 y = 0 }
-				size = { width = 450 height = 100 }
-				slotSize = { width = 100%% height = 32 }
-				max_slots_horizontal = 1
-				format = "UPPER_LEFT"
+				name = "background"
+				quadTextureSprite = "GFX_generic_top_fade"
 			}
 		}
 		#Gradient at the bottom of the playlist
 		containerWindowType = {
 			name = "playlist_bottom_window_fade"
-			position = { x = 24 y = 1067 }
-			if_resolution = {
-				min_height = 1200
-				size = { width = 578 height = 1187 }
-			}
-			if_resolution = {
-				min_height = 1440
-				size = { width = 578 height = 1267 }
-			}
+			position = { x = -7 y = -28 }
 			size = { width = 540 height = 21 }
+			orientation = center_down
+			origo = center_down
 			background = {
-				name = "Background"
+				name = "background"
 				quadTextureSprite = "GFX_generic_bottom_fade"
 			}
 		}
-		#Gradient at the top of the playlist
 		containerWindowType = {
-			name = "playlist_top_window_fade"
-			position = { x = 24 y = 146 }
-			size = { width = 540 height = 21 }
+			name = "default_playlist_window"
+			position = { x = 10 y = 171 }
+			size = { width = 580 height = -15 }
+			verticalScrollbar = "right_vertical_slider_thick"
+			margin = { top = 15 left = 13 bottom = 13 right = 0 }
 			background = {
-				name = "Background"
-				quadTextureSprite = "GFX_generic_top_fade"
+				name = "background"
+				quadTextureSprite = "GFX_plain_green_frame_tile"
+			}
+			gridBoxType = {
+				name = "tracks_grid"
+				position = { x = 0 y = 0 }
+				size = { width = 450 height = -10 }
+				slotSize = { width = 450 height = 32 }
+				max_slots_horizontal = 1
 			}
 		}
 		buttonType = {
@@ -226,7 +222,7 @@ guiTypes = {
 			quadTextureSprite = "GFX_close"
 			buttonFont = "cg_16b"
 			shortcut = "ESCAPE"
-			orientation = "UPPER_RIGHT"
+			orientation = upper_right
 			clicksound = back_click
 			pdx_tooltip = "CLOSE_TITLE"
 		}
@@ -235,7 +231,7 @@ guiTypes = {
 		name = "music_track_entry"
 		size = { width = 540 height = 30 }
 		background = {
-			name = "Background"
+			name = "background"
 			quadTextureSprite = "GFX_plain_green_frame_tile"
 		}
 		iconType = {
@@ -281,7 +277,7 @@ guiTypes = {
 			maxHeight = 20
 			format = right
 			fixedSize = yes
-			orientation = "UPPER_RIGHT"
+			orientation = upper_right
 		}
 	}
 }

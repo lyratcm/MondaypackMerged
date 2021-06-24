@@ -6,7 +6,7 @@ guiTypes = {
 	@section_y_1440 = 1075
 	# this controls the size of the 3d viewport ui element
 	positionType = {
-		name = "3d_view_size"
+		name = "ship_designer_3d_view_size"
 		position = { x = 1300 y = 600 }
 		if_resolution = {
 			min_height = 1080
@@ -127,7 +127,7 @@ guiTypes = {
 				min_width = 1920
 				quadTextureSprite = "GFX_line"
 			}
-			position = { x = 5 y = 21 }
+			position = { x = 6 y = 21 }
 			alwaysTransparent = yes
 		}
 		instantTextBoxType = {
@@ -1917,26 +1917,32 @@ guiTypes = {
 		}
 		iconType = {
 			name = "hex_bg"
-			spriteType = "GFX_hex_center_bg"
-			position = { x = -21 y = 20 }
-			centerPosition = yes
-			orientation = center_up
+			spriteType = "GFX_hex_bg"
+			position = { x = 0 y = -12 }
+			if_resolution = {
+				min_width = 2560
+				position = { x = -10 y = -12 }
+			}
 			alwaysTransparent = yes
 		}
 		iconType = {
 			name = "component_header_line"
-			quadTextureSprite = "GFX_ui_line_center_tiny"
-			position = { x = 7 y = 23 }
+			quadTextureSprite = "GFX_line"
+			position = { x = 5 y = 21 }
 			alwaysTransparent = yes
 		}
 		instantTextBoxType = {
 			name = "select_component_lable"
 			font = "malgun_goth_24"
 			text = "SELECT_COMPONENT"
-			position = { x = 22 y = 5 }
+			position = { x = 35 y = 5 }
+			if_resolution = {
+				min_width = 2560
+				position = { x = 25 y = 5 }
+			}
 			maxWidth = 214
 			maxHeight = 24
-			format = center
+			format = left
 			text_color_code = "H"
 		}
 		instantTextBoxType = {

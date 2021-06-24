@@ -1,9 +1,10 @@
 guiTypes = {
 	containerWindowType = {
 		name = "gotobox"
-		position = { x = -600 y = 100 }
+		position = { x = -310 y = 100 }
 		size = { width = 300 height = 857 }
 		orientation = upper_right
+		origo = upper_right
 		moveable = yes
 		background = {
 			name = "background"
@@ -44,13 +45,13 @@ guiTypes = {
 			text_color_code = "E"
 		}
 		editBoxType = {
-			position = { x = 27 y = 65 }
 			name = "edit"
+			position = { x = 27 y = 65 }
+			size = { x = 250 y = 40 }
+			font = "cg_16b"
+			borderSize = { x = 4 y = 4 }			cursor = { x = 0 y = 2 }
 			instantTextBoxType = no
 			textureFile = "gfx/interface/tiles/small_tiles_dialog.dds"
-			font = "cg_16b"
-			borderSize = { x = 4 y = 4 }
-			size = { x = 250 y = 40 }			cursor = { x = 0 y = 4 }
 			#text_color_code = "H"
 		}
 		listBoxType = {

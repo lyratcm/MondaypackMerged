@@ -237,6 +237,12 @@ spriteTypes = {
 		name = "GFX_z_mm_button_evt_sub_bg"
 		texturefile = "gfx/interface/z_modmenu/z_mm_button_evt_sub_bg.dds"
 	}
+	#_空
+	spriteType = {
+		name = "GFX_z_mm_button_evt_option_empty"
+		texturefile = "gfx/interface/z_modmenu/z_mm_button_evt_option_empty.dds"
+	}
+	
 	#_white
 	spriteType = {
 		name = "GFX_z_mm_button_evt_option_normal"
@@ -335,6 +341,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_z_mm_welcome"
 		textureFile = "gfx/interface/z_modmenu/z_modmenu_intro_welcom.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+	}
+	spriteType = {#_debug[其他界面]
+		name = "GFX_z_mm_welcome_debug"
+		textureFile = "gfx/interface/z_modmenu/z_modmenu_intro_welcom_debug.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 	}
 	spriteType = {
@@ -789,9 +800,9 @@ spriteTypes = {
 		effectFile = "gfx/FX/buttonstate.lua"
 		noOfFrames = 3
 	}
-	spriteType = {#_无尽整合
+	spriteType = {
 		name = "GFX_z_mm_framework_button_2"
-		texturefile = "gfx/interface/z_modmenu/z_mm_button_framework_2.dds"
+		texturefile = "gfx/interface/z_modmenu/z_mm_button_framework_1.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		noOfFrames = 3
 	}
@@ -827,7 +838,7 @@ spriteTypes = {
 	
 	
 	
-	###_[ui_bg]	evt_window/AP
+	###_[ui_bg]	evt_window/AP/empty
 	#_[evt_window]
 	spriteType = {
 		name = "GFX_z_modmenu_window_bg"
@@ -853,6 +864,12 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_z_modmenu_window_bg_ap"
 		textureFile = "gfx/interface/z_modmenu/z_modmenu_window_bg_ap.dds"
+	}
+	#_[empty]
+	corneredTileSpriteType = {
+		name = "GFX_z_fw_ui_bg_empty"
+		texturefile = "gfx/interface/z_modmenu/z_fw_ui_bg_empty.dds"
+		borderSize = { x=25 y=25 }
 	}
 	
 	###_[子模块]	#########################################################################

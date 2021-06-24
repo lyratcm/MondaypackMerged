@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "EventWindow"
 		position = { x = 0 y = 0 }
-		size = { width = 705 height = 85% }
+		size = { width = 705 height = -10 }
 		orientation = center
 		origo = center
 		moveable = yes
@@ -55,7 +55,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "track_button"
-			position = { x = -77 y = 13 } # 33
+			position = { x = -77 y = 13 }
 			orientation = upper_right
 			spriteType = "GFX_track_all_projects_icon"
 		}
@@ -105,8 +105,7 @@ guiTypes = {
 			origo = center_up
 			background = {
 				name = "description_frame"
-				spriteType = "GFX_tiles_frame_light" # "GFX_tiles_dark_area_cut_8"
-				#alwaysTransparent = yes
+				spriteType = "GFX_tiles_frame_light"
 			}
 			containerWindowType = {
 				name = "frame_background"
@@ -115,7 +114,7 @@ guiTypes = {
 				background = {
 					name = "description_frame"
 					spriteType = "GFX_tiles_dark_area_cut_8"
-					#alwaysTransparent = yes
+					alwaysTransparent = yes
 				}
 			}
 		}
@@ -125,10 +124,15 @@ guiTypes = {
 			font = "malgun_goth_24"
 			text = "Long text here!"
 			maxWidth = 643
-			maxHeight = 632
+			maxHeight = 692
+			fixedSize = yes
 			format = left
 			text_color_code = "L"
-			scrollbarType = "standardtext_slider_small"
+			if_resolution = {
+				min_height = 1440
+				maxHeight = 1056
+			}
+			alwaysTransparent = yes
 		}
 	}
 	containerWindowType = {
