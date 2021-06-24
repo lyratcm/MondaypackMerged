@@ -16,8 +16,10 @@ gpm_planet_wonders_disabled				#set on menu
 gpm_modifiers_homeworld_enabled			#set on menu
 gpm_modifiers_precursor_disabled		#set on menu
 gpm_precursor_ai_chain_disabled			#set on menu
+gpm_relic_drops_disabled				#set on menu
 
 forbid_guillis_planet_modifiers			#dont run engine on this
+forbid_guillis_precursor_modifiers      #dont run precursor spawn scripts on this
 
 
 gpm_r_time_displacer_found					#Relic found, cant be found again
@@ -76,7 +78,27 @@ gpm_discover_precursor_outpost_ruins
 gpm_discover_precursor_harbor_ruins
 gpm_discover_precursor_generic_ruins
 gpm_discover_precursor_obelisks
+gpm_discover_planet_wonder
 
+# Relic related flags
+relic_machine_world_core_activated			# activated machine core relic and can now do planet decision
+
+# Unlocks
+gpm_artifact_research_centre_unlocked		# allowed to build arcane research center
+gpm_personal_mech_trait_rewarded			# unlocks general trait
+gpm_historian_trait_rewarded				# unlocks leader trait
+gpm_fallen_heraldry_trait_rewarded			# unlocks admiral trait
+gpm_battle_standards_trait_rewarded			# unlocks general trait
+gpm_core_prison_rewarded					# unlocks subsurface prison building
+gpm_exotic_park_rewarded					# unlocks exotic park building
+gpm_precursor_expert_trait_rewarded			# unlocks precursor expert trait
+
+# Event related flags
+gpm_xeno_army_fire_event					# from the X xeno armies every Y years
+gpm_ego_country								# ego/xandar country flag
+gpm_ego_first_meet							# ego/xandar country flag
+gpm_ego_friendly_reward						# ego/xandar country flag
+gpm_ego_first_fleet_destroyed				# ego/xandar country flag
 
 ### Solar System Flags
 ######################
@@ -88,11 +110,40 @@ gpm_precursor_gaia_system
 gpm_gaia_system_gaia_world
 
 
+
+
 ### Planet Flags
 ################
 gpm_is_precursor_world  				#set on gamestart
 gpm_is_wondrous_world					#set on gamestart
 is_event_spawned_planet					#planet is created after gamestart (event). Runs gpm_engine.1 on_survey
+has_gpm_d_relic_tank_factory
+has_gpm_d_relic_mech_factory
+has_gpm_d_relic_power_armor_factory
+has_gpm_d_relic_ship_factory
+has_gpm_d_relic_reactor_factory
+
+gpm_is_precursor_orbiting_habitat
+gpm_is_extensive_moon_mining_habitat
+gpm_is_frequent_thunderstorms_research_habitat
+gpm_is_radioactive_mantle_mining_habitat
+gpm_is_frequent_asteroid_flybys_habitat
+gpm_is_ancient_temple_expeditions_habitat
+gpm_is_highly_charged_particle_collection_habitat
+gpm_is_time_displaced_planet_research_habitat
+gpm_is_surface_mining_habitat
+gpm_is_surface_expeditions_habitat
+gpm_is_android_pleasure_palace_tourism_habitat
+gpm_is_delicious_ingredients_trade_habitat
+gpm_is_flat_terrain_racing_habitat
+gpm_is_strange_alien_eggs_restriction_habitat
+gpm_is_hydrogen_extraction_habitat
+gpm_is_nitrogen_extraction_habitat
+gpm_is_chlorine_extraction_habitat
+gpm_is_phosphorus_extraction_habitat
+gpm_is_sulfur_extraction_habitat
+
+gpm_has_RES
 
 ### Ambient Flags
 #################
