@@ -1,0 +1,213 @@
+###_z fw ambient effect entities	##################################################################
+
+
+###_empty
+entity = {
+	name = "z_fw_dummy_effect_entity"
+	pdxmesh = "locator_mesh"
+}
+
+
+
+
+###_[test]
+#_green
+#_循环需要[looping=yes]+[trigger_once=no],可能报错?
+entity = {
+	name = "z_fw_test_entity"
+	pdxmesh = "locator_mesh"
+	
+	#get_state_from_parent = no
+	locator = { name = "root" position = { 0 0 0 } }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = yes
+		event = { time = 0.0 node = root particle = "z_fw_fx_ambient_test_1" keep_particle = no trigger_once = no }
+	}
+	
+	scale = 1
+}
+
+
+
+
+###_[z_fw_fx_star_exp_test]
+#_green
+entity = {
+	name = "z_fw_fx_star_exp_test"
+	pdxmesh = "locator_mesh"
+	
+	#get_state_from_parent = no
+	locator = { name = "root" position = { 0 0 0 } scale = 1 }
+	locator = { name = "root_0" position = { 0 0 0 } rotation = { 0 180 0 } scale = 1 }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		###_[充能]	+2	2~6
+		#_[0]	10
+		event = { time = 2.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 2.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		#_[0.5]	20
+		event = { time = 2.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_1" keep_particle = yes trigger_once = yes }
+		#_[1.0]	40
+		event = { time = 3.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 3.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		#_[1.5]	80
+		event = { time = 3.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 3.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 4.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 4.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		#_[2.0]	140
+		event = { time = 3.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 4.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		#_[2.5]	220
+		event = { time = 4.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_2" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 4.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 4.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		#_[3.0]	340
+		event = { time = 4.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 4.8 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.3 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		#_[3.5]	500
+		event = { time = 5.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 5.3 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		event = { time = 5.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_charge_3" keep_particle = yes trigger_once = yes }
+		
+		###_[触发]	+3	3~6
+		#_[0.0]	3
+		event = { time = 3.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		#_[0.5]	6
+		event = { time = 3.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		#_[1.0]	9
+		event = { time = 3.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_1" keep_particle = yes trigger_once = yes }
+		#_[1.5]	15
+		event = { time = 4.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+		#_[2.0]	24
+		event = { time = 4.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+		event = { time = 4.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_trigger_2" keep_particle = yes trigger_once = yes }
+	
+		###_[flare]	+3	3.5~5.5
+		#_[0.0]	2
+		event = { time = 3.3 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 3.8 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.5 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.7 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.8 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.9 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 4.95 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.03 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.06 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.1 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.12 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.14 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.16 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.2 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.25 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.3 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.6 node = root particle = "z_fw_fx_ambt_star_exp_green_ltn_flare_1" keep_particle = yes trigger_once = yes }
+		
+		#_[skw_halo]
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_skw_1" keep_particle = yes trigger_once = yes }
+		#_[fire]
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_fire" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_spark" keep_particle = yes trigger_once = yes }
+		event = { time = 5.0 node = root particle = "z_fw_fx_ambt_star_exp_green_fog" keep_particle = yes trigger_once = yes }
+	}
+	
+	attach = { root = "a_star_class_star_entity" }
+	attach = { root = "z_fw_fx_star_exp_test_1" }
+	
+	scale = 1
+}
+###_[z_fw_fx_star_exp_test_1]		star
+entity = {
+	name = "z_fw_fx_star_exp_test_1"
+	pdxmesh = "locator_mesh"
+	
+	#get_state_from_parent = no
+	locator = { name = "root" position = { 0 0 0 } scale = 1 }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 5 looping = no
+		#_[skw]	+0.3
+		event = { time = 5.3 node = root particle = "z_fw_fx_star_exp_green_b_1" keep_particle = yes trigger_once = yes }
+		event = { time = 5.4 node = root particle = "z_fw_fx_star_exp_green_b_2" keep_particle = yes trigger_once = yes }
+		event = { time = 5.45 node = root particle = "z_fw_fx_star_exp_green_b_3" keep_particle = yes trigger_once = yes }
+		event = { time = 5.50 node = root particle = "z_fw_fx_star_exp_green_b_4" keep_particle = yes trigger_once = yes }
+		event = { time = 5.55 node = root particle = "z_fw_fx_star_exp_green_b_5" keep_particle = yes trigger_once = yes }
+		event = { time = 5.60 node = root particle = "z_fw_fx_star_exp_green_b_6" keep_particle = yes trigger_once = yes }
+		event = { time = 5.65 node = root particle = "z_fw_fx_star_exp_green_b_7" keep_particle = yes trigger_once = yes }
+		event = { time = 5.70 node = root particle = "z_fw_fx_star_exp_green_b_8" keep_particle = yes trigger_once = yes }
+		event = { time = 5.75 node = root particle = "z_fw_fx_star_exp_green_b_9" keep_particle = yes trigger_once = yes }
+		event = { time = 5.80 node = root particle = "z_fw_fx_star_exp_green_b_10" keep_particle = yes trigger_once = yes }
+		event = { time = 5.85 node = root particle = "z_fw_fx_star_exp_green_b_11" keep_particle = yes trigger_once = yes }
+		event = { time = 5.90 node = root particle = "z_fw_fx_star_exp_green_b_12" keep_particle = yes trigger_once = yes }
+		event = { time = 5.95 node = root particle = "z_fw_fx_star_exp_green_b_13" keep_particle = yes trigger_once = yes }
+		event = { time = 6.00 node = root particle = "z_fw_fx_star_exp_green_b_14" keep_particle = yes trigger_once = yes }
+		event = { time = 6.05 node = root particle = "z_fw_fx_star_exp_green_b_15" keep_particle = yes trigger_once = yes }
+		event = { time = 6.10 node = root particle = "z_fw_fx_star_exp_green_b_16" keep_particle = yes trigger_once = yes }
+		event = { time = 6.15 node = root particle = "z_fw_fx_star_exp_green_b_17" keep_particle = yes trigger_once = yes }
+		event = { time = 6.20 node = root particle = "z_fw_fx_star_exp_green_b_18" keep_particle = yes trigger_once = yes }
+		event = { time = 6.25 node = root particle = "z_fw_fx_star_exp_green_b_19" keep_particle = yes trigger_once = yes }
+		event = { time = 6.30 node = root particle = "z_fw_fx_star_exp_green_b_20" keep_particle = yes trigger_once = yes }
+	}
+	
+	scale = 6.5
+}

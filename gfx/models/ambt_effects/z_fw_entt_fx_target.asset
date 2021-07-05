@@ -1,0 +1,24 @@
+###_z fw ambient effect entities	##################################################################
+
+
+
+
+
+###_[z_fw_fx_target_0]	red/ship_entt
+#_green
+entity = {
+	name = "z_fw_fx_target_0"
+	pdxmesh = "locator_mesh"
+	
+	#get_state_from_parent = no
+	locator = { name = "root" position = { 0 0 0 } scale = 1 }
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 7 looping = no
+		event = { time = 0.0 node = root particle = "z_fw_fx_target_0" keep_particle = yes trigger_once = yes }
+	}
+	
+#	attach = { root = "z_fw_fx_star_exp_test_1" }
+	
+	scale = 10
+}
