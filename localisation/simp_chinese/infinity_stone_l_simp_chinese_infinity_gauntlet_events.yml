@@ -1,0 +1,156 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# TITLE
+ ##################
+
+   # infinity gauntlet
+ infinity_gauntlet.1.name:0 "无限手套"
+ infinity_gauntlet.1.desc:0 "既然我们已经得到了两颗§Y无限宝石§!，或许我们可以让它们一起发挥作用。我们的科学家与工匠们用最强的合金制造了一个§R无限手套§!，它能够融合多颗§Y无限宝石§!的力量发挥意想不到的作用。"
+ infinity_gauntlet.1.a:0 "这只是开始."
+
+ infinity_gauntlet.3.name:0 "封存无限手套"
+ infinity_gauntlet.3.desc:0 "如果没有多颗§Y无限宝石§!，那么§R无限手套§!也就没什么用处了。"
+ infinity_gauntlet.3.a:0 "我们会把宝石都夺过来的。"
+
+###########################################################################################
+
+#GAUNTLET OUTCOMES
+
+ infinity_gauntlet.66.name:0 "打响指"
+ infinity_gauntlet.66.desc:0 "随着一声轻响, §Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!. 这无限无限宝石的威力对于他们来说实在是太大了，极大地伤害他们."
+ infinity_gauntlet.66.a:0 "但是...."
+
+ infinity_gauntlet.99.name:0 "打响指"
+ infinity_gauntlet.99.desc:0 "今天，银河系中一半的生命都化为灰烬。在这场毁灭性事件中，植物，动物和人类都消失了。 许多人怀疑这是§Y[From.GetName]§!使用了§R无限手套§!,并希望从他们那里夺取手套来恢复原样。"
+ infinity_gauntlet.99.a:0 "完美平衡，因为所有事物都应该..."
+
+ infinity_gauntlet.67.name:0 "清算"
+
+ infinity_gauntlet.151.name:0 "清算"
+
+ infinity_gauntlet.152.name:0 "清算"
+ infinity_gauntlet.152.desc:0 "今天，我们实现了我们的目标，在我们境外的一半生命瞬间消失了。其他帝国会对于我们使用§R无限手套§!会感到非常震惊与害怕, 如果没有无限宝石保护我们, 他们会前来复仇."
+ infinity_gauntlet.152.a:0 "完美的平衡,万物本该如此."
+
+ infinity_gauntlet.68.name:0 "警告"
+ infinity_gauntlet.68.desc:0 "现在是时候结束这个银河系的小规模战争了. §Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!作为一种最终的武力展示，向银河系中的所有帝国发出警告，停止战争或面对无限手套的力量。\n\n所有六个无限宝石的力量一起把[Root.GetRulerTitle]逼近了一种紧张的状态, 但是他们可能还没恢复过来. 手套本身已损坏，但可以修复，但是，自警告以来，我们无法找到其中一个§H无限无限宝石§!."
+ infinity_gauntlet.68.a:0 "愿他们都听我们的警告."
+
+ infinity_gauntlet.154.name:0 "警告"
+ infinity_gauntlet.154.desc:0 "今天, 该银河系中§Y10%§!的生命都化为灰烬。在这场毁灭性事件中，植物，动物和人类都消失了。\n\n§Y[From.GetName]§!说他们使用了§R无限手套§!,这么做是对银河系所有人的警告，放下他们的武器，和平生活。"
+ infinity_gauntlet.154.a:0 "他们是一支不可忽视的力量."
+
+ infinity_gauntlet.69.name:0 "重头来过"
+ infinity_gauntlet.69.desc:0 "我们一次又一次地证明,这个星系的当前居民的未来是不能相信的. 现在是时候把事情交给我们自己了。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!给了此星系重新开始的机会。 希望这将给这个星系一个赎罪的机会。\n\n所有六颗无限宝头的力量合在一起可以胜任这项任务，但是所需的力量是如此之大，除了一颗无限宝石之外，所有的无限宝石都破碎了，剩下的无限宝石不久之后就消失了。"
+ infinity_gauntlet.69.a:0 "银河的新时代！"
+
+ infinity_gauntlet.156.name:0 "重头来过"
+ infinity_gauntlet.156.desc:0 "今天,该银河系中§Y90%§!的生命都化为灰烬。在这场毁灭性事件中，植物，动物和人类都消失了。\n死亡如此之多，该星系现在开始缓慢下降为混乱，因为那些幸存下来的人寻找他们永远找不到的答案。"
+ infinity_gauntlet.156.a:0 "银河系将永远无法恢复."
+ infinity_gauntlet.156.b:0 "新曙光的开始."
+
+ infinity_gauntlet.70.name:0 "肃清"
+ infinity_gauntlet.70.desc:0 "现在是时候清除银河系下所有次等生命了.n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!清除居住在其中的次等星系, 只留下渴望获得回报的星系。\n\n§Y无限宝石§!的力量合在一起可以胜任这项任务，但是，所需的力量是如此之大，无限宝石发出了一阵能量，§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.70.a:0 "[Root.Owner.GetSpeciesNamePlural]至高无上!"
+ infinity_gauntlet.70.b:0 "为时已晚 有机体!"
+
+ infinity_gauntlet.160.name:0 "肃清"
+ infinity_gauntlet.160.desc:0 "今天,银河系中的所有生物都化为灰烬。§Y[From.GetName]§!使用了§R无限手套§!为了达到最终目标，现在机器寿命占据着银河系的主导地位。""
+ infinity_gauntlet.160.a:0 "为时已晚 有机体!"
+
+ infinity_gauntlet.71.name:0 "Destroy Enemies"
+ infinity_gauntlet.71.desc:0 "在战争时期，人们必须竭尽所能取得胜利。 在我们做完一切之后，星系中的其他人可能会向我们警告，但我们要为生存而做我们必须做的事情。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!消灭我们的敌人。轻轻一响，他们的世界变成了灰烬。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.71.a:0 "The §Y[From.GetName]§!不会在今天倒下!!"
+
+ infinity_gauntlet.162.name:0 "不存在的星系"
+ infinity_gauntlet.162.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!从存在抹除敌人。不管是不是，湮没有着正当理由，很明显，他们将会为所发生的事情承担后果."
+ infinity_gauntlet.162.a:0 "他们逃不掉的!"
+ infinity_gauntlet.162.b:0 "我们尽力了."
+
+ infinity_gauntlet.163.name:0 "结束饥饿"
+ infinity_gauntlet.163.desc:0 "所有的生命，不论起源，都有一个基本的愿望，那就是生存。然而，随着越来越多的人出生在银河系，资源不得不在更多的生命之间传播, 但是今天一切终将结束. \n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!改变我们所知道的生活。所有拥有思想的生命不再需要食物、水、矿物或能量来生存。他们的手指一弹，数十亿人的痛苦就结束了。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.163.a:0 "所有的苦难终于今日!"
+
+ infinity_gauntlet.165.name:0 "结束饥饿"
+ infinity_gauntlet.165.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!结束整个银河系的饥饿。许多人希望这将结束银河系的冲突，带来一个和平的新时代，但许多人怀疑这实际上会改变什么。"
+ infinity_gauntlet.165.a:0 "对所有人来说都是美好的一天。"
+
+ infinity_gauntlet.166.name:0 "启蒙运动"
+ infinity_gauntlet.166.desc:0 "是时候让银河系的异教徒们尊重全能的神圣力量了。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!改变那些不信教的人的思想，启发他们认识宇宙的普遍真理。现在，银河系的公民们来到我们这里，要求从他们的诅咒中获得救赎，我们很乐意为之效劳。这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.166.a:0 "我们欢迎我们的新兄弟姐妹!"
+
+ infinity_gauntlet.168.name:0 "启蒙运动"
+ infinity_gauntlet.168.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!使我们理解他们的事业. 我们已经蒙蔽了这么长时间，现在我们睁开眼睛面对真相。 赞美§Y[From.GetName]§!让我们加入他们对神的崇拜!"
+ infinity_gauntlet.168.a:0 "我们向神下跪!"
+
+ infinity_gauntlet.169.name:0 "和平"
+ infinity_gauntlet.169.desc:0 "战争和冲突的时代已经结束，一个和平的新时代正在向我们走来。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!要改变一切不遵行和平之道的人的心灵。银河系的居民现在将放下武器，与我们共同繁荣。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.169.a:0 "永恒和平的银河!"
+
+ infinity_gauntlet.171.name:0 "和平"
+ infinity_gauntlet.171.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!为我们指明和平之路。现在看到，我们的琐碎的争吵是毫无意义的，现在我们寻求与我们在银河系的兄弟姐妹们和谐相处。 我们感谢§Y[From.GetName]§!,感谢他们为我们指明了正确的道路，我们希望他们带领我们走向繁荣的未来。"
+ infinity_gauntlet.171.a:0 "一个人人享有和平的新时代。"
+
+ infinity_gauntlet.172.name:0 "拥抱"
+ infinity_gauntlet.172.desc:0 "很长一段时间以来，我们一直试图让我们的外族弟兄像我们看待他们那样看待彼此，但他们仍然互相仇恨，互相迫害。现在是变革的时候了，如果帝国不愿意接纳其他国家，我们就会用武力迫使他们接受。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!改变我们所能触及的所有人的思想，传播我们爱与和谐的信息。银河系的所有种族都将被唤醒，以一种新的思维方式，我们的方式。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.172.a:0 "我们要用爱以浇灌他们!"
+
+ infinity_gauntlet.174.name:0 "拥抱"
+ infinity_gauntlet.174.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!开启了我们的心灵之眼，告诉我们与众不同并不是那么糟糕。我们欢迎我们的新兄弟姐妹们来到我们的家园，并将努力共同创造一个更加美好的明天。我们感谢§Y[From.GetName]§!为了帮助我们找到银河系中最强大的力量，爱。"
+ infinity_gauntlet.174.a:0 "*他们的内心长了3寸*"
+
+ infinity_gauntlet.175.name:0 "结束危机"
+ infinity_gauntlet.175.desc:0 "拥有完整的§R无限手套§!让我们在银河系中最强大的帝国,但是如果我们不去使用它,我们如何度过眼前的危机!\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!增强星系中所有人的武器，以消灭我们的集体敌人。不久，这场危机将被打败，所有人都会记住谁帮助他们战胜了危机。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.175.a:0 "银河系中的胖虎!"
+
+ infinity_gauntlet.176.name:0 "危机的终结"
+ infinity_gauntlet.176.desc:0 "最近，我们已经注意到，银河危机似乎比以前要弱得多。§Y[From.GetName]§!声称使用了§R无限手套§!来提高我们对付危机的能力，使其免于遭受破坏。无论如何，我们将尽快结束这一银河威胁并恢复正常。"
+ infinity_gauntlet.176.a:0 "避免危机."
+
+ infinity_gauntlet.177.name:0 "无限能量币"
+ infinity_gauntlet.177.desc:0 "为什么这逼东西叫§R无限手套§!? 为何如此无限呢？如果不赚钱，那有什么用?\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§! 使用了§R无限手套§!创造了能量币,数量无限！当然，这可能会破坏我们的经济和银河市场的稳定，但是只要我们现在有钱，谁在乎呢！\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。 但是谁在乎我们何时变得富有呢!"
+ infinity_gauntlet.177.a:0 "能量树上能量币!"
+
+ infinity_gauntlet.178.name:0 "更大的利益"
+ infinity_gauntlet.178.desc:0 "长期以来，我们一直试图让异族兄弟见面，但他们继续憎恨和迫害对方。改变的时间就是现在，如果这些帝国都不愿意接受他人, 我们将使用武力手段. 银河系中的不平等现象没有止境，因此许多人在银河系政府的压迫下受苦。但是他们将不再受苦，因为我们将使他们都拥护平等！\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!改变我们能够接触到的所有人的思想，传播我们平等和自由的信息。 银河系中的所有种族都将被一种新的思维方式唤醒，即我们的方式。\n\n这§Y无限宝石§!的威力对于[Root.GetRulerTitle]实在是太大了, 严重伤害了他们。"
+ infinity_gauntlet.178.a:0 "人人平等!"
+
+ infinity_gauntlet.180.name:0 "更大的利益"
+ infinity_gauntlet.180.desc:0 "§Y[From.GetName]§!使用了§R无限手套§!打开天眼，向我们展示我们可以生活在一个平等的银河系中。我们的政府正在推倒社会上传播的不平等，使我们一起走到和谐的新时代。""
+ infinity_gauntlet.180.a:0 "帝国境内, 人人平等!"
+
+ infinity_gauntlet.181.name:0 "末日"
+ infinity_gauntlet.181.desc:0 "进入灵魂世界对我们的人民而言是宝贵的财富,而§H灵魂宝石§!能够操纵居住在该领域的灵魂,我们已经能够汇集许多人的灵魂，他们的知识和经验，结合成一个存在。 今天，我们将“飞升”过程提升到了一个新的高度。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!来增强灵魂宝石的力量，使其增幅十倍。[Root.GetRulerTitle] 然后用灵魂宝石操纵灵魂世界内无数的灵魂，将它们汇集成一个巨大的灵能实体。\n\n所有六颗宝石的力量都超过了[Root.GetRulerTitle]的承受能力,同时消灭了他们和手套。。但在这个过程完全实现之前，§H灵魂宝石§!就被打碎了，通往灵魂世界的道路也被切断了。另外5块§Y无限宝石§!，很快地消失了，又回到了无限中去。然而，尽管如此，灵能实体还是稳定下来，现在听从我们的命令。"
+ infinity_gauntlet.181.a:0 "末日临近!"
+ ig_the_end_tooltip:1 "灵能实体出现在§Y[event_target:max_soulborn_nation.Capital.GetName]§!上方."
+
+ infinity_gauntlet.182.name:0 "必然"
+ infinity_gauntlet.182.desc:0 "现在我们拥有所有的§Y无限宝石§!,我们应该想一想用这些宝石来干什么, 而到我们，我的意思是[Root.GetRulerTitle]需要做出决定。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!增强自己的身体，并使自己沉浸在所有6块宝石的力量之中。当他们吸收每块宝石的精髓时，他们变得越来越强，吸收最后一颗宝石的速度比之前还要更快。 现在，他们吸收了全部6颗宝石，他们获得了近乎无限的力量，并亲自下场来对付敌人。""
+ infinity_gauntlet.182.a:0 "我即是必然。"
+ ig_the_inevitable_tooltip:1 "名为"§H必然§!"的将军领袖加入了我们的领袖池中."
+
+ infinity_gauntlet.183.name:0 "解除银河武装"
+ infinity_gauntlet.183.desc:0 "星系中的国家相互威胁,讨伐。人们不断发明更大，更强大的武器，这增加了战争的利益和破坏力。 现在是时候让我们自己解决问题了。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!摧毁星系中所有不是我们自己的军舰。\n\n所有六颗无限宝石的力量合在一起可以胜任这项任务，但是所需的力量是如此之大,[Root.GetRulerTitle]在此过程中也被反噬。"
+ infinity_gauntlet.183.a:0 "数十年的军事积累结束了！"
+
+ infinity_gauntlet.186.name:0 "解除银河武装"
+ infinity_gauntlet.186.desc:0 "今天，星系中几乎所有的军舰都被摧毁。值得注意的是, §Y[From.GetName]§!的舰队不受此事件影响, 使得许多人怀疑，这袭击是他们做的。"
+ infinity_gauntlet.186.a:0 "我们必须重建!"
+ infinity_gauntlet.186.b:0 "我们依旧坚强!"
+
+ infinity_gauntlet.187.name:0 "摧毁无限宝石"
+ infinity_gauntlet.187.desc:0 "事实证明，无限宝石对银河系有害,有人必须对无限宝石做点什么以及无限宝石那强大的破坏力.\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!摧毁了§Y无限宝石§!. 摧毁无限宝石所需的力量极大地伤害了[Root.GetRulerTitle]，但任务完成了，无限宝石不再存在于这世上。"
+ infinity_gauntlet.187.a:0 "我用宝石摧毁了宝石。"
+
+ infinity_gauntlet.188.name:0 "重返"
+ infinity_gauntlet.188.desc:0 "在先前无限手套的拥有者使用它夺取了全部50%的生命之后，我们现在该使用手套来消除他们造成的伤害。\n\n§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!带回所有被杀害的人。只需轻轻一响，手套就能将所有迷失者准确地送回他们离开时的状态。 但是所需的力量是如此之大,[Root.GetRulerTitle]在此过程中也被反噬。但是..."
+ infinity_gauntlet.188.a:0 "..."
+
+ infinity_gauntlet.189.name:0 "重返"
+ infinity_gauntlet.189.desc:0 "§Y[Root.GetRulerTitle] [Root.GetRulerName]§!使用了§R无限手套§!带回所有被杀害的人。随着朋友和家人的团聚，人人脸上洋溢着笑容。\n\n自从"响指"开始以来已经过去了很多时间，一切恢复正常需要一段时间，但是现在我们得到了两倍的帮助。"
+ infinity_gauntlet.189.a:0 "我们感谢你,§Y[From.GetName]§!."

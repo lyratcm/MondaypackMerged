@@ -1,0 +1,2 @@
+﻿l_russian:
+ edict_z_modmenu_initialization_edt_desc:1000 "If you have installed the Infinite Stellaris mod menu, but there is no shortcut button in the leftbar or edict to open the menu, please use this edict to initialize the mod."

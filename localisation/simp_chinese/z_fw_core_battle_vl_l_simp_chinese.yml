@@ -1,0 +1,55 @@
+﻿l_simp_chinese:
+
+#_[设置]
+#_[vl_战舰debug]		射程
+#_[vl_国家基础debug]	造船
+
+
+
+
+###_[设置]
+ z_modmenu.battle_vl_off: "数值上限 §H已关闭§!"
+ z_modmenu.battle_vl_basic: "数值上限 §G已设为基础§!"
+ z_modmenu.battle_vl_more: "数值上限 §B已设为进阶§!"
+ z_modmenu.battle_vl_all: "数值上限 §C已设为完全§!"
+ z_modmenu.battle_vl_tips: "数值上限系统可以为部分重要数值添加上限，以防止一些结构性bug的出现：如射程超限，免费造船，移速爆炸等。\n它还能够补充数值系统缺憾，如将伤害与射速属性添加到舰载机上。\n另外他也会为§Y决战兵器MOD(开发中)§!提供数值平衡基础。\n\n分为3个档位:基础/进阶/完全\n§G基础§!包括：造船费用\n§B进阶§!包括：武器射程/战斗移速\n§C完全§!"
+
+
+
+
+###_[射程]
+ z_fw_mod_flt_vl_range: "射程"
+ z_fw_mod_flt_vl_range_desc: ""
+
+
+
+
+###_[造船]
+ z_fw_mod_cntr_vl_navy_cost_sb_1: "§B数值限制§!：造船费用"
+ z_fw_mod_cntr_vl_navy_cost_sb_1_desc: "控制造船费用减免不超过50%"
+ z_fw_mod_cntr_vl_navy_cost_sb_2: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_2_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_3: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_3_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_4: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_4_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_5: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_5_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_6: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_6_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_7: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_7_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_8: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_8_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_16: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_16_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_32: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_32_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_64: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_64_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_128: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_128_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_256: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_256_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_512: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_512_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"

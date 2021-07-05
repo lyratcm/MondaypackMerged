@@ -1,0 +1,7 @@
+﻿l_english:
+
+ Trait_GAPS_Capital:0 "Capital Dwellers"
+ Trait_GAPS_Capital_desc:0 "This species is only productive on the capital of a country."
+ Trait_GAPS_Capital_Effect:0 "$mod_planet_jobs_produces_mult$ While On Capital: §G+10%§!"
+ 
+ Pop_Modifier_GAPS_Capital_Bonus:0 "Capital Dwellers Bonus"

@@ -1,0 +1,65 @@
+﻿l_russian:
+#_[面板按钮]
+#_[伞の优化]
+#_[产业革命]
+
+
+###_[面板按钮]
+ z_fw_btn_plnt_ui_tb_job_check:0 "Perform a job checking on the current planet, and spend £energy£§Y$energy$§! to demote the unemployed high-class population."
+ z_fw_tips_pf2_needed:0 "Pop/Manpower Migration \nNeed §BBetter Performance§!"
+ 
+ z_fw_btn_plnt_ui_tb_setting:0 "Open Detailed Planet Setting\nNow support §BBetter Performance/ Production Revolution 2§!"
+ z_fw_tips_empty:0 ""
+ z_fw_plnt_ui_setting.name:0 "Detailed Planet Setting"
+ z_fw_plnt_ui_setting.desc:0 "All the independent details about the planet in §BBetter Performance/ Production Revolution 2§! will be displayed here."
+ 
+ z_fw_plnt_ui_setting.check.name:0 "Detailed Planet Statistics"
+ z_fw_plnt_ui_setting.check.desc:0 "Check detailed planet stats of §BBetter Performance/ Production Revolution 2§!"
+ 
+#_决策
+ z_fw_dec_plnt_setting:0 "Open Detailed Planet Setting"
+ z_fw_dec_plnt_setting_desc:0 "Now support §BBetter Performance/ Production Revolution 2§!"
+
+
+
+
+###_[伞の优化]  ############
+ z_pf2_var_cntr_pop_cap_final:0 "Country Pop Capacity---[root.owner.z_pf2_var_cntr_pop_cap_final]"
+ z_pf2_var_cntr_pop_increase_bonus:0 "Pop Growth Effectiveness §Y(1 is normal)§!---[root.owner.z_pf2_var_cntr_pop_increase_bonus]"
+ z_pf2_var_plnt_pop_growth:0 "Planetary Pop Growth Base Mult---[root.z_pf2_var_plnt_pop_growth]"
+ z_pf2_var_plnt_pop_clone:0 "Planetary Pop Clone Base Add---[root.z_pf2_var_plnt_pop_clone]"
+ z_pf2_var_plnt_pop_assembly:0 "Planetary Pop Assembly Base Add---[root.z_pf2_var_plnt_pop_assembly]"
+
+
+###_[产业革命]  ############
+ z_pr_title:0 "产业革命"
+ z_pr_tips_var_plnt_man:0 "§B人力§!---[root.z_pr_var_plnt_man]"
+ z_pr_tips_var_plnt_pop_man:0 "总人力§Y(人口+人力)§!---[root.z_pr_var_plnt_pop_man]"
+ z_pr_tips_var_plnt_num_jobs:0 "岗位基数---[root.z_pr_var_plnt_num_jobs]"
+ 
+ z_pr_tips_var_plnt_man_ratio_nmr:0 "人力计算值§Y(分子)§!=§G星球人力+10§!---[root.z_pr_var_plnt_man_ratio_nmr]"
+ z_pr_tips_var_plnt_man_ratio_dnm:0 "岗位计算值§Y(分母)§!=§G岗位基数(低于10则视为10)§!---[root.z_pr_var_plnt_man_ratio_dnm]"
+ z_pr_tips_var_plnt_man_ratio:0 "人力岗位比=§G人力计算值/岗位计算值§!---[root.z_pr_var_plnt_man_ratio]"
+ 
+ z_pr_tips_var_plnt_man_bonus_weight:0 "效率权重---[root.z_pr_var_plnt_man_bonus_weight]"
+ z_pr_tips_var_plnt_man_bonus:0 "§B人力生产效率§!---[root.z_pr_var_plnt_man_bonus]"
+ z_pr_tips_var_plnt_man_growth:0 "人力增长率(每月)---[root.z_pr_var_plnt_man_bonus]"
+ z_pr_tips_var_pop_growth_decrease:0 "人口增长衰减---[root.z_pr_var_plnt_man_bonus]"
+
+ z_pr_option_plnt_ignore_on:0 "星球已设为§H忽略产业革命§!"
+ z_pr_option_plnt_ignore_off:0 "星球已设为§B接受产业革命§!"
+ z_pr_option_plnt_ignore:0 "当一颗星球被设置为§H忽略产业革命§!时，产业革命的新功能将不会影响这颗星球，人口不会转化为人力，且经济和岗位系统将遵循原版。"
+
+ z_pr_option_plnt_pop_cnvt_5:0 "失业人口转化§Gx5§!"
+ z_pr_option_plnt_pop_cnvt_25:0 "失业人口转化§Gx25§!"
+ z_pr_tips_plnt_pop_cnvt:0 "将失业人口转化为人力。"
+ z_pr_tips_plnt_ignore:0 "无法执行\n$z_pr_option_plnt_ignore_on$"
+
+ z_pr_option_plnt_man_cnvt_full:0 "人力转化§G公民物种§!"
+ z_pr_option_plnt_man_cnvt_limited:0 "失业人口转化§Y居留物种§!"
+ z_pr_option_plnt_man_cnvt_slavery:0 "失业人口转化§H奴隶物种§!"
+ z_pr_option_plnt_man_cnvt_servitude:0 "失业人口转化§B机械仆从§!"
+ z_pr_tips_plnt_man_cnvt:0 "将星球人力转化为指定类型的人口。"
+ z_pr_tips_plnt_has_man:0 "当前星球必须存在人力。"
+ 
+ 

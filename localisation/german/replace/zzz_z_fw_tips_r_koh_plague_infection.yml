@@ -1,0 +1,2 @@
+﻿l_german:
+ z_fw_tips_r_koh_plague_infection:1000 "This will determine whether the headhunter is contagious in the non-delivery state. If it is prohibited, only one wave of infection will be performed after delivery by construction ships, otherwise it will continue to try to infect and assimilate other non-skunk species. Note: It should be set as default, and turning it off will break some of its functions."

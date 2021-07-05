@@ -1,0 +1,77 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_russian:
+ ##################
+# New Gauntlet Events
+ ##################
+
+ infinity_stones_new_gauntlet.1.name:0 "§MКамень Силы§!"
+ infinity_stones_new_gauntlet.1.desc:0 "Перезарядка §MКамня Силы§! закончилась."
+ infinity_stones_new_gauntlet.1.a:0 "Замечательно!"
+
+ infinity_stones_new_gauntlet.2.name:0 "§GКамень Времени§!"
+ infinity_stones_new_gauntlet.2.desc:0 "Перезарядка §GКамня Времени§! закончилась."
+
+ infinity_stones_new_gauntlet.3.name:0 "§RКамень Реальности§!"
+ infinity_stones_new_gauntlet.3.desc:0 "Перезарядка §RКамня Реальности§! закончилась."
+
+ infinity_stones_new_gauntlet.4.name:0 "§HКамень Души§!"
+ infinity_stones_new_gauntlet.4.desc:0 "Перезарядка §HКамня Души§! закончилась."
+
+ infinity_stones_new_gauntlet.5.name:0 "§YКамень Разума§!"
+ infinity_stones_new_gauntlet.5.desc:0 "Перезарядка §YКамня Разума§! закончилась."
+
+ infinity_stones_new_gauntlet.6.name:0 "§BКамень Космоса§!"
+ infinity_stones_new_gauntlet.6.desc:0 "Перезарядка §BКамня Космоса§! закончилась."
+
+# INFINITY GAUNTLET USE
+
+ infinity_stones_new_gauntlet.10.name:0 "§RПерчатка Бесконечности§!"
+ infinity_stones_new_gauntlet.10.desc:0 "Мы можем сейчас использовать §RПерчатку Бесконечности§!, чтобы сбросить перезарядку нашего §YКамня Бесконечности§!, предоставляя возможность использовать силу другого Камня."
+ infinity_stones_new_gauntlet.10.a:0 "Сбросить перезарядку камня"
+ infinity_stones_new_gauntlet.10.b:0 "Забудь"
+ infinity_stones_new_gauntlet.10.c:0 "§RИспользовать все 6 камней вместе!§!"
+
+
+# SNAP OPTIONS
+ infinity_stones_new_gauntlet.11.name:0 "§RНастоящая сила Камней Бесконечности§!"
+ infinity_stones_new_gauntlet.11.desc:0 "Чтобы бы вы хотели сделать с абсолютной силой §RКамней Бесконечности§!"
+ infinity_stones_new_gauntlet.11.a:0 "Щелчок"
+ gauntlet_option_one:1 "§H50%§! всей жизни будет стерта моментально."
+ infinity_stones_new_gauntlet.11.b:0 "Судный День"
+ gauntlet_option_two:1 "§H50%§! всей жизни будет стерта моментально за исключением жизни в пределах нашей границы."
+ infinity_stones_new_gauntlet.11.c:0 "Предупреждение"
+ gauntlet_option_three:1 "§H10%§! всей жизни будет стерта моментально и другие империи не захотят объявлять войны."
+ infinity_stones_new_gauntlet.11.d:0 "Новое Начало"
+ gauntlet_option_four:1 "§H90%§! всей жизни будет стерта моментально."
+ infinity_stones_new_gauntlet.11.e:0 "Очищение от мешков с костями"
+ gauntlet_option_five:1 "Вся низшая форма жизни будет очищена из галактики."
+ infinity_stones_new_gauntlet.11.f:0 "Уничтожить противников"
+ gauntlet_option_six:1 "Вся жизнь в империях воюющая с нами будет уничтожена."
+ infinity_stones_new_gauntlet.11.g:0 "Покончить с голодом"
+ gauntlet_option_seven:1 "Удаляет содержание всех поселений по всей галактике."
+ infinity_stones_new_gauntlet.11.h:0 "Просвещение"
+ gauntlet_option_eight:1 "Все поселения, кроме генштальтных, становятся фанатичными спиритуалистами."
+ infinity_stones_new_gauntlet.11.i:0 "Примирение"
+ gauntlet_option_nine:1 "Все поселения, кроме генштальтных, становятся фанатичными пацифистами."
+ infinity_stones_new_gauntlet.11.j:0 "Нанести любовь"
+ gauntlet_option_ten:1 "Все поселения, кроме генштальтных, становятся фанатичными ксенофилами."
+ infinity_stones_new_gauntlet.11.k:0 "Увеличить урон по Кризису"
+ gauntlet_option_eleven:1 "Все империи получают увеличение урона, когда воюют с кризисом."
+ infinity_stones_new_gauntlet.11.l:0 "Бесконечные кредиты"
+ gauntlet_option_twelve:1 "Богатство наших империй станет безграничным!"
+ infinity_stones_new_gauntlet.11.m:0 "Великое Благо"
+ gauntlet_option_thirteen:1 "Все поселения, кроме генштальтных, становятся фанатичными эгалитаристами."
+ infinity_stones_new_gauntlet.11.n:0 "Сущность"
+ gauntlet_option_fourteen:1 "Создание псионической сущности из миллион душ из мира душ."
+ infinity_stones_new_gauntlet.11.o:0 "Неотвратимость"
+ gauntlet_option_fifteen:1 "Наполняет вашего Правителя силой всех 6 Камней Бесконечности."
+ infinity_stones_new_gauntlet.11.p:0 "Разоружить галактику"
+ gauntlet_option_sixteen:1 "Уничтожает все корабли и форпосты всех других империй."
+ infinity_stones_new_gauntlet.11.q:0 "Уничтожить Камни"
+ gauntlet_option_seventeen:1 "Уничтожает все Камни Бесконечности"
+ infinity_stones_new_gauntlet.11.r:0 "§GВозвращение§!"
+ gauntlet_option_eighteen:1 "Воссоздает все поселения которые были убиты в ходе щелчка."

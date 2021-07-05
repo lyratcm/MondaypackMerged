@@ -1,0 +1,85 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Debug Events
+ ##################
+
+  ################### DEBUG EVENTS #############
+ ig_debug.0.name:0 "探索援助"
+ ig_debug.0.desc:0 "提供折跃引擎，无限跃迁范围和科学家供您探索。"
+ ig_debug.0.a:0 "芜湖 起飞!"
+ ig_debug.0.b:0 "我不需要!"
+
+ ig_debug.1.name:0 "6颗宝石的请求"
+ ig_debug.1.desc:0 "给予所有六个无限宝石"
+ ig_debug.1.a:0 "芜湖 起飞!"
+ ig_debug.1.b:0 "我不需要!"
+
+ ig_debug.2.name:0 "6颗宝石 爬!"
+ ig_debug.2.desc:0 "删除所有六个无限宝石"
+ ig_debug.2.a:0 "芜湖 起飞!"
+ ig_debug.2.b:0 "我不需要!"
+
+ ig_debug.50.name:0 "手套修正工具"
+ ig_debug.50.desc:0 "删除所有帝国的手套和无限宝石"
+ ig_debug.50.a:0 "芜湖 起飞!"
+ ig_debug.50.b:0 "我不需要!"
+
+ ig_debug.99.name:0 "殖民地破坏者"
+ ig_debug.99.desc:0 "殖民地已经被摧毁了，如果你不小心破坏了，rip.."
+ ig_debug.99.a:0 "..."
+
+  #########################################################################################################
+ # NEW MENU TEST #
+ ig_debug.10.name:0 "寻找无限宝石"
+ ig_debug.10.desc:0 "下面你可以看到哪个帝国拥有哪颗无限宝石。如果有一颗无限宝石没有被列出，说明它还没有被发现。如果你在列表中点击一个帝国，你可以请求他们和你交易无限宝石。如果您与AI联盟结成联盟，并且与他们的关系达到+350，则AI帝国只会接受这一点。\n\n§R这也将给其他帝国10个人情!§!"
+ ig_debug.10.powerstone:0 "§M力量宝石§!: [event_target:power_stone_holder.GetName]"
+ ig_debug.10.timestone:0 "§G时间宝石§!: [event_target:time_stone_holder.GetName]"
+ ig_debug.10.realitystone:0 "§R现实宝石§!: [event_target:reality_stone_holder.GetName]"
+ ig_debug.10.soulstone:0 "§H灵魂宝石§!: [event_target:soul_stone_holder.GetName]"
+ ig_debug.10.mindstone:0 "§Y心灵宝石§!: [event_target:mind_stone_holder.GetName]"
+ ig_debug.10.spacestone:0 "§B空间宝石§!: [event_target:space_stone_holder.GetName]"
+
+ ig_debug.11.name:0 "交易力量宝石"
+ ig_debug.11.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易§M力量宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。"
+ ig_debug.11.no:0 "§R绝对不行§!"
+ ig_debug.11.yes:0 "§G他们当然可以得到宝石§!"
+ ig_debug.12.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§M力量宝石§!"
+ ig_debug.12.a:0 "QNMD"
+ ig_debug.13.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§M力量宝石§!"
+ ig_debug.13.a:0 "完美!!"
+
+ ig_debug.14.name:0 "交易时间宝石"
+ ig_debug.14.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易§G时间宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。"
+ ig_debug.15.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§G时间宝石§!"
+ ig_debug.16.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§G时间宝石§!"
+
+ ig_debug.17.name:0 "交易现实宝石"
+ ig_debug.17.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易§R现实宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。"
+ ig_debug.18.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§R现实宝石§!"
+ ig_debug.19.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§R现实宝石§!"
+
+ ig_debug.20.name:0 "交易灵魂宝石"
+ ig_debug.20.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易§H灵魂宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。"
+ ig_debug.21.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§灵魂宝石§!"
+ ig_debug.22.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§H灵魂宝石§!"
+
+ ig_debug.23.name:0 "交易心灵宝石"
+ ig_debug.23.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易§Y心灵宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。""
+ ig_debug.24.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§Y心灵宝石§!"
+ ig_debug.25.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§Y心灵宝石§!"
+
+ ig_debug.26.name:0 "交易空间宝石"
+ ig_debug.26.desc:0 "§Y[From.GetName]§!询问我们是否会跟他们交易D§B空间宝石§!.\n\n建议您在交易宝石之前，通过常规的交易界面来交易任何额外的东西。"
+ ig_debug.27.desc:0 "§Y[From.GetName]§!拒绝了我们的请求交易§B空间宝石§!"
+ ig_debug.28.desc:0 "§Y[From.GetName]§!接受了我们的请求交易§B空间宝石§!"
+
+
+# Snap kill leader test event
+ ig_debug.250.name:0 "Kill Leader"
+ ig_debug.250.desc:0 "Leader go bye bye"
+ ig_debug.250.a:0 "You cry now"

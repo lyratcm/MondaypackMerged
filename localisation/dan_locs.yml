@@ -1,0 +1,5 @@
+ ap_federation_ascension:0 "The Federation ascension perk"
+ ap_federation_ascension_desc:0 "$TECH_UNLOCK_DIPLOMATIC_ACTION_CREATE_FEDERATION_TITLE$\n are increased by §G1§!."
+ d_stonk:0 "Intrest earned"
+ d_stonk_desc:0 "Interest made from your current saving"
+ requires_tech_dreadnought:0 "The dreadnaught tech is required to take this"

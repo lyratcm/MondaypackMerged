@@ -1,0 +1,130 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_russian:
+ ##################
+ # War Events and Casus Belis
+ ##################
+
+ # Power Stone Cb and War goals
+ casus_belli_cb_power_stone:0 "Лишить §YКамня Силы§! "
+ war_goal_wg_power_stone:0 "Захватить §YКамень Силы§!"
+ war_goal_wg_power_stone_desc:0 "Враг имеет §YКамень Силы§!. Мы должны захватить его для себя."
+
+ # Power Stone Wars Events
+ infinity_stones_war.1.name:0 "Захвачен  §YКамень Силы §!"
+ infinity_stones_war.1.desc:0 " [From.From.GetName] признал свое поражение, и мы вырвали славный  §EКамень Силы§! от их недостойного понимания!"
+ infinity_stones_war.1.a:0 "Камень Силы принадлежит нам сейчас."
+ infinity_stones_war.2.name:0 "Потерян §YКамня Силы§!"
+ infinity_stones_war.2.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамня Силы§! в руки [From.GetAdj] произошло без происшествий."
+ infinity_stones_war.2.a:0 "Безмолвный вопль муки."
+
+ # Time Stone Cb and War goals
+ casus_belli_cb_time_stone:0 "Лишить §YКамня Времени! "
+ war_goal_wg_time_stone:0 "Захватить §YКамень Времени§!"
+ war_goal_wg_time_stone_desc:0 "Враг имеет §YКамень Времени§!. Мы должны захватить его для себя."
+
+ # Time Stone Wars Events
+ infinity_stones_war.3.name:0 "Захвачен §YКамень Времениe§!"
+ infinity_stones_war.3.desc:0 " [From.From.GetName] признал свое поражение, и мы вырвали славный  §EКамень Времени§! от их недостойного понимания!"
+ infinity_stones_war.3.a:0 "Камень принадлежит нам сейчас."
+ infinity_stones_war.4.name:0 "Потерян §YКамня Времени§!"
+ infinity_stones_war.4.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамня Силы§! в руки [From.GetAdj]  произошло без происшествий."
+ infinity_stones_war.4.a:0 "Безмолвный вопль муки.
+
+ # Reality Stone Cb and War goals
+ casus_belli_cb_reality_stone:0 "Лишить §YКамня Реальности§!"
+ war_goal_wg_reality_stone:0 "Захватить §YКамень Реальности§!"
+ war_goal_wg_reality_stone_desc:0 "Враг имеет  §YКамень Реальности§!. Мы должны захватить его для себя."
+
+ # Reality Stone Wars Events
+ infinity_stones_war.5.name:0 "Захвачен  §YКамень Реальности§!"
+ infinity_stones_war.5.desc:0 " [From.From.GetName] признал свое поражение, и мы вырвали славный §EКамень Реальности§! от их недостойного понимания!"
+ infinity_stones_war.5.a:0 " Камень Реальности принадлежит нам сейчас."
+ infinity_stones_war.6.name:0 "Потерян  §YКамень Реальностиe§!"
+ infinity_stones_war.6.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамня Реальности§! в руки [From.GetAdj] произошло без происшествий."
+ infinity_stones_war.6.a:0 "Безмолвный вопль муки."
+
+ # Soul Stone Cb and War goals
+ casus_belli_cb_soul_stone:0 "Лишить §YКамня Души§! "
+ war_goal_wg_soul_stone:0 "Захватить §YКамень Души§!"
+ war_goal_wg_soul_stone_desc:0 "Враг имеет §YКамень Души§!. Мы должны захватить его для себя."
+
+ # Soul Stone Wars Events
+ infinity_stones_war.7.name:0 "Захвачен §YКамень Души§!"
+ infinity_stones_war.7.desc:0 " [From.From.GetName] признал свое поражение, и мы вырвали славный §EКамень Души§! от их недостойного понимания!"
+ infinity_stones_war.7.a:0 " Камень Души принадлежит нам сейчас."
+ infinity_stones_war.8.name:0 "Потерян §YКамень Души§!"
+ infinity_stones_war.8.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамня Души§! в руки [From.GetAdj] произошло без происшествий."
+ infinity_stones_war.8.a:0 "Безмолвный вопль муки."
+
+ # Mind Stone Cb and War goals
+ casus_belli_cb_mind_stone:0 "Лишить §YКамня Разума§! "
+ war_goal_wg_mind_stone:0 "Захватить §YКамень Разума§!"
+ war_goal_wg_mind_stone_desc:0 "Враг имеет  §YКамень Разума§!. Мы должны захватить его для себя."
+
+ # Mind Stone Wars Events
+ infinity_stones_war.9.name:0 "Захвачен §YКамень Разума§!"
+ infinity_stones_war.9.desc:0 "[From.From.GetName] признал свое поражение, и мы вырвали славный §EКамень Разума§! от их недостойного понимания!"
+ infinity_stones_war.9.a:0 " Камень Разума принадлежит нам сейчас."
+ infinity_stones_war.10.name:0 "Потерян §YКамень Разума§!"
+ infinity_stones_war.10.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамня Разума§! в руки [From.GetAdj]  произошло без происшествий."
+ infinity_stones_war.10.a:0 " Безмолвный вопль муки."
+
+ # Space Stone Cb and War goals
+ casus_belli_cb_space_stone:0 "Лишить §YКамня Космоса§! "
+ war_goal_wg_space_stone:0 "Захватить §YКамень Космоса§!"
+ war_goal_wg_space_stone_desc:0 "Враг имеет  §YКамень Космоса§!. Мы должны захватить его для себя."
+
+ # Space Stone Wars Events
+ infinity_stones_war.11.name:0 "Захвачен  §YКамень Пространства§!"
+ infinity_stones_war.11.desc:0 "[From.From.GetName] признал свое поражение, и мы вырвали славный §EКамень Космоса§!  от их недостойного понимания!"
+ infinity_stones_war.11.a:0 "Камень Пространства принадлежит нам сейчас."
+ infinity_stones_war.12.name:0 "Потерян §YКамень Пространства§!"
+ infinity_stones_war.12.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамень Космоса§! в руки [From.GetAdj]  произошло без происшествий."
+ infinity_stones_war.12.a:0 "Безмолвный вопль муки."
+
+ ###############################################################################################################################################################################
+
+ # Scatter Stones Wars Events
+ infinity_stones_war.50.name:0 "§YКамни Бесконечности§! Разбросаны"
+ infinity_stones_war.50.desc:0 "[From.From.GetName] признал свое поражение, и мы разбросили великолепные §EКамни Бесконечности§! из их недостойных рук!"
+ infinity_stones_war.50.a:0 "Надеюсь, что следующий владелец будет лучше ..."
+ infinity_stones_war.51.name:0 "Потеря наших §YКамней Бесконечности§!"
+ infinity_stones_war.51.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамней Бесконечности§! в руки [From.GetAdj] произошло без происшествий."
+ infinity_stones_war.51.a:0 "Мы вернем их со временем."
+
+ # Scatter Stones Cb and War goals
+ casus_belli_cb_scatter_stones:0 "Лишить §YКамней Бесконечности§!"
+ war_goal_wg_scatter_stones:0 "Разбросить их §Камни Бесконечности§!"
+ war_goal_wg_scatter_stones_desc:0 "Враг имеет слишком много §YКамней Бесконечности§!. Мы должны вырвать их из их хватки."
+ wg_stone_scatter:0 "§Y[From.GetName]§!'s §HКамни Бесконечности§! будут отданы случайно другим империям в галактике."
+
+#####################################################################################################################################################################################################
+
+ wg_stone_is_lost_desc:0 "§Y[From.GetName]§! больше не имеет §HКамня Бесконечности§! желанный §Y[Root.GetName]§!, следовательно, он не может быть передан во время мирного соглашения."
+
+ # Stone Lost Wars Events
+ infinity_stones_war.25.name:0 "Камень Бесконечности Потерян"
+ infinity_stones_war.25.desc:0 "Хотя §Y[From.From.GetName]§! признал поражение, они больше не имеют §HКамня Бесконечности§! который мы хотели, превращая все наше дело в пустую трату времени"
+ infinity_stones_war.25.a:0 "Мы заберем его у новых владельцев!"
+ infinity_stones_war.26.name:0 "Нелепая мирная конференция"
+ infinity_stones_war.26.desc:0 "§Y[From.From.GetName]§! не был впечатлен, когда во время нашей мирной конференции они обнаружили, что мы больше не владеем §HКамнем Бесконечности§! который они желали."
+ infinity_stones_war.26.a:0 "Что за трата времени."
+
+
+#########################################################################################################################################################################################################
+  # Seize Infininty Stones Wars Events
+ infinity_stones_war.52.name:0 "Захвачены §YКамни Бескнечности§!"
+ infinity_stones_war.52.desc:0 "[From.From.GetName] признал свое поражение, и мы вырвали славные  §EКамни Бесконечности§! из их рук!"
+ infinity_stones_war.52.a:0 "Мы исправим нанесенный ими ущерб.."
+ infinity_stones_war.53.name:0 "Потеря наших §YКамней Бесконечности§!"
+ infinity_stones_war.53.desc:0 "Помимо многочисленных чиновников, впадающих в истерику во время передачи, сдача §EКамней Бесконечности§! в руки [From.GetAdj] произошло без происшествий."
+ infinity_stones_war.53.a:0 "Мы вернем их со временем."
+
+ # Scatter Stones Cb and War goals
+ casus_belli_cb_seize_all_infinity_stones:0 "Лишить §YКамней Бесконечности§!"
+ war_goal_wg_seize_all_infinity_stones:0 "Захватить все §YКамни Бесконечности§!"
+ war_goal_wg_seize_all_infinity_stones_desc:0 "Враг использовал §YКамни Бесконечности§! для распространения хаоса по всей галактике. Это время для нас вырвать их из их хватки."

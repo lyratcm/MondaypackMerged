@@ -1,0 +1,58 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Soul Stone and Vomir Events
+ ##################
+
+ # Soul Stone Events
+ soul_stone.1.name:0 "The Soul Merge"
+ soul_stone.1.desc:0 "现在我们能够将上古先贤们的灵魂融合并注入一个新的躯体，问题是，我们该用§Y灵魂塑造§!创造一个怎样的人？"
+ soul_stone.1.a:0 "我们需要一个总督"
+ soul_stone.1.b:0 "我们需要一个科学家"
+ soul_stone.1.c:0 "我们需要一个舰队统帅"
+ soul_stone.1.d:0 "我们需要一个陆军将领"
+ soul_stone.2.name:0 "激活失败"
+ soul_stone.2.desc:0 "我们对§Y灵魂宝石§!的使用出现问题，或许遗迹已经被毁了。"
+ soul_stone.2.mach:0 "错误代码404：未能找到灵魂"
+ soul_stone.2.hive:0 "蜂群并不存在独立灵魂"
+
+ soul_stone.10.name:0 "[psionic_leader.GetTitle]被称为通灵者"
+ soul_stone.10.desc:0 "看来，§H灵魂宝石§!!可以做的不仅仅是操纵灵魂。在与宝石相处了很长时间之后，§Y[psionic_leader.GetTitle] [psionic_leader.GetName]§!最近一直在展示被怀疑是灵能的能力。经过彻底的ESP测试后，[psionic_leader.GetSheHe]。被鉴定为四级灵能天赋。"
+ soul_stone.10.a:0 "这些新能力对我们很有用。"
+
+  # Vormir Events
+ vormir.0.name:0 "异次元能量"
+ vormir.0.desc:0 "进入§HHelgentar§!星系后，我们的研究船从行星§H沃密尔§!捕捉到一个奇怪的灵能信号。"
+ vormir.0.a:0 "派一队人过去看看"
+
+ vormir_site:0 "沃密尔挖掘地"
+ vormir_relic_world_site_desc:0 "我们的研究船从行星§H沃密尔§!捕捉到一个奇怪的灵能灵能信号。"
+
+ vormir.1.name:0 "孤独的圣祠"
+ vormir.1.desc:0 "这颗星球唯一的建筑是一座伫立于山顶的神庙，它也是奇怪灵能信号的源头。我们的飞行器无法飞到那里，因为神秘的灵能力量干扰了舰船上的设备，于是我们的调查队决定从山脚开始徒步攀登。"
+ vormir.1.a:0 "这将是漫长的旅途"
+
+ vormir.2.name:0 "徘徊的幽灵"
+ vormir.2.desc:0 "在靠近山顶的地方，我们的队伍遇到了一个幽灵。幽灵与我们的队员们接触，并且说出了那些只有他们自己才知道的秘密。他说"我身上的诅咒就是知道到达此地之人的所有信息。" 幽灵解释道他是§Y灵魂宝石§!的守护者，二灵魂宝石是宇宙的六种源动力之一。这个幽灵活着的时候曾经努力寻找着无限宝石，结果是受到宝石的诅咒成为了此地的向导。当被问及宝石所在之处，他指向了一边的山崖，指出灵魂宝石需要献祭，一个灵魂换另一个灵魂。想要拿到宝石的人必须献祭自己所爱之人。"
+ vormir.2.a:0 "无论代价如何都要拿到！"
+
+ vormir.11.name:0 "艰难的选择"
+ vormir.11.desc:0 "§Y[Root.GetName]§!的船员陷入了进退两难的境地，船长绝不会允许与他同行的恋人为宝石献祭自己，而船长的恋人也绝不允许船长自我牺牲，但必须有一个人做出这个决定。"
+ vormir.11.a:0 "船长必须要做出选择，他是唯一合适的人选。"
+ vormir.11.b:0 "§Y[Root.GetLeaderName]§!太重要了，献祭他的恋人吧。"
+ soul_stone_get_prodigy:1 "具有§Y奇才§特质的科学家! 已经被加入领袖池中."
+
+ vormir.12.name:0 "灵魂宝石"
+ vormir.12.desc:0 "我们的科学家牺牲了自己，而我们也得到了§Y灵魂宝石§!。宝石能够让我们涉足§H灵魂世界§!，一个宝石内部的特殊空间，死者的安息之地。在那里我们可以与逝去的先贤交流，并获得他们的智慧。宝石也能够让死者的灵魂重归我们的世界，死亡将不再有任何意义。最重要的一点是，我们可以通过宝石塑造灵魂，通过融合伟大先贤的灵魂塑造一个全新的强大个体，也就是§M灵魂塑造§!。"
+ vormir.12.a:0 "死亡是最大的荣耀"
+
+ vormir.13.desc:0 "船长的恋人牺牲了自己，我们得到了§Y灵魂宝石§!。宝石能够让我们涉足§H灵魂世界§!，一个宝石内部的特殊空间，死者的安息之地。在那里我们可以与逝去的先贤交流，并获得他们的智慧。宝石也能够让死者的灵魂重归我们的世界，死亡将不再有任何意义。最重要的一点是，我们可以通过宝石塑造灵魂，通过融合伟大先贤的灵魂塑造一个全新的强大个体，也就是§M灵魂塑造§!。"
+
+ vormir.50.name:0 "灵魂宝石"
+ vormir.50.desc:0 "对于格式塔意识来说，爱是一个陌生的概念。所以我们从另一个世界捕捉了一对男女并威胁他们为另一半牺牲自己。最终女性主动跳下悬崖来保全男性的生命，而男性则得到了宝石，不过我们更倾向于让男性生物下去陪她。§Y灵魂宝石§!是我们的了，真是令人遗憾的爱。宝石看起来无法发挥它的全部力量，不过没关系，这正是我们收集无限宝石大业的一小部分。"
+ vormir.50.mach:0 "错误404：未能找到爱."
+ vormir.50.hive:0 "我们只爱我们的女王。"

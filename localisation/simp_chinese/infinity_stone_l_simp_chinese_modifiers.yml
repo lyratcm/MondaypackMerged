@@ -1,0 +1,80 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# modifiers
+ ##################
+
+#Gauntlet Modifiers
+ no_biological_growth_snap:0 "生物生命已被§R无限手套§消灭!"
+ purged_galaxy_snap:0 "成功清除星系!"
+ gauntlet_end_hunger:0 "§R无限手套§!已被用于消除饥饿!"
+ gauntlet_ethics_spiritualist:0 "§R无限手套§!已被用来启发我们!"
+ gauntlet_ethics_pacifist:0 "§R无限手套§!已被用来安抚我们!"
+ gauntlet_ethics_xenophile:0 "§R无限手套§!已被用来使我们成为亲外主义者!"
+ gauntlet_ethics_egalitarian:0 "§R无限手套§!已被用来使我们成为平等主义者"
+ cripple_the_crisis:0 "危机削弱"
+ gauntlet_money:0 "无限财富"
+ if_snapture_long:0 "响指"
+ if_snapture_long_desc:0 "消灭一半的星系并不会给他们带来微笑。"
+ if_snapture_short:0 "缺乏训练有素的领导和士兵"
+ if_snapture_short_desc:0 "目前，我们没有训练有素的领导来驾驶我们的舰队或士兵来填补我们的军队。"
+ if_snapture_short_ninety:0 "缺乏训练有素的领导和士兵"
+ if_snapture_short_ninety_desc:0 "目前，我们没有训练有素的领导来驾驶我们的舰队或士兵来填补我们的军队。"
+
+ # Power Stone modifiers
+ power_stone:0 "$r_power_stone$"
+舰队现在可以使用§Y力量宝石毁灭能量§!轨道轰炸方式。
+
+ # Time Stone modifiers
+ time_stone:0 "$r_time_stone$"
+ time_stone_desc:0 "使用§Y时间宝石§!可以让我们更快地建造巨型构造。"
+
+ planet_time_stone_boost:0 "时间宝石加速"
+ planet_time_stone_boost_desc:1 "这颗星球现在受到了时间宝石的加速效果"
+
+  # Reality Stone modifiers
+ reality_stone:0 "$r_reality_stone$"
+ reality_stone_desc:0 "使用§Y现实宝石§!可以让我们重塑我们的行星"
+
+ planet_reality_stone_boost:0 "现实宝石地形塑造"
+ planet_reality_stone_boost_desc:1 "这颗星球的环境已经被§Y现实宝石§!净化了。"
+
+ # Soul Stone Modifiers
+ soul_stone:0 "$r_soul_stone$"
+ soul_stone_desc:0 "使用§Y灵魂宝石§!可以塑造人造灵魂。""
+
+ # Mind Stone modifiers
+ mind_stone:0 "$r_mind_stone$"
+所有帝国的民众的意识已经融为一体，他们无比快乐，同时也失去了自我和创造力。
+
+ # Space Stone modifiers
+ space_stone:0 "$r_space_stone$"
+ space_stone_desc:0 "空间宝石给予我们瞬间穿越星海的能力。"
+
+ # OTHER EARTH modifiers
+ future_earth_knowledge:0 "未来地球的知识"
+ future_earth_knowledge_desc:0 "来自未来世界的知识让我们能更好地面对宇宙中的威胁。"
+ future_earth_media:0 "未来世界媒体"
+ future_earth_media_desc:0 "我们的人民很喜欢地球的真人秀。"
+
+# Stone lost modifiers
+ stone_lost:0 "失去一块无限宝石"
+ stone_lost_desc:0 "我们的粗心大意使我们失去了银河系中最强大的武器之一。"
+
+ # Infinity Circuit
+ infinity_circuit_power_space:0 "力量与空间的共鸣"
+ infinity_circuit_space_time:0 "空间与时间的共鸣"
+ infinity_circuit_time_reality_one:0 "现实与时间的共鸣"
+ infinity_circuit_time_reality_two:0 "现实与时间的共鸣"
+ infinity_circuit_time_reality_three:0 "现实与时间的共鸣"
+ infinity_circuit_reality_soul_one:0 "现实与灵魂的共鸣"
+ infinity_circuit_reality_soul_two:0 "现实与灵魂的共鸣"
+ infinity_circuit_reality_soul_three:0 "现实与灵魂的共鸣"
+ infinity_circuit_reality_soul_four:0 "现实与灵魂的共鸣"
+ infinity_circuit_reality_soul_five:0 "现实与灵魂的共鸣"
+ infinity_circuit_soul_mind:0 "灵魂与心灵的共鸣"
+ infinity_circuit_mind_power:0 "心灵与力量的共鸣"

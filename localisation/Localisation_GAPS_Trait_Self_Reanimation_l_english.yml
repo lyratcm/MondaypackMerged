@@ -1,0 +1,5 @@
+﻿l_english:
+
+ Trait_GAPS_Self_Reanimation:0 "Self Reanimation"
+ Trait_GAPS_Self_Reanimation_desc:0 "This species sometimes raises from the dead when slain in combat"
+ Trait_GAPS_Self_Reanimation_Effect:0 "Army Raise As Undead Chance: §G20%§!"

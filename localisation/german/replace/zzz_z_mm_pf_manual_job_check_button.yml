@@ -1,0 +1,2 @@
+﻿l_german:
+ z_mm_pf_manual_job_check_button:1000 "Perform a manual population migration for all countries, transporting the unemployed to the world where there are vacant jobs. Each planet can move up to 25 people, and the planet's population migration setting will affect the result. \nNote that this is a global behavior and may be stuck for a while.\n\nPerform §BProduction Revolution§! Checking to all empires\n§BProduction Parameters§! will be counted, and §HPops/ Manpower Transfer§! will be carried out."

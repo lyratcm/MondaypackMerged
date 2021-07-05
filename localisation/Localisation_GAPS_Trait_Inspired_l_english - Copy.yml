@@ -1,0 +1,16 @@
+﻿l_english:
+
+ Trait_GAPS_Inspired:0 "Inspired"
+ Trait_GAPS_Inspired_desc:0 "Ruler & Scientist leaders of this species have more insight than normal."
+ Trait_GAPS_Inspired_effect:0 "Tech Alternaitives Per Researcher: §G+1§!\nLeader Pool Size Per Ruler: §G+1§!"
+ 
+ Country_Modifier_GAPS_Trait_Inspired_Scientist:0 "Inspired Scientist Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_desc:0 "Inspired Scientist Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Leader:0 "Inspired Ruler Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Leader_desc:0 "Inspired Ruler Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_1:0 "Inspired Scientist Bonus" 
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_1_desc:0 "Inspired Scientist Bonus" 
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_2:0 "Inspired Scientist Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_2_desc:0 "Inspired Scientist Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_3:0 "Inspired Scientist Bonus"
+ Country_Modifier_GAPS_Trait_Inspired_Scientist_3_desc:0 "Inspired Scientist Bonus"

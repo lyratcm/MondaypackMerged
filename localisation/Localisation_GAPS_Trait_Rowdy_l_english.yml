@@ -1,0 +1,8 @@
+﻿l_english:
+
+ Trait_GAPS_Rowdy:0 "Rowdy"
+ Trait_GAPS_Rowdy_desc:0 ""
+ Trait_GAPS_Rowdy_effect:0 "Amenities Usage Per §Y5§! Crime/Deviancy: §G-1%§!\nPop Upkeep Per §Y5§! Crime/Deviancy: §G-1%§!"
+ 
+ Pop_Modifier_GAPS_Rowdy_Boost:0 "Rowdy Boost"
+ Pop_Modifier_GAPS_Rowdy_Boost_desc:0 "Rowdy Boost"

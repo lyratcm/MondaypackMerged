@@ -1,0 +1,11 @@
+﻿l_english:
+
+ Trait_GAPS_Taskmasters:0 "Taskmasters"
+ Trait_GAPS_Taskmasters_desc:0 "This species has a knack for running things from a ruling position"
+ Trait_GAPS_Taskmasters_Effect:0 "Per Ruler, Planet Worker Job Resource Production: §G+1%§!"
+ 
+ Planet_Modifier_GAPS_Trait_Taskmasters:0 "# Of Taskmasters Rulers"
+ Planet_Modifier_GAPS_Trait_Taskmasters_desc:0 "# Of Taskmasters Rulers"
+ 
+ Deposits_GAPS_Taskmasters:0 "# Of Taskmasters Rulers"
+ Deposits_GAPS_Taskmasters_desc:0 "# Of Taskmasters Rulers"

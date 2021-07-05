@@ -1,0 +1,68 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Maintenance Events
+ ##################
+
+ # Soulborn Maintenance
+ ig_maintenance.25.name:0 "人造灵魂的死亡"
+ ig_maintenance.25.desc:0 "在我们丢失§Y灵魂宝石§!之后,我们断开了与§H灵魂世界§!.几天之后§M人造灵魂§!慢慢的死去,大概是回到了他们原来的地方."
+ ig_maintenance.25.a:0 "巨大的损失"
+
+# Power Stone Subject Remove
+ig_maintenance.52.name:0 "失去§Y力量宝石§!！"
+ig_maintenance.52.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y力量宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。""
+ig_maintenance.52.a:0 "令人遗憾的惨重损失"
+ig_maintenance.53.name:0 "神秘的卖家"
+ig_maintenance.53.desc:0 "一个鬼祟的家伙带着一笔重要的买卖来到了我们的领袖面漆那。只要我们能付出￡consumer_goods￡ §Y$consumer_goods$§!，他就会给予我们§Y力量宝石§!。如果我们拒绝，他恐怕就会去找其他买家。"
+ig_maintenance.53.a:0 "只能如此."
+bought_power_stone:0 "买下§Y力量宝石§!"
+bought_power_stone_desc:0 "一切都是有代价的."
+
+# Time Stone Subject Remove
+ig_maintenance.55.name:0 "失去§Y时间宝石§!！"
+ig_maintenance.55.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y时间宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。""
+ig_maintenance.55.a:0 "令人遗憾的惨重损失"
+ig_maintenance.56.name:0 "独眼巨像"
+ig_maintenance.56.desc:0 "一个奇怪的岩石生物带着某件物品来到了我们面前，只要我们能付出￡unity￡ §Y$unity$§!它就会给予我们§Y时间宝石§!!"
+ig_maintenance.56.a:0 "别无选择"
+bought_time_stone:0 "买下§Y时间宝石§!"
+bought_time_stone_desc:0 "一切都是有代价的"
+
+# Reality Stone Subject Remove
+ig_maintenance.58.name:0 "失去§Y现实宝石§!！"
+ig_maintenance.58.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y现实宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。"
+ig_maintenance.58.a:0 "令人遗憾的惨重损失"
+ig_maintenance.59.name:0 "大收藏家"
+ig_maintenance.59.desc:0 "一个稀有文物收藏家看起来得到了§Y现实宝石§!，不过由于太多人为了抢夺宝石而试图谋杀他，他决定将宝石以"低价"卖给我们。"
+ig_maintenance.59.a:0 "他想要什么，就给他什么！"
+bought_reality_stone:0 "买下§Y现实宝石§!"
+bought_reality_stone_desc:0 "一切都是有代价的"
+
+# Soul Stone Subject Remove
+ig_maintenance.61.name:0 "失去§Y灵魂宝石§!！"
+ig_maintenance.61.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y灵魂宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。"
+ig_maintenance.61.a:0 "令人遗憾的惨重损失"
+ig_maintenance.62.name:0 "诡异的幽灵"
+ig_maintenance.62.desc:0 "一个诡异的幽灵出现在§Y[Root.GetRulerTitle] [Root.GetRulerName]§!的梦境中，它的手中持有§Y灵魂宝石§!。当§Y[Root.GetRulerName]§!惊醒之时，§Y灵魂宝石§!竟然真的出现在他眼前。"
+ig_maintenance.62.a:0 "得来全不费工夫"
+
+# Mind Stone Subject Remove
+ig_maintenance.64.name:0 "失去§Y心灵宝石§!！"
+ig_maintenance.64.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y心灵宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。"
+ig_maintenance.64.a:0 "令人遗憾的惨重损失"
+ig_maintenance.65.name:0 "欺诈者洛基"
+ig_maintenance.65.desc:0 "近卫军抓住了一名自称骗术大师的盗贼，他用某种奇特的方法"说服"别人给他带来利益。看起来不只是说服这么简单，我们从他的权杖中找到了§Y心灵宝石§!，不过可惜的是那个小贼趁着夜色逃跑了。"
+ig_maintenance.65.a:0 "真是有趣的结果"
+
+# Space Stone Subject Remove
+ig_maintenance.67.name:0 "失去§Y空间宝石§!！"
+ig_maintenance.67.desc:0 "我们的帝国被附庸一事导致了社会剧变，看起来§Y空间宝石§!也在这场动荡中遗失了。我们派人到处去找它，但是大部分都无功而返。"
+ig_maintenance.67.a:0 "令人遗憾的惨重损失"
+ig_maintenance.68.name:0 "舰毁人亡"
+ig_maintenance.68.desc:0 "一艘从§H[Root.Capital.GetName]§!出发的运输船在进行FTL时撞上了什么东西。在船只的残骸中，我们发现了§Y空间宝石§!。看起来就在运输船即将进入超空间的几微秒前，空间宝石把自己传送到了它的正前方。"
+ig_maintenance.68.a:0 "真是邪门了"

@@ -1,0 +1,8 @@
+﻿l_english:
+ ACTION_RECIPIENT_NOT_YOUR_CORP:1 "$TRIGGER_FAIL$§RBranch Offices can only be built on Megacorporations if they are our subsidiary.§!"
+ BRANCH_OFFICE_NOT_SELF:1 "£trigger_no£ §RWe cannot establish $BRANCH_OFFICE$ on our own planets§!"
+ BRANCH_OFFICE_NOT_CRIMINAL_AND_HOST_IS_MEGACORP:1 "£trigger_no£ §RWe cannot establish $BRANCH_OFFICE$ on a megacorp planet unless being a§! §RCriminal Syndicate§!"
+ BRANCH_OFFICE_VASSAL_CRIMINAL_CANT_OPEN_INTO_OVERLORD:1 "£trigger_no£ §RWe cannot establish $BRANCH_OFFICE$ as a§! §RCriminal Syndicate§! §Ron our Overlord's planets§!"
+ requires_recipient_not_warshipgirls:0 "It is a very confusing act for shipgirls to establish Branch Office in empires of the same race."
+ NO_TERRAFORM_UNDERGROUND_WORLD:0 "§RUnderground World is impossible to terraform.§!"
+ NO_BOMBING_UNDERGROUND_WORLD:0 "§RBombing this planet will not produce any results, since all the buildings are deep underground.§!"

@@ -1,0 +1,13 @@
+﻿l_english:
+
+ Trait_GAPS_Pushers:0 "Pushers"
+ Trait_GAPS_Pushers_desc:0 "This species is effective at making excess population leave"
+ Trait_GAPS_Pushers_Effect:0 "Planet Emigration Push: §G+2§!\nPlanet Auto Resettlement Chance: §G+1%§!"
+ 
+ Planet_Modifier_GAPS_Trait_Pushers:0 "# Of Pusher Pops"
+ Planet_Modifier_GAPS_Trait_Pushers_desc:0 "# Of Pusher Pops"
+ 
+ Deposits_GAPS_Pushers:0 "# Of Pusher Pops"
+ Deposits_GAPS_Pushers_desc:0 "# Of Pusher Pops"
+
+ 

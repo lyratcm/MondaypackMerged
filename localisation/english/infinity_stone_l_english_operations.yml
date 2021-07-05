@@ -1,0 +1,157 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_english:
+ ##################
+# Operations
+ ##################
+
+ operation_steal_power_stone:0 "Steal the §MPower Stone§!"
+ operation_steal_power_stone_desc:0 "Using our existing spy network, we can attempt to steal the §MPower Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_power_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §MPower Stone§!\n§Y[root.target.GetName]§! will lose the §MPower Stone§!"
+
+ operation_steal_time_stone:0 "Steal the §GTime Stone§!"
+ operation_steal_time_stone_desc:0 "Using our existing spy network, we can attempt to steal the §GTime Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_time_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §GTime Stone§!\n§Y[root.target.GetName]§! will lose the §GTime Stone§!"
+
+ operation_steal_reality_stone:0 "Steal the §RReality Stone§!"
+ operation_steal_reality_stone_desc:0 "Using our existing spy network, we can attempt to steal the §RReality Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_reality_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §RReality Stone§!\n§Y[root.target.GetName]§! will lose the §RReality Stone§!"
+
+ operation_steal_soul_stone:0 "Steal the §HSoul Stone§!"
+ operation_steal_soul_stone_desc:0 "Using our existing spy network, we can attempt to steal the §HSoul Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_soul_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §HSoul Stone§!\n§Y[root.target.GetName]§! will lose the §HSoul Stone§!"
+
+ operation_steal_mind_stone:0 "Steal the §YMind Stone§!"
+ operation_steal_mind_stone_desc:0 "Using our existing spy network, we can attempt to steal the §YMind Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_mind_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §YMind Stone§!\n§Y[root.target.GetName]§! will lose the §YMind Stone§!"
+
+ operation_steal_space_stone:0 "Steal the §BSpace Stone§!"
+ operation_steal_space_stone_desc:0 "Using our existing spy network, we can attempt to steal the §BSpace Stone§! from §Y[root.target.GetName]§!."
+ operation_steal_space_stone_on_success:0 "$IF_SUCCESSFUL|E$\nWe will gain the §BSpace Stone§!\n§Y[root.target.GetName]§! will lose the §BSpace Stone§!"
+
+ recently_tried_to_steal_an_infinity_stone_fail_text:0 "We have recently tried to steal one of their §YInfinity Stones§!."
+
+# §MPower Stone§!
+# §GTime Stone§!
+# §RReality Stone§!
+# §HSoul Stone§!
+# §YMind Stone§!
+# §BSpace Stone§!
+
+ ##################
+# Operation events
+ ##################
+
+
+
+# Power Stone theft
+# §MPower Stone§!
+
+ig_operations.1.name:0 "Stealing the §MPower Stone§!"
+ig_operations.1.desc:0 "All of our operatives are in place to steal the §MPower Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §MPower Stone§! was ours!"
+
+ig_operations.2.desc:0 "We have successfully stolen the §MPower Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.3.name:0 "§MPower Stone§! stolen!"
+ig_operations.3.desc:0 "The §MPower Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+ig_operations.getstoneback:0 "We will get it back!"
+power_stone_removed_tooltip:0 "§MPower Stone§! removed"
+
+ig_operations.4.desc:0 "Our plan to steal the §MPower Stone§! went without a hitch but when we got to the chamber where the §MPower Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+ig_operations.intelbad:0 "Our intel must have been out of date"
+
+ig_operations.5.desc:0 "Our plan to steal the §MPower Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."
+ig_operations.another_opportunity:0 "Another opportunity will present itself"
+
+
+
+# Time Stone Theft
+# §GTime Stone§!
+
+ig_operations.11.name:0 "Stealing the §GTime Stone§!"
+ig_operations.11.desc:0 "All of our operatives are in place to steal the §GTime Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §GTime Stone§! was ours!"
+
+ig_operations.12.desc:0 "We have successfully stolen the §GTime Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.13.name:0 "§GTime Stone§! stolen!"
+ig_operations.13.desc:0 "The §GTime Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+time_stone_removed_tooltip:0 "§GTime Stone§! removed"
+
+ig_operations.14.desc:0 "Our plan to steal the §GTime Stone§! went without a hitch but when we got to the chamber where the §GTime Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+
+ig_operations.15.desc:0 "Our plan to steal the §GTime Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."
+
+
+
+# Reality Stone Theft
+# §RReality Stone§!
+
+ig_operations.21.name:0 "Stealing the §RReality Stone§!"
+ig_operations.21.desc:0 "All of our operatives are in place to steal the §RReality Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §RReality Stone§! was ours!"
+
+ig_operations.22.desc:0 "We have successfully stolen the §RReality Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.23.name:0 "§RReality Stone§! stolen!"
+ig_operations.23.desc:0 "The §RReality Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+reality_stone_removed_tooltip:0 "§RReality Stone§! removed"
+
+ig_operations.24.desc:0 "Our plan to steal the §RReality Stone§! went without a hitch but when we got to the chamber where the §RReality Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+
+ig_operations.25.desc:0 "Our plan to steal the §RReality Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."
+
+
+
+# Soul Stone theft
+# §HSoul Stone§!
+
+ig_operations.31.name:0 "Stealing the §HSoul Stone§!"
+ig_operations.31.desc:0 "All of our operatives are in place to steal the §HSoul Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §HSoul Stone§! was ours!"
+
+ig_operations.32.desc:0 "We have successfully stolen the §HSoul Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.33.name:0 "§HSoul Stone§! stolen!"
+ig_operations.33.desc:0 "The §HSoul Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+soul_stone_removed_tooltip:0 "§HSoul Stone§! removed"
+
+ig_operations.34.desc:0 "Our plan to steal the §HSoul Stone§! went without a hitch but when we got to the chamber where the §HSoul Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+
+ig_operations.35.desc:0 "Our plan to steal the §HSoul Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."
+
+
+
+# Mind Stone Theft
+# §YMind Stone§!
+
+ig_operations.41.name:0 "Stealing the §YMind Stone§!"
+ig_operations.41.desc:0 "All of our operatives are in place to steal the §YMind Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §YMind Stone§! was ours!"
+
+ig_operations.42.desc:0 "We have successfully stolen the §YMind Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.43.name:0 "§YMind Stone§! stolen!"
+ig_operations.43.desc:0 "The §YMind Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+mind_stone_removed_tooltip:0 "§YMind Stone§! removed"
+
+ig_operations.44.desc:0 "Our plan to steal the §YMind Stone§! went without a hitch but when we got to the chamber where the §YMind Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+
+ig_operations.45.desc:0 "Our plan to steal the §YMind Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."
+
+
+
+# Space Stone Theft
+# §BSpace Stone§!
+
+ig_operations.51.name:0 "Stealing the §BSpace Stone§!"
+ig_operations.51.desc:0 "All of our operatives are in place to steal the §BSpace Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!. Years of planning have lead to this and it is about time the §BSpace Stone§! was ours!"
+
+ig_operations.52.desc:0 "We have successfully stolen the §BSpace Stone§! from the §Y[event_target:previous_owner_of_infinity_stone.GetName]§!."
+
+ig_operations.53.name:0 "§BSpace Stone§! stolen!"
+ig_operations.53.desc:0 "The §BSpace Stone§! is missing, taken in the night. We do not know for certain who took it but intital information points to the §Y[event_target:new_owner_of_infinity_stone.GetName]§!."
+space_stone_removed_tooltip:0 "§BSpace Stone§! removed"
+
+ig_operations.54.desc:0 "Our plan to steal the §BSpace Stone§! went without a hitch but when we got to the chamber where the §BSpace Stone§! was located, it wasn't there!\n\nAccording to our contacts, the stone had been lost to another empire for quite some time..."
+
+ig_operations.55.desc:0 "Our plan to steal the §BSpace Stone§! failed after our operatives were captured. We will have to wait before we can try to steal the stone again."

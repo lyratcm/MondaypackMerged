@@ -1,0 +1,63 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Space Stone and Hala
+ ##################
+
+ # Space Stone Events
+ space_stone.1.name:0 "空间宝石爆炸！"
+ space_stone.1.desc:0 "我们研究§Y空间宝石§!的实验室在一场事故中爆炸了。许多人受伤，然而我们测试§R无限引擎§!的飞行员却被宝石注入了某种强大的能量。\n\n我们的专家无法解释也无法再现这种神奇的现象。\n而那个飞行员，自称"§H惊奇队长§!"，她现在能够不受任何保护地在宇宙空间中飞行，拥有惊人的力量和抗击力，并能够吸收和释放强大的能量，她甚至不会再衰老。\n\n我们的军事顾问建议当前给她一支舰队指挥。"
+ space_stone.1.a:0 "把她盯紧了!"
+ space_stone_get_captain_marvel:1 "一个名为"§HCaptain Marvel§!"的上将现在加入了领袖候选。"
+
+ space_stone.3.name:0 "无尽引擎"
+ space_stone.3.desc:0 "我们的付出终于有了成果，现在我们能够掌控§Y空间宝石§!了。全新的§R无限引擎§!允许我们通过§Y空间宝石§!打开空间通路而不受超空间航道的限制。"
+ space_stone.3.a:0 "不错的结果！"
+
+ space_stone.4.name:0 "空间宝石爆炸!"
+ space_stone.4.desc:0 "我们研究§Y空间宝石§!的实验室在一场事故中爆炸了。许多人受伤，然而我们测试§R无限引擎§!的飞行员却被宝石注入了某种强大的能量。\n\n我们的专家无法解释也无法再现这种神奇的现象。\n无人机现在可以在没有帮助的情况下在太空飞行，吸收和驱逐能量，具有超强的力量和耐久性，不再老化。我们决定暂时给他们一支舰队指挥。"
+ space_stone.4.a:0 "偏差将会被记录."
+
+ # Moonstone Events
+ space_stone.11.name:0 "惊奇队长"
+ space_stone.11.desc:0 "当§Y[event_target:captain_marvel_creator.GetName]§!拥有§B空间宝石§!时发生了一次意外事件，这使得飞行员被注入了宝石的能量。 我们的科学家希望了解他们是否可以复制事故以此来潜在地创造我们自己的§YCaptain Marvel§!。"
+ space_stone.11.a:0 "开始准备"
+
+ space_stone.12.name:0 "月长石"
+ space_stone.12.descnotgestalt:0 "今天我们的§Y空间宝石§!实验室爆炸了,原因是一位年轻的飞行员听说并闯入了我们正在进行的实验，并使用该设备自行灌注了宝石的能量。\n现在,希望被称为"§HMoonstone§!"的飞行员现在可以在太空中飞行而无需帮助，吸收和排出能量，具有超强的强度和耐性，并且不会老化。\n\n尽管奖励这种行为是不明智的，但我们不能不说"§HMoonstone§!"可能是我们最有价值的军事资产之一，因此我们已经指派了她来当舰队指挥。"
+ space_stone.12.descgestalt:0 "今天我们的§Y空间宝石§!实验室爆炸了,许多人受伤,但是我们的其中一台无人机在爆炸中吸收了宝石的能量.\n\n我们的专家也无法解释或复制的一种现象。\n现在,称为"§HMoonstone§!"的飞行员现在可以在太空中飞行而无需帮助，吸收和排出能量，具有超强的强度和耐性，并且不会老化。"
+ space_stone.12.a:0 "盯紧她!"
+ space_stone.12.b:0 "偏差将会被记录."
+ space_stone_get_moonstone:1 "一个名为"§HMoonstone§!"的上将现在加入了领袖候选。"
+
+ # Hala events
+ hala.0.name:0 "帝国之都"
+ hala.0.desc:0 "进入§HPama§!星系后，§Y[Root.GetName]§!已经检测到哈拉行星上的结构！ 我们的传感器无法检测到星球上任何有生命，但它的整个表面已变成一个城市。"
+ hala.0.a:0 "可能是古代文明吗？"
+
+ hala_site:0 "哈拉·迪格斯特"
+ hala_relic_world_site_desc:0 "在这个星球上有一个早已消亡的文明。"
+
+ hala.1.name:0 "克里拉尔城"
+ hala.1.desc:0 "当我们着陆在地面上时，我们能够很快地破译当地的母语。这座全球城市被称为"§HKree-Lar§!"，以居住在这里的人的种族§YKree§!来命名。克里族是一个好战的遗传至上主义者的种族，根据这些记录，他们拥有一个巨大的帝国。克里人相信他们已经达到了进化的高度，与他们相比，其他所有种族只不过是动物而已。他们试图在他们的蓝色旗帜下统一银河系;然而，他们似乎在这种情况发生之前就被阻止了。"
+ hala.1.a:0 "继续调查。"
+
+ hala.2.name:0 "克里技术"
+ hala.2.desc:0 "数千年来，他们消灭了所有的敌人，使自己成为银河系的终极力量。他们的技术似乎是许多不同种族技术的结合，随着时间的推移，他们消化了这些技术。§HKree-Lar§!这是一座多么美丽的城市啊!没有生命，只剩下植物和昆虫。即使过了这么长时间，世界上也找不到任何种类的动物。关于克里人在毁灭时期的记录是混乱和难以理解的，就像疯子的胡言乱语。"
+ hala.2.a:0 "搜刮任何你能找到的东西!"
+
+ hala.3.name:0 "克里军队"
+ hala.3.desc:0 "The Kree were protected by two groups; the §YAccuser Corps§! and §YStarforce§!.\nThe §YAccuser Corps§! were mainly the army and navy of the Kree, fighting the Kree's foes throughout space.\n§YStarforce§! were a black ops group, sent on missions that the military couldn't do. The only logs we can find on Hala that make any sense during the end of the Kree appear to be from §YStarforce§!, who were desperately trying to communicate with the planet; however, their communication attempts were manually denied."
+ hala.3.a:0 "一个有趣的发现。"
+
+ hala.4.name:0 "最高情报"
+ hala.4.desc:0 "The Kree were lead by an AI made up of the consciousness of the best minds of their people. They appeared to worship it, as a sort of god, even though they believed they were above that sort of thing. This §YSupreme Intelligence§! had ruled the Kree Empire for hundreds of years before the Kree's destruction.\n\nOur explorers have made it to the chamber in which the Supreme Intelligence was held, only to find it too had been destroyed. However, it's memory banks are intact; therefore, it may still shine some light on what happened."
+ hala.4.a:0 "搜索它的记忆，找出发生了什么。"
+
+ hala.5.name:0 "空间宝石"
+ hala.5.desc:0 "After decoding the §YSupreme Intelligence's§! data banks, we uncovered the truth about what happened to the Kree.\n\nThe Kree had been in a gruelling war with another race called the §GSkrulls§!. Although the Kree eventually defeated the Skrulls, their shapeshifting nature left a mark on Kree culture. Although the Skrulls were gone, the Kree slowly lost their ability to trust things, believing they were Skrulls in disguise. First, they genocided the animals of their world, next began the people. Over 90% of the Kree population were wiped out before the Accuser Core tried to restore order to the planet. However, they discovered everything was going according to the Supreme Intelligence's plan.\n\nThe Supreme Intelligence wanted to jumpstart the evolution of the Kree again, by removing the weak, so only the strong survived. It kept putting the idea that the Skrulls were still out there into the heads of the citizens of the empire. When Accuser Core found out about this, they were conflicted. Some stood with the Intelligence, some couldn't stand by and watch as it genocided its own people. Those who resisted the Intelligence were branded Skrulls, and the two sides fought each other into oblivion.\n\nThe conflict resulted in the destruction of the Intelligence, and many of the remaining loyalists killed themselves after its loss. It is unknown what happened to the remaining Kree, but it can be assumed after thousands of years they died out too with the rest of their race.\n\nOn a less sombre note, the data banks also revealed why the Kree were so dominant in the galaxy. They had an infinity stone! The Stone was found powering the Intelligence during the excavation. The §HSpace Stone§! was used by the Kree to create so-called "§RInfinity Drives§!" which allowed for instant travel across the galaxy."
+ hala.5.a:0 "我们需要建立自己的§R无限引擎§!"

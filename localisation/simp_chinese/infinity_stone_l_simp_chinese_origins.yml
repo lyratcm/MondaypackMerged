@@ -1,0 +1,33 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Origins
+ ##################
+
+ origin_power_stone:0 "力量宝石"
+ origin_power_stone_desc:0 "我们的帝国掌握§H力量宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_power_stone_effects:0 "开局拥有§H力量宝石§!"
+
+ origin_time_stone:0 "时间宝石"
+ origin_time_stone_desc:0 "我们的帝国掌握§H时间宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_time_stone_effects:0 "开局拥有§H时间宝石§!"
+
+ origin_reality_stone:0 "现实宝石"
+ origin_reality_stone_desc:0 "我们的帝国掌握§H现实宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_reality_stone_effects:0 "开局拥有§H现实宝石§!"
+
+ origin_soul_stone:0 "灵魂宝石"
+ origin_soul_stone_desc:0 "我们的帝国掌握§H灵魂宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_soul_stone_effects:0 "开局拥有§H灵魂宝石§!"
+
+ origin_mind_stone:0 "心灵宝石"
+ origin_mind_stone_desc:0 "我们的帝国掌握§H心灵宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_mind_stone_effects:0 "开局拥有§H心灵宝石§!"
+
+ origin_space_stone:0 "空间宝石"
+ origin_space_stone_desc:0 "我们的帝国掌握§H空间宝石§!已经有了上千年,现在我们实现了太空旅行，我们将使用无限宝石在银河系中传播我们的影响力。"
+ origin_tooltip_space_stone_effects:0 "开局拥有§H空间宝石§!"

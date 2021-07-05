@@ -1,0 +1,2 @@
+﻿l_russian:
+ z_modmenu.133.automation.tooltip:1000 "Set the Dynamic Difficulty: Fleet Power Bouns Automation Difficulty Level. It works on the adaptive and periodic method at the same time.\n\nNote: CD will be refreshed automatically after setting.\n§HWhen using adaptive method, the higher the difficulty level, the higher the trigger frequency.§!"

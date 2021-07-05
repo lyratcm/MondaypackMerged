@@ -1,0 +1,13 @@
+﻿l_english:
+
+ Trait_GAPS_Volatile_Bricks:0 "Volatile Bricks"
+ Trait_GAPS_Volatile_Bricks_desc:0 "This species is prone to exploding if subjected to a violent death. They have learned to use their own parts as building materials, but the shrapnel can be devastating to other species."
+ Trait_GAPS_Volatile_Bricks_Effect:0 "Planet Devastation On Defensive Army Death: §G-5§!\nPlanet Devastation On Non-Defensive Army Death: §R+1§!\n"
+
+ Trait_GAPS_Defensive_Symbiosis:0 "Defensive Symbiosis"
+ Trait_GAPS_Defensive_Symbiosis_desc:0 "This species has a symbiotic relationship with another creature, such as a plant or fungus. When attacked, they release chemicals, spores, or pollen to varying effect."
+ Trait_GAPS_Defensive_Symbiosis_Effect:0 "Planet Devastation On Defensive Army Death: §G-5§!\nPlanet Devastation On Non-Defensive Army Death: §R+1§!\n"
+
+ Trait_GAPS_Contingency_Programming:0 "Contingency Programming"
+ Trait_GAPS_Contingency_Programming_desc:0 "These robots are programmed to repurpose their forms when in danger, disarming themselves to be building material or overloading their munitions to explode as the situation warrants."
+ Trait_GAPS_Contingency_Programming_Effect:0 "Planet Devastation On Defensive Army Death: §G-5§!\nPlanet Devastation On Non-Defensive Army Death: §R+1§!\n"

@@ -1,0 +1,2 @@
+﻿l_simp_chinese:
+ z_modmenu.timing_order_desc:1000 "基数[root.z_mm_var_cntr_timing_base]\n加数[root.z_mm_var_cntr_timing_add]\n\n若为依次进行，结果应为0/+n\n若为同时进行，结果应为10-n/0"

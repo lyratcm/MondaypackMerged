@@ -1,0 +1,117 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Options and Cheats Menus
+ ##################
+
+  # OPTIONS MENU
+
+ ig_menu.0.name:0 "Zer0's Infinity Stones 3.0"
+ ig_menu.0.desc:0 "大家好, 这是§HZer0's Infinity Stones 3.0§!的配置菜单. 在这里，您可以禁用mod的功能。\n\n如果不确定选择什么，请选择顶部的默认选项，这将使您能够按照mod制作者的意图游玩mod。\n\n选择§Y"完成"§!当你修改完毕之后."
+ ig_menu.0.a:0 "重置为默认选项"
+ ig_menu.0.b:0 "自定义§YAI选项§!"
+ ig_menu.0.c:0 "自定义§Y无限手套§!"
+ ig_menu.0.d:0 "自定义§Y宝石杂项影响§!"
+ ig_menu.0.e:0 "自定义§Y事件领袖§!"
+ ig_menu.0.f:0 "自定义§Y无限引擎§!"
+ ig_menu.0.cheats.enabled:0 "作弊菜单: §G启用§!"
+ cheat_menu_tooltip:1 "作弊菜单可以在法令中找到。"
+ ig_menu.0.cheats.disabled:0 "作弊菜单: §G关闭§!"
+ ig_menu.0.g:0 "完成"
+
+ ig_menu.2.name:0 "自定义§YAI选项§!"
+ ig_menu.2.desc:0 "默认情况下,当您持有“无限宝石”时，AI帝国会产生恶意。普通帝国会获得￡opinion￡ §R-50§!取决于你有几颗无限宝石,以及堕落帝国会获得￡opinion￡ §R-20§!取决于你有几颗无限宝石.\n\n虽然可以通过多种方式提高AI的能力，但有些玩家可能希望禁用它。""
+ ig_menu.2.fallenempire.enabled:0 "消极的堕落帝国: §G开启§!"
+ ig_menu.2.fallenempire.disabled:0 "消极的堕落帝国: §G关闭§!"
+ ig_menu.2.normalempire.enabled:0 "消极的普通帝国: §G开启§!"
+ ig_menu.2.normalempire.disabled:0 "消极的堕落帝国: §G关闭§!"
+ ig_menu.2.back:0 "返回主菜单"
+
+ ig_menu.3.name:0 "自定义§Y无限手套§!"
+ ig_menu.3.desc:0 "默认状态下, §Y无限手套§!会给予那些已经收集了2颗无限宝石的帝国. 然后可以使用手套消除无限宝石的冷却时间，以允许同时使用多个宝石。\n\n同时使用某些宝石会增加修饰符以改善您的帝国，这称为§Y无限电路§!。\n\n手套的两种效果都可以认为非常强大，因此，某些玩家可能希望禁用其中一种或两种效果。(The gauntlet will always be given if the play has all six stones but can only be used to snap)"
+ ig_menu.3.infinitygauntlet.enabled:0 "无限手套: §G开启§!"
+ ig_menu.3.infinitygauntlet.disabled:0 "无限手套: §R关闭§!"
+ ig_menu.3.infinitycircuit.enabled:0 "无限电路: §G开启§!"
+ ig_menu.3.infinitycircuit.disabled:0 "无限电路: §R关闭§!"
+
+ ig_menu.4.name:0 "自定义§Y宝石杂项影响§!"
+ ig_menu.4.desc:0 "下面的第一个选项将允许您禁用§Y现实宝石§!创建机器世界，蜂巢世界和都市星球，因此§Y现实宝石§!只能创建盖亚世界。\n\n下面的第二个选项将使您禁用§Y灵魂宝石§!每隔约7.5年就向随机领导者赋予灵能特质。"
+ ig_menu.4.realitystone.enabled:0 "现实宝石可以创造特殊世界: §G开启§!"
+ ig_menu.4.realitystone.disabled:0 "现实宝石可以创造特殊世界: §R关闭§!"
+ ig_menu.4.soulstone.enabled:0 "灵魂宝石可以创造灵能领袖: §R开启§!"
+ ig_menu.4.soulstone.disabled:0 "灵魂宝石可以创造灵能领袖: §R关闭§!"
+
+ ig_menu.5.name:0 "自定义§Y事件领袖§!"
+ ig_menu.5.desc:0 "默认状态下,在无限宝石的挖掘点发展过程中,您可能会遇到独特的领导者. 这些领导者是对漫威宇宙中与无尽宝石有联系的角色的引用。\n\n过去，有些玩家表示他们只想要无限宝石，仅此而已，因此存在这些选项以允许那些玩家禁用领导者。"
+ ig_menu.5.thor.enabled:0 "雷神-Thor(上将): §G开启§!"
+ ig_menu.5.thor.disabled:0 "雷神-Thor(上将): §G关闭§!"
+ ig_menu.5.captainmarvel.enabled:0 "惊奇队长-Captain Marvel(上将): §G开启§!"
+ ig_menu.5.captainmarvel.disabled:0 "惊奇队长-Captain Marvel(上将): §G关闭§!"
+ ig_menu.5.vision.enabled:0 "幻视-Vision(科学家): §G开启§!"
+ ig_menu.5.vision.disabled:0 "幻视-Vision(科学家): §R关闭§!"
+ ig_menu.5.ultron.enabled:0 "奥创-Ultron(多角色): §G开启§!"
+ ig_menu.5.ultron.disabled:0 "奥创-Ultron(多角色): §G关闭§!"
+
+ ig_menu.6.name:0 "自定义§Y无限引擎§!"
+ ig_menu.6.desc:0 "默认状态下,§Y无限引擎§!是一项特殊技术，玩家在获得§Y空间宝石§!之后大约一年后可以进行研究。 该引擎与原版游戏的灵能跃迁引擎大致相同.\n\n禁用§Y无限引擎§!这意味着您必须依靠原版游戏的跃迁引擎和灵能跃迁引擎才能使用太空石的效果。"
+ ig_menu.6.infinitydrive.enabled:0 "无限引擎: §G开启§!"
+ ig_menu.6.infinitydrive.disabled:0 "无限引擎: §R关闭§!"
+
+ # CHEAT MENU
+
+ ig_cheats.0.name:0 "作弊菜单"
+ ig_cheats.0.desc:0 "此菜单包含许多作弊技巧，可量身定制您的体验或修复游戏:\n\n§Y遗物作弊§! - 添加和删除8件遗物。\n\n§Y打开其他选项§! - 打开mod设置菜单.\n\n§Y领袖菜单§! - 生成在各种事件的领导者。\n\n§Y响指作弊菜单§! - 允许激活某些快照选项，而无需无限手套.\n\n§Y中期-现有保存游戏选项§! - 可以将无限宝石添加到现有存档中。\n\n§Y作弊菜单§! - 用于测试mod的各种作弊. \n\nPress §Y完成§! 退出菜单."
+ ig_cheats.0.a:0 "§Y遗物作弊§!"
+ ig_cheats.0.b:0 "§Y打开其他选项§!"
+ ig_cheats.0.c:0 "§Y领袖菜单§!"
+ ig_cheats.0.d:0 "§Y响指菜单§!"
+ ig_cheats.0.e:0 "§Y中期游戏-现有保存游戏选项§!"
+ ig_cheats.0.f:0 "§Y其他作弊§!"
+ ig_cheats.0.g:0 "§Y完成§!"
+
+ ig_cheats.1.name:0 "遗物作弊"
+ ig_cheats.1.desc:0 "在此菜单中，您可以添加和删除此mod中的所有遗物。"
+ ig_cheats.1.allstones.give:0 "§R添加§!所有无限宝石"
+ ig_cheats.1.allstones.remove:0 "§R删除§!所有无限宝石"
+ ig_cheats.1.powerstone.give:0 "§R添加§!力量宝石"
+ ig_cheats.1.powerstone.remove:0 "§R删除§!力量宝石"
+ ig_cheats.1.realitystone.give:0 "§R添加§!现实宝石"
+ ig_cheats.1.realitystone.remove:0 "§R删除§!现实宝石"
+ ig_cheats.1.timestone.give:0 "§R添加§!时间宝石"
+ ig_cheats.1.timestone.remove:0 "§R删除§!时间宝石"
+ ig_cheats.1.soulstone.give:0 "§R添加§!灵魂宝石"
+ ig_cheats.1.soulstone.remove:0 "§R删除§!灵魂宝石"
+ ig_cheats.1.mindstone.give:0 "§R添加§!心灵宝石"
+ ig_cheats.1.mindstone.remove:0 "§R删除§!心灵宝石"
+ ig_cheats.1.spacestone.give:0 "§R添加§!空间宝石"
+ ig_cheats.1.spacestone.remove:0 "§R删除§!空间宝石"
+ ig_cheats.1.infinitygauntlet.give:0 "§R添加§!无限手套"
+ ig_cheats.1.infinitygauntlet.remove:0 "§R删除§!无限手套"
+ ig_cheats.1.mjolnir.give:0 "§R添加§!雷神之锤"
+ ig_cheats.1.mjolnir.remove:0 "§R删除§!雷神之锤"
+
+ ig_cheats.4.name:0 "响指作弊菜单"
+ ig_cheats.4.desc:0 "当您拥有全部6个无限宝石时，此菜单可让您为可用的多个快照选项中的几个（但不是全部）触发事件。 将鼠标悬停在选项上可获得更多详细信息。\n\n§H强烈建议您在使用此列表中的任何内容之前先进行保存！§!"
+ ig_cheats.4.a:0 "肃清有机体"
+ gauntlet_option_organics:1 "所有有机生命都将从银河中清除。"
+
+ ig_cheats.5.name:0 "中期存档(Mid-save) 现有保存游戏选项"
+ ig_cheats.5.desc:0 "此菜单将使您可以将无限宝石添加到现有存档.\n\n选择"§Y生成系统§!"会在系统和挖掘地点中生成无限宝石到您的存档中。\n\n选择"§Y生成无限宝石§!"会随机添加无限宝石至任意帝国. \n\n如果您在这里看不到任何选择，则说明您的星系中应该已经有无限宝石了。""
+ ig_cheats.5.systems:0 "§Y生成系统§!"
+ ig_cheats.5.stones:0 "§Y生成无限宝石§!"
+
+ ig_cheats.3.name:0 "领袖菜单"
+ ig_cheats.3.desc:0 "在此菜单中，您可以生成此mod添加的各种事件领导者。 领导者可以通过领导者菜单解雇。"
+ ig_cheats.3.thor:0 "§Y雷神§! (上将)"
+ ig_cheats.3.captainmarvel:0 "§Y惊奇队长§! (上将)"
+ ig_cheats.3.vision:0 "§Y幻视§! (科学家)"
+ ig_cheats.3.soulborn:0 "§Y人造灵魂§!"
+
+ ig_cheats.6.name:0 "其他作弊选项"
+ ig_cheats.6.desc:0 "这个菜单包含了我在开发此mod时使用的各种作弊列表。在使用其中任何一种之前，应该保存游戏，因为它们无法撤消。"
+ ig_cheats.6.ifdrive:0 "给予无限引擎技术。"
+ ig_cheats.6.explore:0 "探索援助活动"

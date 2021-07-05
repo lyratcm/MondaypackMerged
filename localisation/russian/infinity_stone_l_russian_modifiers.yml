@@ -1,0 +1,80 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_russian:
+ ##################
+# modifiers
+ ##################
+
+#Gauntlet Modifiers
+ no_biological_growth_snap:0 "Биологическая жизнь была стерта §RПерчаткой Бесконечности§!"
+ purged_galaxy_snap:0 "Успешное очищение галактики"
+ gauntlet_end_hunger:0 "§RПерчатка Бесконечности§! была использована для прекращения голода."
+ gauntlet_ethics_spiritualist:0 "§RПерчатка Бесконечности§! была использована чтоб просвятить нас"
+ gauntlet_ethics_pacifist:0 "§RПерчатка Бесконечности§! была использована чтоб успокоить нас"
+ gauntlet_ethics_xenophile:0 "§RПерчатка Бесконечности§! была использована чтобы сделать нас Ксенофилами"
+ gauntlet_ethics_egalitarian:0 "§RПерчатка Бесконечности§! была использована чтобы сделать нас Эгалитаристами"
+ cripple_the_crisis:0 "Кризис побит"
+ gauntlet_money:0 "Бесконечное богатство"
+ if_snapture_long:0 "Щелчок"
+ if_snapture_long_desc:0 "Уничтожение половины галактики не вызывает улыбки на их лице."
+ if_snapture_short:0 "Нехватка обученных членов экипажа и солдат"
+ if_snapture_short_desc:0 "В настоящее время у нас недостаточно обученных членов экипажа для управления нашими флотами или солдатами для заполнения наших армий."
+ if_snapture_short_ninety:0 "Нехватка обученных членов экипажа и солдат"
+ if_snapture_short_ninety_desc:0 "В настоящее время у нас недостаточно обученных членов экипажа для управления нашими флотами или солдатами для заполнения наших армий."
+
+ # Power Stone modifiers
+ power_stone:0 "$r_power_stone$"
+ #power_stone_desc:0 "Fleets can now use the §YPower Stone Annihilation§! Orbital Bombardment stance against planets."
+
+ # Time Stone modifiers
+ time_stone:0 "$r_time_stone$"
+ time_stone_desc:0 "Используя §YКамень Времени§! мы можем ускорить наши Мега-проектирования"
+
+ planet_time_stone_boost:0 "Ускорение Камня Времени"
+ planet_time_stone_boost_desc:1 "Эта планета в настоящее время ускоряется с помощью Камня Времени."
+
+  # Reality Stone modifiers
+ reality_stone:0 "$r_reality_stone$"
+ reality_stone_desc:0 "Используя §YКамень Реальности§! мы можем изменить планеты"
+
+ planet_reality_stone_boost:0 "Терраформирование с помощью Камня Реальности"
+ planet_reality_stone_boost_desc:1 "Окружающая среда этой планеты была очищена с помощью §YКамня Реальности§!"
+
+ # Soul Stone Modifiers
+ soul_stone:0 "$r_soul_stone$"
+ soul_stone_desc:0 "Используя §YКамень Души§! мы можем создать Soulborns."
+
+ # Mind Stone modifiers
+ mind_stone:0 "$r_mind_stone$"
+ #mind_stone_desc:0 "The minds of all the people in our empire are linked together, increasing happiness, at the cost of our creativeness and ingenuity."
+
+ # Space Stone modifiers
+ space_stone:0 "$r_space_stone$"
+ space_stone_desc:0 "Камень Космоса позволяет нам мгновенно перемещаться по галактике."
+
+ # OTHER EARTH modifiers
+ future_earth_knowledge:0 "Будущее Знание Земли"
+ future_earth_knowledge_desc:0 "Вооружившись знаниями из будущего, мы можем лучше защитить себя от угроз."
+ future_earth_media:0 "Медиа будущего Земли"
+ future_earth_media_desc:0 "Наши люди довольно наслаждаются реалити-шоу Земли."
+
+# Stone lost modifiers
+ stone_lost:0 "Потеря Камня Бесконечности"
+ stone_lost_desc:0 "Из-за нашей невнимательности потеряна одно из самых мощных орудий в галактике."
+
+ # Infinity Circuit
+ infinity_circuit_power_space:0 "Резонанс Силы и Космоса"
+ infinity_circuit_space_time:0 "Резонанс Космоса и Времени"
+ infinity_circuit_time_reality_one:0 "Резонанс Времени и Реальности"
+ infinity_circuit_time_reality_two:0 "Резонанс Времени и Реальности"
+ infinity_circuit_time_reality_three:0 "Резонанс Времени и Реальности"
+ infinity_circuit_reality_soul_one:0 "Резонанс Реальности и Души"
+ infinity_circuit_reality_soul_two:0 "Резонанс Реальности и Души"
+ infinity_circuit_reality_soul_three:0 "Резонанс Реальности и Души"
+ infinity_circuit_reality_soul_four:0 "Резонанс Реальности и Души"
+ infinity_circuit_reality_soul_five:0 "Резонанс Реальности и Души"
+ infinity_circuit_soul_mind:0 "Резонанс Души и Разума"
+ infinity_circuit_mind_power:0 "Резонанс Разума и Силы"

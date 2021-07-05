@@ -1,0 +1,8 @@
+﻿l_english:
+
+ Trait_GAPS_Quitters:0 "Quitters"
+ Trait_GAPS_Quitters_desc:0 "The Quitters of this species defense armies is infectious."
+ Trait_GAPS_Quitters_Effect:0 "Planets with pops with this trait will unemploy a random pop with this trait evey year."
+ 
+ Deposits_GAPS_Num_Quitters_Armies:0 "# Of Quitters Defense Armies"
+ Deposits_GAPS_Num_Quitters_Armies_desc:0 "# Of Quitters Defense Armies"

@@ -1,0 +1,77 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# New Gauntlet Events
+ ##################
+
+ infinity_stones_new_gauntlet.1.name:0 "§R力量宝石§!"
+ infinity_stones_new_gauntlet.1.desc:0 "§R力量宝石§!的冷却时间结束了。"
+ infinity_stones_new_gauntlet.1.a:0 "很好！"
+
+ infinity_stones_new_gauntlet.2.name:0 "§S时间宝石§!"
+ infinity_stones_new_gauntlet.2.desc:0 "§S时间宝石§!的冷却时间结束了。"
+
+ infinity_stones_new_gauntlet.3.name:0 "§Y现实宝石§!"
+ infinity_stones_new_gauntlet.3.desc:0 "§Y现实宝石§!的冷却时间结束了。"
+
+ infinity_stones_new_gauntlet.4.name:0 "§G灵魂宝石§!"
+ infinity_stones_new_gauntlet.4.desc:0 "§G灵魂宝石§!的冷却时间结束了。"
+
+ infinity_stones_new_gauntlet.5.name:0 "§B心灵宝石§!"
+ infinity_stones_new_gauntlet.5.desc:0 "§B心灵宝石§!的冷却时间结束了。"
+
+ infinity_stones_new_gauntlet.6.name:0 "§M空间宝石§!"
+ infinity_stones_new_gauntlet.6.desc:0 "§M空间宝石§!的冷却时间结束了。"
+
+# INFINITY GAUNTLET USE
+
+ infinity_stones_new_gauntlet.10.name:0 "§R无限手套§!"
+ infinity_stones_new_gauntlet.10.desc:0 "我们现在能够使用§R无限手套§!来重置§Y无限宝石§!的冷却时间。"
+ infinity_stones_new_gauntlet.10.a:0 "重置无限宝石冷却"
+ infinity_stones_new_gauntlet.10.b:0 "没事了"
+ infinity_stones_new_gauntlet.10.c:0 "§R组合6颗无限宝石§!"
+
+
+# SNAP OPTIONS
+ infinity_stones_new_gauntlet.11.name:0 "§R无限宝石的真正力量§!"
+ infinity_stones_new_gauntlet.11.desc:0 "您想如何使用§R无限宝石§的超凡力量!"
+ infinity_stones_new_gauntlet.11.a:0 "打个响指"
+ gauntlet_option_one:1 "§H50%§!的银河人口将在瞬间消失."
+ infinity_stones_new_gauntlet.11.b:0 "清算"
+ gauntlet_option_two:1 "§H50%§!的银河人口将在瞬间消失, 除了我们国境内的人民"
+ infinity_stones_new_gauntlet.11.c:0 "警告"
+ gauntlet_option_three:1 "§H10%§!的世界人口将在瞬间消失并且其他帝国将不愿宣战."
+ infinity_stones_new_gauntlet.11.d:0 "重新开始"
+ gauntlet_option_four:1 "§H90%§!的银河人口将在瞬间消失."
+ infinity_stones_new_gauntlet.11.e:0 "肃清"
+ gauntlet_option_five:1 "所有次等人口都会从银河中清除."
+ infinity_stones_new_gauntlet.11.f:0 "摧毁敌人"
+ gauntlet_option_six:1 "所有对我们开战的帝国将被消灭."
+ infinity_stones_new_gauntlet.11.g:0 "消除饥饿"
+ gauntlet_option_seven:1 "现在起,所有银河的人口无需维护费."
+ infinity_stones_new_gauntlet.11.h:0 "启蒙时代"
+ gauntlet_option_eight:1 "所有非完型意识(非格塔式)帝国人口成为了狂热的唯心主义者."
+ infinity_stones_new_gauntlet.11.i:0 "和平"
+ gauntlet_option_nine:1 "所有非完型意识(非格塔式)帝国人口成为了狂热的和平主义者."
+ infinity_stones_new_gauntlet.11.j:0 "拥抱"
+ gauntlet_option_ten:1 "所有非完型意识(非格塔式)帝国人口成为了狂热的亲外主义者."
+ infinity_stones_new_gauntlet.11.k:0 "削弱危机"
+ gauntlet_option_eleven:1 "对抗危机时,所有帝国都会获得伤害加成."
+ infinity_stones_new_gauntlet.11.l:0 "无限财富"
+ gauntlet_option_twelve:1 "我们帝国的财富将变得无限!"
+ infinity_stones_new_gauntlet.11.m:0 "更大的利益"
+ gauntlet_option_thirteen:1 "非格式塔帝国中的所有人口都变成了狂热的平等主义者。"
+ infinity_stones_new_gauntlet.11.n:0 "末日"
+ gauntlet_option_fourteen:1 "用灵魂世界的数百万个灵魂创建一个灵能实体。"
+ infinity_stones_new_gauntlet.11.o:0 "必然"
+ gauntlet_option_fifteen:1 "将全部6颗无限宝石的力量注入您的总督。"
+ infinity_stones_new_gauntlet.11.p:0 "解除银河武装"
+ gauntlet_option_sixteen:1 "摧毁所有其他帝国的战舰和船坞。"
+ infinity_stones_new_gauntlet.11.q:0 "摧毁宝石!"
+ gauntlet_option_seventeen:1 "摧毁无限宝石!"
+ infinity_stones_new_gauntlet.11.r:0 "§G回归§!"
+ gauntlet_option_eighteen:1 "让那些被抹除的人口重回宇宙。"

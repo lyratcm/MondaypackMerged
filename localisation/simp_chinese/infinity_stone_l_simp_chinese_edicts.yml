@@ -1,0 +1,29 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Edicts
+ ##################
+
+ # Ultron Edicts
+ edict_ig_ultron_one_edict:0 "构建奥创-01"
+ edict_ig_ultron_one_edict_desc:0 "创建一个特殊项目以使用§Y心灵宝石§!建造T1-奥创装置"
+ edict_ig_ultron_five_edict:0 "构建奥创-05"
+ edict_ig_ultron_five_edict_desc:0 "创建一个特殊项目以使用§Y心灵宝石§!建造T5-奥创装置"
+ edict_ig_ultron_omega_edict:0 "构建奥创-欧米伽"
+ edict_ig_ultron_omega_edict_desc:0 "创建一个特殊项目以使用§Y心灵宝石§!建造奥创欧米伽装置.\n\n§R此后，我们将无法创建任何的奥创装置。§!"
+
+# Find the infinity stones edict
+ edict_ig_stonemenu_edict:0 "寻找§Y无限宝石§!"
+ edict_ig_stonemenu_edict_desc:0 "打开菜单，显示哪个帝国拥有§Y无限宝石§!"
+
+ ######## Mod Setting Edicts ######
+ edict_ig_options_menu_edict:0 "打开§YZer0的无限宝石§!选项菜单."
+ edict_ig_options_menu_edict_desc:0 "打开选项菜单§YZer0's Infinity Stones 3.0§!允许您根据自己的喜好配置mod的设置。"
+
+ ######## Mod Setting Edicts ######
+ edict_ig_cheat_menu_edict:0 "打开§YZer0's Infinity Stones§!作弊菜单"
+ edict_ig_cheat_menu_edict_desc:0 "打开§YZer0's Infinity Stones 3.0§!的作弊菜单,使您可以生成遗物，领导者并可以使用许多其他作弊功能。\n\n§R请记住，您可以使用此菜单轻松破坏游戏，因此请务必先保存§!"

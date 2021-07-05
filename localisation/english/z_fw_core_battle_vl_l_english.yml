@@ -1,0 +1,55 @@
+﻿l_english:
+
+#_[设置]
+#_[vl_战舰debug]		射程
+#_[vl_国家基础debug]	造船
+
+
+
+
+###_[设置]
+ z_modmenu.battle_vl_off: "Attribute Restrict §HDisabled§!"
+ z_modmenu.battle_vl_basic: "Attribute Restrict §Gnow LV1§!"
+ z_modmenu.battle_vl_more: "Attribute Restrict §Bnow LV2§!"
+ z_modmenu.battle_vl_all: "Attribute Restrict §Cnow LV3§!"
+ z_modmenu.battle_vl_tips: "Attribute Restrict system can add upper limits to some important values to prevent the appearance of some structural bugs: such as over-range range, free shipbuilding, moving speed exceeding, etc. \nIt can also supplement the shortcomings of the numerical system, such as adding damage and rate of fire attributes to the carrier aircraft. \nIn addition, he will also provide a numerical balance basis for §YImmersive Space Battle MOD (Under Development)§! \n\nDivided into 3 LEVELS\n§GLV1§! Including: shipbuilding cost\n§LV2§! Including: weapon range/combat movement speed\n§LV3§!"
+
+
+
+
+###_[射程]
+ z_fw_mod_flt_vl_range: "射程"
+ z_fw_mod_flt_vl_range_desc: ""
+
+
+
+
+###_[造船]
+ z_fw_mod_cntr_vl_navy_cost_sb_1: "§BAttribute Restrict§!: Ship cost"
+ z_fw_mod_cntr_vl_navy_cost_sb_1_desc: "Control shipbuilding cost reduction not exceeding 50%"
+ z_fw_mod_cntr_vl_navy_cost_sb_2: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_2_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_3: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_3_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_4: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_4_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_5: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_5_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_6: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_6_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_7: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_7_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_8: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_8_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_16: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_16_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_32: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_32_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_64: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_64_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_128: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_128_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_256: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_256_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"
+ z_fw_mod_cntr_vl_navy_cost_sb_512: "$z_fw_mod_cntr_vl_navy_cost_sb_1$"
+ z_fw_mod_cntr_vl_navy_cost_sb_512_desc: "$z_fw_mod_cntr_vl_navy_cost_sb_1_desc$"

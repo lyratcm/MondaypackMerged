@@ -1,0 +1,29 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_russian:
+ ##################
+# Edicts
+ ##################
+
+ # Ultron Edicts
+ edict_ig_ultron_one_edict:0 "Строительство юнита Альтрон-01"
+ edict_ig_ultron_one_edict_desc:0 "Создает специальный проект для строительства Алтрона 1-ого уровня с помощью §YКамня Разума§!."
+ edict_ig_ultron_five_edict:0 "Строительство юнита Альтрон-05"
+ edict_ig_ultron_five_edict_desc:0 "Создает специальный проект для строительства Алтрона 5-ого уровня с помощью §YКамня Разума§!."
+ edict_ig_ultron_omega_edict:0 "Строительство юнита Альтрон-Омега"
+ edict_ig_ultron_omega_edict_desc:0 "Создает специальный проект для строительства идеального Алтрона с помощью §YКамня Разума§!..\n\n§RПосле этого, у вас не будет возможности в будущем создавать Альтронов.§!"
+
+# Find the infinity stones edict
+ edict_ig_stonemenu_edict:0 "Поиск §YКамней Бесконечности§!"
+ edict_ig_stonemenu_edict_desc:0 "Открывает меню, чтоб увидеть у каких империй есть уже §YКамни Бесконечности§!"
+
+ ######## Mod Setting Edicts ######
+ edict_ig_options_menu_edict:0 "Открыть меню настроек §YZer0's Infinity Stones§!"
+ edict_ig_options_menu_edict_desc:0 "Открывает меню настроек §YZer0's Infinity Stones 3.0§!, позволяющее вам настроить мод как вам нравится."
+
+ ######## Mod Setting Edicts ######
+ edict_ig_cheat_menu_edict:0 "Открыть чит-меню §YZer0's Infinity Stones§!"
+ edict_ig_cheat_menu_edict_desc:0 "Открывает чит-меню для §YZer0's Infinity Stones 3.0§!, позволяющее вам заспавнить реликвию, лидера и дающий доступ к другим остальным читам.\n\n§RБудьте на чеку, вы можете спокойно сломать свою игру используя это меню, так что убедитесть, что вы сделали сохрание до использования этого меню§!"

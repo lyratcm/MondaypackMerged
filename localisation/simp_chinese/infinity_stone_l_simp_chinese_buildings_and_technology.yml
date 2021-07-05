@@ -1,0 +1,23 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+ # Buildings and Tech
+ ##################
+
+ # Power Stone Bombardment
+ bombardment_power_stone:0 "释放力量宝石"
+ bombardment_power_stone_desc:0 "利用力量宝石，我们彻底摧毁一颗行星的表面。 \n- §REXTREME§! damage to §YArmies§!\n- §REXTREME§! damage to §YPlanet§!\n- §REXTREME§! damage to §YPops§!\n- 轰炸没有保护的行星\n- 可能会使行星成为废土世界"
+
+ # Reality Stone building
+ building_reality_stone_terraformer:0 "反物质塔"
+ building_reality_stone_terraformer_desc:0 "这个高塔可以用来扩大§R现实宝石§!的范围，让它吸收更多的反物质来转化成物质，让我们把这个星球变成一个§Y理想城§!"
+
+ # Space Stone Tech
+ tech_space_stone_jump_drive_1:0 "无尽引擎"
+ tech_space_stone_jump_drive_1_desc:1 "通过对空间宝石所释放能量的研究，我们可以给舰队装备几乎能瞬间穿越星海的强力引擎。"
+ SPACE_STONE_JUMP_DRIVE_1:0 "无尽引擎"
+ SPACE_STONE_JUMP_DRIVE_1_DESC:1 "空间宝石能够打开一条超越现实的通路，给予我们瞬间穿越星系的力量。但是我们对这一切的原理仍然所知甚少。"

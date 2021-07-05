@@ -1,0 +1,16 @@
+﻿l_english:
+
+ Trait_GAPS_Vanilla:0 "Vanilla"
+ Trait_GAPS_Vanilla_desc:0 "This species is powered by un-modded content"
+ Trait_GAPS_Vanilla_Effect:0 "$mod_planet_jobs_produces_mult$ Per Non-Mod Civic/Origin: §G+3%§! (Max §Y+9%§!)"
+ 
+ Pop_Modifier_GAPS_Vanilla_Bonus:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_desc:0 "Vanilla Boost"
+
+ #THSE AREN:T USED ANYMORE JUST HERE TO AVOID ERRORS WHILE SAVE GAMES UPDATE TO THE NEW CODE
+ Pop_Modifier_GAPS_Vanilla_Bonus_1:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_2:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_3:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_1_desc:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_2_desc:0 "Vanilla Boost"
+ Pop_Modifier_GAPS_Vanilla_Bonus_3_desc:0 "Vanilla Boost"

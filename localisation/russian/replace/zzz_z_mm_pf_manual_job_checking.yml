@@ -1,0 +1,2 @@
+﻿l_russian:
+ z_mm_pf_manual_job_checking:1000 "Manually job check ongoing.\n$z_pf_tips_heup_ignore_migration_control$\nEmpire manual migration consumes §G25§!£energy£§Y$energy$§! per pop, and the migration command will not be executed when §Y$energy$§! is insufficient."

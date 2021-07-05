@@ -1,0 +1,65 @@
+﻿l_simp_chinese:
+#_[面板按钮]
+#_[伞の优化]
+#_[产业革命]
+
+
+###_[面板按钮]
+ z_fw_btn_plnt_ui_tb_job_check:0 "在当前星球执行一次工作检测，并花费£energy£§Y$energy$§!将失业高阶层人口进行降级。"
+ z_fw_tips_pf2_needed:0 "人口/人力迁移 \n需要§B伞の优化§!"
+ 
+ z_fw_btn_plnt_ui_tb_setting:0 "开启星球细节设置面板\n当前支持§B伞の优化/产业革命2§!"
+ z_fw_tips_empty:0 ""
+ z_fw_plnt_ui_setting.name:0 "星球细节设置"
+ z_fw_plnt_ui_setting.desc:0 "所有§B伞の优化/产业革命2§!中有关星球的独立细节设置都将显示在这里。"
+ 
+ z_fw_plnt_ui_setting.check.name:0 "星球数据检视"
+ z_fw_plnt_ui_setting.check.desc:0 "查看§B伞の优化/产业革命2§!的数据细节"
+ 
+#_决策
+ z_fw_dec_plnt_setting:0 "开启星球细节设置面板"
+ z_fw_dec_plnt_setting_desc:0 "当前支持§B伞の优化/产业革命2§!"
+
+
+
+
+###_[伞の优化]  ############
+ z_pf2_var_cntr_pop_cap_final:0 "国家人口上限---[root.owner.z_pf2_var_cntr_pop_cap_final]"
+ z_pf2_var_cntr_pop_increase_bonus:0 "人口增长效率§Y(1为正常状态)§!---[root.owner.z_pf2_var_cntr_pop_increase_bonus]"
+ z_pf2_var_plnt_pop_growth:0 "星球人口增长基础加成---[root.z_pf2_var_plnt_pop_growth]"
+ z_pf2_var_plnt_pop_clone:0 "星球人口克隆基础增加---[root.z_pf2_var_plnt_pop_clone]"
+ z_pf2_var_plnt_pop_assembly:0 "星球人口组装基础增加---[root.z_pf2_var_plnt_pop_assembly]"
+
+
+###_[产业革命]  ############
+ z_pr_title:0 "产业革命"
+ z_pr_tips_var_plnt_man:0 "§B人力§!---[root.z_pr_var_plnt_man]"
+ z_pr_tips_var_plnt_pop_man:0 "总人力§Y(人口+人力)§!---[root.z_pr_var_plnt_pop_man]"
+ z_pr_tips_var_plnt_num_jobs:0 "岗位基数---[root.z_pr_var_plnt_num_jobs]"
+ 
+ z_pr_tips_var_plnt_man_ratio_nmr:0 "人力计算值§Y(分子)§!=§G星球人力+10§!---[root.z_pr_var_plnt_man_ratio_nmr]"
+ z_pr_tips_var_plnt_man_ratio_dnm:0 "岗位计算值§Y(分母)§!=§G岗位基数(低于10则视为10)§!---[root.z_pr_var_plnt_man_ratio_dnm]"
+ z_pr_tips_var_plnt_man_ratio:0 "人力岗位比=§G人力计算值/岗位计算值§!---[root.z_pr_var_plnt_man_ratio]"
+ 
+ z_pr_tips_var_plnt_man_bonus_weight:0 "效率权重---[root.z_pr_var_plnt_man_bonus_weight]"
+ z_pr_tips_var_plnt_man_bonus:0 "§B人力生产效率§!---[root.z_pr_var_plnt_man_bonus]"
+ z_pr_tips_var_plnt_man_growth:0 "人力增长率(每月)---[root.z_pr_var_plnt_man_bonus]"
+ z_pr_tips_var_pop_growth_decrease:0 "人口增长衰减---[root.z_pr_var_plnt_man_bonus]"
+
+ z_pr_option_plnt_ignore_on:0 "星球已设为§H忽略产业革命§!"
+ z_pr_option_plnt_ignore_off:0 "星球已设为§B接受产业革命§!"
+ z_pr_option_plnt_ignore:0 "当一颗星球被设置为§H忽略产业革命§!时，产业革命的新功能将不会影响这颗星球，人口不会转化为人力，且经济和岗位系统将遵循原版。"
+
+ z_pr_option_plnt_pop_cnvt_5:0 "失业人口转化§Gx5§!"
+ z_pr_option_plnt_pop_cnvt_25:0 "失业人口转化§Gx25§!"
+ z_pr_tips_plnt_pop_cnvt:0 "将失业人口转化为人力。"
+ z_pr_tips_plnt_ignore:0 "无法执行\n$z_pr_option_plnt_ignore_on$"
+
+ z_pr_option_plnt_man_cnvt_full:0 "人力转化§G公民物种§!"
+ z_pr_option_plnt_man_cnvt_limited:0 "失业人口转化§Y居留物种§!"
+ z_pr_option_plnt_man_cnvt_slavery:0 "失业人口转化§H奴隶物种§!"
+ z_pr_option_plnt_man_cnvt_servitude:0 "失业人口转化§B机械仆从§!"
+ z_pr_tips_plnt_man_cnvt:0 "将星球人力转化为指定类型的人口。"
+ z_pr_tips_plnt_has_man:0 "当前星球必须存在人力。"
+ 
+ 

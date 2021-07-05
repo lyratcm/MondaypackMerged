@@ -1,0 +1,37 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Other earth events
+ ##################
+
+ # OTHER EARTH
+ other_earth.0.name:0 "第二个太阳系"
+ other_earth.0.desc:0 "我们的研究船§Y[Root.GetName]§!经过了一个与§H太阳系§!极其相似的星系。这个星系几乎是完全一样的，除了更加古老，它有一颗红巨星和几颗显然已经被殖民过的行星。而这些废弃殖民行星中最大的是§HSol-3§!，看起来很值得研究一番。"
+ other_earth.0.a:0 "非常有趣"
+
+ other_earth_site:0 "第二个太阳系"
+ other_earth_relic_world_site_desc:0 "§HSol-3§!也就是地球，上面存有几十万年前的文明遗迹。"
+
+ other_earth.1.name:0 "行星废墟"
+ other_earth.1.desc:0 "这颗被复制的§HSol-3§!，也就是§H地球§!，看起来在几十万年前经历过全球性的灭绝事件。它的大气极其稀薄，然而上面的大部分基础设施却保存完好。地方数据库中的信息显示地球的最后一次通信是来自于大约200年后的未来。此外，残留信息表明整个星系都经历了长达数十万年的时间错位，对这一切异象的研究项目正在展开。"
+ other_earth.1.a:0 "整个星系经历了时间旅行？荒唐"
+
+ other_earth.2.name:0 "副本地球的数据库"
+ other_earth.2.desc:0 "我们的专家在第二地球的数据库找到了重要信息，关于星球上生命被灭绝的原因有着许多互相冲突的解释。一些显示是因为歼灭者造成的§R毁灭之潮§!，一些显示是因为维度交错带来的被称作§R超越者§!的存在所为，另一些显示是由于被称作§R奥创§!的智械觉醒引发的革命所致，还有一些表明是由前三者共同促成。尽管记录这些未来事件可能有用，我们对这颗星球的灭亡原因并没有兴趣，因为它们都没能解释大规模时间位移产生的原因。"
+ other_earth.2.a:0 "继续探索！"
+
+ other_earth.3.name:0 "第二地球的残影"
+ other_earth.3.desc:0 "根据第二地球遗留的媒体信息，许多重要的事件都发生在一个被称作"美国"的群落，尤其是在其中被称作"纽约"和"华盛顿"的两个聚居点。尽管这些媒体信息被记录的时候第二地球的大陆结构发生了许多变化，我们还是用先进的算法跟踪地质运动历史并找到了"美国"的位置。\n不幸的是，在"美国"中有15个被称作"华盛顿"的聚居点，这会极大增加调查所需的时间。"
+ other_earth.3.a:0 "那就调查每一个聚居点！"
+
+ other_earth.4.name:0 "纽约"
+ other_earth.4.desc:0 "对15座华盛顿的调查毫无结果，但是对纽约的扫描却有意外收获。调查结果显示纽约曾发生过一场大战(至少对土着来说)，奇怪的能量脉冲满溢在这个区域，并且它们看起来是从战场的废墟中散发出来的。\n我们的调查队将立刻着手调查。"
+ other_earth.4.a:0 "或许我们能发现这场异变的原因"
+
+ other_earth.5.name:0 "时间宝石"
+ other_earth.5.desc:0 "在一个死者的身上我们发现了奇特的项链，它是这些奇特能量的源头。这个项链似乎破碎了，一颗绿色的宝石显露了出来。我们小心地将它取出，看来它就是传说中的§Y时间宝石§!，六种宇宙原动力之一，能够操控时间的流动。看起来时间宝石就是导致第二太阳系发生时间位移的原因，但是具体的细节我们还未曾知晓。"
+ other_earth.5.a:0 "时间宝石在手，我们的传奇伟业将永垂不朽！"

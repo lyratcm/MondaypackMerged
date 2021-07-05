@@ -1,0 +1,33 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# INFINITY CIRCUIT
+ ##################
+
+ infinity_circuit.11.name:0 "力量与空间的共鸣"
+ infinity_circuit.11.desc:0 "§M力量宝石§!与§B空间宝石§!的能量共振在一起形成回路。这提高了力量宝石的能力。\n\n(舰队现在可以使用§Y力量宝石毁灭能量§!针对行星的轨道轰炸,每个舰队必须手动进行更改.如果行星遭受100％的破坏，这种轰炸将摧毁它们。)"
+ infinity_circuit.11.a:0 "很好!"
+
+ infinity_circuit.21.name:0 "空间与时间的共鸣"
+ infinity_circuit.21.desc:0 "§B空间宝石§!与§G时间宝石§!的能量共振在一起形成回路。这提高了空间宝石的能力，使我们的跃迁距离大大提高。"
+ infinity_circuit.21.a:0 "很好!"
+
+ infinity_circuit.31.name:0 "现实与时间的共鸣"
+ infinity_circuit.31.desc:0 "§G时间宝石§!与§R现实宝石§!的能量共振在一起形成回路。这提高了时间宝石的能力，提高了我们的建造速度。"
+ infinity_circuit.31.a:0 "很好!"
+
+ infinity_circuit.41.name:0 "现实与灵魂的共鸣"
+ infinity_circuit.41.desc:0 "§R现实宝石§!与§H灵魂宝石§!的能量共振在一起形成回路。这提高了现实宝石的能力，使其可以创建我们所需的资源。"
+ infinity_circuit.41.a:0 "很好!"
+
+ infinity_circuit.51.name:0 "灵魂与心灵的共鸣"
+ infinity_circuit.51.desc:0 "§H灵魂宝石§!与§Y心灵宝石§!的能量共振在一起形成回路。这提高了灵魂宝石的能力，让我们的人民与他们的灵魂有更深的联系。"
+ infinity_circuit.51.a:0 "很好!"
+
+ infinity_circuit.61.name:0 "心灵与力量的共鸣"
+ infinity_circuit.61.desc:0 "§Y心灵宝石§!和§M力量宝石§!的能量共振在一起形成回路。这提高了心灵宝石的能力，改善了我们帝国中所有公民的士气。"
+ infinity_circuit.61.a:0 "很好!"

@@ -1,0 +1,62 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+ # Infinity Stone Relics
+ ##################
+
+ # Relics
+
+ infinity_stone_relic_activation_cooldown:0 "无限宝石冷却中"
+ requires_infinty_stone_no_cooldown:0 "$TRIGGER_FAIL$§R无法激活另一颗无限宝石，如果处于 §Y$infinity_stone_relic_activation_cooldown$§! 状态。§!"
+
+ r_power_stone:0 "力量宝石"
+ r_power_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，力量宝石同时蕴含着维持和毁灭宇宙的力量，它的持有者可以操纵无与伦比的强大能量。"
+ power_stone_activated:1 "\n舰队现在可以使用§Y力量宝石毁灭能量§!这种全新的轨道轰炸方式。"
+ requires_relic_power_stone:0 "$TRIGGER_FAIL$§R无法激活§Y力量宝石§!，因为它已经激活了。§!"
+
+ r_time_stone:0 "时间宝石"
+ r_time_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，时间宝石代表并构成了时间流，它的持有者可以操纵第四个维度，也就是时间。"
+ time_stone_activated:1 "\n§H解锁决策：§! §G$decision_planet_time_stone$§!，能够加速一颗星球上的时间流动，增加§Y人口增长速度，机械建造速度，建筑建设速度和地貌清理速度§!。"
+ requires_relic_time_stone:0 "$TRIGGER_FAIL$§R无法激活§Y时间宝石§!，因为它已经激活了。§!"
+
+ r_reality_stone:0 "现实宝石"
+ r_reality_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，现实宝石的使用者能够吸收以太粒子以创造不存在的现实，可以将反物质转化为正物质。"
+ reality_stone_activated:1 "§H解锁决策：§! §G$decision_planet_reality_stone$§!，能让我们立刻将一颗星球转化为§E盖亚世界§!，§E机械世界§!，§E蜂巢世界§!或者§E理想城§!。"
+ reality_stone_triumph_cooldown:0 "\n$relic_activation_cooldown$: ￡time￡ §Y360§!"
+ requires_relic_reality_stone:0 "$TRIGGER_FAIL$§R无法激活§Y现实宝石§!，因为它已经激活了。§!"
+
+ r_soul_stone:0 "灵魂宝石"
+ r_soul_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，灵魂宝石能够操纵灵魂，这种力量可以创造独立的人格，并且能够并且能够再造已死之人的灵魂副本。"
+ soul_stone_activated:1 "创造一个§Y总督§!，§Y科学家§!，§Y舰队司令§!或§Y陆军统帅§!，其灵魂是我们文明历史中久负盛名之伟人的复制品。"
+ soul_stone_triumph_cooldown:0 "\n$relic_activation_cooldown$: ￡time￡ §Y1800§!"
+ requires_relic_soul_stone:0 "$TRIGGER_FAIL$§R无法激活§Y灵魂宝石§!，因为它已经激活了。§!"
+
+ r_mind_stone:0 "心灵宝石"
+ r_mind_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，心灵宝石代表着构成所有心灵心智的精神元素，它的持有者能够完全控制别人的心智。"
+ mind_stone_activated:1 "§Y心灵宝石§!拥有如下效果\n幸福度：§G+1000%§!\n稳定度：§G+1000§!\n犯罪率：§G-1000%§!\n帝国规模：§G+100§!\n主流思潮吸引力：§G+1000%§!\n再就业时间：§G-80%§!\n领袖经验获取：§R-50%§!\n科研速度：§R-35%§!\n凝聚力增长速度：§R-35%§!"
+ relic_mind_stone_passive:1 "其他帝国对我们的态度：§G+100§!\n每月影响力：§G+2§!\n信任增长：§G+100%§!\n信任上限：§G+50§!"
+ requires_relic_mind_stone:0 "$TRIGGER_FAIL$§R无法激活§Y心灵宝石§!，因为它已经激活了。§!"
+
+ r_space_stone:0 "空间宝石"
+ r_space_stone_desc:0 "无限宝石由宇宙大爆炸之前的奇点精华淬炼而成，而大爆炸将让它们飞散在新生的银河系中。每一颗无限宝石都掌控着某个属性的强大力量，空间宝石的持有者能控制空间本身，主要用于开启通往另一个地点的通路也能够实现跨维度旅行。"
+ #space_stone_activated:1 ""
+ space_stone_triumph_cooldown:0 "\n$relic_activation_cooldown$: ￡time￡ §Y200§!"
+ requires_relic_space_stone:0 "$TRIGGER_FAIL$§R无法激活§Y空间宝石§!，因为它已经激活了。§!"
+
+ r_mjolnir:0 "雷神之锤"
+ r_mjolnir_desc:0 ""§M无论谁持有雷神锤，只要能被锤子认可，便可以持有雷神之力。§!""
+ mjolnir_activated:1 "开始寻找被雷神之锤认可的人。"
+
+ r_infinity_gauntlet:0 "§R无限手套§!"
+ r_infinity_gauntlet_desc:0 "一个由全银河系最强的合金制造的手套，能够让我们凭借一个响指就让整个银河系重获平衡。"
+ gauntlet_activated:1 "重置§Y无限宝石§!的冷却时间。"
+ requires_relic_no_cooldown_and_stones:0 "$TRIGGER_FAIL$§R当处于§Y$relic_activation_cooldown$§!时，无法激活另一个遗珍。§!"
+ requires_relic_six_stones:0 "$TRIGGER_FAIL$§R必须拥有全部6颗无限宝石。§!"
+ requires_relic_no_war:0 "$TRIGGER_FAIL$§R不能处于战争中。§!"
+ requires_has_infinity_stone_cooldown:0 "$TRIGGER_FAIL$§R没有§Y无限宝石§!处于冷却中时，无法激活§无限手套§!。§!"
+ requires_all_six_stones:0 "§R拥有全部6颗§Y无限宝石§!.§!"
+ requires_has_gauntlet_not_in_use:0 "$TRIGGER_FAIL$§R无限手套无法激活。§!"

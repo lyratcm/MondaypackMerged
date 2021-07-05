@@ -1,0 +1,21 @@
+﻿l_english:
+
+ Trait_GAPS_Feral_Tendencies:0 "Feral Tendencies"
+ Trait_GAPS_Feral_Tendencies_desc:0 "This species has a strong feral streak that leaves some unable to handle normal society."
+ Trait_GAPS_Feral_Tendencies_Effect:0 "Planet Feral Hunter Jobs Add: §G+0.20§!\n\n Feral Hunter jobs are species only soldier jobs that produce §G2§! £food£, §G+1§! defense army, §G-100%§! £housing£ usage.\n\nIf you have §Y$civic_citizen_service$§! they produce §G2§! £unity£. If you have §Y$tech_ground_defense_planning$§! they gain §G+1§! defense army."
+ 
+ Deposits_GAPS_Feral_Tendencies:0 "# Of Feral Tendencies Pops"
+ Deposits_GAPS_Feral_Tendencies_desc:0 "# Of Feral Tendencies Pops"
+ 
+ job_GAPS_Feral_Hunter:0 "Feral Hunter"
+ job_GAPS_Feral_Hunter_desc:0 "This pop is being GAPS_Feral_Hunter on."
+ job_GAPS_Feral_Hunter_plural:0 "Feral Hunter"
+ mod_job_GAPS_Feral_Hunter_add:0 "Feral Hunter Jobs Add"
+ mod_job_GAPS_Feral_Hunter_pop:0 "Feral Hunter Jobs per $VALUE$ £pop£"
+ 
+ job_GAPS_Feral_Hunter_gestalt:0 "Feral Hunter"
+ job_GAPS_Feral_Hunter_gestalt_desc:0 "This pop is being GAPS_Feral_Hunter on."
+ job_GAPS_Feral_Hunter_gestalt_plural:0 "Feral Hunter"
+ mod_job_GAPS_Feral_Hunter_gestalt_add:0 "Feral Hunter Jobs Add"
+ mod_job_GAPS_Feral_Hunter_gestalt_pop:0 "Feral Hunter Jobs per $VALUE$ £pop£"
+ 

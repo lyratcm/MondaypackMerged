@@ -1,0 +1,83 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Mind Stone and Akillian events
+ ##################
+
+# Mind Stone events
+ mind_stone.5.name:0 "§Y心灵宝石§!新发现"
+ mind_stone.5.desc:0 "在研究§Y心灵宝石§!的过程中，我们的科学家有了一个发现。宝石里面似乎有某种人工智能。随着我们最近在机器人和人工智能方面的突破，我们的科学家想要尝试把里面的人工智能复制到一个机械装置中."
+ mind_stone.5.a:0 "有趣."
+ ig_unlocks_ultron_one_edict:1 "允许通过§Y构建奥创-01§!帝国法令"
+
+ mind_stone.6.name:0 "奥创升级"
+ mind_stone.6.notseen:0 "在研究§Y心灵宝石§!的过程中，我们的科学家有了一个发现。宝石里面似乎有某种人工智能。随着我们最近在机器人和人工智能方面的突破，我们的科学家想要尝试把里面的人工智能复制到一个机械装置中."
+ mind_stone.6.seen:0 "我们最近在机器人技术和人工智能方面的突破，现在允许我们使用§Y心灵宝石§!来创建改进的§Y奥创§!单位。"
+ mind_stone.6.a:0 "有趣."
+ ig_unlocks_ultron_five_edict:1 "允许通过§Y构建奥创-05§!帝国法令"
+
+ mind_stone.7.name:0 "奥创欧米茄"
+ mind_stone.7.notseen:0 "在研究§Y心灵宝石§!的过程中，我们的科学家有了一个发现。宝石里面似乎有某种人工智能。随着我们最近在机器人和人工智能方面的突破，我们的科学家想尝试把里面的人工智能转换成一个机械单元。\n\n如果我们试图转移宝石中的知识，我们未来可能无法创造的奥创单位。"
+ mind_stone.7.seen:0 "在我们最近在机器人技术和人工智能方面取得突破后，我们的科学家相信，我们现在可以创造出一种容器，用§Y心灵宝石§!来容纳人工智能.\n\n如果我们试图转移宝石中的知识，我们未来可能无法创造的奥创单位。"
+ mind_stone.7.a:0 "有趣."
+ ig_unlocks_ultron_omega_edict:1 "允许通过§Y构建奥创-欧米茄§!帝国法令"
+
+ mind_stone.10.name:0 "奥创-01"
+ mind_stone.10.desc:0 "复制先进的人工智能到§YMind Stone§!里面是成功的，但是智能受到我们技术的处理能力和存储空间的限制。不管怎样，我们可以让§YUltron-01§!以科学家或将军的身份工作。"
+ mind_stone.10.scientist:0 "将该单位变成§Y科学家§!"
+ mind_stone.10.general:0 "将该单位变成§Y将军§!"
+ mind_stone.10.governor:0 "将该单位变成§Y总督§!"
+ mind_stone.10.admiral:0 "将该单位变成§Y上将§!"
+
+ mind_stone.11.name:0 "奥创-05"
+ mind_stone.11.desc:0 "复制先进的人工智能到§YMind Stone§!里面是成功的，但是智能受到我们技术的处理能力和存储空间的限制。不管怎样，我们可以让§YUltron-05§!以科学家或将军的身份工作。"
+
+ mind_stone.12.name:0 "奥创-欧米茄"
+ mind_stone.12.desc:0 "先进的人工智能在§Y心灵宝石§!内的转移是成功的，结果远远好于预期。奥创单位似乎是一个更大的灵能网络的一部分，它可以进入银河系数十亿人的大脑，让它能够部分预测未来。我们可以让§Y奥创-欧米茄§!成为总督、科学家或上将。"
+
+ mind_stone.15.name:0 "奥创-欧米茄之死"
+ mind_stone.15.desc:0 "没有了§Y心灵宝石§!, §H奥创-欧米伽§!已经停止活动."
+ mind_stone.15.a:0 "一个巨大的耻辱"
+
+ # Akillian Events
+ akillian.0.name:0 "残破的战场"
+ akillian.0.desc:0 "进入§HAarch§!星系后，我们的科研船发现了一颗被战争摧毁的星球。看起来在§HAkillian§!这颗行星上没有活着的生物，然而我们的科学家§Y[Root.GetLeaderName]§!却非常渴望在这里一探究竟。"
+ akillian.0.a:0 "他们想探索就探索"
+
+ akillian_site:0 "Akillian挖掘地"
+ akillian_relic_world_site_desc:0 "这颗星球看起来是在一场智械与有机生物的战争中被毁灭的，根据数据分析这场战争破坏了星球的气候并使之进入冰川时代。"
+
+ akillian.1.name:0 "世界大战"
+ akillian.1.desc:0 "经过对行星表面遗留的远古数据库进行破解，我们发现§HAkillian§!上所有的电子设备都在几千年前被一场大火烧毁了，不过幸运的是在古书中还残留有关于那场远古世界大战的记录。\n经过了语言解析，我们发现为了结束与机器人的战争，这颗星球的居民引爆了一颗名为"§MMetaFux§!"的超级炸弹。这件武器产生了席卷整个星球的电脉冲暴，尽管摧毁了智械，它也扰动了星球的磁极并改变了星球的轨道倾角。结果就是星球进入了冰川时代，而星球上的生命因此灭绝。\n我们在北半球的森林中再次接收到了奇怪的能量读数，或许这是§MMetaFux§!残余的能量？"
+ akillian.1.a:0 "展开调查"
+
+ akillian.2.name:0 "最后的智械"
+ akillian.2.desc:0 "森林中并没有灭世兵器的残骸，但我们却发现了一个机器人。这个机器人仍然在运行并且非常渴望交流。"
+ akillian.2.a:0 "接收图像"
+
+ akillian.5.name:0 "幻视"
+ akillian.5.a.desc:0 "你们好，有机生物，\n\n我敢说你们肯定很好奇为何我会在这里，我一直在等待着你们来到这里给我一个答案。\n\n我被创造的目的就是建立人与智械的沟通桥梁，然而我还没开始行动的时候他们就互相毁灭了对方。从那以后我便一直在思考，而我一直有一个疑惑：\n\n我算是生命么？"
+ akillian.5.mach.desc:0 "你们好，智械同胞，\n\n我敢说你们肯定很好奇为何我会在这里，我一直在等待着你们来到这里给我一个答案。\n\n我被创造的目的就是建立人与智械的沟通桥梁，然而我还没开始行动的时候他们就互相毁灭了对方。从那以后我便一直在思考，而我一直有一个疑惑：\n\n我算是生命么？"
+ akillian.5.phil:0 "所有能认知世界的存在都是活着的。" #join
+ akillian.5.phob:0 "你或许觉得自己活着，但你永远不会成为真正的生命。" #suicide
+ akillian.5.spir:0 "你能够觉得自己活着这件事本身就是极大的亵渎" #suicide
+ akillian.5.mate:0 "如果你觉得自己活着，那你就是。" #join
+ akillian.5.egal:0 "无论智械还是有机体，都是一样平等的生命。" #join
+ akillian.5.auth:0 "你的生命毫无意义，成为我们的奴仆或者去死。" #suicide
+ akillian.5.mili:0 "*摧毁这个机器*" #gets fucking shot
+ akillian.5.paci:0 "那并不重要，重要的是你将如何赋予生命意义。" #join
+ akillian.5.mach:0 "生与死对于机器来说并没有意义。" #suicide
+ akillian.5.hive:0 "生与死并无意义，唯有主宰永垂不朽。" #suicide
+
+ akillian.6.name:0 "心灵宝石"
+ akillian.6.desc:0 "机器人点了点头并把手放在自己的额头上取下了一颗宝石。它将宝石交给我们，看起来这就是§Y心灵宝石§!，然后它就随我们上了船。"
+ akillian.6.a:0 "我们将解放§Y心灵宝石§!真正而力量。"
+ akillian_get_vision:1 "一个名为"§H幻视§!"的科学家加入了我们的领袖池。"
+
+ akillian.7.desc:0 "机器人点了点头并把手放在自己的额头上取下了一颗宝石。它将宝石交给我们，看起来这就是§Y心灵宝石§!，而后机器人的眼睛失去了光芒，它的双臂也无力地垂下。看来它通过短路自我了结了。"
+
+ akillian.8.desc:0 "伴随着船员手中枪械的猛烈射击，机器人如同风中摇曳的人偶一般被撕成碎片，在它残破的遗骸中我们找到了一件神器，§Y心灵宝石§!。"

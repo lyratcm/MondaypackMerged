@@ -1,0 +1,42 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+# Morag Events
+ ##################
+
+ # MORAG
+ morag.0.name:0 "奇怪的能量读数"
+ morag.0.desc:0 "§Y[Root.GetName]§!检测到了一个来自§H莫拉格§!的奇怪能量读数，这是一颗处于§HMR31V§!星系内的星球。远程扫描发现这颗星球被强大的能量摧毁了。§Y[Root.GetLeaderName]§!认为这件事情很值得调查。"
+ morag.0.a:0 "立刻派一艘船去。"
+
+ morag_site:0 "莫拉格挖掘场"
+ morag_relic_world_site_desc:0 "远程扫描发现这颗星球被强大的能量摧毁了。"
+
+ morag.1.name:0 "莫拉格挖掘场"
+ morag.1.desc:0 "看来我们的前期调查是正确的，莫拉格星的地表在一千年前被某种能量攻击毁灭了。现在这颗星球正在从废墟中复苏，它的表面到处是某种鼠类生物，而我们的调查队正在寻找信号源。"
+ morag.1.a:0 "继续调查"
+
+ morag.2.name:0 "莫拉格的毁灭"
+ morag.2.desc:0 "寻找信号源的过程比想象中的更加困难，因为这里到处都是难以涉足的废墟，不过最终我们的科学家们还是定位了它的位置。信号源所在区域残余能量读数极高，千年的岁月也没能是其完全消散。我们的科学家十分震惊，似乎仅仅是一次攻击就造成了几乎撕裂星球的破坏力。同时，星球的另一端检测到了类似的，但是较为弱小的能量信号，我们的队伍已经动身了。"
+ morag.2.a:0 "再加一把劲"
+
+ morag.3.name:0 "隐秘的神殿"
+ morag.3.desc:0 "在第二个信号的发射点，我们的队伍找到了一座神庙。这是这座星球上唯一保存完好的建筑，我们先前的轨道扫描曾经探测到这个地方。神庙的墙壁上镌刻着关于远古战争的记录，但是经过千年岁月的磨砺其中大部分内容已经难以辨析，我们的调查队正在全速扫描神庙的结构。"
+ morag.3.a:0 "发现兴趣点"
+
+ morag.4.name:0 "宇宙灵球"
+ morag.4.desc:0 "对神庙结构的扫描遇到了许多困难，这里满溢的能量强烈地干扰了我们的扫描仪。不过，我们最终还是找到了一些有价值的信息。一间处于神庙中心的房间中发现了一个展示台，上面安放着一个被某种力场保护的球体。我们无法找到力场的发射源，而且当前我们的装备也无法破坏力场，我们的调查队只能回到船上探讨对策。"
+ morag.4.a:0 "这肯定是个重要的球！"
+
+ morag.5.name:0 "力量宝石"
+ morag.5.desc:0 "使用特殊设备关闭力场后，我们得到了球体并将其送回飞船。过了一会，在§Y[Root.GetName]§!上，我们的调查队打开了球体并且发现了不得了的东西。是力量宝石，宇宙六大原石之一，上天赐予我们的礼物，调查队的科学家猜测就是这颗宝石毁灭了莫拉格。"
+ morag.5.a:0 "力量宝石在手，谁还能战胜我们？"
+
+ morag.82.name:0 "[From.GetName]被抹除了"
+ morag.82.desc:0 "属于§H[From.From.GetName]§!的舰队屠杀了§H[From.GetName]§人口!! 在无限宝石的帮助下，经历了一场大规模的、无情的轨道轰炸运动, §H[From.GetName]§!被巨大的力量粉碎，杀死了星球上所有的生命。"
+ morag.83.desc:0 "我们的部队报告说，他们已经结束了对§H[From.GetName]§!的轨道轰炸。. 在无限宝石的帮助下，经历了一场大规模的、无情的轨道轰炸运动, §H[From.GetName]§!被巨大的力量粉碎，杀死了星球上所有的生命。"
+ bombed_to_shattered_world:0 "§Y[From.GetName]现在是一个破碎的世界。§!"

@@ -1,0 +1,7 @@
+﻿l_default:
+ edict_architectonic_base:0 "Architectonic Mastery I"
+ edict_architectonic_base_desc:0 "We invest some power to improve our planetary architecture in a minor way. Nice, more space!"
+ edict_architectonic_med:0 "Architectonic Mastery II"
+ edict_architectonic_med_desc:0 "We invest power to improve our planetary architecture moderatly. We need even more space to build!"
+ edict_architectonic_max:0 "Architectonic Mastery III"
+ edict_architectonic_max_desc:0 "We invest tremendous amounts of power to improve our planetary architecture massively. WE NEED TONS OF MORE SPACE!"

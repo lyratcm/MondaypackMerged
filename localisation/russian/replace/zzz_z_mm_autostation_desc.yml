@@ -1,0 +1,2 @@
+﻿l_russian:
+ z_mm_autostation_desc:1000 "§BAutomatic Mining/Research Station§!:\n\nSet the basic conditions of mineral stockpile that allow the automatic construction of the space station, or switch off the automatic station function. A fully-automated construction ship will be created in any system inside your border to build orbital station there if your minerals stockpile is above lower limit condition."

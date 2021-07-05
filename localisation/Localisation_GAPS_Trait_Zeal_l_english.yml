@@ -1,0 +1,12 @@
+﻿l_english:
+
+ Trait_GAPS_Zeal:0 "Zeal"
+ Trait_GAPS_Zeal_desc:0 "The zeal of this species defense armies is infectious."
+ Trait_GAPS_Zeal_Effect:0 "Defense Armies Provide Planet Unity: §G+1%§!"
+ 
+ Planet_Modifier_GAPS_Trait_Zeal:0 "# Of Zeal Defense Armies"
+ Planet_Modifier_GAPS_Trait_Zeal_desc:0 "# Of Zeal Defense Armies"
+ 
+ #THSE AREN:T USED ANYMORE JUST HERE TO AVOID ERRORS WHILE SAVE GAMES UPDATE TO THE NEW CODE
+ Deposits_GAPS_Num_Zeal_Armies:0 "# Of Zeal Defense Armies"
+ Deposits_GAPS_Num_Zeal_Armies_desc:0 "# Of Zeal Defense Armies"

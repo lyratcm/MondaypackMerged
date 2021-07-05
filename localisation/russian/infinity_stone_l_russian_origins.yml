@@ -1,0 +1,33 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_russian:
+ ##################
+# Origins
+ ##################
+
+ origin_power_stone:0 "Камень Силы"
+ origin_power_stone_desc:0 "Ваша империя имеет §HКамень Силы§!. Это могущественная реликвия, которая повышает ваше производство £energy£ §YЭнергокредитов§! и эффективность вашей £military_ship£ §RФлотилии§! и £army_power£ §RАрмии§!."
+ origin_tooltip_power_stone_effects:0 "Начните игру с §HКамнем Силы§!"
+
+ origin_time_stone:0 "Камень Времени"
+ origin_time_stone_desc:0 "Ваша империя имеет §HКамень Времени§!. Это могущественная реликвия, которая повышает £physics£ £society£ £engineering£ §GСкорость Научных Исследований§! и позволяет вам увеличить течение времени на планете, повышая £pops£ §EСкорость Прироста Поселений§! и £planet£ §LПланетарную Скорость Строительства§!."
+ origin_tooltip_time_stone_effects:0 "Начните игру с §HКамнем Времени§!"
+
+ origin_reality_stone:0 "Камень Реальности"
+ origin_reality_stone_desc:0 "Ваша империя имеет §HКамень Реальности§!. Это могущественная реликвия, которая повышает ваше производство £minerals£ §PМинералов§! и позволяет вам терраформировать планеты сразу в идеальные миры"
+ origin_tooltip_reality_stone_effects:0 "Начните игру с §HКамнем Реальности§!"
+
+ origin_soul_stone:0 "Камень Души"
+ origin_soul_stone_desc:0 "Ваша империя имеет §HКамень Души§!. Это могущественная реликвия, которая повышает ваше производство £unity£ §TЕдинства§! и позволяет вам нанять лидера 10 уровня из мира душ."
+ origin_tooltip_soul_stone_effects:0 "Начните игру с §HКамнем Души§!"
+
+ origin_mind_stone:0 "Камень Разума"
+ origin_mind_stone_desc:0 "Ваша империя имеет §HКамень Разума§!. Это могущественная реликвия, которая повышает ваше производство £influence£ §MВлияния§!, добавляет вам дополнительных £opinion£ §HПослов§! и повышает ваш £diplo_weight£ §BДипломатическйи вес§!"
+ origin_tooltip_mind_stone_effects:0 "Начните игру с §HКамнем Разума§!"
+
+ origin_space_stone:0 "Камень Космоса"
+ origin_space_stone_desc:0 "Ваша империя имеет §HКамень Космоса§!. Это могущественная реликвия, которая повышает субсветовую скорость и уменьшает время перезарядки прыжковых двигателей для всех ваших кораблей"
+ origin_tooltip_space_stone_effects:0 "Начните игру с §HКамнем Космоса§!"

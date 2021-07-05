@@ -1,0 +1,130 @@
+﻿# I spent a lot of time on this mod out of my own free time, and nobody would like it if someone took their creation
+# and stole it, and tried to claim it as their's. If you want to learn to mod Stellaris, I'm not the best person to
+# ask, but I'm always open to help and if you'd like to make new features or add-ons to this mod, send me a message,
+# and we'll discuss together about either integrating them into this mod, or creating an add-on to this one.
+
+l_simp_chinese:
+ ##################
+ # War Events and Casus Belis
+ ##################
+
+ # Power Stone Cb and War goals
+ casus_belli_cb_power_stone:0 "拒绝给予§Y力量宝石§!"
+ war_goal_wg_power_stone:0 "夺取§Y力量宝石§!"
+ war_goal_wg_power_stone_desc:0 "敌人拥有§Y力量宝石§!，我们必须把它夺过来。"
+
+ # Power Stone Wars Events
+ infinity_stones_war.1.name:0 "夺取§Y力量宝石§!"
+ infinity_stones_war.1.desc:0 "[From.From.GetName]被击败了，伟大的§E力量宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.1.a:0 "现在它是我们的了。"
+ infinity_stones_war.2.name:0 "失去§Y力量宝石§!"
+ infinity_stones_war.2.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E力量宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.2.a:0 "我他么还能说啥？"
+
+ # Time Stone Cb and War goals
+ casus_belli_cb_time_stone:0 "拒绝给予§Y时间宝石§!"
+ war_goal_wg_time_stone:0 "夺取§Y时间宝石§!"
+ war_goal_wg_time_stone_desc:0 "敌人拥有§Y时间宝石§!，我们必须把它夺过来。"
+
+ # Time Stone Wars Events
+ infinity_stones_war.3.name:0 "拒绝给予§Y时间宝石§!"
+ infinity_stones_war.3.desc:0 "[From.From.GetName]被击败了，伟大的§E时间宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.3.a:0 "它现在是我们的了。"
+ infinity_stones_war.4.name:0 "失去§Y时间宝石§!"
+ infinity_stones_war.4.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E时间宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.4.a:0 "我他么还能说啥？"
+
+ # Reality Stone Cb and War goals
+ casus_belli_cb_reality_stone:0 ""拒绝给予§Y现实宝石§!"
+ war_goal_wg_reality_stone:0 "夺取§Y现实宝石§!"
+ war_goal_wg_reality_stone_desc:0 "敌人拥有§Y现实宝石§!，我们必须把它夺过来。"
+
+ # Reality Stone Wars Events
+ infinity_stones_war.5.name:0 "夺取§Y现实宝石§!"
+ infinity_stones_war.5.desc:0 "[From.From.GetName]被击败了，伟大的§E现实宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.5.a:0 "它现在是我们的了。"
+ infinity_stones_war.6.name:0 "失去§Y现实宝石§!"
+ infinity_stones_war.6.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E现实宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.6.a:0 "我他么还能说啥？"
+
+ # Soul Stone Cb and War goals
+ casus_belli_cb_soul_stone:0 "拒绝给予§Y灵魂宝石§!"
+ war_goal_wg_soul_stone:0 "夺取§Y灵魂宝石§!"
+ war_goal_wg_soul_stone_desc:0 "敌人拥有§Y灵魂宝石§!，我们必须把它夺过来。"
+
+ # Soul Stone Wars Events
+ infinity_stones_war.7.name:0 "夺取§Y灵魂宝石§!"
+ infinity_stones_war.7.desc:0 "[From.From.GetName]被击败了，伟大的§E灵魂宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.7.a:0 "它现在是我们的了。"
+ infinity_stones_war.8.name:0 "失去§Y灵魂宝石§!"
+ infinity_stones_war.8.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E灵魂宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.8.a:0 "我他么还能说啥？"
+
+ # Mind Stone Cb and War goals
+ casus_belli_cb_mind_stone:0 "拒绝给予§Y心灵宝石§!"
+ war_goal_wg_mind_stone:0 "夺取§Y心灵宝石§!"
+ war_goal_wg_mind_stone_desc:0 "敌人拥有§Y心灵宝石§!，我们必须把它夺过来。"
+
+ # Mind Stone Wars Events
+ infinity_stones_war.9.name:0 "夺取§Y心灵宝石§!"
+ infinity_stones_war.9.desc:0 "[From.From.GetName]被击败了，伟大的§E心灵宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.9.a:0 "它现在是我们的了。"
+ infinity_stones_war.10.name:0 "失去§Y心灵宝石§!"
+ infinity_stones_war.10.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E心灵宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.10.a:0 "我他么还能说啥？"
+
+ # Space Stone Cb and War goals
+ casus_belli_cb_space_stone:0 "拒绝给予§Y空间宝石§!"
+ war_goal_wg_space_stone:0 "夺取§Y空间宝石§!"
+ war_goal_wg_space_stone_desc:0 "敌人拥有§Y空间宝石§!，我们必须把它夺过来。"
+
+ # Space Stone Wars Events
+ infinity_stones_war.11.name:0 "夺取§Y空间宝石§!"
+ infinity_stones_war.11.desc:0 "[From.From.GetName]被击败了，伟大的§E空间宝石§!是我们的了，看来只有强者才有资格拥有它。"
+ infinity_stones_war.11.a:0 "它现在是我们的了。"
+ infinity_stones_war.12.name:0 "失去§Y空间宝石§!""
+ infinity_stones_war.12.desc:0 "随着无数疯狂的外星暴徒冲入宝石存放室，§E空间宝石§!毫无悬念地成为了[From.GetAdj]的囊中之物。"
+ infinity_stones_war.12.a:0 "我他么还能说啥？"
+
+ ###############################################################################################################################################################################
+
+ # Scatter Stones Wars Events
+ infinity_stones_war.50.name:0 "分散的§Y无限宝石§!"
+ infinity_stones_war.50.desc:0 "§Y[From.From.GetName]§!已经承认失败了,他们不配拥有它,我们从他们手里分散了§E无限宝石§!!"
+ infinity_stones_war.50.a:0 "希望它的下一任持有者会更好..."
+ infinity_stones_war.51.name:0 "我们失去了§Y无限宝石§!"
+ infinity_stones_war.51.desc:0 "除了在交接过程中有许多人歇斯底里地叫喊,然而投降并把§E无限宝石§!交给[From.GetAdj]的部队对于我们来说似乎是一件平淡无奇的事情."
+ infinity_stones_war.51.a:0 "我们会取回来的,很快.."
+
+ # Scatter Stones Cb and War goals
+ casus_belli_cb_scatter_stones:0 "拒绝给予§Y无限宝石§!"
+ war_goal_wg_scatter_stones:0 "分散他们的§Y无限宝石§!"
+ war_goal_wg_scatter_stones_desc:0 "他们拥有太多无限宝石,我们必须把六颗无限宝石分散开来。"
+ wg_stone_scatter:0 "§Y[From.GetName]§!的§H无限宝石§!将会随机分配给在银河中的其他帝国."
+
+#####################################################################################################################################################################################################
+
+ wg_stone_is_lost_desc:0 "§Y[From.GetName]§!不再拥有§Y[Root.GetName]§!所想要§H无限宝石§!, 因此，它不能在和平协议期间移交。"
+
+ # Stone Lost Wars Events
+ infinity_stones_war.25.name:0 "无限宝石丢失"
+ infinity_stones_war.25.desc:0 "§Y[From.From.GetName]§!已经承认失败了,但他们不再是§HInfinity Stone§!的持有者,我们这是在浪费时间!"
+ infinity_stones_war.25.a:0 "我们会从它的新主人那里拿走它！"
+ infinity_stones_war.26.name:0 "尴尬的和平会议"
+ infinity_stones_war.26.desc:0 "当在我们的和平会议上，他们发现我们不再拥有他们想要的§H无限宝石§!时，§Y[From.From.GetName]§!非常失望。"
+ infinity_stones_war.26.a:0 "浪费时间."
+
+
+#########################################################################################################################################################################################################
+  # Seize Infininty Stones Wars Events
+ infinity_stones_war.52.name:0 "夺取§Y无限宝石§!"
+ infinity_stones_war.52.desc:0 "§Y[From.From.GetName]§!已经承认失败了,他们不配拥有它,我们从他们手里掠夺了§E无限宝石§!!"
+ infinity_stones_war.52.a:0 "我们将恢复他们已经造成的危害。"
+ infinity_stones_war.53.name:0 "失去§Y无限宝石§!"
+ infinity_stones_war.53.desc:0 "除了在交接过程中有许多人歇斯底里, 投降并把§E无限宝石§!交给[From.GetAdj]的部队是一个平淡无奇的事情."
+ infinity_stones_war.53.a:0 "我们会取回来的,很快.."
+
+ # Scatter Stones Cb and War goals
+ casus_belli_cb_seize_all_infinity_stones:0 "拒绝给予§Y无限宝石§!"
+ war_goal_wg_seize_all_infinity_stones:0 "夺取所有§Y无限宝石§!"
+ war_goal_wg_seize_all_infinity_stones_desc:0 "敌人使用了§Y无限宝石§!在整个银河系中散布混乱。 现在是时候将它们从他们的手中夺走!"

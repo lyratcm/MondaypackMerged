@@ -1,0 +1,7 @@
+﻿l_default:
+ format.cooperative.1: "[This.Capital.System.GetName] <cooperative>"
+ format.private_corp.1: "[This.Ruler.GetSecondName] <oligarchic_corp>"
+ format.crime_network.1: "[This.Capital.GetName] <crime_network>"
+ format.crime_network.2: "<crime_network_pre> of [This.Capital.GetName]"
+ format.holy_society.1: "[This.GetSpeciesName] <holy_society>"
+ 
