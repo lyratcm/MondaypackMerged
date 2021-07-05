@@ -1,0 +1,4 @@
+animation = {
+	name = "lunari_moon_idle"
+	file = "lunari_moon_idle.anim"
+}

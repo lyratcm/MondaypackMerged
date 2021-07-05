@@ -1,0 +1,17 @@
+############################
+## AVARI SHIELD ANIMATION ##
+############################
+
+animation = {
+	name = "elven_great_firewall_idle_animation"
+	file = "elven_great_firewall_idle.anim"
+}
+
+##########################
+## AVARI RING ANIMATION ##
+##########################
+
+animation = {
+	name = "elven_01_avari_ring_idle_animation"
+	file = "elven_01_avari_ring_idle.anim"
+}
