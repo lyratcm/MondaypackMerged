@@ -1,0 +1,11 @@
+room_selector = {
+    default = "command2_room"
+    game_setup = {
+        "ego_nice_room" = {
+            always = no
+        }
+        "ego_angry_room" = {
+            always = no
+        }
+    }
+}

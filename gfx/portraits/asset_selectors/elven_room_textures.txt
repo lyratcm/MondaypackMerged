@@ -1,0 +1,14 @@
+room_selector = {
+
+	## Added to stop log whining! 
+	default = "gfx/portraits/city_sets/technosphere_room.dds"
+
+	game_setup = {	
+		"drow_tulshar_room" = { always = yes }
+		"lunari_silvermoon_room" = { always = yes }
+	}
+
+	ruler = {
+		"drow_tulshar_room" = { exists = owner owner = { AND = { is_species_class = DROW is_country_type = fallen_empire } } }
+	}
+}
