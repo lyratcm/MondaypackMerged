@@ -1,0 +1,333 @@
+# This is a template which multiple species can use. 
+
+sidh_male_clothes_01 = {
+	default = "gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+	}
+	
+	###########
+	# SPECIES #
+	###########
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+			
+			# EVERYONE #
+			random = {
+				list = {
+						# Sidh clothing
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+						
+						# Savage Gear
+						#"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_necklace.dds"
+						#"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_armor_1.dds"
+				}
+			}
+	}
+	
+	#########
+	## POP ##
+	#########
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+		
+		##########################################################
+		#NOTE: Used to line up clothing in the ruler design window!
+		##########################################################
+		random = {
+			trigger = { always = no }
+			list = {
+				
+				# Sidh clothing
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+				
+				# Savage Gear
+				#"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_necklace.dds"
+				#"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_armor_1.dds"
+				
+				#########
+				# Slave #
+				#########
+				
+				# Domestic Slaves
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_butler.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_purple.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_red.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_blue.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_green.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_collar1_gold.dds"
+				
+				# Battle Thralls
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_bat_armor_1.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_bat_armor_2.dds"
+				
+				# Laborers
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_lab_rags_1.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_lab_collar_1.dds"
+				
+				# Food
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_cat_chains_1.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_slave_cat_rags_1.dds"
+				
+				#############
+				# HIVE MIND #
+				#############
+				
+				#"gfx/models/portraits/shared_clothing/male/elven_male_clothing_hive.dds"
+				
+				#############
+				# SIDH COLD #
+				#############
+				
+				#Sexy Scarf 1
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_black.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_blue.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_cyan.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_green.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_purple.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_red.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexywinter_scarf1_white.dds"
+				
+				# Universal Nude Suit
+				"gfx/models/portraits/shared_clothing/elven_nude_suit.dds"
+			}
+		}
+		
+		####################
+		# END clothing LIST #
+		####################
+									
+		## PRESAPIENT ##
+		random = {
+			trigger = { is_pop_category = pre_sapients }
+			list = {
+						"gfx/models/portraits/shared_clothing/elven_nude_suit.dds"	
+			}
+		}
+		
+		###########
+		# SLAVERY #
+		###########
+		
+		## DOMESETIC ##
+		random = {
+			trigger = { has_job = slave_toiler }
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_purple.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_red.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_blue.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_bowtie_green.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_collar1_gold.dds"
+			}
+		}
+		
+		## FOOD ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = organic_battery
+								has_job = livestock
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_cat_chains_1.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_cat_rags_1.dds"
+			}
+		}
+
+		## GENERIC SLAVE ##
+		random = {
+			trigger = {
+							OR = {
+								is_pop_category = slave
+								is_enslaved = yes
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_lab_rags_1.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_lab_collar_1.dds"
+			}
+		}
+		
+		#############
+		## WORKERS ##
+		#############
+		
+		## MAIDS ##
+		random = {
+			trigger = { has_job = servant }
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_dom_butler.dds"
+			}
+		}
+		
+		## COMMON WORKERS ##
+		random = {
+			trigger = { is_pop_category = worker }
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		## DANCER/ENTERTAINERS ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = fe_hedonist
+								has_job = entertainer
+								has_job = culture_worker
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		## POLICE/ENFORCERES ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = enforcer
+								has_job = soldier
+								has_job = slave_overseer
+								has_job = fe_protector
+								has_job = fe_xeno_keeper
+								has_job = primitive_warrior
+								has_job = primitive_warrior_2
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		## SPECIALISTS ##
+		random = {
+			trigger = {
+							OR = {
+								has_job = fe_xeno_ward
+								is_pop_category = specialist
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		## NOBILITY ##
+		random = {
+			trigger = {
+							OR = {
+								is_pop_category = ruler
+								is_pop_category = bio_trophy
+							}
+			}
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		## CRIMINALS ##
+		random = {
+			trigger = { is_pop_category = criminal }
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_bat_armor_1.dds"
+						"gfx/models/portraits/shared_clothing/male/elven_male_slave_bat_armor_2.dds"
+			}
+		}
+		
+		## PURGE ##
+		random = {
+			trigger = { is_pop_category = purge }
+			list = {
+						"gfx/models/portraits/shared_clothing/male/elven_male_clothing_purge_brown.dds"
+			}
+		}
+		
+	}
+	
+	#############
+	## LEADERS ##
+	#############
+	leader = { #scientists, generals, admirals, governor
+		
+		# Sidh are "without apparel"
+		random = {
+			list = {
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+		
+		
+		#Savages get their own clothing
+		#random = {
+		#	trigger = { owner = { has_trait = trait_elven_savage } }
+		#	list = {
+		#			"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_necklace.dds"
+		#			"gfx/models/portraits/shared_clothing/male/elven_male_clothing_savage_armor_1.dds"
+		#	}
+		#}
+		
+	}
+	
+	############
+	## RULERS ##
+	############
+	ruler = { #for rulers
+		default = "gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+		
+		# Sidh are "without apparel"
+		random = {
+			list = {
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_snake_silver.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_torc.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_gold.dds"
+				"gfx/models/portraits/shared_clothing/male/elven_male_clothing_sexy_choker_silver.dds"
+			}
+		}
+		
+	}
+}
+
+sidh_male_hair_1 = { 
+	default = "gfx/models/portraits/shared_hair/male/elven_male_hair_style_02_black.dds"
+}
+
+
