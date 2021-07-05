@@ -1,0 +1,103 @@
+@frame_size = 30
+@titan_scale = 20.0
+
+####################
+### ELVEN TITANS ###
+####################
+
+#########
+# FRAME #
+#########
+
+entity = {
+	name = "elven_01_titan_entity"
+	pdxmesh = "elven_01_capital_frame_mesh"
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" 
+	
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_01" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_02" } }
+		start_event = { trigger_once = yes sound = { soundeffect = "amb_titan_ship_hum_03" } }
+	
+	}
+	state = { name = "moving" animation = "idle"
+		event =  { trigger_once = yes sound = { soundeffect = "moving_out_titan" } }
+	}
+	state = { name = "death" animation = "death" looping = no 
+		event = { time = 15.75 node = "ship_main" particle = "elven_01_titan_explosion_particle" keep_particle = yes trigger_once = yes sound = { soundeffect = amb_titan_ship_death } }
+	}
+	
+	game_data = {
+		size = @frame_size
+	}
+}
+
+#######
+# BOW #
+#######
+
+entity = {
+	name = "elven_01_titan_bow_entity"
+	pdxmesh = "elven_01_supercapital2_weapons_mesh"
+}
+
+#######
+# MID #
+#######
+
+entity = {
+	name = "elven_01_titan_mid_entity"
+	pdxmesh = "elven_01_supercapital2_mesh"
+	
+	default_state = "idle"
+	state = { name = idle	state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+	}
+	state = { name = moving	state_time = 5
+		event = { time = 0 node = "light_locator_01" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_02" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "light_locator_03" particle = "elven_ship_light_viola_effect" keep_particle = yes trigger_once = yes }
+		event = { time = 0 node = "engine_large_01" particle = "elven_01_5_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_02" particle = "elven_01_5_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_large_03" particle = "elven_01_5_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_01" particle = "elven_01_3_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_medium_02" particle = "elven_01_3_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_01" particle = "elven_01_2_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+		event = { time = 0 node = "engine_small_02" particle = "elven_01_2_0_ship_exhaust_moving_particle" trigger_once = yes keep_particle = yes }
+	}
+	state = { name = "death"
+		event = { time = 1.00 node = "explosion_locator1" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1.00 node = "explosion_locator1" particle = "elven_01_large_ship_explosion_particle" }
+		event = { time = 1.70 node = "explosion_locator2" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 1.70 node = "explosion_locator2" particle = "elven_01_large_ship_explosion_particle" }
+		event = { time = 3.70 node = "explosion_locator3" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 3.70 node = "explosion_locator3" particle = "ship_explosion_particle" }
+		event = { time = 6.00 node = "explosion_locator4" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 6.00 node = "explosion_locator4" particle = "ship_explosion_particle" }
+		event = { time = 6.23 node = "explosion_locator6" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 6.23 node = "explosion_locator6" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 7.30 node = "explosion_locator5" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 7.30 node = "explosion_locator5" particle = "ship_explosion_particle" }
+		event = { time = 7.60 node = "explosion_locator7" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 7.60 node = "explosion_locator7" particle = "ship_burn_particle" keep_particle = yes trigger_once = yes }
+		event = { time = 11.2 node = "explosion_locator8" particle = "elven_01_large_ship_explosion_particle" }
+		event = { time = 12.1 node = "explosion_locator8" particle = "ship_explosion_air_vent_particle" }
+		event = { time = 12.1 node = "explosion_locator8" particle = "ship_burn_particle" }
+	}
+
+	game_data = {
+		size = @titan_scale
+	}
+}
+
+#########
+# STERN #
+#########
+
+entity = {
+	name = "elven_01_titan_stern_entity"
+	pdxmesh = "elven_01_supercapital2_weapons_mesh"
+}

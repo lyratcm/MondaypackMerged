@@ -1,0 +1,159 @@
+#################
+## ELVEN NEXUS ##
+#################
+
+@nexus_scale = 2.1
+
+#######################
+#### STATION PARTS ####
+#######################
+
+#############
+## PHASE 1 ##
+#############
+
+## CORE ##
+entity = {
+	name = "elven_01_nexus_phase1_core_entity"
+	pdxmesh = "elven_01_nexus_phase1_core_mesh"
+	scale = @nexus_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_core_amb" } }
+		event = { time = 0 node = "root" particle = "think_tank_core_effect" keep_particle = yes trigger_once = yes }
+	}
+	
+}
+
+## OUTER RING ##
+entity = {
+	name = "elven_01_nexus_phase1_outer_ring_entity"
+	pdxmesh = "elven_01_nexus_phase1_outerring_mesh"
+	scale = @nexus_scale
+}
+
+## MIDDLE RING ##
+entity = {
+	name = "elven_01_nexus_phase1_middle_ring_entity"
+	pdxmesh = "elven_01_nexus_phase1_middlering_mesh"
+	scale = @nexus_scale
+}
+
+## INNER RING ##
+entity = {
+	name = "elven_01_nexus_phase1_inner_ring_entity"
+	pdxmesh = "elven_01_nexus_phase1_innerring_mesh"
+	scale = @nexus_scale
+}
+
+#############
+## PHASE 2 ##
+#############
+
+entity = {
+	name = "elven_01_nexus_phase2_entity"
+	pdxmesh = "elven_01_nexus_phase2_mesh"
+	scale = @nexus_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_structure_amb_01" stop_on_state_change = yes } }
+	}
+}
+
+#############
+## PHASE 3 ##
+#############
+
+entity = {
+	name = "elven_01_nexus_phase3_habitats_entity"
+	pdxmesh = "elven_01_nexus_phase3_habitats_mesh"
+	scale = @nexus_scale
+	
+	default_state = "idle"
+	state = { name = "idle"
+		start_event = { trigger_once = yes sound = { soundeffect = "think_tank_structure_amb_01" stop_on_state_change = yes } }
+	}
+}
+
+entity = {
+	name = "elven_01_nexus_phase3_ring_entity"
+	pdxmesh = "elven_01_nexus_phase3_ring_mesh"
+	scale = @nexus_scale
+}
+
+######################
+## PRIMARY ENTITIES ##
+######################
+
+## PHASE 1 ##
+
+entity = {
+	name = "elven_01_thinktank_phase_01_entity"
+	pdxmesh = "elven_01_nexus_frame_mesh"
+	
+	scale = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = 0.1
+	}
+	
+	state = { name = "construction" animation = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+
+	attach = { "core_rotate" = "elven_01_nexus_phase1_core_entity" }
+	attach = { "outer_ring" = "elven_01_nexus_phase1_outer_ring_entity" }
+	attach = { "middle_ring" = "elven_01_nexus_phase1_middle_ring_entity" }
+	attach = { "inner_ring" = "elven_01_nexus_phase1_inner_ring_entity" }
+}
+
+## PHASE 2 ##
+
+entity = {
+	name = "elven_01_thinktank_phase_02_entity"
+	pdxmesh = "elven_01_nexus_frame_mesh"
+	
+	scale = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = 0.1
+	}
+	
+	state = { name = "construction" animation = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	 }
+
+	attach = { "core_rotate" = "elven_01_nexus_phase1_core_entity" }
+	attach = { "outer_ring" = "elven_01_nexus_phase1_outer_ring_entity" }
+	attach = { "middle_ring" = "elven_01_nexus_phase1_middle_ring_entity" }
+	attach = { "inner_ring" = "elven_01_nexus_phase1_inner_ring_entity" }
+	attach = { "core_rotate" = "elven_01_nexus_phase2_entity" }
+}
+
+## PHASE 3 ##  
+
+entity = {
+	name = "elven_01_thinktank_phase_03_entity"
+	pdxmesh = "elven_01_nexus_frame_mesh"
+	
+	scale = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" animation = "idle" animation_blend_time = 5 animation_speed = 0.1
+	}
+	
+	state = { name = "construction" animation = "construction"
+		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
+	}
+	
+	attach = { "core_rotate" = "elven_01_nexus_phase1_core_entity" }
+	attach = { "outer_ring" = "elven_01_nexus_phase1_outer_ring_entity" }
+	attach = { "middle_ring" = "elven_01_nexus_phase1_middle_ring_entity" }
+	attach = { "inner_ring" = "elven_01_nexus_phase1_inner_ring_entity" }
+	attach = { "core_rotate" = "elven_01_nexus_phase2_entity" }
+	attach = { "core_rotate" = "elven_01_nexus_phase3_ring_entity" }
+	attach = { "central_rotate" = "elven_01_nexus_phase3_habitats_entity" }
+}
+

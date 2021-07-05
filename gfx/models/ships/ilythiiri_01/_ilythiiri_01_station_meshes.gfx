@@ -1,0 +1,20 @@
+objectTypes = {
+
+
+	############################
+	## ILYTHIIRI CITY PLANETS ##
+	############################
+
+	## CITY PLANETS ##
+	pdxmesh = {
+		name = "ilythiiri_01_city_planet_mesh"
+
+		file = "gfx/models/ships/ilythiiri_01/ilythiiri_01_city_planet.mesh"
+		animation = { id = "idle"	type = "planet_clouded_idle" }
+		
+		scale = 1 # increases size of planet in the center
+		cull_distance = 99999999.0f
+	}
+
+
+}
