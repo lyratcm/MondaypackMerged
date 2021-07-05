@@ -1,0 +1,18 @@
+###################
+## HABITAT ANIMS ##
+###################
+
+
+#########################
+## VALSHAQUELLAR ANIMS ##
+#########################
+
+animation = {
+	name = "drow_01_homeworld_frame_construction_animation"
+	file = "drow_01_homeworld_frame_construction.anim"
+}
+
+animation = {
+	name = "drow_01_homeworld_frame_idle_animation"
+	file = "drow_01_homeworld_frame_idle.anim"
+}
