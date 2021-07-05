@@ -1,0 +1,9 @@
+objectTypes = {
+
+	pdxparticle = {
+		name = "lunari_blue_cloud_effect"
+		type = "lunari_blue_cloud_effect"
+		scale = 3.5
+	}
+
+}

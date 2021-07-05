@@ -1,0 +1,1389 @@
+#_[star_exp_green_b]
+
+particle={#_1
+	name="z_fw_fx_star_exp_green_b_1"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_1.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.13
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.130
+		emission=1.000
+		size=10.000,grow
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.115 0.609 0.485 0.950 0.960 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="grow"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.153 0.594 0.488 0.969 1.000 1.000 
+		}
+		op="MUL"
+		time="life"
+	}
+}
+particle={#_2
+	name="z_fw_fx_star_exp_green_b_2"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_2.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+}
+particle={#_3
+	name="z_fw_fx_star_exp_green_b_3"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_3.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_4
+	name="z_fw_fx_star_exp_green_b_4"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_4.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_5
+	name="z_fw_fx_star_exp_green_b_5"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_5.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_6
+	name="z_fw_fx_star_exp_green_b_6"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_6.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_7
+	name="z_fw_fx_star_exp_green_b_7"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_7.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_8
+	name="z_fw_fx_star_exp_green_b_8"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_8.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_9
+	name="z_fw_fx_star_exp_green_b_9"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_9.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_10
+	name="z_fw_fx_star_exp_green_b_10"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_10.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_11
+	name="z_fw_fx_star_exp_green_b_11"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_11.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_12
+	name="z_fw_fx_star_exp_green_b_12"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_12.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_13
+	name="z_fw_fx_star_exp_green_b_13"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_13.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_14
+	name="z_fw_fx_star_exp_green_b_14"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_14.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_15
+	name="z_fw_fx_star_exp_green_b_15"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_15.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_16
+	name="z_fw_fx_star_exp_green_b_16"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_16.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_17
+	name="z_fw_fx_star_exp_green_b_17"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_17.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_18
+	name="z_fw_fx_star_exp_green_b_18"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_18.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_19
+	name="z_fw_fx_star_exp_green_b_19"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_19.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+particle={#_20
+	name="z_fw_fx_star_exp_green_b_20"
+	subsystem={
+		name="exp"
+		max_amount=1
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/stars_and_planets/z_fw_fx_star_explosion_b_20.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x=175.000
+			y=255.000
+			z=80.000
+			alpha=173
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		duration=0.05
+		velocity_pitch={ 0.000 0.000 }
+		velocity_yaw={ 0.000 0.000 }
+		velocity=0.000
+		life=0.060
+		emission=1.000
+		size=10.000
+		particle_yaw=0.000
+		particle_pitch=0.000
+		rotation={ 0.000 0.000 }
+		rotation_speed=0.000
+	}
+	animation={
+		name="alpha_exp"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=1.000
+		curve={
+			0.000 0.000 0.090 0.900 0.500 0.950 0.910 0.900 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}
+
+

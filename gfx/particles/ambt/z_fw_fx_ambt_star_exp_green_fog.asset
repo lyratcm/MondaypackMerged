@@ -1,0 +1,74 @@
+particle={
+	name="z_fw_fx_ambt_star_exp_green_fog"
+	subsystem={
+		name="fog_0"
+		max_amount=150
+		slave_particles=0
+		sort="depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_fog.dds"
+			x=3
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 240.000 15.000 }
+			y=180.000
+			z={ 120.000 10.000 }
+			alpha={ 230.000,alpha_fog 25.000 }
+		}
+		position={
+		}
+		duration=8.000
+		life={ 1.500 0.300 }
+		emission=6.000
+		size={ 110.000,grow_fog 10.000 }
+		rotation={ 0.000 360.000 }
+	}
+	animation={
+		name="grow_fog"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=-0.100
+		maxValue=0.900
+		curve={
+			0.000 0.000 1.000 1.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_fog"
+		start=0.000
+		duration=1.000
+		repeat=no
+		minValue=0.000
+		maxValue=0.970
+		curve={
+			0.000 0.000 0.235 0.102 0.424 0.758 0.576 1.000 0.691 0.914 0.832 0.383 0.926 0.109 1.000 0.000 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="planar"
+		name="force0"
+		position={
+			0.000 0.000 0.000 
+		}
+		direction={
+			0.000 1.000 0.000 
+		}
+		local_force=yes
+		yaw=0.000
+		division=16
+		amount=5.000
+	}
+}

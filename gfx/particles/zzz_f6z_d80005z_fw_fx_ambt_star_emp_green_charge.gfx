@@ -1,0 +1,7 @@
+objectTypes = {
+    pdxparticle = {
+        name = "z_fw_fx_ambt_star_emp_green_charge"
+        type = "z_fw_fx_ambt_star_emp_green_charge"
+        scale = 1
+    }
+}

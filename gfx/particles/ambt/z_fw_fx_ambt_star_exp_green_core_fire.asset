@@ -1,0 +1,166 @@
+#_[z_fw_fx_ambt_star_exp_green_core_fire_0]
+particle={
+	name="z_fw_fx_ambt_star_exp_green_core_fire_0"
+	subsystem={
+		name="fire_0"
+		max_amount=77
+		slave_particles=0
+		sort="depth"
+		emitter_type="box"
+		box_emitter_x={ 0 3 }
+		box_emitter_y={ 0 1 }
+		box_emitter_z={ 0 3 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_core_fire.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			x={ 180 20 }
+			y=255
+			z={ 50 10 }
+			alpha={ 125,alpha_core 55 }
+		}
+		position={
+		}
+		duration=1
+		velocity_yaw={ 0 360 }
+		velocity={ 60 35 }
+		life={ 3 0.31 }
+		emission=135
+		size={ 26,grow_core 13 }
+		rotation={ 0 360 }
+		rotation_speed=-5
+		mass=1.1
+		force=friction_0
+	}
+	animation={
+		name="grow_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1.5
+		curve={
+			0 0 0.05 0.29688 0.13824 0.60156 0.33235 0.85156 0.55 0.95313 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=-0.1
+		maxValue=1
+		curve={
+			0 0.16406 0.07941 0.5625 0.18824 0.84375 0.34118 0.96094 0.57353 0.97656 0.73529 0.85156 0.87941 0.48438 0.98235 0.10938 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="friction"
+		name="friction_0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.8
+	}
+}
+#_[z_fw_fx_ambt_star_exp_green_core_fire_1]	+0.4
+particle={
+	name="z_fw_fx_ambt_star_exp_green_core_fire_1"
+	subsystem={
+		name="fire_1"
+		max_amount=60
+		slave_particles=0
+		sort="depth"
+		emitter_type="box"
+		box_emitter_x={ 0 3 }
+		box_emitter_y={ 0 1 }
+		box_emitter_z={ 0 3 }
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=yes
+		hide=no
+		texture={
+			file="gfx/particles/ambt/z_fw_fx_ambt_star_exp_core_fire.dds"
+			x=1
+			y=1
+			shader="ParticleAlphaBlend"
+		}
+		color={
+			x={ 240 15 }
+			y=175
+			z={ 120 5 }
+			alpha={ 205,alpha_core 50 }
+		}
+		position={
+		}
+		duration=0.5
+		velocity_yaw={ 0 360 }
+		velocity={ 25 13 }
+		life={ 5.3 0.5 }
+		emission=200
+		size={ 49,grow_core 20 }
+		rotation={ 0 360 }
+		rotation_speed=-5
+		mass=2.5
+		force=friction_0
+	}
+	animation={
+		name="grow_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=0
+		maxValue=1.5
+		curve={
+			0 0 0.05 0.29688 0.13824 0.60156 0.33235 0.85156 0.55 0.95313 1 1 
+		}
+		op="MUL"
+		time="life"
+	}
+	animation={
+		name="alpha_core"
+		start=0
+		duration=1
+		repeat=no
+		minValue=-0.1
+		maxValue=1
+		curve={
+			0 0.16406 0.07941 0.5625 0.18824 0.84375 0.34118 0.96094 0.57353 0.97656 0.73529 0.85156 0.87941 0.48438 0.98235 0.10938 1 0 
+		}
+		op="MUL"
+		time="life"
+	}
+	force={
+		type="friction"
+		name="friction_0"
+		position={
+			0 0 0 
+		}
+		direction={
+			0 1 0 
+		}
+		local_force=yes
+		yaw=0
+		division=16
+		amount=0.8
+	}
+}
