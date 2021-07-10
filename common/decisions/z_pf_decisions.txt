@@ -1,7 +1,7 @@
 ###_z performance ---decisions	##########################################################################
-#_cntr_flg	[z_pf_flg_cntr_hide_dec]Òş²ØÉèÖÃdec
+#_cntr_flg	[z_pf_flg_cntr_hide_dec]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½dec
 
-#_ÉèÖÃ-»Ö¸´Ä¬ÈÏ
+#_ï¿½ï¿½ï¿½ï¿½-ï¿½Ö¸ï¿½Ä¬ï¿½ï¿½
 #_global_tgt	[z_pf_tgt_plnt_dec]
 z_pf_dec = {
 	sound = event_administrative_work
@@ -32,148 +32,7 @@ z_pf_dec = {
 		weight = 0
 	}
 }
-
-
-
-
-#_¿ìËÙÖ´ĞĞÇ¨³ö
-z_pf_dec_express = {
-	sound = event_administrative_work
-	
-	potential = {
-		is_colony = yes
-		owner = { is_ai = no }
-	}
-	allow = {
-		custom_tooltip = {
-			hidden_trigger = {
-				exists = owner
-				owner = { is_ai = no }
-				OR = {
-					owner = { has_country_flag = z_pr_flg_cntr_1 }	#_[²úÒµ¸ïÃü]
-					owner = {
-						NOT = { has_country_flag = z_pr_flg_cntr_1 }	#_[Ô­°æÄ£Ê½]
-						NOR = {#_×Ô¶¯Ç¨ÒÆÖ´ĞĞÖĞ
-							has_country_flag = z_pf_flg_cntr_heup_on
-							has_country_flag = z_pf_flg_cntr_heup_express_on
-						}
-					}
-				}
-			}
-            fail_text = z_pf_tips_heup_on
-        }
-		custom_tooltip = {
-			hidden_trigger = {
-				exists = owner
-				owner = { is_ai = no }
-				OR = {
-					owner = { NOT = { has_country_flag = z_pr_flg_cntr_1 } }	#_[Ô­°æÄ£Ê½]
-					AND = {
-						owner = {
-							has_country_flag = z_pr_flg_cntr_1	#_[²úÒµ¸ïÃü]
-							has_resource = { type = energy amount > 50 }
-							NOT = { has_country_flag = z_pr_flg_cntr_debug_cd }	#_[ÈËÁ¦debug_Î´ÔÚÖ´ĞĞ]
-						}
-						z_pf_trgr_plnt_manpower_migration = yes
-					}
-				}
-			}
-            fail_text = z_pf_tips_pr_migration
-        }
-	}
-	
-	effect = {
-		custom_tooltip = z_pf_tips_dec_express
-		hidden_effect = {
-			if = {#_[²úÒµ¸ïÃü]
-				limit = { exists = owner	owner = { has_country_flag = z_pr_flg_cntr_1 } }	#_
-				z_pr_eft_plnt_migration_express = yes
-			}
-			else = {#_[²úÒµ¸ïÃü]non
-				owner = { set_timed_country_flag = { flag = z_pf_flg_cntr_heup_express_on days = 1 } }
-				##_Éè¶¨×ÔÉíÎªÊä³öplnt
-				clear_global_event_target = z_pf_tgt_plnt_migration
-				save_global_event_target_as = z_pf_tgt_plnt_migration
-				planet_event = { id = z_pf_heup.2 }
-			}
-		}
-	}
-	
-	ai_weight = {
-		weight = 0
-	}
-}
-#_¿ìËÙÖ´ĞĞ-Ç¨Èë5
-z_pf_dec_express_in_5 = {
-	sound = event_administrative_work
-	
-	potential = {
-		is_colony = yes
-		owner = { is_ai = no }
-	}
-	allow = {
-		custom_tooltip = {
-			hidden_trigger = {
-				exists = owner
-				owner = { is_ai = no }
-				OR = {
-					owner = { has_country_flag = z_pr_flg_cntr_1 }	#_[²úÒµ¸ïÃü]
-					owner = {
-						NOT = { has_country_flag = z_pr_flg_cntr_1 }	#_[Ô­°æÄ£Ê½]
-						NOT = { has_country_flag = z_pf_flg_cntr_heup_on }	#_×Ô¶¯Ç¨ÒÆÖ´ĞĞÖĞ
-					}
-				}
-			}
-            fail_text = z_pf_tips_heup_on
-        }
-		custom_tooltip = {
-			hidden_trigger = {
-				exists = owner
-				owner = { is_ai = no }
-				OR = {
-					owner = { NOT = { has_country_flag = z_pr_flg_cntr_1 } }	#_[Ô­°æÄ£Ê½]
-					AND = {
-						owner = {
-							has_country_flag = z_pr_flg_cntr_1	#_[²úÒµ¸ïÃü]
-							has_resource = { type = energy amount > 50 }
-							NOT = { has_country_flag = z_pr_flg_cntr_debug_cd }	#_[ÈËÁ¦debug_Î´ÔÚÖ´ĞĞ]
-						}
-						z_pf_trgr_plnt_manpower_immigration = yes
-					}
-				}
-			}
-            fail_text = z_pf_tips_pr_immigration
-        }
-	}
-	
-	effect = {
-		custom_tooltip = z_pf_tips_dec_express_in_5
-		hidden_effect = {
-			if = {#_[²úÒµ¸ïÃü]
-				limit = { exists = owner	owner = { has_country_flag = z_pr_flg_cntr_1 } }	#_
-				z_pr_eft_plnt_immigration_express = yes
-			}
-			else = {#_[²úÒµ¸ïÃü]non
-				##_Éè¶¨×ÔÉíÎªÊäÈëplnt
-				clear_global_event_target = z_pf_tgt_plnt_immigration
-				save_global_event_target_as = z_pf_tgt_plnt_immigration
-				owner = {
-					set_variable = { which = z_pf_var_cntr_heup_remain value = 5 }	#_Éè¶¨Ç¨ÈëÊıÁ¿
-					country_event = { id = z_pf_heup.3 }
-				}
-			}
-		}
-	}
-	
-	ai_weight = {
-		weight = 0
-	}
-}
-
-
-
-
-#_Ç¨³ö-Ä¬ÈÏ
+#_Ç¨ï¿½ï¿½-Ä¬ï¿½ï¿½
 #_cntr_flg	[z_pf_flg_cntr_hide_dec]
 z_pf_dec_migration = {
 	sound = event_administrative_work
@@ -204,7 +63,8 @@ z_pf_dec_migration = {
 		weight = 0
 	}
 }
-#_Ç¨³ö-Ç¿ÖÆ	ÎŞÊÓÈÎºÎÌõ¼ş
+
+#_Ç¨ï¿½ï¿½-Ç¿ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½
 z_pf_dec_migration_forced = {
 	sound = event_administrative_work
 	
@@ -232,7 +92,7 @@ z_pf_dec_migration_forced = {
 		weight = 0
 	}
 }
-#_Ç¨³ö-ºöÂÔ	Ç¨³ö»áÌø¹ıÕâ¿ÅĞÇÇò
+#_Ç¨ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½	Ç¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 z_pf_dec_migration_ignore = {
 	sound = event_administrative_work
 	
@@ -263,7 +123,7 @@ z_pf_dec_migration_ignore = {
 
 
 
-#_Ç¨Èë-Ä¬ÈÏ
+#_Ç¨ï¿½ï¿½-Ä¬ï¿½ï¿½
 #_cntr_flg	[z_pf_flg_cntr_hide_dec]
 z_pf_dec_immigration = {
 	sound = event_administrative_work
@@ -294,7 +154,7 @@ z_pf_dec_immigration = {
 		weight = 0
 	}
 }
-#_Ç¨Èë-Ç¿ÖÆ	ÎŞÊÓÈÎºÎÌõ¼ş
+#_Ç¨ï¿½ï¿½-Ç¿ï¿½ï¿½	ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ï¿½ï¿½
 z_pf_dec_immigration_forced = {
 	sound = event_administrative_work
 	
@@ -322,7 +182,7 @@ z_pf_dec_immigration_forced = {
 		weight = 0
 	}
 }
-#_Ç¨Èë-ºöÂÔ	Ç¨³ö»áÌø¹ıÕâ¿ÅĞÇÇò
+#_Ç¨ï¿½ï¿½-ï¿½ï¿½ï¿½ï¿½	Ç¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 z_pf_dec_immigration_ignore = {
 	sound = event_administrative_work
 	
@@ -353,7 +213,7 @@ z_pf_dec_immigration_ignore = {
 
 
 
-#_ÓÅÏÈ-ÎŞ
+#_ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½
 #_cntr_flg	[z_pf_flg_cntr_hide_dec]
 z_pf_dec_mig_default = {
 	sound = event_administrative_work
@@ -384,7 +244,7 @@ z_pf_dec_mig_default = {
 		weight = 0
 	}
 }
-#_ÓÅÏÈ-³ö
+#_ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½
 z_pf_dec_mig_out_prio = {
 	sound = event_administrative_work
 	
@@ -412,7 +272,7 @@ z_pf_dec_mig_out_prio = {
 		weight = 0
 	}
 }
-#_ÓÅÏÈ-Èë
+#_ï¿½ï¿½ï¿½ï¿½-ï¿½ï¿½
 z_pf_dec_mig_in_prio = {
 	sound = event_administrative_work
 	
