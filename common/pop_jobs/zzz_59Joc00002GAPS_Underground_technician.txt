@@ -9,7 +9,6 @@ GAPS_Underground_technician = {
         is_being_assimilated = no
     }
     possible = {
-        complex_worker_job_check_trigger = yes
         owner = {
             is_gestalt = no
             is_fallen_empire_spiritualist = no
