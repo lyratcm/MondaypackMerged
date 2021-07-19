@@ -1,6 +1,0 @@
-
-on_game_start_pulse = {
-	events = {
-		Events_GAPS_Traits_Mod_Flag.1
-	}
-}

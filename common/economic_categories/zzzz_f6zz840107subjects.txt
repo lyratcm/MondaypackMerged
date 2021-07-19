@@ -1,6 +1,0 @@
-subjects = {
-    parent = diplomacy
-    generate_add_modifiers = {
-        produces
-    }
-}
