@@ -5,7 +5,6 @@
 
 ###_[GIGA]	##########################################
 
-#_[BG]
 giga_contact_solak = {
 	potential = { always = no }
 	allow = { always = no }
