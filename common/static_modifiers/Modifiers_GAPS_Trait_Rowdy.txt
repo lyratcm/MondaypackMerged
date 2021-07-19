@@ -1,4 +1,0 @@
-Pop_Modifier_GAPS_Rowdy_Boost = {
-	pop_amenities_usage_mult = -0.01
-	planet_pops_upkeep_mult = -0.01
-}

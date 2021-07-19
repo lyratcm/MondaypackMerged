@@ -1,9 +1,0 @@
-###_z pf modifiers misc	######################################################################################
-
-
-#_[planet] 人口统计
-z_pf_mod_pop_check = {
-	icon = "gfx/interface/icons/planet_modifiers/z_fw_mod_plnt_normal.dds"
-	
-	planet_max_districts_add = 1
-}
