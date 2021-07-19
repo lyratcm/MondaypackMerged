@@ -1,0 +1,21 @@
+trait_general_ancestral_knowledge = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_general_ancestral_knowledge.dds"
+    modifier = {
+        army_damage_mult = 0.1
+    }
+    leader_trait = {
+        general
+    }
+    leader_class = {
+        general
+    }
+    requires_traits = {
+        trait_genetic_memory
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

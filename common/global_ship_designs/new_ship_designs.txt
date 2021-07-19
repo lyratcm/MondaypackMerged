@@ -1,0 +1,81 @@
+
+ship_design = {
+	name = "NEW"
+	ship_size = battleship
+	
+	section = {
+		template = "BATTLESHIP_BOW_L1M1S2"
+		slot = "bow"
+		
+		component = {
+			template = "LARGE_KINETIC_ARTILLERY_2"
+		}
+		component = {
+			template = "SMALL_PLASMA_3"
+		}
+		component = {
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			template = "POINT_DEFENCE_3"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_MID_L2M2"
+		slot = "mid"
+		
+		component = {
+			template = "LARGE_PLASMA_3"
+		}
+		component = {
+			template = "LARGE_PLASMA_3"
+		}
+		component = {
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			template = "LARGE_ZERO_POINT_REACTOR"
+		}
+		component = {
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			template = "LARGE_SHIELD_5"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_STERN_M2"
+		slot = "stern"
+		
+		component = {
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			template = "MEDIUM_PLASMA_3"
+		}
+		component = {
+			template = "LARGE_ARMOR_5"
+		}
+		component = {
+			template = "LARGE_ARMOR_5"
+		}
+	}
+}

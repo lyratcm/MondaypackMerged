@@ -1,0 +1,37 @@
+@med = 8
+@planet_type_bonus = 1.5
+d_rushing_waterfalls = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_searing_desert
+        d_frozen_gas_lake
+        d_powerful_geyser
+        d_underwater_jets
+    }
+    category = deposit_cat_energy
+    planet_modifier = {
+        district_generator_max = 2
+    }
+    potential = {
+        OR = {
+            is_wet = yes
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_biolumen
+            is_planet_class = pc_karst
+            is_planet_class = pc_storm
+        }
+    }
+    drop_weight = {
+        weight = @med
+        modifier = {
+            factor = @planet_type_bonus
+            is_dry = yes
+        }
+    }
+}

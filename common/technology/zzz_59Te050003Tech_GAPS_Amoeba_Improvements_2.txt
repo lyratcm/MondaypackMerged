@@ -1,0 +1,34 @@
+Tech_GAPS_Amoeba_Improvements_2 = {
+    icon = "Amoeba_Improvement_T2"
+    is_reverse_engineerable = no
+    area = society
+    cost = @tier2cost3
+    tier = 2
+    cost_per_level = @repeatableTechLevelCost
+    levels = 2
+    category = {
+        biology
+    }
+    prerequisites = {
+        "Tech_GAPS_Amoeba_Improvements_1"
+    }
+    weight = @tier2weight3
+    potential = {
+        has_origin = Origin_GAPS_Amoeba_Spawners
+        NOT = {
+            has_technology = Tech_GAPS_Amoeba_Improvements_2
+        }
+    }
+    prereqfor_desc = {
+        ship = {
+            title = "Tech_GAPS_Amoeba_Improvements_1_desc"
+            desc = "Tech_GAPS_Amoeba_Improvements_1_desc"
+        }
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 10
+    }
+}

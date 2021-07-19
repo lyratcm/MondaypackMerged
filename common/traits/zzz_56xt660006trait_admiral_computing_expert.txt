@@ -1,0 +1,22 @@
+trait_admiral_computing_expert = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_computing_expert.dds"
+    modifier = {
+        ship_weapon_range_mult = 0.1
+        ship_accuracy_mult = 0.025
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_natural_translucers
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

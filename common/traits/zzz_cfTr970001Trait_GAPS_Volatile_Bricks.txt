@@ -1,0 +1,13 @@
+Trait_GAPS_Volatile_Bricks = {
+    icon = "gfx/interface/icons/traits/Trait_GAPS_Volatile_Bricks.dds"
+    cost = 1
+    initial = yes
+    randomized = yes
+    modification = yes
+    allowed_archetypes = {
+        LITHOID
+    }
+    custom_tooltip = Trait_GAPS_Volatile_Bricks_Effect
+    modifier = {
+    }
+}

@@ -1,0 +1,57 @@
+@hab_cost = 500
+@hab_maintenance = 2
+district_siho_temple = {
+    base_buildtime = 240
+    is_capped_by_modifier = no
+    icon = district_hab_cultural
+    show_on_uncolonized = {
+        uses_district_set = habitat
+        exists = from
+        from = {
+            is_spiritualist = yes
+        }
+    }
+    potential = {
+        uses_district_set = habitat
+        exists = owner
+        owner = {
+            is_spiritualist = yes
+        }
+    }
+    conversion_ratio = 0.5
+    convert_to = {
+        district_hab_energy
+        district_hab_cultural
+    }
+    resources = {
+        category = planet_districts_hab_leisure
+        cost = {
+            minerals = @hab_cost
+        }
+        upkeep = {
+            energy = @hab_maintenance
+        }
+    }
+    planet_modifier = {
+        planet_housing_add = 3
+        job_priest_add = 3
+        pop_ethic_spiritualist_attraction_mult = 0.05
+    }
+    triggered_desc = {
+        text = job_priest_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            orbit = {
+                is_colony = yes
+            }
+        }
+        text = siho_temple_bonus
+    }
+    ai_resource_production = {
+        unity = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

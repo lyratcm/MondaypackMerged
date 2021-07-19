@@ -1,0 +1,25 @@
+civic_free_traders = {
+    potential = {
+        authority = {
+            OR = {
+                value = auth_corporate_fiefdom
+                value = auth_corporate
+                value = auth_cooperative
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    possible = {
+        civics = {
+            NOR = {
+                value = civic_eternal_contract
+            }
+        }
+    }
+    modifier = {
+        trade_value_mult = 0.15
+        branch_office_value_mult = 0.15
+    }
+}

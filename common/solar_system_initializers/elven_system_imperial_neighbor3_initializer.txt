@@ -1,0 +1,200 @@
+elven_system_imperial_neighbor3_initializer = {
+	name = "Sammarad"
+	class = "sc_elven_binary_4"
+	
+	flags = { custom_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		name = "Sammar Mein"
+		class = "pc_m_star"
+		orbit_distance = 10
+		orbit_angle = 90
+		size = 25
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Sammar Teid"
+		class = "pc_k_star"
+		orbit_distance = 10
+		orbit_angle = 180
+		size = 25
+		
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_elven_energy_2_physics_1
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+	
+	planet = {
+		name = "Gond-2214B"
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 120 }
+	}
+	
+	planet = {
+		name = "Gond-1895A"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 120 }
+	}
+	
+	planet = {
+		name = "Lunsaer"
+		class = "pc_barren"
+		entity = "elven_01_barren_01_lunsaer"
+		orbit_distance = 50
+		orbit_angle = random
+		size = 25
+	}
+	
+	planet = {
+		name = "Delumani"
+		class = "pc_molten"
+		orbit_distance = 0
+		orbit_angle = 135
+		size = 15
+		
+		moon = {
+			name = "Henumani"
+			class = "pc_molten"
+			orbit_distance = 15
+			size = 9
+		}
+	}
+	
+	planet = {
+		name = "Nethatel"
+		class = random_non_colonizable
+		orbit_distance = 25
+		orbit_angle = 135
+		size = 16
+				
+		moon = {
+			name = "Vindacurel"
+			class = random_non_colonizable
+			orbit_distance = 15
+			size = 10
+		}
+	}
+	
+	planet = {
+		name = "Enerisia"
+		class = random_non_colonizable
+		orbit_distance = 30
+		orbit_angle = 135
+		size = 18
+		modifiers = none
+		deposit_blockers = none
+		
+		init_effect = {
+			if = {
+				limit = {
+					num_guaranteed_colonies >= 1
+				}
+
+				change_pc = pc_tropical
+				set_planet_flag = abandoned_terraforming_planet
+				set_planet_flag = forbid_guillis_planet_modifiers
+				set_planet_entity = { entity = "elven_01_tropical_enerisia" }
+
+				clear_deposits = yes
+				clear_planet_modifiers = yes
+				prevent_anomaly = yes
+				
+				add_modifier = {
+					modifier = "lush_planet"
+					days = -1
+				}
+				add_modifier = {
+					modifier = "atmospheric_hallucinogen"
+					days = -1
+				}
+				
+				add_deposit = d_dangerous_wildlife_blocker
+				add_deposit = d_dense_jungle
+				add_deposit = d_dense_jungle
+				add_deposit = d_dense_jungle
+
+				add_deposit = d_tempestous_mountain
+
+				add_deposit = d_mineral_fields
+
+				add_deposit = d_tropical_island
+				add_deposit = d_lush_jungle
+				add_deposit = d_lush_jungle
+				add_deposit = d_green_hills
+				add_deposit = d_green_hills
+			}
+		}
+	}
+	
+	planet = {
+		name = "Daernath"
+		class = "pc_gas_giant"
+		entity = "elven_01_gas_giant_daernath"
+		orbit_distance = 50
+		orbit_angle = 180
+		size = 35
+		
+		moon = {
+			name = "Alionare"
+			class = random
+			orbit_distance = 25
+			orbit_angle = random
+			size = 9
+		}
+		
+		moon = {
+			name = "Danduir"
+			class = random
+			orbit_distance = 0
+			orbit_angle = 180
+			size = 16
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 245
+	}
+	
+	planet = {
+		name = "Gond-Ellaria"
+		class = "pc_asteroid"
+		orbit_distance = 40
+		orbit_angle = { min = 90 max = 120 }
+	}
+	
+	planet = {
+		name = "Gond-Nellye"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 120 }
+	}
+	
+	planet = {
+		name = "Gond-Nelluthel"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 120 }
+	}
+}

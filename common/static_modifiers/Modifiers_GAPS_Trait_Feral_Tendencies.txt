@@ -1,0 +1,6 @@
+Planet_Modifier_GAPS_Trait_Feral_Tendencies_Gestalt = {
+	job_GAPS_Feral_Hunter_gestalt_add = 0.2
+}
+Planet_Modifier_GAPS_Trait_Feral_Tendencies = {
+	job_GAPS_Feral_Hunter_add = 0.2
+}

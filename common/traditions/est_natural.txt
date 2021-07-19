@@ -1,0 +1,244 @@
+##AGRICULTURE##
+
+tr_est_natural_adopt = {
+	modifier = {
+		country_food_produces_mult = 0.15
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_adopt_machines
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			NOR = {
+				has_civic = civic_machine_servitor 
+				has_civic = civic_machine_assimilator
+			}
+			has_ethic = ethic_gestalt_consciousness
+			has_authority = auth_machine_intelligence
+		}	
+		modifier = {	
+			country_unity_produces_mult = 0.05
+			planet_colony_development_speed_mult = 0.50
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}
+
+tr_est_natural_finish = {	
+
+	modifier = {	
+		country_society_tech_research_speed = 0.10
+		country_food_produces_mult = 0.20		
+		ascension_perks_add = 1
+	}
+	
+	
+	##Weird Shit
+	
+	
+	tradition_swap = {
+		#Do not unlockd preservation
+		name = tr_est_natural_finish_AI
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			Not = {
+				has_ethic = ethic_gestalt_consciousness
+			}
+			is_ai = yes
+		}	
+		modifier = {	
+			country_food_produces_mult = 0.15	
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		#Do not unlockd preservation
+		name = tr_est_natural_finish_hive
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}	
+		modifier = {	
+			country_food_produces_mult = 0.15	
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		#Do not unlockd preservation
+		name = tr_est_natural_finish_machines
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+			NOR = {
+				has_civic = civic_machine_servitor 
+				has_civic = civic_machine_assimilator
+			}
+		}	
+		modifier = {	
+			country_society_tech_research_speed = 0.20
+			ascension_perks_add = 1
+		}
+		weight = {factor =  1}
+	}
+}
+
+tr_est_natural_1 = {
+	
+	tradition_swap = {
+		name = tr_est_natural_1_hives
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}	
+		modifier = {	
+			job_agri_drone_per_pop = 0.0303
+		}
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_1_robo
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}	
+		modifier = {	
+			planet_jobs_upkeep_mult = -0.10
+		}
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_natural_2 = {
+	possible = {
+		has_tradition = tr_est_natural_1
+	}
+
+	on_enabled = {
+		every_owned_planet = {
+			planet_event = {
+				id = est_natural.1
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_est_natural_3 = {
+	possible = {
+		has_tradition = tr_est_natural_1
+		has_tradition = tr_est_natural_4
+	}
+	
+	modifier = {
+		deposit_blockers_cost_mult = -0.20
+		planet_clear_blocker_time_mult = -0.20
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_3_hive
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_hive_empire = yes
+		}	
+		weight = {factor =  1}
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_3_machines
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			is_machine_empire = yes
+		}	
+		weight = {factor =  1}
+	}
+	
+	ai_weight = {
+		factor = 5000
+	}
+}
+
+tr_est_natural_4 = {
+	modifier = {
+		job_farmer_per_pop = 0.0303
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_4_GC
+		inherit_effects = no
+		inherit_icon = no
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+		}	
+		modifier = {
+			deposit_blockers_cost_mult = -0.20
+			planet_clear_blocker_time_mult = -0.20
+		}
+		weight = {factor =  1}
+	}
+
+	ai_weight = {
+		factor = 2000
+	}
+}
+
+tr_est_natural_5 = {
+	possible = {
+		has_tradition = tr_est_natural_4
+	}
+	
+	modifier = {
+		planet_pops_food_upkeep_mult = -0.10
+		pop_amenities_usage_mult = -0.10
+	}
+	
+	tradition_swap = {
+		name = tr_est_natural_5_GC
+		inherit_effects = no
+		inherit_icon = yes
+		inherit_name = no
+		trigger = {
+			has_ethic = ethic_gestalt_consciousness
+			is_ai = no
+		}	
+		weight = {factor =  1}
+	}
+	
+
+	
+	ai_weight = {
+		factor = 3000
+	}
+}

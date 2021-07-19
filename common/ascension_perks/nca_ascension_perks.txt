@@ -1,0 +1,77 @@
+# See traditions/README.txt for format
+
+ap_imperial_prerogative = {
+	modifier = {
+		country_admin_cap_mult = 0.20
+	}
+	
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_imperial_prerogative
+		}
+		NOT = { is_megacorp = yes }
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+	
+	on_enabled = {
+		run_ai_strategic_data = yes
+	}
+}
+
+ap_shared_destiny = {
+	modifier = {
+		subject_integration_influence_cost_mult = -0.5
+		country_subject_trust_cap_add = 100
+	}
+	
+	potential = {
+		NOR = {
+			has_valid_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_hive_devouring_swarm
+			has_valid_civic = civic_inwards_perfection
+			has_valid_civic = civic_machine_terminator
+			is_megacorp = yes
+		}
+		NOT = {
+			has_ascension_perk = ap_shared_destiny
+		}
+	}
+	
+	ai_weight = {
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = {
+				any_subject = {
+					is_subject_type = vassal
+				}
+			}
+		}
+	}
+}
+
+ap_universal_transactions = {
+	potential = {
+		host_has_dlc = "Megacorp"
+		NOT = {
+			has_ascension_perk = ap_universal_transactions
+		}
+		is_megacorp = yes
+		is_criminal_syndicate = no
+	}
+	
+	modifier = {
+		planet_branch_offices_cost_mult = -0.15
+	}
+	
+	on_enabled = {
+		custom_tooltip = "free_commercial_pacts"
+	}
+	
+	ai_weight = {
+		factor = 10
+	}
+}

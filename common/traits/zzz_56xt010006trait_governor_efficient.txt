@@ -1,0 +1,21 @@
+trait_governor_efficient = {
+    cost = 1
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_governor_efficient.dds"
+    modifier = {
+        trade_value_mult = 0.1
+    }
+    leader_trait = {
+        governor
+    }
+    leader_class = {
+        governor
+    }
+    requires_traits = {
+        trait_urban
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

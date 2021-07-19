@@ -1,0 +1,16 @@
+nhsc_tech_energy_lance_3 = {
+    icon = tech_z_dummy
+    area = physics
+    cost = 0
+    tier = 6
+    category = {
+        particles
+    }
+    weight = 0
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

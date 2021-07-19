@@ -1,0 +1,951 @@
+###_z pf triggers	######################################################################################
+
+#_[可用国家类型]
+#_[工作检测]
+#_[自动迁移]
+#_[产业革命]
+
+
+
+###_[可用国家类型]	########################################
+z_pf_trgr_cntr_valid = {
+	NOT = { has_country_flag = z_pr_flg_cntr_1 }	#_[产业革命]non
+	OR = {
+		is_ai = no
+		is_country_type = default
+		is_country_type = prikki
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = ascended_empire	#_ZOFE
+		is_country_type = lost_empire		#_ZOFE
+		is_country_type = default_ev		#_肾虚
+	}
+}
+
+
+
+
+###_[工作检测]	########################################
+z_pop_job_trigger = {
+	OR = {
+		#_AI
+		AND = {
+			owner = { is_ai = yes }
+			OR = {
+				#_有可用职位	<手动检测or自动检测>
+				planet = {
+					free_jobs > 0
+					has_planet_flag = z_pf_flg_plnt_job_checker		#_job checking flag
+				}
+				#_原版模式
+				NOR = {
+					has_global_flag = z_pf_flg_glbl_job_disable
+					has_global_flag = z_pf_flg_glbl_job_automatic
+				}
+			}
+		}
+		#_PC
+		AND = {
+			owner = { is_ai = no }
+			OR = {
+				is_unemployed = yes								#_无业人群
+				has_global_flag = z_pf_job_check_full			#_允许阶层流动
+				has_global_flag = z_pf_manual_checking_cd		#_手动检测中
+			}
+			OR = {
+				#_有可用职位	<手动检测or自动检测>
+				planet = {
+					free_jobs > 0
+					has_planet_flag = z_pf_flg_plnt_job_checker		#_job checking flag
+				}
+				#_原版模式
+				NOR = {
+					has_global_flag = z_pf_flg_glbl_job_disable
+					has_global_flag = z_pf_flg_glbl_job_automatic
+				}
+			}
+		}
+	}
+}
+#_暂时弃用	以<is_unemployed>替代
+z_pop_job_trigger_uep = {
+	OR = {#_job
+		is_unemployed = yes
+		has_job = servant
+		has_job = slave_toiler
+	}
+	#OR = {
+	#	planet = {
+	#		free_jobs > 0
+	#		has_planet_flag = z_pf_flg_plnt_job_uep		#_unemployed checking flag
+	#	}
+	#}
+}
+
+
+
+
+
+
+
+
+###_[自动迁移]	########################################
+#_[防止建筑损毁与殖民地毁灭]	产业革命/无视建筑损毁/栖息地_建设中
+z_pf_trgr_no_building_ruin = {
+	OR = {
+		#_[产业革命]无建筑槽要求
+		has_global_flag = z_pr_installed
+		#_[无视建筑损毁]
+		has_planet_flag = z_pf_flg_plnt_building_ignore
+		#_[栖息地_建设中]
+		AND = {
+			is_planet_class = pc_habitat
+			has_building_construction = yes
+			OR = {
+				AND = {
+					num_buildings = { type = any value <= 2 }
+					num_pops > 1
+				}
+				AND = {
+					num_buildings = { type = any value = 3 }
+					num_pops > 5
+				}
+				AND = {
+					num_buildings = { type = any value = 4 }
+					num_pops > 10
+				}
+				AND = {
+					num_buildings = { type = any value = 5 }
+					num_pops > 15
+				}
+				AND = {
+					num_buildings = { type = any value = 6 }
+					num_pops > 20
+				}
+				AND = {
+					num_buildings = { type = any value = 7 }
+					num_pops > 25
+				}
+				AND = {
+					num_buildings = { type = any value = 8 }
+					num_pops > 30
+				}
+				AND = {
+					num_buildings = { type = any value = 9 }
+					num_pops > 35
+				}
+				AND = {
+					num_buildings = { type = any value = 10 }
+					num_pops > 40
+				}
+				AND = {
+					num_buildings = { type = any value = 11 }
+					num_pops > 45
+				}
+				AND = {
+					num_buildings = { type = any value = 12 }
+					num_pops > 50
+				}
+				AND = {
+					num_buildings = { type = any value = 13 }
+					num_pops > 55
+				}
+				AND = {
+					num_buildings = { type = any value = 14 }
+					num_pops > 60
+				}
+				AND = {
+					num_buildings = { type = any value = 15 }
+					num_pops > 65
+				}
+				AND = {
+					num_buildings = { type = any value = 16 }
+					num_pops > 70
+				}
+				AND = {
+					num_buildings = { type = any value = 17 }
+					num_pops > 75
+				}
+				AND = {
+					num_buildings = { type = any value = 18 }
+					num_pops > 80
+				}
+				AND = {
+					num_buildings = { type = any value = 19 }
+					num_pops > 85
+				}
+				AND = {
+					num_buildings = { type = any value >= 20 }
+					num_pops > 90
+				}
+			}
+		}
+		#_栖息地-未在建设中
+		AND = {
+			is_planet_class = pc_habitat
+			has_building_construction = no
+			OR = {
+				AND = {
+					num_buildings = { type = any value <= 3 }
+					num_pops > 1
+				}
+				AND = {
+					num_buildings = { type = any value = 4 }
+					num_pops > 5
+				}
+				AND = {
+					num_buildings = { type = any value = 5 }
+					num_pops > 10
+				}
+				AND = {
+					num_buildings = { type = any value = 6 }
+					num_pops > 15
+				}
+				AND = {
+					num_buildings = { type = any value = 7 }
+					num_pops > 20
+				}
+				AND = {
+					num_buildings = { type = any value = 8 }
+					num_pops > 25
+				}
+				AND = {
+					num_buildings = { type = any value = 9 }
+					num_pops > 30
+				}
+				AND = {
+					num_buildings = { type = any value = 10 }
+					num_pops > 35
+				}
+				AND = {
+					num_buildings = { type = any value = 11 }
+					num_pops > 40
+				}
+				AND = {
+					num_buildings = { type = any value = 12 }
+					num_pops > 45
+				}
+				AND = {
+					num_buildings = { type = any value = 13 }
+					num_pops > 50
+				}
+				AND = {
+					num_buildings = { type = any value = 14 }
+					num_pops > 55
+				}
+				AND = {
+					num_buildings = { type = any value = 15 }
+					num_pops > 60
+				}
+				AND = {
+					num_buildings = { type = any value = 16 }
+					num_pops > 65
+				}
+				AND = {
+					num_buildings = { type = any value = 17 }
+					num_pops > 70
+				}
+				AND = {
+					num_buildings = { type = any value = 18 }
+					num_pops > 75
+				}
+				AND = {
+					num_buildings = { type = any value = 19 }
+					num_pops > 80
+				}
+				AND = {
+					num_buildings = { type = any value >= 20 }
+					num_pops > 85
+				}
+				AND = {
+					num_buildings = { type = any value >= 21 }
+					num_pops > 90
+				}
+			}
+		}
+		#_非栖息地-建设中
+		AND = {
+			NOT = { is_planet_class = pc_habitat }
+			has_building_construction = yes
+			OR = {
+				AND = {
+					num_buildings = { type = any value <= 1 }
+					num_pops > 5
+				}
+				AND = {
+					num_buildings = { type = any value = 2 }
+					num_pops > 10
+				}
+				AND = {
+					num_buildings = { type = any value = 3 }
+					num_pops > 15
+				}
+				AND = {
+					num_buildings = { type = any value = 4 }
+					num_pops > 20
+				}
+				AND = {
+					num_buildings = { type = any value = 5 }
+					num_pops > 25
+				}
+				AND = {
+					num_buildings = { type = any value = 6 }
+					num_pops > 30
+				}
+				AND = {
+					num_buildings = { type = any value = 7 }
+					num_pops > 35
+				}
+				AND = {
+					num_buildings = { type = any value = 8 }
+					num_pops > 40
+				}
+				AND = {
+					num_buildings = { type = any value = 9 }
+					num_pops > 45
+				}
+				AND = {
+					num_buildings = { type = any value = 10 }
+					num_pops > 50
+				}
+				AND = {
+					num_buildings = { type = any value = 11 }
+					num_pops > 55
+				}
+				AND = {
+					num_buildings = { type = any value = 12 }
+					num_pops > 60
+				}
+				AND = {
+					num_buildings = { type = any value = 13 }
+					num_pops > 65
+				}
+				AND = {
+					num_buildings = { type = any value = 14 }
+					num_pops > 70
+				}
+				AND = {
+					num_buildings = { type = any value = 15 }
+					num_pops > 75
+				}
+				AND = {
+					num_buildings = { type = any value = 16 }
+					num_pops > 80
+				}
+				AND = {
+					num_buildings = { type = any value = 17 }
+					num_pops > 85
+				}
+				AND = {
+					num_buildings = { type = any value = 18 }
+					num_pops > 90
+				}
+				AND = {
+					num_buildings = { type = any value = 19 }
+					num_pops > 95
+				}
+				AND = {
+					num_buildings = { type = any value = 20 }
+					num_pops > 100
+				}
+				AND = {
+					num_buildings = { type = any value = 21 }
+					num_pops > 105
+				}
+				AND = {
+					num_buildings = { type = any value = 22 }
+					num_pops > 110
+				}
+				AND = {
+					num_buildings = { type = any value = 23 }
+					num_pops > 115
+				}
+				AND = {
+					num_buildings = { type = any value = 24 }
+					num_pops > 120
+				}
+				AND = {
+					num_buildings = { type = any value = 25 }
+					num_pops > 125
+				}
+				AND = {
+					num_buildings = { type = any value = 26 }
+					num_pops > 130
+				}
+				AND = {
+					num_buildings = { type = any value = 27 }
+					num_pops > 135
+				}
+				AND = {
+					num_buildings = { type = any value = 28 }
+					num_pops > 140
+				}
+				AND = {
+					num_buildings = { type = any value = 29 }
+					num_pops > 145
+				}
+				AND = {
+					num_buildings = { type = any value = 30 }
+					num_pops > 150
+				}
+				AND = {
+					num_buildings = { type = any value = 31 }
+					num_pops > 155
+				}
+				AND = {
+					num_buildings = { type = any value = 32 }
+					num_pops > 160
+				}
+				AND = {
+					num_buildings = { type = any value = 33 }
+					num_pops > 165
+				}
+				AND = {
+					num_buildings = { type = any value = 34 }
+					num_pops > 170
+				}
+				AND = {
+					num_buildings = { type = any value = 35 }
+					num_pops > 175
+				}
+				AND = {
+					num_buildings = { type = any value >= 36 }
+					num_pops > 180
+				}
+			}
+		}
+		#_非栖息地-未在建设中
+		AND = {
+			NOT = { is_planet_class = pc_habitat }
+			has_building_construction = no
+			OR = {
+				AND = {
+					num_buildings = { type = any value <= 1 }
+					num_pops > 1
+				}
+				AND = {
+					num_buildings = { type = any value = 2 }
+					num_pops > 5
+				}
+				AND = {
+					num_buildings = { type = any value = 3 }
+					num_pops > 10
+				}
+				AND = {
+					num_buildings = { type = any value = 4 }
+					num_pops > 15
+				}
+				AND = {
+					num_buildings = { type = any value = 5 }
+					num_pops > 20
+				}
+				AND = {
+					num_buildings = { type = any value = 6 }
+					num_pops > 25
+				}
+				AND = {
+					num_buildings = { type = any value = 7 }
+					num_pops > 30
+				}
+				AND = {
+					num_buildings = { type = any value = 8 }
+					num_pops > 35
+				}
+				AND = {
+					num_buildings = { type = any value = 9 }
+					num_pops > 40
+				}
+				AND = {
+					num_buildings = { type = any value = 10 }
+					num_pops > 45
+				}
+				AND = {
+					num_buildings = { type = any value = 11 }
+					num_pops > 50
+				}
+				AND = {
+					num_buildings = { type = any value = 12 }
+					num_pops > 55
+				}
+				AND = {
+					num_buildings = { type = any value = 13 }
+					num_pops > 60
+				}
+				AND = {
+					num_buildings = { type = any value = 14 }
+					num_pops > 65
+				}
+				AND = {
+					num_buildings = { type = any value = 15 }
+					num_pops > 70
+				}
+				AND = {
+					num_buildings = { type = any value = 16 }
+					num_pops > 75
+				}
+				AND = {
+					num_buildings = { type = any value = 17 }
+					num_pops > 80
+				}
+				AND = {
+					num_buildings = { type = any value = 18 }
+					num_pops > 85
+				}
+				AND = {
+					num_buildings = { type = any value = 19 }
+					num_pops > 90
+				}
+				AND = {
+					num_buildings = { type = any value = 20 }
+					num_pops > 95
+				}
+				AND = {
+					num_buildings = { type = any value = 21 }
+					num_pops > 100
+				}
+				AND = {
+					num_buildings = { type = any value = 22 }
+					num_pops > 105
+				}
+				AND = {
+					num_buildings = { type = any value = 23 }
+					num_pops > 110
+				}
+				AND = {
+					num_buildings = { type = any value = 24 }
+					num_pops > 115
+				}
+				AND = {
+					num_buildings = { type = any value = 25 }
+					num_pops > 120
+				}
+				AND = {
+					num_buildings = { type = any value = 26 }
+					num_pops > 125
+				}
+				AND = {
+					num_buildings = { type = any value = 27 }
+					num_pops > 130
+				}
+				AND = {
+					num_buildings = { type = any value = 28 }
+					num_pops > 135
+				}
+				AND = {
+					num_buildings = { type = any value = 29 }
+					num_pops > 140
+				}
+				AND = {
+					num_buildings = { type = any value = 30 }
+					num_pops > 145
+				}
+				AND = {
+					num_buildings = { type = any value = 31 }
+					num_pops > 150
+				}
+				AND = {
+					num_buildings = { type = any value = 32 }
+					num_pops > 155
+				}
+				AND = {
+					num_buildings = { type = any value = 33 }
+					num_pops > 160
+				}
+				AND = {
+					num_buildings = { type = any value = 34 }
+					num_pops > 165
+				}
+				AND = {
+					num_buildings = { type = any value = 35 }
+					num_pops > 170
+				}
+				AND = {
+					num_buildings = { type = any value = 36 }
+					num_pops > 175
+				}
+				AND = {
+					num_buildings = { type = any value >= 37 }
+					num_pops > 180
+				}
+			}
+		}
+	}
+}
+
+#_[planet]	migration	预留pop
+z_pf_trgr_heup_pop_limit = {
+	OR = {
+		#_ai无视此条件
+		owner = { is_ai = yes }
+		AND = {
+			#_总pop预留
+			OR = {
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_5
+					num_pops > 5
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_10
+					num_pops > 10
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_25
+					num_pops > 25
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_50
+					num_pops > 50
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_100
+					num_pops > 100
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_150
+					num_pops > 150
+				}
+				NOR = {
+					has_planet_flag = z_pf_flg_plnt_migration_5
+					has_planet_flag = z_pf_flg_plnt_migration_10
+					has_planet_flag = z_pf_flg_plnt_migration_25
+					has_planet_flag = z_pf_flg_plnt_migration_50
+					has_planet_flag = z_pf_flg_plnt_migration_100
+					has_planet_flag = z_pf_flg_plnt_migration_150
+				}
+			}
+			#_uep预留
+			OR = {
+				NOR = {
+					has_planet_flag = z_pf_flg_plnt_migration_uep_5
+					has_planet_flag = z_pf_flg_plnt_migration_uep_10
+					has_planet_flag = z_pf_flg_plnt_migration_uep_25
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_uep_5
+					count_owned_pops = {
+						count > 5
+						limit = { is_unemployed = yes }
+					}
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_uep_10
+					count_owned_pops = {
+						count > 10
+						limit = { is_unemployed = yes }
+					}
+				}
+				AND = {
+					has_planet_flag = z_pf_flg_plnt_migration_uep_25
+					count_owned_pops = {
+						count > 25
+						limit = { is_unemployed = yes }
+					}
+				}
+			}
+		}
+	}
+}
+
+#_[planet] immigration	job与uep对比
+z_pf_trgr_free_jobs_for_uep = {
+	NOT = { free_jobs = 0 }
+	OR = {
+		AND = {
+			free_jobs = 1
+			count_owned_pops = {#_无业人口
+				count < 1
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs = 2
+			count_owned_pops = {#_无业人口
+				count < 2
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 2
+			free_jobs <= 4
+			count_owned_pops = {#_无业人口
+				count < 4
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 4
+			free_jobs <= 6
+			count_owned_pops = {#_无业人口
+				count < 6
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 6
+			free_jobs <= 8
+			count_owned_pops = {#_无业人口
+				count < 8
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 8
+			free_jobs <= 10
+			count_owned_pops = {#_无业人口
+				count < 10
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 10
+			free_jobs <= 13
+			count_owned_pops = {#_无业人口
+				count < 13
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 13
+			free_jobs <= 16
+			count_owned_pops = {#_无业人口
+				count < 16
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 16
+			free_jobs <= 19
+			count_owned_pops = {#_无业人口
+				count < 19
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 19
+			free_jobs <= 22
+			count_owned_pops = {#_无业人口
+				count < 22
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 22
+			free_jobs <= 25
+			count_owned_pops = {#_无业人口
+				count < 25
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 25
+			free_jobs <= 30
+			count_owned_pops = {#_无业人口
+				count < 30
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 30
+			free_jobs <= 35
+			count_owned_pops = {#_无业人口
+				count < 35
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 35
+			free_jobs <= 40
+			count_owned_pops = {#_无业人口
+				count < 40
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 40
+			free_jobs <= 45
+			count_owned_pops = {#_无业人口
+				count < 45
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 45
+			free_jobs <= 50
+			count_owned_pops = {#_无业人口
+				count < 50
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 50
+			free_jobs <= 55
+			count_owned_pops = {#_无业人口
+				count < 55
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 55
+			free_jobs <= 60
+			count_owned_pops = {#_无业人口
+				count < 60
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 60
+			free_jobs <= 65
+			count_owned_pops = {#_无业人口
+				count < 65
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 65
+			free_jobs <= 70
+			count_owned_pops = {#_无业人口
+				count < 70
+				limit = { is_unemployed = yes }
+			}
+		}
+		AND = {
+			free_jobs > 70
+			count_owned_pops = {#_无业人口
+				count < 75
+				limit = { is_unemployed = yes }
+			}
+		}
+	}
+}
+
+
+#_[planet]	输出条件
+z_pf_trgr_heup_migration = {
+	is_colony = yes
+	is_under_colonization = no
+	is_controlled_by = owner	#_未在占领期间
+	has_orbital_bombardment = no
+	NOT = { has_planet_flag = z_pf_flg_plnt_migration_ignore }
+	OR = {
+		AND = {
+			has_planet_flag = z_pf_flg_plnt_migration_forced
+			num_pops > 1
+			count_owned_pops = {#_存在可移居闲人
+				count > 0
+				limit = { NOT = { has_pop_flag = z_pf_flg_pop_migration_non } }
+			}
+			z_pf_trgr_heup_pop_limit = yes
+		}
+		AND = {
+			z_pf_trgr_no_building_ruin = yes
+			count_owned_pops = {#_存在可移居闲人
+				count > 0
+				limit = {
+					is_unemployed = yes
+					#_无移民控制
+					NAND = {
+						is_robot_pop = no	#_智械无移民控制
+						has_migration_control = yes
+					}
+					NOT = { has_pop_flag = z_pf_flg_pop_migration_non }
+				}
+			}
+			z_pf_trgr_heup_pop_limit = yes
+		}
+	}
+}
+#_[planet]	输入条件
+z_pf_trgr_heup_immigration = {
+	NOT = { is_same_value = event_target:z_pf_tgt_plnt_migration }	#_此tgt无需检测exist,它所应用的场合必然是已经被设定后的
+	is_colony = yes
+	num_pops > 0
+	#free_housing > 0
+	#free_amenities > 0
+	is_under_colonization = no
+	is_controlled_by = owner	#_未在占领期间
+	has_orbital_bombardment = no
+	NOT = { has_planet_flag = z_pf_flg_plnt_immigration_ignore }
+	OR = {
+		has_planet_flag = z_pf_flg_plnt_immigration_forced
+		z_pf_trgr_free_jobs_for_uep = yes
+	}
+}
+
+
+
+
+###_[产业革命]	迁出条件/迁入条件	########################################
+#_[迁出条件]	自动迁移non<z_pf_flg_plnt_migration_ignore>
+z_pf_trgr_plnt_manpower_migration = {
+	is_colony = yes
+	num_pops > 0
+	is_under_colonization = no
+	is_controlled_by = owner	#_未在占领期间
+	has_orbital_bombardment = no
+	OR = {
+		#_[默认]	人力/生产基数>1
+		AND = {
+			NOT = { has_planet_flag = z_pf_flg_plnt_migration_forced }
+			check_variable = { which = z_pr_var_plnt_manpower_bonus_base value > 1 }
+			check_variable = { which = z_pr_var_plnt_manpower value >= 10 }	#_人力
+		}
+		#_[强制迁出]
+		AND = {
+			has_planet_flag = z_pf_flg_plnt_migration_150
+			check_variable = { which = z_pr_var_plnt_manpower value >= 150 }
+		}
+		AND = {
+			has_planet_flag = z_pf_flg_plnt_migration_100
+			check_variable = { which = z_pr_var_plnt_manpower value >= 100 }
+		}
+		AND = {
+			has_planet_flag = z_pf_flg_plnt_migration_50
+			check_variable = { which = z_pr_var_plnt_manpower value >= 50 }
+		}
+		AND = {
+			has_planet_flag = z_pf_flg_plnt_migration_25
+			check_variable = { which = z_pr_var_plnt_manpower value >= 25 }
+		}
+		check_variable = { which = z_pr_var_plnt_manpower value >= 10 }
+	}
+}
+#_[迁入条件]	自动迁移non<z_pf_flg_plnt_immigration_ignore>
+z_pf_trgr_plnt_manpower_immigration = {
+	is_colony = yes
+	num_pops > 0
+	is_under_colonization = no
+	is_controlled_by = owner	#_未在占领期间
+	has_orbital_bombardment = no
+	OR = {
+		#_[默认]	人力/生产基数<1
+		check_variable = { which = z_pr_var_plnt_manpower_bonus_base value < 1 }
+		#_[强制迁入]
+		has_planet_flag = z_pf_flg_plnt_immigration_forced
+	}
+	#_[人力最大值]
+	check_variable = { which = z_pr_var_plnt_growth value <= 2.3 }
+}
+
+
+
+
+
+
+
+###_2.4旧版	###########################################################################################
+#_full pops-old
+z_performance_trigger1 = {
+	#has_global_flag = z_allow_job_check
+	has_global_flag = z_allow_job_check2
+	NOT = { has_global_flag = z_allow_job_check1 }
+}
+#_the unemployed-old
+z_performance_trigger2 = {
+	OR = {#_job
+		is_unemployed = yes
+		has_job = servant
+		has_job = slave_toiler
+	}
+	#NOT = { has_pop_flag = z_unemployed_ignore }
+	NOT = { has_global_flag = z_allow_job_check2 }
+}

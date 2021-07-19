@@ -1,0 +1,15 @@
+planet_bank_managers = {
+	parent = planet_jobs
+	generate_add_modifiers = {
+	}
+	generate_mult_modifiers = {
+	}
+}
+
+planet_socialist_traders = {
+	parent = planet_jobs
+	generate_add_modifiers = {
+	}
+	generate_mult_modifiers = {
+	}
+}

@@ -1,0 +1,23 @@
+trait_admiral_paladin = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_paladin.dds"
+    modifier = {
+        ship_home_territory_fire_rate_mult = 0.15
+        ship_hull_regen_add_perc = 0.2
+        ship_armor_regen_add_perc = 0.2
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_stalwart
+    }
+    ai_weight = {
+        weight = 200
+    }
+}

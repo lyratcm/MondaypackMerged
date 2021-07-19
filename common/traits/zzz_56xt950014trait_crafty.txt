@@ -1,0 +1,17 @@
+trait_crafty = {
+    cost = 2
+    initial = yes
+    randomized = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_alloys_produces_mult = 0.15
+    }
+}

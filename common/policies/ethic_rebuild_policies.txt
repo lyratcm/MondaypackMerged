@@ -1,0 +1,1092 @@
+#Cultural Overhaul
+#border_policy
+#trade_policy
+
+
+##########################################################################
+# Empire Policies
+#
+# #####
+#
+# AI:
+# Base AI-weight is 100, if unchanged
+# AI will grab whatever policy-option has the highest weight
+#
+# #####
+#
+##########################################################################
+
+
+
+
+
+
+economic_stance = {
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+    #Free Market
+	option = {
+		name = "economic_stance_market"
+
+		policy_flags = {
+			economic_stance_market
+		}
+
+		modifier = {
+		    job_mogul_per_pop = 0.03
+			job_merchant_per_pop = 0.04
+            job_clerk_per_pop = 0.06
+			country_trade_fee = -0.1
+			country_trade_attractiveness = 0.33
+			country_base_influence_produces_add = -0.5
+			local_trade_protection_add = -4
+			pop_ethic_capitalism_attraction_mult = 0.2
+		}
+
+		valid = {
+			is_country_type = default
+			or = {
+				has_policy_flag = trade_policy_default
+				has_policy_flag = trade_conversion_consumer_goods
+				has_policy_flag = trade_conversion_trade_league
+			}
+			or = {
+			    has_ethic = "ethic_capitalism"
+				has_ethic = "ethic_fanatic_capitalism"
+				has_technology = tech_free_market
+			 }
+
+            NOR = {
+				 has_ethic = ethic_fanatic_socialism
+				 has_valid_civic = civic_ultimate_collective
+				 has_valid_civic = civic_distributism
+				 has_valid_civic = civic_state_monopoly
+				 and = {
+				          has_ethic = ethic_fanatic_authoritarian
+                          not = { has_ethic = ethic_fanatic_capitalism }
+						}
+				 any_owned_pop = {
+						has_living_standard = { type = living_standard_shared_burden }
+					}
+				 any_owned_pop = {
+						has_living_standard = { type = living_standard_good }
+					}
+                 }
+
+		}
+
+		AI_weight = {
+
+		}
+	}
+
+
+
+
+    #Mixed
+	option = {
+		name = "economic_stance_mixed"
+
+		policy_flags = {
+			economic_stance_mixed
+		}
+
+		modifier = {}
+
+		valid = {
+
+		}
+
+		AI_weight = {
+			factor = 10
+		}
+	}
+
+	#Central Planned
+	option = {
+		name = "economic_stance_planned"
+
+		policy_flags = {
+			economic_stance_planned
+		}
+
+		modifier = {
+		    planet_jobs_energy_produces_mult = 0.2
+			pop_growth_speed = 0.05
+			planet_building_build_speed_mult = 0.15
+			starbase_shipyard_build_speed_mult = 0.15
+		    planet_colony_development_speed_mult = 0.15
+			country_trade_fee = 0.2
+			pop_ethic_socialism_attraction_mult = 0.2
+		}
+
+		valid = {
+			is_country_type = default
+			or = {
+			has_policy_flag = trade_conversion_growth_dev
+			has_policy_flag = trade_conversion_development
+			has_policy_flag = trade_conversion_mining
+			has_policy_flag = trade_conversion_growth
+			has_policy_flag = trade_conversion_consumer_goods
+			}
+			or = {
+				has_ethic = "ethic_socialism"
+				has_ethic = "ethic_fanatic_socialism"
+				has_technology = tech_planned_economy
+			 }
+            NOR = {
+				 has_ethic = ethic_fanatic_capitalism
+				 has_valid_civic = civic_beacon_of_liberty
+				 and = {
+				          has_ethic = ethic_fanatic_egalitarian
+                          not = { has_ethic = ethic_fanatic_socialism }
+						}
+                 }
+		}
+
+		AI_weight = {
+
+		}
+	}
+
+
+
+}
+
+
+
+
+
+bureaucracy = {
+
+	potential = {
+
+	}
+
+
+	option = {
+		name = "none_bureaucracy"
+
+		policy_flags = {
+			none_bureaucracy
+		}
+
+		modifier = {
+
+		}
+
+	}
+
+
+
+
+
+	option = {
+		name = "centralized_state"
+
+		valid = {
+			is_country_type = default
+			has_technology = tech_centralized_state
+            not = { has_valid_civic = civic_beacon_of_liberty }
+			NOR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+			}
+		}
+
+		policy_flags = {
+			centralized_state
+		}
+
+		modifier = {
+
+		country_base_influence_produces_add = 1
+		empire_size_penalty_mult = 0.15
+		pop_ethic_authoritarian_attraction_mult = 0.15
+
+		}
+
+    AI_weight = {
+
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_authoritarian"
+			    }
+			           }
+
+	            }
+
+	}
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "federal_state"
+
+
+		policy_flags = {
+			federal_state
+		}
+
+		valid = {
+			is_country_type = default
+			has_technology = tech_federal_state
+            not = { has_valid_civic = civic_ultimate_collective }
+			NOR = {
+				has_ethic = "ethic_fanatic_authoritarian"
+			}
+		}
+
+		modifier = {
+
+		# country_admin_cap_mult = 0.2
+        # governor_skill_levels = 1
+		edicts_cost_mult = 0.25
+		pop_ethic_egalitarian_attraction_mult = 0.15
+		pop_factions_influence_produces_mult = 0.33
+
+
+		}
+
+    AI_weight = {
+
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+			    }
+			           }
+
+	           }
+
+	}
+
+
+
+
+
+
+
+
+}
+
+
+healthcare = {
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+
+	option = {
+		name = "mixed_healthcare"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_shared_burden
+			}
+		}
+
+		policy_flags = {
+			mixed_healthcare
+		}
+
+		modifier = {
+
+		}
+
+
+
+
+	}
+
+
+	option = {
+		name = "private_healthcare"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"
+			}
+		}
+
+		policy_flags = {
+			private_healthcare
+		}
+
+		modifier = {
+		       leader_age = 10
+			   pop_cat_worker_happiness = -0.05
+			   pop_ethic_capitalism_attraction_mult = 0.05
+			   pop_ethic_elitist_attraction_mult = 0.1
+		}
+
+        AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_capitalism"
+			    }
+			           }
+		}
+
+    }
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "public_healthcare"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_elitist"
+				has_ethic = "ethic_fanatic_elitist"				
+
+			}
+		}
+
+		policy_flags = {
+			public_healthcare
+		}
+
+		modifier = {
+		       pop_growth_speed = 0.05
+               pop_ethic_socialism_attraction_mult = 0.05
+			   pop_ethic_pluralist_attraction_mult = 0.1
+			   country_energy_produces_mult = -0.04
+		}
+
+      AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_socialism"
+			    }
+			           }
+		}
+
+
+
+
+	}
+
+
+
+
+
+}
+
+
+education = {
+
+	potential = {
+		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+
+	option = {
+		name = "mixed_education"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_shared_burden
+
+			}
+		}
+
+		policy_flags = {
+			mixed_education
+		}
+
+		modifier = {
+
+		}
+
+
+
+
+	}
+
+
+	option = {
+		name = "private_education"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_socialism"
+				has_ethic = "ethic_pluralist"
+				has_ethic = "ethic_fanatic_pluralist"				
+			}
+		}
+
+		policy_flags = {
+			private_education
+		}
+
+		modifier = {
+
+
+		planet_jobs_specialist_produces_mult = 0.05	
+		planet_crime_add = 20
+		pop_ethic_capitalism_attraction_mult = 0.05
+		pop_ethic_elitist_attraction_mult = 0.1
+
+
+		}
+
+        AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_capitalism"
+			    }
+			           }
+		}
+
+    }
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "public_education"
+
+		valid = {
+			NOR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				has_ethic = "ethic_elitist"
+				has_ethic = "ethic_fanatic_elitist"					
+			}
+		}
+
+		policy_flags = {
+			public_education
+		}
+
+		modifier = {
+
+        pop_government_ethic_attraction = 0.1
+        country_unity_produces_mult = 0.1
+        planet_crime_add = -10
+		country_energy_produces_mult = -0.04
+		pop_ethic_socialism_attraction_mult = 0.05
+		pop_ethic_pluralist_attraction_mult = 0.1
+
+
+
+
+		}
+
+      AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_ethic = "ethic_fanatic_socialism"
+			    }
+			           }
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+
+}
+
+
+industrial = {
+
+	potential = {
+	}
+
+
+	option = {
+		name = "mixed_industrial"
+
+		valid = {
+		}
+
+		policy_flags = {
+			mixed_industrial
+		}
+
+		modifier = {
+
+		}
+
+
+
+
+	}
+
+
+	option = {
+		name = "industrial_efficiency"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_industrial_economy
+				has_ethic = "ethic_fanatic_industrial"		
+				has_valid_civic = civic_machine_industry
+			}
+		}
+
+		policy_flags = {
+			industrial_efficiency
+		}
+
+		modifier = {
+		planet_structures_cost_mult = -0.15
+		planet_structures_upkeep_mult = -0.15
+		planet_building_refund_mult = 0.15
+		planet_building_build_speed_mult = -0.5
+		planet_clear_blocker_time_mult = 0.5
+		}
+
+        AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_valid_civic = civic_environmentalist
+				has_valid_civic = civic_keepers_harmony
+			    }
+			           }
+
+		}
+
+    }
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "industrial_growth"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_keepers_harmony
+				has_ethic = "ethic_fanatic_green"	
+			}
+		}
+
+		policy_flags = {
+			industrial_growth
+		}
+
+		modifier = {
+                  planet_jobs_energy_produces_mult = 0.1
+				  planet_jobs_minerals_produces_mult = 0.20
+				  planet_stability_add = -5
+		}
+
+      AI_weight = {
+			modifier = {
+				factor = 10
+				OR = {
+				has_valid_civic = civic_industrial_economy
+				has_valid_civic = civic_consumerism
+			    }
+			           }
+
+		}
+
+
+
+
+	}
+
+
+
+
+}
+
+
+transportation_logistics = {
+
+	potential = {
+
+	NOT = { has_ethic = ethic_gestalt_consciousness }
+
+	}
+
+
+	option = {
+		name = "none_transport"
+
+		policy_flags = {
+			none_transport
+		}
+
+		modifier = {
+
+		}
+
+	}
+
+
+
+
+
+	option = {
+		name = "civilian_transport"
+
+
+		policy_flags = {
+			civilian_transport
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		is_country_type = default
+		}
+
+		modifier = {
+
+        trade_value_mult = 0.1
+		pop_growth_from_immigration = 0.33
+		planet_colony_development_speed_mult = 0.33
+		ships_upkeep_mult = 0.10
+		local_trade_protection_add = -4
+		pop_ethic_pacifist_attraction_mult = 0.25
+
+		}
+
+    AI_weight = {
+
+
+	            }
+
+	}
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "military_transport"
+
+
+		policy_flags = {
+			military_transport
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_valid_civic = civic_corporate_dominion
+			}
+		is_country_type = default
+		}
+
+		modifier = {
+
+
+		ships_upkeep_mult = -0.10
+		local_trade_protection_add = 5
+		pop_growth_from_immigration = -0.15
+		trade_value_mult = -0.04
+		pop_ethic_militarist_attraction_mult = 0.25
+
+
+
+		}
+
+    AI_weight = {
+
+
+
+	           }
+
+	}
+
+
+
+
+
+
+
+
+}
+
+
+gun_rights = {
+
+	potential = {
+
+	    		NOT = { has_ethic = ethic_gestalt_consciousness }
+	}
+
+
+	option = {
+		name = "gun_rights_limited"
+
+		valid = {
+			NOR = {
+				has_valid_civic = civic_beacon_of_liberty
+			}
+		}
+
+
+		policy_flags = {
+			gun_rights_limited
+		}
+
+		modifier = {			}
+
+    AI_weight = {	       }
+
+
+
+
+
+	}
+
+
+
+	option = {
+		name = "gun_rights_allowed"
+
+
+		valid = {
+		is_country_type = default
+		}
+
+
+		policy_flags = {
+			gun_rights_allowed
+		}
+
+		modifier = {
+
+					  army_damage_mult = 0.2
+					  planet_crime_no_happiness_mult = 0.15
+		}
+
+    AI_weight = {
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_fanatic_capitalism"
+				}
+
+			           }
+		        }
+
+
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+interstellar_telecom = {
+
+	potential = {
+
+	NOT = { has_ethic = ethic_gestalt_consciousness }
+
+	}
+
+
+	option = {
+		name = "none_telecom"
+
+		policy_flags = {
+			none_telecom
+		}
+
+		modifier = {
+
+		}
+
+	}
+
+
+
+
+
+	option = {
+		name = "civilian_telecom"
+
+
+		policy_flags = {
+			civilian_telecom
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_fanatic_militarist
+			}
+		is_country_type = default
+		}
+
+		modifier = {
+
+        country_admin_cap_mult = 0.1
+		station_researchers_produces_mult = 0.2
+		science_ship_survey_speed = 0.33
+		country_naval_cap_mult = -0.5
+		pop_ethic_pacifist_attraction_mult = 0.25
+
+		}
+
+    AI_weight = {
+
+	            }
+
+	}
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "military_telecom"
+
+
+		policy_flags = {
+			military_telecom
+		}
+
+		valid = {
+			NOR = {
+				has_ethic = ethic_fanatic_pacifist
+				has_valid_civic = civic_exploration
+			}
+		is_country_type = default
+		}
+
+		modifier = {
+
+        country_naval_cap_mult = 0.10
+		ships_upkeep_mult = 0.10
+		station_researchers_produces_mult = -0.15
+		pop_ethic_militarist_attraction_mult = 0.25
+
+
+
+		}
+
+    AI_weight = {
+
+
+	           }
+
+	}
+
+
+
+
+
+
+
+
+}
+
+
+interstellar_media = {
+
+	potential = {
+
+
+	    		NOT = { has_ethic = ethic_gestalt_consciousness }
+
+	}
+
+
+	option = {
+		name = "none_media"
+
+		policy_flags = {
+			none_media
+		}
+
+
+
+		modifier = {
+
+		}
+
+	}
+
+
+
+
+
+	option = {
+		name = "free_media"
+
+
+		policy_flags = {
+			free_media
+		}
+
+		valid = {
+			is_country_type = default
+			NOR = {
+				has_ethic = ethic_fanatic_authoritarian
+				has_valid_civic = civic_divine_order
+				has_valid_civic = civic_ultimate_collective
+
+			}
+		}
+
+		modifier = {
+
+		pop_factions_produces_mult = 0.2
+		job_entertainer_per_pop = 0.03
+        planet_stability_add = -5
+        pop_ethic_egalitarian_attraction_mult = 0.15
+
+
+		}
+
+    AI_weight = {
+
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_fanatic_egalitarian"
+				}
+			           }
+
+
+	            }
+
+	}
+
+
+
+
+
+
+
+
+
+	option = {
+		name = "state_media"
+
+
+		policy_flags = {
+			state_media
+		}
+
+		valid = {
+			is_country_type = default
+			NOR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_valid_civic = civic_beacon_of_liberty
+				has_valid_civic = civic_political_pluralism
+			}
+		}
+
+		modifier = {
+
+        pop_government_ethic_attraction = 0.2
+		country_war_exhaustion_mult = -0.2
+		pop_factions_produces_mult = -0.15
+        pop_ethic_authoritarian_attraction_mult = 0.15
+
+
+		}
+
+    AI_weight = {
+
+			modifier = {
+				factor = 10
+		   OR = {
+				has_ethic = "ethic_fanatic_authoritarian"
+				}
+			           }
+
+
+	           }
+
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

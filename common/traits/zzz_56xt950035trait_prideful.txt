@@ -1,0 +1,19 @@
+trait_prideful = {
+    cost = -2
+    initial = yes
+    randomized = yes
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_humble"
+        "trait_hive_mind"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        pop_demotion_time_mult = 1
+    }
+}

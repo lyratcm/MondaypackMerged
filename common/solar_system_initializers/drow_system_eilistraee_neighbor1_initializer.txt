@@ -1,0 +1,187 @@
+eilistraee_neighbor1_initializer = {
+
+	name = "Noamuth"
+	class = "sc_drow_trinary_1"
+
+	flags = { custom_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_f_star"
+		name = "Noamuth-ligrr"
+		orbit_distance = 30
+		orbit_angle = 0
+		size = 20
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+	}
+	
+	planet = {
+		class = "pc_f_star"
+		name = "Noamuth-ilhar"
+		orbit_angle = 120
+		orbit_distance = 0
+		size = 30
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+	}
+	
+	planet = {
+		class = "pc_b_star"
+		name = "Noamuth-wiu"
+		orbit_distance = 0
+		orbit_angle = 120
+		size = 25
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_3
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+	
+	planet = {
+		name = "Tonashss Rrok"
+		class = "pc_asteroid"
+		orbit_distance = 70
+		orbit_angle = 90
+		size = 5
+	}
+	
+	planet = {
+		name = "Tonashss Izznarg"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+		size = 12
+		
+		moon = {
+			name = "B'vecko"
+			class = pc_arid
+			orbit_distance = 25
+			size = 11
+			has_ring = no
+			
+			init_effect = {
+				set_planet_flag = abandoned_terraforming_planet
+				set_planet_flag = forbid_guillis_planet_modifiers
+
+				clear_planet_modifiers = yes
+				clear_deposits = yes
+				prevent_anomaly = yes
+				
+				add_modifier = {
+					modifier = "asteroid_impacts"
+					days = -1
+				}
+				add_modifier = {
+					modifier = "unstable_tectonics"
+					days = -1
+				}
+				add_modifier = {
+					modifier = "bleak_planet"
+					days = -1
+				}
+
+				add_deposit = d_active_volcano
+				add_deposit = d_active_volcano
+				add_deposit = d_deep_sinkhole
+				add_deposit = d_deep_sinkhole
+				
+				add_deposit = d_geothermal_vent
+
+				add_deposit = d_rich_mountain
+				add_deposit = d_rich_mountain
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
+				add_deposit = d_veiny_cliffs
+			}
+		}
+	}
+	
+	planet = {
+		name = "Chathnik'zur"
+		class = "pc_molten"
+		#entity = "drow_01_toxic_elgcahlir"
+		orbit_distance = 60
+		orbit_angle = { min = 90 max = 270 }
+		size = 20
+		has_ring = no
+		modifiers = none
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_engineering_2
+		}
+		
+		moon = {
+			name = "Xar'zibbress"
+			class = "pc_frozen"
+			orbit_distance = 20
+			size = 12
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Elg'cahlir"
+		class = "pc_toxic"
+		entity = "drow_01_toxic_elgcahlir"
+		orbit_distance = 60
+		orbit_angle = { min = 90 max = 270 }
+		size = 30
+		has_ring = no
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_society_2
+		}
+		
+		moon = {
+			name = "Myrxle"
+			class = random_non_colonizable
+			orbit_distance = 20
+			orbit_angle = random
+			size = 16
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Na'eroth"
+			class = random_non_colonizable
+			orbit_distance = 15
+			orbit_angle = { min = 90 max = 270 }
+			size = 12
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Hiran"
+		class = random_non_colonizable
+		orbit_distance = 70
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 20 max = 40 }
+	}
+}

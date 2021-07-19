@@ -1,0 +1,208 @@
+###########################
+## VALSHAQUELAR FEATURES ##
+###########################
+
+# Copies of vanilla Relic World features but with different icons.
+
+d_drow_collapsed_spire = {
+	time = 480
+	icon = d_drow_broken_spire
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_drow_central_spire
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 2000
+		}
+	}
+}
+
+d_drow_shattered_solar_array = {
+	icon = d_drow_solar_array
+	time = 270
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_drow_immense_solar_array
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+d_drow_massive_crevice = {
+	time = 270
+	icon = d_drow_massive_crevice
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_drow_industrial_sector
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+d_drow_flooded_reactor_pits = {
+	icon = d_drow_reactor
+	time = 270
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_rare_blocker	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_drow_ancient_reactor_pits
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+d_drow_ancient_reactor_pits = {
+	is_for_colonizeable = yes
+	icon = d_drow_reactor
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		district_generator_max = 6
+	}
+}
+
+d_drow_immense_solar_array = {
+	is_for_colonizeable = yes
+	icon = d_drow_solar_array
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+}
+
+d_drow_central_spire = {
+	is_for_colonizeable = yes
+	icon = d_drow_central_spire
+	category = deposit_cat_rare
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 8
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 8
+		}
+	}
+}
+
+d_drow_industrial_sector = {
+	is_for_colonizeable = yes
+	icon = d_drow_ruins_medium
+	category = deposit_cat_rare
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		building_crystal_mines_max = 2
+		building_gas_extractors_max = 2
+		building_mote_harvesters_max = 2
+	}
+}
+
+d_drow_relic_dense_ruins = {
+	is_for_colonizeable = yes
+	icon = d_drow_ruins_large
+	category = deposit_cat_rare
+
+	potential = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -6
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+}

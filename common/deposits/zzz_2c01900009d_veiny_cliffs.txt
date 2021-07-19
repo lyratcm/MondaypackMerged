@@ -1,0 +1,65 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_veiny_cliffs = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_minerals
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_mineral_fields
+        d_mineral_striations
+        d_coral_deposit
+    }
+    planet_modifier = {
+        district_mining_max = 1
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_alpine
+            is_planet_class = pc_highland
+            is_planet_class = pc_duneforest
+            is_planet_class = pc_arctic
+            is_planet_class = pc_arid
+            is_planet_class = pc_outback
+            is_planet_class = pc_continental
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_cascadian
+            is_planet_class = pc_hajungle
+            is_planet_class = pc_cenote
+            is_planet_class = pc_mesa
+            is_planet_class = pc_badlands
+            is_planet_class = pc_med
+            is_planet_class = pc_frozen_desert
+            is_planet_class = pc_glacial
+            is_planet_class = pc_hadesert
+            is_planet_class = pc_methane
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_retinal
+            is_planet_class = pc_forest
+            is_planet_class = pc_lake
+            is_planet_class = pc_tepid
+            is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_boreal
+            is_planet_class = pc_snow
+            is_planet_class = pc_karst
+            is_planet_class = pc_primal
+        }
+    }
+    drop_weight = {
+        weight = @high
+        modifier = {
+            factor = @planet_type_bonus
+            is_cold = yes
+        }
+    }
+}

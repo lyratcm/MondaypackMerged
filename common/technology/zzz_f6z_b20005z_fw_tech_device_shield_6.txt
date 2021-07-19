@@ -1,0 +1,16 @@
+z_fw_tech_device_shield_6 = {
+    area = physics
+    category = {
+        field_manipulation
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = 0
+    ai_update_type = all
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

@@ -1,0 +1,203 @@
+pop_faction_name_parts_list = {
+	key = "lunari_totalitarian_names"
+	parts = {
+		"Inner Circle" = 5
+		"Silver Conclave" = 3
+		"Silver Council" = 3
+		"Conclave of Internal Order" = 1
+		"Lunar Supreme Court" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "totalitarian"
+		}
+	}
+	format = "<lunari_totalitarian_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_imperialist_names"
+	parts = {
+		"Silver Guard" = 10
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "imperialist"
+		}
+	}
+	format = "<lunari_imperialist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_spiritualist_names"
+	parts = {
+		"Church of the Moon" = 10
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "traditionalist"
+		}
+	}
+	format = "<lunari_spiritualist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_technologist_names"
+	parts = {
+		"Silver Academy" = 1
+		"Institute of Applied Science" = 1
+		"Academy for Advanced Studies" = 1
+		"Science and Technology Institute" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "technologist"
+		}
+	}
+	format = "<lunari_technologist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_prosperity_names"
+	parts = {
+		"National Stability Association" = 1
+		"Lunar Trade Network" = 1
+		"Lunar Investment Bank" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "prosperity"
+		}
+	}
+	format = "<lunari_prosperity_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_supremacist_names"
+	parts = {
+		"Ascension Movement" = 5
+		"Purity Movement" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "supremacist"
+		}
+	}
+	format = "[This.Owner.GetSpeciesName] <lunari_supremacist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_xenoist_names"
+	parts = {
+		"Lunar Xeno Agency" = 1
+		"Stellar Diplomacy Association" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "xenoist"
+		}
+	}
+	format = "<lunari_xenoist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_isolationist_names"
+	parts = {
+		"Closed Borders Initiative" = 1
+		"Neutrality and Balance Movement" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "isolationist"
+		}
+	}
+	format = "<lunari_isolationist_names>"
+}
+
+pop_faction_name_parts_list = {
+	key = "lunari_progressive_names"
+	parts = {
+		"Free Thought Movement" = 1
+		"Self-Determinism Movement" = 1
+		"True Democracy Movement" = 1
+		"Individual Choice Movement" = 1
+	}
+}
+
+pop_faction_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1000
+			owner = {
+				species_portrait = "lunari"
+			}
+			is_pop_faction_type = "progressive"
+		}
+	}
+	format = "<lunari_progressive_names>"
+}

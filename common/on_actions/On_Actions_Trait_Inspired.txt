@@ -1,0 +1,12 @@
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		Events_GAPS_Traits_Inspired.20
+	}
+}
+on_game_start_country = {
+	events = {
+		Events_GAPS_Traits_Inspired.20
+	}
+}

@@ -1,0 +1,47 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_rugged_woods = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    terraforming_swap_types = {
+        d_natural_farmland
+        d_lichen_fields
+        d_bountiful_plains
+        d_green_hills
+        d_forgiving_tundra
+        d_boggy_fens
+        d_nutritious_mudland
+        d_sea_grass
+    }
+    planet_modifier = {
+        district_farming_max = 1
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_continental
+            is_planet_class = pc_cascadian
+            is_planet_class = pc_boreal
+            is_planet_class = pc_snow
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_tidallylocked
+            is_planet_class = pc_supercon
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_retinal
+            is_planet_class = pc_forest
+            is_planet_class = pc_lake
+            is_planet_class = pc_tepid
+            is_planet_class = pc_megaflora
+            is_planet_class = pc_megaflorahive
+            is_planet_class = pc_megafloratol
+        }
+    }
+    drop_weight = {
+        weight = @high
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+    }
+}

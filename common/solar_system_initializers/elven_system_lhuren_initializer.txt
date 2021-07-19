@@ -1,0 +1,533 @@
+
+########################
+## LHUREN HOME SYSTEM ##
+########################
+
+elven_system_lhuren_initializer = {
+	name = "Aurlûnor"
+	class = "sc_elven_sexenary_1"
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
+	flags = { empire_home_system custom_system lhuren_capital_system }
+	usage = origin
+
+	planet = {
+		class = "pc_f_star"
+		name = "Istanar"
+		orbit_distance = 0
+		orbit_angle = 0
+		size = 20
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_energy_2
+			
+			## MINI-BULA!! ##
+			create_elven_nebula_magenta = yes
+
+			## ADD A LOVELY STORM! ##
+			create_ambient_object = {
+				type = "elven_storm_pink"
+				location = this
+			}
+			## NOTE: This will center the storm around the star!!
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_a_star"
+		name = "Virlhûnar"
+		orbit_distance = 300
+		orbit_angle = 0
+		size = 28
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_energy_3
+
+		
+		}
+		
+		planet = {
+			class = "pc_toxic"
+			name = "Galas Laer"
+			entity = "elven_01_toxic_galaslaer"
+			orbit_angle = 60
+			orbit_distance = 35
+			size = 20
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+
+		planet = {
+			class = ideal_planet_class
+			name = "Helemar"
+			orbit_angle = 125
+			orbit_distance = 20
+			size = 15
+			
+			init_effect = {
+				prevent_anomaly = yes
+
+				if = {
+					limit = {
+						num_guaranteed_colonies < 1
+					}
+
+					change_pc = "pc_molten"
+					set_planet_flag = abandoned_terraforming_planet
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_g_star"
+		name = "Talhûnar"
+		orbit_distance = -50
+		orbit_angle = 60
+		size = 30
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+	
+		planet = {
+			class = "pc_molten"
+			name = "Athrabar"
+			entity = "elven_molten_01_athrabar"
+			orbit_angle = 180
+			orbit_distance = 35
+			size = 18
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				
+				add_modifier = {
+					modifier = "chthonian_planet"
+					days = -1
+				}
+			}
+		}
+	
+		planet = {
+			class = "pc_barren"
+			name = "Earemar"
+			orbit_angle = 90
+			orbit_distance = 15
+			size = 18
+			
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+	
+		planet = {
+			class = "pc_gas_giant"
+			name = "Calenbar"
+			entity = "elven_01_gas_giant_calenbar"
+			orbit_angle = 45
+			orbit_distance = 23
+			size = 30
+			
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+
+		planet = {
+			class = "pc_barren"
+			name = "Mixa"
+			entity = "elven_01_barren_01_mixa"
+			orbit_distance = 25
+			orbit_angle = 60
+			size = 30
+			has_ring = yes
+			
+			init_effect = {
+				prevent_anomaly = yes
+				
+				clear_deposits = yes
+				add_deposit = d_physics_4
+				
+				add_modifier = {
+					modifier = "elven_storm_world_modifier"
+					days = -1
+				}
+				
+			}
+		}
+	}
+
+	planet = {
+		class = "pc_k_star"
+		name = "Lhûanar"
+		orbit_distance = 0
+		orbit_angle = 80
+		size = 27
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+	
+		planet = {
+			class = "pc_molten"
+			name = "Ilfirin"
+			entity = "elven_01_molten_ilfirin"
+			orbit_angle = -135
+			orbit_distance = 30
+			size = 16
+			
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+	
+		planet = {
+			class = "pc_barren"
+			name = "Sarn Seron"
+			entity = "elven_01_barren_sarnseron"
+			orbit_angle = 235
+			orbit_distance = 20
+			size = 30
+			
+			init_effect = {
+				clear_deposits = yes
+			}
+			
+			moon = {
+				class = "pc_barren"
+				name = "Caleneth"
+				entity = "elven_barren_01_caleneth"
+				orbit_angle = 45
+				orbit_distance = 14
+				size = 17
+				
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+				}
+			}
+		}
+
+		planet = {
+			name = "Lhûmar"
+			class = ideal_planet_class
+			home_planet = yes
+			orbit_angle = 210
+			orbit_distance = 40
+			size = 21
+			has_ring = no
+			
+			starting_planet = yes
+			flags = { lhuren_capital elven_shield_start }
+			
+			init_effect = {
+				if = {
+					limit = {
+						is_planet_class = pc_ocean
+					}
+	
+					set_planet_entity = {
+						entity = "elven_ocean_2_lhumar"
+					}
+				}
+			}
+		
+			moon = {
+				class = pc_barren
+				name = "Lotesil"
+				size = 14
+				orbit_angle = 25
+				orbit_distance = 15
+	
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+				}
+			}
+			
+			moon = {
+				class = "pc_barren"
+				name = "Isilaurea"
+				entity = "elven_barren_03_isilaurea"
+				orbit_angle = 180
+				orbit_distance = 0
+				size = 9
+				
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+				}
+			}
+		}
+
+		planet = {
+			class = "pc_barren"
+			name = "Carag Gûr"
+			entity = "elven_01_barren_caraggur"
+			orbit_distance = 30
+			orbit_angle = 162
+			size = 20
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_b_star"
+		name = "Anarher"
+		orbit_distance = 0
+		orbit_angle = 90
+		size = 32
+
+		flags = { starting_mining_target }
+	
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_energy_5
+		}
+	
+		planet = {
+			class = "pc_toxic"
+			name = "Gwaewende"
+			entity = "elven_barren_02_gwaewende"
+			orbit_angle = 0
+			orbit_distance = 55
+			size = 25
+			
+			init_effect = {
+				clear_deposits = yes
+				add_deposit = d_society_2
+			}
+		}
+
+		planet = {
+			class = "pc_gas_giant"
+			name = "Fael Barad"
+			entity = "elven_01_gas_giant_faelbarad"
+			orbit_distance = 30
+			orbit_angle = 170
+			size = 30
+			
+			init_effect = {
+				prevent_anomaly = yes
+	
+				clear_deposits = yes
+				add_deposit = d_zro_deposit_1
+			}
+			
+			moon = {
+				class = "pc_barren"
+				name = "Luineth"
+				entity = "elven_01_barren_03_issilmi"
+				orbit_distance = 20
+				orbit_angle = random
+				size = 9
+				
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+				}
+			}
+		}
+
+		planet = {
+			class = ideal_planet_class
+			name = "Gilgezu"
+			orbit_angle = 125
+			orbit_distance = 20
+			size = 13
+			
+			init_effect = {
+				prevent_anomaly = yes
+
+				if = {
+					limit = {
+						num_guaranteed_colonies < 2
+					}
+
+					change_pc = "pc_barren"
+					
+				}
+			}
+		}
+	}
+	
+	planet = {
+		class = "pc_m_star"
+		name = "Anardil"
+		orbit_distance = 50
+		orbit_angle = 45
+		size = 35
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+		}
+
+		planet = {
+			class = "pc_gas_giant"
+			name = "Voronar"
+			entity = "elven_01_gas_giant_voronar"
+			orbit_distance = 60
+			orbit_angle = 60
+			size = 30
+			has_ring = yes
+			
+			init_effect = {
+				prevent_anomaly = yes
+	
+				clear_deposits = yes
+			}
+			
+			moon = {
+				class = "pc_barren_cold"
+				name = "Dagoreth"
+				entity = "elven_barren_02_dagoreth"
+				orbit_distance = 25
+				orbit_angle = 125
+				size = 12
+				
+				init_effect = {
+					prevent_anomaly = yes
+					clear_deposits = yes
+				}
+			}
+			
+			moon = {
+				class = "pc_barren_cold"
+				name = "Firieth"
+				orbit_distance = 12
+				orbit_angle = 130
+				size = 16
+				
+				init_effect = {
+					clear_deposits = yes
+				}
+			}
+		}
+	}
+
+	change_orbit = -300
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}
+	
+	planet = {
+		name = "369-Annien"
+		class = "pc_asteroid"
+		orbit_distance = 80
+		orbit_angle = 0
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_minerals_3
+		}
+	}
+	
+	planet = {
+		name = "994-Delien"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 110
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_3
+		}
+	}
+		
+	planet = {
+		name = "635-Laelwen"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 75
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_2
+		}
+	}
+	
+	planet = {
+		name = "119-Níthien"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 50
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			clear_deposits = yes
+			add_deposit = d_minerals_2
+		}
+	}
+	
+	planet = {
+		class = "pc_barren"
+		name = "Quellemar"
+		entity = "elven_barren_03_quellemar"
+		orbit_angle = random
+		orbit_distance = 45
+		size = 25
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+	
+	#change_orbit = 300
+
+}

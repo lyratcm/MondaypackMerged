@@ -1,0 +1,226 @@
+﻿##################
+## Aenarí NAMES ##
+##################
+
+## Pseudo-Gaulish! What's not to love?
+
+eos_namelist_elf_aenari = {
+	randomized = no
+
+	ship_names = {
+		generic = {
+			Ablontí Acedalacuorí Acetunorí Aciorí Acodovenorí Actiorí Acuorí Adecí Adorí Adserí Aducí Aerolonorí Aetarí Agalarí Agoctuorí Alarí Alecí Alirerí Alucuorí Aminturí Anamiserí Ancetí Ancoruuití Ancotielí Andirí Andorí Andotuorí Anecí Anedarí Anemí Anessí Anetí Anicí Aniletorí Anillí Anindí Anirí Anití Annamorí Annorí Anodeuerí Anotuorí Antindotarí Anuesí Anurotí Aratertuorí Areluorí Arnirí Arundí Aððetí Aððuressuotí Ataððidí Atedí Ategirí Atelontí Aterití Aticirí Atigarí Atileceí Atominí Axonipindomoncorí Axtirí Barextí Benití Bitodí Blandí Blantí Bopotadanací Brirí Broððopiepassucí Calotussuodonorí Camotí Carunní Carí Catesí Celsedí Cenarí Cenerí Cenisellorí Cerurí Cetatí Cigní Cilacuorí Cillarí Cirigní Ciromí Ciroreí Ciruecetí Ciruossití Cirí Codurí Conerí Cononecí Contí Cosellí Cotudidí Coxsrí Cupuorí Cuððocatirí Dantalorí Dolerí Domigodí Donarí Dosominí Dotatí Doxoní Druerí Eairilirí Ecirí Ecuorí Ellirí Emoní Ernondouí Ilutací Incsorciotaxidí Ixscotií Ladatevosí Landaslí Landisí Lantaní Laratí Lasadí Lasuorí Lerencarí Liarí Losorinecí Lotuorí Marcirí Miruorí Moccirí Morarí Nadiaserí Nallerí Niiocirí Nolirí Nonuoní Norallí Notemnirintontorí Nugeciaxtí Nunirí Nurnirí Omuorí Rascarí Ratarí Recirí Regocí Rhantí Ricuorí Riderecí Rigeí Rinepuirí Ruirí Saacarí Sariorí Saruet Saruniatorí Sarí Savetirí Secorí Sedorí Seiorí Seirí Setuorí Siantarí Sinuorí Siní Sitiorí Socarcití Socimacuorí Sodedí Soduorí Sotoruorí Tadirí Tanerí Tanonarí Tanorí Tentorí Terirí Tibenuorí Tilacorí Tinirí Tirnivaní Titalluorí Toripí Trempieturí Ueraussorí Ullevuorí Uxiogí Varcerí Vunitorí
+		}
+		
+		corvette = {
+
+		}
+		
+		constructor = {
+		}
+		
+		colonizer = {
+		}
+		
+		science = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		mining_station = { }
+		research_station = { }
+		observation_station = { }
+		
+		transport = { }
+
+		military_station_small = { }
+
+		ion_cannon = { }
+
+		titan = { }
+
+		colossus = { }
+
+		military_station_small = { }
+	}
+
+	fleet_names = {
+		sequential_name = "%O% Rissuis"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Toncpan Ciriioní"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Toncpan Seretirucotí"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Toncpan Seretirucotí"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Toncpan Seretirucotí"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Toncpan Dessindí"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Toncpan Ellirí"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Toncpan Tenapí"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Toncpan Seirí"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Toncpan Atognoní"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Toncpan Nedeirí"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Toncpan Ciriioní"
+		}
+
+		psionic_army = { 
+			sequential_name = "%O% Toncpan Alirelí"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Toncpan Laxscí"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Toncpan Escerí"
+		}
+
+		occupation_army = {
+			sequential_name = "%O% Toncpan Alotetí"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Toncpan Alotetí"
+		}
+
+		primitive_army = {
+			sequential_name = "Toncpan Anacuratemuní %C%"
+		}
+		
+		industrial_army = {
+			sequential_name = "Toncpan Cossoní %C%"
+		}
+		
+		postatomic_army = {
+			sequential_name = "Toncpan Ancatoí %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Acant Accant Aetallicuet Aetoban Ainoloris Anaigocracot Ancan Anecan Anedionnura Anegutodona Aneniotiio Aneta Aniceva Aniessonis Aninont Anonta Anoridoteis Anorinc Anotendom Anoxidua Anuconot Apant Aracanot Arionncisses Asilon Aððac Aððemiiotuocas Aððucetot Atierenonis Atinpemus Atiranotis Atossam Aucuet Aunacadine Aunantuet Aunorocca Axtadatet Axtasincsena Axtem Axtetollu Axtide Axtipiretta Axtippe Axtonde Axtulom Axtun Axtuna Baban Balantas Bamadot Banaxta Banum Basabon Besumintis Birollascuet Blacagonte Blapon Briceniveca Bridegitoca Brinticuet Brirele Broccunda Bronuapis Canota Carantis Carela Carinines Cartam Caððantun Caððindeledinis Cecan Cede Cellecas Cellica Cellinuis Celseva Cemnecias Cenuiris Cercas Certuinessamis Cesci Cetis Cetodur Cieporiettis Ciiupa Cilant Cillanali Cinita Cipacia Ciranant Cirouices Cirteralia Cirtot Conue Corepa Coricouta Corisca Coriscobenc Cosanobia Coscos Cosicolot Cosis Cosontoun Cosses Delluri Docasse Droxis Eaines Ecippilanus Elletiorubinne Enopa Epponc Ettasslimpe Gimondundexonta Ignica Irempe Ixsuet Laccat Laces Landias Landisalse Landotuca Lanipabitac Lantene Larioððecet Lartenutia Lassa Latenaua Latucisca Ledan Lintocenidus Litocia Lonascos Malsacuet Merenta Merodit Minda Mioten Neremn Nianuruet Ninda Noxsca Nuet Rades Rantan Rediepocuet Redsa Retecinne Retis Ridan Ruccottan Sederes Sempe Senintoda Senuet Seonitit Seonnan Seonum Serant Seta Sindinda Sinencia Siogot Sirecia Socetonas Sognirus Sonnet Sontidesa Soraxs Sorondetia Sos Teban Tectan Tecuet Tendonta Teneps Tiartentillila Tignucaguet Tindan Tinuona Tociroces Toctia Tocuet Toman Tomant Tondonara Toron Tortaun Tunan Uodan Vanolictoriia Vanosamas Vanuniiotilona Varcitodis Vidixs Vonicuet Vortatia
+			}
+		}
+		
+		pc_desert = {
+			names = {
+
+			}
+		}
+		
+		pc_arid = {
+			names = {
+				
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+				
+			}
+		}
+		
+		pc_continental = {
+			names = {
+				
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+				
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+				
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+				
+			}
+		}
+
+		pc_alpine = {
+			names = {
+				
+			}
+		}
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		default = {
+			first_names_male = {
+				Abesios Abopos Abudos Acatos Acionimus Adinos Amagos Ancatos Ancetos Ancinis Ancontas Ancosis Andagin Anderouros Aniacos Anoxes Anteagnas Antenodos Antotas Apillos Aremagios Arimos Arossos Artoiamos Artos Atanos Atecundos Atesos Atiasos Atidiniios Atios Atiððidati Atiððintas Atonas Atoniios Atotreras Axtoros Axtos Aððediion Aððedilli Aððutalos Balinos Batos Birunnos Blaios Bocios Breððodis Cabados Caballos Cadacis Caledos Cantantipos Carantios Carilos Cattos Caturos Celidas Cellomos Celsis Celsulon Ceminos Cenaros Cenedas Ceritos Cernos Ceteððili Cexamos Cibantas Cionides Ciremmos Cirimmos Ciromerus Ciroras Ciros Cissuis Codotos Comanos Comaros Corctas Cossacos Ecurodes Garilos Gartos Giapos Inodes Landigenios Landos Lannedinetos Lanteras Lantocomos Licotanos Litogenos Litos Matinos Melos Mernessos Metaris Mniator Nirinic Otipas Raminnescos Rixos Sanos Satas Seniios Seolssos Seonilluetes Sibos Silos Sinos Sintos Soccamis Somacos Somonsos Soussuos Soxtos Sutticos Tacos Tascos Telenas Tortos Toruidos Vanenatiios Vanumos
+			}
+			first_names_female = {
+				Aesiua Aeððicunia Ainempe Allia Allica Ana Anaira Anaroveci Ancana Ancara Ancia Ancira Ancirela Ancueta Andenatia Anderina Andicaua Anduenna Anesada Anextia Anica Anilena Anillita Arisa Arisune Atecanara Atenadicia Atendaca Atenmaresa Atenodina Atenorada Atia Atiena Atira Atiranda Aucissa Audenta Audissa Aunela Aurompe Auugebinda Auuimpica Avonne Axsonompe Aððeta Aððinora Aððira Banona Blara Britivenda Bruega Buscilla Cantissenna Carina Carissa Cassa Catia Celintona Celsana Celsina Cenaua Cenda Cendalana Cenilira Cennia Ceta Cilora Cincissa Cindana Cingetissa Cinia Cira Cirampe Cirena Cirenta Ciruna Citanda Comeneta Coððelena Dara Darica Decora Deiana Edanna Eliomara Emarena Enica Esiana Ladia Landa Landenteda Landicena Landonaretia Lanica Lelia Lemisonia Lirosa Locinna Londa Lovernisca Metilia Mimenta Mirela Nairecimpe Nalompe Naretompe Narieta Narina Naticonta Netoria Niada Nimonicna Nisiedia Norica Nota Redonisa Redsa Retecimpe Retica Reððetemponta Rina Rutenica Sana Seara Sedebelia Sedenta Sedica Selompe Senda Senesa Senica Senna Sentica Seodetana Sidanta Sonatana Sonatessa Sulara Tacia Tarna Taurica Taðða Tesia Tigendena Tilenarua Uenda Velua Verctissa Veritanica
+			}
+			second_names = {
+				Accamixan Acegerodan Acindam Acorecin Adecanem Aennan Agatien Ainenon Alloden Alomen Anaciman Anacton Anapon Anaslint Ancegun Ancodim Andotelin Aneden Anedion Anelan Anetaces Anionan Anirtem Anodinem Anomassim Anondom Anonem Anopallan Anotanon Antedunin Antenan Antenoton Antetorin Antoncnen Antonelim Antunen Anurovor Ardotarant Arianacuet Ariððu Ascatenolindum Ascetasan Atadien Atanned Atecant Ateran Atertannan Atetad Aticopu Atiedemitton Atimonon Atirdessin Atitanton Atobondaton Atocomnan Atolpunan Atoniogin Atonosan Atontaret Atossam Atuaxtan Atucameððoru Atuntan Auneton Auratacen Axtarisan Axtasan Axtecin Axtenan Axtenin Axteontin Axtiran Axtosan Axtunin Axtuton Aððaran Aððatien Aððatim Aððendon Aððigan Aððonam Badaman Balonin Batebam Bepiiudom Blarolim Bopecagoriopan Brannatun Brareginim Brotogerdum Cagaton Calatarint Calatimban Cananotin Candossegatarrenon Canecepet Canilanotenc Canilarin Canilon Canobam Capponon Casinorin Cateban Catodacen Catudem Caððimien Caððissitan Caððolerin Ceboneran Cellacuin Cellin Cellodin Cellonesu Celopillonet Celsapos Celsipegin Cenatin Cendococ Ceniccabirdin Cennceronpiran Centissin Cetarin Cicarittan Cicelen Ciionocenant Cilan Cimnan Cintoaram Ciratemon Ciredan Ciretin Ciriion Cirodim Ciððenon Coiascen Conaban Corctadirintum Coretundaardin Cosaadictom Cosoman Cotirinin Cotucusien Coxien Cusittulenan Darasan Dirittan Dodisecit Dolaciscan Doxertin Dridiin Enimenmenant Gacatendion Lacatiom Laciman Ladaxavacen Landanan Landasan Landisin Landomnesce Landuoson Lanoxalin Lantinon Laocin Latigem Latoron Liamonimpin Mecimanien Miantiniram Micarctor Midoran Minidan Minollattan Natonan Necigor Nentenottan Nerueton Nicodim Nidolan Noreten Nuranin Ogenidan Peconnon Ranuscan Raselan Redien Rennidin Rinodsant Ronidiiotien Ruccottan Ruenin Ruisan Samosartallan Selironem Seodeniben Seonedenon Seððanem Sigatim Sigirriniren Simendant Siorum Siosin Sirosan Sitomin Sobesinetir Sogorin Sondomapon Sonocan Sonontimassin Soriterocen Sotacexton Soxanan Sudarogen Sudertonc Suedinecuducen Sulotegac Tariiuroncsin Tenocan Tibemian Tibidiet Tidesses Tilortan Tirocolien Tocancimon Tocunuennan Todacunac Tolatien Toncnaman Tontatonc Urcotin Vanamin Vanoban Vanorenon Vasirilan Verentolan Vetesin
+			}
+			regnal_first_names_male = {
+				Abesios Abopos Abudos Acatos Acionimus Adinos Amagos Ancatos Ancetos Ancinis Ancontas Ancosis Andagin Anderouros Aniacos Anoxes Anteagnas Antenodos Antotas Apillos Aremagios Arimos Arossos Artoiamos Artos Atanos Atecundos Atesos Atiasos Atidiniios Atios Atiððidati Atiððintas Atonas Atoniios Atotreras Axtoros Axtos Aððediion Aððedilli Aððutalos Balinos Batos Birunnos Blaios Bocios Breððodis Cabados Caballos Cadacis Caledos Cantantipos Carantios Carilos Cattos Caturos Celidas Cellomos Celsis Celsulon Ceminos Cenaros Cenedas Ceritos Cernos Ceteððili Cexamos Cibantas Cionides Ciremmos Cirimmos Ciromerus Ciroras Ciros Cissuis Codotos Comanos Comaros Corctas Cossacos Ecurodes Garilos Gartos Giapos Inodes Landigenios Landos Lannedinetos Lanteras Lantocomos Licotanos Litogenos Litos Matinos Melos Mernessos Metaris Mniator Nirinic Otipas Raminnescos Rixos Sanos Satas Seniios Seolssos Seonilluetes Sibos Silos Sinos Sintos Soccamis Somacos Somonsos Soussuos Soxtos Sutticos Tacos Tascos Telenas Tortos Toruidos Vanenatiios Vanumos
+			}
+			regnal_first_names_female = {
+				Aesiua Aeððicunia Ainempe Allia Allica Ana Anaira Anaroveci Ancana Ancara Ancia Ancira Ancirela Ancueta Andenatia Anderina Andicaua Anduenna Anesada Anextia Anica Anilena Anillita Arisa Arisune Atecanara Atenadicia Atendaca Atenmaresa Atenodina Atenorada Atia Atiena Atira Atiranda Aucissa Audenta Audissa Aunela Aurompe Auugebinda Auuimpica Avonne Axsonompe Aððeta Aððinora Aððira Banona Blara Britivenda Bruega Buscilla Cantissenna Carina Carissa Cassa Catia Celintona Celsana Celsina Cenaua Cenda Cendalana Cenilira Cennia Ceta Cilora Cincissa Cindana Cingetissa Cinia Cira Cirampe Cirena Cirenta Ciruna Citanda Comeneta Coððelena Dara Darica Decora Deiana Edanna Eliomara Emarena Enica Esiana Ladia Landa Landenteda Landicena Landonaretia Lanica Lelia Lemisonia Lirosa Locinna Londa Lovernisca Metilia Mimenta Mirela Nairecimpe Nalompe Naretompe Narieta Narina Naticonta Netoria Niada Nimonicna Nisiedia Norica Nota Redonisa Redsa Retecimpe Retica Reððetemponta Rina Rutenica Sana Seara Sedebelia Sedenta Sedica Selompe Senda Senesa Senica Senna Sentica Seodetana Sidanta Sonatana Sonatessa Sulara Tacia Tarna Taurica Taðða Tesia Tigendena Tilenarua Uenda Velua Verctissa Veritanica
+			}
+			regnal_second_names = {
+				Accamixan Acegerodan Acindam Acorecin Adecanem Aennan Agatien Ainenon Alloden Alomen Anaciman Anacton Anapon Anaslint Ancegun Ancodim Andotelin Aneden Anedion Anelan Anetaces Anionan Anirtem Anodinem Anomassim Anondom Anonem Anopallan Anotanon Antedunin Antenan Antenoton Antetorin Antoncnen Antonelim Antunen Anurovor Ardotarant Arianacuet Ariððu Ascatenolindum Ascetasan Atadien Atanned Atecant Ateran Atertannan Atetad Aticopu Atiedemitton Atimonon Atirdessin Atitanton Atobondaton Atocomnan Atolpunan Atoniogin Atonosan Atontaret Atossam Atuaxtan Atucameððoru Atuntan Auneton Auratacen Axtarisan Axtasan Axtecin Axtenan Axtenin Axteontin Axtiran Axtosan Axtunin Axtuton Aððaran Aððatien Aððatim Aððendon Aððigan Aððonam Badaman Balonin Batebam Bepiiudom Blarolim Bopecagoriopan Brannatun Brareginim Brotogerdum Cagaton Calatarint Calatimban Cananotin Candossegatarrenon Canecepet Canilanotenc Canilarin Canilon Canobam Capponon Casinorin Cateban Catodacen Catudem Caððimien Caððissitan Caððolerin Ceboneran Cellacuin Cellin Cellodin Cellonesu Celopillonet Celsapos Celsipegin Cenatin Cendococ Ceniccabirdin Cennceronpiran Centissin Cetarin Cicarittan Cicelen Ciionocenant Cilan Cimnan Cintoaram Ciratemon Ciredan Ciretin Ciriion Cirodim Ciððenon Coiascen Conaban Corctadirintum Coretundaardin Cosaadictom Cosoman Cotirinin Cotucusien Coxien Cusittulenan Darasan Dirittan Dodisecit Dolaciscan Doxertin Dridiin Enimenmenant Gacatendion Lacatiom Laciman Ladaxavacen Landanan Landasan Landisin Landomnesce Landuoson Lanoxalin Lantinon Laocin Latigem Latoron Liamonimpin Mecimanien Miantiniram Micarctor Midoran Minidan Minollattan Natonan Necigor Nentenottan Nerueton Nicodim Nidolan Noreten Nuranin Ogenidan Peconnon Ranuscan Raselan Redien Rennidin Rinodsant Ronidiiotien Ruccottan Ruenin Ruisan Samosartallan Selironem Seodeniben Seonedenon Seððanem Sigatim Sigirriniren Simendant Siorum Siosin Sirosan Sitomin Sobesinetir Sogorin Sondomapon Sonocan Sonontimassin Soriterocen Sotacexton Soxanan Sudarogen Sudertonc Suedinecuducen Sulotegac Tariiuroncsin Tenocan Tibemian Tibidiet Tidesses Tilortan Tirocolien Tocancimon Tocunuennan Todacunac Tolatien Toncnaman Tontatonc Urcotin Vanamin Vanoban Vanorenon Vasirilan Verentolan Vetesin
+			}
+		}
+	}
+}

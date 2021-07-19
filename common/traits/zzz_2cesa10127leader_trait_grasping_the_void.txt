@@ -1,0 +1,16 @@
+leader_trait_grasping_the_void = {
+    cost = 69
+    randomized = no
+    initial = no
+    modification = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_home_in_the_sky_est_2.dds"
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    modifier = {
+        country_starbase_capacity_mult = 0.2
+    }
+}

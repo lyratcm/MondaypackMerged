@@ -1,0 +1,22 @@
+trait_ruler_ancestral_knowledge = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_ancestral_knowledge.dds"
+    modifier = {
+        edict_length_mult = 0.1
+        country_unity_produces_mult = 0.06
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    requires_traits = {
+        trait_genetic_memory
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

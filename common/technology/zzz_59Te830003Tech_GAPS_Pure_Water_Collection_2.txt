@@ -1,0 +1,33 @@
+Tech_GAPS_Pure_Water_Collection_2 = {
+    icon = "Tech_GAPS_Pure_Water_Collection"
+    area = society
+    category = {
+        new_worlds
+    }
+    is_rare = yes
+    is_dangerous = yes
+    cost = 4000
+    cost_per_level = 4000
+    tier = 1
+    levels = 4
+    weight = 85
+    prerequisites = {
+        "Tech_GAPS_Pure_Water_Collection_1"
+    }
+    potential = {
+        has_origin = Origin_GAPS_Aquaifiers
+        not = {
+            has_technology = Tech_GAPS_Pure_Water_Collection_2
+        }
+    }
+    modifier = {
+        planet_jobs_sr_GAPS_water_produces_mult = 0.15
+        planet_buildings_sr_GAPS_water_produces_mult = 0.15
+    }
+    weight_modifier = {
+        factor = 1
+    }
+    ai_weight = {
+        factor = 100
+    }
+}
