@@ -1,0 +1,47 @@
+@med = 8
+@planet_type_bonus = 1.5
+d_lush_jungle = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_food
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_fungal_caves
+        d_fertile_lands
+        d_great_river
+        d_kelp_forests
+    }
+    planet_modifier = {
+        district_farming_max = 2
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+            is_planet_class = pc_tropical
+            is_planet_class = pc_ocean
+            is_planet_class = pc_desertislands
+            is_planet_class = pc_mangrove
+            is_planet_class = pc_wetswamp
+            is_planet_class = pc_hajungle
+            is_planet_class = pc_cenote
+            is_planet_class = pc_biolumen
+            is_planet_class = pc_oasis
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_graveyard
+            is_planet_class = pc_floating
+            is_planet_class = pc_crystal
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_primal
+        }
+    }
+    drop_weight = {
+        weight = @med
+        modifier = {
+            factor = @planet_type_bonus
+            is_wet = yes
+        }
+    }
+}

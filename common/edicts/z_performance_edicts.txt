@@ -1,0 +1,92 @@
+###_z pf editcts	###########################################################################################
+
+#_manually checking
+z_performance_manual_edt = {
+	length = @z_fw_edict_instant
+	icon = "GFX_z_fw_edict_yellow"
+	edict_cap_usage = 0
+	ai_weight = { weight = 0 }
+
+	#resources = {
+	#	category = edicts
+	#	cost = {
+	#		energy = 0
+	#	}
+	#}
+
+	potential = {
+		is_ai = no
+		NOT = { has_global_flag = z_modmenu_installed }
+	}
+	allow = { NOT = { has_global_flag = z_pf_manual_checking_cd } }
+	effect = {
+		hidden_effect = {
+			set_timed_global_flag = { flag = z_pf_manual_checking_cd days = 10 }
+			z_pf_eft_global_cd = yes	#_设置pf CD
+			every_country = {
+				limit = { z_pf_trgr_cntr_valid = yes }
+				country_event = { id = z_performance.6 days = 2 random = 1 }
+			}
+			random_country = {
+				limit = { is_ai = no }
+				country_event = { id = z_pf_heup.1 }
+			}
+		}
+	}
+}
+#_manually checking own
+z_pf_edt_manual_own = {
+	length = @z_fw_edict_instant
+	icon = "GFX_z_fw_edict_yellow"
+	edict_cap_usage = 0
+	ai_weight = { weight = 0 }
+
+	potential = {
+		is_ai = no
+		NOT = { has_global_flag = z_modmenu_installed }
+	}
+	allow = { NOT = { has_global_flag = z_pf_manual_checking_cd } }
+	effect = {
+		hidden_effect = {
+			set_timed_global_flag = { flag = z_pf_manual_checking_cd days = 10 }
+			#_自动降级/人口检测
+			country_event = { id = z_performance.6 }
+			#_其他国家添加禁止执行flag
+			every_country = {
+				limit = { NOT = { is_same_value = root } }
+				set_timed_country_flag = { flag = z_pf_flg_cntr_heup_on days = 1 }
+			}
+			#_执行人口迁移
+			country_event = { id = z_pf_heup.1 }
+		}
+	}
+}
+
+#_初始化
+z_performance_initialization_edt = {
+	length = @z_fw_edict_instant
+	icon = "GFX_z_fw_edict_blue"
+	edict_cap_usage = 0
+	ai_weight = { weight = 0 }
+
+	potential = {
+		NOT = { has_global_flag = z_performance_installed }
+	}
+	allow = { is_ai = no }
+	effect = {
+		hidden_effect = {
+			set_global_flag = z_performance_installed
+			
+			set_global_flag = z_pf_job_check_full
+			#set_global_flag = z_performance_always
+			#remove_global_flag = z_performance_high
+			#remove_global_flag = z_performance_mid
+			#remove_global_flag = z_performance_low
+			#remove_global_flag = z_performance_never
+			#set_global_flag = z_pf_uep_check_disabled
+			set_global_flag = z_pf_flg_glbl_demote_noai
+		}
+	}
+	
+	ai_weight = { weight = 0 }
+}

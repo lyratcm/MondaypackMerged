@@ -1,0 +1,126 @@
+origin_elven_sunless_realms = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elven_sunless_realms.dds"
+	picture = GFX_origins_elven_sunless_realms
+
+	starting_colony = pc_lunari_arctic
+	habitability_preference = pc_lunari_arctic
+	initializers = { elven_system_lunari_initializer }
+	max_once_global = yes
+
+	possible = {
+		#species = { value = ELVEN }
+		authority = { NOT = { value = auth_machine_intelligence } }
+	}
+
+	description = "origin_tooltip_elven_sunless_realms_effects"
+
+	traits = {
+
+	}
+
+	advanced_start = yes
+
+	# NOTE: Somehow AI is still picking our stuff even with base = 0. Commenting out in the hopes that ends it.
+	# random_weight = {
+	# 	base = 0
+	# }
+}
+
+origin_elven_foundations = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elven_foundations.dds"
+	picture = GFX_origins_elven_foundations
+
+	initializers = { elven_system_imperial_initializer }
+	max_once_global = yes
+
+	possible = {
+		#species = { value = ELVEN }
+		authority = { NOT = { value = auth_machine_intelligence } }
+	}
+
+	description = "origin_tooltip_elven_foundations_effects"
+
+	traits = {
+
+	}
+
+	advanced_start = yes
+
+	# random_weight = {
+	# 	base = 0
+	# }
+}
+
+origin_elven_arcadian_symbiosis = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elven_arcadian_symbiosis.dds"
+	picture = GFX_origins_elven_arcadian_symbiosis
+
+	starting_colony = pc_continental
+	habitability_preference = pc_continental
+	initializers = { elven_system_gaul_initializer }
+	max_once_global = yes
+
+	playable = {
+		OR = {
+			host_has_dlc = "Plantoid"
+			host_has_dlc = "Ancient Relics Story Pack"
+		}
+	}
+
+	possible = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		civics = {
+			value = civic_agrarian_idyll
+			NOT = { value = civic_fanatic_purifiers }
+		}
+	}
+
+	description = "origin_tooltip_elven_arcadian_symbiosis_effects"
+
+	traits = {
+
+	}
+
+	advanced_start = yes
+
+	modifier = { planet_pops_consumer_goods_upkeep_mult = -0.10 }
+
+	# random_weight = {
+	# 	base = 0
+	# }
+}
+
+origin_elven_celestial_throne = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_elven_celestial_throne.dds"
+	picture = GFX_origins_elven_celestial_throne
+
+	initializers = { elven_system_lhuren_initializer }
+	max_once_global = yes
+
+	possible = {
+		authority = { value = auth_imperial }
+		ethics = {
+			OR = {
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+		civics = { value = civic_elven_celestial_grace }
+	}
+
+	description = "origin_tooltip_elven_celestial_throne_effects"
+
+	traits = {
+
+	}
+
+	advanced_start = yes
+
+	# random_weight = {
+	# 	base = 0
+	# }
+}

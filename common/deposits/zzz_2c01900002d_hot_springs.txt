@@ -1,0 +1,49 @@
+@high = 16
+@planet_type_bonus = 1.5
+d_hot_springs = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    category = deposit_cat_energy
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_arid_highlands
+        d_buzzing_plains
+        d_strong_currents
+    }
+    planet_modifier = {
+        district_generator_max = 1
+    }
+    potential = {
+        OR = {
+            is_cold = yes
+            is_wet = yes
+            is_planet_class = pc_nuked
+            is_planet_class = pc_irradiated
+            is_planet_class = pc_superhabitable
+            is_planet_class = pc_floating
+            is_planet_class = pc_technoorganic
+            is_planet_class = pc_crystal
+            is_planet_class = pc_ammonia
+            is_planet_class = pc_sulfur
+            is_planet_class = pc_acid
+            is_planet_class = pc_methane
+            is_planet_class = pc_geothermal
+            is_planet_class = pc_biolumen
+            is_planet_class = pc_karst
+            is_planet_class = pc_primal
+            is_planet_class = pc_storm
+        }
+    }
+    drop_weight = {
+        weight = @high
+        modifier = {
+            factor = @planet_type_bonus
+            is_dry = yes
+        }
+        modifier = {
+            factor = @planet_type_bonus
+            is_pd_exotic = yes
+        }
+    }
+}

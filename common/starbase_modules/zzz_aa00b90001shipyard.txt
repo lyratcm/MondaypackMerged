@@ -1,0 +1,79 @@
+shipyard = {
+    icon = "GFX_starbase_shipyard"
+    section = "ASSEMBLYYARD_STARBASE_SECTION"
+    construction_days = 180
+    initial = yes
+    resources = {
+        category = starbase_modules
+        cost = {
+            alloys = 50
+        }
+        upkeep = {
+            energy = 1
+        }
+    }
+    station_modifier = {
+        starbase_shipyard_capacity_add = 1
+    }
+    ai_build_at_chokepoint = no
+    ai_build_outside_chokepoint = yes
+    ai_weight = {
+        weight = 20
+        modifier = {
+            factor = 100
+            owner = {
+                OR = {
+                    count_owned_starbase = {
+                        count = 0
+                        limit = {
+                            has_starbase_module = shipyard
+                        }
+                    }
+                    AND = {
+                        num_starbases >= 4
+                        count_owned_starbase = {
+                            count < 2
+                            limit = {
+                                has_starbase_module = shipyard
+                            }
+                        }
+                    }
+                    AND = {
+                        num_starbases >= 9
+                        count_owned_starbase = {
+                            count < 3
+                            limit = {
+                                has_starbase_module = shipyard
+                            }
+                        }
+                    }
+                    AND = {
+                        num_starbases >= 15
+                        count_owned_starbase = {
+                            count < 4
+                            limit = {
+                                has_starbase_module = shipyard
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 3
+            has_starbase_module = shipyard
+            count_starbase_modules = {
+                count < 5
+                type = shipyard
+            }
+        }
+        modifier = {
+            factor = 0
+            has_starbase_module = shipyard
+            count_starbase_modules = {
+                count = 5
+                type = shipyard
+            }
+        }
+    }
+}

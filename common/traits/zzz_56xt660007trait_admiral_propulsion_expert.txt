@@ -1,0 +1,21 @@
+trait_admiral_propulsion_expert = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_propulsion_expert.dds"
+    modifier = {
+        ship_speed_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_natural_refiners
+    }
+    ai_weight = {
+        weight = 100
+    }
+}

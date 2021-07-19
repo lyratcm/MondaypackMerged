@@ -1,0 +1,130 @@
+@rw_cost = 1000
+@rw_cost_sr = 50
+@rw_maintenance = 5
+@rw_maintenance_sr = 2
+@rw_district_buildtime = 360
+district_rw_generator = {
+    base_buildtime = @rw_district_buildtime
+    is_capped_by_modifier = no
+    show_on_uncolonized = {
+        uses_district_set = ring_world
+        exists = from
+        from = {
+            OR = {
+                is_gestalt = yes
+                is_fallen_empire = yes
+            }
+        }
+    }
+    potential = {
+        uses_district_set = ring_world
+        exists = owner
+        owner = {
+            is_gestalt = yes
+        }
+    }
+    convert_to = {
+        district_rw_commercial
+    }
+    resources = {
+        category = planet_districts
+        cost = {
+            minerals = @rw_cost
+            rare_crystals = @rw_cost_sr
+        }
+        upkeep = {
+            energy = @rw_maintenance
+            rare_crystals = @rw_maintenance_sr
+        }
+    }
+    triggered_planet_modifier = {
+        planet_housing_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_machine_empire = yes
+            }
+        }
+        job_technician_drone_add = 10
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_hive_empire = yes
+            }
+        }
+        planet_housing_add = 5
+        job_technician_drone_add = 15
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        modifier = {
+            job_technician_add = 10
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        modifier = {
+            job_fe_acolyte_generator_add = 10
+        }
+    }
+    triggered_desc = {
+        trigger = {
+            planet = {
+                has_deposit = d_arcane_generator
+                NOT = {
+                    has_district = district_rw_generator
+                }
+            }
+        }
+        text = arcane_generator_upkeep_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        text = job_technician_drone_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+                is_fallen_empire_spiritualist = no
+            }
+        }
+        text = job_technician_effect_desc
+    }
+    triggered_desc = {
+        trigger = {
+            exists = owner
+            owner = {
+                is_fallen_empire_spiritualist = yes
+            }
+        }
+        text = job_fe_acolyte_generator_effect_desc
+    }
+    ai_resource_production = {
+        energy = 10
+        trigger = {
+            always = yes
+        }
+    }
+}

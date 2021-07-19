@@ -1,0 +1,42 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+# Valshaquellar Restoration
+drow_decision_valshaquellar_repair = {
+	icon = drow_decision_valsh_repair
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+			minerals = 20000
+		}
+	}
+	
+	potential = {
+		exists = space_owner
+		space_owner = { is_same_value = FROM }
+		has_planet_flag = drow_valshaquellar_project
+		NOT = { has_planet_flag = drow_valshaquellar_repaired }
+	}
+	
+	allow = {
+		space_owner = {
+			has_technology = tech_ecological_adaptation
+		}
+	}
+	
+	effect = {
+		# Restoration Complete!
+		custom_tooltip = drow_decision_valshaquellar_repair_tooltip
+		hidden_effect = {
+			planet_event = { id = elven_colony_events.22 }
+		}
+	}
+	
+	ai_weight = {
+		weight = 0
+	}
+}

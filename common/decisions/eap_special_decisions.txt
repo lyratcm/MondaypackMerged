@@ -1,0 +1,145 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+# Mastery of Nature
+decision_eapmastery_of_nature = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+			energy = 5000
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		owner = {
+			has_ascension_perk = eap_mastery_of_nature
+		}
+		NOT = { has_modifier = decision_eapmastery_of_nature }
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = decision_eapmastery_of_nature
+			days = -1
+		}
+		add_deposit = d_AA
+
+		create_message = {
+			type = MESSAGE_TYPE_PLANET_PROSPECTED
+			localization = MESSAGE_PLANET_PROSPECTED
+			days = 30
+			target = this
+			variable = {
+				type = name
+				localization = PLANET
+				scope = this
+			}				
+			variable = {
+				type = name
+				localization = DEPOSIT
+				scope = last_added_deposit
+			}
+		}			
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+
+decision_eapmastery_of_nature2 = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+			energy = 5000
+		}
+	}
+	
+	potential = {
+		habitable_structure = no
+		owner = {
+			has_ascension_perk = eap_mastery_of_nature2
+		}
+		NOT = { has_modifier = decision_eapmastery_of_nature2 }
+	}
+	
+	effect = {
+		add_modifier = {
+			modifier = decision_eapmastery_of_nature2
+			days = -1
+		}
+		add_deposit = d_BB
+
+		create_message = {
+			type = MESSAGE_TYPE_PLANET_PROSPECTED
+			localization = MESSAGE_PLANET_PROSPECTED
+			days = 30
+			target = this
+			variable = {
+				type = name
+				localization = PLANET
+				scope = this
+			}				
+			variable = {
+				type = name
+				localization = DEPOSIT
+				scope = last_added_deposit
+			}
+		}			
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			free_district_slots > 0
+		}
+	}
+}
+
+decision_nzt48 = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 3000
+			food = 3000
+		}
+	}
+	
+	potential = {
+		owner = {
+			has_ascension_perk = eap_transcendent_learning
+			not = { has_ascension_perk = ap_synthetic_evolution }
+		}
+		NOT = { has_modifier = decision_nzt48 }
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = decision_nzt48
+			days = 36000
+		}
+	}
+	
+	ai_weight = {
+		weight = 2
+	}
+}

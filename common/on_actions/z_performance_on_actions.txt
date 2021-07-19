@@ -1,0 +1,101 @@
+###_z pf on_acitons	########################################################################
+
+
+###_normal	#######################################
+on_game_start = {
+	events = {
+		z_performance.12	#_初始状态
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		z_performance.13		#_自动循环trigger
+	#	z_performance.1			#_always-old
+	#	z_performance.2			#_high-old
+	#	z_performance.3			#_mid-old
+	#	z_performance.4			#_low-old
+	#	z_performance.5			#_never-old
+	}
+}
+
+#on_five_year_pulse = {
+#	events = {
+#	}
+#}
+
+
+
+
+#on_monthly_pulse_country = {
+#	events = {		
+#	}
+#}
+
+
+
+
+###_禁用自动检测
+
+#	# This = Planet scope
+#	# From = Country
+#	# FromFrom = Pop
+#	on_pop_grown = {
+#		events = {
+#			z_performance.14
+#		}
+#	}
+#	# This = Planet scope
+#	# From = Country
+#	# FromFrom = Pop
+#	on_pop_assembled = {
+#		events = {
+#			z_performance.14
+#		}
+#	}
+#	# This = Planet
+#	on_district_complete = {
+#		events = {
+#			z_performance.14
+#		}
+#	}
+#	# This = Planet
+#	on_building_complete = {
+#		events = {
+#			z_performance.14
+#		}
+#	}
+#	# This = Planet
+#	on_building_upgraded = {
+#		events = {
+#			z_performance.14
+#		}
+#	}
+
+
+
+
+###_plent destruction	#######################################
+on_destroy_planet_with_PLANET_KILLER_SHIELDER = {
+	events = {
+		z_performance.134	#_[job检测]
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NEUTRON = {
+	events = {
+		z_performance.134	#_[job检测]
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_GODRAY = {
+	events = {
+		z_performance.134	#_[job检测]
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
+	events = {
+		z_performance.134	#_[job检测]
+	}
+}

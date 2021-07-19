@@ -1,0 +1,17 @@
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+		Events_GAPS_Traits_Vanilla.20
+	}
+}
+
+# Executed just as country is changing its government, after the new one is applied
+# THIS = country
+on_post_government_changed = {
+	events = {
+		Events_GAPS_Traits_Vanilla.30
+	}
+}

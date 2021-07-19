@@ -1,0 +1,23 @@
+trait_ruler_arcanist = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_arcanist.dds"
+    modifier = {
+        country_sr_dark_matter_produces_mult = 0.33
+        country_sr_living_metal_produces_mult = 0.33
+        country_sr_zro_produces_mult = 0.33
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    requires_traits = {
+        trait_analytical
+    }
+    ai_weight = {
+        weight = 200
+    }
+}

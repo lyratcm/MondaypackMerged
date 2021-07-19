@@ -1,0 +1,23 @@
+d_buzzing_plains = {
+    is_for_colonizeable = yes
+    use_for_min_max_adjustments = yes
+    use_weights_for_terraforming_swap_types = yes
+    should_swap_deposit_on_terraforming = yes
+    terraforming_swap_types = {
+        d_arid_highlands
+        d_hot_springs
+    }
+    category = deposit_cat_energy
+    planet_modifier = {
+        district_generator_max = 1
+    }
+    potential = {
+        OR = {
+            is_planet_class = pc_gaia
+            is_planet_class = pc_pdshroud
+        }
+    }
+    drop_weight = {
+        weight = 0.01
+    }
+}

@@ -1,0 +1,18 @@
+trait_nervous = {
+    cost = -1
+    initial = yes
+    randomized = yes
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_talented"
+    }
+    allowed_archetypes = {
+        BIOLOGICAL
+        LITHOID
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        leader_skill_levels = -1
+    }
+}

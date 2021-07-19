@@ -1,0 +1,22 @@
+trait_admiral_carrier_commander = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_admiral_carrier_commander.dds"
+    modifier = {
+        weapon_type_strike_craft_weapon_damage_mult = 0.1
+        weapon_type_point_defense_weapon_damage_mult = 0.1
+    }
+    leader_trait = {
+        admiral
+    }
+    leader_class = {
+        admiral
+    }
+    requires_traits = {
+        trait_gifted_pilots
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

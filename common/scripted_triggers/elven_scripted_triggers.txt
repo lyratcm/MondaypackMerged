@@ -1,0 +1,212 @@
+elven_check_for_incompatible_deposits = {
+	OR = {
+		has_deposit = d_drow_planetary_feral_fairies
+		has_deposit = d_drow_planetary_murrpau_sanguine
+		has_deposit = d_drow_planetary_murrpau_sanguine_blocker
+		has_deposit = d_elven_planetary_sentient_dragons
+		has_deposit = d_elven_planetary_sentient_dragons_blocker
+		has_deposit = d_elven_planetary_gardens_of_heaven
+		has_deposit = d_elven_planetary_gardens_of_heaven_blocker
+		has_deposit = d_elven_planetary_daerlas_mina
+		has_deposit = d_elven_planetary_daerlas_mina_blocker
+		has_deposit = d_lunari_planetary_trees
+		has_deposit = d_lunari_planetary_trees_blocker
+		has_deposit = d_lunari_planetary_ice_blossoms
+		has_deposit = d_lunari_planetary_ice_blossoms_blocker
+		has_deposit = d_drow_planetary_glowing_forests
+		has_deposit = d_drow_planetary_glowing_forests_blocker
+		AND = {
+			has_planet_flag = drow_valshaquellar_project
+			NOT = { has_planet_flag = drow_valshaquellar_repaired }
+		}
+	}
+}
+
+elven_is_ps_humongous = {
+	OR = {
+		AND = {
+			planet_size > 41
+			is_moon = yes
+		}
+		AND = {
+			planet_size > 30
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_28_30 = {
+	OR = {
+		AND = {
+			planet_size >= 38
+			planet_size <= 41
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 28
+			planet_size <= 30
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_25_27 = {
+	OR = {
+		AND = {
+			planet_size >= 34
+			planet_size <= 37
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 25
+			planet_size <= 27
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_22_24 = {
+	OR = {
+		AND = {
+			planet_size >= 30
+			planet_size <= 33
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 22
+			planet_size <= 24
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_19_21 = {
+	OR = {
+		AND = {
+			planet_size >= 26
+			planet_size <= 29
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 19
+			planet_size <= 21
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_16_18 = {
+	OR = {
+		AND = {
+			planet_size >= 22
+			planet_size <= 25
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 16
+			planet_size <= 18
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_13_15 = {
+	OR = {
+		AND = {
+			planet_size >= 18
+			planet_size <= 21
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 13
+			planet_size <= 15
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_10_12 = {
+	OR = {
+		AND = {
+			planet_size >= 14
+			planet_size <= 17
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 10
+			planet_size <= 12
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_7_9 = {
+	OR = {
+		AND = {
+			planet_size >= 9
+			planet_size <= 13
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 7
+			planet_size <= 9
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_4_6 = {
+	OR = {
+		AND = {
+			planet_size >= 6
+			planet_size <= 8
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 4
+			planet_size <= 6
+			is_moon = no
+		}
+	}
+}
+
+elven_is_ps_1_3 = {
+	OR = {
+		AND = {
+			planet_size < 6
+			is_moon = yes
+		}
+		AND = {
+			planet_size >= 1
+			planet_size <= 3
+			is_moon = no
+		}
+	}
+}
+
+drow_events_is_xenocidal = {
+	is_species_class = DROW
+	pop_has_trait = trait_drow_xenocidal
+	NOT = {
+		is_enslaved = yes
+		is_being_purged = yes
+	}
+}
+
+drow_events_is_xenocidable = {
+	is_enslaved = no
+	is_robot_pop = no
+	is_being_purged = no
+	NOT = {
+		pop_has_trait = trait_drow_xenocidal
+		pop_has_trait = trait_presapient_proles		
+	}
+}
+
+drow_events_has_xenocidable_ethic = {
+	OR = {
+		pop_has_ethic = ethic_xenophile
+		pop_has_ethic = ethic_pacifist
+		pop_has_ethic = ethic_egalitarian
+	}
+}

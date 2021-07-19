@@ -1,0 +1,16 @@
+z_fw_tech_weap_energy_pd_6 = {
+    area = physics
+    category = {
+        computing
+    }
+    tier = 5
+    cost = @tier5cost1
+    weight = 0
+    ai_update_type = military
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

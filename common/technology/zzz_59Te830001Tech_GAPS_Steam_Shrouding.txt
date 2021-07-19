@@ -1,0 +1,25 @@
+Tech_GAPS_Steam_Shrouding = {
+    icon = "Tech_GAPS_Steam_Shrouding"
+    area = society
+    category = {
+        new_worlds
+    }
+    cost = 0
+    cost_per_level = 0
+    tier = 0
+    levels = 5
+    weight = 0
+    start_tech = no
+    prerequisites = {
+        "Tech_GAPS_Steam_Shrouding"
+    }
+    potential = {
+        has_origin = Origin_GAPS_Aquaifiers
+        not = {
+            has_technology = Tech_GAPS_Steam_Shrouding
+        }
+    }
+    ai_weight = {
+        factor = 0
+    }
+}

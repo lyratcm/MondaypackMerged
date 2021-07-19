@@ -1,0 +1,269 @@
+﻿####################
+## DARK ELF NAMES ##
+####################
+
+## Generic mix of various sources, Drow, Dunmer, and others.
+
+eos_namelist_drow_darkelf = {
+	randomized = no
+
+	ship_names = {
+		
+		## Generic names are a mix of Deverry, Dunmer female, and Drow female names!
+		generic = {
+			Adandario Adraegyn Adralaelia Adramaryn Adranaryn Alaeladar Alalabreena Alananderiel Alanateriel Albany Alodaeldar Alodenaraen Alodenaria Ankorra Anlinlu Annabridar Annalia Annarel
+			Annobandra Arryn Aunduce Baeberiel Balannara Balrae Banalamario Banamaeryn Beramamario Beranna Berobannon Berona Burlaeyas Calamaendar Calenassi Calobreriel Caralaerel Caramagyn
+			Carededanten Careladar Carendra Careriel Carrabedar Carrabrirel Carralessi Carraver Chaannalin Chesvar Contaclya Contamaryn Cruatah Cruelle Cruethys Cruiah Cruinah Cruith
+			Cruithah Cruivah Cruobah Cruonah Cruothah Cruth Dallaelia Darenaladar Dematah Demelle Demethys Demiah Deminah Demith Demithah Demivah Demobah Demonah
+			Demothah Demth Devamaeclya Devederiel Devenaladar Ebabendra Ebobadar Elaentar Elaenteriel Elalendra Elamandra Elbaenderiel Elbamaedanten Elbamantariel Elberedar Enaldar Enenna Enoclya
+			Filballin G'elNeerune Gausdyne Gavobaraen Ginarena Golgatah Golgelle Golgethys Golgiah Golginah Golgith Golgithah Golgivah Golgobah Golgonah Golgothah Golgth Haelraece
+			Haelya Haerestra Halanana Halenderiel Halii Hava Hekatah Hekelle Hekethys Hekiah Hekinah Hekith Hekithah Hekivah Hekobah Hekonah Hekothah Hekth
+			Ilitla Irradra Javamaendario Javana Javeraen Javobrelden Jennaddlaen Jennaedanten Jennananderiel Jhanrae Jhanraera Jysraelene Ladia Laladanten Lamaennon Lamaerel Landabena Landaessi
+			Landalever Landereladar Lilatah Lilelle Lilethys Liliah Lilinah Lilith Lilithah Lilivah Lilobah Lilonah Lilothah Lilth Lirdraeema Lobana Lolatah Lolelle
+			Lolethys Loliah Lolinah Lolith Lolithah Lolivah Lolobah Lolonah Lolothah Lolth Lualalin Manabenteriel Manaentar Manamaendario Manedenna Maneny Manereryn Manoddlaen
+			Marae Marylace Meramaessi Merondra Mine Miru Miynd Molgas Molrymlu Nanerendra Naneria Nephatah Nephelle Nephethys Nephiah Nephinah Nephith Nephithah
+			Nephivah Nephobah Nephonah Nephothah Nephth Nulraana Oloya Pelbalne Phagas QuaNa Quardu Ranaberaen Ranabrimario Ranaddlaen Rananantariel Ranedeberiel Ranededar Rauna
+			Raura Rauraeena Rilrymstra Shelatah Shelelle Shelethys Sheliah Shelinah Shelith Shelithah Shelivah Shelobah Shelonah Shelothah Shelth Sheratah Sherelle Sherethys
+			Sheriah Sherinah Sherith Sherithah Sherivah Sherobah Sheronah Sherothah Sherth Shi'Neertin Shurlanisdra Ssaprymtra Tabatah Tabelle Tabethys Tabiah Tabinah Tabith
+			Tabithah Tabivah Tabobah Tabonah Tabothah Tabth Tala Talabrinnon Talaendario Talanandra Talava Talelden Talenarel Taloria Trikorbreena Ulunina Umraedra Umzayas
+			Valalaentariel Vaynatah Vaynelle Vaynethys Vayniah Vayninah Vaynith Vaynithah Vaynivah Vaynobah Vaynonah Vaynothah Vaynth Vermatah Vermelle Vermethys Vermiah Verminah
+			Vermith Vermithah Vermivah Vermobah Vermonah Vermothah Vermth Vlonviirdra Wylalaeberiel Wylessi Xullfae XullNeer Xullru Xulltace Zardrifay Zedri
+		}
+		
+		colonizer = { }
+
+		sponsored_colonizer = { }
+
+		science = { }
+
+		constructor = { }
+
+		transport = { }
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		battleship = { }
+		
+		titan = { }
+
+		colossus = { }
+
+		juggernaut = { }
+		
+		military_station_small = { }
+
+		ion_cannon = { }
+	}
+
+	# Vaguely Eilistraeen fleets!
+	fleet_names = {
+		random_names = {
+			"Moonfollow Flotilla" "Starwind Flotilla" "Starshade Flotilla" "Darkmane Flotilla" "Starsong Flotilla" "Whispermoon Flotilla" "Moonsong Flotilla" "Nightgrove Flotilla" "Shadefang Flotilla" "Bladegrove Flotilla" 
+		}
+		sequential_name = "%O% Flotilla"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Golem Division"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Warmech Division"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Warmech Division"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Warmech Division"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Defense Brigade"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Attack Division"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Indentured Contingent"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Force"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Undeath Brigade"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Robot Corps"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Robot Defenders"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Psionic Battalion"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Genetic Rampage"
+		}
+		
+		gene_warrior_army = {
+			sequential_name = "%O% Enhanced Division"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Peacekeeper Division"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Robotic Peacekeepers"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			# Mix of generic fantasy planets + Faerun realms!
+			names = {
+				Adon Amedartyl Amela Ametriel Amewanvia Amirvia Aophus Aphone Ater Atrielnac Aviuhiri Babrypso Barth Baucury Benrippe Beshan Bicrone Bithore
+				Bongorix Bonoe Boter Braranope Brarth Briurus Brohethea Brusa Budicury Caecarro Caminope Caneruta Cangaucarro Casvenron Caxerilia Ceron Cezaustea Chadus
+				Charilia Chaunus Chayama Chevoturn Chienia Chogestea Chonkora Chonnuater Cichi Cigretune Ciloter Crenohines Creron Creshan Crion Cruchatania Cumia Cychorbar
+				Daben Dachethea Dania Danion Daphosie Darva Darvin Dasailel Dastagyan Dawantriel Dehonia Denfabar Denianac Denreeas Denselm Dhasaluc Dilmides Dimdy
+				Dimreeas Dimse Dioruta Dippe Doacury Dondurn Drypso Durwanrt Durwanwen Eimia Eldri Eldrilas Elgadur Elvedarr Enzides Enzoth Eoturn Epherth
+				Erus Esdrilyan Esma Esmakul Esrethuth Ethiuq Ganulea Gapirus Gaserth Gatera Geconope "Gippe E5m" Gnorinus Gnoyatania Gnutater Goabos Gogawa
+				Gora Gordribar Gordril Gorswanac Gorth Gorven Gosie Guneyan Hilnichi Hinduturn Ichilles Idronus Ieter Ilnyke Inel Ingeiwen Inlemnac Inrerth
+				Iozuno Jheslark Kadaldur Kalinmis Kapben Karik Ketriel Kevenle Kewëwë Kheldril Kilea Kolara Koyama Kubrogantu Kuepra Kulnunerth Lacarro Latania
+				Levatune Llara Lloporia Llovetera Lolvara Lopagawa Lovonus Lubruyama Lulem Lundoipra Lusa Lutriel Luve Machaturn Madar Madrior Maiadar Maralril
+				Meziyama Minda Mireeor Morvinna Mournel Mourngeil Mournlanal Mournlasa Mournralmis Muonov "Mypso Bh6b" Nagestea Neiphus Neulara Niitania Nonnarth Nonvyria
+				Nuchizuno Nulvomia Nuvuwei Nydonas Obara Obolea Ochiohiri Ogantu Ogarvis Olruwei Oluel Omirt Onderilia Onnorth Oremwen Orrethdarr Ouzuno Peiawen
+				Pemamis Phars Phemeter Phenacarro Phippe Phoater Phutenus Piccinus Piergei Pierven Pubueyama Ranlasle Ranralnac Ratune Relmyria Ridruetune Rilmiuria Risuiwei
+				Roduestea Rolarkyan Rolawë Rowannor Rudranides Rulahar Saeliv Satroth Seditania Selrik Seostea Sephoria Shanarkron Silrypso Simyria Sinzolia Sitazuno Socrotov
+				Strapus Streron Strinda Stroth Strumayama Struxepra Suinus Sygrym Systagron Tagdyyan Tagminsas Tagra Tagvinvor Tephus Testena Tesveel Thearuta Theorus
+				Thibapus Thivonides Thocitov Thopestea Thoth Thoveuthea Thuenia Tilruria Tolagua Totera Trasvenna Trealia Trides Triuq Tryria Tumeshan Uchotune Ugnagua
+				Ustriuq Uvitania Vankoagantu Velvoth Vengiria Vignotis Vohiri Vorth Vumia Xaonides Xasenus Xiphore Xiseohiri Xoaliv Xuanus Xuceron Xulvoalara Xurilia
+				Yalara Yeuzuno Yillarus Zagronoe Zankerth Zavis Zelaskul Zerikra Zeyoter Zimotis Zolla Zubbiwei Zulnion Zuter
+			}
+		}
+		
+		pc_desert = {
+			names = { }
+		}
+		
+		pc_arid = {
+			names = { }
+		}
+		
+		pc_tropical = {
+			names = { }
+		}
+		
+		pc_continental = {
+			names = { }
+		}
+		
+		pc_gaia = {
+			names = { }
+		}
+		
+		pc_ocean = {
+			names = { }
+		}
+		
+		pc_tundra = {
+			names = { }
+		}
+		
+		pc_arctic = {
+			names = { }
+		}
+	}
+
+
+	### CHARACTERS ###
+
+	character_names = {
+
+		default = {
+			# Combination of Star Elf, Drow, and Night Elf!
+			first_names_male = {
+				Aaraim Aaunvir Adiaglim Adimeim Adiraxste Aeleven Aered Aerel Aerevel Aeten Ahror Amryle Aszrly Bae Belinyrin Bhdefein Bhraxid Breleven
+				Brerevel Brevel Brudalorl Bruknaos Calakon Chasnir Chasondre Chasrden Dhisleven Dhisrel Dhisten Didalar Dihatar Ditolar Drragh Duthly Dutoron Eldszid
+				Elltaoth Fiher Filtasai Gemetar Geu Ghlakfein Ghlimsai Ghtar Gohrzz Gokanyr Goraxid Gouthgh Gozlyon Gozmos Gulasorl Hach'rdtar Houknadar Illfeon
+				Illryon Ilzlynar Jeglauon Jheleven Jherel Jherevel Jheril Jheten Kaevvn Kehersai Keint Krlagth Krmph Lykann Lylddar Lytolth Megreak Melry
+				Mobrysoj Moondica Mouleven Moured Mouten Mouvel Nadszer Naordhar Natol Nazmre Nimry Nymevvne Nymlasak Ormale Ouleven Ourel Ouvel Phraak
+				Quildgh Rinagoth Ryor Saildon Saraxr Selnoog Shlasnar Sozmvir Taaunra Tanagrin Teherorl Thaered Thaeril Thaeten Thaevel Tlmryak Tsbrae Tsdszrin
+				Tsha Tshrrin Uraradar Urmryog Vashjra Vaslimd Vurd Wegolvir Welroak Wogosar Yaltar Yathlyn
+			}
+            # Combination of Star Elf, Drow, and Night Elf!
+			first_names_female = {
+				Adora Aillarin Amcodil Amdil Amsidhe Ancoron Andri Anersa Anlavne Antra Ara Arra Beaanrin Beaia Bracatdra Bralasdra Braratdra Braratmra
+                Braretra Calasha Calasle Calinle Calintra Caratdra Careha Cavinle Chaannalin Eaonne Ecatdra Eclaeiira Ecraeira Elasdra Erfae Evindra Evinha Facatha
+                Faebey Faera Falasmra Faratha Ferlanee Ferlath Ginaannana Ginadri Greyco Iniliven IniNa Iraera Iraerae Irsira Irtladra Islamorin Islarin Islivia
+                Jhaelriema Laeva Laredil Larion Laulintra Lauratle Lauredra Livara Luanaune Luanora Malaeria Maraedra Melmiia Melonon Melreth Melrin Melruron Milenida
+                Mirae Nathanna Nene Neranel Nerlamoth Nesandiel Neslael Nesnim Nifcaona Nifninya Niha Nilinle Ninen Ninlivon Ninmien Ninne Niremra Olorara
+                Oniconim Onimarin Pelbalne Qilraelin Raiacoron Raiaminee Raiaonhe Raulii Riconim Rilrayas Shawdaen Shawlanim Shawrod Shynzanil T'rissdil T'risslezira Tellamorod Telmadiel
+                Telonlime Telrilime Telrura Vadra Valasha Valinmra Varedra Vatra ViNeer Zarvar Zelithra Zessraala
+			}
+			# 100% Drow
+			second_names = {
+				Abaliel Abve Areirza Artaran Blunradorn Coav Cobrath Codylban Cormuntyn Dhulasz Elpra Filaran Firagh Gelun Ghadythth Glanlon Glantair Huorth
+				Hylondza Jhalonfar Jhana Jusbyin Jusdythsz Juserth Khaerabae Khalith Khalondlo Lhalogh Lugiel Lugiin Lulon Lulugh Nare Obrath Quaarnrn Quaerban
+				Rhomungh Rrosdyltyn Rrosglossz Rrostyn Ssambra Ssamun T'lityrr Teerab Tlinarnth Tlinerabirn Tlintynth Ulounom Veavlo Venebar Waedyl Waelisth Waesarban Waeve
+				Wynlilo Xaruthban Xilloth Yoegh'arnom Zabosz Zobo 
+			}
+			# 50/50 Night Elf/Drow
+			regnal_first_names_male = {
+				Adilasos Adoha Adohjra Adohris Adohrne Adohrra Adolo Adolone Adorane Adou Aszhane Aszhj Aszhr Aszhrre Aszlois Aszrane Aszrara Aszu
+				Azshais Azshj Azshr Azshris Azshrre Azslora Azsure Berg'artar Brulry Brundain Chasaredan Chasphrn Drdalun Druthzz Duraun Feha Fehane Fehare
+				Fehj Fehrre Felone Felore Fera Ferara Ferare Feura Ghdalica Ghdszdan Ghevvorl Gunag Hach'nirel Houldyr Houlryos Ildegar Ilgosvir Islasdar
+				Jegaunon Karlyog Kathais Kathane Kathara Kathj Katlois Katlore Katra Katrara Katuis Kragltar Krldoin Krlnogar Krranar Learnar Leherste Leinyos
+				Lemryen Lephrd Lybryrin Maarar Mohjis Mohr Mohrne Mohrre Morara Morare Moune Nailddan Nalnor Nymdeica Nymlasgar Nymnirzt Omvlth Reintste
+				Rethlyach Riraxr Rylaud Ryldon Rynagin Ryniroth Ryurnorl Salta Selnoak Shaglel Shrayr Tlildel Urdszvir Urintyr Urthlyfein Vagolach Valrovir Vashais
+				Vashr Vashrre Vaslore Vasrais Vasrane Vasuis Vasune Vasura Vuphron Weklaunor Yaevvnar Yazzhar
+			}
+			# 50/50 Night Elf/Drow
+			regnal_first_names_female = {
+				Ailcoia Aildone Ailmirod Ailnya Ailrion Ananhe Andaeria Anerne Anruriel Arii Baldilce Chesbalre Dhaudri Didu Diraere Diue Dreannee Drecariel
+				Dredil Drehe Ealade Ealaeria Ealaona Easidsa Erva Faenae Faenya Faereen Fereria Fermide Fersidrod G'elrynatra Ginarymna Greyel Greyrii Hadrina
+				Haratin Ilivdiel Ilmuedra Inidara Inimawen Inimilime Iniminee Inirin Inivrafay Iraedy Iscodil Isia Islarin Islivdiel Isnisa Isrewen Jhaelelvin Jhaelrae
+				Jhaelraeala Jhanlin Jhunonia Jyslisyas Laelanida Laon Lirdryl Luarae Madiel Mamion Maraefay Maraelin Meldorin Mellime Melrianrin Melsidon Midy Myno
+				Myraelace Neranona Nerdaen Nerhe Nerlamohe Nerlanee Neron Nesdiel Nifnien Ninrene Ninruel Nullez Nulsranil Nulzana Oloraefay Oloue Onirin Pharynena
+				Phatra Phyrraema Quarra Raiaonel Raiarewen Raudriyas Rauli Rilere Rilrudra Shi'balnil Ssapnona T'rissdrice Talanayiira Teldaia Tellara Telminee Telra Telrieria
+				Telsidron Trilinma Umlinstra Vierre Viliida Yasrymlace Zesskor Zesslesia Zesslystin Zessvaala Zeviir Zillilu
+			}
+			# 100% Drow
+			regnal_second_names = {
+				Abaarnel Abail' Aberabrel Abunom Areirin Blalarymmin Blunlath Blunphreran Cormen Cormlon Cormrivom Dhueir Dhuunlo Fila Filiban Gella Gellath Gellian
+				Gellisar Gellon Gellonil Geltyner Ghaunth Glanbrayl Glandythirn Glanenrn Jhaduna Jusun Khaeirom Lhalotyn Mlezlo Oannlo Philarymmin Phitarr Phiveil Phun
+				Qualalan Quaorlo Quarear Rhomreth Rroslazin Rrostavar Seetarrrymmin Ssamensz T'dythth T'er T'erab Telisrae Telondil Tlinlian Tlinra Tlinreel Uloerlan Ulolasz
+				Wynraban Xartain Xilglossz Xilne Yaeirrel Yariv 
+			}
+		}
+	}
+}

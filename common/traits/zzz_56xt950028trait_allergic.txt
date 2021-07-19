@@ -1,0 +1,21 @@
+trait_allergic = {
+    cost = -1
+    initial = yes
+    randomized = yes
+    improves_leaders = yes
+    allowed_archetypes = {
+        BIOLOGICAL
+    }
+    opposites = {
+        "trait_nerve_stapled"
+        "trait_syncretic_proles"
+        "trait_agrarian"
+    }
+    potential_crossbreeding_chance = 1
+    modifier = {
+        planet_jobs_food_produces_mult = -0.1
+    }
+    slave_cost = {
+        energy = -25
+    }
+}

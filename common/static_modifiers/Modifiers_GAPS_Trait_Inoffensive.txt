@@ -1,0 +1,3 @@
+Country_Modifier_GAPS_Trait_Inoffensive = {
+	country_trust_cap_add = 0.2
+}

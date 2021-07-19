@@ -1,0 +1,22 @@
+civic_efficient_bureaucracy = {
+    potential = {
+        ethics = {
+            NOT = {
+                value = ethic_gestalt_consciousness
+            }
+        }
+        authority = {
+            NOR = {
+                value = auth_corporate
+                value = auth_corporate_fiefdom
+                value = auth_cooperative
+            }
+        }
+    }
+    random_weight = {
+        base = 5
+    }
+    modifier = {
+        country_admin_cap_mult = 0.1
+    }
+}

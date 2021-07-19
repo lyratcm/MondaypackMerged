@@ -1,0 +1,212 @@
+﻿##################
+## HIDDEN ELVES ##
+##################
+
+eos_namelist_elf_hidden = {
+	randomized = no
+
+	ship_names = {
+		generic = {
+			Adriel Aebeth Aellebeth Aellebren Aellella Aellevana Aelvavella Aemabeth Aemabren Aemadena Aemathia Aenallia Aenavella Aeradena Aeravana Aerlalorna Aerlavorna Aermavana Aernadena Aernalla Aerolla Aerovella Aerrella Aerrevella Aerthadena Aerthallia Aerthavana Aethalla Aethallia Aethalorna Aethavella Aethavorna Allellia Alorna Alvabeth Alvabren Alvadriel Alvathia Amabeth Amabren Amalla Amathia Amavana Anabren Analla Anallia Aradriel Aralla Arladena Arlavorna Armallia Armalorna Armavana Arnabren Arnallia Arnathia Arobeth Arolla Arothia Arovorna Arrella Arrelorna Arrevana Arrevella Arthadriel Athalorna Athavana Athavella Athavorna Caebeth Caebren Caedena Caella Caelvabeth Caemadena Caemadriel Caemavana Caenadena Caenadriel Caenavana Caeradena Caerlabren Caerlalla Caerlalorna Caerlavorna Caermabren Caermadena Caermalla Caernadriel Caernalorna Caernavana Caerodena Caerollia Caerolorna Caerovana Caerrebeth Caerredena Caerredriel Caerrevella Caerthabeth Cedena Cedriel Celledena Cellellia Cellelorna Cellevana Cellevorna Cellia Celvabren Celvalla Cemallia Cemalorna Cenabeth Cenadena Cenalorna Cenathia Cenavella Ceradriel Ceravana Ceravella Cerlabeth Cerlallia Cerlathia Cermabeth Cermabren Cernallia Cerobeth Cerolorna Cerothia Cerovorna Cerredriel Certhabren Certhadriel Certhalorna Certhavana Cethabeth Cethadena Cethalorna Cethathia Cethavella Cevella Fibeth Fibren Fidriel Filledriel Fillevella Filvabren Filvalorna Filvathia Filvavana Fimadriel Fimathia Fimavana Finabeth Finabren Finalorna Firlalla Firlavana Firmabren Firmavella Firmavorna Firnadena Firothia Firredriel Firthabeth Firthavana Firthavella Fivorna Gadena Gallella Gallethia Gallia Galvalla Gamallia Gamalorna Gamavella Ganabeth Ganadriel Ganathia Garabren Garalla Garlalla Garlathia Garnavella Garobren Garovella Garovorna Garrebeth Garrelorna Garrevana Garthadriel Garthavana Gellebren Gelledena Gelledriel Gellellia Gellelorna Gellia Gelvadriel Gelvalla Gelvavana Gemabeth Gemadriel Gemallia Gemavorna Genathia Genavana Genavorna Gerabeth Gerabren Geradena Geravella Gerlavorna Germadriel Germallia Gernallia Gerolla Gerollia Gerovella Gerrella Gerrevana Gerrevella Gerthabren Gerthavorna Gethabeth Gethabren Gethallia Gethalorna Gevella Habeth Halla Halledriel Hallella Hallevorna Halvabeth Halvadriel Halvallia Hamabren Hamavana Hanabeth Hanadena Hanalla Hanavella Harabeth Harabren Harallia Haravella Harlathia Harlavorna Harmabeth Harmadriel Harmavana Harnabren Harnadriel Harnalorna Harobren Harodena Harolorna Harrebeth Harredena Harrethia Harthabren Harthadena Harthalorna Harthavella Harthavorna Hathabren Hathavella Hathia Havana Hella Hellebren Hellella Hellevella Helvathia Hemabren Henathia Henavella Henavorna Heralla Herallia Heralorna Herathia Heravana Herlathia Herlavorna Hermallia Hermathia Hernathia Hernavana Herodriel Herovana Herredriel Herrella Herrethia Herrevana Herthabeth Herthadriel Herthalorna Hethadena Hethia Hevana Mabren Mallebeth Malledriel Mallethia Malvallia Malvavella Mamadriel Mamavella Manabeth Manabren Marabeth Marabren Maradena Marallia Maravella Marladena Marlavella Marlavorna Marmadriel Marmalla Marmallia Marmathia Marnabren Marnalla Marnavana Marobeth Marobren Marodena Marodriel Marolla Marothia Marrevana Marthavorna Mathalla Mavana Mavella Mavorna Sybren Syllellia Syllevana Syllia Sylvabren Sylvathia Sylvavella Symabren Symalla Symavella Synabren Synadena Synavana Syralla Syrathia Syrlalla Syrlalorna Syrmabren Syrmalla Syrmathia Syrmavana Syrnadriel Syrodriel Syrolla Syrothia Syrovella Syrrebeth Syrthabeth Syrthavella Sythadena Sythavana Syvorna
+		}
+		
+		corvette = {
+		}
+		
+		constructor = {
+		}
+		
+		colonizer = {
+		}
+		
+		science = {
+		}
+		
+		destroyer = {
+		}
+		
+		cruiser = {
+		}
+		
+		battleship = {
+		}
+		
+		mining_station = { }
+		research_station = { }
+		observation_station = { }
+		
+		transport = { }
+
+		military_station_small = { }
+
+		ion_cannon = { }
+
+		titan = { }
+
+		colossus = { }
+	}
+
+	fleet_names = {
+		random_names = {
+			"Amabeth's Host" "Ceradriel's Host" "Syrothia's Host" "Host of Aravel" "Host of Gelvalon" "Host of Marovel" "Caeltas Task Force" "Melitas Task Force" "Nimkadi Task Force" "Grand Torthas Armada" "Grand Shertas Armada" "Grand Enedkadi Armada" "Serene Fleet of Caslad" "Serene Fleet of Hosanto" "Londailin Immortals" "Morsari Immortals" "Ornthas Immortals" "Warriors of Casjhi" "Warriors of Lithlond" "Warriors of Lala Aethel"
+		}
+		sequential_name = "%O% Warband"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Ground Shield"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% War Guild"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% War Guild"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% War Guild"
+		}
+
+		defense_army = {
+			sequential_name = "%O% Planetary Guard"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Expeditionary Knights"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Expeditionary Volunteers"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Clone Knights"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Dread Warriors"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Machine Division"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Machine Defenders"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% Spellswords"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Griffin Warriors"
+		}
+		
+		gene_warrior_army = {
+			random_names = { 
+			}
+			sequential_name = "%O% Eldar Knights"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Occupation Knights"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Machine Occupiers"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				"A'l Serin" Aendribarad Aendricar Aendrieithel Aendrijhi Aendrikadi Aendrikelume Aendrishys Aendrisiire Aendritaesi Aendritas Aendrithyr Aendritumbe Aerailin Aerarta Aerathrad Aerbarad Aercalen Aereithel Aerjhael Aerkadi Aerlad Aermasto Aerthyr Aertum Allranshys Amenahil Amonanto Amoncoa Amoneithel Amonjhael Amonkard Amonkelu Amonkelume Amonlad Amonlond Amonserin Amonshys Amonsiire Amontaesi Amontas Amontaur Amonthyr Amontumbe Anailin Ananto Anjhi Ankelu Anlond Anserin Antumbe "Asyle Ancalen" Ayfserin Baernanto Baerncoa Baerneithel Baernjhael Baernkelume Baernlaiqua Baernlaur Baernlond Baernsari Caelbarad Caelsari Caeltaesi Caeltas Caeltaure Caelthyr Caeltum "Cafa Dorthore" Cajaerduin Cajaerkard Cajaerlond Cajaermasto Cajaerserin Cajaersiire Cajaertas Cajaertumbe Cajaertys Caradarta Caradathrad Caradjhi Caradkard Caradkelume Caradlaiqua Caradmasto Caradshys Caradsiire Caradtaure Caradtum Carncoa Carnkelu Carnlaiqua Carnmasto Carnserin Carnsiire Carntaur Carnthas Carntys Casailin Casanto Casbarad Cascar Casjhi Caslad Caslond Casmasto Casshos Casthyr Castum Castumbe Colarta Colathrad Colkelu Collad Collaur Collond Colmasto Colshos Coltaesi Corbarad Corkard Corlaur Corlond Corsari Corshys Cyhanaes Eathshys "Emel Asari" Enedarta Enedcalen Enedduin Enedkadi Enedkard Enedlaiqua Enedserin Enedshos Enedtaesi Enedtaure Enedthor Enedthyr Eregathrad Eregkadi Eregkard Ereglond Eregmasto Eregsari Eregshos Estelarta Estelathrad Estelbarad Estelcoa Esteljhi Estelkard Estelkelume Estelserin Estelshos Estelshys Esteltas Esteltaure Estelthas Estelthor Estelthyr Esteltumbe Esteltys "Esyho Themar" "Felath Tirion" Forbarad Forjhi Forkelume Forlaiqua Forsari Forshys Forthor Forthyr Fortum Fortumbe Gundcoa Gundeithel Gundjhi Gundkard Gundkelu Gundlond Gundsari Gundshys Gundtas Gundtaur Harailin Harcalen Harkadi Harkard Harlad Harlaiqua Harsari Harthyr Hartumbe Hosanto Hosbarad Hoscalen Hoscar Hoscoa Hoskard Hoskelu Hoslad Hoslaur Hosserin Hostaur Hostumbe Ifnerius Immalenor Ishithemar Isyahone Iysetheas "Kaaena Themar" "Lala Aethel" Lithcar Lithkelume Lithlond Lithshys Lithtaur Lithtum Lithtumbe Lithtys Londailin Londathrad Londcalen Londcar Londcoa Londduin Londlaiqua Londmasto Londtys Meliathrad Meliduin Melilaiqua Melishys Melitas Melitaur Melitumbe Melnetaesi Moranto Morcar Morkadi Morkelu Morkelume Morkoathrad Morkocalen Morkocar Morkolad Morkolaur Morkomasto Morkoshos Morkoshys Morkotaesi Morkotaur Morkothor Morkothyr Morkotum Morlad Morsari Morserin Morshos Morthas Morthor Mortumbe Mortys Nahashara Neldorathrad Neldorbarad Neldorjhi Neldorkard Neldorkelu Neldorkelume Neldorlaur Neldorlond Neldormasto Neldorsari Neldortaur Neldortumbe Nimailin Nimcar Nimeithel Nimkadi Nimlaiqua Nimshys Nimtum Numenarta Numencar Numenduin Numenjhael Numenshys Numensiire Numentas Numentaure "Nylme Entheas" "O'le Thalor" Ofantalos "Ofn Entheas" Olaesailin Olaesarta Olaesbarad Olaescar Olaescoa Olaeskadi Olaeskard Olaeskelu Olaeslaur Olaessari Olaestaur Olaestaure Olaesthor Olaesthyr Olaestumbe Ornarta Orneithel Ornkadi Ornkard Ornshos Orntaur Orntaure Ornthas Ornthor Ornthyr Orntumbe Oshranbelle Pelailin Pelanto Pelbarad Peljhael Pelsari Pelshys Peltaur Peltys Rhunailin Rhunanto Rhunarta Rhunathrad Rhuncalen Rhunduin Rhunjhi Rhunkelu Rhuntaesi Sherailin Shercalen Shercar Sherjhael Sherkard Sherkelume Sherlaur Sherthas Sherthyr Shertumbe Shyranto Shyrcalen Shyrduin Shyrkadi Shyrkelume Shyrlaiqua Shyrlond Shyrshys Shyrthyr Thoronarta Thoronbarad Thoronkelu Thoronlaur Thoronshos Thoronshys Thoronsiire Thorontaure Thysarta Thysbarad Thyscalen Thyscar Thyskadi Thysserin Thystaesi Thystas Thystum Torathrad Torcoa Torjhael Torkelu Torlond Torserin Tortaesi Tortas Torthas Tortumbe Tortys Ullasera "Wef Ennore" Yfalon Ylankadi
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+	}
+
+
+	### CHARACTERS
+
+	character_names = {
+
+		default = {
+			first_names_male = {
+				Aelledrim Aellelian Aelleth Aellevorn Aelvafin Aelvalian Aelvath Aemaden Aemalian Aemalon Aenadrim Aenavan Aenavel Aeraden Aeradrim Aeravan Aerlabryn Aerladrim Aerlavan Aermaden Aermalian Aernafin Aernavorn Aerofin Aerolon Aerolorn Aerrebryn Aerrevorn Aerthalian Aerthalorn Aethavorn Allelian Allelon Allelorn Allevan Alvadrim Alvavel Amadrim Amafin Amavan Anafin Anath Anavan Anavel Aralon Aralorn Aravel Arlalon Arlavorn Armalian Armalon Armavel Arnafin Arnalon Arnavel Arnavorn Arodrim Arolon Aroth Arovan Arovorn Arreden Arrefin Arrevan Athadrim Athafin Athalian Athavorn Caemalian Caemalon Caenabryn Caenafin Caenavorn Caeralian Caeralon Caeralorn Caerladen Caerlath Caerlavel Caermaden Caermadrim Caermalian Caermavan Caernavorn Caerofin Caerolian Caerolon Caerolorn Caerovan Caerreden Caerrelian Caerrevan Caerthaden Caerthadrim Caerthafin Caerthalian Caerthavel Caethalian Caethalorn Caethavan Cellebryn Cellefin Cellelon Cellelorn Celleth Cellevorn Celvalian Celvalon Celvath Cemabryn Cemalian Cemavan Cemavel Cenalorn Cenath Cenavan Ceralon Ceralorn Cerath Cerlalon Cerlalorn Cerlavorn Cermalian Cermath Cermavan Cernalon Cernavorn Cerolian Cerolon Cerolorn Cerovel Cerovorn Cethaden Cethadrim Cethalon Cethath Cethavan Fillebryn Fillelorn Filleth Filvabryn Filvadrim Filvalon Fimafin Fimalorn Finath Finavan Firabryn Firafin Firalian Firalon Firavel Firavorn Firladrim Firlalorn Firlath Firmavel Firnalorn Firnavan Firnavel Firobryn Firoth Firovorn Firrebryn Firreden Firredrim Firrefin Firrelon Firthalian Firthath Firthavel Firthavorn Fithafin Gallelon Gallelorn Galleth Galvadrim Galvalian Gamabryn Gamath Gamavel Gamavorn Ganafin Ganavel Ganavorn Garath Garavel Garlalorn Garmalorn Garnadrim Garnalorn Garnath Garobryn Garoden Garolorn Garovan Garovel Garrelian Garrevorn Garthalian Garthalon Garthalorn Garthavel Gathalian Gathavorn Gelleden Gellefin Gellevorn Gelvafin Gelvalon Gelvalorn Gelvath Gelvavel Gemabryn Gemaden Gemalon Gemath Genalorn Genath Genavorn Gerath Geravel Gerlabryn Germadrim Germalorn Germavan Gernadrim Gernath Gernavorn Gerobryn Gerofin Gerolorn Gerreden Gerreth Gerthath Gerthavel Gethadrim Gethalon Gethalorn Gethavan Hallefin Hallevan Halvadrim Halvalian Hamadrim Hamafin Hamath Hamavel Hanadrim Hanafin Hanavel Harabryn Haradrim Harafin Harath Harlabryn Harlalian Harmabryn Harmalian Harmavan Harnaden Harnalian Harnalon Haroth Harovel Harovorn Harrelorn Harthafin Harthavel Hathaden Hathadrim Hathavel Hathavorn Helleden Hellevel Helvadrim Helvalon Helvath Helvavan Hemabryn Hemaden Hemafin Hemalon Hemalorn Hemavan Hemavorn Henabryn Henadrim Henavel Henavorn Herlavorn Hermalian Hermath Hermavorn Hernaden Hernalon Hernavorn Herolian Heroth Herrefin Herrelon Herreth Herrevel Herrevorn Herthabryn Herthadrim Herthafin Hethaden Hethalian Malledrim Mallefin Mallelian Mallelon Malvath Mamafin Mamalon Manalian Marabryn Maralian Maralon Marath Marlavorn Marmalian Marmath Marnabryn Marnalian Marnavan Marodrim Marolian Marolon Marolorn Marovel Marrefin Marrelon Marrelorn Marreth Marrevan Marthafin Mathadrim Mathalorn Mathavel Sylledrim Syllefin Sylvadrim Sylvafin Sylvavorn Symabryn Symaden Symavel Synalian Synalorn Synath Synavan Syradrim Syravan Syrlath Syrmalon Syrmalorn Syrmavan Syrmavel Syrnalon Syrnalorn Syroden Syrodrim Syrrebryn Syrreth Syrthaden Syrthavan Sythafin Sythavorn
+			}
+			first_names_female = {
+				Adriel Aebeth Aellebeth Aellebren Aellella Aellevana Aelvavella Aemabeth Aemabren Aemadena Aemathia Aenallia Aenavella Aeradena Aeravana Aerlalorna Aerlavorna Aermavana Aernadena Aernalla Aerolla Aerovella Aerrella Aerrevella Aerthadena Aerthallia Aerthavana Aethalla Aethallia Aethalorna Aethavella Aethavorna Allellia Alorna Alvabeth Alvabren Alvadriel Alvathia Amabeth Amabren Amalla Amathia Amavana Anabren Analla Anallia Aradriel Aralla Arladena Arlavorna Armallia Armalorna Armavana Arnabren Arnallia Arnathia Arobeth Arolla Arothia Arovorna Arrella Arrelorna Arrevana Arrevella Arthadriel Athalorna Athavana Athavella Athavorna Caebeth Caebren Caedena Caella Caelvabeth Caemadena Caemadriel Caemavana Caenadena Caenadriel Caenavana Caeradena Caerlabren Caerlalla Caerlalorna Caerlavorna Caermabren Caermadena Caermalla Caernadriel Caernalorna Caernavana Caerodena Caerollia Caerolorna Caerovana Caerrebeth Caerredena Caerredriel Caerrevella Caerthabeth Cedena Cedriel Celledena Cellellia Cellelorna Cellevana Cellevorna Cellia Celvabren Celvalla Cemallia Cemalorna Cenabeth Cenadena Cenalorna Cenathia Cenavella Ceradriel Ceravana Ceravella Cerlabeth Cerlallia Cerlathia Cermabeth Cermabren Cernallia Cerobeth Cerolorna Cerothia Cerovorna Cerredriel Certhabren Certhadriel Certhalorna Certhavana Cethabeth Cethadena Cethalorna Cethathia Cethavella Cevella Fibeth Fibren Fidriel Filledriel Fillevella Filvabren Filvalorna Filvathia Filvavana Fimadriel Fimathia Fimavana Finabeth Finabren Finalorna Firlalla Firlavana Firmabren Firmavella Firmavorna Firnadena Firothia Firredriel Firthabeth Firthavana Firthavella Fivorna Gadena Gallella Gallethia Gallia Galvalla Gamallia Gamalorna Gamavella Ganabeth Ganadriel Ganathia Garabren Garalla Garlalla Garlathia Garnavella Garobren Garovella Garovorna Garrebeth Garrelorna Garrevana Garthadriel Garthavana Gellebren Gelledena Gelledriel Gellellia Gellelorna Gellia Gelvadriel Gelvalla Gelvavana Gemabeth Gemadriel Gemallia Gemavorna Genathia Genavana Genavorna Gerabeth Gerabren Geradena Geravella Gerlavorna Germadriel Germallia Gernallia Gerolla Gerollia Gerovella Gerrella Gerrevana Gerrevella Gerthabren Gerthavorna Gethabeth Gethabren Gethallia Gethalorna Gevella Habeth Halla Halledriel Hallella Hallevorna Halvabeth Halvadriel Halvallia Hamabren Hamavana Hanabeth Hanadena Hanalla Hanavella Harabeth Harabren Harallia Haravella Harlathia Harlavorna Harmabeth Harmadriel Harmavana Harnabren Harnadriel Harnalorna Harobren Harodena Harolorna Harrebeth Harredena Harrethia Harthabren Harthadena Harthalorna Harthavella Harthavorna Hathabren Hathavella Hathia Havana Hella Hellebren Hellella Hellevella Helvathia Hemabren Henathia Henavella Henavorna Heralla Herallia Heralorna Herathia Heravana Herlathia Herlavorna Hermallia Hermathia Hernathia Hernavana Herodriel Herovana Herredriel Herrella Herrethia Herrevana Herthabeth Herthadriel Herthalorna Hethadena Hethia Hevana Mabren Mallebeth Malledriel Mallethia Malvallia Malvavella Mamadriel Mamavella Manabeth Manabren Marabeth Marabren Maradena Marallia Maravella Marladena Marlavella Marlavorna Marmadriel Marmalla Marmallia Marmathia Marnabren Marnalla Marnavana Marobeth Marobren Marodena Marodriel Marolla Marothia Marrevana Marthavorna Mathalla Mavana Mavella Mavorna Sybren Syllellia Syllevana Syllia Sylvabren Sylvathia Sylvavella Symabren Symalla Symavella Synabren Synadena Synavana Syralla Syrathia Syrlalla Syrlalorna Syrmabren Syrmalla Syrmathia Syrmavana Syrnadriel Syrodriel Syrolla Syrothia Syrovella Syrrebeth Syrthabeth Syrthavella Sythadena Sythavana Syvorna
+			}
+			second_names = {
+				Aeraalil Aeraalvatinu Aerabrinion Aeradel Aeradragion Aeralinde Aeratathdal Aeratholtinu Aeravanial Aeravaul Aldaelon Aldaelwa Aldalond Aldaloth Aldataur Aldavathar Augnardal Augraiil Augtaneth Beragaseer Beralrin Berbrinrin Berdhrinmae Berdirdal Bererethir Berglinaial Berlynnil Bertathian Bersonel Birdiir Birrina Birsum Birtaur Celebrinsyr Celedragdal Celeendonel Celeereellyn Celeglinalhn Celesta Cromdel Cromelwa Cromeme Cromren Cromvir Cuagatinu Cudilinellyn Cudirdal Cuetheth Culithelen Cutaion Cutathar Dlartathdren Dlarthandren Ealolithe Ealoren Eleneme Elenlithe Elenlond Elenren Elereme Elerlithe Elerlond Elernae Faelandalan Faerondaerl Falalond Falasum Falataur Feldiril Felelenmae Felraidal Felrailal Feltholas Felvanian Gaalrin Gadhrinta Gaeleneth Gaelenlhn Gaethellyn Galadilinas Galadirthor Galaelentinu Galaethian Galatanryl Galataththir Galaviel Galavir Galithil Galithmyr Galonelon Gatatheth Gatholsel Gaseth Gwaelon Gwaelwa Gwaeme Gwaloth Gwamin Gwaren Gwaron Gwavir Habrindal Hadirseer Haeeth Haeloth Haeresel Haesum Haeviel Hathandal Havantinu Isilitanil Isilithalar Isilithanar Isilitholonel Kevaendrin Kevaglinasel Kevamironel Kevatanonel Kibrinthar Kiethion Kitanar Kivansel Kiyaonel Laemirdar Laemirmae Laemironel Laeraieil Laetathir Laethaldal Laesas Landragsyr Laneredal Lannardren Lantanellyn Lanvaneth Lansil Laranian Lardirmyr Larentanthar Larentholeil Larentholil Larereelen Larereion Lartathryl Lasslithiel Lasslynnil Lasslynnta Lasstaneth Lasstholryl Lithelon Lithelwa Lithtaur Lithvir Maaldal Maalelen Madiril Maelenellyn Malethelen Malethonel Malothryl Malyaelen Malsmae Mathalrin Mavanlal Mithagaelen Mithdirdal Mithdirdar Mithdirlhn Mithethial Mithlotheth Mithloththor Mithlynneth Miththaleil Miththalsyr Miththanryl Mithvanseer Nallelon Nalleth Nalllinde Nallloth Nallmin Nallrina Nallron Naralvaion Narbrinil Narbrinryl Narethmyr Narmirina Narraiiel Nelagatinu Nelerelhn Nelglinadal Nellithellyn Nelssel Nhabrinian Nhalynneil Nhamiril Nharaithar Noroelon Noroeme Norolithe Ondoeth Ondomin Ondonae Orlond Ortaur Orviel Rhuilithe Rhuiloth Rhuitaur Rhuiviel Rolosum Rolotaur Runethlal Runglinamae Runnareil Runnarmyr Runraita Runtholeth Shaalvalhn Shaethellyn Shaethrin Shalaion Sharondalan Shatathryl Taldilinas Talelenonel Talenddar Tallithian Talrina Taltaneil Taltantinu Talvaul Talvir Tandhriniel Tandiriel Tandragsel Tanethdal Tannarlal Tantanelen Tantholeth Tathloth Tathmin Tathron Tathsum Tathvir Teldhrindal Teldilinil Telelenlal Telelenseer Telendsyr Telereellyn Telmirion Teltalal Teltanelen Telvansel Tinudhen Tinudiir Tinuelon Tinueth Tinuos Tinurina Tinuron Toraelenian Toranarseer Undodiir Undoelon Undoron Undotaur Undotaur Undoviel Vandhen Vandiir Vanelon Vanelwa Vanloth Vanron Vanval Werdragdren Werdragina Werdragthar Werlithiel Werlynnthor Wertanmae Wersryl Yraudiir Yraueth Yrauval	
+			}
+			regnal_first_names_male = {
+				Aelledrim Aellelian Aelleth Aellevorn Aelvafin Aelvalian Aelvath Aemaden Aemalian Aemalon Aenadrim Aenavan Aenavel Aeraden Aeradrim Aeravan Aerlabryn Aerladrim Aerlavan Aermaden Aermalian Aernafin Aernavorn Aerofin Aerolon Aerolorn Aerrebryn Aerrevorn Aerthalian Aerthalorn Aethavorn Allelian Allelon Allelorn Allevan Alvadrim Alvavel Amadrim Amafin Amavan Anafin Anath Anavan Anavel Aralon Aralorn Aravel Arlalon Arlavorn Armalian Armalon Armavel Arnafin Arnalon Arnavel Arnavorn Arodrim Arolon Aroth Arovan Arovorn Arreden Arrefin Arrevan Athadrim Athafin Athalian Athavorn Caemalian Caemalon Caenabryn Caenafin Caenavorn Caeralian Caeralon Caeralorn Caerladen Caerlath Caerlavel Caermaden Caermadrim Caermalian Caermavan Caernavorn Caerofin Caerolian Caerolon Caerolorn Caerovan Caerreden Caerrelian Caerrevan Caerthaden Caerthadrim Caerthafin Caerthalian Caerthavel Caethalian Caethalorn Caethavan Cellebryn Cellefin Cellelon Cellelorn Celleth Cellevorn Celvalian Celvalon Celvath Cemabryn Cemalian Cemavan Cemavel Cenalorn Cenath Cenavan Ceralon Ceralorn Cerath Cerlalon Cerlalorn Cerlavorn Cermalian Cermath Cermavan Cernalon Cernavorn Cerolian Cerolon Cerolorn Cerovel Cerovorn Cethaden Cethadrim Cethalon Cethath Cethavan Fillebryn Fillelorn Filleth Filvabryn Filvadrim Filvalon Fimafin Fimalorn Finath Finavan Firabryn Firafin Firalian Firalon Firavel Firavorn Firladrim Firlalorn Firlath Firmavel Firnalorn Firnavan Firnavel Firobryn Firoth Firovorn Firrebryn Firreden Firredrim Firrefin Firrelon Firthalian Firthath Firthavel Firthavorn Fithafin Gallelon Gallelorn Galleth Galvadrim Galvalian Gamabryn Gamath Gamavel Gamavorn Ganafin Ganavel Ganavorn Garath Garavel Garlalorn Garmalorn Garnadrim Garnalorn Garnath Garobryn Garoden Garolorn Garovan Garovel Garrelian Garrevorn Garthalian Garthalon Garthalorn Garthavel Gathalian Gathavorn Gelleden Gellefin Gellevorn Gelvafin Gelvalon Gelvalorn Gelvath Gelvavel Gemabryn Gemaden Gemalon Gemath Genalorn Genath Genavorn Gerath Geravel Gerlabryn Germadrim Germalorn Germavan Gernadrim Gernath Gernavorn Gerobryn Gerofin Gerolorn Gerreden Gerreth Gerthath Gerthavel Gethadrim Gethalon Gethalorn Gethavan Hallefin Hallevan Halvadrim Halvalian Hamadrim Hamafin Hamath Hamavel Hanadrim Hanafin Hanavel Harabryn Haradrim Harafin Harath Harlabryn Harlalian Harmabryn Harmalian Harmavan Harnaden Harnalian Harnalon Haroth Harovel Harovorn Harrelorn Harthafin Harthavel Hathaden Hathadrim Hathavel Hathavorn Helleden Hellevel Helvadrim Helvalon Helvath Helvavan Hemabryn Hemaden Hemafin Hemalon Hemalorn Hemavan Hemavorn Henabryn Henadrim Henavel Henavorn Herlavorn Hermalian Hermath Hermavorn Hernaden Hernalon Hernavorn Herolian Heroth Herrefin Herrelon Herreth Herrevel Herrevorn Herthabryn Herthadrim Herthafin Hethaden Hethalian Malledrim Mallefin Mallelian Mallelon Malvath Mamafin Mamalon Manalian Marabryn Maralian Maralon Marath Marlavorn Marmalian Marmath Marnabryn Marnalian Marnavan Marodrim Marolian Marolon Marolorn Marovel Marrefin Marrelon Marrelorn Marreth Marrevan Marthafin Mathadrim Mathalorn Mathavel Sylledrim Syllefin Sylvadrim Sylvafin Sylvavorn Symabryn Symaden Symavel Synalian Synalorn Synath Synavan Syradrim Syravan Syrlath Syrmalon Syrmalorn Syrmavan Syrmavel Syrnalon Syrnalorn Syroden Syrodrim Syrrebryn Syrreth Syrthaden Syrthavan Sythafin Sythavorn
+			}
+			regnal_first_names_female = {
+				Adriel Aebeth Aellebeth Aellebren Aellella Aellevana Aelvavella Aemabeth Aemabren Aemadena Aemathia Aenallia Aenavella Aeradena Aeravana Aerlalorna Aerlavorna Aermavana Aernadena Aernalla Aerolla Aerovella Aerrella Aerrevella Aerthadena Aerthallia Aerthavana Aethalla Aethallia Aethalorna Aethavella Aethavorna Allellia Alorna Alvabeth Alvabren Alvadriel Alvathia Amabeth Amabren Amalla Amathia Amavana Anabren Analla Anallia Aradriel Aralla Arladena Arlavorna Armallia Armalorna Armavana Arnabren Arnallia Arnathia Arobeth Arolla Arothia Arovorna Arrella Arrelorna Arrevana Arrevella Arthadriel Athalorna Athavana Athavella Athavorna Caebeth Caebren Caedena Caella Caelvabeth Caemadena Caemadriel Caemavana Caenadena Caenadriel Caenavana Caeradena Caerlabren Caerlalla Caerlalorna Caerlavorna Caermabren Caermadena Caermalla Caernadriel Caernalorna Caernavana Caerodena Caerollia Caerolorna Caerovana Caerrebeth Caerredena Caerredriel Caerrevella Caerthabeth Cedena Cedriel Celledena Cellellia Cellelorna Cellevana Cellevorna Cellia Celvabren Celvalla Cemallia Cemalorna Cenabeth Cenadena Cenalorna Cenathia Cenavella Ceradriel Ceravana Ceravella Cerlabeth Cerlallia Cerlathia Cermabeth Cermabren Cernallia Cerobeth Cerolorna Cerothia Cerovorna Cerredriel Certhabren Certhadriel Certhalorna Certhavana Cethabeth Cethadena Cethalorna Cethathia Cethavella Cevella Fibeth Fibren Fidriel Filledriel Fillevella Filvabren Filvalorna Filvathia Filvavana Fimadriel Fimathia Fimavana Finabeth Finabren Finalorna Firlalla Firlavana Firmabren Firmavella Firmavorna Firnadena Firothia Firredriel Firthabeth Firthavana Firthavella Fivorna Gadena Gallella Gallethia Gallia Galvalla Gamallia Gamalorna Gamavella Ganabeth Ganadriel Ganathia Garabren Garalla Garlalla Garlathia Garnavella Garobren Garovella Garovorna Garrebeth Garrelorna Garrevana Garthadriel Garthavana Gellebren Gelledena Gelledriel Gellellia Gellelorna Gellia Gelvadriel Gelvalla Gelvavana Gemabeth Gemadriel Gemallia Gemavorna Genathia Genavana Genavorna Gerabeth Gerabren Geradena Geravella Gerlavorna Germadriel Germallia Gernallia Gerolla Gerollia Gerovella Gerrella Gerrevana Gerrevella Gerthabren Gerthavorna Gethabeth Gethabren Gethallia Gethalorna Gevella Habeth Halla Halledriel Hallella Hallevorna Halvabeth Halvadriel Halvallia Hamabren Hamavana Hanabeth Hanadena Hanalla Hanavella Harabeth Harabren Harallia Haravella Harlathia Harlavorna Harmabeth Harmadriel Harmavana Harnabren Harnadriel Harnalorna Harobren Harodena Harolorna Harrebeth Harredena Harrethia Harthabren Harthadena Harthalorna Harthavella Harthavorna Hathabren Hathavella Hathia Havana Hella Hellebren Hellella Hellevella Helvathia Hemabren Henathia Henavella Henavorna Heralla Herallia Heralorna Herathia Heravana Herlathia Herlavorna Hermallia Hermathia Hernathia Hernavana Herodriel Herovana Herredriel Herrella Herrethia Herrevana Herthabeth Herthadriel Herthalorna Hethadena Hethia Hevana Mabren Mallebeth Malledriel Mallethia Malvallia Malvavella Mamadriel Mamavella Manabeth Manabren Marabeth Marabren Maradena Marallia Maravella Marladena Marlavella Marlavorna Marmadriel Marmalla Marmallia Marmathia Marnabren Marnalla Marnavana Marobeth Marobren Marodena Marodriel Marolla Marothia Marrevana Marthavorna Mathalla Mavana Mavella Mavorna Sybren Syllellia Syllevana Syllia Sylvabren Sylvathia Sylvavella Symabren Symalla Symavella Synabren Synadena Synavana Syralla Syrathia Syrlalla Syrlalorna Syrmabren Syrmalla Syrmathia Syrmavana Syrnadriel Syrodriel Syrolla Syrothia Syrovella Syrrebeth Syrthabeth Syrthavella Sythadena Sythavana Syvorna
+			}
+			regnal_second_names = {
+				Aeraalil Aeraalvatinu Aerabrinion Aeradel Aeradragion Aeralinde Aeratathdal Aeratholtinu Aeravanial Aeravaul Aldaelon Aldaelwa Aldalond Aldaloth Aldataur Aldavathar Augnardal Augraiil Augtaneth Beragaseer Beralrin Berbrinrin Berdhrinmae Berdirdal Bererethir Berglinaial Berlynnil Bertathian Bersonel Birdiir Birrina Birsum Birtaur Celebrinsyr Celedragdal Celeendonel Celeereellyn Celeglinalhn Celesta Cromdel Cromelwa Cromeme Cromren Cromvir Cuagatinu Cudilinellyn Cudirdal Cuetheth Culithelen Cutaion Cutathar Dlartathdren Dlarthandren Ealolithe Ealoren Eleneme Elenlithe Elenlond Elenren Elereme Elerlithe Elerlond Elernae Faelandalan Faerondaerl Falalond Falasum Falataur Feldiril Felelenmae Felraidal Felrailal Feltholas Felvanian Gaalrin Gadhrinta Gaeleneth Gaelenlhn Gaethellyn Galadilinas Galadirthor Galaelentinu Galaethian Galatanryl Galataththir Galaviel Galavir Galithil Galithmyr Galonelon Gatatheth Gatholsel Gaseth Gwaelon Gwaelwa Gwaeme Gwaloth Gwamin Gwaren Gwaron Gwavir Habrindal Hadirseer Haeeth Haeloth Haeresel Haesum Haeviel Hathandal Havantinu Isilitanil Isilithalar Isilithanar Isilitholonel Kevaendrin Kevaglinasel Kevamironel Kevatanonel Kibrinthar Kiethion Kitanar Kivansel Kiyaonel Laemirdar Laemirmae Laemironel Laeraieil Laetathir Laethaldal Laesas Landragsyr Laneredal Lannardren Lantanellyn Lanvaneth Lansil Laranian Lardirmyr Larentanthar Larentholeil Larentholil Larereelen Larereion Lartathryl Lasslithiel Lasslynnil Lasslynnta Lasstaneth Lasstholryl Lithelon Lithelwa Lithtaur Lithvir Maaldal Maalelen Madiril Maelenellyn Malethelen Malethonel Malothryl Malyaelen Malsmae Mathalrin Mavanlal Mithagaelen Mithdirdal Mithdirdar Mithdirlhn Mithethial Mithlotheth Mithloththor Mithlynneth Miththaleil Miththalsyr Miththanryl Mithvanseer Nallelon Nalleth Nalllinde Nallloth Nallmin Nallrina Nallron Naralvaion Narbrinil Narbrinryl Narethmyr Narmirina Narraiiel Nelagatinu Nelerelhn Nelglinadal Nellithellyn Nelssel Nhabrinian Nhalynneil Nhamiril Nharaithar Noroelon Noroeme Norolithe Ondoeth Ondomin Ondonae Orlond Ortaur Orviel Rhuilithe Rhuiloth Rhuitaur Rhuiviel Rolosum Rolotaur Runethlal Runglinamae Runnareil Runnarmyr Runraita Runtholeth Shaalvalhn Shaethellyn Shaethrin Shalaion Sharondalan Shatathryl Taldilinas Talelenonel Talenddar Tallithian Talrina Taltaneil Taltantinu Talvaul Talvir Tandhriniel Tandiriel Tandragsel Tanethdal Tannarlal Tantanelen Tantholeth Tathloth Tathmin Tathron Tathsum Tathvir Teldhrindal Teldilinil Telelenlal Telelenseer Telendsyr Telereellyn Telmirion Teltalal Teltanelen Telvansel Tinudhen Tinudiir Tinuelon Tinueth Tinuos Tinurina Tinuron Toraelenian Toranarseer Undodiir Undoelon Undoron Undotaur Undotaur Undoviel Vandhen Vandiir Vanelon Vanelwa Vanloth Vanron Vanval Werdragdren Werdragina Werdragthar Werlithiel Werlynnthor Wertanmae Wersryl Yraudiir Yraueth Yrauval
+			}
+		}
+	}
+}

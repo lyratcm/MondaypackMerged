@@ -1,0 +1,16 @@
+tech_barrage_missile_dm = {
+    icon = tech_z_dummy
+    area = physics
+    cost = 0
+    tier = 6
+    category = {
+        particles
+    }
+    weight = 0
+    potential = {
+        always = no
+    }
+    ai_weight = {
+        weight = 0
+    }
+}

@@ -1,0 +1,24 @@
+trait_ruler_skyborne_architect = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_skyborne_architect.dds"
+    modifier = {
+        country_megastructure_build_cap_add = 1
+        megastructure_build_speed_mult = 0.33
+        shipsize_titan_build_speed_mult = 0.33
+        shipsize_colossus_build_speed_mult = 0.33
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    requires_traits = {
+        trait_megalomaniacs
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

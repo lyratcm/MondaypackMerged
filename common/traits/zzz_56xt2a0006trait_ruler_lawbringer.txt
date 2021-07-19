@@ -1,0 +1,22 @@
+trait_ruler_lawbringer = {
+    cost = 0
+    modification = no
+    randomized = no
+    icon = "gfx/interface/icons/traits/leader_traits/trait_ruler_lawbringer.dds"
+    modifier = {
+        piracy_growth_mult = -0.15
+        local_trade_protection_add = 10
+    }
+    leader_trait = {
+        ruler
+    }
+    leader_class = {
+        ruler
+    }
+    requires_traits = {
+        trait_lawful
+    }
+    ai_weight = {
+        weight = 150
+    }
+}

@@ -1,0 +1,91 @@
+building_GAPS_Multitask_Metal_Goods_Factory_2 = {
+    icon = "building_GAPS_Multitask_Metal_Goods_FactoryT2"
+    base_buildtime = 320
+    can_be_ruined = no
+    can_build = no
+    category = research
+    potential = {
+        owner = {
+            has_civic = Civic_GAPS_Multitaskers
+        }
+    }
+    destroy_trigger = {
+        OR = {
+            has_modifier = slave_colony
+            has_modifier = resort_colony
+            buildings_no_crystals = yes
+            buildings_no_motes = yes
+        }
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = 600
+            rare_crystals = 25
+            volatile_motes = 25
+        }
+        upkeep = {
+            energy = 3.5
+            rare_crystals = 0.3
+            volatile_motes = 0.3
+        }
+    }
+    upgrades = {
+        "building_GAPS_Multitask_Metal_Goods_Factory_3"
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+            is_capital = yes
+        }
+        modifier = {
+            job_GAPS_Multitask_Crafter_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = no
+            }
+        }
+        modifier = {
+            job_GAPS_Multitask_Crafter_add = 5
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+            is_capital = yes
+        }
+        modifier = {
+            job_GAPS_Multitask_Crafter_Drone_add = 1
+        }
+    }
+    triggered_planet_modifier = {
+        potential = {
+            exists = owner
+            owner = {
+                is_gestalt = yes
+            }
+        }
+        modifier = {
+            job_GAPS_Multitask_Crafter_Drone_add = 5
+        }
+    }
+    ai_weight = {
+        weight = 0
+    }
+    ai_resource_production = {
+        food = 1
+        trigger = {
+            always = yes
+        }
+    }
+}

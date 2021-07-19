@@ -1,0 +1,21 @@
+tech_ascensions_perks = {
+    icon = tech_z_dummy
+    area = society
+    cost = 0
+    tier = 5
+    category = {
+        statecraft
+    }
+    levels = -1
+    is_rare = yes
+    weight = 0
+    modifier = {
+        ascension_perks_add = 1
+    }
+    ai_weight = {
+        weight = 0
+    }
+    weight_groups = {
+        repeatable
+    }
+}

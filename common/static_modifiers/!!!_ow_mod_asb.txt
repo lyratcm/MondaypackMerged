@@ -1,0 +1,14 @@
+###_[¸²¸Ç½ûÓÃ]	###############################################################
+#_[asb]
+
+
+
+
+###_[asb]
+speed_change_1 = {}
+speed_change_2 = {}
+speed_change_3 = {}
+Rotation_change_1 = {}
+Rotation_change_3 = {}
+#	fire_rate_change_2x = {}
+#	hp_buff_change_2x = {}
