@@ -1,0 +1,27 @@
+##########################
+## ELVEN ASTEROID BELTS ##
+##########################
+
+elven_crystal_asteroid_belt_teal = {
+	mesh="elven_asteroid_crystal_teal_small_01_mesh"
+	mesh="elven_asteroid_crystal_teal_small_02_mesh"
+	mesh="elven_asteroid_crystal_teal_small_03_mesh"
+	
+	shader = "AsteroidEmissive"
+}
+
+elven_crystal_asteroid_belt_white = {
+	mesh="elven_asteroid_crystal_white_small_01_mesh"
+	mesh="elven_asteroid_crystal_white_small_02_mesh"
+	mesh="elven_asteroid_crystal_white_small_03_mesh"
+	
+	shader = "AsteroidEmissive"
+}
+
+elven_crystal_asteroid_belt_red = {
+	mesh="elven_asteroid_crystal_red_small_01_mesh"
+	mesh="elven_asteroid_crystal_red_small_02_mesh"
+	mesh="elven_asteroid_crystal_red_small_03_mesh"
+	
+	shader = "AsteroidEmissive"
+}

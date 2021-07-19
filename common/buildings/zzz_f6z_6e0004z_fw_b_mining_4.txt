@@ -1,0 +1,97 @@
+z_fw_b_mining_4 = {
+    base_buildtime = @z_fw_sv_b_basic_time_4
+    category = resource
+    can_build = no
+    destroy_trigger = {
+        has_modifier = resort_colony
+    }
+    potential = {
+        always = no
+        NOT = {
+            has_modifier = resort_colony
+        }
+        NOR = {
+            is_planet_class = pc_ringworld_habitable
+            is_planet_class = pc_cybrex
+            is_planet_class = pc_habitat
+        }
+    }
+    allow = {
+        always = no
+        buildings_simple_allow = yes
+    }
+    prerequisites = {
+        "tech_mining_3"
+    }
+    show_tech_unlock_if = {
+        always = no
+    }
+    resources = {
+        category = planet_buildings
+        cost = {
+            minerals = @z_fw_sv_b_basic_cost_4
+            volatile_motes = 50
+        }
+        upkeep = {
+            energy = 4
+            volatile_motes = 1
+        }
+        produces = {
+            minerals = 36
+        }
+    }
+    upgrades = {
+        z_fw_b_mining_5
+    }
+    ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 0
+            buildings_has_motes = no
+        }
+        modifier = {
+            weight = 10
+            NOR = {
+                is_planet_class = pc_city
+                is_planet_class = pc_relic
+            }
+            OR = {
+                districts_good_minerals = yes
+                num_districts = {
+                    type = district_mining
+                    value >= 3
+                }
+                num_districts = {
+                    type = district_mining_uncapped
+                    value >= 3
+                }
+                num_districts = {
+                    type = district_hab_mining
+                    value >= 2
+                }
+                owner = {
+                    has_monthly_income = {
+                        resource = minerals
+                        value < 0
+                    }
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            exists = owner
+            owner = {
+                has_monthly_income = {
+                    resource = minerals
+                    value < 50
+                }
+            }
+        }
+    }
+    ai_resource_production = {
+        minerals = 4
+        trigger = {
+            always = yes
+        }
+    }
+}
