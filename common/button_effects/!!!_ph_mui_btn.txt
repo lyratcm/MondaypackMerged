@@ -1,0 +1,139 @@
+
+
+z_fw_btn_plnt_ui_tb_bg = {
+	potential = {
+		is_scope_type = planet
+		is_colony = yes
+		exists = owner
+		owner = { is_ai = no }
+		OR = {
+			has_global_flag = z_pr_installed
+			has_global_flag = z_pf2_installed
+		}
+	}
+	allow = { hidden_trigger = { always = no } }
+}
+
+
+z_fw_btn_plnt_ui_tb_job_check = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_fw_btn_plnt_ui_tb_setting = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+
+z_pf2_btn_plnt_auto_mig_on = {
+	potential = { always = no }
+	allow = { always = no }
+}
+z_pf2_btn_plnt_auto_mig_off = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+
+
+z_pf_btn_plnt_heup_mig = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_mig_set_default = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_mig_set_prio = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_mig_set_forced = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_mig_set_ignore = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+
+
+z_pf_btn_plnt_heup_immig = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_immig_set_default = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_immig_set_prio = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_immig_set_forced = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+z_pf_btn_plnt_heup_immig_set_ignore = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+
+
+
+z_mui_pause_GIGA_pause = {
+	potential = {
+		check_variable = { which = ehof_phase value >= 1 }	#_GIGA
+	#	NOT = { has_global_flag = giga_game_started }
+	}
+	effect = {
+	}
+}
+
+z_mui_pause_placeholder = {
+	potential = {
+		check_variable = { which = ehof_phase value < 1 }	#_GIGA
+	#	NOT = { has_global_flag = giga_game_started }
+	}
+	effect = {
+	}
+}
+
+z_mui_pause_mm_button = {
+	potential = {
+		always = no
+		check_variable = { which = ehof_phase value < 1 }	#_GIGA
+	#	NOT = { has_global_flag = giga_game_started }
+	}
+	effect = {
+	}
+}
+
+
+z_modmenu_button_effect = {
+	potential = { always = no }
+	allow = { always = no }
+}
+
+
+
+
+
+
+
+
+z_fw_btn_flt_ui_dismantle = {
+	potential = { always = no }
+	allow = { always = no }
+}
