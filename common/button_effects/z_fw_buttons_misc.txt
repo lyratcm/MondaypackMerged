@@ -1,0 +1,42 @@
+###_z modmenu	###########################################################################################
+
+#_[舰队_自我拆解]
+
+
+
+
+###_[舰队_自我拆解]	########################################################
+z_fw_btn_flt_ui_dismantle = {
+    potential = {
+	#	always = yes
+	#	has_global_flag = z_mui_installed	#_暗蓝安装
+		exists = owner
+		exists = from
+		from = { is_same_value = owner }
+    }
+	allow = {#_类别确定
+		#_子菜单开启
+		custom_tooltip = {
+			hidden_trigger = {
+				exists = owner
+				owner = { has_country_flag = z_fw_flg_cntr_fleet_dismantle }
+				NOR = {
+					is_ship_class = shipclass_starbase
+					is_ship_class = shipclass_military_station
+					is_ship_class = shipclass_mining_station
+					is_ship_class = shipclass_research_station
+					is_ship_class = shipclass_observation_station
+					is_ship_class = shipclass_transport
+				#	is_ship_class = shipclass_science_ship
+					is_ship_class = shipclass_colonizer
+				#	is_ship_class = shipclass_constructor
+				}
+			}
+            fail_text = z_fw1_misc.flt_self_dismantle_no
+		}
+	}
+	effect = {
+		custom_tooltip = z_fw1_misc.flt_self_dismantle
+		hidden_effect = { z_fw_eft_flt_misc_dismantle = yes }	#_[舰队_自我拆解]
+	}
+}
