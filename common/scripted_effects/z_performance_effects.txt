@@ -1,0 +1,58 @@
+###_z performance	##################################################################################
+
+#_[z_pf_eft_job_check_district][z_pf_eft_plnt_pop_demote]
+
+#_[自动循环_CD]	all
+z_pf_eft_global_cd = {
+	if = {
+		limit = { has_global_flag = z_pf_frequency_high }
+		set_timed_global_flag = { flag = z_pf_cd_glbl_automatic days = @z_pf_cd_short }
+	}
+	else_if = {
+		limit = { has_global_flag = z_pf_frequency_low }
+		set_timed_global_flag = { flag = z_pf_cd_glbl_automatic days = @z_pf_cd_long }
+	}
+	else = {
+		set_timed_global_flag = { flag = z_pf_cd_glbl_automatic days = @z_pf_cd_mid }
+	}
+}
+
+#_[job检测]	plnt
+z_pf_eft_job_check_district = {
+	add_district = {
+		district_type = z_performance_checker
+		ignore_cap = yes
+	}
+	remove_district = z_performance_checker
+}
+
+
+
+
+#_[pop]
+z_pf_eft_pop_demote = {
+	if = {
+		limit = {
+			is_unemployed = yes
+			OR = {
+				is_pop_category = ruler
+				is_pop_category = specialist
+			}
+		}
+		clear_pop_category = yes
+	}
+}
+#_[planet]
+z_pf_eft_plnt_pop_demote = {
+	every_owned_pop = {
+		limit = {
+			is_unemployed = yes
+			OR = {
+				is_pop_category = ruler
+				is_pop_category = specialist
+			}
+		}
+		clear_pop_category = yes
+	}
+}
+
