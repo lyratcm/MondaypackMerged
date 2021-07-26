@@ -1,0 +1,234 @@
+elven_system_gaul_neighbor2_initializer = {
+	name = "Tondonara"
+	class = "sc_elven_trinary_2"
+	
+	flags = { custom_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		name = "Tondonara"
+		class = star
+		orbit_distance = 25
+		orbit_angle = 0
+		size = 22
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_3
+		}
+	}
+	
+	planet = {
+		name = "Tondonexis"
+		class = "pc_a_star"
+		orbit_distance = 25
+		orbit_angle = 180
+		size = 18
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_2
+		}
+		
+		planet = {
+			name = "Anonta"
+			class = "pc_molten"
+			orbit_distance = 30
+			has_ring = no
+			size = 9
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+	
+	planet = {
+		name = "561-Toron"
+		class = "pc_asteroid"
+		orbit_distance = 50
+		orbit_angle = random
+	}
+	
+	planet = {
+		name = "961-Rantan"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 60 max = 120 }
+	}
+	
+	planet = {
+		name = "361-Sonan"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 60 max = 120 }
+	}
+
+	planet = {
+		name = "Banaxta"
+		class = "pc_molten"
+		orbit_distance = 35
+		orbit_angle = random
+		size = { min = 12 max = 18 }
+	}
+	
+	planet = {
+		name = "Carantis"
+		class = pc_alpine
+		orbit_distance = 25
+		orbit_angle = random
+		size = 17
+
+		init_effect = {
+			if = {
+				limit = {
+					num_guaranteed_colonies < 2
+				}
+
+				change_pc = pc_barren
+			}
+			else = {
+				set_planet_flag = abandoned_terraforming_planet
+				set_planet_flag = forbid_guillis_planet_modifiers
+
+				clear_deposits = yes
+				clear_planet_modifiers = yes
+				prevent_anomaly = yes
+				
+				add_modifier = {
+					modifier = "weak_magnetic_field"
+					days = -1
+				}
+				add_modifier = {
+					modifier = "natural_beauty"
+					days = -1
+				}
+				
+				add_deposit = d_mountain_range
+				add_deposit = d_mountain_range
+				add_deposit = d_mountain_range
+				add_deposit = d_active_volcano
+				add_deposit = d_massive_glacier
+
+				add_deposit = d_rich_mountain
+				add_deposit = d_rich_mountain
+				add_deposit = d_rich_mountain
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_ore_rich_caverns
+				add_deposit = d_veiny_cliffs
+				add_deposit = d_veiny_cliffs
+
+				add_deposit = d_forgiving_tundra
+				add_deposit = d_forgiving_tundra
+				add_deposit = d_forgiving_tundra
+			}
+		}
+	}
+	
+	planet = {
+		name = "Toncsenit"
+		class = "pc_t_star"
+		entity = "elven_t_star_adairon_entity"
+		orbit_distance = 105
+		orbit_angle = 120
+		size = 30
+		
+		moon = {
+			name = "Delluri"
+			class = "pc_molten"
+			orbit_distance = 25
+			orbit_angle = 120
+			size = { min = 12 max = 16 }
+		}
+		
+		moon = {
+			name = "Cirteralia"
+			class = "pc_toxic"
+			entity = "elven_01_continental_eleia"
+			orbit_distance = 10
+			orbit_angle = 120
+			size = 15
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+
+				add_modifier = {
+					modifier = "terraforming_candidate"
+					days = -1
+				}
+			}
+		}
+		
+		moon = {
+			name = "Toctia"
+			class = "pc_barren"
+			orbit_distance = 10
+			orbit_angle = 120
+			size = { min = 7 max = 14 }
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Cetis"
+			class = "pc_barren"
+			orbit_distance = 10
+			orbit_angle = 120
+			size = { min = 7 max = 14 }
+		}
+		
+		moon = {
+			name = "Cinita"
+			class = "pc_barren"
+			orbit_distance = 10
+			orbit_angle = 120
+			size = { min = 6 max = 12 }
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 365
+	}
+	
+	planet = {
+		name = "395-Lapan"
+		class = "pc_asteroid"
+		orbit_distance = 100
+		orbit_angle = random
+		size = { min = 6 max = 10 }
+	}
+	
+	planet = {
+		name = "187-Canilun"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+		size = { min = 6 max = 10 }
+	}
+	
+	planet = {
+		name = "932-Anatun"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+		size = { min = 6 max = 10 }
+	}
+	
+	planet = {
+		name = "132-Lantun"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 90
+		size = { min = 10 max = 14 }
+	}
+}

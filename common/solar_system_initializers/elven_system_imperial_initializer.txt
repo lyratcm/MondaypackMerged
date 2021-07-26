@@ -1,0 +1,256 @@
+elven_system_imperial_initializer = {
+	name = "Anoralas"
+	
+	class = "sc_elven_imperial"
+	
+	asteroid_belt = {
+		type = elven_crystal_asteroid_belt_teal
+		radius = 90
+	}
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		if = {
+			limit = { NOT = { is_inside_nebula = yes } }
+
+			create_nebula_4 = yes
+		}
+	}
+	
+	flags = { empire_home_system custom_system }
+	usage = origin
+
+	planet = {
+		name = "Anoreth"
+		class = "pc_a_star"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 22
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_energy_5
+		}
+	}
+	
+	planet = {
+		name = "Anoralas"
+		class = "pc_pulsar"
+		orbit_distance = 18
+		size = 8
+
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_physics_3
+		}
+	}
+		
+	planet = {
+		name = "Revaneth"
+		class = "pc_asteroid"
+		entity = "elven_asteroid_crystal_teal_large_01_entity"
+		orbit_distance = 70
+		orbit_angle = random
+		size = { min = 6 max = 8 }
+
+		flags = { starting_mining_target }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_minerals_5
+		}
+	}
+	
+	planet = {
+		name = "Reveryn"
+		class = "pc_asteroid"
+		entity = "elven_asteroid_crystal_teal_large_01_entity"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 120 }
+		size = { min = 5 max = 8 }
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Revammel"
+		class = "pc_asteroid"
+		entity = "elven_asteroid_crystal_teal_large_01_entity"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 120 }
+		size = { min = 6 max = 9 }
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = "Bagoreth"
+		class = "pc_barren"
+		entity = "elven_01_barren_purple"
+		orbit_distance = 70
+		orbit_angle = random
+		size = { min = 20 max = 30 }
+		
+		moon = {
+			name = "Faralith"
+			class = random_non_colonizable
+			orbit_distance = 20
+			size = { min = 8 max = 10 }
+		}
+
+		init_effect = {
+			clear_deposits = yes
+		}
+	}
+	
+	planet = {
+		name = "Garalavan"
+		class = "pc_toxic"
+		entity = "elven_01_toxic_cyan_purple"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = { min = 20 max = 30 }
+
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_society_2
+		}
+	}
+	
+	planet = {
+		name = "Senalata"
+		class = ideal_planet_class
+		home_planet = yes
+		size = 18
+		orbit_distance = 70
+		orbit_angle = random
+		has_ring = no
+		starting_planet = yes
+		flags = { elven_ring_start ayleid_capital }
+		
+		init_effect = {
+		}
+
+		moon = {
+			name = "Aithil"
+			class = "pc_nuked"
+			orbit_distance = 25
+			orbit_angle = random
+			size = 5
+			has_ring = no
+			modifiers = none
+
+			init_effect = {
+				clear_deposits = yes
+
+				add_modifier = {
+					modifier = "elven_irradiated_planet"
+					days = -1
+				}
+				add_modifier = {
+					modifier = "elven_mineral_poor"
+					days = -1
+				}
+
+				add_deposit = d_bomb_crater
+				add_deposit = d_mineral_fields
+				add_deposit = d_veiny_cliffs
+			}
+		}
+
+		moon = {
+			name = "Lithil"
+			class = random_non_colonizable
+			orbit_distance = 10
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 16 max = 20 }
+			has_ring = no
+
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+	}
+		
+	planet = {
+		name = "Anelloth"
+		class = "pc_gas_giant"
+		orbit_distance = 90
+		orbit_angle = random
+		size = 34
+		has_ring = yes
+		entity = "elven_01_gas_giant_cyan"
+
+		flags = { starting_mining_target }
+		
+		init_effect = {
+			clear_deposits = yes
+			add_deposit = d_energy_5
+		}
+		
+		moon = {
+			name = "Sarniel"
+			class = random_non_colonizable
+			orbit_distance = 40
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 14 max = 16 }
+
+			flags = { starting_mining_target }
+
+			init_effect = {
+				clear_deposits = yes
+				add_deposit = d_minerals_5
+			}
+		}
+		
+		moon = {
+			name = "Sarneth"
+			class = random_non_colonizable
+			orbit_distance = 20
+			orbit_angle = { min = 90 max = 270 }
+			size = { min = 14 max = 16 }
+
+			init_effect = {
+				clear_deposits = yes
+			}
+		}
+	}
+	
+	change_orbit = 100
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_imperial_neighbor1_initializer"
+	}
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_imperial_neighbor2_initializer"
+	}
+	
+	neighbor_system = {
+		distance = { min = 1 max = 50 }	
+		initializer = "elven_system_imperial_neighbor3_initializer"
+	}
+	
+	#SYSTEM TESTING ONLY
+	# neighbor_system = {
+		# distance = { min = 5 max = 50 }	
+		# initializer = "elven_secondorigin_system_initializer"
+	# }
+	
+	
+	
+}

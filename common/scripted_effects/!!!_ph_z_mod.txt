@@ -1,0 +1,36 @@
+###_无尽群星	占位符	###############################################################################
+
+#_[z_pf2]
+#_[产业革命]
+
+
+
+
+###_[z_pf2]	#################################################
+z_pf_eft_cntr_merge_spcs_common = {}
+z_pf2_eft_all_flt_opt_manual = {}
+z_pf2_eft_plnt_auto_immig_toggle = {}	#_[自动移民开关]
+z_pf2_eft_cntr_auto_immig_enable = {}
+z_pf2_eft_cntr_auto_immig_disable = {}
+z_pf_eft_cntr_heup_mig_ignore = {}	#_[迁出设置]
+z_pf_eft_cntr_heup_mig_default = {}
+z_pf2_eft_plnt_basic_debug = {}	#_[pf2_星球基础debug]
+z_pf_eft_cntr_heup_manual = {}	#_[国内迁移]
+
+
+
+
+###_[产业革命]	#################################################
+z_pr_eft_cntr_mannual_check = {}	#_[手动检测_pf]
+z_pr_eft_cntr_setting = {}
+z_pr_eft_cntr_revolution = {}		#_[pr完成革命]
+z_pr_eft_plnt_pop_cnvt_5 = {}		#_[p_pop转化5]
+z_pr_eft_plnt_pop_cnvt_25 = {}		#_[p_pop转化25]
+z_pr_eft_plnt_man_cnvt_full = {}		#_[p_man转化公民]
+z_pr_eft_plnt_man_cnvt_limited = {}		#_[p_man转化居留]
+z_pr_eft_plnt_man_cnvt_slavery = {}		#_[p_man转化奴隶]
+z_pr_eft_plnt_man_cnvt_servitude = {}	#_[p_man转化机仆]
+z_pr_eft_plnt_deputy_random_to_slavery = {}		#_[p_随机转奴隶]
+z_pr_eft_plnt_deputy_random_to_servitude = {}	#_[p_随机转机仆]
+z_pr_eft_plnt_deputy_random_to_full = {}		#_[p_随机转公民]
+z_pr_eft_plnt_abandon = {}			#_[pr放弃殖民地]

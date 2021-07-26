@@ -1,0 +1,186 @@
+######################################################################
+###_	z modmenu
+######################################################################
+
+#_[Hidden_buttons]
+#_[Key_Locked]
+#_[子模块功能快捷按钮effect]
+#_[sp_mods]
+
+
+###_[Hidden_buttons]	<country>	拓展UI开启/拓展UI关闭	###################################################
+
+#_[拓展UI开启]
+z_mm_eft_expanded_sub_ui_open = {
+	set_country_flag = z_mm_flg_expanded_sub_ui_on
+}
+#_[拓展UI关闭]
+z_mm_eft_expanded_sub_ui_exit = {
+	remove_country_flag = z_mm_flg_expanded_sub_ui_on
+}
+
+
+
+
+###_[Key_Locked]	<country>	锁定面板/解锁面板	###################################################
+
+#_[锁定面板]	框架设置开启
+z_mm_lock_setting_panel = {
+	set_country_flag = z_mm_setting_panel_locked
+}
+#_[解锁面板]
+z_mm_unlock_setting_panel = {
+	remove_country_flag = z_mm_setting_panel_locked		#_框架
+}
+
+
+
+#_[country]
+z_mm_lock_menu = {
+	set_country_flag = z_mm_modmenu_opened
+}
+#_[country]
+z_mm_unlock_menu = {
+	remove_country_flag = z_mm_modmenu_opened
+}
+
+
+
+
+
+
+
+###_[子模块功能快捷按钮effect]	####################################################################################
+
+#_[country] z_pf
+z_mm_eft_cntr_pf_manual_check_glbl = {
+	set_timed_global_flag = { flag = z_pf_flg_glbl_manual_checking_cd days = 7 }
+	#_[产业革命]
+	every_country = {
+		limit = { has_country_flag = z_pr_flg_cntr_reg }
+		z_pr_eft_cntr_mannual_check = yes
+	}
+	#_[默认]
+	if = {
+		limit = { has_global_flag = z_pf2_installed }
+		every_country = {
+			limit = { z_fw_trgr_cntr_core_playable_mod = yes }
+			z_pf_eft_cntr_heup_manual = yes	#_[国内迁移]pf2
+		}
+	}
+}
+#_[country] z_pf_own
+z_mm_eft_cntr_pf_manual_check_own = {
+	#_[产业革命]
+	if = {
+		limit = { has_country_flag = z_pr_flg_cntr_reg }
+		z_pr_eft_cntr_mannual_check = yes
+	}
+	#_[默认]
+	if = {
+		limit = { has_global_flag = z_pf2_installed }
+		z_pf_eft_cntr_heup_manual = yes	#_[国内迁移]pf2
+	}
+}
+
+#_[country] z pf2
+z_mm_eft_pf2_merge_ai_species = {
+	every_country = {
+		limit = {
+			is_ai = yes
+			OR = {
+				is_country_type = default
+				is_country_type = ascended_empire	#_ZOFE
+				is_country_type = lost_empire		#_ZOFE
+			}
+		}
+		#_z pf2
+		z_pf_eft_cntr_merge_spcs_common = yes
+	}
+}
+
+
+
+
+
+
+
+
+###_[sp_mods]	####################################################################################
+#_cntr	mist_girls
+z_mm_eft_sp_mod_1 = {
+	country_event = { id = wsg_shimakaze.10 }
+}
+#_cntr	rls
+z_mm_eft_sp_mod_2 = {
+	if = {
+		limit = {
+			NOR = {
+				has_authority = auth_hive_mind
+				has_authority = auth_machine_intelligence
+				has_authority = auth_ancient_machine_intelligence
+			}
+		}
+		custom_tooltip = tab_ruler_hobbies_tooltip
+	}
+	if = {
+		limit = {
+			OR = {
+				has_authority = auth_hive_mind
+			}
+		}
+		custom_tooltip = tab_ruler_hobbies_tooltip_hivemind
+	}
+	if = {
+		limit = {
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_authority = auth_ancient_machine_intelligence
+			}
+		}
+		custom_tooltip = tab_ruler_hobbies_tooltip_machine
+	}
+	hidden_effect = {
+		set_country_flag = ruler_hobby_view_opened
+		if = {
+			limit = {
+				NOR = {
+					has_authority = auth_hive_mind
+					has_authority = auth_machine_intelligence
+					has_authority = auth_ancient_machine_intelligence
+				}
+			}
+			country_event = {
+				id = play_as_ruler.42689
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_authority = auth_hive_mind
+				}
+			}
+			country_event = {
+				id = play_as_ruler.42690
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_authority = auth_machine_intelligence
+					has_authority = auth_ancient_machine_intelligence
+				}
+			}
+			country_event = {
+				id = play_as_ruler.42691
+			}
+		}
+	}
+}
+z_mm_eft_sp_mod_3 = {
+	country_event = { id = giga_menu.1 }
+}
+z_mm_eft_sp_mod_4 = {
+	country_event = { id = potv_religion_dialog.1 }
+}
+

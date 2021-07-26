@@ -1,0 +1,54 @@
+
+Scripted_Planet_Effect_Apply_Smallholders_Modifiers = {
+	event_target:Target_Planet_GAPS_Smallholders_Planet = {
+		if = { limit = { planet_size = 1 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_1 days = -1 } } }
+		if = { limit = { planet_size = 2 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_2 days = -1 } } }
+		if = { limit = { planet_size = 3 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_3 days = -1 } } }
+		if = { limit = { planet_size = 4 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_4 days = -1 } } }
+		if = { limit = { planet_size = 5 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_5 days = -1 } } }
+		if = { limit = { planet_size = 6 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_6 days = -1 } } }
+		if = { limit = { planet_size = 7 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_7 days = -1 } } }
+		if = { limit = { planet_size = 8 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_8 days = -1 } } }
+		if = { limit = { planet_size = 9 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_9 days = -1 } } }
+		if = { limit = { planet_size = 10 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_10 days = -1 } } }
+		if = { limit = { planet_size = 11 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_11 days = -1 } } }
+		if = { limit = { planet_size = 12 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_12 days = -1 } } }
+		if = { limit = { planet_size = 13 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_13 days = -1 } } }
+		if = { limit = { planet_size = 14 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_14 days = -1 } } }
+		if = { limit = { planet_size = 15 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_15 days = -1 } } }
+		if = { limit = { planet_size = 16 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_16 days = -1 } } }
+		if = { limit = { planet_size = 17 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_17 days = -1 } } }
+		if = { limit = { planet_size = 18 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_18 days = -1 } } }
+		if = { limit = { planet_size = 19 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Bonus_S_19 days = -1 } } }
+		if = { limit = { planet_size = 21 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_21 days = -1 } } }
+		if = { limit = { planet_size = 22 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_22 days = -1 } } }
+		if = { limit = { planet_size = 23 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_23 days = -1 } } }
+		if = { limit = { planet_size = 24 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_24 days = -1 } } }
+		if = { limit = { planet_size = 25 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_25 days = -1 } } }
+		if = { limit = { planet_size = 26 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_26 days = -1 } } }
+		if = { limit = { planet_size = 27 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_27 days = -1 } } }
+		if = { limit = { planet_size = 28 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_28 days = -1 } } }
+		if = { limit = { planet_size = 29 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_29 days = -1 } } }
+		if = { limit = { planet_size = 30 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_30 days = -1 } } }
+		if = { limit = { planet_size = 31 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_31 days = -1 } } }
+		if = { limit = { planet_size = 32 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_32 days = -1 } } }
+		if = { limit = { planet_size = 33 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_33 days = -1 } } }
+		if = { limit = { planet_size = 34 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_34 days = -1 } } }
+		if = { limit = { planet_size = 35 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_35 days = -1 } } }
+		if = { limit = { planet_size = 36 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_36 days = -1 } } }
+		if = { limit = { planet_size = 37 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_37 days = -1 } } }
+		if = { limit = { planet_size = 38 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_38 days = -1 } } }
+		if = { limit = { planet_size = 39 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_39 days = -1 } } }
+		if = { limit = { planet_size = 40 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_40 days = -1 } } }
+		if = { limit = { planet_size = 41 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_41 days = -1 } } }
+		if = { limit = { planet_size = 42 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_42 days = -1 } } }
+		if = { limit = { planet_size = 43 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_43 days = -1 } } }
+		if = { limit = { planet_size = 44 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_44 days = -1 } } }
+		if = { limit = { planet_size = 45 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_45 days = -1 } } }
+		if = { limit = { planet_size = 46 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_46 days = -1 } } }
+		if = { limit = { planet_size = 47 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_47 days = -1 } } }
+		if = { limit = { planet_size = 48 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_48 days = -1 } } }
+		if = { limit = { planet_size = 49 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_49 days = -1 } } }
+		if = { limit = { planet_size > 49 } every_owned_pop = { limit = { pop_has_trait = Trait_GAPS_Smallholders } add_modifier = { modifier = Pop_Modifier_GAPS_Smallholders_Penalty_S_50 days = -1 } } }
+	}
+}

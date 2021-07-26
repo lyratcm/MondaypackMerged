@@ -1,0 +1,3 @@
+
+Scripted_Planet_Effect_Apply_Patrotic_Modifiers = {
+}

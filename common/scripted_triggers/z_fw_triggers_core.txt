@@ -1,0 +1,527 @@
+###_z frameworks1 triggers	############################################################################
+
+#_[基础]		多人host/初始PC/当前PC
+#_[国家类型]	普通国家_全部/普通国家_无afe/原版国家/可用全部国含mod/拥有舰队国家
+#_[星球类型]	可引爆恒星/天体能级/特殊行星/殖民地类型/尺寸修正忽略
+#_[物种类型]	非格式塔/有机体/有机体_无mod
+#_[星际基地]	星基/高级星基
+#_[巨建]
+
+
+
+
+###_[基础]	多人host/初始PC/当前PC	###########################################################
+
+##_[多人host]
+z_fw_trgr_cntr_core_mp_host = {
+	NAND = {
+		is_multiplayer = yes
+		NOT = { has_country_flag = z_fw_flg_cntr_core_host }
+	}
+}
+##_[初始PC]
+z_fw_trgr_cntr_core_pc_init = {
+	has_country_flag = z_fw_core_init_pc
+}
+##_[当前PC]	SP/MP通用
+z_fw_trgr_cntr_core_pc_current = {
+	OR = {
+		AND = {#_SP
+			is_multiplayer = no
+			OR = {
+				is_ai = no
+				has_country_flag = z_fw_core_init_pc
+			}
+		}
+		AND = {#_MP
+			is_multiplayer = yes
+			is_ai = no
+		}
+	}
+}
+
+
+
+
+
+
+
+
+###_[国家类型]	############################################################################
+
+#_[普通国家_全部]
+z_fw_trgr_cntr_core_normal_all = {
+	OR = {
+		is_country_type = default
+		is_country_type = prikki
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = ascended_empire	#_zofe
+		is_country_type = lost_empire		#_zofe
+		is_country_type = default_ev	#_ev
+	}
+}
+#_[普通国家_无afe]
+z_fw_trgr_cntr_core_normal_no_afe = {
+	OR = {
+		is_country_type = default
+		is_country_type = prikki
+		is_country_type = fallen_empire
+		is_country_type = ascended_empire	#_zofe
+		is_country_type = lost_empire		#_zofe
+		is_country_type = default_ev	#_ev
+	}
+}
+
+#_[原版国家]
+z_fw_trgr_cntr_core_vanilla = {
+	OR = {
+		is_country_type = default					#_VANILLA
+		is_country_type = faction
+		is_country_type = pirate
+		is_country_type = awakened_marauders
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		is_country_type = rebel
+		is_country_type = enclave
+		is_country_type = shroud_spirits
+		is_country_type = swarm
+		is_country_type = extradimensional
+		is_country_type = extradimensional_2
+		is_country_type = extradimensional_3
+		is_country_type = ai_empire
+		is_country_type = cybrex_empire
+		is_country_type = sentinels
+		is_country_type = tiyanki
+		is_country_type = tiyanki_garrison
+		is_country_type = amoeba
+		is_country_type = amoeba_borderless
+		is_country_type = amoeba_garrison
+		is_country_type = crystal
+		is_country_type = drone
+		is_country_type = cloud
+		is_country_type = feral_prethoryn
+		is_country_type = marauder_raiders
+		is_country_type = vol
+		is_country_type = enigmatic_cache
+		is_country_type = gray_goo
+		is_country_type = mechanocalibrator
+		is_country_type = guardian					#_VANILLA-LEVIATHAN
+		is_country_type = guardian_dragon
+		is_country_type = guardian_stellarite
+		is_country_type = guardian_wraith
+		is_country_type = guardian_hiver
+		is_country_type = guardian_horror
+		is_country_type = guardian_fortress
+		is_country_type = guardian_dreadnought
+		is_country_type = guardian_sphere
+		is_country_type = guardian_scavenger_bot	#_VANILLA-DS
+		is_country_type = guardian_elderly_tiyanki
+		is_country_type = guardian_hatchling
+		is_country_type = prikki
+		is_country_type = caravaneer_fleet			#_VANILLA-MEGACORP
+	}
+}
+
+#_[可用全部国含mod]
+z_fw_trgr_cntr_core_playable_mod = {
+	OR = {
+		#_VANILLA
+		is_country_type = default
+		is_country_type = prikki
+		is_country_type = fallen_empire
+		is_country_type = awakened_fallen_empire
+		#_EV
+		is_country_type = default_ev
+		#_ZOFE
+		is_country_type = ascended_empire
+		is_country_type = lost_empire
+		#_SOFE
+		is_country_type = original_empire_passive
+		is_country_type = original_empire_active
+		#is_country_type = sofe_light_seeker	
+		#_永恒
+		is_country_type = eternal_empire
+	}
+}
+
+
+#_[拥有舰队国家]
+z_fw_trgr_cntr_core_battle_eft_valid = {
+	count_owned_fleet = { count > 0 }	#_|拥有舰队|
+}
+
+
+
+
+
+
+
+
+
+###_[星球类型]	可引爆恒星/天体能级/特殊行星/殖民地类型/尺寸修正忽略	##################################################
+
+##_[可引爆恒星]
+z_fw_trgr_star_core_destructible = {
+	NOR = {
+		is_planet_class = pc_black_hole
+		is_planet_class = pc_neutron_star
+		is_planet_class = pc_pulsar
+		is_planet_class = z_pc_nova				#_z framework
+		#_rs
+		is_planet_class = pc_nova_1
+		is_planet_class = pc_nova_2
+		is_planet_class = pc_collapsar			#_坍缩星
+		is_planet_class = pc_protostar
+		is_planet_class = pc_c_giant_star		#_碳星
+		is_planet_class = pc_s_giant_star		#_锆星
+		is_planet_class = pc_d_star
+		is_planet_class = pc_l_star				#_褐矮星
+		is_planet_class = pc_t_star
+		is_planet_class = pc_y_star
+		is_planet_class = pc_ae_star
+		is_planet_class = pc_microquasar_1		#_微类星体
+		is_planet_class = pc_microquasar_2
+	}
+}
+
+#_[高能恒星]
+z_fw_trgr_star_core_energy_high = {
+	OR = {
+		is_planet_class = pc_b_star
+		#_[RS]
+		is_planet_class = pc_o_star
+		is_planet_class = pc_o_super_star
+		is_planet_class = pc_o_hyper_star
+		is_planet_class = pc_b_super_star
+		is_planet_class = pc_w_azure_star	#_沃尔夫拉叶星
+		is_planet_class = pc_w_red_star
+		is_planet_class = pc_w_green_star
+		is_planet_class = pc_w_purple_star
+		is_planet_class = pc_lbv_blue_star	#_高光度星
+		is_planet_class = pc_lbv_green_star
+		is_planet_class = pc_lbv_red_star
+		#_[HS]
+		is_planet_class = pc_blue_dwarf_star	#_蓝矮星(天狼星)
+	}
+}
+#_[普通恒星]
+z_fw_trgr_star_core_energy_normal = {
+	OR = {
+		is_planet_class = pc_a_star
+		is_planet_class = pc_f_star
+	#	is_planet_class = pc_g_star
+		#_[RS]
+		is_planet_class = pc_a_super_star
+		is_planet_class = pc_f_super_star
+	#	is_planet_class = pc_g_giant_star
+	#	is_planet_class = pc_g_super_star
+		is_planet_class = pc_ae_star	#_金牛座 赫比格-哈罗天体	恒星星云
+		is_planet_class = pc_fu_star	#_猎户座fu变星
+		#_[HS]
+	}
+}
+#_[黑洞]
+z_fw_trgr_star_core_astronomy = {
+	OR = {
+		is_planet_class = pc_black_hole
+		is_planet_class = pc_pulsar
+		#_[RS]
+		is_planet_class = pc_collapsar			#_坍缩星
+		is_planet_class = pc_protostar
+		is_planet_class = pc_magnetar
+		is_planet_class = pc_microquasar_1
+		is_planet_class = pc_microquasar_2
+		#_[HS]
+		is_planet_class = pc_antimatter_star	#_反物质星
+		is_planet_class = pc_dark_star			#_暗星
+		is_planet_class = pc_quasi_star			#_夸克星
+		is_planet_class = pc_strange_star		#_奇异星
+		is_planet_class = pc_white_hole			#_白洞
+	}
+}
+
+
+##_[特殊行星]	############################################################
+
+
+###_[殖民地类型]	热/适宜/冷/废土/天堂/特殊/环	####################################################
+#_[PD行星栖息地]	district_set = pdplanethab
+#_[热]
+z_fw_trgr_plnt_core_desert = {
+	OR = {
+		is_planet_class = pc_desert
+		#_[PD]
+		is_planet_class = pc_sandsea		#_[沙丘星球]
+		is_planet_class = pc_oasis			#_[绿洲星球]
+		is_planet_class = pc_tidallylocked	#_[潮汐锁定星球]
+	}
+}
+z_fw_trgr_plnt_core_arid = {
+	OR = {
+		is_planet_class = pc_arid
+		#_[PD]
+		is_planet_class = pc_mesa			#_[台地星球]
+		is_planet_class = pc_outback		#_[内陆星球]
+		is_planet_class = pc_coral			#_[珊瑚星球]
+	}
+}
+z_fw_trgr_plnt_core_savannah = {
+	OR = {
+		is_planet_class = pc_savannah
+		#_[PD]
+		is_planet_class = pc_steppe			#_干草原星球
+		is_planet_class = pc_veld			#_灌丛草原星球
+		is_planet_class = pc_semiarid		#_[半干旱星球]
+		is_planet_class = pc_med			#_[地中海星球]
+		is_planet_class = pc_biolumen		#_[生物发光星球]
+	}
+}
+#_[适宜]
+z_fw_trgr_plnt_core_tropical = {
+	OR = {
+		is_planet_class = pc_tropical
+		#_[PD]
+		is_planet_class = pc_cascadian		#_[卡斯卡迪亚星球]
+		is_planet_class = pc_mangrove		#_[红树林星球]
+		is_planet_class = pc_wetswamp		#_[木本沼泽星球]
+		is_planet_class = pc_desertislands	#_[环礁星球]
+		is_planet_class = pc_mud			#_[泥地星球]
+		is_planet_class = pc_megafloratol	#_[巨植物星球]
+		is_planet_class = pc_megaflora
+	}
+}
+z_fw_trgr_plnt_core_continent = {
+	OR = {
+		is_planet_class = pc_continental
+		#_[PD]
+		is_planet_class = pc_tepid			#_温带星球
+		is_planet_class = pc_prairie		#_普列里星球
+		is_planet_class = pc_hajungle		#_[特普伊星球]	雾气
+		is_planet_class = pc_retinal		#_[视黄醛星球]	叶绿素被视黄醛取代的世界
+		is_planet_class = pc_forest			#_[森林星球]
+		is_planet_class = pc_lake			#_[湖泊星球]
+		is_planet_class = pc_supercon		#_[超大陆星球]
+		is_planet_class = pc_primal			#_[原始星球]
+		is_planet_class = pc_karst			#_[喀斯特星球]
+	}
+}
+z_fw_trgr_plnt_core_ocean = {
+	OR = {
+		is_planet_class = pc_ocean
+		#_[PD]
+		is_planet_class = pc_aquatic		#_[沧溟星球]
+		is_planet_class = pc_aquatichot
+		is_planet_class = pc_aquaticcold
+		is_planet_class = pc_aquaticcity
+		is_planet_class = pc_ocean
+		is_planet_class = pc_subarctic		#_[峭壁星球]
+		is_planet_class = pc_eyeball		#_[眼瞳星球]
+		is_planet_class = pc_storm			#_[风暴星球]
+		
+	}
+}
+#_[冷]
+z_fw_trgr_plnt_core_tundra = {
+	OR = {
+		is_planet_class = pc_tundra
+		#_[PD]
+		is_planet_class = pc_duneforest		#_[沙漠林地星球]
+		is_planet_class = pc_snow			#_[冰雪星球]
+		is_planet_class = pc_boreal			#_[亚寒带星球]
+		is_planet_class = pc_swamp			#_[泥炭沼泽星球]
+		is_planet_class = pc_mushroom		#_[菌丝星球]
+	}
+}
+z_fw_trgr_plnt_core_arctic = {
+	OR = {
+		is_planet_class = pc_arctic
+		#_[PD]
+		is_planet_class = pc_antarctic		#_[冰盖星球]
+		is_planet_class = pc_glacial		#_[冰河星球]
+		is_planet_class = pc_frozen_desert	#_[冰漠星球]
+		is_planet_class = pc_glacio			#_[冰川火山星球]
+		is_planet_class = pc_rogue			#_[孤异星球]
+		is_planet_class = pc_geothermal		#_[地热星球]
+		#_[PD_EW]
+		is_planet_class = pc_ammonia		#_氨	-100°~-40°
+		is_planet_class = pc_ammoniacity
+	}
+}
+z_fw_trgr_plnt_core_alpine = {
+	OR = {
+		is_planet_class = pc_alpine
+		#_[PD]
+		is_planet_class = pc_aeolian		#_[风成星球]
+		is_planet_class = pc_hadesert		#_[阿塔卡玛星球]
+		is_planet_class = pc_highland		#_[高原星球]
+	}
+}
+#_[废土]
+z_fw_trgr_plnt_core_nuked = {
+	OR = {
+		is_planet_class = pc_nuked
+		#_[PD]
+		is_planet_class = pc_salt			#_[盐地星球]
+		#_[PD_EW]
+		is_planet_class = pc_methane		#_甲烷
+		is_planet_class = pc_methanecity
+		is_planet_class = pc_acid			#_酸
+		is_planet_class = pc_sulfur			#_硫
+		is_planet_class = pc_sulfurcity
+		is_planet_class = pc_ash			#_[灰烬星球]
+		is_planet_class = pc_ashcity
+		is_planet_class = pc_irradiated		#_[辐射营养星球]
+		#_[PD_SW]
+		is_planet_class = pc_pdshroud		#_[虚境星球]
+	}
+}
+#_[天堂]
+z_fw_trgr_plnt_core_gaia = {
+	OR = {
+		is_planet_class = pc_gaia
+		is_planet_class = pc_relic
+		#_[PD]
+		is_planet_class = pc_superhabitable		#_[超宜居星球]
+		#_[PD_UW]
+		is_planet_class = pc_floating			#_[浮空星球]
+		is_planet_class = pc_graveyard			#_[墓地星球]	鲸落
+		is_planet_class = pc_technoorganic		#_[电气有机星球]	自动灌溉
+	}
+}
+#_[特殊]
+z_fw_trgr_plnt_core_sp = {
+	OR = {
+		uses_district_set = hive_world
+		uses_district_set = machine_world
+	#	uses_district_set = habitat
+		#_[PD]
+		uses_district_set = pdfloraforge		#_[pc_pdfloraforge]	植物锻炉
+		is_planet_class = pc_megaflorahive		#_[巨植物星球_虫巢]
+		is_planet_class = pc_megaflorafort		#_[植物要塞星球]
+		#_[PD_MA]
+		uses_district_set = pdmilarc			#_[pc_milarc]	堡垒理想城
+		uses_district_set = pdbioforge			#_[pc_bioforge]
+		uses_district_set = pdbiofort			#_[pc_pdbiofort]
+		uses_district_set = pdmachinefactory	#_[pc_machine_factory]
+		uses_district_set = pdmachinefort		#_[pc_machine_fort]
+		is_planet_class = pc_milarc_relic		#_[遗落星球]	堡垒理想城前身
+		#_[PD_UW]
+		is_planet_class = pc_crystal
+		uses_district_set = pc_archive			#_[pc_archive]	档案馆栖息地
+	}
+}
+#_[环]
+z_fw_trgr_plnt_core_ringworld = {
+	OR = {
+		uses_district_set = ring_world
+	}
+}
+
+
+
+
+###_[尺寸修正忽略]	giga	##############################
+z_fw_trgr_plnt_star_resize_ignore = {
+	OR = {
+		is_planet_class = pc_core_black_hole	#_[giga]
+	}
+}
+
+
+
+
+
+
+
+
+
+###_[物种类型]	非格式塔/有机体/有机体_无mod	#######################################################
+
+#_[非格式塔]
+z_fw_trgr_spcs_core_free = {
+	NOR = {
+		has_trait = trait_hive_mind
+		has_trait = trait_machine_unit
+	}
+}
+#_[有机体]
+z_fw_trgr_spcs_core_organic_mod = {
+	NOR = {
+		is_archetype = ROBOT	#_species
+		has_trait = trait_machine_unit	#_country pop leader species
+		is_archetype = MACHINE
+		has_trait = trait_machine_unit
+		is_archetype = LITHOID
+		has_trait = trait_lithoid
+		is_species_class = NECROID
+		has_trait = trait_necrophage
+	}
+}
+#_[有机体_无mod]
+z_fw_trgr_spcs_core_organic_vanilla = {
+	NOR = {
+		#_vanilla
+		is_archetype = ROBOT	#_species
+		has_trait = trait_machine_unit	#_country pop leader species
+		is_archetype = MACHINE
+		has_trait = trait_machine_unit
+		is_archetype = LITHOID
+		has_trait = trait_lithoid
+		is_species_class = NECROID
+		has_trait = trait_necrophage
+		#_wsg
+		is_archetype = WARSHIPGIRL
+		is_archetype = SHENHAI
+		is_archetype = STARSHIPGIRLS		#_星舰鼬
+		is_species_class = Fleetgirl		#_舰妈C_杰兰特
+		is_species_class = Fleetgirlbot
+		is_species_class = WG_clover_theater_species	#_四叶草
+		is_species_class = BIO_clover_theater_species
+		is_species_class = MACHINE_clover_theater_species
+		is_species_class = Azur_Lane		#_浪逼_学园长
+		is_species_class = Azur_Factions
+		#_sofe
+		is_archetype = DEITY
+		#_dal
+		is_species_class = DAL
+	}
+}
+
+
+
+
+
+
+
+
+###_[星际基地]	星基/高级星基	#########################################################################
+
+#_[星基]
+z_fw_trgr_flt_core_sb = {
+	OR = {
+		is_ship_size = starbase_outpost
+		is_ship_size = starbase_starport
+		is_ship_size = starbase_starhold
+		is_ship_size = starbase_starfortress
+		is_ship_size = starbase_citadel
+	}
+}
+#_[高级星基]
+z_fw_trgr_flt_core_adv_sb = {
+	OR = {
+		is_ship_size = starbase_starport
+		is_ship_size = starbase_starhold
+		is_ship_size = starbase_starfortress
+		is_ship_size = starbase_citadel
+	}
+}
+
+
+
+
+
+
+
+
+###_[巨建]	####################################################################
