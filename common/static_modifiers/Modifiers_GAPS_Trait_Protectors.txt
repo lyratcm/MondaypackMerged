@@ -1,0 +1,3 @@
+Planet_Modifier_GAPS_Trait_Protectors = {
+	planet_orbital_bombardment_damage = -0.01
+}

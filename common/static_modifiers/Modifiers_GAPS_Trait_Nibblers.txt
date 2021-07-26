@@ -1,0 +1,6 @@
+Planet_Modifier_GAPS_Trait_GAPS_Nibbler_Gestalt = {
+	job_GAPS_Nibbled_gestalt_add = 0.2
+}
+Planet_Modifier_GAPS_Trait_GAPS_Nibbler = {
+	job_GAPS_Nibbled_add = 0.2
+}

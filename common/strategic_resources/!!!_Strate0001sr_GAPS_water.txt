@@ -1,0 +1,14 @@
+sr_GAPS_water = {
+    tradable = no
+    tooltip_decimals = 1
+    max = 10000
+    visibility_prerequisite = {
+        always = yes
+    }
+    ai_weight = {
+        weight = 100
+    }
+    ai_wants = {
+        base = 500
+    }
+}

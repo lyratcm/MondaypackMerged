@@ -1,0 +1,10 @@
+z_fw_sr_test = {
+    is_rare = yes
+    AI_category = strategic_resource
+    is_planet_local = no
+    is_global = yes
+    tradable = no
+    ai_weight = {
+        weight = 0
+    }
+}
