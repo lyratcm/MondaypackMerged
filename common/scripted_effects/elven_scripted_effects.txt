@@ -1,0 +1,1057 @@
+###########################
+## LUNARI START - SIELYN ##
+###########################
+
+generate_elven_capital_deposits_and_blockers = {
+	if = {
+		limit = { 
+			has_planet_flag = lunari_capital
+		}
+
+		owner = {
+			give_technology = { message = no tech = tech_hydroponics }
+			set_country_flag = rare_crystals_found
+		}
+
+		clear_deposits = yes
+		clear_planet_modifiers = yes
+		clear_blockers = yes
+
+		add_modifier = {
+			modifier = "lunari_auroras"
+			days = -1
+		}
+
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_failing_infrastructure
+
+		add_deposit = d_lunari_planetary_ice_blossoms
+
+		add_deposit = d_lunari_planetary_energy_3
+		add_deposit = d_lunari_planetary_energy_2
+		add_deposit = d_lunari_planetary_energy_2
+		add_deposit = d_lunari_planetary_energy_1
+		add_deposit = d_lunari_planetary_energy_1
+
+		add_deposit = d_lunari_planetary_minerals_3b
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_1
+
+		add_deposit = d_lunari_planetary_food_3
+		add_deposit = d_lunari_planetary_food_1b
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = tulshar_capital
+		}
+
+		clear_deposits = yes
+		clear_planet_modifiers = yes
+		clear_blockers = yes
+
+		add_deposit = d_drow_planetary_speleostructural_instability
+		add_deposit = d_drow_planetary_murrpau_sanguine
+
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_failing_infrastructure
+		add_deposit = d_failing_infrastructure
+
+		add_deposit = d_drow_planetary_buried_sea
+		add_deposit = d_drow_planetary_happy_lizard_farms
+		add_deposit = d_drow_planetary_luminous_lichen
+		add_deposit = d_drow_planetary_shroom_flats
+		add_deposit = d_drow_planetary_sunken_geysers
+		add_deposit = d_drow_planetary_sunken_geysers
+		add_deposit = d_drow_planetary_serpentine_trench
+		add_deposit = d_drow_planetary_serpentine_trench
+		add_deposit = d_drow_planetary_metal_wastefields
+		add_deposit = d_drow_planetary_aurous_fissures
+		add_deposit = d_drow_planetary_aurous_fissures
+		add_deposit = d_drow_planetary_carbon_subterrane
+
+		event_target:drow_valshaquellar = {
+			begin_event_chain = {
+				event_chain = "elven_valshaquellar_chain"
+				target = ROOT
+			}
+		}
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = gaul_capital
+		}
+
+		clear_deposits = yes
+		clear_planet_modifiers = yes
+		clear_blockers = yes
+
+		add_modifier = {
+			modifier = "elven_natural_beauty"
+			days = -1
+		}
+
+		# BLOCKERS
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_decrepit_dwellings
+		add_deposit = d_failing_infrastructure
+
+		# UNIQUE FEATURES
+		add_deposit = d_drow_planetary_glowing_forests
+		add_deposit = d_drow_planetary_glowing_oceans
+		add_deposit = d_elven_healing_spring
+
+		# ENERGY - 8
+		add_deposit = d_underwater_vent #3
+		add_deposit = d_rushing_waterfalls #2
+		add_deposit = d_buzzing_plains #1
+		add_deposit = d_buzzing_plains #1
+		add_deposit = d_hot_springs #1
+
+		# MINERALS - 8
+		add_deposit = d_rich_mountain #3
+		add_deposit = d_submerged_ore_veins #3
+		add_deposit = d_veiny_cliffs #1
+		add_deposit = d_veiny_cliffs #1
+
+		#FOOD - 9
+		add_deposit = d_black_soil #3
+		add_deposit = d_great_river #2
+		add_deposit = d_green_hills #1
+		add_deposit = d_rugged_woods #1
+		add_deposit = d_rugged_woods #1
+		add_deposit = d_rugged_woods #1
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = ayleid_capital
+		}
+
+		while = {
+			count = 2
+			random_deposit = {
+				limit = { is_blocker = no }
+				remove_deposit = yes
+			}
+		}
+
+		add_deposit = d_elven_planetary_tir_aranad
+		add_deposit = d_elven_planetary_frensca_tol_blocker
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = lhuren_capital
+		}
+
+		owner = {
+			set_country_flag = zro_found
+		}
+		
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { is_blocker = no }
+
+				remove_deposit = yes
+			}
+		}
+
+		add_deposit = d_elven_planetary_sentient_dragons
+		add_deposit = d_elven_planetary_gardens_of_heaven
+		add_deposit = d_elven_planetary_forbidden_arcology
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = eilistraeean_capital
+		}
+		
+		while = {
+			count = 3
+			random_deposit = {
+				limit = { is_blocker = no }
+				
+				remove_deposit = yes
+			}
+		}
+
+		add_deposit = d_drow_planetary_glowing_forests
+		add_deposit = d_drow_planetary_feral_fairies
+		add_deposit = d_drow_planetary_cheel_krezust
+	}
+}
+
+##################################
+## AVARI MEGASTRUCTURE CREATION ##
+##################################
+
+create_avari_ring = {
+	planet_event = {
+		id = elven_megastructure_events.11
+		days = -1
+	}
+	
+	add_modifier = {
+		modifier = "elven_avari_ring_modifier"
+		days = -1
+	}
+
+	set_planet_flag = has_avari_ring
+}
+
+create_avari_shield = {
+	planet_event = {
+		id = elven_megastructure_events.12
+		days = -1
+	}
+
+	add_modifier = {
+		modifier = "elven_avari_shield_modifier"
+		days = -1
+	}
+	
+	set_planet_flag = has_avari_shield
+}
+
+##############################
+## SIDH RINGS MEGASTRUCTURE ##
+##############################
+
+create_sidh_rings = {
+	planet_event = {
+		id = elven_megastructure_events.13
+		days = -1
+	}
+
+	#add_modifier = {
+		#modifier = "elven_avari_shield_modifier"
+		#days = -1
+	#}
+	
+	set_planet_flag = has_sidh_rings
+}
+
+#####################################
+## ARCADIAN SYMBIOSIS TREANT STUFF ##
+#####################################
+
+recalculate_treant_habitability_bonus = {
+	remove_modifier = elven_treant_harmony
+
+	set_variable = { which = elven_treant_count value = 0 }
+	every_owned_pop = {
+		limit = { species = { has_species_flag = elven_arcadian_symbiosis_treants } }
+
+		PREV = {
+			change_variable = { which = elven_treant_count value = 1 }
+		}
+	}
+
+	add_modifier = {
+		modifier = elven_treant_harmony
+		days = -1
+		multiplier = elven_treant_count
+	}
+}
+
+############################################
+## PRISMATIC REFUGE - WORMHOLE GENERATION ##
+############################################
+
+find_a_suitable_wormhole_candidate_system = {
+	if = {
+		limit = { any_country = { has_country_flag = drow_fe_flag } }
+
+		random_country = {
+			limit = { has_country_flag = drow_fe_flag }
+
+			random_system_within_border = {
+				save_event_target_as = drow_prismatic_refuge_escape_system
+			}
+		}
+	}
+	else_if = {
+		limit = { any_country = { has_country_flag = fallen_empire_4 } }
+
+		random_country = {
+			limit = { has_country_flag = fallen_empire_4 }
+
+			random_system_within_border = {
+				save_event_target_as = drow_prismatic_refuge_escape_system
+			}
+		}
+	}
+	else_if = {
+		limit = { any_country = { is_country_type = fallen_empire } }
+
+		random_country = {
+			limit = { is_country_type = fallen_empire }
+
+			random_system_within_border = {
+				save_event_target_as = drow_prismatic_refuge_escape_system
+			}
+		}
+	}
+	else_if = {
+		limit = { any_country = { is_country_type = dormant_marauders } }
+
+		random_country = {
+			limit = { is_country_type = dormant_marauders }
+
+			random_system_within_border = {
+				save_event_target_as = drow_prismatic_refuge_escape_system
+			}
+		}
+	}
+	else_if = {
+		limit = { any_system = { has_star_flag = hostile_system } }
+
+		random_system = {
+			limit = { has_star_flag = hostile_system }
+
+			save_event_target_as = drow_prismatic_refuge_escape_system
+		}
+	}
+	else = {
+		random_system = {
+			save_event_target_as = drow_prismatic_refuge_escape_system
+		}
+	}
+}
+
+##########
+## MISC ##
+##########
+
+replace_elven_incompatible_deposits = {
+	# Murrpau Sanguine
+	if = {
+		limit = {
+			has_deposit = d_drow_planetary_murrpau_sanguine
+			owner = {
+				OR = {
+					is_gestalt = yes
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+
+		remove_deposit = d_drow_planetary_murrpau_sanguine
+		add_deposit = d_drow_planetary_murrpau_sanguine_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_drow_planetary_murrpau_sanguine_blocker
+			owner = {
+				NOR = {
+					is_gestalt = yes
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+
+		remove_deposit = d_drow_planetary_murrpau_sanguine_blocker
+		add_deposit = d_drow_planetary_murrpau_sanguine
+	}
+
+	# Sentient Dragons
+	if = {
+		limit = {
+			has_deposit = d_elven_planetary_sentient_dragons
+			owner = {
+				OR = {
+					is_gestalt = yes
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+
+		remove_deposit = d_elven_planetary_sentient_dragons
+		add_deposit = d_elven_planetary_sentient_dragons_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_elven_planetary_sentient_dragons_blocker
+			owner = {
+				NOR = {
+					is_gestalt = yes
+					has_valid_civic = civic_fanatic_purifiers
+				}
+			}
+		}
+
+		remove_deposit = d_elven_planetary_sentient_dragons_blocker
+		add_deposit = d_elven_planetary_sentient_dragons
+	}
+
+	# Gardens of Heaven
+	if = {
+		limit = {
+			has_deposit = d_elven_planetary_gardens_of_heaven
+			owner = {
+				OR = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_elven_planetary_gardens_of_heaven
+		add_deposit = d_elven_planetary_gardens_of_heaven_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_elven_planetary_gardens_of_heaven_blocker
+			owner = {
+				NOT = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_elven_planetary_gardens_of_heaven_blocker
+		add_deposit = d_elven_planetary_gardens_of_heaven
+	}
+
+	# Daerlas Mina
+	if = {
+		limit = {
+			has_deposit = d_elven_planetary_daerlas_mina
+			owner = {
+				OR = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_elven_planetary_daerlas_mina
+		add_deposit = d_elven_planetary_daerlas_mina_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_elven_planetary_daerlas_mina_blocker
+			owner = {
+				NOT = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_elven_planetary_daerlas_mina_blocker
+		add_deposit = d_elven_planetary_daerlas_mina
+	}
+
+	# Malevolent Groves
+	if = {
+		limit = {
+			has_deposit = d_lunari_planetary_trees
+			owner = {
+				OR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_trees
+		add_deposit = d_lunari_planetary_trees_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_lunari_planetary_trees_blocker
+			owner = {
+				NOR = {
+					has_valid_civic = civic_fanatic_purifiers
+					has_valid_civic = civic_hive_devouring_swarm
+					has_valid_civic = civic_machine_terminator
+				}
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_trees_blocker
+		add_deposit = d_lunari_planetary_trees
+	}
+
+	# Ice Blossoms
+	if = {
+		limit = {
+			has_deposit = d_lunari_planetary_ice_blossoms
+			owner = {
+				OR = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_ice_blossoms
+		add_deposit = d_lunari_planetary_ice_blossoms_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_lunari_planetary_cp_ice_blossoms
+			owner = {
+				OR = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_cp_ice_blossoms
+		add_deposit = d_lunari_planetary_cp_ice_blossoms_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_lunari_planetary_ice_blossoms_blocker
+			owner = {
+				NOT = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_ice_blossoms_blocker
+		add_deposit = d_lunari_planetary_ice_blossoms
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_lunari_planetary_cp_ice_blossoms_blocker
+			owner = {
+				NOT = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_lunari_planetary_cp_ice_blossoms_blocker
+		add_deposit = d_lunari_planetary_cp_ice_blossoms
+	}
+
+	# Glowing Forests
+	if = {
+		limit = {
+			has_deposit = d_drow_planetary_glowing_forests
+			owner = {
+				OR = { is_gestalt = yes }
+			}
+		}
+
+		remove_deposit = d_drow_planetary_glowing_forests
+		add_deposit = d_drow_planetary_glowing_forests_blocker
+	}
+	else_if = {
+		limit = {
+			has_deposit = d_drow_planetary_glowing_forests_blocker
+			owner = {
+				NOT = { is_machine_empire = yes }
+			}
+		}
+
+		remove_deposit = d_drow_planetary_glowing_forests_blocker
+		add_deposit = d_drow_planetary_glowing_forests
+	}
+
+	if = {
+		limit = {
+			has_planet_flag = drow_valshaquellar_project
+			NOT = { has_planet_flag = drow_valshaquellar_repaired }
+		}
+	
+		clear_deposits = yes
+		clear_blockers = yes
+	}
+}
+
+convert_elven_ecumenopolis_deposits = {
+	if = {
+		limit = {
+			has_planet_flag = lunari_capital
+		}
+
+		add_deposit = d_lunari_planetary_cp_ice_blossoms
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = eilistraeean_capital
+		}
+
+		add_deposit = d_drow_planetary_cp_klepto_fairies
+		add_deposit = d_drow_planetary_cheel_krezust
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = lhuren_capital
+		}
+
+		add_deposit = d_elven_planetary_sentient_dragons
+		add_deposit = d_elven_planetary_forbidden_arcology
+		add_deposit = d_elven_planetary_gardens_of_heaven
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = ayleid_capital
+		}
+
+		add_deposit = d_elven_planetary_frensca_tol
+		add_deposit = d_elven_planetary_tir_aranad
+	}
+
+
+}
+
+revert_planet_to_permafrost = {
+	if = {
+		limit = {
+			has_planet_flag = lunari_capital
+		}
+
+		change_pc = "pc_lunari_arctic"
+		clear_deposits = yes
+
+		add_deposit = d_lunari_planetary_ice_blossoms
+
+		add_deposit = d_lunari_planetary_energy_3
+		add_deposit = d_lunari_planetary_energy_2
+		add_deposit = d_lunari_planetary_energy_2
+		add_deposit = d_lunari_planetary_energy_1
+		add_deposit = d_lunari_planetary_energy_1
+
+		add_deposit = d_lunari_planetary_minerals_3b
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_1
+
+		add_deposit = d_lunari_planetary_food_3
+		add_deposit = d_lunari_planetary_food_1b
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = planet_narenwyn
+		}
+
+		change_pc = "pc_lunari_arctic"
+		clear_deposits = yes
+
+		add_deposit = d_lunari_massive_glacier
+		add_deposit = d_lunari_massive_glacier
+		add_deposit = d_lunari_dangerous_wildlife_blocker
+		add_deposit = d_lunari_dangerous_wildlife_blocker
+
+		add_deposit = d_lunari_planetary_ice_spires
+
+		add_deposit = d_lunari_planetary_energy_3
+		add_deposit = d_lunari_planetary_energy_3
+		add_deposit = d_lunari_planetary_energy_2
+
+		add_deposit = d_lunari_planetary_minerals_1
+
+		add_deposit = d_lunari_planetary_food_2b
+	}
+	else_if = {
+		limit = {
+			has_planet_flag = planet_morelyn
+		}
+
+		change_pc = "pc_lunari_arctic"
+		clear_deposits = yes
+
+		add_deposit = d_lunari_massive_glacier
+		add_deposit = d_mountain_range
+		add_deposit = d_mountain_range
+		add_deposit = d_mountain_range
+
+		add_deposit = d_lunari_planetary_trees
+
+		add_deposit = d_crystalline_caverns
+		add_deposit = d_crystalline_caverns
+
+		add_deposit = d_lunari_planetary_energy_2
+		add_deposit = d_lunari_planetary_energy_1
+
+		add_deposit = d_lunari_planetary_minerals_3
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_2b
+		add_deposit = d_lunari_planetary_minerals_1
+
+		add_deposit = d_lunari_planetary_food_1b
+	}
+}
+
+############################################
+##   LHUREN - CELESTIAL GRACE MECHANICS   ##
+############################################
+
+# Calculate Celestial Favor based on relevant factors and apply modifiers.
+# Use this in both periodic checks and after any new factor is added.
+# Do not adjust elven_celestial_favor_score outside of this effect, it won't be counted. All factors need to be accounted for here.
+# This = Country Scope
+elven_evaluate_celestial_favor = {
+
+	elven_set_celestial_favor_factors = yes
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
+		}
+		
+		# Reset to 0
+		set_variable = { which = elven_celestial_favor_score value = 0 }
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_psi }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_chosen }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_erudite }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_skilled }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_peace }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_safe }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_neg }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_alien }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_threatened }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_threatened_multi }
+			change_variable = { which = elven_celestial_favor_score value = -2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_subject }
+			change_variable = { which = elven_celestial_favor_score value = -3 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_used_pearl }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_ruler_ding }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_new_colony }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_mega_built }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_mega_upgraded }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_won_war }
+			change_variable = { which = elven_celestial_favor_score value = 1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_won_def }
+			change_variable = { which = elven_celestial_favor_score value = 2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_quo_war }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_war }
+			change_variable = { which = elven_celestial_favor_score value = -2 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_planet }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+
+		if = {
+			limit = { has_modifier = elven_celestial_favor_factor_lost_system }
+			change_variable = { which = elven_celestial_favor_score value = -1 }
+		}
+	}
+
+	else = {
+		clear_variable = elven_celestial_favor_score
+	}
+
+	elven_set_celestial_favor_modifiers = yes
+
+}
+
+# Apply or remove Celestial Favor modifiers.
+# Should be executed even on empires that don't qualify to purge orphaned modifiers in case a Celestial Grace empire loses the civic.
+# This = Country Scope
+elven_set_celestial_favor_modifiers = {
+	remove_modifier = elven_celestial_favor_0
+	remove_modifier = elven_celestial_favor_1p
+	remove_modifier = elven_celestial_favor_2p
+	remove_modifier = elven_celestial_favor_3p
+	remove_modifier = elven_celestial_favor_4p
+	remove_modifier = elven_celestial_favor_5p
+	remove_modifier = elven_celestial_favor_1n
+	remove_modifier = elven_celestial_favor_2n
+	remove_modifier = elven_celestial_favor_3n
+	remove_modifier = elven_celestial_favor_4n
+	remove_modifier = elven_celestial_favor_5n
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
+		}
+
+		if = {
+			limit = {
+				NOT = { is_variable_set = elven_celestial_favor_score }
+			}
+			set_variable = { which = elven_celestial_favor_score value = 0 }
+		}
+
+		# Neutral Effects
+
+		if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 0 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_0 days = -1 }
+		}
+
+		# Positive Effects
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 1 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_1p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 2 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_2p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 3 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_3p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = 4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_4p days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value > 4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_5p days = -1 }
+		}
+
+		# Negative Effects
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -1 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_1n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -2 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_2n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -3 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_3n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value = -4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_4n days = -1 }
+		}
+
+		else_if = {
+			limit = {
+				check_variable = { which = elven_celestial_favor_score value < -4 }
+			}
+			add_modifier = { modifier = elven_celestial_favor_5n days = -1 }
+		}
+	}
+}
+
+# Apply Ongoing Celestial Favor factor modifiers.
+# These do nothing by themselves, they are simply used to calculate the total Celestial Favor score
+# Do not include temporary Factors in here. Those don't need maintenance because they can handle expiration on their own.
+elven_set_celestial_favor_factors = {
+	remove_modifier = elven_celestial_favor_factor_ruler_psi
+	remove_modifier = elven_celestial_favor_factor_ruler_chosen
+	remove_modifier = elven_celestial_favor_factor_ruler_erudite
+	remove_modifier = elven_celestial_favor_factor_ruler_skilled
+	remove_modifier = elven_celestial_favor_factor_peace
+	remove_modifier = elven_celestial_favor_factor_safe
+	remove_modifier = elven_celestial_favor_factor_ruler_neg
+	remove_modifier = elven_celestial_favor_factor_ruler_alien
+	remove_modifier = elven_celestial_favor_factor_threatened
+	remove_modifier = elven_celestial_favor_factor_threatened_multi
+	remove_modifier = elven_celestial_favor_factor_subject
+
+	if = {
+		limit = {
+			has_valid_civic = civic_elven_celestial_grace
+		}
+
+		# Positive Factors
+
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_psionic
+					NOT = { has_ruler_trait = leader_trait_ruler_chosen }
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_psi days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_chosen
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_chosen days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_ruler_trait = leader_trait_ruler_erudite
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_erudite days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					has_skill >= 10
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_skilled days = -1 }
+		}
+		
+		if = {
+			limit = {
+				years_of_peace = {
+					value >= 50
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_peace days = -1 }
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					count_neighbor_country = { count = 0 }
+					any_neighbor_country = {
+						OR = {
+							relative_power = { who = prev value < equivalent }
+							has_overlord = prev
+						}
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_safe days = -1 }
+		}
+
+		# Negative Factors
+		
+		if = {
+			limit = {
+				ruler = {
+					OR = {
+						has_trait = leader_trait_stubborn
+						has_trait = leader_trait_substance_abuser
+						has_trait = leader_trait_arrested_development
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_neg days = -1 }
+		}
+		
+		if = {
+			limit = {
+				ruler = {
+					NOT = { is_same_species = prev }
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_ruler_alien days = -1 }
+		}
+		
+		if = {
+			limit = {
+				count_neighbor_country = {
+					count = 1
+					limit = {
+						relative_power = { who = prev value >= equivalent }
+						NOT = { has_overlord = prev }
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_threatened days = -1 }
+		}
+		
+		if = {
+			limit = {
+				count_neighbor_country = {
+					count > 1
+					limit = {
+						relative_power = { who = prev value >= equivalent }
+						NOT = { has_overlord = prev }
+					}
+				}
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_threatened_multi days = -1 }
+		}
+		
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_modifier = { modifier = elven_celestial_favor_factor_subject days = -1 }
+		}
+		
+	}
+}
