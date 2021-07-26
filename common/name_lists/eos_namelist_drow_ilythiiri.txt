@@ -1,0 +1,342 @@
+﻿#####################################
+## ILYTHIIRI (AKA REAL DROW) NAMES ##
+#####################################
+
+## Real Drow at all levels now! Putting the Drow back in Drow namelists! :-)
+
+eos_namelist_drow_ilythiiri = {
+	randomized = no
+
+	ship_names = {
+		
+		## Generic names are female first names, because: Drow. ##
+		generic = {
+			Akor AlaNa Alebia Alesit Anaena Anviirdra Arae Araeit Arlith Arylbia Arynlene Aundri Auntara Aviirna Ballav Ballin Balraeana Balvarna
+			Beanna Beniss Bevra Bricarlace Brifae Brilyrr Britlanida Briza Buron Burraema Burvena Chalyrrna Chanebreena Chanena Chanoia Chesraeiira Chestlace Dhauli
+			Dhauraete Dhautreelene Dhauve Didil Didy Diontra Diva Drilae Dristra Eclith Erdyce Erlith Erno Faekor Faery Faeviir Felraeune Filelda
+			Filra G'elbri G'ellinnil G'elviirtin Gauskorna Gausra Gausza Ginadristra Ginafaeit Ginalinit Ginari Greydriiira GreyNeer Greyynd Habaldia Haelli Haellii Halelu
+			Ilirara Ilire Ilmbri ImNeer Imnotra Imriinia Imyanil Inirana Iraeelda Iraeva Irfae Irra Irsinira Iymruune Jhanryllace Jhantlavin Jhulithnil Jhutara
+			Jhuvrada Jhuzaira Jysniss Jysrynma Laegas Laerylena Laerynce Lirdril Luaelnil Luakoriira Luali Luara Luatlafay Luavrana Madri Malis MaNeerce Maryltra
+			Mibia Milar Mirebia Miva Moldyala Mollez Molraelin Molvelin Molzaala Myrara Myya Nathli Nathniss Nathra Nathrymnia Nenofay Olonissna Olotra
+			Pelra Phadrina Phyreldafay Phyrlith Qilbeyna Qildy Qillarda QilNatra Qilon Quaanna Qualyn Quarnonia Quaryndlin Raulysce Raurae Raurefay Rildrilit Rillana
+			Sabdylin Sabsi Sagas Saliit Saryna Shi'driyas Shi'larira Shi'lav Shidribreena Shira Shiriina Shiryl Shurraune Shurruala Shurvranil Shynlezbreena Shynlis Shynra
+			Shynrabia Si Sino T'risslanis T'risstrana Tafaedra Taryn Uldustra Ulgasyas Ulrania Ulrera Umlaelay Viernoce Vikoryas Vlonlysdra Vlonryn Waerniss Waerryna
+			Wuylanisdra Wuynaestra Xulllafay Xullnerae Xullva Xusra Xutreeia Zarelna Zarlanis Zarniss Zessbey ZessNeer Zeva Zilbri Zilli Zilraia Zilre Zilrunida
+			Zilrynrae Zilsa
+		}
+		
+		colonizer = {
+			A'nshal'a Ahaluthh Al'doer B'morfethus Beldroar Calestio Duul'ssom Elamshin Folggash Goros Hal'luthi Heethir'ku Hommek Juba'ssun Ke'hl'ash Kestal Kghret Kla'athin
+			Maral "Nel Tresk'ri" Niar'haanin Noamuth Nygurath "Sel Alti'uin" "Sel L'inyae" "Sel Slyan" Serto Shay'la Ssinssrin Sssiks'harl Sussu'ri Sylan'ssun
+			Trera Tu'vessa Ulin Wanre Xia Zaurus Zeklet'tau "Zer'tath Valshath"
+		}
+
+		sponsored_colonizer = {
+			"Mei'q A'nshal'a" "Mei'q Ahaluthh" "Mei'q Al'doer" "Mei'q B'morfethus" "Mei'q Beldroar" "Mei'q Calestio" "Mei'q Duul'ssom" "Mei'q Elamshin" "Mei'q Folggash"
+			"Mei'q Goros" "Mei'q Hal'luthi" "Mei'q Heethir'ku" "Mei'q Hommek" "Mei'q Juba'ssun" "Mei'q Ke'hl'ash" "Mei'q Kestal" "Mei'q Kghret" "Mei'q Kla'athin"
+			"Mei'q Maral" "Mei'q Nel Tresk'ri" "Mei'q Niar'haanin" "Mei'q Noamuth" "Mei'q Nygurath" "Mei'q Sel Alti'uin" "Mei'q Sel L'inyae" "Mei'q Sel Slyan"
+			"Mei'q Serto" "Mei'q Shay'la" "Mei'q Ssinssrin" "Mei'q Sssiks'harl" "Mei'q Sussu'ri" "Mei'q Sylan'ssun" "Mei'q Trera" "Mei'q Tu'vessa"
+			"Mei'q Ulin" "Mei'q Wanre" "Mei'q Xia" "Mei'q Zaurus" "Mei'q Zeklet'tau"
+		}
+
+		science = {
+			Anon Brorn Dero'lyle Elamshin Faern Garr Ik'tarn Ilhar Illithid Inthuul Jabbress Jilorbb Juss'a K'alf L'elend Mar'ius Nelid'orbb Nizzre
+			Noamuth Olartae Olplynir Ortelassa Ragar Raim'xium Sadei Sapphir Sil'iluuth Sirn Ssinssrigg Ssivah Sweer Ta'ecelle Tchaka Te-smur Teha Tha'tsit
+			U'ilk Uss'sol Usstzigh Vhaid Waerr'ess Wussrun'wa Xundus Y'haerrd Yorn Z'hind Z'hind Z'ress Zahanzon Zhaun
+		}
+
+		constructor = {
+			"Arshes Olartae" "Comson Olartae" "Dothka Olartae" "Erthe Olartae" "H'arynus Olartae" "Has'tras Olartae" "Indola Olartae" "Mir'ply Olartae" "Ophon Olartae" "Oura Olartae"
+			"Phish Olartae" "Plak'la Olartae" "Qeesuaco Olartae" "Ramoth Olartae" "Renor Olartae" "S'lozan Olartae" "Serto'uuthli Olartae" "Shineria Olartae" "Sil'ilos Olartae"
+			"Sil'iluuth Olartae" "Ssussun'yukin Olartae" "T'puuli Olartae" "Takrin Olartae" "To'ryll Olartae" "Uuthli Olartae" "Velkyn Olartae"
+			"Vloriss Olartae" "Yinvezz Olartae" "Zer'tath Olartae"
+		}
+
+		transport = { }
+
+		corvette = { }
+		
+		destroyer = { }
+		
+		cruiser = { }
+		
+		## Drow of Eberron ##
+		battleship = {
+			Aq'karor Aq'th Aqatrin Aqkakash Aqkoac Aqkoka Aqlalon Aqratar Aqriska Aqrisor Ax'annac Ax'aska Ax'aszz Ax'ayulon Ax'ayuor Ax'valon Axbal Axk'
+			Axkakma Axkoac Axkoar Axris Axua Axxinor Cur'as Curisrin Curkak Curlatar Ek'ann Ek'astar Ekatka Ekatrin Ekk' Ekriska Ekua Gen'ayuac
+			Gen'chama Gen'th Genat Genis Genka Genra Genrislon Genuazz Genxin Gur'annma Gur'charin Gurkak Gurkakar Gurkama Gurkoor Gurlarin Gurraka Gurris
+			Hl'karar Hl'vaar Hlat Hlisac Hlk' Hlkaar Hlkaksa Hlko Hlralon Hlrisrin Hlua Hluaac Hlxinac Kas'ann Kas'annrin Kas'aslon Kas'thor Kasis
+			Kaskak Kaskoac Kasuaar Kax'ann Kax'annka Kax'karor Kax'karrin Kax'va Kaxisac Kaxk'ar Kaxk'lon Kaxk'or Kaxk'rin Kaxkakash Kaxkaksa Kaxkalon Kaxkolon Kaxrisar
+			Kaxxinlon Kaxxinrin Kiratash Kirbalzz Kiriszz Kirkak Kirxin Ou'annash Ou'chazz Ou'karrin Ouatzz Ouiszz Ouk' Ouk'tar Oukosa Qua'chaash Qua'karar Qua'thzz
+			Quaat Quaatzz Quabal Quak'ash Quak'rin Quakaksa Quakama Quakoar Quala Quaralon Quaxin Quaxinlon Quaxinor Su'annash Su'annka Su'as Su'asma Su'chazz
+			Su'thka Suatka Suator Subalma Sukakrin Suraac Surisrin Suxinac Til'ann Til'ayurin Til'karor Til'karrin Til'th Til'va Tilatzz Tilk'ar Tilk'zz Tilkakash
+			Tillama Tilua Tilxintar To'chaash Toisar Tok'zz Tokama Tolarin Tor'ann Tor'chaor Torat Torbal Torbalrin Toris Torisor Torisrin Torissa Tork'
+			Torkak Torkakac Torko Torris Torxinac Vulatac Vulatka Vulatlon Vulk' Vulkakma Vullaor Vullasa Vullatar Vulraka Vuluaash Xar'annma Xar'as Xar'asar
+			Xar'assa Xar'cha Xar'karash Xar'karrin Xar'thash Xar'thor Xar'vama Xarisor Xarkakar Xen'annzz Xen'karrin Xen'thor Xen'thzz Xenbaltar Xenka Xenlaac Xenris Xenrisash
+			Xenristar Xenuaash
+		}
+		
+		titan = { 
+			Alartae Chath Chathbualeab Drachirath Fetear Ib'ahalii Kanarvan Killian Luth'ol Qu'el'faeruk Qu'el'saruk Qu'eliluk Sargh Sarol Sarol'veldruk Siasta Sithyrr Ssin'urninness
+			Tebaun Tk'parhn Ul'nusst Uuuniloh Valdruk Veldriss Velve Vharelggin Xoch'ark Xundussa Zasimartek Zuneerrh
+		}
+
+		colossus = {
+			"Barra Silinrul" E'spdon "Lloth Tsoss" "Ndeir Xuz" "Nei Vharc" "Oirna P'leik" "Renor Vharcan" "Trelao Lor'fenral" Ulath'elzaren "Valsharen Xal" Vith'ir Vlosinssrigg
+		 }
+
+		juggernaut = { 
+			"Aphyon Ilharess" Avariel Karandras "Maral d'Yorn" Mirshann Rei'shann "Sil'in Z'ress" Thuulstrea Yatharil Yathrin
+		}
+		
+		military_station_small = { }
+
+		ion_cannon = { }
+	}
+
+	fleet_names = {
+		random_names = {
+			"Fashka Imlar" "Fashka Eirior" "Fashka Valsharess" "Fashka Yathtallar" "Fashka Qu'essan" "Fashka Delmah" "Fashka Serisen" "Fashka Drakta" "Fashka Dalninin" "Fashka Marala" "Fashka d'Issan"
+		}
+		sequential_name = "%O% Dalharil Fashka"
+	}
+	
+	army_names = {
+	
+		machine_defense = {
+			sequential_name = "%O% Zhentua Kyorl"
+		}
+		
+		machine_assault_1 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		machine_assault_2 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		machine_assault_3 = {
+			sequential_name = "%O% Zhentua d'Aron"
+		}
+		
+		defense_army = {
+			sequential_name = "%O% Delmah Kyorl"
+		}
+
+		assault_army = {
+			sequential_name = "%O% Z'hindul Hosse"
+		}
+		
+		slave_army = {
+			sequential_name = "%O% Rothe Hosse"
+		}
+		
+		clone_army = { 
+			sequential_name = "%O% Toha Hosse"
+		}
+		
+		undead_army = {
+			sequential_name = "%O% Naut-elghinyrr"
+		}
+
+		robotic_army = {
+			sequential_name = "%O% Vantua Hosse"
+		}
+		
+		robotic_defense_army = {
+			sequential_name = "%O% Vantua Kyorl"
+		}
+		
+		psionic_army = { 
+			sequential_name = "%O% M'elzar d'Aron"
+		}
+		
+		xenomorph_army = {
+			sequential_name = "%O% Phindar d'Aron"
+		}
+		
+		gene_warrior_army = {
+			random_names = { 
+			}
+			sequential_name = "%O% Karandras d'Aron"
+		}
+		
+		occupation_army = {
+			sequential_name = "%O% Kyorl Plinn"
+		}
+
+		robotic_occupation_army = {
+			sequential_name = "%O% Vantua Plinn"
+		}
+
+		primitive_army = {
+			sequential_name = "Primitive Army %C%"
+		}
+		
+		industrial_army = {
+			sequential_name = "Industrial Army %C%"
+		}
+		
+		postatomic_army = {
+			sequential_name = "Post-Atomic Army %C%"
+		}
+	}
+
+	planet_names = {
+
+		generic = {
+			names = {
+				Abaethaggar Abaethberranzan Abaethblyn Abaethdurth "Abaeth Hlamma" Abaethhym Abaethlin Abaethmath Abaethmydra "Abaeth Nasad" Abaethrauth Abaethssin Abaethtur Abaethtynlan Abb'raugaust Abbdrynn
+				Abbdurth Abbhet Abbhym Abblin Abbmath "Abb Nasad" Abbnsshar "Abb Rrhinn" Abbssin Abburth Baereg'raugaust Baereg'tar Baereg'tarchar Baereg-Cinlu Baeregdar Baeregdlyn
+				Baeregdrynn Baeregeth Baeregethchar Baereghel Baereghet Baereghym Baereglar Baereglin Baeregmath Baeregmydra "Baereg Nasad" Baeregnsshar Baeregrauth "Baereg Rrhinn" Baeregssin Baeregtur
+				Baeregurth Baeregven Charrvhel'raugaust Charrvheldurth "Charrvhel Hlamma" Charrvhellin Charrvhelurth Charrvhelven Chaul'raugaust Chaulaggar Chaulberranzan Chauldurth "Chaul Hlamma" "Chaul Nasad" Chaulssin
+				Chaulven Ched'raugaust Ched-Cinlu Cheddlyn "Ched Dreier" Cheddurth "Ched Nasad" Cheth'raugaust "Cheth Dreier" "Cheth Hlamma" Chethhym Chethmydra Chethrauth "Cheth Rrhinn"
+				Chethssin Chethven "Dyon G'ennivalz" Erelhei'tar Erelhei-Cinlu Erelheiaggar Erelheidlyn Erelheieth Erelheihet "Erelhei Hlamma" Erelheihym Erelheimath Erelheimydra Erelheiven Eryn'tar
+				Eryn-Cinlu Eryndar Eryndlyn "Eryn Dreier" Eryndrynn Eryndurth Eryneth Erynhel "Eryn Hlamma" Erynlar Erynmydra "Eryn Nasad" Erynnsshar "Eryn Rrhinn"
+				Eryntynlan Faneadar Gualli'tar Gualliberranzan Guallidurth Guallihet Guallihym Guallilar Guallimath Guallimydra Guallissin Gualliurth Haund'raugaust Haund'tar Haundberranzan Haundblyn Haundhet 
+				"Haund Hlamma" Haundhym Haundlin "Haund Nasad" Haundrauth Haundtynlan Ithilaug-Cinlu Ithilaughym Ithilauglar Karsoluthiyl "Lith My'athar" Llecerellyn Llurthberranzan "Llurth Dreir" 
+				"Llurth Hlamma" "Llurth Nasad" "Llurth Rrhinn" Luihaulen'raugaust Luihaulen'tar Luihaulentynlan Luihaulenven Maeri'raugaust Maeri'tar Maeri-Cinlu Maeriaggar Maeriblyn Maerieth Maerihet Maerilin Maerimath
+				Maerimydra Maerirauth "Maeri Rrhinn" Maerissin Maeriven Menzo-Cinlu Menzoaggar Menzoberranzan Menzoblyn Menzodarchar Menzoeth Menzohym "Menzo Nasad" Menzorauth Menzossin Menzotynlan
+				Menzourth Orlyt-Cinlu Orlytblyn Orlytdar "Orlyt Dreier" Orlytdurth Orlyteth Orlythel Orlytlar Orlytmydra Orlyturth Rilau'raugaust Rilau'tar Rilaublyn Rilaudlyn "Rilau Dreier"
+				Rilauhel Rilauhym "Rilau Nasad" Rilaunsshar Rilauven Sschindylryn Ssha-Cinlu Sshaberranzan "Ssha Dreier" Sshadurth Sshahym Sshalin Sshamath Sshann'tar Sshanndrynn Sshannhym
+				Sshannlar Sshannmath Sshannnsshar Sshannrauth "Sshann Rrhinn" Sshannssin Sshanntynlan Sshatynlan Szith'raugaust Szith-Cinlu Szithblyn "Szith Dreier" Szithdurth Szithhet Szithlin 
+				"Szith Nasad" Szithrauth Szithurth T'lind'tar T'lindaggar T'lindblyn T'linddurth T'lindhet "T'lind Hlamma" T'lindhym "T'lind Nasad" Telnarquel Tyryb-Cinlu Tyrybblyn Tyrybhel Tyrybhym
+				Ului'raugaust Ului-Cinlu Uluiaggar Uluidlyn Uluitur Uluiurthchar Undradlyn Undradrynn Undraeth Undrahet Undramydra Undransshar Undrek’Thoz Ungethal "Ust Natha" V'elddrin'tar V'elddrinnsshar
+				"Waethe Hlammachar" Waethehym Yuethindlyn Yuethindrynn 
+			}
+		}
+		
+		pc_desert = {
+			names = {
+			}
+		}
+		
+		pc_arid = {
+			names = {
+			}
+		}
+		
+		pc_tropical = {
+			names = {
+			}
+		}
+		
+		pc_continental = {
+			names = {
+			}
+		}
+		
+		pc_gaia = {
+			names = {
+				"Sel Xendlyn" "Sel Nathrendlyn" "Sel Larindelfae" "Sel Valtiris" "Sel Eryndlyn" "Sel Kestal" "Sel Valsharess" "Sel Qu'essan" "Sel Yatharil"
+				"Sel Serisen" "Sel Sabrendlyn" "Sel Narendlyn"
+			}
+		}
+		
+		pc_ocean = {
+			names = {
+			}
+		}
+		
+		pc_tundra = {
+			names = {
+			}
+		}
+		
+		pc_arctic = {
+			names = {
+			}
+		}
+	}
+
+
+	### CHARACTERS ###
+
+	character_names = {
+
+		default = {
+			first_names_male = {
+				Adiabrog Adigolin Adilasin Adiuthyr Agolste Alnoth Alronar Arlydan Avlorl Baarefein Baareste Badszar Baninid Bazstste Belklaun Bellimsoj Belnettar Belthlyil
+				Belvldar Berg'ldoth Berg'tolun Bhlvergar Bhzmel Brubra Brulnoen Bruraxica Bruzmvir Calro Dienael Diltaer Diurnr Drgreim Drrlyen Drtor Drurnim Dubravir
+				Dumphoth Dupree Duzlyzz Elgolim Elrinth Fienaim Figolnar Filanica Filry Fitolel Fizste Fizzrin Gebryen Gelansai Ghabror Ghldoin Ghldoyr Ghlnofein
+				Ghndaar Ghnetle Ghrinog Ghste Gobraer Gointsai Golaudar Gopreim Guaun Gulagel Gulas Gulraar Gunagoth Guraxgar Guvlel Hach'gar Hach'lase Hach'thlysai
+				Hougosid Hounin Houzz Ilurn Isarsoj Islan Islime Iszstr Jainyel Jalanvir Jalfeel Jandaica Janinor Jazlyoth Jegaund Jegaunel Jegbryor Jegenaar
+				Jegraxor Jegzmoth Kakanen Kalryak Kelakid Kenagzt Keon Kerd Keuthsoj Krarayr Krbragar Krgolr Krkann Krrarin Krtoloth Ledalon Legolste Lyared
+				Lylaksoj Lyldo Lyldzt Lylnoin Lynirrin Maheren Malauor Mamphste Maondel Marayr Meaglin Meenaoth Meim Melakin Melfe Melnoim Mogoldan Molverach
+				Mothlygar Naagl Nagosvir Naintyr Napreak Niareil Niena Nitolos Nymlaggh Nymraak Nymrdog Omaraun Omaryr Omon Omthlyen Orltanar Orphrth Orprevir
+				Orrasai Orzlyin Pharaak Phbra Phgoldan Phher Phlrozt Qulakdan Qulverim Qundanar Raaresoj Rabrain Razzdan Reint Relimun Remefein Rezmon Riiznar
+				Rilakgh Rilauid Rinetgh Rizmin Ryaraor Rylvere Rynetil Ryrath Ryvlle Saagle Saaunle Salonvir Saondsai Sapreog Seareer Seinyzz Selrydan Serdnar
+				Setorsai Shgolim Shzstel Shzstvir Soaraos Sointste Solagoth Solakel Solversai Szevvd Sziz Szlrafein Szmphid Sznin Szniryr Szphrid Szuthnar Talonak
+				Tanirzt Taraxon Tarlyun Tavlste Teildim Teintil Telimdar Telimgh Temalun Terindan Tlbryorl Tlgoser Tlildd Tlinyica Tlphrak Tsgoser Tsldoil Tsninil
+				Tsordon Tsrlyun Uriztar Urraos Vagos Valagnar Vaniril Vaphrel Vazlyor Voard Volasgar Vozst Vozzorl Vozzsoj Vumryle Vuthly Vuuthar Webryon
+				Wekanor Weorddar Wethly Wokan Woltaach Woraxtar Wothlysai Yadalun Yadeth Yalonen Yanagr Yarlyica Zalauon Zanagica 
+			}
+			first_names_female = {
+				Adura Alacoema Alaete Alagasia Alav Anoana Anraenida Arae Arbalra Ariina Arlithnil Arrae Arrydia Aryra Aunlanisira Aunlynira Aunrae Avar
+				Aviirira Baleldada Beno Bera Beryl Beueala Bevra Briraelu Burlania Chalii Chalithira Chalyrr Chaviirdra Chavra Chavrace Cheslin Dhaulysena Dhaurynre
+				Dhauuni Dhauve Diel Difae Divar Drivra Ecgas Ecraelu Ectra Elniss Elriira Elsinra Eltree Erles Errine Ervra FaeNeerda Faezaana
+				Felbalna Felon Felra Felvrania G'elli G'ellys G'elra G'elya G'elyalace Gausle Gauslesstra Gausrilce Gaussinia Gausviir Ginadrilna Ginales Ginaryyas Ginavania
+				Greydy Haeldyma Haellate Halanisune Halin Hanae Haradra Harara Hava Haya Hayndvin IliNeerala Iliribia Ilisin Ilmduna Ilmla Ilmlav IlmNaala
+				Ilmon Ilmue Ilmva Imel Imerenida Iniryntin Iraelesit Irlyntin Irnissna Irryl Iymles Iymrana Iymynd Jhaelelana Jhaelrace Jhanne Jhanniss Jhuco
+				Jhulezna Jhunayfay Jysrae Jystladia Jysvralin Laenadra Laenissra Laeryna Laraece Laril Larylira Lasinda LiNeerbia Lirae Lirana Lirdrada Lirdviirfay Luabeyit
+				Luacar Luadril Mara Marae Marynanida Marynatra Mavarnida Maviirlin Mieldaana Mikor Miraeyas Mivayas Mollavtra Molnayda Molra Myra Myrynce Nathlae
+				Nathlyn Nulbrilu Nullavna Nullezda Nullystra Nulva Olora Oloralene Oloru Olovada Olovara Peldyra Pelelbreena Pelraece Pelvar Pelza Phaliidia Phyrno
+				Phyrtlana Qilbalema Qilno Qilrae Quabey Quabridia Qualavdia Quali Quarynd Rauere Raune Rilel Rillar Sabbalra Sabelena Sabnara Sabviir Sarae
+				Sarara Shi'erelin Shi'les Shi'ne Shi'yndrae Shibriema Shinena Shiralin Shurlesna Shurlinvin Shurlisira Shurruune Shyndri Shyngasda Shynry Shynsin Sinaeira Sisi
+				Ssapkor Ssapriina T'rissuni Tadri Talaco Talafaete Talalar Talalavte Talavralin Tanissdra Tary Tridrina Trilyn Triru Tritladra Triueena Ullyrrbreena Umra
+				Umraelene Umrylia Umunilin Vidril Viererelay Vierristra Vieryara Virera Viryna Vlonrymrae Vlonya Waerrilnia Wuylavia WuyNeer Wuyrira Xullli Xura Yasonra
+				Yasrae Yasviirena Zarlyrr ZarNabreena Zarno Zarrilnida Zarrynce Zeli Zelin Zena Zeryn Zessfaeana Zessviir Zilco Zilellin Zilraena 
+			}
+			second_names = {
+				Abaerablan Abainn Abala Abanairn Abannrn Abanntyrr Abaphreil Abare Abaunfar Abaunrymmin Abazier Aberabtyn Abinnlan Ablo Abrail Abralan Absarth Abtaae
+				Arla Arlofar Arloth Arun Arunna Arunza Arvesz Blagith Blalaz Blaraom Blazi Blazityn Blunlael Blunlana Blunraara Blunzilan Coinn Colasz
+				Colo Cormavfar Cormlath Cormnegh Cormra Cosarza Cotynara Counir Dabyae Dabygh Dalondyl Dalontyrr Data Dataara Dhubra Dhubylo Dhuerabae Elpann
+				Elpboyl Elpil' Elpriv Elptarrel Elpztisz Fiorae Fisar Fisarsz Gelerabsz Gelinn Gella Gellavar Gellen Gello Ghaerabran Ghaerfar Ghaglosth Glanduth
+				Glandythtyrr Glanlon Glanziyl Huarn Hudu Hulaz Hulis Hulondth Huphre Hura Hutarrsz Huungh Hyungh Ildyth Ilerabgh Ilerth Ilinnrymmin Illenan
+				Illi Ilnail Jhaerab Jhala Jhalazrel Jusannirn Jusdylban Jusdylel Juslislo Juslityn Jusna Khabra Khala Khalodorn Khaphre Khatarrtyn Khatyntyrr Khaziara
+				Khazidorn Lhabyza Lhala Lhalarae Lhalath Lhalisna Lhalondsz Lhalorymmin Luarnvar Lulazrymmin Lulon Lureth Mlezdythlan Mlezinnth Mlezlaban Mlezlondth Mlezradorn Mlezuth
+				Naglosir Narivtyn Naunrae Oenae Oil'el Olondel Oluran Oorza Ornlon Ornlonel Ornta Ornuthom Ota Otair Phdylir Phenbar Phenna Philenae
+				Phiunth Phlarel Phlondin Quaarnel Quaarnlan Quaorer Quara Quaunara Quaunna Rhomertyrr Rhomli Rhomliban Rhomluara Rhomtain Rrosbra Rrosdyth Rroslirymmin Rrosraban
+				Seedyth Seeuth Ssamil'tyn Ssamorna Ssamunth T'braar T'brail T'byir T'erabar T'loel T'luna T'or T'orlan T'orvin T'rarel T'ziyl Tearn Tedyth
+				Tegier Telaz Tlinby Tlinduna Tlinnafar Tlinor Uloil' Uloinnvin Uloli Ulolis Ulololo Ulolu Uloluil Ulotabar Ulouthvar Vesarrae Veveer Veztith
+				Vrbrair Vrztiom Waeannvar Waegi Waelana Waelenban Waeneara Waera Waerivom Waetarrin Waeztirn Wynboza Wynbra Wynbyirn Wynen Wynphre Wynphregh Wynuth
+				Wynveban Xaranngh Xarerlo Xaril'an Xarlirn Xarnesz Xarve Xilla Xillayl Xillenlan Xilnegh Xiltynel Xilunae Yaerab Yagityrr Yala Yalaz Yalondza
+				Yaraar Yatarrel Yaungh Yoegh'glosin Yoegh'lain Yoegh'tynel Yoegh'ztiban Zabyth Zagityn Zolis Zolugh Zorasz Zosar Zotabar Zotynirn Zotynth 
+			}
+			regnal_first_names_male = {
+				Alton Balok Baragh Belaern Belgos Bemril Berg'inyon Bhintel Brorn Bruherd Caelkoth Callimar Chakos Chaszmyr Coranzen Dantrag Dhuunyl Dinin
+				Dresmorlin Dro Duagloth Durdyn Elamshin Elendar Elkantar Filraen Ghaundan Ghaundar Guldor Gwylyss Hadrogh Hatch'net Honemmeth Houndaer Ildan Ilmryn
+				Ilphrin Imbros Irennan Istolil Istorvir Iymril Jaezred Jalynfein Jeggred Jevan Jhaamdath Jhaldrym Jivvin Jyslin K'yorl Kalannar Kethan Kluthruel
+				Kophyn Krenaste Krondorl Kyorlin Lesaonar Lirdnolu Llaulmyn Malaggar Micarlin Minolin Molvayas Morennel Nadal Nalfein Narissorin Narlros Nilonim Nimruil
+				Numrini'th Nyloth Nym Omareth Orgoloth Ornaryn Pharaun Pharius Quave Quendar Quenthel Quevven Ranaghar Relonor Riklaunim Rinnill Ristel Ruathym
+				Ryld Ryltar Sabal Sabrar Selakiir Seldszar Sengo Solaufein Sorn Syrdar Szordrin Taldinyon Tarlyn Tathlyn Tazennin Tebryn Tolokoph Torrellan
+				Trelgath Tsabrak Urlryn Valas Veldrin Velkyn Vhurdaer Vhurindrar Vielyn Vlondril Vorn Vuzlyn Welverin Xarann Xundus Yazston Yuimmar Zaknafein
+				Zeerith Zyn
+			}
+			regnal_first_names_female = {
+				Ahlysaaria Akordia Alaunirra Alystin Amalica Angaste Anluryn Ardulace Aunrae Balaena Baltana Bautha Belarbreena Beszrima Brigantyna Briza Brorna Burryna
+				Byrtyn Cazna Chadra Chadzina Chalithra Chandara Chardalyn Charinida Charlindra Chenzira Chessintra Dhaunae Dilynrae Drada Drisinil Eclavdra Elerra Elvanshalee
+				Elvraema Erakasyne Ereldra Faeryl Felyndiira Filfaere G'eldriia Gaussra Ghilanna Greyanna Gurina Haelra Halisstra Ilharess Ilivarrra Ilmra Imrae Jaelryn
+				Jezzara Jhaelryna Jhaelrynna Jhalass Jhangara Jhanniss Jhulae Khaless Kiaran Laele Larynda LiNeerlay Lledrith Llolfaen Lualyrr Lythrana Malice Maya
+				Menzoberra Mez'Barris Micarlin Miz'ri Mizzrym Myrymma Narcelia Nathrae Nedylene Nendra Nizana Nulliira Olorae Pellanistra Phaere Phyrra Qilue Quarra
+				Rauva Rilrae Sabrae Saradreza Sassandra Schezalle Shimyra ShriNeerune Shulvallriel Shurdriira Shurraenil Shyntlara SiNafay Sindyrrith Solenzara Ssapriina T'risstree Talabrina
+				Talice Tallrene Thalra Thirza Thraele Triel Ulitree Ulviirala Umrae Urlryn Urmelena Vhondryl Viconia Vierna Vornalla Waerva Wuyondra Xalyth
+				Xullrae Xune Yasrena Yvonnel Z'ress Zarra Zebeyana Zeerith Zelpassa Zendalure Zesstra Zilvra
+			}
+			regnal_second_names = {
+				Ale'delep Aleanneld Aledath Aledeche Alehenche Aleken Alenaryn Aleri Alerison Alerisonden Alerisonhate Aleser Aleserep Alestylret Alevii'duis AleVir Arari'duis Araser'duis
+				Araviilarn Arkde Arkkenden Arkrini Arkser ArkUrar ArkUrni Auvbaret Auvdath Auvdathche Auverrae Auvlarnlarn Auvlyntneld Auvrisonden Auvstyllarn Auvviir Auvyldar Ba'ett
+				Babache Babadel'armgo Badeson Baer'duis Baerna Baraundlarn Barisondel'armgo Barnana BarUrneld Barvalni Baryl Baviir Baylryn Clad'ett Clad'ettche Cladendar Claderche Cladlarn
+				Cladlarnfin Cladnache Cladpa Cladvii Cladviirrahel De'del Debranvs Delarn'duis Dena Depa'tar Derison Des'delson Desanret Deserna Deslynt Desna Desqu Dessek
+				Desserni Desstyl'duis Destor'tar Desur DesVirrae Desyl Deur Deviir'duis Deylni Do'dath Do'rison Do'ryn Do'tor Do'Ur Do'viiar Eilaundden Eilerep Eilhen'duis
+				Eilnadar Eilretep Eilsekrae Eilstylvs Eilval'tar Evaunddar Evenfin Everryn Evhen Evlyntna EvVirep Fey-'delar Fey-aundson Fey-ba Fey-larnneld Fey-viir'duis Fey-Virryn Goer'duis
+				Goerryn Gokenden Golyntdel'armgo Goqurae Gourrae Goyl Heldath'duis Helhenryn Helriar Helser Helylna Hl'del Hlerfin Hlken Hlpadel'armgo Hlpani Hlquson Hlretdar
+				Hlservs Hlstylar Hlurna Hlurrae HlVir Hlylhate Hundath Hunken Hunlynt'duis Hunna Hunurche Hunviirfin Kebavs Kedathche Kehenlarn Kequni Ketorson Kil'ettar
+				Kildath'duis Kilhen Kilrison'tar Kilviir'duis Maer'del Maeranar Maerhenche Maerlarn'tar Maerpa Maerpafin Maerqu Maerstylni Maerurfin Maerviirneld Meanlarn Mepafin Meriche Mylanar
+				Mylpahate Mylser MylVirna Nonadar Nopa'duis Noriden Norihate Norisonrae Noryn Nosekneld Notor Nour NoUrdar Noylche Oushenni Ouslyntar Ousretden Ousrynson
+				Oussek Riken'tar Rilarn Rilynt Rirynden Riserson Riur Riviirdar RiVirret Riyldar Te'deldar Teaund Tebaryn Tedeneld Terison Teviir Teylna Torman
+				Tormdeden Tormhenret Tormrirae Zau'ettar Zauan'tar Zauandar Zauen Zauhenhate Zaupaar Zauret Zauretret Zaurisonni 
+			}
+		}
+	}
+}

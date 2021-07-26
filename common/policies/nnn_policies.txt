@@ -1,0 +1,74 @@
+nnn_ethic_attraction = {
+
+	potential = {
+		has_ascension_perk = eap_one_vision
+        }
+	option = {
+		name = "government_ethic_attraction"
+
+		modifier = {
+			pop_government_ethic_attraction = 10
+		}
+
+		policy_flags = {
+			government_ethic_attraction
+		}
+	}
+
+	option = {
+		name = "ethic_authoritarian_attraction"
+
+		policy_flags = {
+			nnnethic_authoritarian_attraction
+		}
+	}
+	option = {
+		name = "ethic_egalitarian_attraction"
+
+		policy_flags = {
+			nnnethic_egalitarian_attraction
+		}
+	}
+	option = {
+		name = "ethic_materialist_attraction"
+
+		policy_flags = {
+			nnnethic_materialist_attraction
+		}
+	}
+	option = {
+		name = "ethic_spiritualist_attraction"
+
+		policy_flags = {
+			nnnethic_spiritualist_attraction
+		}
+	}
+	option = {
+		name = "ethic_xenophobe_attraction"
+
+		policy_flags = {
+			nnnethic_xenophobe_attraction
+		}
+	}
+	option = {
+		name = "ethic_xenophile_attraction"
+
+		policy_flags = {
+			nnnethic_xenophile_attraction
+		}
+	}
+	option = {
+		name = "ethic_pacifist_attraction"
+
+		policy_flags = {
+			nnnethic_pacifist_attraction
+		}
+	}
+	option = {
+		name = "ethic_militarist_attraction"
+
+		policy_flags = {
+			nnnethic_militarist_attraction
+		}
+	}
+}

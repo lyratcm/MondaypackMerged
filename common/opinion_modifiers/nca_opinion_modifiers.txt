@@ -1,0 +1,24 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+triggered_opinion_democratic_authority = {
+	trigger = {
+		is_country_type = default
+		OR = {
+			has_authority = auth_democratic	
+			has_authority = auth_cooperative
+		}
+		FROM = {
+			is_country_type = default
+			OR = {
+				has_authority = auth_democratic	
+				has_authority = auth_cooperative
+			}
+		}
+	}
+
+	opinion = {
+		base = 10
+	}
+}

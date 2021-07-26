@@ -1,0 +1,53 @@
+on_leader_spawned = {
+	events = {
+		xte_traits_ev.1
+		xte_traits_ev.3
+		xte_traits_ev.5
+		xte_traits_ev.6
+		xte_traits_ev.8
+		xte_traits_ev.10
+		xte_traits_ev.12
+		xte_traits_ev.14
+		xte_traits_ev.16
+		xte_traits_ev.18
+		xte_traits_ev.20
+		xte_traits_ev.21
+		xte_traits_ev.23
+		xte_traits_ev.24
+		xte_traits_ev.26
+		xte_traits_ev.28
+		xte_traits_ev.30
+		xte_traits_ev.32
+		xte_traits_ev.34
+		xte_traits_ev.36
+		xte_traits_ev.38
+		xte_traits_ev.40
+		xte_traits_ev.42
+		xte_traits_ev.44
+	}
+}
+
+on_ruler_back_to_pre_ruler_class = {
+	events = {
+		xte_traits_ev.2
+		xte_traits_ev.4
+		xte_traits_ev.7
+		xte_traits_ev.11
+		xte_traits_ev.13
+		xte_traits_ev.15
+		xte_traits_ev.17
+		xte_traits_ev.19
+		xte_traits_ev.22
+		xte_traits_ev.25
+		xte_traits_ev.27
+		xte_traits_ev.29
+		xte_traits_ev.31
+		xte_traits_ev.33
+		xte_traits_ev.35
+		xte_traits_ev.37
+		xte_traits_ev.39
+		xte_traits_ev.41
+		xte_traits_ev.43
+		xte_traits_ev.45
+	}
+}

@@ -1,0 +1,22 @@
+on_game_start = {
+	events = {
+		z_modmenu.10
+	}
+}
+
+on_game_start_country = {
+	events = {
+	}
+}
+
+
+
+
+# A ship has been built
+# Root = Ship
+# From = Planet
+on_ship_built = {
+	events = {
+	#	z_modmenu.1130				#_[z测试：舰船mod刷新timing]
+	}
+}

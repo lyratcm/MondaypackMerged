@@ -1,0 +1,427 @@
+###_z fw1 ship designs	#####################################################################
+
+#_[动能能量mod测试]
+#_[星系缩放_战斗测试]
+
+
+
+
+###_[动能能量mod测试]	光雷重炮/导弹航母
+ship_design = {#_[光雷重炮]	"NAME_z_fw_ship_weapon_mod_test_ek"
+	name = "NAME_z_fw_ship_weapon_mod_test_ek"
+	ship_size = battleship
+	hide_size = yes
+	section = {
+		template = "BATTLESHIP_BOW_L2"
+		slot = "bow"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_1"
+		}
+	}
+	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component = "Z_FW_CMPT_DRIVE_MISC_0"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_LINE_PRECOG"
+}
+ship_design = {#_[导弹航母]	"NAME_z_fw_ship_weapon_mod_test_gh"
+	name = "NAME_z_fw_ship_weapon_mod_test_gh"
+	ship_size = cruiser
+	hide_size = yes
+	section = {
+		template = "CRUISER_BOW_M1S2"
+		slot = "bow"
+		component = {
+			slot = "TORPEDO_01"
+			template = "MISSILE_5"
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = ""
+		}
+		
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "CRUISER_MID_S2HB"
+		slot = "mid"
+		component = {
+			slot = "PD_01"
+			template = ""
+		}
+		component = {
+			slot = "PD_02"
+			template = ""
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		
+		component = {
+			slot = "MEDIUM_UTILITY_1"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_2"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_3"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "MEDIUM_UTILITY_4"
+			template = "MEDIUM_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "CRUISER_STERN_S2"
+		slot = "stern"
+		
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_GAMMA_LASER"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_MASS_DRIVER_5"
+		}
+	}
+	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component = "Z_FW_CMPT_DRIVE_MISC_0"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_LINE_PRECOG"
+}
+
+
+
+
+#_[星系缩放_战斗测试]
+ship_design = {#_[普通泰坦]	"NAME_z_fw_ship_test_titan_common"
+	name = "NAME_z_fw_ship_test_titan_common"
+	ship_size = titan
+	hide_size = yes
+	section = {
+		template = "TITAN_BOW"
+		slot = "bow"
+		component = {
+			slot = "TITANIC_01"
+			template = "PERDITION_BEAM_TITAN"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "TITAN_MID"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_04"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "TITAN_STERN"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_1"
+		}
+	}
+	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component = "Z_FW_CMPT_DRIVE_MISC_0"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_PRECOG"
+}
+ship_design = {#_[纯航母]	"NAME_z_fw_ship_test_carrier"
+	name = "NAME_z_fw_ship_test_carrier"
+	ship_size = battleship
+	hide_size = yes
+	section = {
+		template = "BATTLESHIP_BOW_M1S2SHB"
+		slot = "bow"
+		component = {
+			slot = "MEDIUM_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = ""
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_MID_S4LHB"
+		slot = "mid"
+		component = {
+			slot = "SMALL_GUN_01"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_03"
+			template = ""
+		}
+		component = {
+			slot = "SMALL_GUN_04"
+			template = ""
+		}
+		component = {
+			slot = "STRIKE_CRAFT_01"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "STRIKE_CRAFT_02"
+			template = "STRIKE_CRAFT_HANGAR_3"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_1"
+		}
+	}
+	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component = "Z_FW_CMPT_DRIVE_MISC_0"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_CARRIER_PRECOG"
+}
+ship_design = {#_[战列舰]	"NAME_z_fw_ship_test_bb"
+	name = "NAME_z_fw_ship_test_bb"
+	ship_size = battleship
+	hide_size = yes
+	section = {
+		template = "BATTLESHIP_BOW_M2S4"
+		slot = "bow"
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "ENERGY_LANCE_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_MID_L3"
+		slot = "mid"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_DRAGON_ARMOR"
+		}
+	}
+	section = {
+		template = "BATTLESHIP_STERN_L1"
+		slot = "stern"
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "ENERGY_TORPEDO_1"
+		}
+	}
+	required_component = "BATTLESHIP_DARK_MATTER_REACTOR"
+	required_component = "Z_FW_CMPT_DRIVE_MISC_0"
+	required_component = "BATTLESHIP_SHIP_THRUSTER_5"
+	required_component = "SENSOR_4"
+	required_component = "COMBAT_COMPUTER_ARTILLERY_PRECOG"
+}

@@ -1,0 +1,35 @@
+gov_drow_matriarchal_council = {
+	ruler_title = RT_VALSHARESS
+	ruler_title_female = RT_VALSHARESS
+
+	leader_class = governor
+
+	election_candidates = {
+		modifier = {
+			add = 1
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+		modifier = {
+            factor = 0
+            OR = {
+                leader_class = scientist
+                leader_class = admiral
+                leader_class = general
+                gender = male
+            }
+        }
+	}
+
+	possible = {
+		has_authority = auth_oligarchic
+		has_civic = civic_drow_warriors
+	}
+
+	weight = {
+		base = 2000
+	}
+}

@@ -1,0 +1,58 @@
+
+
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.20
+	}
+}
+
+# Pop is abducted by raiding stance
+# This = Pop scope
+# From = planet abducted from
+on_pop_abducted  = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.21
+	}
+}
+
+# A pop has finished purging
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_purged = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.22
+	}
+}
+
+# A pop has finished declining (while not being purged)
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_declined = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.23
+	}
+}
+
+# A pop has been displaced
+# This = Planet scope
+# From = Country
+# FromFrom = Pop
+on_pop_displaced = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.24
+	}
+}
+
+# Executed just after country has established communications with another country
+# This = Planet where the pop was bombed to death
+# From = Country which is raining down fire and brimstone
+on_pop_bombed_to_death = {
+	events = {
+		Events_GAPS_Traits_Inoffensive.25
+	}
+}

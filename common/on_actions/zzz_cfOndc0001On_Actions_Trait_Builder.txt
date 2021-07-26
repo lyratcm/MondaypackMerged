@@ -1,0 +1,43 @@
+on_press_begin = {
+    events = {
+    }
+}
+on_modification_complete = {
+    events = {
+        Events_GAPS_Traits_Builder.12
+    }
+}
+on_pop_added = {
+    events = {
+        Events_GAPS_Traits_Builder.20
+    }
+}
+on_colonized = {
+    events = {
+    }
+}
+on_pop_abducted = {
+    events = {
+        Events_GAPS_Traits_Builder.21
+    }
+}
+on_pop_purged = {
+    events = {
+        Events_GAPS_Traits_Builder.22
+    }
+}
+on_pop_declined = {
+    events = {
+        Events_GAPS_Traits_Builder.23
+    }
+}
+on_pop_displaced = {
+    events = {
+        Events_GAPS_Traits_Builder.24
+    }
+}
+on_pop_bombed_to_death = {
+    events = {
+        Events_GAPS_Traits_Builder.25
+    }
+}

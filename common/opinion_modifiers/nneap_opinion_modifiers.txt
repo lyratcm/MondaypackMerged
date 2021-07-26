@@ -1,0 +1,56 @@
+
+triggered_opinion_eap_shared_destiny = {
+	trigger = {
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		FROM = {
+			has_ascension_perk = eap_shared_destiny
+		}
+	}
+
+	opinion = {
+		base = 200 # remember to update the tradition's tooltip
+	}
+}
+
+triggered_opinion_eap_universal_transactions = {
+	trigger = {
+		exists = overlord
+		overlord = { is_same_value = FROM }
+		FROM = {
+			has_ascension_perk = eap_universal_transactions 
+		}
+	}
+
+	opinion = {
+		base = 200 # remember to update the tradition's tooltip
+	}
+}
+
+triggered_opinion_eap_defender_of_the_galaxy = {
+	trigger = {
+		FROM = {
+			has_ascension_perk = eap_defender_of_the_galaxy
+		}
+	}
+
+	opinion = {
+		base = 80 # remember to update the ascension perk's tooltip
+	}
+}
+
+triggered_opinion_eap_galactic_contender = {
+	trigger = {
+		OR = {
+			is_country_type = awakened_fallen_empire
+		}
+			
+		FROM = {
+			has_ascension_perk = eap_galactic_contender
+		}
+	}
+
+	opinion = {
+		base = -1000 # remember to update the ascension perk's tooltip
+	}
+}

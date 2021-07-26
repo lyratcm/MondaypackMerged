@@ -1,0 +1,15 @@
+
+# this = country
+on_monthly_pulse_country = {
+	events = {
+		Events_GAPS_Traits_Capital.11
+	}
+}
+# A pop has been added to the planet
+# Root = pop
+# From = planet
+on_pop_added = {
+	events = {
+		Events_GAPS_Traits_Capital.20
+	}
+}
