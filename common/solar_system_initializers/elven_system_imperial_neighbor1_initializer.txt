@@ -1,0 +1,208 @@
+elven_system_imperial_neighbor1_initializer = {
+	name = "Lodorlas"
+	
+	class = "sc_elven_trinary_1"
+
+	flags = { custom_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
+	planet = {
+		name = "Lodorlas Mein"
+		class = "pc_b_star"
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 25 max = 35 }
+		
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_energy_3
+		}
+	}
+	
+	planet = {
+		name = "Lodorlas Edwen"
+		class = "pc_b_star"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = { min = 25 max = 35 }
+		
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_elven_energy_1_physics_1
+		}
+	}
+	
+	planet = {
+		name = "Lodorlas Neil"
+		class = "pc_b_star"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = { min = 25 max = 35 }
+
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_energy_3
+		}
+	}
+	
+	planet = {
+		name = "Urugond"
+		class = "pc_molten"
+		orbit_distance = 70
+		orbit_angle = 135
+		modifiers = none
+		size = { min = 18 max = 25 }
+		
+		init_effect = {
+			add_modifier = {
+				modifier = "chthonian_planet"
+				days = -1
+			}
+		}
+		
+		moon = {
+			name = "Uruhawn"
+			class = "pc_barren"
+			orbit_distance = 15
+			size = { min = 9 max = 15 }
+		}
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 175
+	}
+	
+	planet = {
+		name = "Carag-1268A"
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = random
+	}
+	
+	planet = {
+		name = "Carag-1385B"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	planet = {
+		name = "Carag-1582C"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	planet = {
+		name = "Carag-1641D"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	planet = {
+		name = "Hanari"
+		class = "pc_barren"
+		entity = "elven_01_barren_03_hanari"
+		orbit_distance = 65
+		orbit_angle = { min = 90 max = 270 }
+		size = 35
+		has_ring = yes
+		
+		init_effect = {
+			clear_deposits = yes
+			set_deposit = d_minerals_2
+		}
+	}
+	
+	planet = {
+		name = "Guruthos"
+		class = "pc_toxic"
+		entity = "elven_01_toxic_guruthos"
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+		size = 25
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Gwethili"
+		class = random_non_colonizable
+		orbit_distance = 50
+		orbit_angle = { min = 90 max = 270 }
+		size = 16
+		has_ring = yes
+		
+		moon = {
+			name = "Tharelas"
+			class = random_non_colonizable
+			orbit_distance = 18
+			orbit_angle = random
+			size = 9
+			has_ring = no
+		}
+	}
+	
+	planet = {
+		name = "Gwelendor"
+		class = "pc_gas_giant"
+		entity = "elven_01_gas_giant_gwelendor"
+		orbit_distance = 80
+		orbit_angle = { min = 90 max = 270 }
+		size = { min = 30 max = 40 }
+		
+		moon = {
+			name = "Gondhel"
+			class = "pc_barren_cold"
+			orbit_distance = 35
+			size = 16
+			has_ring = no
+		}
+	}
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 430
+	}
+	
+	planet = {
+		name = "Heleg-1204A"
+		class = "pc_ice_asteroid"
+		orbit_distance = 60
+		orbit_angle = random
+	}
+	
+	planet = {
+		name = "Heleg-1320B"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	planet = {
+		name = "Heleg-1385C"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	planet = {
+		name = "Heleg-1642D"
+		class = "pc_ice_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 45 max = 90 }
+	}
+	
+	change_orbit = 45
+
+}
+	
