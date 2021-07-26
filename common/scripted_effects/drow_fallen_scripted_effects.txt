@@ -1,0 +1,110 @@
+create_drow_fe_servant_species = {
+	
+	random_list = {
+	
+		50 = {
+			create_species = {
+				name = random
+				class = DROW
+				portrait = "dunmer_true"
+				traits = random
+				traits = {
+					trait = "trait_nerve_stapled"
+					trait = "trait_strong"
+					trait = "trait_charismatic"
+				}
+			}
+		}
+		
+		50 = {
+			create_species = {
+				name = random
+				class = ELVEN
+				portrait = "elven"
+				traits = random
+				traits = {
+					trait = "trait_nerve_stapled"
+					trait = "trait_strong"
+					trait = "trait_charismatic"
+				}
+			}
+		}
+	}
+}
+
+## Basically the same as vanilla except all -extra- chances are automatic 100%
+
+create_drow_fallen_empire_starting_navy = {
+	create_fallen_empire_fleet = yes
+	create_fallen_empire_fleet = yes
+	random = {
+		chance = 100			
+		create_fallen_empire_fleet = yes
+	}
+	if = {
+		limit = { 
+			host_has_dlc = "Apocalypse"
+		}
+		random = {
+			chance = 100
+			create_fleet = {
+				effect = {
+					set_owner = prev.owner
+					create_fallen_empire_colossus = yes
+					set_location = {
+						target = prev
+						distance = 30
+						angle = random 
+					}					
+				}
+			}
+		}			
+	}
+	random = {
+		chance = 100
+		create_fleet = {
+			effect = {
+				set_owner = prev.owner
+				create_fallen_empire_titan = yes
+				set_location = {
+					target = prev
+					distance = 20
+					angle = random 
+				}					
+			}
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 60
+				angle = random 
+			}				
+		}
+	}
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 80
+				angle = random 
+			}				
+		}
+	}				
+	create_fleet = {
+		effect = {
+			set_owner = prev.owner
+			create_fallen_empire_construction_ship = yes
+			set_location = {
+				target = prev
+				distance = 100
+				angle = random 
+			}				
+		}
+	}
+}
