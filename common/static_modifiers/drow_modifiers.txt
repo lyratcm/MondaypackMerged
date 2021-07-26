@@ -1,0 +1,41 @@
+###########################
+## DROW PLANET MODIFIERS ##
+###########################
+
+drow_defunct_lifesupport = {
+	pop_environment_tolerance = -1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_drow_defunct_lifesupport.dds"
+	icon_frame = 3
+}
+
+drow_decimated_infrastructure = {
+	planet_max_districts_add = -20
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_drow_decimated_infrastructure.dds"
+	icon_frame = 3
+}
+
+drow_glowing_waters = {
+	#planet_migration_same_pull = 0.25
+	#tile_resource_society_research_mult = 0.05
+	#tile_resource_physics_research_mult = 0.05
+	#tile_resource_food_mult = -0.1
+	icon = "gfx/interface/icons/planet_modifiers/pm_drow_glowing_waters.dds"
+	icon_frame = 2
+}
+
+drow_trait_xenocidal_terror = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 2
+	pop_ethic_xenophobe_attraction_mult = 0.50
+}
+
+# Eilistraeean duplicate for capital system planet.
+drow_strong_magnetic_field = {
+	#tile_resource_energy_mult = 0.05
+	#tile_resource_physics_research_mult = 0.05
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
+	icon_frame = 1
+}

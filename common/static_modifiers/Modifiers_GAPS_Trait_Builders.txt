@@ -1,0 +1,4 @@
+Planet_Modifier_GAPS_Trait_Builders = {
+	planet_building_build_speed_mult = 0.01
+	planet_clear_blocker_time_mult = -0.01
+}
