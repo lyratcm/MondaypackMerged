@@ -1,9 +1,0 @@
-
-# A pop has been added to the planet
-# Root = pop
-# From = planet
-on_pop_added = {
-	events = {
-		Events_GAPS_Traits_Lunar.20
-	}
-}

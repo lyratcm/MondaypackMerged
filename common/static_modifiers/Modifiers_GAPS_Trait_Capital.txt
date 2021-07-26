@@ -1,1 +1,0 @@
-Pop_Modifier_GAPS_Capital_Bonus = { planet_jobs_produces_mult = 0.1 }

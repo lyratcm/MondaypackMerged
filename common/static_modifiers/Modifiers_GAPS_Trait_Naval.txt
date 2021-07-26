@@ -1,3 +1,0 @@
-Country_Modifier_GAPS_Trait_Naval = {
-	country_naval_cap_add = 0.2
-}

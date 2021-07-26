@@ -1,4 +1,0 @@
-#_[快速通信]在z_modmenu开启后隐藏
-z_mui_trgr_cntr_ec_hide = {
-	has_country_flag = z_mm_modmenu_opened			#_z_mm_menu_locked
-}
