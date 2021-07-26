@@ -1,0 +1,38 @@
+#_[刷新领袖]
+
+
+
+
+###_[刷新领袖]	##########################################
+z_mui_btn_reroll_governor = {
+	potential = { has_global_flag = z_modmenu_installed		is_scope_type = country }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_z_mui_reroll_cd_governer } } }
+	effect = {
+		hidden_effect = { country_event = { id = z_mui_reroll.2 } }
+		custom_tooltip = z_mui_reroll.2.name
+	}
+}
+z_mui_btn_reroll_scientist = {
+	potential = { has_global_flag = z_modmenu_installed		is_scope_type = country }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_z_mui_reroll_cd_scientist } } }
+	effect = {
+		hidden_effect = { country_event = { id = z_mui_reroll.3 } }
+		custom_tooltip = z_mui_reroll.3.name
+	}
+}
+z_mui_btn_reroll_admiral = {
+	potential = { has_global_flag = z_modmenu_installed		is_scope_type = country }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_z_mui_reroll_cd_admiral } } }
+	effect = {
+		hidden_effect = { country_event = { id = z_mui_reroll.4 } }
+		custom_tooltip = z_mui_reroll.4.name
+	}
+}
+z_mui_btn_reroll_general = {
+	potential = { has_global_flag = z_modmenu_installed		is_scope_type = country }
+	allow = { hidden_trigger = { NOT = { has_country_flag = z_mui_flg_z_mui_reroll_cd_general } } }
+	effect = {
+		hidden_effect = { country_event = { id = z_mui_reroll.5 } }
+		custom_tooltip = z_mui_reroll.5.name
+	}
+}
