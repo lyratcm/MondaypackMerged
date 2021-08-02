@@ -26,7 +26,6 @@ bureaucrat = {
         upkeep = {
             consumer_goods = 2
         }
-    }
         produces = {
             trigger = {
                 exists = owner
